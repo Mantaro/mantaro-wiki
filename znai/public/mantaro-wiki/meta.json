@@ -1,0 +1,10 @@
+{
+  "viewOn" : {
+    "link" : "your-custom-base-url",
+    "title" : "View On Label"
+  },
+  "id" : "mantaro-wiki",
+  "title" : "Your Product",
+  "type" : "Guide",
+  "previewEnabled" : false
+}
