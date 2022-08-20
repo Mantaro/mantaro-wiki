@@ -13,7 +13,7 @@ This might be changed, prior warning, at any time.
 **By using the bot, either by accessing its commands or using any of its features, you affirm that you have read this agreement, understands it and agrees to be bound by it.**
 
 
-## TL;DR: You assume responsibility for streaming copyrighted material, cheating/botting is absolutely prohibited and might end up in all of your data being deleted without warning, and you agree to all the terms of this agreement
+Note: TL;DR: You assume responsibility for streaming copyrighted material, cheating/botting is absolutely prohibited and might end up in all of your data being deleted without warning, and you agree to all the terms of this agreement
 
 -------------------------------
 
