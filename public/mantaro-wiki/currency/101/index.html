@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: 101: Introduction</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Introduction</h1></header>
+<p>Mantaro has an extensive currency system. At times, new people don't know where to even begin. The purpose of these pages is to steadily introduce a few concepts and commands needed to progress while using the currency system.These pages are merely an explanation of concepts and commands in an order we believe is easy to understand for progressing. It is in no way the &quot;correct&quot;, the &quot;best&quot; or the &quot;only&quot; way of using Mantaro. It is up to every user to decide themselves what they want to do with the system. Page Summary https://github.com/Mantaro/MantaroBot/wiki/Currency-102 Currency 102: Basic knowledge https://github.com/Mantaro/MantaroBot/wiki/Currency-103 Currency 103: Intermediate knowledge https://github.com/Mantaro/MantaroBot/wiki/Currency-104 Currency 104: Advanced knowledge</p>
+</article>
+
+<article>
+<header><h1>Concepts</h1></header>
+<p>Global Currency Mantaro's currency system is global. What this means is that your progress/items/credits/etc are the same across all servers. This means that something like spawning credits or items with a command is not possible, as it would throw the currency system into complete chaos. Credits The currency used in Mantaro is called Credits. The main purpose of the currency system is to collect Credits. Credits are necessary for many of the purchases in the currency system. Items Mantaro counts with over 100 items for users to collect and use. Some items are only meant to be collected, other items can bring bonuses to the user and other items can enable certain commands. A full Item Documentation page can be found https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation here. It is not necessary to know all items or to look into this page, but know that it can be a good resource in the future. Dust Sometimes a few of the currency commands will &quot;fail&quot; and won't give you credits or items. A lot of those times you will gather dust instead. A few commands gather dust when successfully used. When starting out, dust shouldn't be one of your main concerns until later on. If your dust levels are high enough then you will not be able to cast new items until you clean your dust, but more on that later. Help Command This one is very important. If you ever feel lost or don't remember how a command works, you can check that command's help to get the information without having to open this wiki. To get a commands help you can use /help command:&lt;name of command&gt; . Additionally, the command /help will show you the full list of commands. You can also check our Command Documentation page https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation here. Premium influence Premium status for users influences the currency in very specific ways, and we will probably mention it a few times in the next pages. However, there is more that premium can do. For the sake of not making this wiki any longer you may view what premium does https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks here.</p>
+</article>
+
+<article>
+<header><h1>Disclaimers</h1></header>
+<p>Regarding External Software, Macros, etc. (Cheating) If you have been caught using any external software, Macros (yes Macros are cheating) or similar you are breaking our https://github.com/Mantaro/MantaroBot/wiki/Terms-of-Service Terms of Service and https://discordapp.com/terms Discord's Terms of Service. Very notable is that automating your user account in any way using Discord API wrappers is a very bannable offense by discord. ( https://support.discordapp.com/hc/en-us/articles/115002192352-Automated-user-accounts-self-bots- Context)You will be blacklisted from using the bot and reported to discord in major cases. In minor cases you will be blacklisted from the bot and you may send a polite appeal. An appeal is not simply saying you won't do it again.In very rare cases you may be blacklisted from the bot for being a huge d*ck to Developers or Staff. In even rarer cases you may be blacklisted from the bot when you have been blacklisted on other bots. Regarding Exploiting bugs If you are caught exploiting major bugs in Mantaro to gain an advantage we will reset your profile entirely. Depending on the situation you may even be blacklisted. Not reporting a major bug after having found it may cause us to misinterpret things. Your best bet is to simply report them. If you have reported the bug and accidentally used it multiple times, you are fine. However, intentionally using it multiple times is still a no-go despite reporting it. Regarding selling/buying stuff for real money Under no circumstances are you are allowed to sell/buy anything related to Mantaro for real money (this includes crypto currency of any kind). This is to prevent scams. If you are being offered a trade like this report them immediately and do not trade with them. Falling for a scam like this will be faced with no support. You have been warned.Offering such trades is a permanent blacklistable offense.</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "introduction",
+      "title" : "Introduction",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Mantaro has an extensive currency system. At times, new people don't know where to even begin.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "The purpose of these pages is to steadily introduce a few concepts and commands needed to progress while using the currency system.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "These pages are merely an explanation of concepts and commands in an order we believe is easy to understand for progressing.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "It is in no way the \"correct\", the \"best\" or the \"only\" way of using Mantaro. It is up to every user to decide themselves what they want to do with the system.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "introduction-page-summary",
+        "level" : 3,
+        "title" : "Page Summary",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "url" : "https://github.com/Mantaro/MantaroBot/wiki/Currency-102",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Currency 102",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": Basic knowledge",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "url" : "https://github.com/Mantaro/MantaroBot/wiki/Currency-103",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Currency 103",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": Intermediate knowledge",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "url" : "https://github.com/Mantaro/MantaroBot/wiki/Currency-104",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Currency 104",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": Advanced knowledge",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "concepts",
+      "title" : "Concepts",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "concepts-global-currency",
+        "level" : 2,
+        "title" : "Global Currency",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Mantaro's currency system is global. What this means is that your progress/items/credits/etc are the same across all servers.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "This means that something like spawning credits or items with a command is not possible, as it would throw the currency system into complete chaos.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "concepts-credits",
+        "level" : 2,
+        "title" : "Credits",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The currency used in Mantaro is called Credits. The main purpose of the currency system is to collect Credits. Credits are necessary for many of the purchases in the currency system.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "concepts-items",
+        "level" : 2,
+        "title" : "Items",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Mantaro counts with over 100 items for users to collect and use. Some items are only meant to be collected, other items can bring bonuses to the user and other items can enable certain commands.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A full Item Documentation page can be found ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "here",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". It is not necessary to know all items or to look into this page, but know that it can be a good resource in the future.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "concepts-dust",
+        "level" : 2,
+        "title" : "Dust",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Sometimes a few of the currency commands will \"fail\" and won't give you credits or items. A lot of those times you will gather dust instead. A few commands gather dust when successfully used.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "When starting out, dust shouldn't be one of your main concerns until later on. If your dust levels are high enough then you will not be able to cast new items until you clean your dust, but more on that later.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "concepts-help-command",
+        "level" : 2,
+        "title" : "Help Command",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This one is very important. If you ever feel lost or don't remember how a command works, you can check that command's help to get the information without having to open this wiki.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "To get a commands help you can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/help command:<name of command>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". Additionally, the command ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/help",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " will show you the full list of commands. You can also check our Command Documentation page ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "here",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "concepts-premium-influence",
+        "level" : 2,
+        "title" : "Premium influence",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Premium status for users influences the currency in very specific ways, and we will probably mention it a few times in the next pages.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "However, there is more that premium can do. For the sake of not making this wiki any longer you may view what premium does ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "here",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "disclaimers",
+      "title" : "Disclaimers",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "disclaimers-regarding-external-software-macros-etc-cheating",
+        "level" : 2,
+        "title" : "Regarding External Software, Macros, etc. (Cheating)",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you have been caught using any external software, Macros (yes Macros are cheating) or similar you are breaking our ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Terms-of-Service",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Terms of Service",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " and ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://discordapp.com/terms",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Discord's Terms of Service",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Very notable is that automating your user account in any way using Discord API wrappers is a very bannable offense by discord. (",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://support.discordapp.com/hc/en-us/articles/115002192352-Automated-user-accounts-self-bots-",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Context",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ")",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You will be blacklisted from using the bot and reported to discord in major cases.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "In minor cases you will be blacklisted from the bot and you may send a ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "polite",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " appeal. An appeal is ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "not",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " simply saying you won't do it again.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In very rare cases you may be blacklisted from the bot for being a huge d*ck to Developers or Staff.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "In even rarer cases you may be blacklisted from the bot when you have been blacklisted on other bots.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "disclaimers-regarding-exploiting-bugs",
+        "level" : 2,
+        "title" : "Regarding Exploiting bugs",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you are caught exploiting major bugs in Mantaro to gain an advantage we will reset your profile entirely.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Depending on the situation you may even be blacklisted.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Not reporting a major bug after having found it may cause us to misinterpret things. Your best bet is to simply report them.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "If you have reported the bug and accidentally used it multiple times, you are fine. However, intentionally using it multiple times is still a no-go despite reporting it.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "disclaimers-regarding-sellingbuying-stuff-for-real-money",
+        "level" : 2,
+        "title" : "Regarding selling/buying stuff for real money",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Under ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "no",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " circumstances are you are allowed to sell/buy ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "anything",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " related to Mantaro for real money (this includes crypto currency of any kind). This is to prevent scams. If you are being offered a trade like this report them immediately and do not trade with them.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Falling for a scam like this will be faced with no support. You have been warned.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Offering such trades is a ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "permanent",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " blacklistable offense.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661023935230,
+    "tocItem" : {
+      "chapterTitle" : "Currency",
+      "pageTitle" : "101: Introduction",
+      "pageMeta" : {
+        "title" : [ "101: Introduction" ]
+      },
+      "dirName" : "currency",
+      "fileName" : "101",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Introduction",
+        "id" : "introduction"
+      }, {
+        "title" : "Concepts",
+        "id" : "concepts"
+      }, {
+        "title" : "Disclaimers",
+        "id" : "disclaimers"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

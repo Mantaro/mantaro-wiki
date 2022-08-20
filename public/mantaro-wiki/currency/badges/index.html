@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: Badges</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Seasonal Badges</h1></header>
+<p>What are badges?Badges are basically achievements that you can gain. Badges will show on your profile in the order shown below. Additionally the Badge icon of your highest badge will be drawn onto you profile picture in the embeds thumbnail. Almost all to all badges are applied to you after doing ~&gt;profile so use that first and then the ~&gt;badges command. All Badges and how to get them. Badge Name Badge Icon Description How to Currently Obtainable? [{text=Developer, type=SimpleText}] [{text=Currently a Mantaro Developer, type=SimpleText}] [{text=Every Mantaro Developer will automatically gain this badge., type=SimpleText}] [{text=No, we currently aren't looking for Devs., type=SimpleText}] [{text=Contributor, type=SimpleText}] [{text=Contributed to Mantaro's Development in any way, type=SimpleText}] [{text=Contribute to Mantaro's Development this includes but is not limited to making a , type=SimpleText}, {type=StrongEmphasis, content=[{text=reasonable, type=SimpleText}]}, {text= Pull request., type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Community Admin, type=SimpleText}] [{text=Helps to maintain the , type=SimpleText}, {url=https://support.mantaro.site, isFile=false, type=Link, content=[{text=Mantaro Hub, type=SimpleText}]}, {text= community., type=SimpleText}] [{text=Will be given to all Community Admins on , type=SimpleText}, {url=https://support.mantaro.site, isFile=false, type=Link, content=[{text=Mantaro Hub, type=SimpleText}]}] [{text=No, we currently aren't looking for Admins, type=SimpleText}] [{text=Translator, type=SimpleText}] [{text=Helped Translating Mantaro to another langauge., type=SimpleText}] [{text=Will be given to everyone who helps with the , type=SimpleText}, {url=https://github.com/Mantaro/MantaroBot/tree/master/src/main/resources/assets/languages, isFile=false, type=Link, content=[{text=translation, type=SimpleText}]}, {text= of Mantaro, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Helper, type=SimpleText}] [{text=Helps to maintain the support influx on , type=SimpleText}, {url=https://support.mantaro.site, isFile=false, type=Link, content=[{text=Mantaro Hub, type=SimpleText}]}, {text=., type=SimpleText}] [{text=Will be given to all Helpers on , type=SimpleText}, {url=https://support.mantaro.site, isFile=false, type=Link, content=[{text=Mantaro Hub, type=SimpleText}]}] [{text=No, we currently aren't looking for Helpers, type=SimpleText}] [{text=Donator, type=SimpleText}] [{text=Actively helps to keep Mantaro alive &lt;3, type=SimpleText}] [{url=http://paypal.me/kodemantaro, isFile=false, type=Link, content=[{text=PayPal, type=SimpleText}]}, {text=, , type=SimpleText}, {url=http://patreon.com/mantaro, isFile=false, type=Link, content=[{text=Patreon, type=SimpleText}]}, {text=. The badge is automatically applied to all of our Patrons (if they are in , type=SimpleText}, {url=https://support.mantaro.site, isFile=false, type=Link, content=[{text=Mantaro Hub, type=SimpleText}]}, {text=)., type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Bug Hunter, type=SimpleText}] [{text=Has reported one or more , type=SimpleText}, {type=StrongEmphasis, content=[{text=important, type=SimpleText}]}, {text= bugs with details., type=SimpleText}] [{text=Will be given to you if you report a major bug with decent details., type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Marathon Winner, type=SimpleText}] [{text=Reach Level 200+., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Depths of Hell, type=SimpleText}] [{text=Have all 3 Hellfire tools equipped., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Hot Miner, type=SimpleText}] [{text=Get a Hellfire Pickaxe., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Hot Fisher, type=SimpleText}] [{text=Get a Hellfire Fishing Rod., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Hot Chopper, type=SimpleText}] [{text=Get a Hellfire Axe., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Most Known, type=SimpleText}] [{text=Earn 1000 reputation., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Best Waifu, type=SimpleText}] [{text=Get claimed as Waifu 1000 times., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Bi-Yearly Claimer, type=SimpleText}] [{text=Reach a daily streak of , type=SimpleText}, {type=StrongEmphasis, content=[{text=higherthan, type=SimpleText}]}, {text= 730., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Rich, type=SimpleText}] [{text=Get 25 million credits. That's really a lot of money., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Yearly Claimer, type=SimpleText}] [{text=Reach a daily streak of , type=SimpleText}, {type=StrongEmphasis, content=[{text=higherthan, type=SimpleText}]}, {text= 365., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Champion, type=SimpleText}] [{text=See yourself in a leaderboard., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Big Money, type=SimpleText}] [{text=Get 10 million credits. That's a lot of money., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=The Best Friend, type=SimpleText}] [{text=Get a Kodehawa pet., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Expert Gamer, type=SimpleText}] [{text=Win 5000 games or more., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Experienced Badge Hunter, type=SimpleText}] [{text=Get more than 60 badges., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Expert Miner, type=SimpleText}] [{text=Get more than 100,000 mining EXP., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Expert Fisher, type=SimpleText}] [{text=Get more than 100,000 fishing EXP., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Expert Chopper, type=SimpleText}] [{text=Get more than 100,000 chopping EXP., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Legendary Pet Owner, type=SimpleText}] [{text=Get your pet to level 300, type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Marathon Runner, type=SimpleText}] [{text=Reach Level 150+., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Fast Runner, type=SimpleText}] [{text=Reach Level 100+., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Badge Hunter, type=SimpleText}] [{text=Get more than 40 badges., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Expert Pet Owner, type=SimpleText}] [{text=Get your pet to level 100 or more., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Addicted Gamer, type=SimpleText}] [{text=Win 1000 games., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Crate Opener, type=SimpleText}] [{text=Open 40 crates., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=King of the Sea, type=SimpleText}] [{text=Catch more than 35 sharks., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Millionaire, type=SimpleText}] [{text=Get your very own million credits., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Big Claimer, type=SimpleText}] [{text=Reach a daily streak of , type=SimpleText}, {type=StrongEmphasis, content=[{text=higherthan, type=SimpleText}]}, {text= 180., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Lucky, type=SimpleText}] [{text=Be lucky enough to loot a lootcrate., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Experienced Pet Owner, type=SimpleText}] [{text=Get your pet to level 50., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Shopper, type=SimpleText}] [{text=Have any item 5000 times at any given time., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Experienced Miner, type=SimpleText}] [{text=Get more than 10,000 mining EXP., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Experienced Fisher, type=SimpleText}] [{text=Get more than 10,000 fishing EXP., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Experienced Chopper, type=SimpleText}] [{text=Get more than 10,000 chopping EXP., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Best Friend, type=SimpleText}] [{text=Buy your very own pet., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Our Best Friend, type=SimpleText}] [{text=Get a marriage pet., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Item Breaker, type=SimpleText}] [{text=Break a tool., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Celebrity, type=SimpleText}] [{text=Earn 100 reputation., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Popular, type=SimpleText}] [{text=Earn 10 reputation., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Lucky 7, type=SimpleText}] [{type=StrongEmphasis, content=[{text=Gainmore, type=SimpleText}]}, {text= than 50,000 credits in a , type=SimpleText}, {type=StrongEmphasis, content=[{text=single, type=SimpleText}]}, {text= slots game., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Claimer, type=SimpleText}] [{text=Reach a daily streak of , type=SimpleText}, {type=StrongEmphasis, content=[{text=higherthan, type=SimpleText}]}, {text= 10., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Gamer, type=SimpleText}] [{text=Win 100 games., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Gambler, type=SimpleText}] [{type=StrongEmphasis, content=[{text=Gain, type=SimpleText}]}, {text= more than 5,000 credits in a single gamble attempt., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Known Waifu, type=SimpleText}] [{text=Get claimed as waifu 100 times., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Popular Waifu, type=SimpleText}] [{text=Get claimed as waifu 10 times., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Mutual, type=SimpleText}] [{text=Waifu of your waifu., type=SimpleText}] [{text=Claim a person as Waifu who previously claimed you., type=SimpleText}] [{text=No, currently broken., type=SimpleText}] [{text=Waifu, type=SimpleText}] [{text=Get claimed as waifu., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Goldfish Brain, type=SimpleText}] [{text=Get reminded more than 100 times., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Gem Finder, type=SimpleText}] [{text=Find a gem while mining., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Cleaner, type=SimpleText}] [{text=Clean dust 50 times., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Runner, type=SimpleText}] [{text=Reach level 50+., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Caster, type=SimpleText}] [{text=Cast more than 50 items., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Repair Person, type=SimpleText}] [{text=Repair an item more than 50 times., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Salvager, type=SimpleText}] [{text=Salvage an item more than 50 times., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=First Time Miner, type=SimpleText}] [{text=Get more than 1,000 mining EXP., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=First Time Fisher, type=SimpleText}] [{text=Get more than 1,000 fishing EXP., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=First Time Chopper, type=SimpleText}] [{text=Get more than 1,000 chopping EXP., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Walker, type=SimpleText}] [{text=Reach level 10+., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Miner, type=SimpleText}] [{text=Find a diamond while mining., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Chopper, type=SimpleText}] [{text=Find wood while chopping., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Fisher, type=SimpleText}] [{text=Find a fish while fishing., type=SimpleText}] [{text=Self Explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=The Secret, type=SimpleText}] [{text=Open a loot crate., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Waster, type=SimpleText}] [{text=Dump &gt;4000 items in one go., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Mad Scientist, type=SimpleText}] [{text=Use 15 potions at once., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Compulsive Buyer, type=SimpleText}] [{text=Buy/Sell from/to the market more than 1000 times, type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Dusty, type=SimpleText}] [{text=Get to 100% dust level, type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Fire, type=SimpleText}] [{text=Ouch, ouch, someone please extinguish it!, type=SimpleText}] [{text=Encounter an unexpected error in Mantaro., type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Married, type=SimpleText}] [{text=Marry someone. (does not apply to old marriages), type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Waifu Claimer, type=SimpleText}] [{text=Claim someone as waifu., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Claimed, type=SimpleText}] [{text=Got claimed as waifu., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Heart Broken, type=SimpleText}] [{text=Ouch, was good while it lasted., type=SimpleText}] [{text=Divorce or have your marriage divorced., type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Denied, type=SimpleText}] [{text=Have your marriage proposal turned down., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Power User, type=SimpleText}] [{text=Do mod stuff with Mantaro., type=SimpleText}] [{text=Use any Moderation command successfully (opts commands do not fall under this.), type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Configurator, type=SimpleText}] [{text=Used , type=SimpleText}, {url=https://github.com/Mantaro/MantaroBot/wiki/Configuration, isFile=false, type=Link, content=[{text=~&gt;opts, type=SimpleText}]}, {text= properly., type=SimpleText}] [{text=Successfully modify any guild settings using , type=SimpleText}, {url=https://github.com/Mantaro/MantaroBot/wiki/Configuration, isFile=false, type=Link, content=[{text=~&gt;opts, type=SimpleText}]}] [{text=Yes, type=SimpleText}] [{text=Lewdie, type=SimpleText}] [{text=Used a lewd command, type=SimpleText}] [{text=Use , type=SimpleText}, {code=~&gt;rule34, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;yandere, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;danbooru, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;konachan, type=InlinedCode}, {text= with an explicit rating., type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Buyer, type=SimpleText}] [{text=Buy something from the Market., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Calendar, type=SimpleText}] [{text=Set your timezone., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Writer, type=SimpleText}] [{text=Set a profile description., type=SimpleText}] [{text=Self explanatory, type=SimpleText}] [{text=Yes, type=SimpleText}] [{text=Christmas Spirit, type=SimpleText}] [{text=Participated on the Christmas event!, type=SimpleText}] [{text=Will be given to you if you have any of the Christmas items., type=SimpleText}] [{text=Available between December 23 and December 25, type=SimpleText}] These badges are given to those who participate in one of Mantaro's seasons and obtains a high ranking. The badges are the same no matter the season its obtained in. The name of the Badge is dependant on the number of season it was obtained on and the ranking to which its attached (Money/Rep). Badge Name Badge Icon Description Currently Obtainable? [{text=Season &lt;#&gt;: Top #1 &lt;Money/Rep&gt;, type=SimpleText}] [{text=Given to the person who achieved first place in the leaderboard for either Money or Rep., type=SimpleText}] [{text=No, type=SimpleText}] [{text=Season &lt;#&gt;: Top #2 &lt;Money/Rep&gt;, type=SimpleText}] [{text=Given to the person who achieved second place in the leaderboard for either Money or Rep., type=SimpleText}] [{text=No, type=SimpleText}] [{text=Season &lt;#&gt;: Top #3 &lt;Money/Rep&gt;, type=SimpleText}] [{text=Given to the person who achieved third place in the leaderboard for either Money or Rep., type=SimpleText}] [{text=No, type=SimpleText}] [{text=Season &lt;#&gt;: Top #4 &lt;Money/Rep&gt;, type=SimpleText}] [{text=Given to the person who achieved fourth place in the leaderboard for either Money or Rep., type=SimpleText}] [{text=No, type=SimpleText}] [{text=Season &lt;#&gt;: Top #5 &lt;Money/Rep&gt;, type=SimpleText}] [{text=Given to the person who achieved fifth place in the leaderboard for either Money or Rep., type=SimpleText}] [{text=No, type=SimpleText}]</p>
+</article>
+
+<article>
+<header><h1>Riddle Badges</h1></header>
+<p>These badges are meant to be harder to obtain. In order to find out how to get them you will have to solve the riddles next to their name (Sometimes the name also helps to solve it). All of these badges share the same image: Please note that there is no ~&gt;answer command or anything like that. These badges require you to use commands in certain ways for instance queuing a specific Music track. Badge Name Riddle [{text=Numeric Luck, type=SimpleText}] [{text=All the numbers had a party, somehow they all ended up with the same dress., type=SimpleText}] [{text=Numeric Pathway, type=SimpleText}] [{text=A lucky and sad destiny with six equal people meeting, who slowly fade away as you spend., type=SimpleText}] [{text=Destiny Reaches, type=SimpleText}] [{text=Good and bad luck meeting together, with a little gem as a mediator., type=SimpleText}] [{text=Hacking Addiction, type=SimpleText}] [{text=Playing and slashing away your time, with a thousand addictions and thirty-something deeds, meeting together., type=SimpleText}] [{text=Pathway to Sky, type=SimpleText}] [{text=With a heavenly beat we shall approach destiny, drums slowly fading between a piano melody, peaceful and chaotic in nature., type=SimpleText}] [{text=Happiness Found Between, type=SimpleText}] [{text=The sour line between happiness and sadness approaches between beats, with a single one we shall decide which prevails., type=SimpleText}] [{text=A Cold Summer, type=SimpleText}] [{text=With a drum beat we approach a cold summertime, a place where nobody can catch you, feeling a bit safer with you., type=SimpleText}] [{text=Slow, type=SimpleText}] [{text=Alexa, how did we get here again?, type=SimpleText}] [{text=Small Scientist, type=SimpleText}] [{text=A child scientist, a robot and a cat, what could go wrong?, type=SimpleText}] [{text=Slowly Approaching Destiny, type=SimpleText}] [{text=One in 90, or more. Luck shall decide, you have no choice but go with it, type=SimpleText}] [{text=Revelation, type=SimpleText}] [{text=A gun as a weapon, a chessboard as a world, passing through universes and flying through emotions., type=SimpleText}] [{text=Finding a Waifu, type=SimpleText}] [{text=Two Xs and some horns, what a deal., type=SimpleText}] [{text=Flying Malware, type=SimpleText}] [{text=Finding a piece of flying malware on your e-mail it's quite the deal, isn't it? And it talks!, type=SimpleText}] [{text=Gold Value, type=SimpleText}] [{text=Six gold tails and a person. Finding it might not be an ordeal, but the deal is not favorable., type=SimpleText}] [{text=Luck Behind, type=SimpleText}] [{text=A one-in-six chance of counting the tale, maybe slightly too much, maybe slightly too little., type=SimpleText}] [{text=Too Big To Fit, type=SimpleText}] [{text=The small magical box contained between dimensions, soon forever gone., type=SimpleText}] [{text=Risky Ordeal, type=SimpleText}] [{text=It isn't about how fast you climb, it's about the steps it takes., type=SimpleText}] [{text=Senseless Hoarding, type=SimpleText}] [{text=With the hoarding comes a line, overflowing in mindless casino paper, fading away in a heartbeat., type=SimpleText}] [{text=The CPU Inside, type=SimpleText}] [{text=I'm also a CPU. No, really!, type=SimpleText}]</p>
+</article>
+
+<article>
+<header><h1>Removed/Legacy Badges</h1></header>
+<p>Badge Name Badge Icon Description [{text=Upvoter, type=SimpleText}] [{text=Broke from 3rd Party changes and will not come back, type=SimpleText}] [{text=DJ, type=SimpleText}] [{text=Legacy Badge (Unused and unobtainable)., type=SimpleText}] [{text=Bugged, type=SimpleText}] [{text=Bugged Helper. (Old Broken Helper Badge)., type=SimpleText}] [{text=Bugged 2, type=SimpleText}] [{text=Bugged Donor. (Old Broken Donator Badge)., type=SimpleText}] [{text=Isekai, type=SimpleText}] [{text=Have more than 7526527671 credits at any given time., type=SimpleText}]</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "What are badges?",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Badges are basically achievements that you can gain. Badges will show on your profile in the order shown below.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Additionally the Badge icon of your highest badge will be drawn onto you profile picture in the embeds",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "thumbnail.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "type" : "Emphasis",
+        "content" : [ {
+          "text" : "Almost all to all badges are applied to you after doing ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>profile",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " so use that first and then the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>badges",
+          "type" : "InlinedCode"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "command.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "All Badges and how to get them.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "table" : {
+        "columns" : [ {
+          "title" : "Badge Name",
+          "align" : "left"
+        }, {
+          "title" : "Badge Icon",
+          "align" : "left"
+        }, {
+          "title" : "Description",
+          "align" : "left"
+        }, {
+          "title" : "How to",
+          "align" : "left"
+        }, {
+          "title" : "Currently Obtainable?",
+          "align" : "left"
+        } ],
+        "data" : [ [ [ {
+          "text" : "Developer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Currently a Mantaro Developer",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Every Mantaro Developer will automatically gain this badge.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "No, we currently aren't looking for Devs.",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Contributor",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Contributed to Mantaro's Development in any way",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Contribute to Mantaro's Development this includes but is not limited to making a ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "reasonable",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Pull request.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Community Admin",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Helps to maintain the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://support.mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mantaro Hub",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " community.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Will be given to all Community Admins on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://support.mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mantaro Hub",
+            "type" : "SimpleText"
+          } ]
+        } ], [ {
+          "text" : "No, we currently aren't looking for Admins",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Translator",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Helped Translating Mantaro to another langauge.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Will be given to everyone who helps with the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/tree/master/src/main/resources/assets/languages",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "translation",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " of Mantaro",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Helper",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Helps to maintain the support influx on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://support.mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mantaro Hub",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Will be given to all Helpers on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://support.mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mantaro Hub",
+            "type" : "SimpleText"
+          } ]
+        } ], [ {
+          "text" : "No, we currently aren't looking for Helpers",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Donator",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Actively helps to keep Mantaro alive <3",
+          "type" : "SimpleText"
+        } ], [ {
+          "url" : "http://paypal.me/kodemantaro",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "PayPal",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "http://patreon.com/mantaro",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Patreon",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". The badge is automatically applied to all of our Patrons (if they are in ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://support.mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mantaro Hub",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ").",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Bug Hunter",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Has reported one or more ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "important",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " bugs with details.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Will be given to you if you report a major bug with decent details.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Marathon Winner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Reach Level 200+.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Depths of Hell",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Have all 3 Hellfire tools equipped.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Hot Miner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get a Hellfire Pickaxe.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Hot Fisher",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get a Hellfire Fishing Rod.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Hot Chopper",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get a Hellfire Axe.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Most Known",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Earn 1000 reputation.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Best Waifu",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get claimed as Waifu 1000 times.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Bi-Yearly Claimer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Reach a daily streak of ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "higherthan",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 730.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Rich",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get 25 million credits. That's really a lot of money.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Yearly Claimer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Reach a daily streak of ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "higherthan",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 365.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Champion",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "See yourself in a leaderboard.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Big Money",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get 10 million credits. That's a lot of money.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "The Best Friend",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get a Kodehawa pet.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Expert Gamer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Win 5000 games or more.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Experienced Badge Hunter",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 60 badges.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Expert Miner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 100,000 mining EXP.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Expert Fisher",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 100,000 fishing EXP.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Expert Chopper",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 100,000 chopping EXP.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Legendary Pet Owner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get your pet to level 300",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Marathon Runner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Reach Level 150+.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Fast Runner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Reach Level 100+.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Badge Hunter",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 40 badges.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Expert Pet Owner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get your pet to level 100 or more.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Addicted Gamer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Win 1000 games.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Crate Opener",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Open 40 crates.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "King of the Sea",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Catch more than 35 sharks.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Millionaire",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get your very own million credits.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Big Claimer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Reach a daily streak of ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "higherthan",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 180.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Lucky",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Be lucky enough to loot a lootcrate.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Experienced Pet Owner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get your pet to level 50.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Shopper",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Have any item 5000 times at any given time.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Experienced Miner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 10,000 mining EXP.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Experienced Fisher",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 10,000 fishing EXP.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Experienced Chopper",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 10,000 chopping EXP.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Best Friend",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Buy your very own pet.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Our Best Friend",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get a marriage pet.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Item Breaker",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Break a tool.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Celebrity",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Earn 100 reputation.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Popular",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Earn 10 reputation.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Lucky 7",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Gainmore",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " than 50,000 credits in a ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "single",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " slots game.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Claimer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Reach a daily streak of ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "higherthan",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 10.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Gamer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Win 100 games.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Gambler",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Gain",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " more than 5,000 credits in a single gamble attempt.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Known Waifu",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get claimed as waifu 100 times.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Popular Waifu",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get claimed as waifu 10 times.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Mutual",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Waifu of your waifu.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Claim a person as Waifu who previously claimed you.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "No, currently broken.",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Waifu",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get claimed as waifu.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Goldfish Brain",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get reminded more than 100 times.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Gem Finder",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Find a gem while mining.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Cleaner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Clean dust 50 times.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Runner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Reach level 50+.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Caster",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Cast more than 50 items.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Repair Person",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Repair an item more than 50 times.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Salvager",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Salvage an item more than 50 times.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "First Time Miner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 1,000 mining EXP.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "First Time Fisher",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 1,000 fishing EXP.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "First Time Chopper",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get more than 1,000 chopping EXP.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Walker",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Reach level 10+.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Miner",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Find a diamond while mining.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Chopper",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Find wood while chopping.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Fisher",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Find a fish while fishing.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self Explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "The Secret",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Open a loot crate.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Waster",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Dump >4000 items in one go.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Mad Scientist",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Use 15 potions at once.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Compulsive Buyer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Buy/Sell from/to the market more than 1000 times",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Dusty",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Get to 100% dust level",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Fire",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Ouch, ouch, someone please extinguish it!",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Encounter an unexpected error in Mantaro.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Married",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Marry someone. (does not apply to old marriages)",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Waifu Claimer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Claim someone as waifu.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Claimed",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Got claimed as waifu.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Heart Broken",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Ouch, was good while it lasted.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Divorce or have your marriage divorced.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Denied",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Have your marriage proposal turned down.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Power User",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Do mod stuff with Mantaro.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Use any Moderation command successfully (opts commands do not fall under this.)",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Configurator",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Used ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Configuration",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "~>opts",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " properly.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Successfully modify any guild settings using ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Configuration",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "~>opts",
+            "type" : "SimpleText"
+          } ]
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Lewdie",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Used a lewd command",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>rule34",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " or ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>yandere",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " or ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>danbooru",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " or ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>konachan",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " with an explicit rating.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Buyer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Buy something from the Market.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Calendar",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Set your timezone.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Writer",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Set a profile description.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Self explanatory",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Yes",
+          "type" : "SimpleText"
+        } ] ], [ [ {
+          "text" : "Christmas Spirit",
+          "type" : "SimpleText"
+        } ], null, [ {
+          "text" : "Participated on the Christmas event!",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Will be given to you if you have any of the Christmas items.",
+          "type" : "SimpleText"
+        } ], [ {
+          "text" : "Available between December 23 and December 25",
+          "type" : "SimpleText"
+        } ] ] ]
+      },
+      "type" : "Table"
+    }, {
+      "id" : "seasonal-badges",
+      "title" : "Seasonal Badges",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "These badges are given to those who participate in one of Mantaro's seasons and obtains a high ranking. The badges are",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "the same no matter the season its obtained in. The name of the Badge is dependant on the number of season it was",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "obtained on and the ranking to which its attached (Money/Rep).",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Badge Name",
+            "align" : "left"
+          }, {
+            "title" : "Badge Icon",
+            "align" : "left"
+          }, {
+            "title" : "Description",
+            "align" : "left"
+          }, {
+            "title" : "Currently Obtainable?",
+            "align" : "left"
+          } ],
+          "data" : [ [ [ {
+            "text" : "Season <#>: Top #1 <Money/Rep>",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Given to the person who achieved first place in the leaderboard for either Money or Rep.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "No",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Season <#>: Top #2 <Money/Rep>",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Given to the person who achieved second place in the leaderboard for either Money or Rep.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "No",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Season <#>: Top #3 <Money/Rep>",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Given to the person who achieved third place in the leaderboard for either Money or Rep.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "No",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Season <#>: Top #4 <Money/Rep>",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Given to the person who achieved fourth place in the leaderboard for either Money or Rep.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "No",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Season <#>: Top #5 <Money/Rep>",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Given to the person who achieved fifth place in the leaderboard for either Money or Rep.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "No",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      } ]
+    }, {
+      "id" : "riddle-badges",
+      "title" : "Riddle Badges",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "These badges are meant to be harder to obtain. In order to find out how to get them you will have to solve the riddles",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "next to their name (Sometimes the name also helps to solve it). All of these badges share the same image:",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Please note that there is no ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>answer",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " command or anything like that. These badges require you to use commands in",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "certain ways for instance queuing a specific Music track.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Badge Name",
+            "align" : "left"
+          }, {
+            "title" : "Riddle",
+            "align" : "left"
+          } ],
+          "data" : [ [ [ {
+            "text" : "Numeric Luck",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "All the numbers had a party, somehow they all ended up with the same dress.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Numeric Pathway",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A lucky and sad destiny with six equal people meeting, who slowly fade away as you spend.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Destiny Reaches",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Good and bad luck meeting together, with a little gem as a mediator.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Hacking Addiction",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Playing and slashing away your time, with a thousand addictions and thirty-something deeds, meeting together.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Pathway to Sky",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "With a heavenly beat we shall approach destiny, drums slowly fading between a piano melody, peaceful and chaotic in nature.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Happiness Found Between",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "The sour line between happiness and sadness approaches between beats, with a single one we shall decide which prevails.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "A Cold Summer",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "With a drum beat we approach a cold summertime, a place where nobody can catch you, feeling a bit safer with you.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Slow",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Alexa, how did we get here again?",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Small Scientist",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A child scientist, a robot and a cat, what could go wrong?",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Slowly Approaching Destiny",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "One in 90, or more. Luck shall decide, you have no choice but go with it",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Revelation",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A gun as a weapon, a chessboard as a world, passing through universes and flying through emotions.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Finding a Waifu",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Two Xs and some horns, what a deal.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Flying Malware",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Finding a piece of flying malware on your e-mail it's quite the deal, isn't it? And it talks!",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Gold Value",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Six gold tails and a person. Finding it might not be an ordeal, but the deal is not favorable.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Luck Behind",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A one-in-six chance of counting the tale, maybe slightly too much, maybe slightly too little.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Too Big To Fit",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "The small magical box contained between dimensions, soon forever gone.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Risky Ordeal",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "It isn't about how fast you climb, it's about the steps it takes.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Senseless Hoarding",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "With the hoarding comes a line, overflowing in mindless casino paper, fading away in a heartbeat.",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "The CPU Inside",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "I'm also a CPU. No, really!",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      } ]
+    }, {
+      "id" : "removedlegacy-badges",
+      "title" : "Removed/Legacy Badges",
+      "type" : "Section",
+      "content" : [ {
+        "table" : {
+          "columns" : [ {
+            "title" : "Badge Name",
+            "align" : "left"
+          }, {
+            "title" : "Badge Icon",
+            "align" : "left"
+          }, {
+            "title" : "Description",
+            "align" : "left"
+          } ],
+          "data" : [ [ [ {
+            "text" : "Upvoter",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Broke from 3rd Party changes and will not come back",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "DJ",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Legacy Badge (Unused and unobtainable).",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Bugged",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Bugged Helper. (Old Broken Helper Badge).",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Bugged 2",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Bugged Donor. (Old Broken Donator Badge).",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Isekai",
+            "type" : "SimpleText"
+          } ], null, [ {
+            "text" : "Have more than 7526527671 credits at any given time.",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      } ]
+    } ],
+    "lastModifiedTime" : 1661024098029,
+    "tocItem" : {
+      "chapterTitle" : "Currency",
+      "pageTitle" : "Badges",
+      "pageMeta" : { },
+      "dirName" : "currency",
+      "fileName" : "badges",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Seasonal Badges",
+        "id" : "seasonal-badges"
+      }, {
+        "title" : "Riddle Badges",
+        "id" : "riddle-badges"
+      }, {
+        "title" : "Removed/Legacy Badges",
+        "id" : "removedlegacy-badges"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

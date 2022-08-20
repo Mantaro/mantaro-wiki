@@ -1,0 +1,14 @@
+v3:@{embed;title:"Title text (256 chars)",
+description:"Description (2048 chars, Character limit for the **entire** embed is 6000)",
+fields:[
+{name:"Field name (256 chars)", value:"Field value (1024 chars, Max 25 fields)"},
+{name:"Inline", value:"Field", inline:true},
+{name:"Inline", value:"Field", inline:true}
+],
+author:"Author Name (256 chars)",
+authorImg:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png",
+thumbnail:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png",
+footer:"Footer text (2048 chars)",
+footerImg:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png",
+image:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png",
+color:"c91191"}

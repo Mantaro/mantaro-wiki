@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: 104: Advanced knowledge</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Advanced knowledge</h1></header>
+<p>In this page we seek to cover the more advanced commands in Mantaro's currency system. These commands require an understanding of the previously taught commands, or have a certain complexity to them.</p>
+</article>
+
+<article>
+<header><h1>Pets</h1></header>
+<p>Pets are useful companions you can get to help you out. They help you gain more money, loot more, find random stuff on the mine, chop down trees, and even catch fish. The higher the level of your pet, the higher the rewards. Each pet has its own abilities. Check the section bellow to see what each ability does and what pet has which ability. Be sure to check it out before choosing your pet.You have two choices: either buy a marriage pet or a personal pet. You can switch between the two types by using /pet choice (for marriage pet choice, use /pet choice marriage ). A personal pet is the default if you don't have a marriage pet already at the time of update 6.2For marriage pets you need to buy a marriage Car and House ( /marry car and /marry house ). To do this you need to have a house and a car on your inventory.The next requirement is for you to have a Pet House. You can buy one from the market. If you're going to have a personal pet, you need to cast an Incubator Egg.To buy your pet you can use /pet buy type:&lt;type of pet&gt; name:&lt;name for your pet&gt; . null https://i.imgur.com/2u6xCoL.png image You can use /pet status to check the current status of your pet. null https://i.imgur.com/VmlZmYC.png image Icon Stat Description How to gain? [{text=Level, type=SimpleText}] [{text=Your pet's level establishes how many credits/items your pet can get for you., type=SimpleText}] [{text=Your pet gets EXP everytime they help you out., type=SimpleText}] [{text=Pats, type=SimpleText}] [{text=Be nice to your pet and pat it from time to time., type=SimpleText}] [{text=Use , type=SimpleText}, {code=/pet pet, type=InlinedCode}, {text=., type=SimpleText}] [{text=Health, type=SimpleText}] [{text=Your pet's health is symbolic right now (meaning it does nothing). Still, take care of your pet and don't let it drop. No, pets can't die., type=SimpleText}] [{text=Health is recovered whenever you feed and hydrate your pet., type=SimpleText}] [{text=Stamina, type=SimpleText}] [{text=Your pet's stamina is symbolic right now (meaning it does nothing)., type=SimpleText}] [{text=Stamina is recovered whenever you feed and hydrate your pet., type=SimpleText}] [{text=Thirst, type=SimpleText}] [{text=Your pet's thirst establishes if your pet can help you or not. Either way, take care of it ok?, type=SimpleText}] [{text=Use , type=SimpleText}, {code=/pet hydrate, type=InlinedCode}] [{text=Hunger, type=SimpleText}] [{text=Your pet's hunger establishes if your pet can help you or not. Either way, take care of it ok?, type=SimpleText}] [{text=Use , type=SimpleText}, {code=/pet feed &lt;name of food&gt;, type=InlinedCode}] You have to take care of your new friend. You need to make sure they are well-fed and hydrated. To feed your pet you need to have its corresponding food in your inventory, which you can get from market (see below to know what type of food each pet eats). You can use /pet feed item:&lt;name of food&gt; . null https://i.imgur.com/vmRirbw.png image To hydrate your pet you need to have Water Bottles in your inventory, which you can get from market. You can use /pet hydrate . null https://i.imgur.com/2EbbQPx.png image Pets bonuses stack with the other bonuses you can get. For example, if you have an Energy Beverage running, and your pet helps you, the bonus you get will be increased by a lot. Pet Types Icon Name Value Abilities Food [{text=Rock, type=SimpleText}] [{text=1,000 credits, type=SimpleText}] [{text=Cheer, type=SimpleText}] [{text= Steak, type=SimpleText}] [{text=Hamster, type=SimpleText}] [{text=30,000 credits, type=SimpleText}] [{text=Chop, Cheer, type=SimpleText}] [{text= Steak , type=SimpleText}, {text= , type=SimpleText}, {text= Hamster Food, type=SimpleText}] [{text=Cat, type=SimpleText}] [{text=35,000 credits, type=SimpleText}] [{text=Fish, Cheer, type=SimpleText}] [{text= Steak , type=SimpleText}, {text= , type=SimpleText}, {text= Chicken , type=SimpleText}, {text= , type=SimpleText}, {text= Milk Bottle , type=SimpleText}, {text= , type=SimpleText}, {text= Cat Food, type=SimpleText}] [{text=Dog, type=SimpleText}] [{text=40,000 credits, type=SimpleText}] [{text=Catch, Cheer, type=SimpleText}] [{text= Steak , type=SimpleText}, {text= , type=SimpleText}, {text= Dog Food, type=SimpleText}] [{text=Dev, type=SimpleText}] [{text=3,000,000 credits, type=SimpleText}] [{text=Cheer, Fish, Catch, Chop, type=SimpleText}] [{text= Steak, type=SimpleText}] Pet Abilities Name Description [{text=Fish, type=SimpleText}] [{text=Your pet will help you out when you use , type=SimpleText}, {code=/fish, type=InlinedCode}, {text=., type=SimpleText}] [{text=Catch, type=SimpleText}] [{text=Your pet will help you out when you use , type=SimpleText}, {code=/mine, type=InlinedCode}, {text=., type=SimpleText}] [{text=Chop, type=SimpleText}] [{text=Your pet will help you out when you use , type=SimpleText}, {code=/chop, type=InlinedCode}, {text=., type=SimpleText}] [{text=Cheer, type=SimpleText}] [{text=Gives you a nice morale boost., type=SimpleText}] *Note on the Catch ability: Instead of providing an item buildup like the Fish and Chop abilities, the Catch ability provides an increased drop rate for items. It increases the drop rate for gems, Diamonds and Sparkle Fragments (for Sparkle Fragments only if you are using a Sparkle tool or better).</p>
+</article>
+
+<article>
+<header><h1>Leaderboards</h1></header>
+<p>Mantaro offers a variety of leaderboard you can compete on. The available leaderboards include things like:Amount of wins in slots ( slots ) Money ( money ) Level ( level ) Amount of wins in gamble ( gamble ) Amount of games won ( games ) Reputation ( reputation ) Amount of times claimed as waifu ( claim ) Daily streak ( daily ) To view any of the leaderboards simply use /leaderboard &lt;name&gt; , where &lt;name&gt; is what is in () above. For instance /leaderboard gamble .</p>
+</article>
+
+<article>
+<header><h1>Waifus</h1></header>
+<p>The waifu system of Mantaro basically allows you to &quot;claim&quot; (please note that this does not imply any relationships or real life events) users for whatever they are worth. Why would you care? Well, the only real reason to care is either the Waifu Pill item mentioned before, or to show off how expensive the people you &quot;own&quot; are. It is however noteworthy that you cannot sell waifus, and unclaiming them actually requires you to pay money. They are also are not unique to you, one user can claim a user you already claimed. How do you claim a user? This is actually rather easy you simply type /waifu claim user:&lt;mention&gt; . You will then spend the money that user is worth to claim them. This will occupy a slot. By default, you have 3 slots. You can buy up to 20 slots using /waifu buyslot .You can list the waifus you have claimed at any time using /waifu list . How do you unclaim a user? It is almost as easy as claiming a user if you still share a server with said person. You simply have to type /waifu unclaim user:&lt;mention&gt; .In the event that you do not share a server with a user you claimed anymore you will have to obtain their unique identifier (ID) which is not the numbers after the # in their user handle. To find out their ID use /waifu list id:True . This will show you your usual waifu list, but it will also include the ID of each waifu. After that simply use /waifu unclaim id:&lt;id&gt; . How do I check someone else's waifu value and how do I raise my own? To check your own or someone else's waifu value you can simply type /waifu stats for your own or /waifu stats user:&lt;mention&gt; for someone else.In this menu you will see so-called &quot;weight values&quot;, and a reputation multiplier along your total performance points and your total value. Your performance and value can be raised by increasing any of the weight values and or gaining more reputation (please note that a reputation multiplier below 1 gets treated as 1). For instance to raise your badge weight you would have to gain more badges. To raise your claim weight you would have to have yourself get waifu claimed and so on. This also means your total value can drop if any of these values decrease (the only ones that actually can decrease is money and claim).</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "advanced-knowledge",
+      "title" : "Advanced knowledge",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In this page we seek to cover the more advanced commands in Mantaro's currency system.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "These commands require an understanding of the previously taught commands, or have a certain complexity to them.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "pets",
+      "title" : "Pets",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Pets are useful companions you can get to help you out.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "They help you gain more money, loot more, find random stuff on the mine, chop down trees, and even catch fish. The higher the level of your pet, the higher the rewards. Each pet has its own abilities. Check the section bellow to see what each ability does and what pet has which ability. Be sure to check it out before choosing your pet.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You have two choices: either buy a marriage pet or a personal pet. You can switch between the two types by using ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/pet choice",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " (for marriage pet choice, use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/pet choice marriage",
+          "type" : "InlinedCode"
+        }, {
+          "text" : "). A personal pet is the default if you don't have a marriage pet already at the time of update 6.2",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For marriage pets you need to buy a marriage Car and House (",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/marry car",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " and ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/marry house",
+          "type" : "InlinedCode"
+        }, {
+          "text" : "). To do this you need to have a house and a car on your inventory.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The next requirement is for you to have a Pet House. You can buy one from the market. If you're going to have a personal pet, you need to cast an Incubator Egg.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To buy your pet you can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/pet buy type:<type of pet> name:<name for your pet>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/2u6xCoL.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/pet status",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " to check the current status of your pet.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/VmlZmYC.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "center"
+          }, {
+            "title" : "Stat",
+            "align" : "center"
+          }, {
+            "title" : "Description",
+            "align" : "center"
+          }, {
+            "title" : "How to gain?",
+            "align" : "center"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Level",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Your pet's level establishes how many credits/items your pet can get for you.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Your pet gets EXP everytime they help you out.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Pats",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Be nice to your pet and pat it from time to time.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet pet",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Health",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Your pet's health is symbolic right now (meaning it does nothing). Still, take care of your pet and don't let it drop. No, pets can't die.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Health is recovered whenever you feed and hydrate your pet.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Stamina",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Your pet's stamina is symbolic right now (meaning it does nothing).",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Stamina is recovered whenever you feed and hydrate your pet.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Thirst",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Your pet's thirst establishes if your pet can help you or not. Either way, take care of it ok?",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet hydrate",
+            "type" : "InlinedCode"
+          } ] ], [ null, [ {
+            "text" : "Hunger",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Your pet's hunger establishes if your pet can help you or not. Either way, take care of it ok?",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet feed <name of food>",
+            "type" : "InlinedCode"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You have to take care of your new friend. You need to make sure they are well-fed and hydrated.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "To feed your pet you need to have its corresponding food in your inventory, which you can get from market (see below to know what type of food each pet eats). You can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/pet feed item:<name of food>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/vmRirbw.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To hydrate your pet you need to have Water Bottles in your inventory, which you can get from market. You can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/pet hydrate",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/2EbbQPx.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Pets bonuses stack with the other bonuses you can get. For example, if you have an Energy Beverage running, and your pet helps you, the bonus you get will be increased by a lot.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "pets-pet-types",
+        "level" : 2,
+        "title" : "Pet Types",
+        "type" : "SubHeading"
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "center"
+          }, {
+            "title" : "Name",
+            "align" : "center"
+          }, {
+            "title" : "Value",
+            "align" : "center"
+          }, {
+            "title" : "Abilities",
+            "align" : "center"
+          }, {
+            "title" : "Food",
+            "align" : "center"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Rock",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "1,000 credits",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Cheer",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : " Steak",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Hamster",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "30,000 credits",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Chop, Cheer",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : " Steak ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " Hamster Food",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Cat",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "35,000 credits",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Cheer",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : " Steak ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " Chicken ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " Milk Bottle ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " Cat Food",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Dog",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "40,000 credits",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Catch, Cheer",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : " Steak ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "text" : " Dog Food",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Dev",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "3,000,000 credits",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Cheer, Fish, Catch, Chop",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : " Steak",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "id" : "pets-pet-abilities",
+        "level" : 2,
+        "title" : "Pet Abilities",
+        "type" : "SubHeading"
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Name",
+            "align" : "center"
+          }, {
+            "title" : "Description",
+            "align" : "center"
+          } ],
+          "data" : [ [ [ {
+            "text" : "Fish",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Your pet will help you out when you use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/fish",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Catch",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Your pet will help you out when you use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/mine",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Chop",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Your pet will help you out when you use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/chop",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ] ], [ [ {
+            "text" : "Cheer",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Gives you a nice morale boost.",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "*Note on the Catch ability:",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "Instead of providing an item buildup like the Fish and Chop abilities, the Catch ability provides an increased drop rate for items.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "It increases the drop rate for gems, Diamonds and Sparkle Fragments (for Sparkle Fragments only if you are using a ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Sparkle tool or better",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ").",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "leaderboards",
+      "title" : "Leaderboards",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Mantaro offers a variety of leaderboard you can compete on. The available leaderboards include things like:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Amount of wins in slots (",
+              "type" : "SimpleText"
+            }, {
+              "code" : "slots",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ")",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Money (",
+              "type" : "SimpleText"
+            }, {
+              "code" : "money",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ")",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Level (",
+              "type" : "SimpleText"
+            }, {
+              "code" : "level",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ")",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Amount of wins in gamble (",
+              "type" : "SimpleText"
+            }, {
+              "code" : "gamble",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ")",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Amount of games won (",
+              "type" : "SimpleText"
+            }, {
+              "code" : "games",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ")",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Reputation (",
+              "type" : "SimpleText"
+            }, {
+              "code" : "reputation",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ")",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Amount of times claimed as waifu (",
+              "type" : "SimpleText"
+            }, {
+              "code" : "claim",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ")",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Daily streak (",
+              "type" : "SimpleText"
+            }, {
+              "code" : "daily",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ")",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To view any of the leaderboards simply use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/leaderboard <name>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", where ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "<name>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " is what is in () above. For instance ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/leaderboard gamble",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "waifus",
+      "title" : "Waifus",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The waifu system of Mantaro basically allows you to \"claim\" (please note that this does not imply any relationships or real life events) users for whatever they are worth. Why would you care? Well, the only real reason to care is either the Waifu Pill item mentioned before, or to show off how expensive the people you \"own\" are.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "It is however noteworthy that you cannot sell waifus, and unclaiming them actually requires you to pay money. They are also are not unique to you, one user can claim a user you already claimed.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "waifus-how-do-you-claim-a-user",
+        "level" : 3,
+        "title" : "How do you claim a user?",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is actually rather easy you simply type ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/waifu claim user:<mention>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". You will then spend the money that user is worth to claim them. This will occupy a slot. By default, you have 3 slots. You can buy up to 20 slots using ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/waifu buyslot",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You can list the waifus you have claimed at any time using ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/waifu list",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "waifus-how-do-you-unclaim-a-user",
+        "level" : 3,
+        "title" : "How do you unclaim a user?",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "It is almost as easy as claiming a user if you still share a server with said person. You simply have to type ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/waifu unclaim user:<mention>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In the event that you do not share a server with a user you claimed anymore you will have to obtain their unique identifier (ID) which is ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "not",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " the numbers after the # in their user handle.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "To find out their ID use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/waifu list id:True",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". This will show you your usual waifu list, but it will also include the ID of each waifu.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "After that simply use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/waifu unclaim id:<id>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "waifus-how-do-i-check-someone-elses-waifu-value-and-how-do-i-raise-my-own",
+        "level" : 3,
+        "title" : "How do I check someone else's waifu value and how do I raise my own?",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To check your own or someone else's waifu value you can simply type ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/waifu stats",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " for your own or ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/waifu stats user:<mention>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " for someone else.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In this menu you will see so-called \"weight values\", and a reputation multiplier along your total performance points and your total value.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Your performance and value can be raised by increasing any of the weight values and or gaining more reputation (please note that a reputation multiplier below 1 gets treated as 1).",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "For instance to raise your badge weight you would have to gain more badges. To raise your claim weight you would have to have yourself get waifu claimed and so on.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "This also means your total value can drop if any of these values decrease (the only ones that actually can decrease is money and claim).",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661023967611,
+    "tocItem" : {
+      "chapterTitle" : "Currency",
+      "pageTitle" : "104: Advanced knowledge",
+      "pageMeta" : {
+        "title" : [ "104: Advanced knowledge" ]
+      },
+      "dirName" : "currency",
+      "fileName" : "104",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Advanced knowledge",
+        "id" : "advanced-knowledge"
+      }, {
+        "title" : "Pets",
+        "id" : "pets"
+      }, {
+        "title" : "Leaderboards",
+        "id" : "leaderboards"
+      }, {
+        "title" : "Waifus",
+        "id" : "waifus"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

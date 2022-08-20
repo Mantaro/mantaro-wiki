@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: 101</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Mantaro's custom command guide.</h1></header>
+<p>The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.</p>
+</article>
+
+<article>
+<header><h1>What is v3?</h1></header>
+<p>v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.</p>
+</article>
+
+<article>
+<header><h1>How do you use v3?</h1></header>
+<p>First of all for normal non-embed, non-operative commands there is no actual difference. A general thing to understand is that in order to use v3 you will have to prepend v3: to your custom command contents. However you cannot use v3: with iam:, iamnot: and embed:. For the sake of future migration and ease of reading we will however go over all aspects of custom commands here.Some documentation is done on the Premium bot due to not being a feature in Mantaro at the time of documenting</p>
+</article>
+
+<article>
+<header><h1>Basics</h1></header>
+<p>~&gt;custom add/new &lt;name&gt; &lt;response&gt; Will create an additional response if a command with that name already exists, otherwise it will make a new one. ~&gt;custom rm &lt;name&gt; Removes a custom command entirely. ~&gt;custom raw &lt;name&gt; Will show you all responses (including response numbers) of a custom command. ~&gt;custom info &lt;name&gt; Will print detailed information about a custom command. Creator, nsfw flag etc. ~&gt;custom view &lt;name&gt; &lt;response number&gt; Will show you the exact content of a specific response. ~&gt;custom rename &lt;name&gt; Allows you to rename a command. ~&gt;custom edit &lt;name&gt; &lt;response number&gt; &lt;new content&gt; Allows you to edit a specific response of a custom command. ~&gt;custom eval &lt;content&gt; Allows you to evaluate (run without creating it) a custom command. ~&gt;custom import &lt;name&gt; Allows you to import a custom command from another server you are in.</p>
+</article>
+
+<article>
+<header><h1>Simple Commands</h1></header>
+<p>Okay so let's start off super simple by just creating a very easy custom command. null https://i.imgur.com/7drG29o.png image Seems easy enough right? Well it is. Please note that even if you do use v3 here ( v3:Hi! ) there will be no actual difference (From here on every documentation point that has no difference will say &quot;no noticeable difference&quot;). Obviously you want to know how to go a bit more complex though.</p>
+</article>
+
+<article>
+<header><h1>Marking a command as nsfw</h1></header>
+<p>This is as simple as adding -nsfw to the very end of the command while either using ~&gt;custom new or ~&gt;custom add , example being ~&gt;custom new nsfwtest This is a test -nsfw . Please do note that when you add a new response with custom add and append -nsfw to mark it you will mark all responses as nsfw as it is intended to mark the whole command. Additionally using custom edit to mark a command already made as such does not work it will be treated as if it was raw text.</p>
+</article>
+
+<article>
+<header><h1>Modifiers</h1></header>
+<p>Custom commands support what's called modifiers, which are a set of predetermined custom command actions which might make your commands spicier and better. A list of those can be found https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers here, so here we will see examples on how they work. The most useful ones are:$(event.author.mention) Mentions the person who executed the command. $(event.me.mention) Mentions mantaro. $(event.message.raw) Basically you can use this to make a ~&gt;say command. Repeats what's after the command. $(event.channel.mention) Mentions the channel the command was executed on. $(event.channel.topic) Says the channel topic. $(event.guild.name) The name of your server. $(event.guild.owner.name) The server owner's name. $(event.guild.region) The server region. Basically, you can use those in any form of command.To create a command with those modifiers just create a command and use those. ( https://i.imgur.com/HBbUZzt.png Example). Works with multiple responses too. There is only one noticeable difference in v3. The difference is that you can basically set up your own modifiers per command. What that means is that you can define a value that you can then call using its modifier. And example of this would be: null https://i.imgur.com/GdmaZYk.png image</p>
+</article>
+
+<article>
+<header><h1>Automating Play and Iam roles</h1></header>
+<p>You can also automate playing music and claiming/unclaiming self-assignable roles.If you want to create a music shortcut your content will have to be play:&lt;url to song&gt; . Mantaro will then act as if you were using the play command with this url when you run the command.If you want to make the command assign an existing iam role your content will have to be iam:&lt;name of the iam role&gt; If you want to do the opposite and you want the command unassigned an existing iam role you will have to put iamnot:&lt;name of the iam role&gt; . In both cases Mantaro will act as if that person did ~&gt;iam &lt;name of the iam role&gt; and ~&gt;iamnot &lt;name of the iam role&gt; respectively if they run the command. You can also specify your own custom message if you would like to, this works in both v3 and v2. The v2 syntax for this would be iamcustom:&lt;name of the iam role&gt; &quot;&lt;message&gt;&quot; (same for iamnotcustom:). The v3 syntax for this is @{iam/iamnot;name of iam role;message} where the message is optional, meaning you can use iam roles in v3 now, and that combined with embeds, texts, ifs and so on. For more info on iam roles please check https://github.com/Mantaro/MantaroBot/wiki/Configuration here.</p>
+</article>
+
+<article>
+<header><h1>Embeds</h1></header>
+<p>What is new with this in v3? The syntax has changed from embed:&lt;json&gt; to @{embed;&lt;json&gt;} .Additionally, you can now use embeds and normal text at once. For instance This is text @{embed;title:&quot;Hi&quot;} would both display the text &quot;This is a text&quot; and the embed with the title Hi. You will need to add v3: before any of the command's contents for this to work as in this example: null https://i.imgur.com/VGwGhwl.png image What is an Embed? Okay let's start by making a simple embed. First let's look at what an embed even is: null https://i.imgur.com/PqSsAMG.png image title:&quot;your text here&quot; - Will set what you see as &quot;Title Text&quot; in the image above. description:&quot;your text here&quot; - Will set what you see as &quot;Description&quot;. thumbnail:&quot;valid image url here&quot; - Will set the top-right image. image:&quot;valid image url here&quot; - Will set the big bottom image. author:&quot;your text here&quot; - Will set what you see as &quot;Author Name&quot;. authorImg:&quot;valid image url here&quot; - Will set the image you see next to &quot;Author Name&quot;. footer:&quot;your text here&quot; - Will set what you see as &quot;Footer text&quot; footerImg:&quot;valid image url here&quot; - Will set the image you see next to &quot;Footer text&quot;. color:&quot;hex code/color name here&quot; - Will set the color of the purple strip you see on the left. fields:&lt;field sytanx (check slightly below)&gt; - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as &quot;Field name&quot; and value what you see as &quot;Field value&quot;, inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely. Field Syntax: [ {name:&quot;name of the first field&quot;, value:&quot;value of the first field&quot;, inline:true}, {name:&quot;name of the second field&quot;, value:&quot;value of the second field&quot;, inline:false} ] How to use an embed in custom commands? Please pay close attention to the character limits in the image above as-well as the maximum amount of fields. Exceeding those will make your custom command fail! You do not have to use all of the things above you can create your own combinations of them as you like. Additionally please note that title , author , field names and footer do not support any form of mentions due to discord limitations.Our syntax for the custom command will have to be @{embed;&lt;json&gt;} . With &quot;json&quot; being any assortment of the things you learned above. For instance: title:&quot;text&quot;,description:&quot;text&quot; . (Note the comma between 2 variables)As an example we will build the embed above using Mantaro. We will be using this as content: v3:@{embed;title:&quot;Title text (256 chars)&quot;, description:&quot;Description (2048 chars, Character limit for the **entire** embed is 6000)&quot;, fields:[ {name:&quot;Field name (256 chars)&quot;, value:&quot;Field value (1024 chars, Max 25 fields)&quot;}, {name:&quot;Inline&quot;, value:&quot;Field&quot;, inline:true}, {name:&quot;Inline&quot;, value:&quot;Field&quot;, inline:true} ], author:&quot;Author Name (256 chars)&quot;, authorImg:&quot;https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png&quot;, thumbnail:&quot;https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png&quot;, footer:&quot;Footer text (2048 chars)&quot;, footerImg:&quot;https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png&quot;, image:&quot;https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png&quot;, color:&quot;c91191&quot;} In action: null https://i.imgur.com/oPs5t44.png image</p>
+</article>
+
+<article>
+<header><h1>Operative Custom Commands</h1></header>
+<p>Comparing Comparing is the act of taking one value and comparing it to another, for instance with this you can check if the content of a message is equal to something you set, or in our example check if someone's user ID is equal to the correct one: null https://i.imgur.com/UwEaIDA.png image The syntax for a comparing with if-else is always @{if;thing to compare;comparator;thing compare with;if met;if not met (else)} . Additionally you can also use the compare operation to assert a boolean (true or false), uses for that are in the Asserting section down below. Syntax for this is @{compare;thing to compare;comparator;thing to compare with} . Available comparators equals : As seen in the example above will check if the thing to compare equals the thing to compare with. not-equals : Same as equals but reversed*. ignorecase-equals : Same as equals but ignores casing (i.e A == a). ignorecase-not-equals : Same as ignorecase-equals but reversed*. greater-than : Whether or not the thing to compare is greater than what the thing to compare with is (i.e 2 &gt; 1). less-than :Whether or not the thing to compare is less than what the thing to compare with is (i.e 1 &lt; 2). not-greater-than : Same as greater-than but reversed*. not-less-than : Same as less-than but reversed*. ignorecase-greater-than : Same as greater-than but ignores casing. ignorecase-less-than : Same as less-than but ignores casing. ignorecase-not-greater-than : Same as not-greater-than but ignores casing. ignorecase-not-less-than : Same as not-less-than but ignores casing. contains : Whether or not the thing to compare includes the thing to compare with. not-contains : Same as contains but reversed*. starts-with : Checks if the thing to compare starts with the thing to compare with. ignorecase-starts-with : Same as starts-with but ignores casing. ends-with : Checks if the thing to compare ends with the thing to compare with. ignorecase-ends-with : Same as ends-with but ignores casing. * Note: Reversed means logically reversed i.E contains checks if it is in the thing and not-contains checks if it is not in the thing. Predicting Predicting is the act of checking whether or not something meets a predicate. In simpler terms this can be anything like checking if a value is empty or checking if it's equal to a preset value.The syntax for if-else for this one is @{if;thing to predict;predicate;if met;if not met (else)} . You can additionally use the test operation to assert a boolean, uses for that are in the Asserting section down below. Syntax for this is @{test;predicate;value to predict} Available Predicates usermention : Check if the thing you check is a user mention. is-empty : Checks whether the thing to check is empty (aka has no characters). is-not-empty : Same as is-empty but reversed*. * Note: Reversed means logically reversed i.E contains checks if it is in the thing and not-contains checks if it is not in the thing. Asserting (True and False) Asserting a boolean means anything that returns a true or a false. We have mentioned the compare and test operations up above, both of these will when used outside of an if give you a &quot;true&quot; or a &quot;false&quot; as a message. However these truth values can be used in if commands to make more complex structures.The structure for if-else changes drastically for this one. It is as follows: @{if;if met;assertive;if not met} This all comes with very handy logical operators: @{and;operation;operation;....} : This can be used to only return true when all operations passed assert to true. @{or;operation;operation;....} : This can be used to return true when any of the operations passed assert to true. @{not;assertive} : This can be used to negate an assertive, meaning a true will become a false and vice versa. Operations You have a handful of operations to choose from, while we already talked about most of them, here is a list of all: @{if;syntax} : Used to make conditional responses, it's syntax is dependent on how it is used and all syntax are explained in the respective sections for predicting, comparing and asserting. @{not-empty;argument1;argument2;....} : Returns the first value that is not empty (You can feed this unlimited arguments). https://i.imgur.com/KRLgId2.png Example (Note: this does not ignore values that are only a space) @{not-empty-strict;argument1;argument2;....} : Same as not-empty but also considers values that are only a space to be empty. @{set;key;value} : Explained in detail in the Modifiers section up above @{embed;embed syntax} : Explained in detail in the embeds section up above @{compare;syntax} : Explained in detail in the comparing section up above @{test;syntax} : Explained in detail in the predicting section up above @{and;syntax} : Explained in detail in the asserting section up above @{or;syntax} : Explained in detail in the asserting section up above @{not;syntax} : Explained in detail in the asserting section up above @{timestamp;format;zone} : Used to print a time/date in any format you like from any timezone you like. Format is a bit more complex an example would be: d MMM uuuu , for the current date (more info for format on https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html Java Docs, the time zone can be any of https://en.wikipedia.org/wiki/List_of_tz_database_time_zones these TZ database names (include every character even underlines). @{upper;text} : Used to convert a text to fully uppercase @{lower;text} : Same as upper but with lowercase @{replace;character(s) to replace;replace with;replace in} : Used for replacing occurrences of characters in a text. Example would be @{replace;r;test;$(event.message)} to replace all r's with test in event.message What do we get in v3 vs old v2 You can now nest ifs (i.E use a new if as else of another to create chains)! You can now use embed fields in ifs You can now use newlines in ifs You can now check whether or not something contains a discord mention You can now chain if's (use multiple ifs in the same command) and have their else actually work. In general you can use all conditions/special syntaxes anywhere in your command. Meaning you can have text with an embed etc Generally a far more in depth and detailed interaction with if-else due to the high amount of operations available</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "mantaros-custom-command-guide",
+      "title" : "Mantaro's custom command guide.",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "what-is-v3",
+      "title" : "What is v3?",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "how-do-you-use-v3",
+      "title" : "How do you use v3?",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "First of all for normal non-embed, non-operative commands there is no actual difference.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A general thing to understand is that in order to use v3 you will ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "have",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " to prepend ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "v3:",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " to your custom command contents. However you cannot use v3: with iam:, iamnot: and embed:. For the sake of future migration and ease of reading we will however go over all aspects of custom commands here.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Some documentation is done on the Premium bot due to not being a feature in Mantaro at the time of documenting",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "basics",
+      "title" : "Basics",
+      "type" : "Section",
+      "content" : [ {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>custom add/new <name> <response>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Will create an additional response if a command with that name already exists, otherwise it will make a new one.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>custom rm <name>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Removes a custom command entirely.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>custom raw <name>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Will show you all responses (including response numbers) of a custom command.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>custom info <name>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Will print detailed information about a custom command. Creator, nsfw flag etc.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>custom view <name> <response number>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Will show you the exact content of a specific response.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>custom rename <name>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to rename a command.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>custom edit <name> <response number> <new content>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to edit a specific response of a custom command.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>custom eval <content>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to evaluate (run without creating it) a custom command.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>custom import <name>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to import a custom command from another server you are in.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "simple-commands",
+      "title" : "Simple Commands",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Okay so let's start off super simple by just creating a very easy custom command.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/7drG29o.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Seems easy enough right? Well it is. Please note that even if you do use v3 here (",
+          "type" : "SimpleText"
+        }, {
+          "code" : "v3:Hi!",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ") there will be no actual difference (From here on every documentation point that has no difference will say \"no noticeable difference\"). Obviously you want to know how to go a bit more complex though.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "marking-a-command-as-nsfw",
+      "title" : "Marking a command as nsfw",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is as simple as adding ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "-nsfw",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " to the very end of the command while either using ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>custom new",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " or ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>custom add",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", example being ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>custom new nsfwtest This is a test -nsfw",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". Please do note that when you add a new response with custom add and append -nsfw to mark it you will mark ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "all",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " responses as nsfw as it is intended to mark the whole command. Additionally using custom edit to mark a command already made as such does not work it will be treated as if it was raw text.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "modifiers",
+      "title" : "Modifiers",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Custom commands support what's called ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "modifiers",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", which are a set of predetermined custom command actions which might make your commands ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "spicier",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " and better.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "A list of those can be found ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "here",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", so here we will see examples on how they work.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "The most useful ones are:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "$(event.author.mention) ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Mentions the person who executed the command.",
+              "type" : "InlinedCode"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "$(event.me.mention) ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Mentions mantaro.",
+              "type" : "InlinedCode"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "$(event.message.raw) ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Basically you can use this to make a ~>say command. Repeats what's after the command.",
+              "type" : "InlinedCode"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "$(event.channel.mention) ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Mentions the channel the command was executed on.",
+              "type" : "InlinedCode"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "$(event.channel.topic) ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Says the channel topic.",
+              "type" : "InlinedCode"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "$(event.guild.name) ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "The name of your server.",
+              "type" : "InlinedCode"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "$(event.guild.owner.name) ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "The server owner's name.",
+              "type" : "InlinedCode"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "$(event.guild.region) ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "The server region.",
+              "type" : "InlinedCode"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "Basically, you can use those in any form of command.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To create a command with those modifiers just create a command and use those. (",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://i.imgur.com/HBbUZzt.png",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Example",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : "). Works with multiple responses too.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "There is only one noticeable difference in v3. The difference is that you can basically set up your own modifiers ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "per command",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". What that means is that you can define a value that you can then call using its modifier. And example of this would be:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/GdmaZYk.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "automating-play-and-iam-roles",
+      "title" : "Automating Play and Iam roles",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You can also automate playing music and claiming/unclaiming self-assignable roles.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you want to create a music shortcut your content will have to be ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "play:<url to song>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". Mantaro will then act as if you were using the play command with this url when you run the command.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you want to make the command assign an existing iam role your content will have to be ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "iam:<name of the iam role>",
+          "type" : "InlinedCode"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "If you want to do the opposite and you want the command unassigned an existing iam role you will have to put ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "iamnot:<name of the iam role>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "In both cases Mantaro will act as if that person did ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>iam <name of the iam role>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " and ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>iamnot <name of the iam role>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " respectively if they run the command.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You can also specify your own custom message if you would like to, this works in both v3 and v2.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "The v2 syntax for this would be ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "iamcustom:<name of the iam role> \"<message>\"",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " (same for iamnotcustom:).",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "The v3 syntax for this is ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "@{iam/iamnot;name of iam role;message}",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " where the message is optional, meaning you can use iam roles in v3 now, and that combined with embeds, texts, ifs and so on.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "For more info on iam roles please check ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Configuration",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "here",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "embeds",
+      "title" : "Embeds",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "embeds-what-is-new-with-this-in-v3",
+        "level" : 2,
+        "title" : "What is new with this in v3?",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The syntax has changed from ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "embed:<json>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " to ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "@{embed;<json>}",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Additionally, you can now use embeds and normal text at once. For instance ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "This is text @{embed;title:\"Hi\"}",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " would both display the text \"This is a text\" and the embed with the title Hi. You will need to add ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "v3:",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " before any of the command's contents for this to work as in this example:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/VGwGhwl.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "id" : "embeds-what-is-an-embed",
+        "level" : 2,
+        "title" : "What is an Embed?",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Okay let's start by making a simple embed. First let's look at what an embed even is:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/PqSsAMG.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "title:\"your text here\"",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - Will set what you see as \"Title Text\" in the image above.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "description:\"your text here\"",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - Will set what you see as \"Description\".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "thumbnail:\"valid image url here\"",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - Will set the top-right image.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "image:\"valid image url here\"",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - Will set the big bottom image.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "author:\"your text here\"",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - Will set what you see as \"Author Name\".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "authorImg:\"valid image url here\"",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - Will set the image you see next to \"Author Name\".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "footer:\"your text here\"",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - Will set what you see as \"Footer text\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "footerImg:\"valid image url here\"",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - Will set the image you see next to \"Footer text\".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "color:\"hex code/color name here\"",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - Will set the color of the purple strip you see on the left.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "fields:<field sytanx (check slightly below)>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as \"Field name\" and value what you see as \"Field value\", inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Field Syntax:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "[\n{name:\"name of the first field\",\nvalue:\"value of the first field\", inline:true},\n{name:\"name of the second field\",\nvalue:\"value of the second field\",\ninline:false}\n]",
+        "type" : "Snippet"
+      }, {
+        "id" : "embeds-how-to-use-an-embed-in-custom-commands",
+        "level" : 2,
+        "title" : "How to use an embed in custom commands?",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Please pay close attention to the character limits in the image above as-well as the maximum amount of fields. Exceeding those will make your custom command fail! You do not have to use all of the things above you can create your own combinations of them as you like. Additionally please note that ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "title",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "author",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "field names",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " and ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "footer",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " do ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "not",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " support any form of mentions due to discord limitations.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Our syntax for the custom command will have to be ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "@{embed;<json>}",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". With \"json\" being any assortment of the things you learned above. For instance: ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "title:\"text\",description:\"text\"",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". (Note the comma between 2 variables)",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "As an example we will build the embed above using Mantaro. We will be using this as content:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "v3:@{embed;title:\"Title text (256 chars)\",\ndescription:\"Description (2048 chars, Character limit for the **entire** embed is 6000)\",\nfields:[\n{name:\"Field name (256 chars)\", value:\"Field value (1024 chars, Max 25 fields)\"},\n{name:\"Inline\", value:\"Field\", inline:true},\n{name:\"Inline\", value:\"Field\", inline:true}\n],\nauthor:\"Author Name (256 chars)\",\nauthorImg:\"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png\",\nthumbnail:\"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png\",\nfooter:\"Footer text (2048 chars)\",\nfooterImg:\"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png\",\nimage:\"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png\",\ncolor:\"c91191\"}",
+        "type" : "Snippet"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In action:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/oPs5t44.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "operative-custom-commands",
+      "title" : "Operative Custom Commands",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "operative-custom-commands-comparing",
+        "level" : 2,
+        "title" : "Comparing",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Comparing is the act of taking one value and comparing it to another, for instance with this you can check if the content of a message is equal to something you set, or in our example check if someone's user ID is equal to the correct one:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/UwEaIDA.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The syntax for a comparing with if-else is always ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "@{if;thing to compare;comparator;thing compare with;if met;if not met (else)}",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Additionally you can also use the compare operation to assert a boolean (true or false), uses for that are in the Asserting section down below. Syntax for this is ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "@{compare;thing to compare;comparator;thing to compare with}",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "operative-custom-commands-comparing-available-comparators",
+        "level" : 3,
+        "title" : "Available comparators",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "equals",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": As seen in the example above will check if the thing to compare equals the thing to compare with.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "not-equals",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as equals but reversed*.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "ignorecase-equals",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as equals but ignores casing (i.e A == a).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "ignorecase-not-equals",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as ignorecase-equals but reversed*.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "greater-than",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Whether or not the thing to compare is greater than what the thing to compare with is (i.e 2 > 1).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "less-than",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ":Whether or not the thing to compare is less than what the thing to compare with is (i.e 1 < 2).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "not-greater-than",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as greater-than but reversed*.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "not-less-than",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as less-than but reversed*.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "ignorecase-greater-than",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as greater-than but ignores casing.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "ignorecase-less-than",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as less-than but ignores casing.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "ignorecase-not-greater-than",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as not-greater-than but ignores casing.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "ignorecase-not-less-than",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as not-less-than but ignores casing.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "contains",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Whether or not the thing to compare includes the thing to compare with.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "not-contains",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as contains but reversed*.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "starts-with",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Checks if the thing to compare starts with the thing to compare with.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "ignorecase-starts-with",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as starts-with but ignores casing.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "ends-with",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Checks if the thing to compare ends with the thing to compare with.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "ignorecase-ends-with",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as ends-with but ignores casing.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "* Note: Reversed means logically reversed i.E contains checks if it is ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "in",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " the thing and not-contains checks if it is ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "not in",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " the thing.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "operative-custom-commands-predicting",
+        "level" : 2,
+        "title" : "Predicting",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Predicting is the act of checking whether or not something meets a predicate. In simpler terms this can be anything like checking if a value is empty or checking if it's equal to a preset value.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The syntax for if-else for this one is ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "@{if;thing to predict;predicate;if met;if not met (else)}",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You can additionally use the test operation to assert a boolean, uses for that are in the Asserting section down below. Syntax for this is ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "@{test;predicate;value to predict}",
+          "type" : "InlinedCode"
+        } ]
+      }, {
+        "id" : "operative-custom-commands-predicting-available-predicates",
+        "level" : 3,
+        "title" : "Available Predicates",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "usermention",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Check if the thing you check is a user mention.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "is-empty",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Checks whether the thing to check is empty (aka has no characters).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "is-not-empty",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as is-empty but reversed*.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "* Note: Reversed means logically reversed i.E contains checks if it is ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "in",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " the thing and not-contains checks if it is ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "not in",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " the thing.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "operative-custom-commands-asserting-true-and-false",
+        "level" : 2,
+        "title" : "Asserting (True and False)",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Asserting a boolean means anything that returns a true or a false. We have mentioned the compare and test operations up above, both of these will when used outside of an if give you a \"true\" or a \"false\" as a message. However these truth values can be used in if commands to make more complex structures.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The structure for if-else changes drastically for this one. It is as follows: ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "@{if;if met;assertive;if not met}",
+          "type" : "InlinedCode"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "This all comes with very handy logical operators:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{and;operation;operation;....}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": This can be used to only return true when all operations passed assert to true.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{or;operation;operation;....}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": This can be used to return true when ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "Emphasis",
+              "content" : [ {
+                "text" : "any",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " of the operations passed assert to true.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{not;assertive}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": This can be used to negate an assertive, meaning a true will become a false and vice versa.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "operative-custom-commands-operations",
+        "level" : 2,
+        "title" : "Operations",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You have a handful of operations to choose from, while we already talked about most of them, here is a list of all:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{if;syntax}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Used to make conditional responses, it's syntax is dependent on how it is used and all syntax are explained in the respective sections for predicting, comparing and asserting.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{not-empty;argument1;argument2;....}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Returns the first value that is not empty (You can feed this unlimited arguments). ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://i.imgur.com/KRLgId2.png",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Example",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " (Note: this does not ignore values that are only a space)",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{not-empty-strict;argument1;argument2;....}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as not-empty but also considers values that are only a space to be empty.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{set;key;value}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Explained in detail in the Modifiers section up above",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{embed;embed syntax}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Explained in detail in the embeds section up above",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{compare;syntax}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Explained in detail in the comparing section up above",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{test;syntax}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Explained in detail in the predicting section up above",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{and;syntax}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Explained in detail in the asserting section up above",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{or;syntax}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Explained in detail in the asserting section up above",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{not;syntax}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Explained in detail in the asserting section up above",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{timestamp;format;zone}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Used to print a time/date in any format you like from any timezone you like. Format is a bit more complex an example would be: ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "d MMM uuuu",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ", for the current date (more info for format on ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Java Docs",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", the time zone can be any of ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://en.wikipedia.org/wiki/List_of_tz_database_time_zones",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "these TZ database names",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " (include every character even underlines).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{upper;text}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Used to convert a text to fully uppercase",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{lower;text}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Same as upper but with lowercase",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "@{replace;character(s) to replace;replace with;replace in}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ": Used for replacing occurrences of characters in a text. Example would be ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "@{replace;r;test;$(event.message)}",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " to replace all r's with test in event.message",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "operative-custom-commands-what-do-we-get-in-v3-vs-old-v2",
+        "level" : 2,
+        "title" : "What do we get in v3 vs old v2",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You can now nest ifs (i.E use a new if as else of another to create chains)!",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You can now use embed fields in ifs",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You can now use newlines in ifs",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You can now check whether or not something contains a discord mention",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You can now chain if's (use multiple ifs in the same command) and have their else actually work. In general you can use all conditions/special syntaxes ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "Emphasis",
+              "content" : [ {
+                "text" : "anywhere in your command",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ". Meaning you can have text with an embed etc",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Generally a far more in depth and detailed interaction with if-else due to the high amount of operations available",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661023344250,
+    "tocItem" : {
+      "chapterTitle" : "Custom Commands",
+      "pageTitle" : "101",
+      "pageMeta" : { },
+      "dirName" : "custom-commands",
+      "fileName" : "101",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Mantaro's custom command guide.",
+        "id" : "mantaros-custom-command-guide"
+      }, {
+        "title" : "What is v3?",
+        "id" : "what-is-v3"
+      }, {
+        "title" : "How do you use v3?",
+        "id" : "how-do-you-use-v3"
+      }, {
+        "title" : "Basics",
+        "id" : "basics"
+      }, {
+        "title" : "Simple Commands",
+        "id" : "simple-commands"
+      }, {
+        "title" : "Marking a command as nsfw",
+        "id" : "marking-a-command-as-nsfw"
+      }, {
+        "title" : "Modifiers",
+        "id" : "modifiers"
+      }, {
+        "title" : "Automating Play and Iam roles",
+        "id" : "automating-play-and-iam-roles"
+      }, {
+        "title" : "Embeds",
+        "id" : "embeds"
+      }, {
+        "title" : "Operative Custom Commands",
+        "id" : "operative-custom-commands"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

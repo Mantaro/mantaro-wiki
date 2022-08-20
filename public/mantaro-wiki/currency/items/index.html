@@ -1,0 +1,4602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: Items</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Intro</h1></header>
+<p>Mantaro has had many items across the years, some currently obtainable, some that have been removed. This page looks to document all the items that have been part of Mantaro and give a brief description of them. Collectible Items Most of these items are just meant to be collected. A few of the items here are used as crafting materials, others have no inherent use other than maybe selling them for credits, or keeping them to make your collection of items bigger. Icon Name Description Obtained from [{text=Headphones, type=SimpleText}] [{text=That's what happens when you listen to too much music. Should be worth something, tho. (Appears randomly after using any of the music commands), type=SimpleText}] [{text=Loot, type=SimpleText}] [{text=Moneybag, type=SimpleText}] [{text=What else?, type=SimpleText}] [{text=Market, type=SimpleText}] [{text=Milk, type=SimpleText}] [{text=Maybe it's okay to have some., type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Old Beverage, type=SimpleText}] [{text=Does really weird stuff in big quantities. Well, depends on what kind ;), type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Lewd Magazine, type=SimpleText}] [{text=Too many lewd commands. Way too many. Had fun?, type=SimpleText}] [{text=Market, Loot, Fish, Loot Crate, type=SimpleText}] [{text=Clothes, type=SimpleText}] [{text=Basically what you wear. Hopefully..., type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Diamond, type=SimpleText}] [{text=Basically a better way of saving your money. It's shiny too. And let's you cast shiny stuff. How nice., type=SimpleText}] [{text=Market, Mine, Loot Crate, type=SimpleText}] [{text=Wedding Dress, type=SimpleText}] [{text=Isn't it cute?, type=SimpleText}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Necklace, type=SimpleText}] [{text=Looks nice., type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Tuxedo, type=SimpleText}] [{text=What you wear when you're going to get married with a girl, or going to a nice place, or maybe everywhere, who knows?, type=SimpleText}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Shoes, type=SimpleText}] [{text='Cause walking barefoot is just nasty. Or painful., type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Rose, type=SimpleText}] [{text=The embodiment of your love. Also it's a nice decoration., type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Chocolate, type=SimpleText}] [{text=Yummy., type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Cookie, type=SimpleText}] [{text=Delicious., type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Pants, type=SimpleText}] [{text=Basically what you wear on your legs... hopefully., type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Coffee, type=SimpleText}] [{text=A delightful way to start your day., type=SimpleText}] [{text=Market, Fish, Loot Crate, type=SimpleText}] [{text=Television, type=SimpleText}] [{text=Must... watch... TV..., type=SimpleText}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Motorcycle, type=SimpleText}] [{text=Going around, the cool way., type=SimpleText}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Pizza, type=SimpleText}] [{text=Yummy., type=SimpleText}] [{text=Fish, Loot Crate, type=SimpleText}] [{text=Comet Gem, type=SimpleText}] [{text=Fragments of a comet you found while mining. Useful for casting., type=SimpleText}] [{text=Cast, Normal &amp; Premium Mine Crates, type=SimpleText}] [{text=Star Gem, type=SimpleText}] [{text=Fragments of a fallen star you found while mining., type=SimpleText}] [{text=Cast, Normal &amp; Premium Mine Crates, type=SimpleText}] [{text=Cobweb, type=SimpleText}] [{text=Something a spider left over on the mine. Wonder if it's worth something., type=SimpleText}] [{text=Mine, Normal &amp; Premium Mine Crates, type=SimpleText}] [{text=Gem Fragment, type=SimpleText}] [{text=Fragment of an ancient gem. Useful for casting., type=SimpleText}] [{text=Mine, Normal &amp; Premium Mine Crates, type=SimpleText}] [{text=Moon Runes, type=SimpleText}] [{text=Moon Rune. Needed to cast some stuff., type=SimpleText}] [{text=Mine, Normal &amp; Premium Mine Crates, type=SimpleText}] [{text=Snowflake, type=SimpleText}] [{text=Snowflake. Usually used as a cast ingredient., type=SimpleText}] [{text=Mine, Normal &amp; Premium Mine Crates, type=SimpleText}] [{text=Rock, type=SimpleText}] [{text=A rock. Yep. It's very hard, isn't it?, type=SimpleText}] [{text=Mine, Normal &amp; Premium Mine Crates, type=SimpleText}] [{text=Fish, type=SimpleText}] [{text=Fish. Caught in fishing., type=SimpleText}] [{text=Fish, Normal &amp; Premium Fish Treasure, type=SimpleText}] [{text=Tropical Fish, type=SimpleText}] [{text=A very tropical fish. Caught in fishing., type=SimpleText}] [{text=Fish, Normal &amp; Premium Fish Treasure, type=SimpleText}] [{text=Blowfish, type=SimpleText}] [{text=I wonder... is this good? Caught in fishing., type=SimpleText}] [{text=Fish, Normal &amp; Premium Fish Treasure, type=SimpleText}] [{text=Crab, type=SimpleText}] [{text=A crab. It dances, maybe., type=SimpleText}] [{text=Fish, Normal &amp; Premium Fish Treasure, type=SimpleText}] [{text=Squid, type=SimpleText}] [{text=Not to confuse with Squidward., type=SimpleText}] [{text=Fish, Normal &amp; Premium Fish Treasure, type=SimpleText}] [{text=Shrimp, type=SimpleText}] [{text=Pinkish stuff. I think., type=SimpleText}] [{text=Fish, Normal &amp; Premium Fish Treasure, type=SimpleText}] [{text=Shell, type=SimpleText}] [{text=Found at the bottom of the ocean. What could it be worth for? (Require , type=SimpleText}, {type=StrongEmphasis, content=[{text=Comet tool or better, type=SimpleText}]}, {text= to drop), type=SimpleText}] [{text=Fish, Premium Fish Treasure, type=SimpleText}] [{text=Shark, type=SimpleText}] [{text=Woah. How did you catch this? (Require , type=SimpleText}, {type=StrongEmphasis, content=[{text=Sparkle tool or better, type=SimpleText}]}, {text= to drop), type=SimpleText}] [{text=Fish, Premium Fish Treasure, type=SimpleText}] [{text=Sparkle Fragment, type=SimpleText}] [{text=One of the rarest gems around. Make sure to keep it. It is used to cast sparkle pickaxe &amp; sparkle rods. (Require , type=SimpleText}, {type=StrongEmphasis, content=[{text=Star tool or better, type=SimpleText}]}, {text= to drop), type=SimpleText}] [{text=Mine, Premium Mine Crates, type=SimpleText}] [{text=Wood, type=SimpleText}] [{text=Common drop from trees. Useful for casting., type=SimpleText}] [{text=Chop, type=SimpleText}] [{text=Leaves, type=SimpleText}] [{text=A slow drop from a tree you tried to chop., type=SimpleText}] [{text=Chop, type=SimpleText}] [{text=Apple, type=SimpleText}] [{text=You happened to chop an apple tree and the apple fell on your head. Ouch., type=SimpleText}] [{text=Chop, type=SimpleText}] [{text=Pear, type=SimpleText}] [{text=You happened to chop a pear tree and the pear fell on your head. Ouch., type=SimpleText}] [{text=Chop, type=SimpleText}] [{text=Cherry Blossom, type=SimpleText}] [{text=A very slow drop from a cherry tree. Lovely, huh?, type=SimpleText}] [{text=Chop, type=SimpleText}] [{text=Floppy Disk, type=SimpleText}] [{text=Might have some games. Don't copy the floppy. (Appears randomly after winning a game), type=SimpleText}] [{text=Loot, type=SimpleText}] [{text=Loaded Die, type=SimpleText}] [{text=Stolen from the , type=SimpleText}, {code=/roll, type=InlinedCode}, {text= command. (Appears randomly after using , type=SimpleText}, {code=/roll, type=InlinedCode}, {text=), type=SimpleText}] [{text=Loot, type=SimpleText}] [{text=Pencil, type=SimpleText}] [{text=We have plenty of those! (Appears randomly after creating or editing custom commands), type=SimpleText}] [{text=Loot, type=SimpleText}] [{text=Consolation Prize, type=SimpleText}] [{text=In the first place, how did you get so much money?, type=SimpleText}] [{text=Somehow overflow a long, type=SimpleText}] Usable/Consumable Items These items have a use attached to them. Some items have a single-time use, meaning that after you use them any other of the same item you get becomes a collectible. Icon Name Use/Description How to use? / Where is it used? Obtained from [{text=Marriage Ring, type=SimpleText}] [{text=Basically what makes your marriage official., type=SimpleText}] [{text=Requires two rings to marry with , type=SimpleText}, {code=/marry user user:&lt;mention&gt;, type=InlinedCode}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Love Letter, type=SimpleText}] [{text=A letter from your loved one. Can be used to write a marry letter, more info in profile section., type=SimpleText}] [{code=/marry createletter content:&lt;content&gt;, type=InlinedCode}] [{text=Obtained after marrying someone., type=SimpleText}] [{text=Slot ticket, type=SimpleText}] [{text=Gives you extra chance in slots, also works as bulk storage., type=SimpleText}] [{code=/slots useticket:true ticketamount:&lt;amount&gt;, type=InlinedCode}] [{text=Market, Loot Crate, type=SimpleText}] [{text=House, type=SimpleText}] [{text=Cozy place to live in., type=SimpleText}] [{text=Required to set your Marriage House with , type=SimpleText}, {code=/marry house name:&lt;name&gt;, type=InlinedCode}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Car, type=SimpleText}] [{text=To move around., type=SimpleText}] [{text=Required to set your Marriage Car with , type=SimpleText}, {code=/marry car name:&lt;name&gt;, type=InlinedCode}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Haste Potion, type=SimpleText}] [{text=Allows you to collect more stuff from currency commands for 3 sessions., type=SimpleText}] [{code=/use item item:Haste Potion, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Milky Potion, type=SimpleText}] [{text=Clears all potion effects., type=SimpleText}] [{code=/use item item:Milky Potion, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Energy Beverage, type=SimpleText}] [{text=Makes a tool lose less durability per swing. Lasts 3 sessions., type=SimpleText}] [{code=/use item item:Energy Beverage, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Mop, type=SimpleText}] [{text=A delightful way to clean all the dust you have around. I bet there's a lot of it., type=SimpleText}] [{code=/use item item:Mop, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Claim Key, type=SimpleText}] [{text=This item makes you un-claimeable (as a waifu)., type=SimpleText}] [{code=/profile claimlock, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Waifu Pill, type=SimpleText}] [{text=Gives you a significant advantage on mine and fish if one of your waifus is valued at over 20,000. Lasts 3 sessions., type=SimpleText}] [{code=/use item item:Waifu Pill, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Fishing Bait, type=SimpleText}] [{text=Gives you a higher chance of catching fish., type=SimpleText}] [{code=/use item item:Fishing Bait, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Incubator Egg, type=SimpleText}] [{text=The one catalyst you need to call your personal pet home., type=SimpleText}] [{text=Used when getting a Personal pet., type=SimpleText}] [{text=Cast, type=SimpleText}] [{text=Magical Watch, type=SimpleText}] [{text=A magic watch that slows time when you need it., type=SimpleText}] [{text=This will automatically be consumed to save your daily streak for 24 hours!, type=SimpleText}] [{text=Obtain one every 50 consecutive dailies., type=SimpleText}] [{text=Water Bottle, type=SimpleText}] [{text=An item that magically heals your pet's thirst., type=SimpleText}] [{code=/pet hydrate, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Pet House, type=SimpleText}] [{text=A house where your pet lives. Maybe. Sometimes they just like to flop outside., type=SimpleText}] [{text=Required to buy a pet with , type=SimpleText}, {code=/pet buy type:&lt;type&gt; name:&lt;name&gt;, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Steak, type=SimpleText}] [{text=Very yummy if you're not vegetarian., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Steak, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Chicken, type=SimpleText}] [{text=Very yummy if you're not vegetarian, but it comes from a chicken instead., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Chicken, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Milk Bottle, type=SimpleText}] [{text=Very good food for cats, I've heard., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Milk Bottle, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Dog Food, type=SimpleText}] [{text=Food your dog might like a lot. Or they might like bread more, like mines., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Dog Food, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Cat Food, type=SimpleText}] [{text=Food your cat might like a lot., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Cat Food, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Hamster Food, type=SimpleText}] [{text=Food your hamster might enjoy., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Hamster Food, type=InlinedCode}] [{text=Market, type=SimpleText}] Tool Items These items are ofter required to use another command. The commands they are attached to won't ofter work unless you have equipped/stated the required tool. Wrench Item Tier: Durability: 35Wrench level: 1Multiplier reduction: 1.0xCan cast multiple items?: NoDescription: A run of the mill wrench you can buy from the market. Useful for repairing items.Used in: CastObtained from: Market Comet Wrench Item Tier: Durability: 80Wrench level: 3Multiplier reduction: 0.9xCan cast multiple items?: YesDescription: A Wrench infused with pieces of Comet Gems. Somehow it feels way sturdier.Used in: CastObtained from: Cast Sparkle Wrench Item Tier: Durability: 160Wrench level: 4Multiplier reduction: 0.65xCan cast multiple items?: YesDescription: A Wrench infused with pieces of Sparkle Fragments. Somehow it feels a lot sturdier.Used in: CastObtained from: Cast Brom's Pickaxe Item Tier: Wrench tier needed to craft: NoneDurability: 40Money increase: 0 - 0 creditsDiamond increase: 0 - 2Sparkle gem drop rate: 0.0%Gem drop rate: 12.5%Description: A normal pickaxe you bought on the local market. Seems sturdy enough to mine some stuff.Used in: MineObtained from: Market, Mine CratesBroken version: None Diamond Pickaxe Item Tier: Wrench tier needed to craft: Durability: 150Money increase: 10 - 40 creditsDiamond increase: 0 - 2Sparkle gem drop rate: 0.0%Gem drop rate: 12.5%Description: A diamond pick is definitely stronger than the market-bought iron picks I could get on the market, that's for sure!Used in: MineObtained from: Cast, Mine CratesBroken version: None Comet Pickaxe Item Tier: Wrench tier needed to craft: Durability: 180Money increase: 25 - 100 creditsDiamond increase: 0 - 2Sparkle gem drop rate: 0.0%Gem drop rate: 17.5%Description: You found some Comet Fragments and realized you could make a Comet Gem out of them. What did they do? Were they special? You seemed eager to try it out after being impressed by its glow, so here we are, in your first step towards getting stronger picks.Used in: MineObtained from: Cast, Mine CratesBroken version: Icon Name Obtained from Used in [{text=Broken Comet Pickaxe, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Star Pickaxe Item Tier: Wrench tier needed to craft: Durability: 220Money increase: 25 - 100 creditsDiamond increase: 0 - 3Sparkle gem drop rate: 2.5%Gem drop rate: 20.0%Description: Maybe it was the glow, maybe it was the fact they came from a star far away in the galaxy, but it seemed to make for quite a sturdy pick with special properties. Weird... it seems to attract more gems. Is it the effect of the material, or is it my skill getting better?Used in: MineObtained from: Cast, Mine CratesBroken version: Icon Name Obtained from Used in [{text=Broken Star Pickaxe, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Moon Pickaxe Item Tier: Wrench tier needed to craft: Durability: 320Money increase: 35 - 140 creditsDiamond increase: 0 - 4Sparkle gem drop rate: 3.0%Gem drop rate: 22.5%Description: The moon-like substance mesmerized you. Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own? Regardless, you tried to fuse this with your current pick, and the result was quite satisfactory. Seems to be a good balance between light and dark, and somehow I mine some gems with it. Is this really a fragment from a far away moon?Used in: MineObtained from: Cast, Mine CratesBroken version: Icon Name Obtained from Used in [{text=Broken Moon Pickaxe, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Sparkle Pickaxe Item Tier: Wrench tier needed to craft: Durability: 450Money increase: 75 - 300 creditsDiamond increase: 0 - 4Sparkle gem drop rate: 5.5%Gem drop rate: 22.5%Description: Something made you look up into the caverns, and you found a sparkly gem on top. Looking up, some fell onto your pick, and it made the pick shine enough to light up the entire cavern. Quickly, you grab some of the sparkly fragments and get a casting station. The pick glows bright like the sun... and it seems pretty tough too... how did it fuse so well with iron?Used in: MineObtained from: Cast, Mine CratesBroken version: Icon Name Obtained from Used in [{text=Broken Sparkle Pickaxe, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Hellfire Pickaxe Item Tier: Wrench tier needed to craft: Durability: 3000Money increase: 375 - 1500 creditsDiamond increase: 0 - 10Sparkle gem drop rate: 8.8%Gem drop rate: 30.0%Description: Reactions between all the elements can be a weird and dangerous process. Regardless of what your friends told you, you decided to research this topic, and came up with an object brighter than anything you've ever seen... It seems to be a mix of all the other elements, but it seems quite reactive... it's also quite tough, not much seems to be able to break it... Have I done good for this world, or have I brought the unknown to life?Used in: MineObtained from: CastBroken version: Icon Name Obtained from Used in [{text=Broken Hellfire Pickaxe, type=SimpleText}] [{text=Breaking a tool (100%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Fishing Rod Item Tier: Wrench tier needed to craft: NoneDurability: 40Item buff: 1 - 9Description: A rod you bought at your local fishing market. Looks sturdy.Used in: FishObtained from: Market, Fish TreasureBroken version: None Comet Gem Rod Item Tier: Wrench tier needed to craft: Durability: 130Item buff: 1 - 12Description: After testing the Comet Fragments on your axe, you also realized you could use them on your rod. It made the thread stronger, and it seemed to attract more fish to it. All you could wish for.Used in: FishObtained from: Cast, Fish TreasureBroken version: Icon Name Obtained from Used in [{text=Broken Comet Rod, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Star Gem Rod Item Tier: Wrench tier needed to craft: Durability: 170Item buff: 1 - 15Description: The mesmerizing and shiny glow of this fragment could not be overlooked. You fused it together with the thread of your rod, and the fish came flowing through it! Seems like a bait isn't necessary all the time, but it's still useful.Used in: FishObtained from: Cast, Fish TreasureBroken version: Icon Name Obtained from Used in [{text=Broken Star Rod, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Moon Rod Item Tier: Wrench tier needed to craft: Durability: 200Item buff: 1 - 18Description: You're still impressed by the way this gem floats on it's own. Regardless, you fuse it with the thread of your rod as best as you can. It seems to be a little stronger than a Star Fragment infused rod, but not by much. Eitherway, you enjoy the glow of it like it's the first day you've ever seen it.Used in: FishObtained from: Cast, Fish TreasureBroken version: Icon Name Obtained from Used in [{text=Broken Moon Rod, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Sparkle Rod Item Tier: Wrench tier needed to craft: Durability: 300Item buff: 1 - 20Description: A touch of sparkle here, a touch of sparkle there! You pulverized the Sparkle Fragments and coated the thread of your fishing rod with it. You seem confused. How can this attract fish? The world has many mysteries, and this is one of them. Maybe it can help you get more coins. Maybe it can bring you satisfaction. The glow it leaves on the sea is amazing, and you stare at it for hours on end. Maybe you did do the right thing after all.Used in: FishObtained from: Cast, Fish TreasureBroken version: Icon Name Obtained from Used in [{text=Broken Sparkle Rod, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Hellfire Rod Item Tier: Wrench tier needed to craft: Durability: 2500Item buff: 1 - 30Description: Reactions between all the elements can be a weird and dangerous process. You mastered the elements already, and fusing it with your fishing rod thread now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it. It works wonders. Fish come in shoals to you. Nothing can compare. But you're still left wondering whether you really did the right thing.Used in: FishObtained from: CastBroken version: Icon Name Obtained from Used in [{text=Broken Hellfire Rod, type=SimpleText}] [{text=Breaking a tool (100%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Axe Item Tier: Wrench tier needed to craft: NoneDurability: 35Money Increase: 0 - 0 creditsDescription: A normal axe you bought on the local market. Good enough to chop some trees down.Used in: ChopObtained from: Market, Chop CrateBroken version: None Comet Axe Item Tier: Wrench tier needed to craft: Durability: 170Money Increase: 25 - 100 creditsDescription: After testing the Comet Fragments on your pick, you also realized you could use them on your axe. It made it stronger, and shinier. All you could wish for.Used in: ChopObtained from: Cast, Chop CrateBroken version: Icon Name Obtained from Used in [{text=Broken Comet Axe, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Star Axe Item Tier: Wrench tier needed to craft: Durability: 220Money Increase: 25 - 100 creditsDescription: A bright glow from a star far away, but in your hands. Looks like the tree-chopping can continue with this new, shiny axe. You seemed weirded out at first: how can this help me mine more wood? Well, you soon realized why...Used in: ChopObtained from: Cast, Chop CrateBroken version: Icon Name Obtained from Used in [{text=Broken Star Axe, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Moon Axe Item Tier: Wrench tier needed to craft: Durability: 350Money Increase: 32 - 130 creditsDescription: Looking at this axe, you look mesmerized by moon-like glow it emits. Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own? Mesmerized, you cast this substance into your axe and... boom! The results look good. It seems to chop trees faster, too. Why is it so sharp? Is this really a fragment from a far away moon?Used in: ChopObtained from: Cast, Chop CrateBroken version: Icon Name Obtained from Used in [{text=Broken Moon Axe, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Sparkle Axe Item Tier: Wrench tier needed to craft: Durability: 500Money Increase: 75 - 300 creditsDescription: A touch of sparkle here, a touch of sparkle there! The axe glows bright like the sun... and it seems pretty tough too... how did it fuse so well with iron?Used in: ChopObtained from: Cast, Chop CrateBroken version: Icon Name Obtained from Used in [{text=Broken Sparkle Axe, type=SimpleText}] [{text=Breaking a tool (80%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Hellfire Axe Item Tier: Wrench tier needed to craft: Durability: 3100Money Increase: 225 - 900 creditsDescription: Reactions between all the elements can be a weird and dangerous process. You mastered the elements already, and fusing it with your axe now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it. It works wonders. Nothing can compare. But you're still left wondering whether you really did the right thing.Used in: ChopObtained from: Cast, Chop CrateBroken version: Icon Name Obtained from Used in [{text=Broken Hellfire Axe, type=SimpleText}] [{text=Breaking a tool (100%), type=SimpleText}, {text=Unequiping a tool (100%), type=SimpleText}] [{text=Repair, type=SimpleText}, {text=Salvage, type=SimpleText}] Crate Items These items (minus the Crate Key) are dropped randomly from using other Currency Commands. To open any of the crates you need to have a Crate Key on your inventory. Icon Name Description Opened with Drop Rate Obtained from [{text=Crate Key, type=SimpleText}] [{text=Used to open various crates., type=SimpleText}] [{text=N/A, type=SimpleText}] [{text=N/A, type=SimpleText}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Loot Crate, type=SimpleText}] [{text=You can use this along with a loot key to open a loot crate!, type=SimpleText}] [{code=/opencrate, type=InlinedCode}] [{text=~1%, type=SimpleText}] [{text=Loot, type=SimpleText}] [{text=Gem Crate, type=SimpleText}] [{text=A gem you find while mining. Might have some nice stuff inside., type=SimpleText}] [{code=/opencrate crate:gem crate, type=InlinedCode}] [{text=~2%, type=SimpleText}] [{text=Mine, type=SimpleText}] [{text=Gem Premium Crate*, type=SimpleText}] [{text=A gem you find while mining. Might have some nice stuff inside., type=SimpleText}] [{code=/opencrate crate:gem premium crate, type=InlinedCode}] [{text=~2%, type=SimpleText}] [{text=Mine, Dailycrate**, type=SimpleText}] [{text=Fish Treasure, type=SimpleText}] [{text=A treasure you find while fishing. Might have some nice stuff inside., type=SimpleText}] [{code=/opencrate crate:treasure, type=InlinedCode}] [{text=~5%, type=SimpleText}] [{text=Fish, type=SimpleText}] [{text=Fish Premium Treasure*, type=SimpleText}] [{text=A treasure you find while fishing. Might have some nice stuff inside., type=SimpleText}] [{code=/opencrate crate:premium treasure, type=InlinedCode}] [{text=~5%, type=SimpleText}] [{text=Fish, Dailycrate**, type=SimpleText}] [{text=Chop Crate, type=SimpleText}] [{text=A treasure you find while chopping. Might have some nice stuff inside., type=SimpleText}] [{code=/opencrate crate:chop crate, type=InlinedCode}] [{text=~5%, type=SimpleText}] [{text=Chop, type=SimpleText}] [{text=Chop Premium Crate*, type=SimpleText}] [{text=A treasure you find while chopping. Might have some nice stuff inside., type=SimpleText}] [{code=/opencrate crate:chop premium crate, type=InlinedCode}] [{text=~5%, type=SimpleText}] [{text=Chop, Dailycrate**, type=SimpleText}] ** Dailycrate and Premium Crates are https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks Premium only. As well, Premium Users will find only Premium Crates and never their normal version. Timed Items These items can only be obtained during certain times or events. Icon Name Description Obtained during Obtained from [{text=Christmas bell, type=SimpleText}] [{text=Gives you a cozy christmas feeling on your tree., type=SimpleText}] [{text=Christmas Event, type=SimpleText}] [{text=Loot, type=SimpleText}] [{text=Christmas tree, type=SimpleText}] [{text=Who doesn't like a christmas tree?., type=SimpleText}] [{text=Christmas Event, type=SimpleText}] [{text=Loot, type=SimpleText}] Removed/Legacy/Unobtainable Items These items are no longer obtainable in Mantaro. Icon Name Description [{text=Ping Racket, type=SimpleText}] [{text=I won the game of ping-pong with Discord by a few milliseconds. Maybe., type=SimpleText}] [{text=Forgotten Music, type=SimpleText}] [{text=Never downloaded. Probably has been copyrighted., type=SimpleText}] [{text=Special Loaded Die, type=SimpleText}] [{text=Even more loaded. Leftover from Currency version 1., type=SimpleText}] [{text=Booster, type=SimpleText}] [{text=Used to give you some kind of boost, now it's broken. Leftover from Currency version 1., type=SimpleText}] [{text=Berserk, type=SimpleText}] [{text=Currency Berserk? Anyone? Leftover from Currency version 1., type=SimpleText}] [{text=Companion, type=SimpleText}] [{text=Aw, such a cute dog. Leftover from Currency version 1., type=SimpleText}] [{text=Special Ring, type=SimpleText}] [{text=It's so special, it's not even a ring. Leftover from Currency version 1., type=SimpleText}] [{text=Enchancer, type=SimpleText}] [{text=A broken enchanter, I wonder if it could be fixed? Leftover from Currency version 1., type=SimpleText}] [{text=Prize, type=SimpleText}] [{text=Pretty much, huh? Leftover from Currency version 1., type=SimpleText}] [{text=Old Sparkle Fragment, type=SimpleText}] [{text=No longer used., type=SimpleText}] [{text=Old Sparkly Pickaxe, type=SimpleText}] [{text=No longer used., type=SimpleText}] [{text=Old Sparkly Rod, type=SimpleText}] [{text=No longer used., type=SimpleText}] [{text=Ban Hammer, type=SimpleText}] [{text=Left by an admin. (Appears randomly after someone was banned using , type=SimpleText}, {code=~&gt;ban, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;tempban, type=InlinedCode}, {text=), type=SimpleText}] [{text=Kick Boot, type=SimpleText}] [{text=Left by an admin. (Appears randomly after someone was kicked using , type=SimpleText}, {code=~&gt;kick, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;softban, type=InlinedCode}, {text=), type=SimpleText}] [{text=My Maths, type=SimpleText}] [{text=Oh, I forgot my maths. (Appears randomly after using , type=SimpleText}, {code=~&gt;stats usage, type=InlinedCode}, {text=), type=SimpleText}]</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "intro",
+      "title" : "Intro",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Mantaro has had many items across the years, some currently obtainable, some that have been removed.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "This page looks to document all the items that have been part of Mantaro and give a brief description of them.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "intro-collectible-items",
+        "level" : 2,
+        "title" : "Collectible Items",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Most of these items are just meant to be collected. A few of the items here are used as crafting materials, others have no inherent use other than maybe selling them for credits, or keeping them to make your collection of items bigger.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "center"
+          }, {
+            "title" : "Name",
+            "align" : "center"
+          }, {
+            "title" : "Description",
+            "align" : "center"
+          }, {
+            "title" : "Obtained from",
+            "align" : "center"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Headphones",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "That's what happens when you listen to too much music. Should be worth something, tho. (Appears randomly after using any of the music commands)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Loot",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Moneybag",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "What else?",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Milk",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Maybe it's okay to have some.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Old Beverage",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Does really weird stuff in big quantities. Well, depends on what kind ;)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Lewd Magazine",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Too many lewd commands. Way too many. Had fun?",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Loot, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Clothes",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Basically what you wear. Hopefully...",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Diamond",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Basically a better way of saving your money. It's shiny too. And let's you cast shiny stuff. How nice.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Mine, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Wedding Dress",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Isn't it cute?",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Necklace",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Looks nice.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Tuxedo",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "What you wear when you're going to get married with a girl, or going to a nice place, or maybe everywhere, who knows?",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Shoes",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "'Cause walking barefoot is just nasty. Or painful.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Rose",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "The embodiment of your love. Also it's a nice decoration.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Chocolate",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Yummy.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Cookie",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Delicious.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Pants",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Basically what you wear on your legs... hopefully.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Coffee",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A delightful way to start your day.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Television",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Must... watch... TV...",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Motorcycle",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Going around, the cool way.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Pizza",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Yummy.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Comet Gem",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fragments of a comet you found while mining. Useful for casting.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Cast, Normal & Premium Mine Crates",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Star Gem",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fragments of a fallen star you found while mining.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Cast, Normal & Premium Mine Crates",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Cobweb",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Something a spider left over on the mine. Wonder if it's worth something.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Mine, Normal & Premium Mine Crates",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Gem Fragment",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fragment of an ancient gem. Useful for casting.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Mine, Normal & Premium Mine Crates",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Moon Runes",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Moon Rune. Needed to cast some stuff.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Mine, Normal & Premium Mine Crates",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Snowflake",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Snowflake. Usually used as a cast ingredient.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Mine, Normal & Premium Mine Crates",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Rock",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A rock. Yep. It's very hard, isn't it?",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Mine, Normal & Premium Mine Crates",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Fish",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish. Caught in fishing.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Normal & Premium Fish Treasure",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Tropical Fish",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A very tropical fish. Caught in fishing.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Normal & Premium Fish Treasure",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Blowfish",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "I wonder... is this good? Caught in fishing.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Normal & Premium Fish Treasure",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Crab",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A crab. It dances, maybe.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Normal & Premium Fish Treasure",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Squid",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Not to confuse with Squidward.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Normal & Premium Fish Treasure",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Shrimp",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Pinkish stuff. I think.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Normal & Premium Fish Treasure",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Shell",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Found at the bottom of the ocean. What could it be worth for? (Require ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Comet tool or better",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : " to drop)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Premium Fish Treasure",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Shark",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Woah. How did you catch this? (Require ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Sparkle tool or better",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : " to drop)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Premium Fish Treasure",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Sparkle Fragment",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "One of the rarest gems around. Make sure to keep it. It is used to cast sparkle pickaxe & sparkle rods. (Require ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Star tool or better",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : " to drop)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Mine, Premium Mine Crates",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Wood",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Common drop from trees. Useful for casting.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Chop",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Leaves",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A slow drop from a tree you tried to chop.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Chop",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Apple",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "You happened to chop an apple tree and the apple fell on your head. Ouch.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Chop",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Pear",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "You happened to chop a pear tree and the pear fell on your head. Ouch.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Chop",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Cherry Blossom",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A very slow drop from a cherry tree. Lovely, huh?",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Chop",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Floppy Disk",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Might have some games. Don't copy the floppy. (Appears randomly after winning a game)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Loot",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Loaded Die",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Stolen from the ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/roll",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " command. (Appears randomly after using ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/roll",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ")",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Loot",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Pencil",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "We have plenty of those! (Appears randomly after creating or editing custom commands)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Loot",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Consolation Prize",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "In the first place, how did you get so much money?",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Somehow overflow a long",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "id" : "intro-usableconsumable-items",
+        "level" : 2,
+        "title" : "Usable/Consumable Items",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "These items have a use attached to them. Some items have a single-time use, meaning that after you use them any other of the same item you get becomes a collectible.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "center"
+          }, {
+            "title" : "Name",
+            "align" : "center"
+          }, {
+            "title" : "Use/Description",
+            "align" : "center"
+          }, {
+            "title" : "How to use? / Where is it used?",
+            "align" : "center"
+          }, {
+            "title" : "Obtained from",
+            "align" : "center"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Marriage Ring",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Basically what makes your marriage official.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Requires two rings to marry with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/marry user user:<mention>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Love Letter",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A letter from your loved one. Can be used to write a marry letter, more info in profile section.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/marry createletter content:<content>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Obtained after marrying someone.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Slot ticket",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Gives you extra chance in slots, also works as bulk storage.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/slots useticket:true ticketamount:<amount>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "House",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Cozy place to live in.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Required to set your Marriage House with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/marry house name:<name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Car",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "To move around.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Required to set your Marriage Car with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/marry car name:<name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Haste Potion",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Allows you to collect more stuff from currency commands for 3 sessions.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/use item item:Haste Potion",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Milky Potion",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Clears all potion effects.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/use item item:Milky Potion",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Energy Beverage",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Makes a tool lose less durability per swing. Lasts 3 sessions.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/use item item:Energy Beverage",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Mop",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A delightful way to clean all the dust you have around. I bet there's a lot of it.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/use item item:Mop",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Claim Key",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "This item makes you un-claimeable (as a waifu).",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/profile claimlock",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Waifu Pill",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Gives you a significant advantage on mine and fish if one of your waifus is valued at over 20,000. Lasts 3 sessions.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/use item item:Waifu Pill",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Fishing Bait",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Gives you a higher chance of catching fish.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/use item item:Fishing Bait",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Incubator Egg",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "The one catalyst you need to call your personal pet home.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Used when getting a Personal pet.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Cast",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Magical Watch",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A magic watch that slows time when you need it.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "This will automatically be consumed to save your daily streak for 24 hours!",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Obtain one every 50 consecutive dailies.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Water Bottle",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "An item that magically heals your pet's thirst.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/pet hydrate",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Pet House",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A house where your pet lives. Maybe. Sometimes they just like to flop outside.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Required to buy a pet with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet buy type:<type> name:<name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Steak",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Very yummy if you're not vegetarian.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Used to feed your pet with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet feed item:Steak",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Chicken",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Very yummy if you're not vegetarian, but it comes from a chicken instead.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Used to feed your pet with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet feed item:Chicken",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Milk Bottle",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Very good food for cats, I've heard.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Used to feed your pet with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet feed item:Milk Bottle",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Dog Food",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Food your dog might like a lot. Or they might like bread more, like mines.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Used to feed your pet with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet feed item:Dog Food",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Cat Food",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Food your cat might like a lot.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Used to feed your pet with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet feed item:Cat Food",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Hamster Food",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Food your hamster might enjoy.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Used to feed your pet with ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/pet feed item:Hamster Food",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "Market",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "id" : "intro-tool-items",
+        "level" : 2,
+        "title" : "Tool Items",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "These items are ofter required to use another command. The commands they are attached to won't ofter work unless you have equipped/stated the required tool.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "intro-tool-items-wrench",
+        "level" : 3,
+        "title" : "Wrench",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 35",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench level:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 1",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Multiplier reduction:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 1.0x",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Can cast multiple items?:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " No",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A run of the mill wrench you can buy from the market. Useful for repairing items.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Market",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-comet-wrench",
+        "level" : 3,
+        "title" : "Comet Wrench",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 80",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench level:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 3",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Multiplier reduction:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0.9x",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Can cast multiple items?:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Yes",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A Wrench infused with pieces of Comet Gems. Somehow it feels way sturdier.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-sparkle-wrench",
+        "level" : 3,
+        "title" : "Sparkle Wrench",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 160",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench level:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 4",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Multiplier reduction:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0.65x",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Can cast multiple items?:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Yes",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A Wrench infused with pieces of Sparkle Fragments. Somehow it feels a lot sturdier.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-broms-pickaxe",
+        "level" : 3,
+        "title" : "Brom's Pickaxe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " None",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 40",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0 - 0 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Diamond increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0 - 2",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Sparkle gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0.0%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 12.5%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A normal pickaxe you bought on the local market. Seems sturdy enough to mine some stuff.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Mine",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Market, Mine Crates",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " None",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-diamond-pickaxe",
+        "level" : 3,
+        "title" : "Diamond Pickaxe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 150",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 10 - 40 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Diamond increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0 - 2",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Sparkle gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0.0%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 12.5%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A diamond pick is definitely stronger than the market-bought iron picks I could get on the market, that's for sure!",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Mine",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Mine Crates",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " None",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-comet-pickaxe",
+        "level" : 3,
+        "title" : "Comet Pickaxe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 180",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 25 - 100 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Diamond increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0 - 2",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Sparkle gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0.0%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 17.5%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You found some Comet Fragments and realized you could make a Comet Gem out of them.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "What did they do? Were they special?",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You seemed eager to try it out after being impressed by its glow, so here we are, in your first step towards getting stronger picks.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Mine",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Mine Crates",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Comet Pickaxe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-star-pickaxe",
+        "level" : 3,
+        "title" : "Star Pickaxe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 220",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 25 - 100 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Diamond increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0 - 3",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Sparkle gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 2.5%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 20.0%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Maybe it was the glow, maybe it was the fact they came from a star far away in the galaxy, but it seemed to make for quite a sturdy pick with special properties.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Weird... it seems to attract more gems. Is it the effect of the material, or is it my skill getting better?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Mine",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Mine Crates",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Star Pickaxe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-moon-pickaxe",
+        "level" : 3,
+        "title" : "Moon Pickaxe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 320",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 35 - 140 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Diamond increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0 - 4",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Sparkle gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 3.0%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 22.5%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "The moon-like substance mesmerized you.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own?",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Regardless, you tried to fuse this with your current pick, and the result was quite satisfactory.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Seems to be a good balance between light and dark, and somehow I mine some gems with it.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Is this really a fragment from a far away moon?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Mine",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Mine Crates",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Moon Pickaxe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-sparkle-pickaxe",
+        "level" : 3,
+        "title" : "Sparkle Pickaxe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 450",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 75 - 300 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Diamond increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0 - 4",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Sparkle gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 5.5%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 22.5%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Something made you look up into the caverns, and you found a sparkly gem on top. Looking up, some fell onto your pick, and it made the pick shine enough to light up the entire cavern.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Quickly, you grab some of the sparkly fragments and get a casting station.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "The pick glows bright like the sun... and it seems pretty tough too... how did it fuse so well with iron?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Mine",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Mine Crates",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Sparkle Pickaxe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-hellfire-pickaxe",
+        "level" : 3,
+        "title" : "Hellfire Pickaxe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 3000",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 375 - 1500 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Diamond increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0 - 10",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Sparkle gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 8.8%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Gem drop rate:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 30.0%",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Reactions between all the elements can be a weird and dangerous process.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Regardless of what your friends told you, you decided to research this topic, and came up with an object brighter than anything you've ever seen...",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "It seems to be a mix of all the other elements, but it seems quite reactive... it's also quite tough, not much seems to be able to break it...",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Have I done good for this world, or have I brought the unknown to life?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Mine",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Hellfire Pickaxe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (100%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-fishing-rod",
+        "level" : 3,
+        "title" : "Fishing Rod",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " None",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 40",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item buff:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 1 - 9",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A rod you bought at your local fishing market. Looks sturdy.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Fish",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Market, Fish Treasure",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " None",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-comet-gem-rod",
+        "level" : 3,
+        "title" : "Comet Gem Rod",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 130",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item buff:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 1 - 12",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "After testing the Comet Fragments on your axe, you also realized you could use them on your rod. It made the thread stronger, and it seemed to attract more fish to it. All you could wish for.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Fish",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Fish Treasure",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Comet Rod",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-star-gem-rod",
+        "level" : 3,
+        "title" : "Star Gem Rod",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 170",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item buff:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 1 - 15",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "The mesmerizing and shiny glow of this fragment could not be overlooked. You fused it together with the thread of your rod, and the fish came flowing through it! Seems like a bait isn't necessary all the time, but it's still useful.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Fish",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Fish Treasure",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Star Rod",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-moon-rod",
+        "level" : 3,
+        "title" : "Moon Rod",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 200",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item buff:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 1 - 18",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You're still impressed by the way this gem floats on it's own. Regardless, you fuse it with the thread of your rod as best as you can. It seems to be a little stronger than a Star Fragment infused rod, but not by much.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Eitherway, you enjoy the glow of it like it's the first day you've ever seen it.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Fish",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Fish Treasure",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Moon Rod",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-sparkle-rod",
+        "level" : 3,
+        "title" : "Sparkle Rod",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 300",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item buff:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 1 - 20",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A touch of sparkle here, a touch of sparkle there!",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You pulverized the Sparkle Fragments and coated the thread of your fishing rod with it.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You seem confused. How can this attract fish?",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "The world has many mysteries, and this is one of them. Maybe it can help you get more coins. Maybe it can bring you satisfaction.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "The glow it leaves on the sea is amazing, and you stare at it for hours on end. Maybe you did do the right thing after all.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Fish",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Fish Treasure",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Sparkle Rod",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-hellfire-rod",
+        "level" : 3,
+        "title" : "Hellfire Rod",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 2500",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item buff:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 1 - 30",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Reactions between all the elements can be a weird and dangerous process.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You mastered the elements already, and fusing it with your fishing rod thread now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "It works wonders. Fish come in shoals to you. Nothing can compare. But you're still left wondering whether you really did the right thing.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Fish",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Hellfire Rod",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (100%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-axe",
+        "level" : 3,
+        "title" : "Axe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " None",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 35",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money Increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 0 - 0 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A normal axe you bought on the local market. Good enough to chop some trees down.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Chop",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Market, Chop Crate",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " None",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-comet-axe",
+        "level" : 3,
+        "title" : "Comet Axe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 170",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money Increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 25 - 100 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "After testing the Comet Fragments on your pick, you also realized you could use them on your axe. It made it stronger, and shinier. All you could wish for.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Chop",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Chop Crate",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Comet Axe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-star-axe",
+        "level" : 3,
+        "title" : "Star Axe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 220",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money Increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 25 - 100 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A bright glow from a star far away, but in your hands.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Looks like the tree-chopping can continue with this new, shiny axe. You seemed weirded out at first: how can this help me mine more wood?",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Well, you soon realized why...",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Chop",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Chop Crate",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Star Axe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-moon-axe",
+        "level" : 3,
+        "title" : "Moon Axe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 350",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money Increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 32 - 130 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Looking at this axe, you look mesmerized by moon-like glow it emits.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own?",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Mesmerized, you cast this substance into your axe and... boom!",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "The results look good. It seems to chop trees faster, too. Why is it so sharp? Is this really a fragment from a far away moon?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Chop",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Chop Crate",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Moon Axe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-sparkle-axe",
+        "level" : 3,
+        "title" : "Sparkle Axe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 500",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money Increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 75 - 300 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "A touch of sparkle here, a touch of sparkle there!",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "The axe glows bright like the sun... and it seems pretty tough too... how did it fuse so well with iron?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Chop",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Chop Crate",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Sparkle Axe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (80%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-tool-items-hellfire-axe",
+        "level" : 3,
+        "title" : "Hellfire Axe",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Item Tier:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Wrench tier needed to craft:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "type" : "SoftLineBreak"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Durability:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 3100",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Money Increase:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " 225 - 900 credits",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Description:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Reactions between all the elements can be a weird and dangerous process.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You mastered the elements already, and fusing it with your axe now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "It works wonders. Nothing can compare. But you're still left wondering whether you really did the right thing.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Used in:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Chop",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Obtained from:",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Cast, Chop Crate",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Broken version:",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "left"
+          }, {
+            "title" : "Name",
+            "align" : "left"
+          }, {
+            "title" : "Obtained from",
+            "align" : "left"
+          }, {
+            "title" : "Used in",
+            "align" : "left"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Broken Hellfire Axe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Breaking a tool (100%)",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Unequiping a tool (100%)",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Repair",
+            "type" : "SimpleText"
+          }, {
+            "text" : "Salvage",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
+      }, {
+        "id" : "intro-crate-items",
+        "level" : 2,
+        "title" : "Crate Items",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "These items (minus the Crate Key) are dropped randomly from using other Currency Commands. To open any of the crates you need to have a Crate Key on your inventory.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "center"
+          }, {
+            "title" : "Name",
+            "align" : "center"
+          }, {
+            "title" : "Description",
+            "align" : "center"
+          }, {
+            "title" : "Opened with",
+            "align" : "center"
+          }, {
+            "title" : "Drop Rate",
+            "align" : "center"
+          }, {
+            "title" : "Obtained from",
+            "align" : "center"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Crate Key",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Used to open various crates.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "N/A",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "N/A",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Market, Loot Crate",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Loot Crate",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "You can use this along with a loot key to open a loot crate!",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/opencrate",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "~1%",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Loot",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Gem Crate",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A gem you find while mining. Might have some nice stuff inside.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/opencrate crate:gem crate",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "~2%",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Mine",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Gem Premium Crate*",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A gem you find while mining. Might have some nice stuff inside.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/opencrate crate:gem premium crate",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "~2%",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Mine, Dailycrate**",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Fish Treasure",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A treasure you find while fishing. Might have some nice stuff inside.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/opencrate crate:treasure",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "~5%",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Fish Premium Treasure*",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A treasure you find while fishing. Might have some nice stuff inside.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/opencrate crate:premium treasure",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "~5%",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Fish, Dailycrate**",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Chop Crate",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A treasure you find while chopping. Might have some nice stuff inside.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/opencrate crate:chop crate",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "~5%",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Chop",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Chop Premium Crate*",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A treasure you find while chopping. Might have some nice stuff inside.",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "/opencrate crate:chop premium crate",
+            "type" : "InlinedCode"
+          } ], [ {
+            "text" : "~5%",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Chop, Dailycrate**",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "** Dailycrate and Premium Crates are ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Premium only",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". As well, Premium Users will find only Premium Crates and never their normal version.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "intro-timed-items",
+        "level" : 2,
+        "title" : "Timed Items",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "These items can only be obtained during certain times or events.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "center"
+          }, {
+            "title" : "Name",
+            "align" : "center"
+          }, {
+            "title" : "Description",
+            "align" : "center"
+          }, {
+            "title" : "Obtained during",
+            "align" : "center"
+          }, {
+            "title" : "Obtained from",
+            "align" : "center"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Christmas bell",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Gives you a cozy christmas feeling on your tree.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Christmas Event",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Loot",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Christmas tree",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Who doesn't like a christmas tree?.",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Christmas Event",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Loot",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "id" : "intro-removedlegacyunobtainable-items",
+        "level" : 2,
+        "title" : "Removed/Legacy/Unobtainable Items",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "These items are no longer obtainable in Mantaro.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Icon",
+            "align" : "center"
+          }, {
+            "title" : "Name",
+            "align" : "center"
+          }, {
+            "title" : "Description",
+            "align" : "center"
+          } ],
+          "data" : [ [ null, [ {
+            "text" : "Ping Racket",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "I won the game of ping-pong with Discord by a few milliseconds. Maybe.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Forgotten Music",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Never downloaded. Probably has been copyrighted.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Special Loaded Die",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Even more loaded. Leftover from Currency version 1.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Booster",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Used to give you some kind of boost, now it's broken. Leftover from Currency version 1.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Berserk",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Currency Berserk? Anyone? Leftover from Currency version 1.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Companion",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Aw, such a cute dog. Leftover from Currency version 1.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Special Ring",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "It's so special, it's not even a ring. Leftover from Currency version 1.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Enchancer",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "A broken enchanter, I wonder if it could be fixed? Leftover from Currency version 1.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Prize",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Pretty much, huh? Leftover from Currency version 1.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Old Sparkle Fragment",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "No longer used.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Old Sparkly Pickaxe",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "No longer used.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Old Sparkly Rod",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "No longer used.",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Ban Hammer",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Left by an admin. (Appears randomly after someone was banned using ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "~>ban",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " or ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "~>tempban",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ")",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "Kick Boot",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Left by an admin. (Appears randomly after someone was kicked using ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "~>kick",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " or ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "~>softban",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ")",
+            "type" : "SimpleText"
+          } ] ], [ null, [ {
+            "text" : "My Maths",
+            "type" : "SimpleText"
+          } ], [ {
+            "text" : "Oh, I forgot my maths. (Appears randomly after using ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "~>stats usage",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ")",
+            "type" : "SimpleText"
+          } ] ] ]
+        },
+        "type" : "Table"
+      } ]
+    } ],
+    "lastModifiedTime" : 1661024379738,
+    "tocItem" : {
+      "chapterTitle" : "Currency",
+      "pageTitle" : "Items",
+      "pageMeta" : { },
+      "dirName" : "currency",
+      "fileName" : "items",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Intro",
+        "id" : "intro"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
