@@ -1,8 +1,4 @@
 {
-  "viewOn" : {
-    "link" : "https://www.mantaro.site/mantaro-wiki",
-    "title" : "Mantaro Wiki"
-  },
   "description" : "The official wiki for the Mantaro Discord Bot.",
   "id" : "mantaro-wiki",
   "title" : "Mantaro Wiki",

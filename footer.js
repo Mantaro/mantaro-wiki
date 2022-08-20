@@ -81,7 +81,11 @@ footer = {
         } ]
       } ]
     } ],
-    "config" : { },
+    "config" : {
+      "left" : {
+        "portion" : 3
+      }
+    },
     "type" : "Columns"
   } ]
 }
