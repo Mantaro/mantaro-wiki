@@ -1,1 +1,1 @@
-{"includePlugins":{"file":{"count":3,"params":["title"]}},"fencePlugins":{},"inlineCodePlugins":{}}
+{"includePlugins":{"image":{"count":2,"params":["align"]},"file":{"count":3,"params":["title"]}},"fencePlugins":{"columns":{"count":1}},"inlineCodePlugins":{"badge":{"count":1}}}

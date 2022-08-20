@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
-<title>Your Product</title>
-<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
-<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
-<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+<title>Mantaro Wiki</title>
+<link rel="stylesheet" type="text/css" href="/wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/wiki/static/css/global-overrides.css">
 </head>
-<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<link rel="shortcut icon" href="/wiki/favicon.png"type="image/ico"/>
 <body class="theme-znai-dark">
 <script>(function() {
     var themeNameKey = 'znaiTheme';
@@ -83,14 +83,14 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>Your product</h1></header>
-<p>quick summaryNote: This is a summary page for your product. It is your landing page, but is not a part of your Table Of Contents. If you don't know what to put here use :include-redirect: chapter-title/page-title to automatically redirect to a page in your Table Of Contents.</p>
+<header><h1>Mantaro Bot Wiki</h1></header>
+<p>Hello there!This is the official Wiki for the Mantaro Discord Bot.Mantaro is a simple but powerful Discord bot used to enhance your Discord experience. It includes many fun and useful features such as moderation, music, games and currency. It's currently in over 750,000 servers serving over 60 million users!I hope you like your time with the bot, in this page you'll find quite a lot of information in regards on how to use Mantaro and her features. Use the links on the side to navigate to the section you would like to know more of. Alternatively, you can use the search bar to poke around.If you need any further help, you can join https://support.mantaro.site our support server on Discord and ask in the #support channel.Note: Remember you can use /help to get more information on the commands!</p>
 </article>
 </section>
 <section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<a href="/index/">Your Product</a>
-<a href="/index/#your-product">Your Product Your product</a>
+<a href="/index/">Mantaro Wiki</a>
+<a href="/index/#mantaro-bot-wiki">Mantaro Wiki Mantaro Bot Wiki</a>
 </article>
 
 <article>
@@ -117,72 +117,112 @@
 </article>
 </section>
 </div>
-<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
-<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
-<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
-<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
-<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script type="text/javascript" src="/wiki/footer.js"></script>
+<script type="text/javascript" src="/wiki/toc.js"></script>
+<script type="text/javascript" src="/wiki/assets.js"></script>
+<script type="text/javascript" src="/wiki/static/main.js"></script>
+<script type="text/javascript" src="/wiki/search-index.js"></script>
 <script>
 document.getElementById('znai').innerHTML = '';
 /*<!--*/
 ReactDOM.render(React.createElement(Documentation, {
   "docMeta" : {
     "viewOn" : {
-      "link" : "your-custom-base-url",
-      "title" : "View On Label"
+      "link" : "https://www.mantaro.site/wiki",
+      "title" : "Mantaro Wiki"
     },
-    "id" : "mantaro-wiki",
-    "title" : "Your Product",
-    "type" : "Guide",
-    "previewEnabled" : false
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
   },
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "id" : "your-product",
-      "title" : "Your product",
+      "badge" : "v7.0.0",
+      "id" : "mantaro-bot-wiki",
+      "title" : "Mantaro Bot Wiki",
       "type" : "Section",
       "content" : [ {
+        "imageSrc" : "https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=1024",
+        "shapes" : [ ],
+        "type" : "AnnotatedImage"
+      }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "quick summary",
+          "text" : "Hello there!",
           "type" : "SimpleText"
         } ]
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Note: This is a summary page for your product. It is your landing page, but is not a part of your Table Of Contents.",
+          "text" : "This is the official Wiki for the Mantaro Discord Bot.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Mantaro is a simple but powerful Discord bot used to enhance your Discord experience. It includes many fun and useful features such as moderation, music, games and currency. It's currently in over 750,000 servers serving over 60 million users!",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "I hope you like your time with the bot, in this page you'll find quite a lot of information in regards on how to use Mantaro and her features.",
           "type" : "SimpleText"
         }, {
           "type" : "SoftLineBreak"
         }, {
-          "text" : "If you don't know what to put here use ",
+          "text" : "Use the links on the side  to navigate to the section you would like to know more of. Alternatively, you can use the search bar to poke around.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you need any further help, you can join ",
           "type" : "SimpleText"
         }, {
-          "code" : ":include-redirect: chapter-title/page-title",
+          "url" : "https://support.mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "our support server on Discord",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " and ask in the #support channel.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Remember you can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/help",
           "type" : "InlinedCode"
         }, {
-          "text" : " to automatically redirect to a page in your",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "Table Of Contents.",
+          "text" : " to get more information on the commands!",
           "type" : "SimpleText"
         } ]
       } ]
     } ],
-    "lastModifiedTime" : 1661012382296,
+    "lastModifiedTime" : 1661019812828,
     "tocItem" : {
       "chapterTitle" : "",
-      "pageTitle" : "Your Product",
+      "pageTitle" : "Mantaro Wiki",
       "pageMeta" : { },
       "dirName" : "",
       "fileName" : "index",
       "viewOnRelativePath" : null,
       "pageSectionIdTitles" : [ {
-        "title" : "Your product",
-        "id" : "your-product"
+        "title" : "Mantaro Bot Wiki",
+        "id" : "mantaro-bot-wiki"
       } ]
     }
   }
