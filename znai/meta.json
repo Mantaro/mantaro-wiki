@@ -2,10 +2,6 @@
   "title": "Mantaro Wiki",
   "type": "Docs",
   "description": "The official wiki for the Mantaro Discord Bot.",
-  "viewOn": {
-    "link": "https://www.mantaro.site/mantaro-wiki",
-    "title": "Mantaro Wiki"
-  },
   "support": {
     "link": "https://support.mantaro.site",
     "title": "Our support server"

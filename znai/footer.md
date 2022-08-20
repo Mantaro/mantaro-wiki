@@ -1,4 +1,4 @@
-```columns
+```columns {left: {portion: 3}}
 left: 
 :include-image: https://cdn.discordapp.com/emojis/654322747094073365.webp { align: "left" }
 

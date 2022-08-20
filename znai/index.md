@@ -1,6 +1,6 @@
 # Mantaro Bot Wiki {badge: "v7.0.0"}
 
-:include-image: https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=1024
+:include-image: assets/images/banner.jpg 
 
 Hello there!
 
