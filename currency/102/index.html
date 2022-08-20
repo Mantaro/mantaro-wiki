@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: 102: Basic knowledge</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Basic knowledge</h1></header>
+<p>In this page we seek to cover the most basic commands to get you started with the currency system.</p>
+</article>
+
+<article>
+<header><h1>Credits - Where to start</h1></header>
+<p>There are many ways of getting credits in Mantaro. However, we believe that the following commands are good places for you to get started. Daily The command that's most likely to be your first currency command is /daily , which you can run every 24 hours for a base of 150$. However, if you run daily consecutively every 24 hours your streak will increase eventually gaining your more money up to a cap of 1000$ as well as a random crate every multiple of 20 and a Magical Watch every multiple of 50. Failing to collect your daily for 48 hours results in your streak getting reset to 0. You can also give the money to someone else (will not affect your streak) yielding them ever so slightly more. To do so simply mention them while running the command. null https://i.imgur.com/shjAPTz.png image Loot Loot is another command which can be used to gain easy credits. You can run it using /loot every ~5 minutes which can yield credits and/or items (more credits than normal when a user is premium). In certain conditions you can even find unique items. Take a look at our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation Item Documentation page if you want to find out what exact drops you can get. null https://i.imgur.com/qL5URi8.png image Market The market is the place to go for buying or selling your items. For starters, you can use /market buyable to bring up a list of all the items you can buy. You can use the arrow reactions to navigate through the different pages. null https://i.imgur.com/YYzvgxr.png image To buy items you use /buy &lt;amount&gt; &lt;item&gt; . To sell items you use /sell &lt;amount&gt; &lt;item&gt; . null https://i.imgur.com/NxrkDA2.png image null https://i.imgur.com/8549gts.png image Additionally, you can use /market price item:&lt;name&gt; to view a specific item's sell and buy price. You can also get rid of items completely (for instance if they can't be sold) with /dump amount:&lt;amount&gt; item:&lt;name&gt; . Profile Your profile is your main point in the currency system. It will display your top items, your balance and a bunch more. To view your profile simply use /profile show , or to check someone else's profile use /profile show user:&lt;mention&gt; . You can also right-click on someone's name, then click on Apps and finally on Show currency profile to also see their profile. null https://i.imgur.com/a2bOfRn.png image Your profile has many things you can customize. Here's a few of them:Description: To change your description around you can use /profile description description:&lt;your description&gt; . Display Badge: To change your display badge you can use /profile displaybadge badge:&lt;badge name&gt; . Of course, you need to have the badge you want to display, but we'll get into that later. Timezone: To change your timezone you can use /profile timezone timezone:&lt;your timezone&gt; . Widgets: This option is https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks Premium only. With this you can change around the order of how things show up on your profile, or keep them from showing up at all. Use /profile widgets to get the instructions on how to use it. Birthday: To change your birthday you can use /birthday set date:&lt;dd-MM&gt; . You can also view all sorts of stats involving your activity in Currency using /profile stats . Finally, you can change the language in which Mantaro answers you using /profile language lang:&lt;language code&gt; . Use /mantaro language for more information. Balance Here is where you can check out your current balance. While your balance also shows up in your profile, sometimes you just want to check without all the other information showing up. To check how many credits you have on your balance use /balance . null https://i.imgur.com/Q7ReRVW.png image Inventory Here is where you can check out all your items. Your profile will only show your top items, so here is the place to check all those items you have. To check your item list use /inventory show . If you want a simpler version you can also use /inventory brief . null https://i.imgur.com/DWz7k77.png image</p>
+</article>
+
+<article>
+<header><h1>Tools - Where to start</h1></header>
+<p>The commands you just learned will help you get started out. However, they won't be enough for what's to come. For that, the next thing to learn is about tools. There are many tools available, each with different tiers, but for now we will focus on the 3 most basic tools: pickaxe, fishing rod and axe. Name Icon [{text=Brom's Pickaxe, type=SimpleText}] [{text=Fishing Rod, type=SimpleText}] [{text=Axe, type=SimpleText}] These 3 basic tools are always available for you to buy at the market. As you progress you will be able to create better tools. Durability Most tools at your disposal have a durability value. As you use your tools, this value will continue to drop until your tool breaks. Durability changes across each type of tool and its different tiers, meaning better tools have more durability. When your tool does break it will disappear. However, if the tool that broke has a broken item version, then you have ~80% chance of getting the broken version back. Not all tools have a broken version.After equipping your tools (see next section), you can check their durability by using /profile stats . null https://i.imgur.com/n8OdRl1.png image Equip and Unequip To keep going forward first off you will need to equip your new tools. To equip one of your tools you can use /equip item:&lt;tool name&gt; . null https://i.imgur.com/bO0vPk7.png image If you want to unequip one of your tools you can use /unequip item:&lt;tool type&gt; . Do bear in mind that the durability of the item you are unequipping comes into play here as well. If your item has not been used (has 100% durability) you will recover your item when unequipped. However, if you have used the item then two things can happen:If the tool you are unequipping has a broken version, then you will get the broken version back. If the tool you are unequipping doesn't have a broken version, then the tool will be lost, and you will get back some credits instead. null https://i.imgur.com/AdD7GPF.png image Mine Required Tool: Any Pickaxe.When you use /mine you will go mining to get credits and/or items. The better the pickaxe you use the more credits you will get, and the better chances you will have of finding items. Some items can only be found depending on the quality of your tool. Each time you mine you will get anywhere from 1 to 4 Mining EXP. Take a look at our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation Item Documentation page if you want to find out what exact drops you can get. null https://i.imgur.com/bwmSGau.png image Fish Required Tool: Any Fishing rod.When you use /fish you will go fishing to get credits and/or items. The better the fishing rod you use the more credits you will get, and the better chances you will have of finding items. Some items can only be found depending on the quality of your tool. Each time you mine you will get anywhere from 1 to 4 Fishing EXP. Take a look at our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation Item Documentation page if you want to find out what exact drops you can get. null https://i.imgur.com/eeGBGaN.png image Chop Required Tool: Any Axe.When you use /chop you will go chopping trees to get credits and/or items. The better the axe you use the more credits you will get, and the better chances you will have of finding items. Some items can only be found depending on the quality of your tool. Each time you mine you will get anywhere from 1 to 4 Chopping EXP. Take a look at our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation Item Documentation page if you want to find out what exact drops you can get. null https://i.imgur.com/FgxXOss.png image</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "basic-knowledge",
+      "title" : "Basic knowledge",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In this page we seek to cover the most basic commands to get you started with the currency system.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "credits---where-to-start",
+      "title" : "Credits - Where to start",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "There are many ways of getting credits in Mantaro. However, we believe that the following commands are good places for you to get started.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "credits---where-to-start-daily",
+        "level" : 2,
+        "title" : "Daily",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The command that's most likely to be your first currency command is ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/daily",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", which you can run every 24 hours for a base of 150$. However, if you run daily consecutively every 24 hours your streak will increase eventually gaining your more money up to a cap of 1000$ as well as a random crate every multiple of 20 and a Magical Watch every multiple of 50.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Failing to collect your daily for 48 hours results in your streak getting reset to 0.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "You can also give the money to someone else (will not affect your streak) yielding them ever so slightly more. To do so simply mention them while running the command.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/shjAPTz.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "id" : "credits---where-to-start-loot",
+        "level" : 2,
+        "title" : "Loot",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Loot is another command which can be used to gain easy credits. You can run it using ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/loot",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " every ~5 minutes which can yield credits and/or items (more credits than normal when a user is premium).",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "In certain conditions you can even find unique items.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Take a look at our ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Item Documentation page",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " if you want to find out what exact drops you can get.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/qL5URi8.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "id" : "credits---where-to-start-market",
+        "level" : 2,
+        "title" : "Market",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The market is the place to go for buying or selling your items.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "For starters, you can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/market buyable",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " to bring up a list of all the items you can buy. You can use the arrow reactions to navigate through the different pages.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/YYzvgxr.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To buy items you use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/buy <amount> <item>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". To sell items you use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/sell <amount> <item>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/NxrkDA2.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "destination" : "https://i.imgur.com/8549gts.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Additionally, you can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/market price item:<name>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " to view a specific item's sell and buy price. You can also get rid of items completely (for instance if they can't be sold) with ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/dump amount:<amount> item:<name>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "credits---where-to-start-profile",
+        "level" : 2,
+        "title" : "Profile",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Your profile is your main point in the currency system. It will display your top items, your balance and a bunch more. To view your profile simply use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/profile show",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", or to check someone else's profile use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/profile show user:<mention>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". You can also right-click on someone's name, then click on ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "Apps",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " and finally on ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "Show currency profile",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " to also see their profile.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/a2bOfRn.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Your profile has many things you can customize. Here's a few of them:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Description: To change your description around you can use ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/profile description description:<your description>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Display Badge: To change your display badge you can use ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/profile displaybadge badge:<badge name>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ". Of course, you need to have the badge you want to display, but we'll get into that later.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Timezone: To change your timezone you can use ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/profile timezone timezone:<your timezone>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Widgets: This option is ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "type" : "StrongEmphasis",
+                "content" : [ {
+                  "text" : "Premium only",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "text" : ". With this you can change around the order of how things show up on your profile, or keep them from showing up at all. Use ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/profile widgets",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " to get the instructions on how to use it.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Birthday: To change your birthday you can use ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/birthday set date:<dd-MM>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You can also view all sorts of stats involving your activity in Currency using ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/profile stats",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Finally, you can change the language in which Mantaro answers you using ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/profile language lang:<language code>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". Use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/mantaro language",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " for more information.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "credits---where-to-start-balance",
+        "level" : 2,
+        "title" : "Balance",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Here is where you can check out your current balance. While your balance also shows up in your profile, sometimes you just want to check without all the other information showing up.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "To check how many credits you have on your balance use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/balance",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/Q7ReRVW.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "id" : "credits---where-to-start-inventory",
+        "level" : 2,
+        "title" : "Inventory",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Here is where you can check out all your items. Your profile will only show your top items, so here is the place to check all those items you have.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "To check your item list use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/inventory show",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". If you want a simpler version you can also use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/inventory brief",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/DWz7k77.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "tools---where-to-start",
+      "title" : "Tools - Where to start",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The commands you just learned will help you get started out. However, they won't be enough for what's to come.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "For that, the next thing to learn is about tools. There are many tools available, each with different tiers, but for now we will focus on the 3 most basic tools: pickaxe, fishing rod and axe.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Name",
+            "align" : "center"
+          }, {
+            "title" : "Icon",
+            "align" : "center"
+          } ],
+          "data" : [ [ [ {
+            "text" : "Brom's Pickaxe",
+            "type" : "SimpleText"
+          } ], null ], [ [ {
+            "text" : "Fishing Rod",
+            "type" : "SimpleText"
+          } ], null ], [ [ {
+            "text" : "Axe",
+            "type" : "SimpleText"
+          } ], null ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "These 3 basic tools are always available for you to buy at the market. As you progress you will be able to create better tools.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "tools---where-to-start-durability",
+        "level" : 2,
+        "title" : "Durability",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Most tools at your disposal have a durability value. As you use your tools, this value will continue to drop until your tool breaks. Durability changes across each type of tool and its different tiers, meaning better tools have more durability.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "When your tool does break it will disappear. However, if the tool that broke has a broken item version, then you have ~80% chance of getting the broken version back.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "Not all tools have a broken version.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "After equipping your tools (see next section), you can check their durability by using ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/profile stats",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/n8OdRl1.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "id" : "tools---where-to-start-equip-and-unequip",
+        "level" : 2,
+        "title" : "Equip and Unequip",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To keep going forward first off you will need to equip your new tools. To equip one of your tools you can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/equip item:<tool name>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/bO0vPk7.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you want to unequip one of your tools you can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/unequip item:<tool type>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". Do bear in mind that the durability of the item you are unequipping comes into play here as well.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "If your item has not been used (has 100% durability) you will recover your item when unequipped. However, if you have used the item then two things can happen:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ")",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "If the tool you are unequipping has a broken version, then you will get the broken version back.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "If the tool you are unequipping doesn't have a broken version, then the tool will be lost, and you will get back some credits instead.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/AdD7GPF.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "id" : "tools---where-to-start-mine",
+        "level" : 2,
+        "title" : "Mine",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Required Tool: Any Pickaxe.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "When you use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/mine",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " you will go mining to get credits and/or items.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "The better the pickaxe you use the more credits you will get, and the better chances you will have of finding items. Some items can only be found depending on the quality of your tool.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "Each time you mine you will get anywhere from 1 to 4 Mining EXP.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Take a look at our ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Item Documentation page",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " if you want to find out what exact drops you can get.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/bwmSGau.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "id" : "tools---where-to-start-fish",
+        "level" : 2,
+        "title" : "Fish",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Required Tool: Any Fishing rod.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "When you use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/fish",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " you will go fishing to get credits and/or items.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "The better the fishing rod you use the more credits you will get, and the better chances you will have of finding items. Some items can only be found depending on the quality of your tool.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "Each time you mine you will get anywhere from 1 to 4 Fishing EXP.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Take a look at our ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Item Documentation page",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " if you want to find out what exact drops you can get.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/eeGBGaN.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "id" : "tools---where-to-start-chop",
+        "level" : 2,
+        "title" : "Chop",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Required Tool: Any Axe.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "When you use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/chop",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " you will go chopping trees to get credits and/or items.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "The better the axe you use the more credits you will get, and the better chances you will have of finding items. Some items can only be found depending on the quality of your tool.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "Each time you mine you will get anywhere from 1 to 4 Chopping EXP.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Take a look at our ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Item Documentation page",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " if you want to find out what exact drops you can get.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/FgxXOss.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      } ]
+    } ],
+    "lastModifiedTime" : 1661023935249,
+    "tocItem" : {
+      "chapterTitle" : "Currency",
+      "pageTitle" : "102: Basic knowledge",
+      "pageMeta" : {
+        "title" : [ "102: Basic knowledge" ]
+      },
+      "dirName" : "currency",
+      "fileName" : "102",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Basic knowledge",
+        "id" : "basic-knowledge"
+      }, {
+        "title" : "Credits - Where to start",
+        "id" : "credits---where-to-start"
+      }, {
+        "title" : "Tools - Where to start",
+        "id" : "tools---where-to-start"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: Welcome And Leave Messages</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Getting started</h1></header>
+<p>To get started you will first have to set your channel(s). You can do that by doing ~&gt;opts usermessage join channel for welcoming and ~&gt;opts usermessage leave channel for bidding farewell respectively. For example: null https://i.imgur.com/mehwPN8.png image null https://i.imgur.com/pfi4ZuM.png image After you have done that you can set your very first and basic welcome and leave message. To set your join message you will have use ~&gt;opts usermessage joinmessage &lt;your text here&gt; : null https://i.imgur.com/OrGDph3.png image Now you can set a leave message using ~&gt;opts usermessage leavemessage &lt;yout text&gt; null https://i.imgur.com/27mp02Z.png image Ok, with the basics being covered you can now move to the next step.</p>
+</article>
+
+<article>
+<header><h1>Using Modifiers</h1></header>
+<p>So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view all modifiers https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages here. For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).So, let's say you want to mention the user that joined. Tell him how many users your server has with him/her joining and also include the server name for simple aesthetics. For this you would do something like. ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member! null https://i.imgur.com/7nGWxjr.png image To break this down.$(event.guild.name) is replaced with the name of the server.$(event.user.mention) is replaced with the mention of the user that just joined.$(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.Now let's say you want to do something similar for the leave message. We will use: ~&gt;opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers). null https://i.imgur.com/fuyNDjq.png image Now that you understand modifiers let's move to the final level.</p>
+</article>
+
+<article>
+<header><h1>Using Embeds</h1></header>
+<p>You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course but you learned that already). To use an embed you will need to know how to work with them. To start you will need to start off you message with embed: followed by one or more of these:title:&quot;text&quot; description&quot;text&quot; thumbnail:&quot;image url&quot; image:&quot;image url&quot; fields:[{name:&quot;name here&quot;, value:&quot;text here&quot;}, name:&quot;name&quot;, value:&quot;text here&quot;, inline: true, .....}] color:&quot;hex code or member&quot; footer:&quot;text&quot; footerImg:&quot;image url&quot; author:&quot;text&quot; authorImg:&quot;image url&quot; Ok, yes this is complicated so let's make an example: ~&gt;opts usermessage joinmessage embed:author:&quot;Welcome to our server&quot;, authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please enjoy your stay :&gt;&quot;, description:&quot;Please be sure to read our rules carefully thanks~&quot;, image:&quot;https://i.imgur.com/fjmcMHL.jpg&quot;, thumbnail:&quot;https://i.imgur.com/KYblACB.png&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by MrLar&quot;, footerImg:&quot;https://i.imgur.com/R5MoVC5.png&quot; Setting it up &amp; in action: null https://i.imgur.com/68xlljt.png image This will need a lot of practice. But basically you can use ANY combination of the above listed things and choose your own text in each of them :&gt;.</p>
+</article>
+
+<article>
+<header><h1>Combining your knowledge</h1></header>
+<p>Ok so you learned how to use embeds and modifiers. What about both in one? (Please note that using mentions in the title, footer, field names, author and some other places will not work and display them how they look internally to discord. This is a discord limitation that we cannot do anything about.) ~&gt;opts usermessage joinmessage embed:author:&quot;Welcome to $(event.guild.name)&quot;, authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please be sure to read our rules carefully thanks~&quot;, description:&quot;Please enjoy your stay $(event.user.mention)&quot;, thumbnail:&quot;$(event.user.avatar)&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by $(event.guild.owner.username)&quot;, footerImg:&quot;$(event.guild.owner.avatar)&quot; null https://i.imgur.com/3aBjQIh.png image Another way of combining what you know is by using both plain text and embeds. It may sound complicated but it is not. All you have to do is write whatever you want as plain text and then follow it with an embed, like so: ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name) embed:authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please be sure to read our rules carefully thanks~&quot;, description:&quot;Please enjoy your stay $(event.user.mention)&quot;, thumbnail:&quot;$(event.user.avatar)&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by $(event.guild.owner.username)&quot;, footerImg:&quot;$(event.guild.owner.avatar)&quot; null https://i.imgur.com/pqXQund.png image</p>
+</article>
+
+<article>
+<header><h1>Extra</h1></header>
+<p>You can also add multiple leave and welcome message. Since this basically works the same way as this entire tutorial we will not make any visuals for it. The only change is that you use ~&gt;opts usermessage joinmessages add &lt;message&gt; for adding another welcome message and ~&gt;opts usermessage leavemessages add &lt;message&gt; for adding another leave message. In order to remove a message that you added you will need to first get a list of them ~&gt;opts usermessage joinmessages list &amp; ~&gt;opts usermessage leavemessages list and then use the number displayed next to the one you want to remove in ~&gt;opts usermessage joinmessages remove &lt;index&gt; or ~&gt;opts usermessage leavemessages remove &lt;index&gt; respectively.This of course also works in the leave message! Congrats! Now you are a master of welcome and leave messages within Mantaro!</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "getting-started",
+      "title" : "Getting started",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To get started you will first have to set your channel(s). You can do that by doing ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage join channel",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " for welcoming and ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage leave channel",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " for bidding farewell respectively. For example:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "destination" : "https://i.imgur.com/mehwPN8.png",
+          "alt" : "image",
+          "inlined" : true,
+          "type" : "Image"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "destination" : "https://i.imgur.com/pfi4ZuM.png",
+          "alt" : "image",
+          "inlined" : true,
+          "type" : "Image"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "After you have done that you can set your very first and basic welcome and leave message.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "To set your join message you will have use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage joinmessage <your text here>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ":",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/OrGDph3.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Now you can set a leave message using ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage leavemessage <yout text>",
+          "type" : "InlinedCode"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/27mp02Z.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Ok, with the basics being covered you can now move to the next step.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "using-modifiers",
+      "title" : "Using Modifiers",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "all",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " modifiers ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "here",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "So, let's say you want to mention the user that joined. Tell him how many users your server has with him/her joining and also include the server name for simple aesthetics. For this you would do something like.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "code" : "~>opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member!",
+          "type" : "InlinedCode"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/7nGWxjr.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To break this down.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "$(event.guild.name) is replaced with the name of the server.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "$(event.user.mention) is replaced with the mention of the user that just joined.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "$(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Now let's say you want to do something similar for the leave message. We will use: ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers).",
+          "type" : "InlinedCode"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/fuyNDjq.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Now that you understand modifiers let's move to the final level.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "using-embeds",
+      "title" : "Using Embeds",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course but you learned that already). To use an embed you will need to know how to work with them.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "To start you will need to start off you message with ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "embed:",
+          "type" : "InlinedCode"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "followed by one or more of these:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "title:\"text\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "description\"text\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "thumbnail:\"image url\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "image:\"image url\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "fields:[{name:\"name here\", value:\"text here\"}, name:\"name\", value:\"text here\", inline: true, .....}]",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "color:\"hex code or member\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "footer:\"text\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "footerImg:\"image url\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "author:\"text\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "authorImg:\"image url\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Ok, yes this is complicated so let's make an example: ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage joinmessage embed:author:\"Welcome to our server\", authorImg:\"https://i.imgur.com/VoVaJ0K.png\", title:\"Please enjoy your stay :>\", description:\"Please be sure to read our rules carefully thanks~\", image:\"https://i.imgur.com/fjmcMHL.jpg\", thumbnail:\"https://i.imgur.com/KYblACB.png\", color:\"c91191\",footer:\"Server owned by MrLar\", footerImg:\"https://i.imgur.com/R5MoVC5.png\"",
+          "type" : "InlinedCode"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Setting it up & in action:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/68xlljt.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This will need a lot of practice. But basically you can use ANY combination of the above listed things and choose your own text in each of them :>.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "combining-your-knowledge",
+      "title" : "Combining your knowledge",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Ok so you learned how to use embeds and modifiers. What about both in one?",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "(Please note that using mentions in the title, footer, field names, author and some other places will not work and display them how they look internally to discord. This is a discord limitation that we cannot do anything about.)",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "code" : "~>opts usermessage joinmessage embed:author:\"Welcome to $(event.guild.name)\", authorImg:\"https://i.imgur.com/VoVaJ0K.png\", title:\"Please be sure to read our rules carefully thanks~\", description:\"Please enjoy your stay $(event.user.mention)\", thumbnail:\"$(event.user.avatar)\", color:\"c91191\",footer:\"Server owned by $(event.guild.owner.username)\", footerImg:\"$(event.guild.owner.avatar)\"",
+          "type" : "InlinedCode"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/3aBjQIh.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Another way of combining what you know is by using both plain text and embeds. It may sound complicated but it is not. All you have to do is write whatever you want as plain text and then follow it with an embed, like so:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "code" : "~>opts usermessage joinmessage Welcome to $(event.guild.name) embed:authorImg:\"https://i.imgur.com/VoVaJ0K.png\", title:\"Please be sure to read our rules carefully thanks~\", description:\"Please enjoy your stay $(event.user.mention)\", thumbnail:\"$(event.user.avatar)\", color:\"c91191\",footer:\"Server owned by $(event.guild.owner.username)\", footerImg:\"$(event.guild.owner.avatar)\"",
+          "type" : "InlinedCode"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/pqXQund.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "extra",
+      "title" : "Extra",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You can also add multiple leave and welcome message. Since this basically works the same way as this entire tutorial we will not make any visuals for it. The only change is that you use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage joinmessages add <message>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " for adding another welcome message and ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage leavemessages add <message>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " for adding another leave message.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "In order to remove a message that you added you will need to first get a list of them ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage joinmessages list",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " & ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage leavemessages list",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " and then use the number displayed next to the one you want to remove in ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage joinmessages remove <index>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " or ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts usermessage leavemessages remove <index>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " respectively.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This of course also works in the leave message!",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "Congrats! Now you are a master of welcome and leave messages within Mantaro!",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661022928567,
+    "tocItem" : {
+      "chapterTitle" : "Configuration",
+      "pageTitle" : "Welcome And Leave Messages",
+      "pageMeta" : { },
+      "dirName" : "configuration",
+      "fileName" : "welcome-and-leave-messages",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Getting started",
+        "id" : "getting-started"
+      }, {
+        "title" : "Using Modifiers",
+        "id" : "using-modifiers"
+      }, {
+        "title" : "Using Embeds",
+        "id" : "using-embeds"
+      }, {
+        "title" : "Combining your knowledge",
+        "id" : "combining-your-knowledge"
+      }, {
+        "title" : "Extra",
+        "id" : "extra"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

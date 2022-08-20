@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: Modifiers</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Intro</h1></header>
+<p>In order to use any of these you will have to type exactly what you see under the first bulletin every time, whether it is custom commands, level up messages or welcome messages. So if you for instance want the author username in a custom command you would type exactly $(event.author.username).</p>
+</article>
+
+<article>
+<header><h1>Modifiers for welcome/leave messages:</h1></header>
+<p>https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#guild-modifiers All of the guild modifiers below https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#me-mantaro-modifiers All of the me (Mantaro) modifiers below $(event.user):This will return a mention of the user that joined/left. $(event.user.username):This will return the username of the user that joined/left. $(event.user.name):This will return the nickname of the user that joined/left. $(event.user.discriminator):This will return the discriminator (#XXXX) of the user that joined/left. $(event.user.tag):Short hand for username#discriminator. $(event.user.game):This will return the current playing game of the user that joined/left (None if no game). $(event.user.id):This will return the id (unique identifier) of the user that joined/left. $(event.user.avatar):This will return the avatar URL of the user that joined/left.</p>
+</article>
+
+<article>
+<header><h1>A list of all Modifiers that can be used in custom commands.</h1></header>
+<p>Base modifier: $(event):This will return a mention of the one who executed the command together with a mention of the channel the command was used in. Guild modifiers: $(event.guild):This will return the name of the guild the command was used in. $(event.guild.name):This will return the name of the guild the command was used in. $(event.guild.owner):This will return a mention of the guild owner of the guild command was used in. $(event.guild.owner.username):This will return the username of the guild owner of the guild the command was used in. $(event.guild.owner.discriminator):This will return the discriminator (#XXXX) of the guild owner of the guild the command was used in. $(event.guild.owner.game):This will return the current playing status of the guild owner of the guild the command was used in. (None if no game) $(event.guild.owner.status):This will return the current online status of the guild owner of the guild the command was used in. $(event.guild.owner.id):This will return the id (unique identifier) of the guild owner of the guild the command was used in. $(event.guild.owner.name):This will return the current nickname of the guild owner of the guild the command was used in. (Username if none) $(event.guild.owner.avatar):This will return the avatar url of the guild owner of the guild the command was used in. $(event.guild.region):This will return the Voice Region of the guild the command was used in. $(event.guild.totalusers):This will return the ammount of users inside the guild the command was used in. $(event.guild.icon):This will return the url of the guild icon. Me (Mantaro) modifiers: $(event.me):This will return a mention of Mantaro. $(event.me.username):This will return the username of Mantaro. $(event.me.name):This will return the current nickname of Mantaro. (Username if non) $(event.me.game):This will return the current playing game of Mantaro. (Note: this will always be &quot;Hold on to your seatbelts&quot;) $(event.me.status):This will return the current online status of Mantaro. (Note: this will always be &quot;Online&quot;.) $(event.me.id):This will return the id (unique identifier) of Mantaro. $(event.me.avatar):This will return the avatar URL of Mantaro. Author (Command executer) modifiers: $(event.author):This will return a mention of the command user. $(event.author.username):This will return the username of the command user. $(event.author.name):This will return the username of the command user. $(event.author.discriminator):This will return the discriminator (#XXXX) of the command user. $(event.author.tag):Short hand for $(event.author.username)#$(event.author.discriminator). $(event.author.game):This will return the current playing game of the command user. (None if no game) $(event.author.status):This will return the current status of the command user. $(event.author.id):This will return the id (unique identifier) of the command user. $(event.author.avatar):This will return the avatar URL of the command user. $(event.author.nickname):This will return the nickname of the user that is using the command (If the user has no nickname it returns their username). Message modifiers: $(event.message):This will return the raw content of the message. (Does not include prefix and command name) $(event.message.mentionnames):This will return the names of everyone mentioned on the command. $(event.message.firstmentionid):This will return the ID of the first mention on custom commands. Channel modifiers: $(event.channel):This will return the mention of the channel the command was used in. $(event.channel.topic):This will return the topic of the channel the command was used in. $(event.channel.name):This will return the name of the channel the command was used in. $(event.channel.id):This will return the id (unique identifier) of the channel the command was used in.</p>
+</article>
+
+<article>
+<header><h1>Modifiers for Log Messages</h1></header>
+<p>Shared between edited/deleted messages and user banned/unbanned https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages All of the modifiers from welcome messages (event.user in the case of bans is the person banned, in case of messages the author of the message) $(hour):Prints the time at which the log message occurred (Based on the location of the bot) Message Edited and Message Deleted https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#channel-modifiers All of the channel modifiers above Message Edited only $(old):Replaced with the old content of the message. $(new):Replaced with the new content of the message. Message Deleted only $(content):Replaced with the content of the deleted message. $(event.message.id):Replaced with the unique identifier of the deleted message.</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "intro",
+      "title" : "Intro",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In order to use any of these you will have to type ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "exactly",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " what you see under the first bulletin every time, whether it is custom commands, level up messages or welcome messages. So if you for instance want the author username in a custom command you would type ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "exactly",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " $(event.author.username).",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "modifiers-for-welcomeleave-messages",
+      "title" : "Modifiers for welcome/leave messages:",
+      "type" : "Section",
+      "content" : [ {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#guild-modifiers",
+                "isFile" : false,
+                "type" : "Link",
+                "content" : [ {
+                  "text" : "All of the guild modifiers below",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#me-mantaro-modifiers",
+                "isFile" : false,
+                "type" : "Link",
+                "content" : [ {
+                  "text" : "All of the me (Mantaro) modifiers below",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.user)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return a mention of the user that joined/left.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.user.username)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the username of the user that joined/left.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.user.name)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the nickname of the user that joined/left.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.user.discriminator)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the discriminator (#XXXX) of the user that joined/left.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.user.tag)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Short hand for username#discriminator.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.user.game)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the current playing game of the user that joined/left (None if no game).",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.user.id)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the id (unique identifier) of the user that joined/left.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.user.avatar)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the avatar URL of the user that joined/left.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands",
+      "title" : "A list of all Modifiers that can be used in custom commands.",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-base-modifier",
+        "level" : 2,
+        "title" : "Base modifier:",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return a mention of the one who executed the command together with a mention of the channel the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers",
+        "level" : 2,
+        "title" : "Guild modifiers:",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the name of the guild the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.name)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the name of the guild the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.owner)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return a mention of the guild owner of the guild command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.owner.username)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the username of the guild owner of the guild the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.owner.discriminator)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the discriminator (#XXXX) of the guild owner of the guild the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.owner.game)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the current playing status of the guild owner of the guild the command was used in. (None if no game)",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.owner.status)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the current online status of the guild owner of the guild the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.owner.id)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the id (unique identifier) of the guild owner of the guild the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.owner.name)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the current nickname of the guild owner of the guild the command was used in. (Username if none)",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.owner.avatar)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the avatar url of the guild owner of the guild the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.region)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the Voice Region of the guild the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.totalusers)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the ammount of users inside the guild the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.guild.icon)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the url of the guild icon.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers",
+        "level" : 2,
+        "title" : "Me (Mantaro) modifiers:",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.me)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return a mention of Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.me.username)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the username of Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.me.name)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the current nickname of Mantaro. (Username if non)",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.me.game)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the current playing game of Mantaro. (Note: this will always be \"Hold on to your seatbelts\")",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.me.status)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the current online status of Mantaro. (Note: this will always be \"Online\".)",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.me.id)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the id (unique identifier) of Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.me.avatar)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the avatar URL of Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-author-command-executer-modifiers",
+        "level" : 2,
+        "title" : "Author (Command executer) modifiers:",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return a mention of the command user.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author.username)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the username of the command user.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author.name)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the username of the command user.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author.discriminator)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the discriminator (#XXXX) of the command user.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author.tag)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Short hand for $(event.author.username)#$(event.author.discriminator).",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author.game)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the current playing game of the command user. (None if no game)",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author.status)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the current status of the command user.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author.id)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the id (unique identifier) of the command user.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author.avatar)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the avatar URL of the command user.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.author.nickname)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the nickname of the user that is using the command (If the user has no nickname it returns their username).",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-message-modifiers",
+        "level" : 2,
+        "title" : "Message modifiers:",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.message)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the raw content of the message. (Does not include prefix and command name)",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.message.mentionnames)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the names of everyone mentioned on the command.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.message.firstmentionid)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the ID of the first mention on custom commands.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers",
+        "level" : 2,
+        "title" : "Channel modifiers:",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.channel)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the mention of the channel the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.channel.topic)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the topic of the channel the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.channel.name)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the name of the channel the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.channel.id)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will return the id (unique identifier) of the channel the command was used in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "modifiers-for-log-messages",
+      "title" : "Modifiers for Log Messages",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "modifiers-for-log-messages-shared-between-editeddeleted-messages-and-user-bannedunbanned",
+        "level" : 2,
+        "title" : "Shared between edited/deleted messages and user banned/unbanned",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages",
+                "isFile" : false,
+                "type" : "Link",
+                "content" : [ {
+                  "text" : "All of the modifiers from welcome messages",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "text" : " (event.user in the case of bans is the person banned, in case of messages the author of the message)",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(hour)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Prints the time at which the log message occurred (Based on the location of the bot)",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "modifiers-for-log-messages-message-edited-and-message-deleted",
+        "level" : 2,
+        "title" : "Message Edited and Message Deleted",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#channel-modifiers",
+                "isFile" : false,
+                "type" : "Link",
+                "content" : [ {
+                  "text" : "All of the channel modifiers above",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "modifiers-for-log-messages-message-edited-and-message-deleted-message-edited-only",
+        "level" : 3,
+        "title" : "Message Edited only",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(old)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Replaced with the old content of the message.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(new)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Replaced with the new content of the message.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "modifiers-for-log-messages-message-edited-and-message-deleted-message-deleted-only",
+        "level" : 3,
+        "title" : "Message Deleted only",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(content)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Replaced with the content of the deleted message.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "$(event.message.id)",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ":",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Replaced with the unique identifier of the deleted message.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661023659988,
+    "tocItem" : {
+      "chapterTitle" : "Custom Commands",
+      "pageTitle" : "Modifiers",
+      "pageMeta" : { },
+      "dirName" : "custom-commands",
+      "fileName" : "modifiers",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Intro",
+        "id" : "intro"
+      }, {
+        "title" : "Modifiers for welcome/leave messages:",
+        "id" : "modifiers-for-welcomeleave-messages"
+      }, {
+        "title" : "A list of all Modifiers that can be used in custom commands.",
+        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands"
+      }, {
+        "title" : "Modifiers for Log Messages",
+        "id" : "modifiers-for-log-messages"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

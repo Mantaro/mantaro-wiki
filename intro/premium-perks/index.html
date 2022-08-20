@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: Premium Perks</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Premium Perks</h1></header>
+<p>We appreciate everyone who pledges and/or donates to Mantaro, love you all :heart: User perks: The feel of being amazing. Up to two times money from /loot . Up to twice the money from /chop , /mine and /fish (Can be anywhere from 1.1x to 2x per run) The ability to use /dailycrate . Double money on /daily . No Music length limit. Volume command. The ability to queue YouTube &amp; Twitch streams (lofi radio anyone?). No queue limit, queue as many songs as you may like. Access to premium crate drops from mine and fish. Ability to customize your User Profile ( /profile widgets ). A Donator badge for your Profile. Guild (Server) Perks No Music length limit for everyone. No queue limit for everyone, queue as many songs as you may like. The ability to queue Youtube &amp; Twitch streams for everyone. Volume command for everyone. The ability to have more than 100 custom commands.</p>
+</article>
+
+<article>
+<header><h1>What you get for Donating via PayPal</h1></header>
+<p>6 USD: 6-months key. (User key) 12 USD: 1-year key. (User or Guild key) 50 USD: Patreon bot for one server. Note: If you donate, let's say, $24USD, you can get either 2 1-year keys, or one 1-year key and 2 6-month keys, etc. Your choice!Note: Minimum amount is $12 usd via paypal to give you a 365 days key and $6 to give you a 180 day key! Please ping Kodehawa#3457 on the support server if you send a donation using this way, so I can deliver your key &lt;3</p>
+</article>
+
+<article>
+<header><h1>What you get for Donating via Patreon</h1></header>
+<p>To claim these you will have to have your Discord linked to patreon. Unsure how to do this? View https://patreon.zendesk.com/hc/en-us/articles/212052266-How-do-I-receive-my-Discord-role this Wiki article. The key(s) will last for as long as the pledge is active. 2$. - Friend! 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon. 1 premium key that you can either apply to a server, yourself or another user. 4$. - Patreon Bot 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon. 2 premium keys that you can either apply to a server, yourself or another user. Access to the Patreon Bot which has lag free music and beta features. 8$ - Milestoner 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon. 4 premium keys that you can either apply to a server, yourself or another user. Access to the Patreon Bot which has lag free music and beta features. A custom role that display seperately from all other users in the https://discordapp.com/invite/vCccEcy support server. 14$. - Server Supporter 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon. 7 premium keys that you can either apply to a server, yourself or another user. Access to the Patreon Bot which has lag free music and beta features. A custom role that display seperately from all other users in the https://discordapp.com/invite/vCccEcy support server. 50$. - Awooosome 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon. 24 premium keys that you can either apply to a server, yourself or another user. Access to the Patreon Bot which has lag free music and beta features. A custom role that display seperately from all other users in the https://discordapp.com/invite/vCccEcy support server. 70$. - Funder 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon. 34 premium keys that you can either apply to a server, yourself or another user. Access to the Patreon Bot which has lag free music and beta features. A custom role that display seperately from all other users in the https://discordapp.com/invite/vCccEcy support server. 100$. - B-But why?! 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon. 50 premium keys that you can either apply to a server, yourself or another user. Access to the Patreon Bot which has lag free music and beta features. A custom role that display seperately from all other users in the https://discordapp.com/invite/vCccEcy support server. We will add any feature you request as long as its possible and not unethical. (Note this perk is highly to change as we dont expect anyone to actually do this much. If you do thank you very very much.)</p>
+</article>
+
+<article>
+<header><h1>Claiming and Using your Perks</h1></header>
+<p>How do I claim my rewards. Mantaro should automatically Direct message you a single Premium key if you Donated via Patreon and joined the Support server. To get additional keys (if you pledged more than 1$) just poke us on the #donators channel in the support server and we will create them for you. To use a key on yourself simpyly do /premium activate key:&lt;key&gt; with a user key (you can give the key to someone else and they can use that command aswell), to make a server premium just do /premium activate key:&lt;key&gt; with a guild key in that server. If you donated via paypal simply poke us and we will create the proper amount of keys for you. Donation methods Patreon: http://patreon.com/mantaro Paypal: https://www.paypal.me/kodemantaro Note: To allow the patreon bot to join a server we will need that guilds ID (unique identifier). You don't know how to get those? Easy. Go to the server settings. Browse widget and copy the server ID. Alternatively you can if you have the normal Mantaro already just run the /info server command and copy what you see in the footer. If none of that applies: go to your Discord appearance settings and enable Developer Mode then right click the server icon and click &quot;Copy ID&quot;.</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "We appreciate everyone who pledges and/or donates to Mantaro, love you all :heart:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "premium-perks",
+      "title" : "Premium Perks",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "premium-perks-user-perks",
+        "level" : 3,
+        "title" : "User perks:",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The feel of being amazing.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Up to two times money from ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/loot",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Up to twice the money from ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/chop",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ", ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/mine",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/fish",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " (Can be anywhere from 1.1x to 2x per run)",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The ability to use ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/dailycrate",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Double money on ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/daily",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "No Music length limit.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Volume command.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The ability to queue YouTube & Twitch streams (lofi radio anyone?).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "No queue limit, queue as many songs as you may like.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Access to premium crate drops from mine and fish.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Ability to customize your User Profile (",
+              "type" : "SimpleText"
+            }, {
+              "code" : "/profile widgets",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ").",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "A Donator badge for your Profile.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "premium-perks-guild-server-perks",
+        "level" : 3,
+        "title" : "Guild (Server) Perks",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "No Music length limit for everyone.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "No queue limit for everyone, queue as many songs as you may like.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The ability to queue Youtube & Twitch streams for everyone.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Volume command for everyone.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The ability to have more than 100 custom commands.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "what-you-get-for-donating-via-paypal",
+      "title" : "What you get for Donating via PayPal",
+      "type" : "Section",
+      "content" : [ {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6 USD: 6-months key. (User key)",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12 USD: 1-year key. (User or Guild key)",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50 USD: Patreon bot for one server.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: If you donate, let's say, $24USD, you can get either 2 1-year keys, or one 1-year key and 2 6-month keys, etc. Your choice!",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Minimum amount is $12 usd via paypal to give you a 365 days key and $6 to give you a 180 day key!",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "Please ping Kodehawa#3457 on the support server if you send a donation using this way, so I can deliver your key <3",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "what-you-get-for-donating-via-patreon",
+      "title" : "What you get for Donating via Patreon",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To claim these you will have to have your Discord linked to patreon. Unsure how to do this? View ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://patreon.zendesk.com/hc/en-us/articles/212052266-How-do-I-receive-my-Discord-role",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "this",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Wiki article.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "The key(s) will last for as long as the pledge is active.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "what-you-get-for-donating-via-patreon-2---friend",
+        "level" : 3,
+        "title" : "2$. - Friend!",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1 premium key that you can either apply to a server, yourself or another user.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "what-you-get-for-donating-via-patreon-4---patreon-bot",
+        "level" : 3,
+        "title" : "4$. - Patreon Bot",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2 premium keys that you can either apply to a server, yourself or another user.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Access to the Patreon Bot which has lag free music and beta features.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "what-you-get-for-donating-via-patreon-8---milestoner",
+        "level" : 3,
+        "title" : "8$ - Milestoner",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4 premium keys that you can either apply to a server, yourself or another user.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Access to the Patreon Bot which has lag free music and beta features.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "A custom role that display seperately from all other users in the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://discordapp.com/invite/vCccEcy",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "support server",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "what-you-get-for-donating-via-patreon-14---server-supporter",
+        "level" : 3,
+        "title" : "14$. - Server Supporter",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7 premium keys that you can either apply to a server, yourself or another user.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Access to the Patreon Bot which has lag free music and beta features.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "A custom role that display seperately from all other users in the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://discordapp.com/invite/vCccEcy",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "support server",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "what-you-get-for-donating-via-patreon-50---awooosome",
+        "level" : 3,
+        "title" : "50$. - Awooosome",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "24 premium keys that you can either apply to a server, yourself or another user.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Access to the Patreon Bot which has lag free music and beta features.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "A custom role that display seperately from all other users in the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://discordapp.com/invite/vCccEcy",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "support server",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "what-you-get-for-donating-via-patreon-70---funder",
+        "level" : 3,
+        "title" : "70$. - Funder",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "34 premium keys that you can either apply to a server, yourself or another user.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Access to the Patreon Bot which has lag free music and beta features.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "A custom role that display seperately from all other users in the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://discordapp.com/invite/vCccEcy",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "support server",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "what-you-get-for-donating-via-patreon-100---b-but-why",
+        "level" : 3,
+        "title" : "100$. - B-But why?!",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50 premium keys that you can either apply to a server, yourself or another user.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Access to the Patreon Bot which has lag free music and beta features.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "A custom role that display seperately from all other users in the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://discordapp.com/invite/vCccEcy",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "support server",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "We will add any feature you request as long as its possible and not unethical.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "(Note this perk is highly to change as we dont expect anyone to actually do this much. If you do thank you very very much.)",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "claiming-and-using-your-perks",
+      "title" : "Claiming and Using your Perks",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "claiming-and-using-your-perks-how-do-i-claim-my-rewards",
+        "level" : 3,
+        "title" : "How do I claim my rewards.",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Mantaro should automatically Direct message you a single Premium key if you Donated via Patreon and joined the Support server.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "To get additional keys (if you pledged more than 1$) just poke us on the #donators channel in the support server and we will create them for you.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "To use a key on yourself simpyly do ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/premium activate key:<key>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " with a user key (you can give the key to someone else and they can use that command aswell), to make a server premium just do ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/premium activate key:<key>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " with a guild key in that server.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "If you donated via paypal simply poke us and we will create the proper amount of keys for you.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "claiming-and-using-your-perks-donation-methods",
+        "level" : 3,
+        "title" : "Donation methods",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Patreon: http://patreon.com/mantaro",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Paypal: https://www.paypal.me/kodemantaro",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: To allow the patreon bot to join a server we will need that guilds ID (unique identifier). You don't know how to get those? Easy. Go to the server settings. Browse widget and copy the server ID. Alternatively you can if you have the normal Mantaro already just run the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "/info server",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " command and copy what you see in the footer. If none of that applies: go to your Discord appearance settings and enable Developer Mode then right click the server icon and click \"Copy ID\".",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661025575272,
+    "tocItem" : {
+      "chapterTitle" : "Intro",
+      "pageTitle" : "Premium Perks",
+      "pageMeta" : { },
+      "dirName" : "intro",
+      "fileName" : "premium-perks",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Premium Perks",
+        "id" : "premium-perks"
+      }, {
+        "title" : "What you get for Donating via PayPal",
+        "id" : "what-you-get-for-donating-via-paypal"
+      }, {
+        "title" : "What you get for Donating via Patreon",
+        "id" : "what-you-get-for-donating-via-patreon"
+      }, {
+        "title" : "Claiming and Using your Perks",
+        "id" : "claiming-and-using-your-perks"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

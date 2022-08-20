@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: Birthday Announcer</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>What is the Birthday Announcer?</h1></header>
+<p>The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday. Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day. Important commands /birthday set date:&lt;dd-MM&gt; Allows you to specify your birthday (dd-mm format). ~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt; Allows you to set up the Birthday Announcer. ~&gt;opts birthday message set &lt;message&gt; Allows you to set a Custom Birthday Message. /birthday allowserver Allows your birthday to be announced in the server you use this command on. Other/Extra commands ~&gt;opts birthday disable Removes the Birthday Announcer. ~&gt;opts birthday test &lt;@mention&gt; Allows you to test the Birthday Announcer. ~&gt;opts birthday message set &lt;message&gt; Allows you to set a custom message for you Birthday Announcer. ~&gt;opts birthday message clear Removes the custom message you had and restores the default message for the Birthday Announcer. ~&gt;opts commands birthdayblacklist add/remove &lt;@mention&gt; Allows you to blacklist an user from having their birthday announced on the server. Important information You cannot add someone else's birthday for them. Every user needs to add their own birthday themselves. The list of users to announce each day is cached every 24 hours. Meaning that any changes to ones birthday will not be reflected until after the cache happens. Since changes are not reflected until after the cache happens, this also means that if a birthday is added before the actual day then it won't be announced. For example, if your birthday was June 6th and you add it on June 5th it will not be announced since it was not cached. Users need to use /birthday allowserver if they want their birthday announced. If they don't use the command it will not be announced. Birthdays are announced at midnight America/Chicago time. This is a global setting and cannot be changed.</p>
+</article>
+
+<article>
+<header><h1>How do I enable the Birthday Announcer?</h1></header>
+<p>Before enabling the birthday announcer you need to check some things first.You need to choose a channel in which Mantaro will announce the birthdays. You need to choose a role to be assigned on each birthday.* *Make sure that the role you choose is not a role with permissions you would not want all users to have. As well, make sure that the role is not an actively used role, for example a role called Member that is given to everyone is not a good choice.Once you have those two you can use ~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt; to activate the Birthday Announcer. null https://i.imgur.com/c1T9vAd.png image Once again there's a couple of things to keep in mind.You have to type the name of both channel and role. Do not mention them. If your role name has spaces on it (it's not a single word) then you have to type the name in quotes. &quot;Just like this&quot; If your role/channel name has special characters on it know that Mantaro at times does not recognize them and will fail the command because of them. You can rename the role so it does not have special characters, setup the announcer and then rename your role back.</p>
+</article>
+
+<article>
+<header><h1>Custom Birthday Messages</h1></header>
+<p>You can change the default message sent by Mantaro on someone's birthday. The messages do not support embeds, meaning you will only be able to use plain text for them. To set them up you need to use ~&gt;opts birthday message set &lt;message&gt; . You have two modifiers at your disposal for birthday messages: $(user) This will return the name of the user. $(usermention) This will return a mention of the user. $(tag) This will return the user tag. For example Kodehawa#3457. To use them you just have to type the modifier wherever you want it to be in your message. null https://i.imgur.com/eoM44Qg.png image Important things to keep in mind:Do not start the message with a new line! Put the message right after ~&gt;opts birthday message set , like ~&gt;opts birthday message set Hello there . If you use a new line (aka ctrl + enter before the actual message), you'll get an error message. You cannot mention @everyone. This is intentional. The size of your message is limited by Discord's own message limit (2000 characters - 26 characters from the command - 2 characters from the default prefix (this one can vary if you have a custom prefix)).</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "viewOn" : {
+      "link" : "https://www.mantaro.site/mantaro-wiki",
+      "title" : "Mantaro Wiki"
+    },
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "what-is-the-birthday-announcer",
+      "title" : "What is the Birthday Announcer?",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday. Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "what-is-the-birthday-announcer-important-commands",
+        "level" : 2,
+        "title" : "Important commands",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "/birthday set date:<dd-MM>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to specify your birthday (dd-mm format).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>opts birthday enable <channel name> <role name>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to set up the Birthday Announcer.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>opts birthday message set <message>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to set a Custom Birthday Message.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "/birthday allowserver",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows your birthday to be announced in the server you use this command on.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "what-is-the-birthday-announcer-otherextra-commands",
+        "level" : 2,
+        "title" : "Other/Extra commands",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>opts birthday disable",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Removes the Birthday Announcer.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>opts birthday test <@mention>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to test the Birthday Announcer.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>opts birthday message set <message>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to set a custom message for you Birthday Announcer.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>opts birthday message clear",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Removes the custom message you had and restores the default message for the Birthday Announcer.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "~>opts commands birthdayblacklist add/remove <@mention>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " Allows you to blacklist an user from having their birthday announced on the server.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "what-is-the-birthday-announcer-important-information",
+        "level" : 2,
+        "title" : "Important information",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You cannot add someone else's birthday for them. Every user needs to add their own birthday themselves.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The list of users to announce each day is cached every 24 hours. Meaning that any changes to ones birthday will not be reflected until after the cache happens.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Since changes are not reflected until after the cache happens, this also means that if a birthday is added before the actual day then it won't be announced. For example, if your birthday was June 6th and you add it on June 5th it will not be announced since it was not cached.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Users need to use ",
+                "type" : "SimpleText"
+              }, {
+                "code" : "/birthday allowserver",
+                "type" : "InlinedCode"
+              }, {
+                "text" : " if they want their birthday announced. If they don't use the command it will not be announced.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Birthdays are announced at midnight America/Chicago time. ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "This is a global setting and cannot be changed.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "how-do-i-enable-the-birthday-announcer",
+      "title" : "How do I enable the Birthday Announcer?",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Before enabling the birthday announcer you need to check some things first.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You need to choose a channel in which Mantaro will announce the birthdays.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You need to choose a role to be assigned on each birthday.*",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "*Make sure that the role you choose is ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "not",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " a role with permissions you would not want all users to have. As well, make sure that the role is ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "not",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " an actively used role, for example a role called Member that is given to everyone is not a good choice.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Once you have those two you can use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts birthday enable <channel name> <role name>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " to activate the Birthday Announcer.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/c1T9vAd.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Once again there's a couple of things to keep in mind.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You have to ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "type",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " the name of both channel and role. ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Do not mention them",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "If your role name has spaces on it (it's not a single word) then you ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "have to",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " type the name in quotes. \"Just like this\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "If your role/channel name has special characters on it know that ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Mantaro at times does not recognize them and will fail the command because of them",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ". You can rename the role so it does not have special characters, setup the announcer and then rename your role back.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "custom-birthday-messages",
+      "title" : "Custom Birthday Messages",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You can change the default message sent by Mantaro on someone's birthday. The messages do not support embeds, meaning you will only be able to use plain text for them. To set them up you need to use ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "~>opts birthday message set <message>",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". You have two modifiers at your disposal for birthday messages:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "$(user)",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " This will return the name of the user.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "$(usermention)",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " This will return a mention of the user.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "$(tag)",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " This will return the user tag. For example Kodehawa#3457.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To use them you just have to type the modifier wherever you want it to be in your message.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/eoM44Qg.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Important things to keep in mind:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Do not start the message with a new line! Put the message right after ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "~>opts birthday message set",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ", like ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "~>opts birthday message set Hello there",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ". If you use a new line (aka ctrl + enter before the actual message), you'll get an error message.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "You cannot mention @everyone",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ". This is intentional.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The size of your message is limited by Discord's own message limit (2000 characters - 26 characters from the command - 2 characters from the default prefix (this one can vary if you have a custom prefix)).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661023007595,
+    "tocItem" : {
+      "chapterTitle" : "Configuration",
+      "pageTitle" : "Birthday Announcer",
+      "pageMeta" : { },
+      "dirName" : "configuration",
+      "fileName" : "birthday-announcer",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "What is the Birthday Announcer?",
+        "id" : "what-is-the-birthday-announcer"
+      }, {
+        "title" : "How do I enable the Birthday Announcer?",
+        "id" : "how-do-i-enable-the-birthday-announcer"
+      }, {
+        "title" : "Custom Birthday Messages",
+        "id" : "custom-birthday-messages"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
