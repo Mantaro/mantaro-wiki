@@ -1,1 +1,1 @@
-{"includePlugins":{"image":{"count":2,"params":["align"]},"file":{"count":2}},"fencePlugins":{"columns":{"count":1}},"inlineCodePlugins":{"badge":{"count":1}}}
+{"includePlugins":{"image":{"count":2,"params":["align"]},"file":{"count":2}},"fencePlugins":{"columns":{"count":1,"params":["left"]}},"inlineCodePlugins":{"badge":{"count":1}}}

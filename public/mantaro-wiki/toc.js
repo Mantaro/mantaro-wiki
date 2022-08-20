@@ -23,7 +23,34 @@ toc = [ {
     "dirName" : "legal",
     "fileName" : "terms-of-service",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "Mantaro Bot Terms of Service",
+      "id" : "mantaro-bot-terms-of-service"
+    }, {
+      "title" : "1. The bot and its systems",
+      "id" : "1-the-bot-and-its-systems"
+    }, {
+      "title" : "2. Music and Transmission.",
+      "id" : "2-music-and-transmission"
+    }, {
+      "title" : "3. Use of the Mantaro \"currency\" and game system",
+      "id" : "3-use-of-the-mantaro-currency-and-game-system"
+    }, {
+      "title" : "4. Premium Features",
+      "id" : "4-premium-features"
+    }, {
+      "title" : "5. Warranty and Liability.",
+      "id" : "5-warranty-and-liability"
+    }, {
+      "title" : "6. Abuse",
+      "id" : "6-abuse"
+    }, {
+      "title" : "7. Acknowledge",
+      "id" : "7-acknowledge"
+    }, {
+      "title" : "8. Donations",
+      "id" : "8-donations"
+    } ]
   }, {
     "chapterTitle" : "Legal",
     "pageTitle" : "Privacy Policy",
