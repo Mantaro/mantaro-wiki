@@ -1,8 +1,13 @@
 {
-  "title": "Your Product",
-  "type": "Guide",
+  "title": "Mantaro Wiki",
+  "type": "Docs",
+  "description": "The official wiki for the Mantaro Discord Bot.",
   "viewOn": {
-    "link": "your-custom-base-url",
-    "title": "View On Label"
+    "link": "https://www.mantaro.site/wiki",
+    "title": "Mantaro Wiki"
+  },
+  "support": {
+    "link": "https://support.mantaro.site",
+    "title": "Our support server"
   }
 }

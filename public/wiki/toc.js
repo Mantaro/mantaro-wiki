@@ -3,14 +3,14 @@ toc = [ {
   "dirName" : "",
   "items" : [ {
     "chapterTitle" : "",
-    "pageTitle" : "Your Product",
+    "pageTitle" : "Mantaro Wiki",
     "pageMeta" : { },
     "dirName" : "",
     "fileName" : "index",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
-      "title" : "Your product",
-      "id" : "your-product"
+      "title" : "Mantaro Bot Wiki",
+      "id" : "mantaro-bot-wiki"
     } ]
   } ]
 }, {
