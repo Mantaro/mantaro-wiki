@@ -190,9 +190,9 @@ toc = [ {
   "dirName" : "commands",
   "items" : [ {
     "chapterTitle" : "Commands",
-    "pageTitle" : "Managing Commands",
+    "pageTitle" : "Permissions & Managing",
     "pageMeta" : {
-      "title" : [ "Managing Commands" ]
+      "title" : [ "Permissions & Managing" ]
     },
     "dirName" : "commands",
     "fileName" : "permissions",
@@ -207,8 +207,8 @@ toc = [ {
       "title" : "Text-Commands (opts, game, etc.)",
       "id" : "text-commands-opts-game-etc"
     }, {
-      "title" : "Mantaro Command Settings",
-      "id" : "mantaro-command-settings"
+      "title" : "Managing Commands (Mantaro Settings Method)",
+      "id" : "managing-commands-mantaro-settings-method"
     } ]
   }, {
     "chapterTitle" : "Commands",
