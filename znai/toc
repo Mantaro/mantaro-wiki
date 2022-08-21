@@ -8,7 +8,13 @@ commands
     permissions
     audio-commands
     action-commands
-    command-list
+    currency-commands
+    game-commands
+    image-commands
+    fun-commands
+    moderation-commands
+    info-commands
+    utility-commands
 configuration
     all-options
     welcome-and-leave-messages
