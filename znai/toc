@@ -2,9 +2,11 @@ legal
     terms-of-service
     privacy-policy
 basics
-    command-list
     FAQ
     premium-perks
+commands
+    permissions
+    command-list
 configuration
     all-options
     welcome-and-leave-messages
