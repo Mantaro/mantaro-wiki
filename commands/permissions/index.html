@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
-<title>Mantaro Wiki: Permissions</title>
+<title>Mantaro Wiki: Managing Commands</title>
 <link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
 <link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
 <link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
@@ -83,7 +83,23 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<p>Due to the nature of Discord Bots that use Slash Commands, the bot automatically obtains several permissions. Specifically, those permissions pertaining to messages (Embed links, Attach Files, etc.). However, there are still some permissions that must be manually given be it to the user or to the bot. Those are as follows:DJ:Anyone with the role called &quot;DJ&quot;, your established DJ role for the server, or the one who requested the song. Admin: Anyone with the role called &quot;Bot Commander&quot;, or the role Permission &quot;Manage Server&quot; Messages: Both Mantaro and the User using the command require the &quot;Manage Messages&quot; Discord permission. The bot can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing. Command access and restriction As for access permissions, these can be handled using the integrated Discord https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions Command Permission System. This can be done in a few ways.Note: People with the permission Administrator are unaffected by any restrictions and can always use all commands. Integration settings Warning: Currently the Integration settings cannot be accessed on the mobile app. Please use a PC or browser version for this.You can find the Integration settings by going over to your Server Settings , then into the Integrations tab. Once here, locate the bot and click on Manage . Once in here, you can modify which users can use commands, which channels allow commands, as well as choose which commands are allowed to either channel or users.</p>
+<header><h1>Intro</h1></header>
+<p>Through-out this wiki we will mention the following permissions as short hands:DJ: Anyone with the role called &quot;DJ&quot;, your established DJ role for the server, or the one who requested the song. Admin: Anyone with the role called &quot;Bot Commander&quot;, or the role Permission &quot;Manage Server&quot; Messages: Both Mantaro and the User using the command require the &quot;Manage Messages&quot; Discord permission. The bot can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.</p>
+</article>
+
+<article>
+<header><h1>Slash Commands</h1></header>
+<p>Due to the nature of Discord Bots that use Slash Commands, the bot automatically obtains several permissions. Specifically, those permissions pertaining to messages (Embed links, Attach Files, etc.). However, there are still some permissions that must be manually given be it to the user or to the bot. Those are as follows:Note: &quot;Use external emotes&quot; and &quot;User external stickers&quot; are not effected by the above-mentioned and need to be given to the bot to function. Integration settings As for access permissions, these can be handled using the integrated Discord https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions Command Permission System. This can be done in a few ways.Warning: Currently the Integration settings cannot be accessed on the mobile app. Please use a PC or browser version for this.Note: People with the permission Administrator are unaffected by any restrictions and can always use all commands.You can find the Integration settings by going over to your Server Settings , then into the Integrations tab. Once here, locate the bot and click on Manage . Once in here, you can modify which users can use commands, which channels allow commands, as well as choose which commands are allowed to either channel or users.</p>
+</article>
+
+<article>
+<header><h1>Text-Commands (opts, game, etc.)</h1></header>
+<p>Some commands currently still function the same way you have always used them (in text form). Notably these include opts, game and some currency commands. While this is not here to stay we would like to let you know how to manage them until they do inevitably vanish.Additionally, unlike with slash commands: Any permissions required by Mantaro, such as embed links, attach files, etc., are not explicitly obtained and will have to be granted in order for said commands to work. Usually it is not enough to grant them to the role itself if you have modified channel permissions. Discord permissions Text commands abide by discord's channel permissions. If you would like Mantaro not to be used in a certain channel simply go to the channel's settings and then Permissions , under Advanced Permissions add or navigate to a role Mantaro has and deny it View Channel . This will cause all text commands to not work.Note: Denying view channel has no effect on Slash Commands. Please refer to the section above for managing slash commands.</p>
+</article>
+
+<article>
+<header><h1>Mantaro Command Settings</h1></header>
+<p>Mantaro has its own settings to disable/manage commands. You are able to disable channels, categories and entire commands on the entire server, a specific channel or for a specific role. Below is a list of all commands that can be used to restrict command usage. Type Command Preview [{text=Disable a Command fully, type=SimpleText}] [{code=~&gt;opts command disable &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/tHnMpDL.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a command again, type=SimpleText}] [{code=~&gt;opts command enable &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/GnhGeev.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a channel fully, type=SimpleText}] [{code=~&gt;opts channel disable &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FVC5L1Z.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a channel again, type=SimpleText}] [{code=~&gt;opts channel enable &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/KTpQhjr.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a command in a channel, type=SimpleText}] [{code=~&gt;opts command specific disable &lt;channel&gt; &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/hGFuR1R.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a command in a channel, type=SimpleText}] [{code=~&gt;opts command specific enable &lt;channel&gt; &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/cpANjeY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category fully, type=SimpleText}] [{code=~&gt;opts category disable &lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FpxVVUM.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category again, type=SimpleText}] [{code=~&gt;opts category enable &lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/h2QpjQY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category in a channel, type=SimpleText}] [{code=~&gt;opts category specific disable &lt;category&gt; &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/EKKVv9w.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category in a channel, type=SimpleText}] [{code=~&gt;opts category specific enable &lt;category&gt; &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/r2AqYsN.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a role from using commands, type=SimpleText}] [{code=~&gt;opts server role disallow &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/wusK9Fu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use commands, type=SimpleText}] [{code=~&gt;opts server role allow &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/IXw05Lu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a specific command, type=SimpleText}] [{code=~&gt;opts role specific disable &lt;command name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/Lrri02q.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a specific command, type=SimpleText}] [{code=~&gt;opts role specific enable &lt;command name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/eOCMYOg.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a whole category, type=SimpleText}] [{code=~&gt;opts category role specific disable &lt;category&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/dzkot4K.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a whole category, type=SimpleText}] [{code=~&gt;opts category role specific enable &lt;category&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/MdFKFiq.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable/Enable game lobby/multiple, type=SimpleText}] [{code=-&gt;opts commands lobby disable/enable, type=InlinedCode}] [{url=https://i.imgur.com/GaxVAKl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Warning: Please keep in mind that there is a priority to disabling settings. For example: if you disable a category for the whole server and then try to enable a command of that category on the entire server/or a channel, that command will still not work. In general the following idea holds true: Disabled Channel -&gt; Disabled Category (Server wide) -&gt; Disabled Category (Channel wide) -&gt; Disabled Command (Server wide) -&gt; Disabled Command (Channel wide) I.e. A Disabled channel is the strongest form of disabling and will ignore all other settings made to enabled/disabled commands</p>
 </article>
 </section>
 </div>
@@ -110,184 +126,658 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "type" : "Paragraph",
+      "id" : "intro",
+      "title" : "Intro",
+      "type" : "Section",
       "content" : [ {
-        "text" : "Due to the nature of Discord Bots that use Slash Commands, the bot automatically obtains several permissions. Specifically, those permissions pertaining to messages (Embed links, Attach Files, etc.).",
-        "type" : "SimpleText"
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "However, there are still some permissions that must be manually given be it to the user or to the bot. Those are as follows:",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
+        "type" : "Paragraph",
         "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "type" : "StrongEmphasis",
-            "content" : [ {
-              "text" : "DJ",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ":Anyone with the role called \"DJ\", your established DJ role for the server, or the one who requested the song.",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "type" : "StrongEmphasis",
-            "content" : [ {
-              "text" : "Admin",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ": Anyone with the role called \"Bot Commander\", or the role Permission \"Manage Server\"",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "type" : "StrongEmphasis",
-            "content" : [ {
-              "text" : "Messages",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ": Both Mantaro and the User using the command require the \"Manage Messages\" Discord permission.",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "The bot can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "id" : "command-access-and-restriction",
-      "level" : 2,
-      "title" : "Command access and restriction",
-      "type" : "SubHeading"
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "As for access permissions, these can be handled using the integrated Discord ",
-        "type" : "SimpleText"
-      }, {
-        "url" : "https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions",
-        "isFile" : false,
-        "type" : "Link",
-        "content" : [ {
-          "text" : "Command Permission System",
+          "text" : "Through-out this wiki we will mention the following permissions as short hands:",
           "type" : "SimpleText"
         } ]
       }, {
-        "text" : ". This can be done in a few ways.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "Note: People with the permission Administrator are unaffected by any restrictions and can always use all commands.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "id" : "command-access-and-restriction-integration-settings",
-      "level" : 3,
-      "title" : "Integration settings",
-      "type" : "SubHeading"
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "Warning: Currently the Integration settings cannot be accessed on the mobile app. Please use a PC or browser version for this.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "You can find the Integration settings by going over to your ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "Server Settings",
-        "type" : "InlinedCode"
-      }, {
-        "text" : ", then into the ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "Integrations",
-        "type" : "InlinedCode"
-      }, {
-        "text" : " tab. Once here, locate the bot and click on ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "Manage",
-        "type" : "InlinedCode"
-      }, {
-        "text" : ".",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "columns" : [ {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
         "content" : [ {
-          "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\server-settings.png",
-          "timestamp" : 1661057698165,
-          "shapes" : [ ],
-          "width" : 244.0,
-          "height" : 190.0,
-          "type" : "AnnotatedImage"
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "DJ",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": Anyone with the role called \"DJ\", your established DJ role for the server, or the one who requested the song.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Admin",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": Anyone with the role called \"Bot Commander\", or the role Permission \"Manage Server\"",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Messages",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": Both Mantaro and the User using the command require the \"Manage Messages\" Discord permission.",
+              "type" : "SimpleText"
+            } ]
+          } ]
         } ]
       }, {
+        "type" : "Paragraph",
         "content" : [ {
-          "scale" : 0.8,
-          "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integrations.png",
-          "timestamp" : 1661059504432,
-          "shapes" : [ ],
-          "width" : 487.0,
-          "height" : 122.0,
-          "type" : "AnnotatedImage"
+          "text" : "The bot can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.",
+          "type" : "SimpleText"
         } ]
-      } ],
-      "config" : { },
-      "type" : "Columns"
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "Once in here, you can modify which users can use commands, which channels allow commands, as well as choose which commands are allowed to either channel or users.",
-        "type" : "SimpleText"
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
-      "scale" : 0.8,
-      "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integration-perms.png",
-      "timestamp" : 1661069701935,
-      "shapes" : [ ],
-      "width" : 664.0,
-      "height" : 297.0,
-      "type" : "AnnotatedImage"
+      "id" : "slash-commands",
+      "title" : "Slash Commands",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Due to the nature of Discord Bots that use Slash Commands, the bot automatically obtains several permissions. Specifically, those permissions pertaining to messages (Embed links, Attach Files, etc.).",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "However, there are still some permissions that must be manually given be it to the user or to the bot. Those are as follows:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: \"Use external emotes\" and \"User external stickers\" are not effected by the above-mentioned and need to be given to the bot to function.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "slash-commands-integration-settings",
+        "level" : 2,
+        "title" : "Integration settings",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "As for access permissions, these can be handled using the integrated Discord ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Command Permission System",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". This can be done in a few ways.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: Currently the Integration settings cannot be accessed on the mobile app. Please use a PC or browser version for this.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: People with the permission Administrator are unaffected by any restrictions and can always use all commands.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You can find the Integration settings by going over to your ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "Server Settings",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", then into the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "Integrations",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " tab. Once here, locate the bot and click on ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "Manage",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\server-settings.png",
+            "timestamp" : 1661070646717,
+            "shapes" : [ ],
+            "width" : 244.0,
+            "height" : 190.0,
+            "type" : "AnnotatedImage"
+          } ]
+        }, {
+          "content" : [ {
+            "scale" : 0.8,
+            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integrations.png",
+            "timestamp" : 1661070646715,
+            "shapes" : [ ],
+            "width" : 487.0,
+            "height" : 122.0,
+            "type" : "AnnotatedImage"
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Once in here, you can modify which users can use commands, which channels allow commands, as well as choose which commands are allowed to either channel or users.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "scale" : 0.8,
+        "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integration-perms.png",
+        "timestamp" : 1661070646714,
+        "shapes" : [ ],
+        "width" : 664.0,
+        "height" : 297.0,
+        "type" : "AnnotatedImage"
+      }, {
+        "type" : "ThematicBreak"
+      } ]
     }, {
-      "type" : "ThematicBreak"
+      "id" : "text-commands-opts-game-etc",
+      "title" : "Text-Commands (opts, game, etc.)",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Some commands currently still function the same way you have always used them (in text form). Notably these",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "include opts, game and some currency commands. While this is not here to stay we would like to let you know how",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "to manage them until they do inevitably vanish.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Additionally, unlike with slash commands: Any permissions required by Mantaro, such as embed links, attach files, etc.,",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "are not explicitly obtained and will have to be granted in order for said commands to work. Usually it is not",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "enough to grant them to the role itself if you have modified channel permissions.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "text-commands-opts-game-etc-discord-permissions",
+        "level" : 2,
+        "title" : "Discord permissions",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Text commands abide by discord's channel permissions. If you would like Mantaro not to be used in a certain channel simply",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "go to the channel's settings and then ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "Permissions",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", under ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "Advanced Permissions",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " add or navigate to a role Mantaro has",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "and deny it ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "View Channel",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". This will cause all text commands to not work.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Denying view channel has no effect on Slash Commands. Please refer to the section above for managing",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "slash commands.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\edit-channel.png",
+        "timestamp" : 1661070646713,
+        "shapes" : [ ],
+        "width" : 264.0,
+        "height" : 74.0,
+        "type" : "AnnotatedImage"
+      }, {
+        "scale" : 0.5,
+        "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\advanced-perms.png",
+        "timestamp" : 1661071487820,
+        "shapes" : [ ],
+        "width" : 787.0,
+        "height" : 269.0,
+        "type" : "AnnotatedImage"
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "scale" : 0.5,
+            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\channel-perm-add.png",
+            "timestamp" : 1661071275684,
+            "shapes" : [ ],
+            "width" : 343.0,
+            "height" : 486.0,
+            "type" : "AnnotatedImage"
+          } ]
+        }, {
+          "content" : [ {
+            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\perm-navigate.png",
+            "timestamp" : 1661071589239,
+            "shapes" : [ ],
+            "width" : 294.0,
+            "height" : 173.0,
+            "type" : "AnnotatedImage"
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\view-channel-perm.png",
+        "timestamp" : 1661071432088,
+        "shapes" : [ ],
+        "width" : 435.0,
+        "height" : 102.0,
+        "type" : "AnnotatedImage"
+      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "mantaro-command-settings",
+      "title" : "Mantaro Command Settings",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Mantaro has its own settings to disable/manage commands. You are able to disable channels, categories and entire commands",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "on the entire server, a specific channel or for a specific role. Below is a list of all commands that can be used",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "to restrict command usage.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Type",
+            "align" : "center"
+          }, {
+            "title" : "Command",
+            "align" : "center"
+          }, {
+            "title" : "Preview",
+            "align" : "center"
+          } ],
+          "data" : [ [ [ {
+            "text" : "Disable a Command fully",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts command disable <command>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/tHnMpDL.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Allow a command again",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts command enable <command>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/GnhGeev.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Disable a channel fully",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts channel disable <channel>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/FVC5L1Z.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Enable a channel again",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts channel enable <channel>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/KTpQhjr.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Disable a command in a channel",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts command specific disable <channel> <command>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/hGFuR1R.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Enable a command in a channel",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts command specific enable <channel> <command>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/cpANjeY.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Disable a category fully",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts category disable <category>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/FpxVVUM.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Enable a category again",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts category enable <category>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/h2QpjQY.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Disable a category in a channel",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts category specific disable <category> <channel name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/EKKVv9w.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Enable a category in a channel",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts category specific enable <category> <channel name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/r2AqYsN.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Disable a role from using commands",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts server role disallow <role name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/wusK9Fu.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Allow a role to use commands",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts server role allow <role name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/IXw05Lu.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Disallow a role to use a specific command",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts role specific disable <command name> <role name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/Lrri02q.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Allow a role to use a specific command",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts role specific enable <command name> <role name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/eOCMYOg.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Disallow a role to use a whole category",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts category role specific disable <category> <role name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/dzkot4K.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Allow a role to use a whole category",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "~>opts category role specific enable <category> <role name>",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/MdFKFiq.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "text" : "Disable/Enable game lobby/multiple",
+            "type" : "SimpleText"
+          } ], [ {
+            "code" : "->opts commands lobby disable/enable",
+            "type" : "InlinedCode"
+          } ], [ {
+            "url" : "https://i.imgur.com/GaxVAKl.png",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Like This",
+              "type" : "SimpleText"
+            } ]
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: Please keep in mind that there is a priority to disabling settings.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "For example: if you disable a category for the whole server and then try to enable a command",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "of that category on the entire server/or a channel, that command will still not work.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "In general the following idea holds true:",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Disabled Channel -> Disabled Category (Server wide) -> Disabled Category (Channel wide) -> Disabled Command (Server wide) -> Disabled Command (Channel wide)",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "I.e. A Disabled channel is the strongest form of disabling and will ignore all other settings made to enabled/disabled commands",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "ThematicBreak"
+      } ]
     } ],
-    "lastModifiedTime" : 1661070023401,
+    "lastModifiedTime" : 1661074983213,
     "tocItem" : {
       "chapterTitle" : "Commands",
-      "pageTitle" : "Permissions",
-      "pageMeta" : { },
+      "pageTitle" : "Managing Commands",
+      "pageMeta" : {
+        "title" : [ "Managing Commands" ]
+      },
       "dirName" : "commands",
       "fileName" : "permissions",
       "viewOnRelativePath" : null,
-      "pageSectionIdTitles" : [ ]
+      "pageSectionIdTitles" : [ {
+        "title" : "Intro",
+        "id" : "intro"
+      }, {
+        "title" : "Slash Commands",
+        "id" : "slash-commands"
+      }, {
+        "title" : "Text-Commands (opts, game, etc.)",
+        "id" : "text-commands-opts-game-etc"
+      }, {
+        "title" : "Mantaro Command Settings",
+        "id" : "mantaro-command-settings"
+      } ]
     }
   }
 }), document.getElementById("znai"));

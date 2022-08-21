@@ -89,7 +89,7 @@
 
 <article>
 <header><h1>Modifiers for welcome/leave messages:</h1></header>
-<p>https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#guild-modifiers All of the guild modifiers below https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#me-mantaro-modifiers All of the me (Mantaro) modifiers below $(event.user):This will return a mention of the user that joined/left. $(event.user.username):This will return the username of the user that joined/left. $(event.user.name):This will return the nickname of the user that joined/left. $(event.user.discriminator):This will return the discriminator (#XXXX) of the user that joined/left. $(event.user.tag):Short hand for username#discriminator. $(event.user.game):This will return the current playing game of the user that joined/left (None if no game). $(event.user.id):This will return the id (unique identifier) of the user that joined/left. $(event.user.avatar):This will return the avatar URL of the user that joined/left.</p>
+<p>#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers All of the guild modifiers below #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers All of the me (Mantaro) modifiers below $(event.user):This will return a mention of the user that joined/left. $(event.user.username):This will return the username of the user that joined/left. $(event.user.name):This will return the nickname of the user that joined/left. $(event.user.discriminator):This will return the discriminator (#XXXX) of the user that joined/left. $(event.user.tag):Short hand for username#discriminator. $(event.user.game):This will return the current playing game of the user that joined/left (None if no game). $(event.user.id):This will return the id (unique identifier) of the user that joined/left. $(event.user.avatar):This will return the avatar URL of the user that joined/left.</p>
 </article>
 
 <article>
@@ -99,7 +99,7 @@
 
 <article>
 <header><h1>Modifiers for Log Messages</h1></header>
-<p>Shared between edited/deleted messages and user banned/unbanned https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages All of the modifiers from welcome messages (event.user in the case of bans is the person banned, in case of messages the author of the message) $(hour):Prints the time at which the log message occurred (Based on the location of the bot) Message Edited and Message Deleted https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#channel-modifiers All of the channel modifiers above Message Edited only $(old):Replaced with the old content of the message. $(new):Replaced with the new content of the message. Message Deleted only $(content):Replaced with the content of the deleted message. $(event.message.id):Replaced with the unique identifier of the deleted message.</p>
+<p>Shared between edited/deleted messages and user banned/unbanned #modifiers-for-welcomeleave-messages All of the modifiers from welcome messages (event.user in the case of bans is the person banned, in case of messages the author of the message) $(hour):Prints the time at which the log message occurred (Based on the location of the bot) Message Edited and Message Deleted #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers All of the channel modifiers above Message Edited only $(old):Replaced with the old content of the message. $(new):Replaced with the new content of the message. Message Deleted only $(content):Replaced with the content of the deleted message. $(event.message.id):Replaced with the unique identifier of the deleted message.</p>
 </article>
 </section>
 </div>
@@ -153,6 +153,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : " $(event.author.username).",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "modifiers-for-welcomeleave-messages",
@@ -169,7 +171,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "content" : [ {
               "type" : "StrongEmphasis",
               "content" : [ {
-                "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#guild-modifiers",
+                "url" : "/mantaro-wiki/custom-commands/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers",
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
@@ -186,7 +188,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "content" : [ {
               "type" : "StrongEmphasis",
               "content" : [ {
-                "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#me-mantaro-modifiers",
+                "url" : "/mantaro-wiki/custom-commands/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers",
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
@@ -429,6 +431,8 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands",
@@ -1596,6 +1600,8 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "modifiers-for-log-messages",
@@ -1617,7 +1623,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "content" : [ {
               "type" : "StrongEmphasis",
               "content" : [ {
-                "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages",
+                "url" : "/mantaro-wiki/custom-commands/modifiers#modifiers-for-welcomeleave-messages",
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
@@ -1676,7 +1682,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "content" : [ {
               "type" : "StrongEmphasis",
               "content" : [ {
-                "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#channel-modifiers",
+                "url" : "/mantaro-wiki/custom-commands/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers",
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
@@ -1823,9 +1829,11 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661025937655,
+    "lastModifiedTime" : 1661074893496,
     "tocItem" : {
       "chapterTitle" : "Custom Commands",
       "pageTitle" : "Modifiers",

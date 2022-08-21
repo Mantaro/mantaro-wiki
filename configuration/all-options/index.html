@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
-<title>Mantaro Wiki: All Options</title>
+<title>Mantaro Wiki: Server Configuration</title>
 <link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
 <link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
 <link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
@@ -83,8 +83,43 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>Server Options</h1></header>
-<p>You can get a list of all options without going to this wiki by doing: ~&gt;opts ls or ~&gt;opts list .Just as a general statement, don't include the &lt;&gt; from the examples on the actual command, they mean that it's an argument you have to fill.If the role has a space, try wrapping it in quotes if it doesn't work when you try to set it as x thing. Basic Server Configuration These include some basic configuration you can do like setting a custom Prefix Type Command Preview [{text=Custom Prefix, type=SimpleText}] [{code=~&gt;opts prefix set &lt;prefix&gt;, type=InlinedCode}] [{url=https://i.imgur.com/LPkMAuL.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset Custom Prefix, type=SimpleText}] [{code=~&gt;opts prefix clear, type=InlinedCode}] [{url=https://i.imgur.com/JDPKVCC.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Restricting Custom, type=SimpleText}, {text=Command Creation, type=SimpleText}] [{code=~&gt;opts admincustom true/false, type=InlinedCode}] [{url=https://i.imgur.com/igMkJ5I.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Time Setting for time based commands, type=SimpleText}] [{code=~&gt;opts timedisplay set 12h/24h, type=InlinedCode}] [{url=https://i.imgur.com/ea8AUeZ.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Blacklist a tag from imageboard commands (danbooru etc.), type=SimpleText}] [{code=~&gt;opts imageboard tags blacklist add &lt;tag&gt;, type=InlinedCode}] [{url=https://i.imgur.com/7lhsI2B.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Unblacklist a tag from imageboard commands, type=SimpleText}] [{code=~&gt;opts imageboard tags blacklist remove &lt;tag&gt;, type=InlinedCode}] [{url=https://i.imgur.com/lttgtkY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set the guild language, type=SimpleText}] [{code=~&gt;opts language set &lt;lang&gt;, type=InlinedCode}] [{url=https://i.imgur.com/45NZOr7.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Toggle message for disabled commands, type=SimpleText}] [{code=~&gt;opts commands showdisablewarning, type=InlinedCode}] [{url=https://i.imgur.com/2amfDaU.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Birthday Announcer These are the commands you can use to allow/edit the Birthday Announcer. You can check our birthday announcer tutorial https://github.com/Mantaro/MantaroBot/wiki/Birthday-101 here. Type Command Preview [{text=Enable Birthday announcer, type=SimpleText}] [{code=~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/yvrQQCV.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable Birthday announcer, type=SimpleText}] [{code=~&gt;opts birthday disable, type=InlinedCode}] [{url=https://i.imgur.com/ryKLTsM.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Test the Birthday announcer, type=SimpleText}] [{code=~&gt;opts birthday test @mention, type=InlinedCode}] [{url=https://i.imgur.com/eqbw6On.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom Birthday announcer message, type=SimpleText}] [{code=~&gt;opts birthday message set &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/M6EqdAB.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Clear the custom Birthday announcer message, type=SimpleText}] [{code=~&gt;opts birthday message clear, type=InlinedCode}] [{url=https://i.imgur.com/e700JQy.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Blacklist user from Birthday announcer, type=SimpleText}] [{code=~&gt;opts commands birthdayblacklist add/remove @mention, type=InlinedCode}] [{url=https://i.imgur.com/uuucrqY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] For the custom message you have the option to use two modifiers: $(user) and $(usermention). Please note that the role you provide in the birthday announcer commands is not a determination for who will be checked. Mantaro will check every person on the server and assign that role to them on their birthday and remove it the next day. Welcome and Leave messages These include all the things you need for Welcome and Leave messages, you can also use any of https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages these in them. They also support embedded messages check the https://github.com/Mantaro/MantaroBot/wiki/Custom-Commands-101 custom command documentation. for that. For a detailed tutorial click https://github.com/Mantaro/MantaroBot/wiki/Welcome-and-Leave-Messages-tutorial here Type Command Preview [{text=Set a Channel for the Message, type=SimpleText}] [{code=~&gt;opts usermessage channel &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/qVOZGgF.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Join/Leave Message, type=SimpleText}] [{code=~&gt;opts usermessage leavemessage/joinmessage, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts leavemessage/joinmessage, type=InlinedCode}] [{url=https://i.imgur.com/dLo0VAQ.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable/Disable ignoring bots, type=SimpleText}] [{code=~&gt;opts server ignorebots joinleave toggle, type=InlinedCode}] [{url=https://i.imgur.com/5ftNF7v.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disabling, type=SimpleText}] [{code=~&gt;opts usermessage resetdata, type=InlinedCode}] [{url=https://i.imgur.com/VSbjJQx.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the Join Message, type=SimpleText}] [{code=~&gt;opts usermessage resetjoinmessage, type=InlinedCode}] [{url=https://i.imgur.com/1MOnoQl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the Leave Message, type=SimpleText}] [{code=~&gt;opts usermessage resetleavemessage, type=InlinedCode}] [{url=https://i.imgur.com/TGugmvX.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a separate channel for join, type=SimpleText}] [{code=~&gt;opts usermessage join channel &lt;channel&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts joinchannel &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/CFOZWPh.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a separate channel for leave, type=SimpleText}] [{code=~&gt;opts usermessage leave channel &lt;channel&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts leavechannel &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/6Su2Kf5.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the separate channel for join, type=SimpleText}] [{code=~&gt;opts usermessage join resetchannel, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts resetjoinchannel, type=InlinedCode}] [{url=https://i.imgur.com/GnkPkAq.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the separate channel for leave, type=SimpleText}] [{code=~&gt;opts usermessage leave resetchannel, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts resetleavechannel, type=InlinedCode}] [{url=https://i.imgur.com/zUKIzeb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add additional welcome messages, type=SimpleText}] [{code=~&gt;opts usermessage joinmessages add &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/SZxr2lz.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove additional welcome messages, type=SimpleText}] [{code=~&gt;opts usermessage joinmessages remove &lt;index&gt;, type=InlinedCode}] [{url=https://i.imgur.com/3OfTnnR.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=List Additional welcome messages, type=SimpleText}] [{code=~&gt;opts usermessage joinmessages list, type=InlinedCode}] [{url=https://i.imgur.com/sV1BAZl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add additional leave messages, type=SimpleText}] [{code=~&gt;opts usermessage leavemessages add &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/YDzSTQ8.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove additional leave messages, type=SimpleText}] [{code=~&gt;opts usermessage leavemessages remove &lt;index&gt;, type=InlinedCode}] [{url=https://i.imgur.com/bWusCmT.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=List Additional leave messages, type=SimpleText}] [{code=~&gt;opts usermessage leavemessages list, type=InlinedCode}] [{url=https://i.imgur.com/TxawELm.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Autorole on join &amp; Self-assignable roles You can assign newly joined members to a specific role as well as you can setup roles that people can claim themselves using the ~&gt;iam command Type Command Preview [{text=Set Autorole, type=SimpleText}] [{code=~&gt;opts autorole set &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/lv3tgxw.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove Autorole, type=SimpleText}] [{code=~&gt;opts autorole unbind, type=InlinedCode}] [{url=https://i.imgur.com/ADFDmUA.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable/Disable ignoring bots for the autorole, type=SimpleText}] [{code=~&gt;opts server ignorebots autoroles toggle, type=InlinedCode}] [{url=https://i.imgur.com/BPYuJKa.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add a Self-Assignable, type=SimpleText}] [{code=~&gt;opts autoroles add &lt;iam name&gt; &lt;name of the role&gt;, type=InlinedCode}] [{url=https://i.imgur.com/KPWrQEH.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove a Self-Assignable, type=SimpleText}] [{code=~&gt;opts autoroles remove &lt;iam name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/hjq4PYw.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Clear all Self-Assignables, type=SimpleText}] [{code=~&gt;opts autoroles clear, type=InlinedCode}] [{url=https://i.imgur.com/ysPMOXO.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Categorize a Self-Assignable (used for ~&gt;iam ls), type=SimpleText}] [{code=~&gt;opts autoroles category add &lt;category name&gt; &lt;iam name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/DYnYWHb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove a Self-Assignable from a category, type=SimpleText}] [{code=~&gt;opts autoroles category remove &lt;category name&gt; &lt;iam name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/iXyocbV.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Server Logs You can enable server logs to see deleted and edited messages as well as Moderation actions etc. Custom log messages (editmessage, deletemessage and banmessage) support all of https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-log-messages these. Type Command Preview [{text=Enabling, type=SimpleText}] [{code=~&gt;opts logs enable &lt;log channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/MosCq4I.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disabling, type=SimpleText}] [{code=~&gt;opts logs disable, type=InlinedCode}] [{url=https://i.imgur.com/xads7nA.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Exclude a Channel, type=SimpleText}] [{code=~&gt;opts logs exclude &lt;name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/3Batgwu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Include an excluded Channel, type=SimpleText}] [{code=~&gt;opts logs exclude remove &lt;name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/p954bI6.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Exclude a user, type=SimpleText}] [{code=~&gt;opts modlog blacklist @mention, type=InlinedCode}] [{url=https://i.imgur.com/sz20iJN.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Include an excluded User, type=SimpleText}] [{code=~&gt;opts modlog whitelist @mention, type=InlinedCode}] [{url=https://i.imgur.com/9DPRABC.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add blacklisted word to logs, type=SimpleText}] [{code=~&gt;opts modlog blacklistwords add &lt;word&gt;, type=InlinedCode}] [{url=https://i.imgur.com/01SOwUh.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove blacklisted word to logs, type=SimpleText}] [{code=~&gt;opts modlog blacklistwords remove &lt;word&gt;, type=InlinedCode}] [{url=https://i.imgur.com/fzvlYDV.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom format for edited messages, type=SimpleText}] [{code=~&gt;opts logs editmessage &lt;message&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts editmessage &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/rvfovrK.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the format for edited messages, type=SimpleText}] [{code=~&gt;opts logs editmessage reset, type=InlinedCode}] [{url=https://i.imgur.com/sHX8Tx5.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom format for deleted messages, type=SimpleText}] [{code=~&gt;opts logs deletemessage &lt;message&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts deletemessage &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/MVM8nwN.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the format for deleted messages, type=SimpleText}] [{code=~&gt;opts logs deletemessage reset, type=InlinedCode}] [{url=https://i.imgur.com/PLtcBCB.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set custom message for bans, type=SimpleText}] [{code=~&gt;opts logs banmessage &lt;message&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts banmessage &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/75Vmujs.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the format for ban messages, type=SimpleText}] [{code=~&gt;opts logs banmessage reset, type=InlinedCode}] [{url=https://i.imgur.com/og05FB7.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set custom message for unbans, type=SimpleText}] [{code=~&gt;opts logs unbanmessage &lt;message&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts unbanmessage &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/XDUTZKH.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the format for unban messages, type=SimpleText}] [{code=~&gt;opts logs unbanmessage reset, type=InlinedCode}] [{url=https://i.imgur.com/8hVievx.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Change the timezone displayed in logs, type=SimpleText}] [{code=~&gt;opts logs timezone &lt;timezone&gt;, type=InlinedCode}] [{url=https://i.imgur.com/mQHfXVL.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the timezone displayed in logs, type=SimpleText}] [{code=~&gt;opts logs timezonereset, type=InlinedCode}] [{url=https://i.imgur.com/JgPZU4r.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Disabling Commands &amp; Channels &amp; Categories Type Command Preview [{text=Disable a Command fully, type=SimpleText}] [{code=~&gt;opts server command disallow &lt;command&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts command disable &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/tHnMpDL.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a command again, type=SimpleText}] [{code=~&gt;opts server command allow &lt;command&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts command enable &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/GnhGeev.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a channel fully, type=SimpleText}] [{code=~&gt;opts server channel disallow &lt;channel&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts channel disable &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FVC5L1Z.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a channel again, type=SimpleText}] [{code=~&gt;opts server channel allow &lt;channel&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts channel enable &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/KTpQhjr.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a command in a channel, type=SimpleText}] [{code=~&gt;opts server command specific disallow &lt;channel&gt; &lt;command&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts command specific disable &lt;channel&gt; &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/hGFuR1R.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a command in a channel, type=SimpleText}] [{code=~&gt;opts server command specific allow &lt;channel&gt; &lt;command&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts command specific enable &lt;channel&gt; &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/cpANjeY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category fully, type=SimpleText}] [{code=~&gt;opts category disable &lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FpxVVUM.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category again, type=SimpleText}] [{code=~&gt;opts category enable &lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/h2QpjQY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category in a channel, type=SimpleText}] [{code=~&gt;opts category specific disable &lt;category&gt; &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/EKKVv9w.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category in a channel, type=SimpleText}] [{code=~&gt;opts category specific enable &lt;category&gt; &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/r2AqYsN.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a role from using commands, type=SimpleText}] [{code=~&gt;opts server role disallow &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/wusK9Fu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use commands, type=SimpleText}] [{code=~&gt;opts server role allow &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/IXw05Lu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a specific command, type=SimpleText}] [{code=~&gt;opts server role specific disallow &lt;command&gt; &lt;role name&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts role specific disable &lt;command name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/Lrri02q.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a specific command, type=SimpleText}] [{code=~&gt;opts server role specific allow &lt;command&gt; &lt;role name&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts role specific enable &lt;command name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/eOCMYOg.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a whole category, type=SimpleText}] [{code=~&gt;opts category role specific disable &lt;category&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/dzkot4K.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a whole category, type=SimpleText}] [{code=~&gt;opts category role specific enable &lt;category&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/MdFKFiq.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable/Enable game lobby/multiple, type=SimpleText}] [{code=-&gt;opts commands lobby disable/enable, type=InlinedCode}] [{url=https://i.imgur.com/GaxVAKl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Note on disabling (Disabling Priority) Please keep in mind that if you disable a category on a specific channel (~&gt;opts category specific disable), let's say currency, and you then enable a command in that category in that channel (~&gt;opts server command specific allow), let's say loot, it will NOT work again. In general the following holds true:Disabled Channel -&gt; Disabled Category (Server wide) -&gt; Disabled Category (Channel wide) -&gt; Disabled Command (Server wide) -&gt; Disabled Command (Channel wide)I.e. A Disabled channel is the strongest form of disabling and will ignore all other settings made to enabled/disabled commands Music Configuration Some small configuration options for the Music feature. Type Command Preview [{text=Lock Mantaro to a Voice Channel, type=SimpleText}] [{code=~&gt;opts music channel &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/5nYLq13.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Clear the Music Channel, type=SimpleText}] [{code=~&gt;opts music clearchannel, type=InlinedCode}] [{url=https://i.imgur.com/YOEen6a.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable/Enable the Music announcer, type=SimpleText}] [{code=~&gt;opts musicannounce toggle, type=InlinedCode}] [{url=https://i.imgur.com/oomQoxO.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Fairqueue (Duplicate Song limit), type=SimpleText}] [{code=~&gt;opts fairqueue max &lt;number&gt;, type=InlinedCode}] [{url=https://i.imgur.com/iXIyOvX.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Toggle vote skipping/stopping, type=SimpleText}] [{code=~&gt;opts music vote toggle, type=InlinedCode}] [{url=https://i.imgur.com/rtSZAIK.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom DJ role, type=SimpleText}] [{code=~&gt;opts djrole set &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/oxEWodP.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the custom DJ role, type=SimpleText}] [{code=~&gt;opts djrole reset, type=InlinedCode}] [{url=https://i.imgur.com/Knf7kkb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Auto-Mod &amp; Moderation Options Configure the basic moderation and setup an auto-mod for discord invites and spam. Type Command Preview [{text=Mute role, type=SimpleText}] [{code=~&gt;opts muterole set &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/y8dHHfg.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set Default Mute Timeout, type=SimpleText}] [{code=~&gt;opts defaultmutetimeout set &lt;time&gt;, type=InlinedCode}] [{url=https://i.imgur.com/4MEqQeo.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset Default Mute Timeout, type=SimpleText}] [{code=~&gt;opts defaultmutetimeout reset, type=InlinedCode}] [{url=https://i.imgur.com/rkCjW1j.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Forgot your current settings?, type=SimpleText}] [{code=~&gt;opts check data, type=InlinedCode}] [{text=N/A, type=SimpleText}] [{text=Want to reset everything?, type=SimpleText}] [{code=~&gt;opts reset all, type=InlinedCode}] [{text=N/A, type=SimpleText}] [{text=Add someone to the LocalBlacklist, type=SimpleText}] [{code=~&gt;opts localblacklist add @mention, type=InlinedCode}] [{url=https://i.imgur.com/jZnKgVy.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove someone from the LocalBlacklist, type=SimpleText}] [{code=~&gt;opts localblacklist remove @mention, type=InlinedCode}] [{url=https://i.imgur.com/C6gvrFt.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Stuck poll or game?, type=SimpleText}] [{code=~&gt;opts lobby reset, type=InlinedCode}] [{text=N/A, type=SimpleText}]</p>
+<header><h1>Basic Server Configuration</h1></header>
+<p>These include some basic configuration you can do like setting a custom Prefix Type Command Preview [{text=Custom Prefix, type=SimpleText}] [{code=~&gt;opts prefix set &lt;prefix&gt;, type=InlinedCode}] [{url=https://i.imgur.com/LPkMAuL.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset Custom Prefix, type=SimpleText}] [{code=~&gt;opts prefix clear, type=InlinedCode}] [{url=https://i.imgur.com/JDPKVCC.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Restricting Custom, type=SimpleText}, {text=Command Creation, type=SimpleText}] [{code=~&gt;opts admincustom true/false, type=InlinedCode}] [{url=https://i.imgur.com/igMkJ5I.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Time Setting for time based commands, type=SimpleText}] [{code=~&gt;opts timedisplay set 12h/24h, type=InlinedCode}] [{url=https://i.imgur.com/ea8AUeZ.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Blacklist a tag from imageboard commands (danbooru etc.), type=SimpleText}] [{code=~&gt;opts imageboard tags blacklist add &lt;tag&gt;, type=InlinedCode}] [{url=https://i.imgur.com/7lhsI2B.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Unblacklist a tag from imageboard commands, type=SimpleText}] [{code=~&gt;opts imageboard tags blacklist remove &lt;tag&gt;, type=InlinedCode}] [{url=https://i.imgur.com/lttgtkY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set the guild language, type=SimpleText}] [{code=~&gt;opts language set &lt;lang&gt;, type=InlinedCode}] [{url=https://i.imgur.com/45NZOr7.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Toggle message for disabled commands, type=SimpleText}] [{code=~&gt;opts commands showdisablewarning, type=InlinedCode}] [{url=https://i.imgur.com/2amfDaU.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}]</p>
+</article>
+
+<article>
+<header><h1>Birthday Announcer</h1></header>
+<p>These are the commands you can use to allow/edit the Birthday Announcer. You can check our birthday announcer tutorial https://github.com/Mantaro/MantaroBot/wiki/Birthday-101 here. Type Command Preview [{text=Enable Birthday announcer, type=SimpleText}] [{code=~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/yvrQQCV.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable Birthday announcer, type=SimpleText}] [{code=~&gt;opts birthday disable, type=InlinedCode}] [{url=https://i.imgur.com/ryKLTsM.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Test the Birthday announcer, type=SimpleText}] [{code=~&gt;opts birthday test @mention, type=InlinedCode}] [{url=https://i.imgur.com/eqbw6On.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom Birthday announcer message, type=SimpleText}] [{code=~&gt;opts birthday message set &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/M6EqdAB.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Clear the custom Birthday announcer message, type=SimpleText}] [{code=~&gt;opts birthday message clear, type=InlinedCode}] [{url=https://i.imgur.com/e700JQy.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Blacklist user from Birthday announcer, type=SimpleText}] [{code=~&gt;opts commands birthdayblacklist add/remove @mention, type=InlinedCode}] [{url=https://i.imgur.com/uuucrqY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] For the custom message you have the option to use two modifiers: $(user) and $(usermention). Please note that the role you provide in the birthday announcer commands is not a determination for who will be checked. Mantaro will check every person on the server and assign that role to them on their birthday and remove it the next day.</p>
+</article>
+
+<article>
+<header><h1>Welcome and Leave messages</h1></header>
+<p>These include all the things you need for Welcome and Leave messages, you can also use any of [these](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers--- #modifiers-for-welcomeleave-messages) in them. They also support embedded messages check the https://github.com/Mantaro/MantaroBot/wiki/Custom-Commands-101 custom command documentation. for that. For a detailed tutorial click https://github.com/Mantaro/MantaroBot/wiki/Welcome-and-Leave-Messages-tutorial here Type Command Preview [{text=Set a Channel for the Message, type=SimpleText}] [{code=~&gt;opts usermessage channel &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/qVOZGgF.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Join/Leave Message, type=SimpleText}] [{code=~&gt;opts usermessage leavemessage/joinmessage, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts leavemessage/joinmessage, type=InlinedCode}] [{url=https://i.imgur.com/dLo0VAQ.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable/Disable ignoring bots, type=SimpleText}] [{code=~&gt;opts server ignorebots joinleave toggle, type=InlinedCode}] [{url=https://i.imgur.com/5ftNF7v.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disabling, type=SimpleText}] [{code=~&gt;opts usermessage resetdata, type=InlinedCode}] [{url=https://i.imgur.com/VSbjJQx.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the Join Message, type=SimpleText}] [{code=~&gt;opts usermessage resetjoinmessage, type=InlinedCode}] [{url=https://i.imgur.com/1MOnoQl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the Leave Message, type=SimpleText}] [{code=~&gt;opts usermessage resetleavemessage, type=InlinedCode}] [{url=https://i.imgur.com/TGugmvX.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a separate channel for join, type=SimpleText}] [{code=~&gt;opts usermessage join channel &lt;channel&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts joinchannel &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/CFOZWPh.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a separate channel for leave, type=SimpleText}] [{code=~&gt;opts usermessage leave channel &lt;channel&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts leavechannel &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/6Su2Kf5.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the separate channel for join, type=SimpleText}] [{code=~&gt;opts usermessage join resetchannel, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts resetjoinchannel, type=InlinedCode}] [{url=https://i.imgur.com/GnkPkAq.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the separate channel for leave, type=SimpleText}] [{code=~&gt;opts usermessage leave resetchannel, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts resetleavechannel, type=InlinedCode}] [{url=https://i.imgur.com/zUKIzeb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add additional welcome messages, type=SimpleText}] [{code=~&gt;opts usermessage joinmessages add &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/SZxr2lz.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove additional welcome messages, type=SimpleText}] [{code=~&gt;opts usermessage joinmessages remove &lt;index&gt;, type=InlinedCode}] [{url=https://i.imgur.com/3OfTnnR.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=List Additional welcome messages, type=SimpleText}] [{code=~&gt;opts usermessage joinmessages list, type=InlinedCode}] [{url=https://i.imgur.com/sV1BAZl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add additional leave messages, type=SimpleText}] [{code=~&gt;opts usermessage leavemessages add &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/YDzSTQ8.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove additional leave messages, type=SimpleText}] [{code=~&gt;opts usermessage leavemessages remove &lt;index&gt;, type=InlinedCode}] [{url=https://i.imgur.com/bWusCmT.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=List Additional leave messages, type=SimpleText}] [{code=~&gt;opts usermessage leavemessages list, type=InlinedCode}] [{url=https://i.imgur.com/TxawELm.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}]</p>
+</article>
+
+<article>
+<header><h1>Autorole on join & Self-assignable roles</h1></header>
+<p>You can assign newly joined members to a specific role as well as you can setup roles that people can claim themselves using the ~&gt;iam command Type Command Preview [{text=Set Autorole, type=SimpleText}] [{code=~&gt;opts autorole set &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/lv3tgxw.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove Autorole, type=SimpleText}] [{code=~&gt;opts autorole unbind, type=InlinedCode}] [{url=https://i.imgur.com/ADFDmUA.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable/Disable ignoring bots for the autorole, type=SimpleText}] [{code=~&gt;opts server ignorebots autoroles toggle, type=InlinedCode}] [{url=https://i.imgur.com/BPYuJKa.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add a Self-Assignable, type=SimpleText}] [{code=~&gt;opts autoroles add &lt;iam name&gt; &lt;name of the role&gt;, type=InlinedCode}] [{url=https://i.imgur.com/KPWrQEH.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove a Self-Assignable, type=SimpleText}] [{code=~&gt;opts autoroles remove &lt;iam name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/hjq4PYw.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Clear all Self-Assignables, type=SimpleText}] [{code=~&gt;opts autoroles clear, type=InlinedCode}] [{url=https://i.imgur.com/ysPMOXO.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Categorize a Self-Assignable (used for ~&gt;iam ls), type=SimpleText}] [{code=~&gt;opts autoroles category add &lt;category name&gt; &lt;iam name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/DYnYWHb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove a Self-Assignable from a category, type=SimpleText}] [{code=~&gt;opts autoroles category remove &lt;category name&gt; &lt;iam name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/iXyocbV.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}]</p>
+</article>
+
+<article>
+<header><h1>Server Logs</h1></header>
+<p>You can enable server logs to see deleted and edited messages as well as Moderation actions etc. Custom log messages (editmessage, deletemessage and banmessage) support all of [these](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers--- #modifiers-for-log-messages). Type Command Preview [{text=Enabling, type=SimpleText}] [{code=~&gt;opts logs enable &lt;log channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/MosCq4I.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disabling, type=SimpleText}] [{code=~&gt;opts logs disable, type=InlinedCode}] [{url=https://i.imgur.com/xads7nA.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Exclude a Channel, type=SimpleText}] [{code=~&gt;opts logs exclude &lt;name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/3Batgwu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Include an excluded Channel, type=SimpleText}] [{code=~&gt;opts logs exclude remove &lt;name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/p954bI6.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Exclude a user, type=SimpleText}] [{code=~&gt;opts modlog blacklist @mention, type=InlinedCode}] [{url=https://i.imgur.com/sz20iJN.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Include an excluded User, type=SimpleText}] [{code=~&gt;opts modlog whitelist @mention, type=InlinedCode}] [{url=https://i.imgur.com/9DPRABC.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add blacklisted word to logs, type=SimpleText}] [{code=~&gt;opts modlog blacklistwords add &lt;word&gt;, type=InlinedCode}] [{url=https://i.imgur.com/01SOwUh.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove blacklisted word to logs, type=SimpleText}] [{code=~&gt;opts modlog blacklistwords remove &lt;word&gt;, type=InlinedCode}] [{url=https://i.imgur.com/fzvlYDV.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom format for edited messages, type=SimpleText}] [{code=~&gt;opts logs editmessage &lt;message&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts editmessage &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/rvfovrK.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the format for edited messages, type=SimpleText}] [{code=~&gt;opts logs editmessage reset, type=InlinedCode}] [{url=https://i.imgur.com/sHX8Tx5.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom format for deleted messages, type=SimpleText}] [{code=~&gt;opts logs deletemessage &lt;message&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts deletemessage &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/MVM8nwN.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the format for deleted messages, type=SimpleText}] [{code=~&gt;opts logs deletemessage reset, type=InlinedCode}] [{url=https://i.imgur.com/PLtcBCB.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set custom message for bans, type=SimpleText}] [{code=~&gt;opts logs banmessage &lt;message&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts banmessage &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/75Vmujs.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the format for ban messages, type=SimpleText}] [{code=~&gt;opts logs banmessage reset, type=InlinedCode}] [{url=https://i.imgur.com/og05FB7.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set custom message for unbans, type=SimpleText}] [{code=~&gt;opts logs unbanmessage &lt;message&gt;, type=InlinedCode}, {text= or , type=SimpleText}, {code=~&gt;opts unbanmessage &lt;message&gt;, type=InlinedCode}] [{url=https://i.imgur.com/XDUTZKH.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the format for unban messages, type=SimpleText}] [{code=~&gt;opts logs unbanmessage reset, type=InlinedCode}] [{url=https://i.imgur.com/8hVievx.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Change the timezone displayed in logs, type=SimpleText}] [{code=~&gt;opts logs timezone &lt;timezone&gt;, type=InlinedCode}] [{url=https://i.imgur.com/mQHfXVL.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the timezone displayed in logs, type=SimpleText}] [{code=~&gt;opts logs timezonereset, type=InlinedCode}] [{url=https://i.imgur.com/JgPZU4r.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}]</p>
+</article>
+
+<article>
+<header><h1>Disabling Commands & Channels & Categories</h1></header>
+<p>Type Command Preview [{text=Disable a Command fully, type=SimpleText}] [{code=~&gt;opts command disable &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/tHnMpDL.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a command again, type=SimpleText}] [{code=~&gt;opts command enable &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/GnhGeev.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a channel fully, type=SimpleText}] [{code=~&gt;opts channel disable &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FVC5L1Z.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a channel again, type=SimpleText}] [{code=~&gt;opts channel enable &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/KTpQhjr.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a command in a channel, type=SimpleText}] [{code=~&gt;opts command specific disable &lt;channel&gt; &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/hGFuR1R.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a command in a channel, type=SimpleText}] [{code=~&gt;opts command specific enable &lt;channel&gt; &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/cpANjeY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category fully, type=SimpleText}] [{code=~&gt;opts category disable &lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FpxVVUM.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category again, type=SimpleText}] [{code=~&gt;opts category enable &lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/h2QpjQY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category in a channel, type=SimpleText}] [{code=~&gt;opts category specific disable &lt;category&gt; &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/EKKVv9w.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category in a channel, type=SimpleText}] [{code=~&gt;opts category specific enable &lt;category&gt; &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/r2AqYsN.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a role from using commands, type=SimpleText}] [{code=~&gt;opts server role disallow &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/wusK9Fu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use commands, type=SimpleText}] [{code=~&gt;opts server role allow &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/IXw05Lu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a specific command, type=SimpleText}] [{code=~&gt;opts role specific disable &lt;command name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/Lrri02q.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a specific command, type=SimpleText}] [{code=~&gt;opts role specific enable &lt;command name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/eOCMYOg.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a whole category, type=SimpleText}] [{code=~&gt;opts category role specific disable &lt;category&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/dzkot4K.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a whole category, type=SimpleText}] [{code=~&gt;opts category role specific enable &lt;category&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/MdFKFiq.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable/Enable game lobby/multiple, type=SimpleText}] [{code=-&gt;opts commands lobby disable/enable, type=InlinedCode}] [{url=https://i.imgur.com/GaxVAKl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Warning: Please keep in mind that there is a priority to disabling settings. For example: if you disable a category for the whole server and then try to enable a command of that category on the entire server/or a channel, that command will still not work. In general the following idea holds true: Disabled Channel -&gt; Disabled Category (Server wide) -&gt; Disabled Category (Channel wide) -&gt; Disabled Command (Server wide) -&gt; Disabled Command (Channel wide) I.e. A Disabled channel is the strongest form of disabling and will ignore all other settings made to enabled/disabled commands</p>
+</article>
+
+<article>
+<header><h1>Music Configuration</h1></header>
+<p>Some small configuration options for the Music feature. Type Command Preview [{text=Lock Mantaro to a Voice Channel, type=SimpleText}] [{code=~&gt;opts music channel &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/5nYLq13.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Clear the Music Channel, type=SimpleText}] [{code=~&gt;opts music clearchannel, type=InlinedCode}] [{url=https://i.imgur.com/YOEen6a.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable/Enable the Music announcer, type=SimpleText}] [{code=~&gt;opts musicannounce toggle, type=InlinedCode}] [{url=https://i.imgur.com/oomQoxO.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Fairqueue (Duplicate Song limit), type=SimpleText}] [{code=~&gt;opts fairqueue max &lt;number&gt;, type=InlinedCode}] [{url=https://i.imgur.com/iXIyOvX.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Toggle vote skipping/stopping, type=SimpleText}] [{code=~&gt;opts music vote toggle, type=InlinedCode}] [{url=https://i.imgur.com/rtSZAIK.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom DJ role, type=SimpleText}] [{code=~&gt;opts djrole set &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/oxEWodP.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the custom DJ role, type=SimpleText}] [{code=~&gt;opts djrole reset, type=InlinedCode}] [{url=https://i.imgur.com/Knf7kkb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}]</p>
+</article>
+
+<article>
+<header><h1>Auto-Mod & Moderation Options</h1></header>
+<p>Configure the basic moderation and setup an auto-mod for discord invites and spam. Type Command Preview [{text=Mute role, type=SimpleText}] [{code=~&gt;opts muterole set &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/y8dHHfg.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set Default Mute Timeout, type=SimpleText}] [{code=~&gt;opts defaultmutetimeout set &lt;time&gt;, type=InlinedCode}] [{url=https://i.imgur.com/4MEqQeo.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset Default Mute Timeout, type=SimpleText}] [{code=~&gt;opts defaultmutetimeout reset, type=InlinedCode}] [{url=https://i.imgur.com/rkCjW1j.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Forgot your current settings?, type=SimpleText}] [{code=~&gt;opts check data, type=InlinedCode}] [{text=N/A, type=SimpleText}] [{text=Want to reset everything?, type=SimpleText}] [{code=~&gt;opts reset all, type=InlinedCode}] [{text=N/A, type=SimpleText}] [{text=Add someone to the LocalBlacklist, type=SimpleText}] [{code=~&gt;opts localblacklist add @mention, type=InlinedCode}] [{url=https://i.imgur.com/jZnKgVy.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove someone from the LocalBlacklist, type=SimpleText}] [{code=~&gt;opts localblacklist remove @mention, type=InlinedCode}] [{url=https://i.imgur.com/C6gvrFt.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Stuck poll or game?, type=SimpleText}] [{code=~&gt;opts lobby reset, type=InlinedCode}] [{text=N/A, type=SimpleText}]</p>
 </article>
 </section>
 </div>
@@ -111,60 +146,10 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "id" : "server-options",
-      "title" : "Server Options",
+      "id" : "basic-server-configuration",
+      "title" : "Basic Server Configuration",
       "type" : "Section",
       "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "type" : "Emphasis",
-          "content" : [ {
-            "type" : "StrongEmphasis",
-            "content" : [ {
-              "text" : "You can get a list of all options without going to this wiki by doing:",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "text" : " ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts ls",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " or ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts list",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ".",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Just as a general statement, don't include the ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "<>",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " from the examples on the actual command, they mean that it's an argument you have to fill.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "If the role has a space, try wrapping it in quotes if it doesn't work when you try to set it as x thing.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "id" : "server-options-basic-server-configuration",
-        "level" : 2,
-        "title" : "Basic Server Configuration",
-        "type" : "SubHeading"
-      }, {
         "type" : "Paragraph",
         "content" : [ {
           "text" : "These include some basic configuration you can do like setting a custom Prefix",
@@ -301,11 +286,13 @@ ReactDOM.render(React.createElement(Documentation, {
         },
         "type" : "Table"
       }, {
-        "id" : "server-options-birthday-announcer",
-        "level" : 2,
-        "title" : "Birthday Announcer",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "birthday-announcer",
+      "title" : "Birthday Announcer",
+      "type" : "Section",
+      "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
           "text" : "These are the commands you can use to allow/edit the Birthday Announcer. You can check our birthday announcer tutorial ",
@@ -451,25 +438,21 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
-        "id" : "server-options-welcome-and-leave-messages",
-        "level" : 2,
-        "title" : "Welcome and Leave messages",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "welcome-and-leave-messages",
+      "title" : "Welcome and Leave messages",
+      "type" : "Section",
+      "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "These include all the things you need for Welcome and Leave messages, you can also use any of ",
+          "text" : "These include all the things you need for Welcome and Leave messages, you can also use any of [these](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers---",
           "type" : "SimpleText"
         }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "these",
-            "type" : "SimpleText"
-          } ]
+          "type" : "SoftLineBreak"
         }, {
-          "text" : " in them. They also support embedded messages",
+          "text" : "#modifiers-for-welcomeleave-messages) in them. They also support embedded messages",
           "type" : "SimpleText"
         }, {
           "type" : "SoftLineBreak"
@@ -771,11 +754,13 @@ ReactDOM.render(React.createElement(Documentation, {
         },
         "type" : "Table"
       }, {
-        "id" : "server-options-autorole-on-join-self-assignable-roles",
-        "level" : 2,
-        "title" : "Autorole on join & Self-assignable roles",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "autorole-on-join-self-assignable-roles",
+      "title" : "Autorole on join & Self-assignable roles",
+      "type" : "Section",
+      "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
           "text" : "You can assign newly joined members to a specific role as well as you can setup roles that people can claim themselves using the ",
@@ -915,11 +900,13 @@ ReactDOM.render(React.createElement(Documentation, {
         },
         "type" : "Table"
       }, {
-        "id" : "server-options-server-logs",
-        "level" : 2,
-        "title" : "Server Logs",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "server-logs",
+      "title" : "Server Logs",
+      "type" : "Section",
+      "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
           "text" : "You can enable server logs to see deleted and edited messages as well as Moderation actions etc.",
@@ -927,18 +914,12 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "type" : "SoftLineBreak"
         }, {
-          "text" : "Custom log messages (editmessage, deletemessage and banmessage) support all of ",
+          "text" : "Custom log messages (editmessage, deletemessage and banmessage) support all of [these](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers---",
           "type" : "SimpleText"
         }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-log-messages",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "these",
-            "type" : "SimpleText"
-          } ]
+          "type" : "SoftLineBreak"
         }, {
-          "text" : ".",
+          "text" : "#modifiers-for-log-messages).",
           "type" : "SimpleText"
         } ]
       }, {
@@ -1233,11 +1214,13 @@ ReactDOM.render(React.createElement(Documentation, {
         },
         "type" : "Table"
       }, {
-        "id" : "server-options-disabling-commands-channels-categories",
-        "level" : 2,
-        "title" : "Disabling Commands & Channels & Categories",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "disabling-commands-channels-categories",
+      "title" : "Disabling Commands & Channels & Categories",
+      "type" : "Section",
+      "content" : [ {
         "table" : {
           "columns" : [ {
             "title" : "Type",
@@ -1253,12 +1236,6 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable a Command fully",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server command disallow <command>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " or ",
-            "type" : "SimpleText"
-          }, {
             "code" : "~>opts command disable <command>",
             "type" : "InlinedCode"
           } ], [ {
@@ -1273,12 +1250,6 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Allow a command again",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server command allow <command>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " or ",
-            "type" : "SimpleText"
-          }, {
             "code" : "~>opts command enable <command>",
             "type" : "InlinedCode"
           } ], [ {
@@ -1293,12 +1264,6 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable a channel fully",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server channel disallow <channel>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " or ",
-            "type" : "SimpleText"
-          }, {
             "code" : "~>opts channel disable <channel>",
             "type" : "InlinedCode"
           } ], [ {
@@ -1313,12 +1278,6 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Enable a channel again",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server channel allow <channel>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " or ",
-            "type" : "SimpleText"
-          }, {
             "code" : "~>opts channel enable <channel>",
             "type" : "InlinedCode"
           } ], [ {
@@ -1333,12 +1292,6 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable a command in a channel",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server command specific disallow <channel> <command>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " or ",
-            "type" : "SimpleText"
-          }, {
             "code" : "~>opts command specific disable <channel> <command>",
             "type" : "InlinedCode"
           } ], [ {
@@ -1353,12 +1306,6 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Enable a command in a channel",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server command specific allow <channel> <command>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " or ",
-            "type" : "SimpleText"
-          }, {
             "code" : "~>opts command specific enable <channel> <command>",
             "type" : "InlinedCode"
           } ], [ {
@@ -1457,12 +1404,6 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disallow a role to use a specific command",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server role specific disallow <command> <role name>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " or ",
-            "type" : "SimpleText"
-          }, {
             "code" : "~>opts role specific disable <command name> <role name>",
             "type" : "InlinedCode"
           } ], [ {
@@ -1477,12 +1418,6 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Allow a role to use a specific command",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server role specific allow <command> <role name>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " or ",
-            "type" : "SimpleText"
-          }, {
             "code" : "~>opts role specific enable <command name> <role name>",
             "type" : "InlinedCode"
           } ], [ {
@@ -1539,43 +1474,44 @@ ReactDOM.render(React.createElement(Documentation, {
         },
         "type" : "Table"
       }, {
-        "id" : "server-options-disabling-commands-channels-categories-note-on-disabling-disabling-priority",
-        "level" : 3,
-        "title" : "Note on disabling (Disabling Priority)",
-        "type" : "SubHeading"
-      }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Please keep in mind that if you disable a category on a specific channel (~>opts category specific disable), let's say currency, and you then enable a command in that category in that channel (~>opts server command specific allow), let's say loot, it will ",
+          "text" : "Warning: Please keep in mind that there is a priority to disabling settings.",
           "type" : "SimpleText"
         }, {
-          "type" : "Emphasis",
-          "content" : [ {
-            "text" : "NOT",
-            "type" : "SimpleText"
-          } ]
+          "type" : "HardLineBreak"
         }, {
-          "text" : " work again. In general the following holds true:",
+          "text" : "For example: if you disable a category for the whole server and then try to enable a command",
           "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "of that category on the entire server/or a channel, that command will still not work.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "In general the following idea holds true:",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
           "text" : "Disabled Channel -> Disabled Category (Server wide) -> Disabled Category (Channel wide) -> Disabled Command (Server wide) -> Disabled Command (Channel wide)",
           "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
+        }, {
+          "type" : "HardLineBreak"
+        }, {
           "text" : "I.e. A Disabled channel is the strongest form of disabling and will ignore all other settings made to enabled/disabled commands",
           "type" : "SimpleText"
         } ]
       }, {
-        "id" : "server-options-music-configuration",
-        "level" : 2,
-        "title" : "Music Configuration",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "music-configuration",
+      "title" : "Music Configuration",
+      "type" : "Section",
+      "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
           "text" : "Some small configuration options for the Music feature.",
@@ -1695,11 +1631,13 @@ ReactDOM.render(React.createElement(Documentation, {
         },
         "type" : "Table"
       }, {
-        "id" : "server-options-auto-mod-moderation-options",
-        "level" : 2,
-        "title" : "Auto-Mod & Moderation Options",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "auto-mod-moderation-options",
+      "title" : "Auto-Mod & Moderation Options",
+      "type" : "Section",
+      "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
           "text" : "Configure the basic moderation and setup an auto-mod for discord invites and spam.",
@@ -1817,19 +1755,44 @@ ReactDOM.render(React.createElement(Documentation, {
           } ] ] ]
         },
         "type" : "Table"
+      }, {
+        "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661025937607,
+    "lastModifiedTime" : 1661072346054,
     "tocItem" : {
       "chapterTitle" : "Configuration",
-      "pageTitle" : "All Options",
-      "pageMeta" : { },
+      "pageTitle" : "Server Configuration",
+      "pageMeta" : {
+        "title" : [ "Server Configuration" ]
+      },
       "dirName" : "configuration",
       "fileName" : "all-options",
       "viewOnRelativePath" : null,
       "pageSectionIdTitles" : [ {
-        "title" : "Server Options",
-        "id" : "server-options"
+        "title" : "Basic Server Configuration",
+        "id" : "basic-server-configuration"
+      }, {
+        "title" : "Birthday Announcer",
+        "id" : "birthday-announcer"
+      }, {
+        "title" : "Welcome and Leave messages",
+        "id" : "welcome-and-leave-messages"
+      }, {
+        "title" : "Autorole on join & Self-assignable roles",
+        "id" : "autorole-on-join-self-assignable-roles"
+      }, {
+        "title" : "Server Logs",
+        "id" : "server-logs"
+      }, {
+        "title" : "Disabling Commands & Channels & Categories",
+        "id" : "disabling-commands-channels-categories"
+      }, {
+        "title" : "Music Configuration",
+        "id" : "music-configuration"
+      }, {
+        "title" : "Auto-Mod & Moderation Options",
+        "id" : "auto-mod-moderation-options"
       } ]
     }
   }
