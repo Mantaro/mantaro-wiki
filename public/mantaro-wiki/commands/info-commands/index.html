@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: 💭 Info Commands</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<p>&quot;h3&quot; ~&gt;avatar {@mention/username/user tag} Description: Grab your own avatar or the given person's avatar.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~&gt;avatar ~&gt;avatar @Kodehawa#3457 ~&gt;avatar Kodehawa &quot;h3&quot; ~&gt;donate Description: Shows all of Mantaro's donation methods.Requirements:This command does not have any specific requirements. Example(s): ~&gt;donate &quot;h3&quot; ~&gt;help {command/category} Description: Get all commands or, if you specify a command, get more information on the command specified or if you specified a category, you will see all commands in that category.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): commands halp Example(s): ~&gt;help ~&gt;help cast ~&gt;help action &quot;h3&quot; 🔧 ~&gt;info Description: Get Mantaro's technical information.Requirements:This command does not have any specific requirements. Alias(es) status Example(s): ~&gt;info &quot;h3&quot; ~&gt;invite Description: Get the invite necessary to add Mantaro to your server, The support server Invite, and the Patreon URL.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~&gt;invite &quot;h3&quot; ~&gt;lang Description: Show info on how to change your language and what languages are available.Requirements:This command does not have any specific requirements. Alias(es): language Example(s): ~&gt;lang ~&gt;language &quot;h3&quot; ~&gt;music Description: This will tell you how to properly use Mantaros music feature.Requirements:This command does not have any specific requirements. Example(s): ~&gt;music &quot;h3&quot; ~&gt;ping Description: Check how fast Mantaro is responding.Requirements:This command does not have any specific requirements. Example(s): ~&gt;ping &quot;h3&quot; ~&gt;prefix Description: See information about Mantaro's prefix.Requirements:This command does not have any specific requirements. Example(s): ~&gt;prefix &quot;h3&quot; ~&gt;roleinfo {role name} Description: Shows info about a given role. If no role is given it will give information on your highest role.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~&gt;roleinfo ~&gt;roleinfo Member &quot;h3&quot; ~&gt;season Description: See information about how to take part in the seasons.Requirements:This command does not have any specific requirements. Example(s): ~&gt;season &quot;h3&quot; ~&gt;serverinfo Description: Check some server stats.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): guildinfo Example(s): ~&gt;serverinfo ~&gt;guildinfo &quot;h3&quot; 🔧 ~&gt;shard Description: Will tell you the current shard instance your guild is on (used for debugging).Requirements:This command does not have any specific requirements. Example(s): ~&gt;shard &quot;h3&quot; 🔧 ~&gt;shardinfo Description: Check connectivity of all Mantaro shards (You wont really need this unless you are a Dev or Helper for Mantaro.)Requirements:This command does not have any specific requirements. Example(s): ~&gt;shardinfo &quot;h3&quot; 🔧 ~&gt;stats &lt;subcommand&gt; Description: Get some stats about Mantaros VPS, most used commands, join/leave stats for guilds and usages or just general stats for Manataro. You must specify one of the subcommands to get information.Subcommand(s): cmds : This will show the bot's command usage. nodes : This will show Mantaro node statistics. category : This will show the bot's category usage. lavalink : This will show Lavalink node statistics. usage : This will show the bot's (and JVM) hardware usage. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~&gt;stats cmds ~&gt;stats category ~&gt;stats usage &quot;h3&quot; ~&gt;support Description: Gives you a link to the support server.Requirements:This command does not have any specific requirements. Example(s): ~&gt;support &quot;h3&quot; ~&gt;userinfo {@mention/username/user tag} Description: Shows information about your or the given person's roles e.t.c.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~&gt;userinfo ~&gt;userinfo @Kodehawa#3457 &quot;h3&quot; ~&gt;vipstatus {mention} Description: Will show you the remaining time in days of your (or someone else) or the guilds premium perks.Subcommand(s): guild : Will show you the current guild's premium status. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): premium Example(s): ~&gt;vipstatus ~&gt;vipstatus @Kodehawa#3457 ~&gt;vipstatus guild</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>avatar {@mention/username/user tag}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Grab your own avatar or the given person's avatar.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>avatar",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>avatar @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>avatar Kodehawa",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>donate",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Shows all of Mantaro's donation methods.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>donate",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>help {command/category}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Get all commands or, if you specify a command, get more information on the command specified or if you specified a category, you will see all commands in that category.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "commands",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "halp",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>help",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>help cast",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>help action",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" 🔧 ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>info",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Get Mantaro's technical information.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es)",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "status",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>info",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>invite",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Get the invite necessary to add Mantaro to your server, The support server Invite, and the Patreon URL.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>invite",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>lang",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Show info on how to change your language and what languages are available.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "language",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>lang",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>language",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>music",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "This will tell you how to properly use Mantaros music feature.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>music",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>ping",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Check how fast Mantaro is responding.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>ping",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>prefix",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "See information about Mantaro's prefix.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>prefix",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>roleinfo {role name}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Shows info about a given role. If no role is given it will give information on your highest role.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>roleinfo",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>roleinfo Member",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>season",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "See information about how to take part in the seasons.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>season",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>serverinfo",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Check some server stats.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "guildinfo",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>serverinfo",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>guildinfo",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" 🔧 ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>shard",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Will tell you the current shard instance your guild is on (used for debugging).",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>shard",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" 🔧 ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>shardinfo",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Check connectivity of all Mantaro shards (You wont really need this unless you are a Dev or Helper for Mantaro.)",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>shardinfo",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" 🔧 ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>stats <subcommand>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Get some stats about Mantaros VPS, most used commands, join/leave stats for guilds and usages or just general stats for Manataro. You must specify one of the subcommands to get information.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "cmds",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the bot's command usage.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "nodes",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show Mantaro node statistics.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "category",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the bot's category usage.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "lavalink",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show Lavalink node statistics.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "usage",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the bot's (and JVM) hardware usage.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>stats cmds",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>stats category",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>stats usage",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>support",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Gives you a link to the support server.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>support",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>userinfo {@mention/username/user tag}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Shows information about your or the given person's roles e.t.c.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>userinfo",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>userinfo @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>vipstatus {mention}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Will show you the remaining time in days of your (or someone else) or the guilds premium perks.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "guild",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": Will show you the current guild's premium status.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "premium",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>vipstatus",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>vipstatus @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>vipstatus guild",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661118090823,
+    "tocItem" : {
+      "chapterTitle" : "Commands",
+      "pageTitle" : "💭 Info Commands",
+      "pageMeta" : {
+        "title" : [ "💭 Info Commands" ]
+      },
+      "dirName" : "commands",
+      "fileName" : "info-commands",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

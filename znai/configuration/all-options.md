@@ -113,7 +113,7 @@ Custom log messages (editmessage, deletemessage and banmessage) support all of [
 
 ---
 # Disabling Commands & Channels & Categories
-:include-markdown: assets/md/command-disabling.md
+:include-markdown: assets/md/perms/command-disabling.md
 
 
 ---

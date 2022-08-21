@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: 👋 Action Commands</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>/action</h1></header>
+<p>A bunch of action commands that didn't fit into a separate command. Subcommands teehee : Tease someone on the server. bite : Bite someone on the server. lick : Lick someone on the server. kinky nuzzle : Nuzzle someone on the server. smile : Smile at someone on the server. highfive : High-five someone on the server. stare : Stare at someone on the server. blush : Blushes at someone on the server. nom : Nom someone or something. holdhands : Hold someones hand. bloodsuck : Suck someone's blood on the server. meow : Meow at something or someone. facedesk : Smash your head on a desk I guess? lewd : Call something or someone lewd. Options User : Required on some subcommands, optional on others. The user on which you want to perform an action Extra : Optional, available only on certain subcommands. Extra users to which you want to perform an action. Examples /action teehee user: @Kodehawa#3457 /action bite user: @Kodehawa#3457 /action nuzzle user: @Kodehawa#3457 /action holdhands user: @Kodehawa#3457 /action nom user: @Kodehawa#3457 /action stare user: @Kodehawa#3457 /action smile user: @Kodehawa#3457 /action facedesk</p>
+</article>
+
+<article>
+<header><h1>/cuddle</h1></header>
+<p>Cuddle someone on the server. Options User : Required. The user you want to cuddle. Extra : Optional. Extra users you wish to cuddle. Examples /cuddle user: @Kodehawa#3457 /cuddle user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</p>
+</article>
+
+<article>
+<header><h1>/hug</h1></header>
+<p>Hug someone on the server. Options User : Required. The user you want to hug. Extra : Optional. Extra users you wish to hug. Examples /hug user: @Kodehawa#3457 /hug user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</p>
+</article>
+
+<article>
+<header><h1>/kiss</h1></header>
+<p>Kiss someone on the server. Options User : Required. The user you want to kiss. Extra : Optional. Extra users you wish to kiss. Examples /kiss user: @Kodehawa#3457 /kiss user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</p>
+</article>
+
+<article>
+<header><h1>/pat</h1></header>
+<p>Pat someone on the server. Options User : Required. The user you want to pat. Extra : Optional. Extra users you wish to pat. Examples /pat user: @Kodehawa#3457 /pat user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</p>
+</article>
+
+<article>
+<header><h1>/poke</h1></header>
+<p>Poke someone on the server. Options User : Required. The user you want to poke. Extra : Optional. Extra users you wish to poke. Examples /poke user: @Kodehawa#3457 /poke user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</p>
+</article>
+
+<article>
+<header><h1>/pout</h1></header>
+<p>Pout at someone on the server Options User : Required. The user you want to pout at. Extra : Optional. Extra users you wish to pout at. Examples /pout user: @Kodehawa#3457 /pout user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</p>
+</article>
+
+<article>
+<header><h1>/slap</h1></header>
+<p>Slap someone on the server. Options User : Required. The user you want to slap. Extra : Optional. Extra users you wish to slap. Examples /slap user: @Kodehawa#3457 /slap user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</p>
+</article>
+
+<article>
+<header><h1>/tickle</h1></header>
+<p>Tickle someone on the server. Options User : Required. The user you want to tickle. Extra : Optional. Extra users you wish to tickle. Examples /tickle user: @Kodehawa#3457 /tickle user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "action",
+      "title" : "/action",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "A bunch of action commands that didn't fit into a separate command.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Subcommands",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "teehee",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ":  Tease someone on the server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "bite",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Bite someone on the server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "lick",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ":  Lick someone on the server. ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrikeThrough",
+                  "content" : [ {
+                    "text" : "kinky",
+                    "type" : "SimpleText"
+                  } ]
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "nuzzle",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Nuzzle someone on the server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "smile",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Smile at someone on the server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "highfive",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": High-five someone on the server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "stare",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Stare at someone on the server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "blush",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Blushes at someone on the server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "nom",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Nom someone or something.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "holdhands",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Hold someones hand.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "bloodsuck",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Suck someone's blood on the server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "meow",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Meow at something or someone.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "facedesk",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Smash your head on a desk I guess?",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "lewd",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Call something or someone lewd.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "User",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Required on some subcommands, optional on others. The user on which you want to perform an action",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Extra",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional, available only on certain subcommands. Extra users to which you want to perform an action.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/action teehee ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/action bite ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/action nuzzle ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/action holdhands ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/action nom ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/action stare ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/action smile ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/action facedesk",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "cuddle",
+      "title" : "/cuddle",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Cuddle someone on the server.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "User",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The user you want to cuddle.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Extra",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Extra users you wish to cuddle.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/cuddle ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/cuddle ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "extra:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Mantaro Patreon#0569",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "hug",
+      "title" : "/hug",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Hug someone on the server.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "User",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The user you want to hug.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Extra",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Extra users you wish to hug.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/hug ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/hug ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "extra:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Mantaro Patreon#0569",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "kiss",
+      "title" : "/kiss",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Kiss someone on the server.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "User",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The user you want to kiss.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Extra",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Extra users you wish to kiss.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/kiss ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/kiss ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "extra:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Mantaro Patreon#0569",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "pat",
+      "title" : "/pat",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Pat someone on the server.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "User",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The user you want to pat.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Extra",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Extra users you wish to pat.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/pat ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/pat ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "extra:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Mantaro Patreon#0569",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "poke",
+      "title" : "/poke",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Poke someone on the server.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "User",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The user you want to poke.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Extra",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Extra users you wish to poke.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/poke ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/poke ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "extra:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Mantaro Patreon#0569",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "pout",
+      "title" : "/pout",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Pout at someone on the server",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "User",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The user you want to pout at.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Extra",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Extra users you wish to pout at.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/pout ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/pout ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "extra:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Mantaro Patreon#0569",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "slap",
+      "title" : "/slap",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Slap someone on the server.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "User",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The user you want to slap.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Extra",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Extra users you wish to slap.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/slap ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/slap ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "extra:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Mantaro Patreon#0569",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "tickle",
+      "title" : "/tickle",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Tickle someone on the server.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "User",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The user you want to tickle.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Extra",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Extra users you wish to tickle.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/tickle ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/tickle ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "extra:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Mantaro Patreon#0569",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    } ],
+    "lastModifiedTime" : 1661117802592,
+    "tocItem" : {
+      "chapterTitle" : "Commands",
+      "pageTitle" : "👋 Action Commands",
+      "pageMeta" : {
+        "title" : [ "👋 Action Commands" ]
+      },
+      "dirName" : "commands",
+      "fileName" : "action-commands",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "/action",
+        "id" : "action"
+      }, {
+        "title" : "/cuddle",
+        "id" : "cuddle"
+      }, {
+        "title" : "/hug",
+        "id" : "hug"
+      }, {
+        "title" : "/kiss",
+        "id" : "kiss"
+      }, {
+        "title" : "/pat",
+        "id" : "pat"
+      }, {
+        "title" : "/poke",
+        "id" : "poke"
+      }, {
+        "title" : "/pout",
+        "id" : "pout"
+      }, {
+        "title" : "/slap",
+        "id" : "slap"
+      }, {
+        "title" : "/tickle",
+        "id" : "tickle"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

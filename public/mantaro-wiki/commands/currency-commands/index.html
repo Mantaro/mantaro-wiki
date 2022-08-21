@@ -1,0 +1,5471 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: 💸 Currency Commands</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<p>&quot;h3&quot; ~&gt;badges {@mention/username/user tag} Description: Shows a list of your own badges or a list of the badges from the given user. A full list of the badges can be found https://github.com/Mantaro/MantaroBot/wiki/Badge-reference-and-documentation here.Subcommand(s): list : This will show you a list of all badges. info &lt;name&gt; : This will show information on the specified badge. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): badge Example(s): ~&gt;badges ~&gt;badges list ~&gt;badges @Kodehawa#3457 ~&gt;badges info Miner &quot;h3&quot; ~&gt;balance {@mention/username/user tag} Description: Returns your current amount of money or the amount of money of the person that was given.Requirements:This command does not have any specific requirements. Alias(es): credits bal Example(s): ~&gt;balance ~&gt;bal ~&gt;bal @Kodehawa#3457 &quot;h3&quot; ~&gt;buy {amount/all/quarter/half} &lt;item&gt; Description Allows you to buy items from the market.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. This command requires you to have the credits needed to buy the item. Example(s): ~&gt;buy 2 Diamond ~&gt;buy House &quot;h3&quot; ~&gt;cast &lt;item&gt; {wrench} {-amount &lt;amount&gt;} Description: Cast various items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory. Different wrenches have different amounts of items they can cast at the same time. For more in-depth information you can go to our https://github.com/Mantaro/MantaroBot/wiki/Currency-101#casting--dust-level Currency 101 page.Subcommand(s): ls : This will show a list of all castable items. Requirements:This command requires you to have the items needed to cast the specified item. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The ls subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): craft Example(s): ~&gt;cast ls ~&gt;cast &quot;diamond pickaxe&quot; ~&gt;cast &quot;comet gem&quot; &quot;sparkle wrench&quot; 10 &quot;h3&quot; ~&gt;chop Description: Use one of your axes to chop down trees.Requirements:This command requires you to have an axe equipped. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~&gt;chop &quot;h3&quot; ~&gt;daily {@mention/-check} Description: Claim your Daily credits. You can only claim them once every 24 hours. Mentioning someone will give your daily credits to them instead. The -check flag allows you to check if you daily is ready without claiming it.Requirements:This command does not have any specific requirements. Alias(es): dailies Example(s): ~&gt;daily ~&gt;dailies ~&gt;daily @Kodehawa#3457 &quot;h3&quot; 💰 ~&gt;dailycrate {-check} Description: Allows you to receive a random crate once per day. The -check flag allows you to check if you daily crate is ready without claiming it.Requirements: https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks This is a Mantaro premium only feature. Example(s): ~&gt;dailycrate ~&gt;dailycrate -check &quot;h3&quot; ~&gt;divorce Description: Attend the single life again.Requirements:This command requires you to be married beforehand. Example(s): ~&gt;divorce &quot;h3&quot; ~&gt;dump {amount} &lt;item&gt; Description: Allows you to dump an item from your inventory. Using allof will dump all the items you have of the specified item.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. This command requires you to have the specified item on your inventory. Example(s): ~&gt;dump Milk ~&gt;dump 5 Diamond ~&gt;dump allof House &quot;h3&quot; ~&gt;equip &lt;item&gt; Description: Allows you to equip an item (Picks, Rods or Axes).Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~&gt;equip pick ~&gt;equip &quot;diamond pickaxe&quot; &quot;h3&quot; ~&gt;fish Description: Catch fish using one of your fishing rods.Requirements:This command requires you to have a rod equipped. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~&gt;fish &quot;h3&quot; ~&gt;gamble &lt;all/half/quarter/amount/percentage&gt; Description: Gamble your credits for possible profit. The current max of credits you can gamble at once is 10000 (update 5.7).Requirements:This command requires you to have credits to gamble away. Example(s): ~&gt;gamble all ~&gt;gamble half ~&gt;gamble quarter ~&gt;gamble 30 ~&gt;gamble 30% &quot;h3&quot; ~&gt;inventory {@mention/username/tag/nickname} {-info/-calculate} Description: Shows your current inventory and item stats. Mentioning someone or typing someone's name/nickname/tag will show their inventory. Using -info will give you a longer more detailed response and using -calculate will show your your items worth.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The -info option requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): inv Example(s): ~&gt;inventory ~&gt;inv ~&gt;inv @Kodehawa#3457 ~&gt;inv -info ~&gt;inv -calculate &quot;h3&quot; ~&gt;iteminfo &lt;item&gt; Description: Provides you with information about an item.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~&gt;iteminfo &quot;Diamond Pickaxe&quot; &quot;h3&quot; ~&gt;itemtransfer &lt;@mention&gt; &lt;item&gt; {amount} Description: Transfer one of your items to someone else.Requirements:This command requires you to have the item to be transfered. Alias(es): transferitems transferitem Example(s): ~&gt;itemtransfer @Kodehawa#3457 &quot;Diamond Pickaxe&quot; 5 &quot;h3&quot; ~&gt;leaderboard {money/rep/lvl/streak/claim/slots/gamble} Description: Returns the Top 10 for various statistics in Mantaro.Subcommand(s): lvl : This will show the leaderboard for level. money : This will show the leaderboard for money. games : This will show the leaderboard for games. rep : This will show the leaderboard for rep. claim : This will show the leaderboard for claim. streak : This will show the leaderboard for daily streak. slots : This will show the leaderboard for slots. gamble : This will show the leaderboard for gamble. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): richest lb top Example(s): ~&gt;leaderboard ~&gt;lb ~&gt;lb money ~&gt;leaderboard slots &quot;h3&quot; ~&gt;level {@mention} Description: Allows you to check your level or the level of someone else.Requirements:This command does not have any specific requirements. Alias(es): rank Example(s): ~&gt;level ~&gt;level @Kodehawa#3457 &quot;h3&quot; ~&gt;loot Description: Loot the chat for possible credits and items. Some items are only obtained via loot. Very rarely you will also be able to find a Loot Crate.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~&gt;loot &quot;h3&quot; ~&gt;market {sell/buy/dump} {amount/all/quarter/half} {item name/emoji} Description: Browse the Market. When used alone Mantaro will show you a list of all the items on the Market.Subcommand(s): dump {amount} &lt;item&gt; : This will dump an item from your inventory. common : This will filter the market to only show Common items. tools : This will filter the market to only show Tool items. potions : This will filter the market to only show Potion items. buyable : This will filter the market to only show Buyable items. pet : This will filter the market to only show Pet items. sellable : This will filter the market to only show Sellable items. price &lt;item&gt; : This will show the price of the specified item. buy {amount/all/quarter/half} &lt;item&gt; : This allows you to buy an item from the Market. sell {all/allof} &lt;item&gt; : This allows you to sell an item in the Market. If you use all you will sell all your items. If you use allof you will sell all your items of the specified item. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. The dump subcommand requires you to have the specified item on your inventory. The buy subcommand requires you to have the credits needed to buy the item. The sell subcommand requires you to have the specified item on your inventory. Alias(es): shop Example(s): ~&gt;market ~&gt;market dump 2 Diamond ~&gt;market sell 2 Diamond ~&gt;market buy 2 Diamond ~&gt;market sell all ~&gt;market buy all Diamond &quot;h3&quot; ~&gt;marry &lt;mention&gt; Description: Marry someone. The person you marry also appears on your profile.Subcommand(s): status : This will show you the status of your marriage. timezone &lt;timezone&gt; : This will set the shared timezone for your marriage. createletter &lt;content&gt; : This will create your love letter for your partner. buyhouse &lt;name&gt; : This will buy a shared house for your marriage. buycar &lt;name&gt; : This will buy a shared car for your marriage. Requirements:This command requires 2 rings to be in your inventory to marry someone. The status subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): marriage Example(s): ~&gt;marry @Kodehawa#3457 ~&gt;marry createletter This is my letter! ~&gt;marry status ~&gt;marry buyhouse Our House &quot;h3&quot; ~&gt;mine Description: Use one of your pickaxes to mine minerals.Requirements:This command requires you to have a pick equipped. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~&gt;mine &quot;h3&quot; ~&gt;opencrate {crate name} Description: Open one of your Lootboxes.Requirements:This command requires you to have a crate key to open it. You can buy one from the market. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~&gt;opencrate ~&gt;opencrate &quot;gem crate&quot; &quot;h3&quot; ~&gt;pet Description: Allows you to buy a pet so that you can take care of it. A pet will also help you out with other commands and give you several bonuses.Subcommand(s): info &lt;type&gt; : This will show you more information on the specified pet type. list : This will show you a list of the currently available pets and their abilities. status : This will show you the current status of your pet. rename &lt;name&gt; : This will rename your pet with the given name. check : This will show you the thirst, hunger and dust levels of your current pet. level : This will show the level and experience of your current pet. clean : This will clean your pet's dust. choice : This will let you switch between Personal pet and Marriage pet. pet {@mention} : This will pet your pet. If you mention someone you will instead pet that person's pet. sell : This will sell your pet and reset all your pet stats. hydrate {amount/all} : This will hydrate your pet. Typing all will max out your pet's thirst bar. buy &lt;name&gt; &lt;type&gt; : This will buy and name your pet with the specified information. feed &lt;food&gt; {amount/all} : This will feed your pet the specified food. Typing all will max out your pet's hunger bar. Requirements:Currently pets can only be bought if you are married, and you both have bought a house using the marry command. Pets will be expanded upon in later updates. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~&gt;pet info dog ~&gt;pet list ~&gt;pet buy Doggo dog ~&gt;pet pet @Kodehawa#3457 ~&gt;pet status ~&gt;pet hydrate all ~&gt;pet sell &quot;h3&quot; ~&gt;profile {mention/username/tag/nickname} Description: Look at your own or the given person's profile.Subcommand(s): stats : This will show all sorts of statistics about your usage of Mantaro's currency. timezone &lt;timezone&gt; : This will set your timezone. If you don't know what your timezone is you can search it in Google. togglelegacy : This will show or hide your legacy credits. description &lt;desc&gt; : This will change your current description. Use ~&gt;profile description clear to remove your description. language {language code} : This will change the language in which Mantaro responds to you. Use ~&gt;lang to get a full list of the available language codes. toggleaction : This will disallow or allow action commands to be done on you. 💰 widgets {ls/reset} : This will change the order in which information is presented on your profile. You can also remove certain things from your profile. hidetag : This will hide the tags (#xxxx) and IDs from your profile and your waifu list. claimlock {remove} : This will lock you from being a waifu, meaning you can't be claimed anymore. You need to buy a claim key from the market to use this command. Use the remove option to become claimable once again. autoequip {disable} : This will autoequip tools (Axe, Rod and Axe) when they break, assuming you have more of them in your inventory. Use the disable option to turn this off. inventorysort &lt;type&gt; : This will sort your inventory based on the type of sort you specify. You can sort by VALUE, VALUE_TOTAL, AMOUNT, TYPE or RANDOM. displaybadge &lt;badge/reset/none&gt; : This will change the current badge on display for your profile. Use the reset option to reset your badge. Use the none option to have no badge show up. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed and Emotes permissions. The widgets subcommand is a https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks Mantaro premium only feature. The claimlock subcommand requires you to have a claim key on your inventory. Example(s): ~&gt;profile ~&gt;profile @Kodehawa#3457 ~&gt;profile timezone GMT+2 ~&gt;profile togglelegacy ~&gt;profile lang es_ES ~&gt;profile widgets header, credits, reputation, birthday, marriage, badges ~&gt;profile inventorysort RANDOM ~&gt;profile toggleaction &quot;h3&quot; ~&gt;rep &lt;mention/username/user tag&gt; Description: Give someone Reputation.Requirements:This command does not have any specific requirements. Alias(es): reputation Example(s): ~&gt;rep @Kodehawa#3457 ~&gt;rep Kodehawa#3457 ~&gt;rep 155867458203287552 &quot;h3&quot; ~&gt;repair &lt;item&gt; {wrench} Description: Allows you to repair broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory. For more in-depth information you can go to our https://github.com/Mantaro/MantaroBot/wiki/Currency-101#repairing-items Currency 101 page.Subcommand(s): ls : This will show a list of all repairable items. Requirements:This command requires you to have the items needed to repair the specified item. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The ls subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): fix Example(s): ~&gt;repair ls ~&gt;repair &quot;broken sparkle pickaxe&quot; &quot;sparkle wrench&quot; &quot;h3&quot; ~&gt;salvage &lt;item&gt; {wrench} Description: Allows you to salvage broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory.Subcommand(s): ls : This will show a list of all salvageable items. Requirements:This command requires you to have the broken item you specified. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The ls subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Example(s): ~&gt;salvage &quot;broken sparkle pickaxe&quot; ~&gt;salvage &quot;broken sparkle pickaxe&quot; &quot;sparkle wrench&quot; &quot;h3&quot; ~&gt;sell {amount/all/allof} &lt;item&gt; Description: Allows you to sell an item in the Market. If you use all you will sell all your items. If you use allof you will sell all your items of the specified item.Requirements:This command requires you to have the specified item on your inventory. Example(s): ~&gt;sell 5 Diamonds ~&gt;sell House ~&gt;sell all &quot;h3&quot; ~&gt;slots {amount|-useticket {-amount &lt;amount&gt;}} Description: Uses the amount of credits specified to roll the slot machine. You can also buy a &quot;Slot-Ticket&quot; and use that instead. The current credit max you can use at once is 50000, for tickets you can use a max of 50 at once (update 5.7).Requirements:This command requires you to have credits to gamble away. The -useticket option requires you to have Slot Tickets in your inventory. Example(s): ~&gt;slots ~&gt;slots 420 ~&gt;slots -useticket ~&gt;slots -useticket -amount 420 &quot;h3&quot; ~&gt;tools Description: Check the durability and status of your tools.Requirements:This command does not have any specific requirements. Example(s): ~&gt;tools &quot;h3&quot; ~&gt;transfer &lt;mention&gt; &lt;amount&gt; Description: Transfer someone money. You can transfer a max of 500,000 credits, and you cannot transfer to/from a new Discord account (update 6.0.5).Requirements:This command requires you to have credits to transfer. Alias(es): give Example(s): ~&gt;transfer @Kodehawa#3457 420 &quot;h3&quot; ~&gt;unequip &lt;pick/rod/axe&gt; Description: Allows you to unequip previously equipped items. Depending on how damaged the item is, you may get a broken version of the item.Requirements:This command requires you to have an item equipped for the specified field. Example(s): ~&gt;unequip pick ~&gt;unequip rod ~&gt;unequip axe &quot;h3&quot; ~&gt;useitem &lt;item&gt; {-amount &lt;amount&gt;} Description: Allows you to use certain items. Specifying -amount X will use X items instead of just one. For more in-depth information you can go to our https://github.com/Mantaro/MantaroBot/wiki/Currency-101#items-and-their-uses Currency 101 page.Subcommand(s): ls : This will show a list of all useable items. Requirements:This command requires you to have the item you specified to be used. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The ls subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): use Example(s): ~&gt;useitem &quot;Energy Beverage&quot; ~&gt;useitem &quot;Haste Potion&quot; -amount 5 &quot;h3&quot; ~&gt;waifu Description: Manage your waifus. Using the command on its own (no subcommands) will show you a list of your own waifus.Subcommand(s): stats : This shows you your current waifu status and values. buyslot : This lets you buy one more waifu slot. You can have a max of 30 slots. claim &lt;mention/id&gt; : This lets you claim an user as your waifu. optout : This will opt you out completely from the waifu command. YOU CANNOT UNDO THIS. You will become unclaimable and you wont be able to claim people either. unclaim &lt;mention/id&gt; : This lets you unclaim an user. You can also use User ID's to unclaim people you do not share servers with. Check our FAQ on unclaiming https://github.com/Mantaro/MantaroBot/wiki/FAQ#10--can-i-unclaim-people-who-i-no-longer-share-a-server-with-or-that-show-as-unknown-user-waifu-command &quot;Unknown Users&quot; for more help. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed and Reactions permissions. The buyslot subcommand requires you to have enough credits to buy more slots. The claim subcommand requires that the user you are trying to claim is not claim locked. The unclaim subcommand requires you to have enough credits to unclaim the user. Alias(es): waifus Example(s): ~&gt;waifu ~&gt;waifu stats ~&gt;waifu buyslot ~&gt;waifu claim @Kodehawa#3457 ~&gt;waifu unclaim @Kodehawa#3457 ~&gt;waifu optout</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>badges {@mention/username/user tag}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Shows a list of your own badges or a list of the badges from the given user. A full list of the badges can be found ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://github.com/Mantaro/MantaroBot/wiki/Badge-reference-and-documentation",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "here",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "list",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you a list of all badges.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "info <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show information on the specified badge.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "badge",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>badges",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>badges list",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>badges @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>badges info Miner",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>balance {@mention/username/user tag}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Returns your current amount of money or the amount of money of the person that was given.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "credits",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "bal",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>balance",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>bal",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>bal @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>buy {amount/all/quarter/half} <item>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to buy items from the market.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have the credits needed to buy the item.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>buy 2 Diamond",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>buy House",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>cast <item> {wrench} {-amount <amount>}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Cast various items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Different wrenches have different amounts of items they can cast at the same time. For more in-depth information you can go to our ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://github.com/Mantaro/MantaroBot/wiki/Currency-101#casting--dust-level",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Currency 101 page",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show a list of all castable items.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have the items needed to cast the specified item.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "craft",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>cast ls",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>cast \"diamond pickaxe\"",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>cast \"comet gem\" \"sparkle wrench\" 10",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>chop",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Use one of your axes to chop down trees.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have an axe equipped.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>chop",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>daily {@mention/-check}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Claim your Daily credits. You can only claim them once every 24 hours. Mentioning someone will give your daily credits to them instead. The -check flag allows you to check if you daily is ready without claiming it.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "dailies",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>daily",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>dailies",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>daily @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" 💰 ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>dailycrate {-check}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to receive a random crate once per day. The -check flag allows you to check if you daily crate is ready without claiming it.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "This is a Mantaro premium only feature",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>dailycrate",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>dailycrate -check",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>divorce",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Attend the single life again.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to be married beforehand.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>divorce",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>dump {amount} <item>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to dump an item from your inventory. Using ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "allof",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " will dump all the items you have of the specified item.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have the specified item on your inventory.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>dump Milk",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>dump 5 Diamond",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>dump allof House",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>equip <item>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to equip an item (Picks, Rods or Axes).",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>equip pick",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>equip \"diamond pickaxe\"",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>fish",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Catch fish using one of your fishing rods.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have a rod equipped.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>fish",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>gamble <all/half/quarter/amount/percentage>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Gamble your credits for possible profit. The current max of credits you can gamble at once is 10000 (update 5.7).",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have credits to gamble away.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>gamble all",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>gamble half",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>gamble quarter",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>gamble 30",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>gamble 30%",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>inventory {@mention/username/tag/nickname} {-info/-calculate}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Shows your current inventory and item stats. Mentioning someone or typing someone's name/nickname/tag will show their inventory.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Using -info will give you a longer more detailed response and using -calculate will show your your items worth.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "-info",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " option requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "inv",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>inventory",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>inv",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>inv @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>inv -info",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>inv -calculate",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>iteminfo <item>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Provides you with information about an item.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>iteminfo \"Diamond Pickaxe\"",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>itemtransfer <@mention> <item> {amount}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Transfer one of your items to someone else.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have the item to be transfered.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "transferitems",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "transferitem",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>itemtransfer @Kodehawa#3457 \"Diamond Pickaxe\" 5",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>leaderboard {money/rep/lvl/streak/claim/slots/gamble}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Returns the Top 10 for various statistics in Mantaro.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "lvl",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the leaderboard for level.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "money",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the leaderboard for money.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "games",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the leaderboard for games.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "rep",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the leaderboard for rep.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "claim",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the leaderboard for claim.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "streak",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the leaderboard for daily streak.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "slots",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the leaderboard for slots.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "gamble",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the leaderboard for gamble.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "richest",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "lb",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "top",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>leaderboard",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>lb",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>lb money",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>leaderboard slots",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>level {@mention}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to check your level or the level of someone else.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "rank",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>level",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>level @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>loot",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Loot the chat for possible credits and items. Some items are only obtained via loot. Very rarely you will also be able to find a Loot Crate.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>loot",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>market {sell/buy/dump} {amount/all/quarter/half} {item name/emoji}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Browse the Market. When used alone Mantaro will show you a list of all the items on the Market.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "dump {amount} <item>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will dump an item from your inventory.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "common",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will filter the market to only show ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Common items",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "tools",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will filter the market to only show ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Tool items",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "potions",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will filter the market to only show ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Potion items",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "buyable",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will filter the market to only show ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Buyable items",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "pet",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will filter the market to only show ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Pet items",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "sellable",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will filter the market to only show ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Sellable items",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "price <item>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the price of the specified item.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "buy {amount/all/quarter/half} <item>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This allows you to buy an item from the Market.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "sell {all/allof} <item>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This allows you to sell an item in the Market. If you use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "all",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " you will ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "sell all your items",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ". If you use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "allof",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " you will sell all your items of the specified item.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "dump",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires you to have the specified item on your inventory.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "buy",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires you to have the credits needed to buy the item.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "sell",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires you to have the specified item on your inventory.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "shop",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>market",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>market dump 2 Diamond",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>market sell 2 Diamond",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>market buy 2 Diamond",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>market sell all",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>market buy all Diamond",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>marry <mention>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Marry someone. The person you marry also appears on your profile.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "status",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you the status of your marriage.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "timezone <timezone>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will set the shared timezone for your marriage.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "createletter <content>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will create your love letter for your partner.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "buyhouse <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will buy a shared house for your marriage.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "buycar <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will buy a shared car for your marriage.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires 2 rings to be in your inventory to marry someone.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "status",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "marriage",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>marry @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>marry createletter This is my letter!",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>marry status",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>marry buyhouse Our House",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>mine",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Use one of your pickaxes to mine minerals.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have a pick equipped.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>mine",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>opencrate {crate name}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Open one of your Lootboxes.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have a crate key to open it. You can buy one from the market.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>opencrate",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>opencrate \"gem crate\"",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>pet",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to buy a pet so that you can take care of it. A pet will also help you out with other commands and give you several bonuses.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "info <type>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you more information on the specified pet type.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "list",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you a list of the currently available pets and their abilities.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "status",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you the current status of your pet.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "rename <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will rename your pet with the given name.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "check",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you the thirst, hunger and dust levels of your current pet.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "level",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the level and experience of your current pet.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "clean",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will clean your pet's dust.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "choice",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will let you switch between Personal pet and Marriage pet.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "pet {@mention}",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will pet your pet. If you mention someone you will instead pet that person's pet.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "sell",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will sell your pet and reset all your pet stats.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "hydrate {amount/all}",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will hydrate your pet. Typing all will max out your pet's thirst bar.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "buy <name> <type>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will buy and name your pet with the specified information.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "feed <food> {amount/all}",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will feed your pet the specified food. Typing all will max out your pet's hunger bar.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "Currently pets can only be bought if you are married, and you both have bought a house using the ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "marry",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " command. Pets will be expanded upon in later updates.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>pet info dog",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>pet list",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>pet buy Doggo dog",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>pet pet @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>pet status",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>pet hydrate all",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>pet sell",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>profile {mention/username/tag/nickname}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Look at your own or the given person's profile.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "stats",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show all sorts of statistics about your usage of Mantaro's currency.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "timezone <timezone>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will set your timezone. If you don't know what your timezone is you can search it in Google.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "togglelegacy",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show or hide your legacy credits.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "description <desc>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will change your current description. Use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "~>profile description clear",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " to remove your description.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "language {language code}",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will change the language in which Mantaro responds to you. Use ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "~>lang",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " to get a full list of the available language codes.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "toggleaction",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will disallow or allow action commands to be done on you.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "💰 ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "widgets {ls/reset}",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will change the order in which information is presented on your profile. You can also remove certain things from your profile.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "hidetag",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will hide the tags (#xxxx) and IDs from your profile and your waifu list.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "claimlock {remove}",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will lock you from being a waifu, meaning you can't be claimed anymore. You need to buy a claim key from the market to use this command. Use the ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "remove",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " option to become claimable once again.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "autoequip {disable}",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will autoequip tools (Axe, Rod and Axe) when they break, assuming you have more of them in your inventory. Use the ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "disable",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " option to turn this off.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "inventorysort <type>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will sort your inventory based on the type of sort you specify. You can sort by VALUE, VALUE_TOTAL, AMOUNT, TYPE or RANDOM.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "displaybadge <badge/reset/none>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will change the current badge on display for your profile. Use the ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "reset",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " option to reset your badge. Use the ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "none",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " option to have no badge show up.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "widgets",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand is a ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Mantaro premium only feature",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "claimlock",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires you to have a claim key on your inventory.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>profile",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>profile @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>profile timezone GMT+2",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>profile togglelegacy",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>profile lang es_ES",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>profile widgets header, credits, reputation, birthday, marriage, badges",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>profile inventorysort RANDOM",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>profile toggleaction",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>rep <mention/username/user tag>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Give someone Reputation.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "reputation",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>rep @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>rep Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>rep 155867458203287552",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>repair <item> {wrench}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to repair broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory. For more in-depth information you can go to our ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://github.com/Mantaro/MantaroBot/wiki/Currency-101#repairing-items",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Currency 101 page",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show a list of all repairable items.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have the items needed to repair the specified item.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "fix",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>repair ls",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>repair \"broken sparkle pickaxe\" \"sparkle wrench\"",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>salvage <item> {wrench}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to salvage broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show a list of all salvageable items.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have the broken item you specified.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>salvage \"broken sparkle pickaxe\"",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>salvage \"broken sparkle pickaxe\" \"sparkle wrench\"",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>sell {amount/all/allof} <item>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to sell an item in the Market. If you use ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "all",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " you will ",
+        "type" : "SimpleText"
+      }, {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "sell all your items",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ". If you use ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "allof",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " you will sell all your items of the specified item.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have the specified item on your inventory.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>sell 5 Diamonds",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>sell House",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>sell all",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>slots {amount|-useticket {-amount <amount>}}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Uses the amount of credits specified to roll the slot machine. You can also buy a \"Slot-Ticket\" and use that instead. The current credit max you can use at once is 50000, for tickets you can use a max of 50 at once (update 5.7).",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have credits to gamble away.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "-useticket",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " option requires you to have Slot Tickets in your inventory.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>slots",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>slots 420",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>slots -useticket",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>slots -useticket -amount 420",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>tools",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Check the durability and status of your tools.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>tools",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>transfer <mention> <amount>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Transfer someone money. You can transfer a max of 500,000 credits, and you cannot transfer to/from a new Discord account (update 6.0.5).",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have credits to transfer.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "give",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>transfer @Kodehawa#3457 420",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>unequip <pick/rod/axe>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to unequip previously equipped items. Depending on how damaged the item is, you may get a broken version of the item.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have an item equipped for the specified field.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>unequip pick",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>unequip rod",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>unequip axe",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>useitem <item> {-amount <amount>}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Allows you to use certain items. Specifying -amount X will use X items instead of just one. For more in-depth information you can go to our ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://github.com/Mantaro/MantaroBot/wiki/Currency-101#items-and-their-uses",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Currency 101 page",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show a list of all useable items.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have the item you specified to be used.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Emotes",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "use",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>useitem \"Energy Beverage\"",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>useitem \"Haste Potion\" -amount 5",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>waifu",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Manage your waifus. Using the command on its own (no subcommands) will show you a list of your own waifus.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "stats",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This shows you your current waifu status and values.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "buyslot",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This lets you buy one more waifu slot. You can have a max of 30 slots.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "claim <mention/id>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This lets you claim an user as your waifu.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "optout",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will opt you out ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "completely",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : " from the waifu command. ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "YOU CANNOT UNDO THIS",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ". You will become unclaimable and you wont be able to claim people either.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "unclaim <mention/id>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This lets you unclaim an user. You can also use User ID's to unclaim people you do not share servers with. Check our FAQ on unclaiming ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/FAQ#10--can-i-unclaim-people-who-i-no-longer-share-a-server-with-or-that-show-as-unknown-user-waifu-command",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "\"Unknown Users\"",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : " for more help.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "buyslot",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires you to have enough credits to buy more slots.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "claim",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires that the user you are trying to claim is not claim locked.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "unclaim",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires you to have enough credits to unclaim the user.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "waifus",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>waifu",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>waifu stats",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>waifu buyslot",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>waifu claim @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>waifu unclaim @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>waifu optout",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661117892708,
+    "tocItem" : {
+      "chapterTitle" : "Commands",
+      "pageTitle" : "💸 Currency Commands",
+      "pageMeta" : {
+        "title" : [ "💸 Currency Commands" ]
+      },
+      "dirName" : "commands",
+      "fileName" : "currency-commands",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
