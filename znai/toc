@@ -6,6 +6,7 @@ basics
     premium-perks
 commands
     permissions
+    audio-commands
     command-list
 configuration
     all-options
