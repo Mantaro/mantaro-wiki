@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: Permissions</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<p>Due to the nature of Discord Bots that use Slash Commands, the bot automatically obtains several permissions. Specifically, those permissions pertaining to messages (Embed links, Attach Files, etc.). However, there are still some permissions that must be manually given be it to the user or to the bot. Those are as follows:DJ:Anyone with the role called &quot;DJ&quot;, your established DJ role for the server, or the one who requested the song. Admin: Anyone with the role called &quot;Bot Commander&quot;, or the role Permission &quot;Manage Server&quot; Messages: Both Mantaro and the User using the command require the &quot;Manage Messages&quot; Discord permission. The bot can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing. Command access and restriction As for access permissions, these can be handled using the integrated Discord https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions Command Permission System. This can be done in a few ways.Note: People with the permission Administrator are unaffected by any restrictions and can always use all commands. Integration settings Warning: Currently the Integration settings cannot be accessed on the mobile app. Please use a PC or browser version for this.You can find the Integration settings by going over to your Server Settings , then into the Integrations tab. Once here, locate the bot and click on Manage . Once in here, you can modify which users can use commands, which channels allow commands, as well as choose which commands are allowed to either channel or users.</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Due to the nature of Discord Bots that use Slash Commands, the bot automatically obtains several permissions. Specifically, those permissions pertaining to messages (Embed links, Attach Files, etc.).",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "However, there are still some permissions that must be manually given be it to the user or to the bot. Those are as follows:",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "DJ",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ":Anyone with the role called \"DJ\", your established DJ role for the server, or the one who requested the song.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Admin",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ": Anyone with the role called \"Bot Commander\", or the role Permission \"Manage Server\"",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Messages",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ": Both Mantaro and the User using the command require the \"Manage Messages\" Discord permission.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "The bot can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "id" : "command-access-and-restriction",
+      "level" : 2,
+      "title" : "Command access and restriction",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "As for access permissions, these can be handled using the integrated Discord ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Command Permission System",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ". This can be done in a few ways.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Note: People with the permission Administrator are unaffected by any restrictions and can always use all commands.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "id" : "command-access-and-restriction-integration-settings",
+      "level" : 3,
+      "title" : "Integration settings",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Warning: Currently the Integration settings cannot be accessed on the mobile app. Please use a PC or browser version for this.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "You can find the Integration settings by going over to your ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "Server Settings",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ", then into the ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "Integrations",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " tab. Once here, locate the bot and click on ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "Manage",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "columns" : [ {
+        "content" : [ {
+          "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\server-settings.png",
+          "timestamp" : 1661057698165,
+          "shapes" : [ ],
+          "width" : 244.0,
+          "height" : 190.0,
+          "type" : "AnnotatedImage"
+        } ]
+      }, {
+        "content" : [ {
+          "scale" : 0.8,
+          "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integrations.png",
+          "timestamp" : 1661059504432,
+          "shapes" : [ ],
+          "width" : 487.0,
+          "height" : 122.0,
+          "type" : "AnnotatedImage"
+        } ]
+      } ],
+      "config" : { },
+      "type" : "Columns"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Once in here, you can modify which users can use commands, which channels allow commands, as well as choose which commands are allowed to either channel or users.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "scale" : 0.8,
+      "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integration-perms.png",
+      "timestamp" : 1661069701935,
+      "shapes" : [ ],
+      "width" : 664.0,
+      "height" : 297.0,
+      "type" : "AnnotatedImage"
+    }, {
+      "type" : "ThematicBreak"
+    } ],
+    "lastModifiedTime" : 1661070023401,
+    "tocItem" : {
+      "chapterTitle" : "Commands",
+      "pageTitle" : "Permissions",
+      "pageMeta" : { },
+      "dirName" : "commands",
+      "fileName" : "permissions",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
