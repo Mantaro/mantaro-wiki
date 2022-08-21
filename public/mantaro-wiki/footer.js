@@ -3,7 +3,6 @@ footer = {
   "content" : [ {
     "columns" : [ {
       "content" : [ {
-        "align" : "left",
         "imageSrc" : "https://cdn.discordapp.com/emojis/654322747094073365.webp",
         "shapes" : [ ],
         "type" : "AnnotatedImage"
@@ -84,6 +83,9 @@ footer = {
     "config" : {
       "left" : {
         "portion" : 3
+      },
+      "right" : {
+        "align" : "center"
       }
     },
     "type" : "Columns"

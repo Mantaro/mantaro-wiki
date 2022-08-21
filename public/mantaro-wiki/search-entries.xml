@@ -363,7 +363,7 @@
     <url>/mantaro-wiki/commands/permissions#intro</url>
     <fullTitle>Mantaro Wiki: Permissions &amp; Managing, Intro [Commands]</fullTitle>
     <text>
-      <text>Some commands require special permissions in order for them to work. Below is a list of said permissions and their shorthands that we will mention through-out this wiki:DJ: Anyone with the role called "DJ", your established DJ role for the server, or the one who requested the song. Admin: Anyone with the role called "Bot Commander", or the role Permission "Manage Server" Messages: Both Mantaro and the User using the command require the "Manage Messages" Discord permission. The bot itself can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.</text>
+      <text>Some commands require special permissions in order for them to work. Below is a list of said permissions, who needs them, and their shorthands that we will mention through-out this wiki: Permission Name Description Mantaro User DJ Having a role called `DJ` or the [established DJ role for the server](configuration/all-options#music-configuration), or being the one who requested the song. As well, having the bellow `Admin` permissions also grants this. `:icon: slash {stroke: "red"}` `:icon: check {stroke: "green"}` Admin Having a role called `Bot Commander`, or the role Permission `Manage Server`. `:icon: slash {stroke: "red"}` `:icon: check {stroke: "green"}` Emotes Having the role Permission `Use External Emoji`. `:icon: check {stroke: "green"}` `:icon: slash {stroke: "red"}` Messages Having the role Permission `Manage Messages`. `:icon: check {stroke: "green"}` `:icon: check {stroke: "green"}` Moderate Having the role Permission `Moderate Member` (also called `Timeout Members`). `:icon: check {stroke: "green"}` `:icon: check {stroke: "green"}` The bot itself can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -392,6 +392,118 @@
     </text>
   </entry>
   <entry>
+    <url>/mantaro-wiki/commands/audio-commands#forward</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /forward [Commands]</fullTitle>
+    <text>
+      <text>This command will skip the song forward by the time given. Options Time : Required. The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /forward time: 2m /forward time: 1m29s</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#move</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /move [Commands]</fullTitle>
+    <text>
+      <text>This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to. Options Channel : Optional. The voice channel to move to. If empty, it'll use the voice channel you're in. Examples /move /move channel: Music 1</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#nowplaying</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /nowplaying [Commands]</fullTitle>
+    <text>
+      <text>This command will display the song that is currently playing with timestamps. Examples /nowplaying channel: Music 1</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#pause</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /pause [Commands]</fullTitle>
+    <text>
+      <text>This command will pause the music Player or unpause the Player if already paused. Examples /pause</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#play</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /play [Commands]</fullTitle>
+    <text>
+      <text>This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play. Options Song : Required. The song to play. Can be a URL or a search term. Soundcloud : Optional. Whether to search in Soundcloud. Only use to search. Top : Optional. Puts song at the start of the queue. Requires commands/permissions#intro DJ or Admin permissions. First : Optional. Plays the first search result. Only applies if a search is used. Requirements This command requires you to be connected to a Voice-Chat. Examples /play song: https://youtu.be/dQw4w9WgXcQ /play song: Rick Astley - Never Gonna Give You Up /play song: Rick Astley - Never Gonna Give You Up soundcloud: True</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#queue</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /queue [Commands]</fullTitle>
+    <text>
+      <text>This command displays the current queue or the selected page of the queue. Subcommands show : Shows the current music queue. clear : Clears the current queue. Needs commands/permissions#intro DJ or Admin permissions. Examples /queue show /queue clear</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#removetrack</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /removetrack [Commands]</fullTitle>
+    <text>
+      <text>This command removes the given track(s) from the queue. Options Range : Required. The song to remove, or a range of them (1-10). Can also use first, next or last. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /removetrack range: first /removetrack range: next /removetrack range: last /removetrack range: 2 /removetrack range: 1-10</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#repeat</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /repeat [Commands]</fullTitle>
+    <text>
+      <text>This command repeats the current song or the queue, or disables it. Options Queue : Optional. Repeat the entire queue instead of only the current song. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /repeat /repeat queue: True</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#restartsong</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /restartsong [Commands]</fullTitle>
+    <text>
+      <text>This command will rewind the current song back to the start. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /restartsong</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#rewind</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /rewind [Commands]</fullTitle>
+    <text>
+      <text>This command will rewind the song back by the time given. Options Time : Required. The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /rewind time: 1m29s</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#shuffle</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /shuffle [Commands]</fullTitle>
+    <text>
+      <text>This command will shuffle the current queue. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /shuffle</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#skip</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /skip [Commands]</fullTitle>
+    <text>
+      <text>This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can skip immediately. Options Force : Optional. Whether to skip vote. Requires commands/permissions#intro DJ or Admin permissions. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /skip /skip force: True</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#stop</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /stop [Commands]</fullTitle>
+    <text>
+      <text>This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can stop immediately. Requirements This command requires either commands/permissions#intro Admin or DJ permissions to stop immediately. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /stop</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/audio-commands#volume</url>
+    <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /volume [Commands]</fullTitle>
+    <text>
+      <text>This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).Note: This feature is only available for basics/premium-perks Mantaro Premium users. Options Volume : Optional. The volume to use. Values are 1-100. Leave empty to check current volume. Examples /volume /volume volume: 25</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
     <url>/mantaro-wiki/commands/command-list#mantaro-command-documentation</url>
     <fullTitle>Mantaro Wiki: Command List, Mantaro Command Documentation [Commands]</fullTitle>
     <text>
@@ -404,14 +516,6 @@
     <fullTitle>Mantaro Wiki: Command List, Basic knowledge [Commands]</fullTitle>
     <text>
       <text>Permissions:DJ: Anyone with the role called "DJ", your established DJ role for the server, or the one who requested the song. Admin: Anyone with the role called "Bot Commander", or the role Permission "Manage Server" Embed: Mantaro requires the "Embed links" Discord permission. Files: Mantaro requires the "Attach Files" Discord permission. Emotes: Mantaro requires the "Use External Emojis" Discord permission. Reactions: Mantaro requires the "Add Reactions" Discord permission. Ban: Both Mantaro and the User using the command require the "Ban Members" Discord permission. Kick: Both Mantaro and the User using the command require the "Kick Members" Discord permission. Messages: Both Mantaro and the User using the command require the "Manage Messages" Discord permission. Emotes:💰: Commands/subcommands with this emote are a https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks Premium only feature. 🔥: Commands/Subcommands with this emote are NSFW features. They will not work on channels that are not marked as NSFW. 🔧: Commands/subcommands with this emote are mostly technical commands. Its not likely you will have to use these commands as they are mostly for Developers and Helpers on the support server.</text>
-      <score>STANDARD</score>
-    </text>
-  </entry>
-  <entry>
-    <url>/mantaro-wiki/commands/command-list#-audio-commands</url>
-    <fullTitle>Mantaro Wiki: Command List, 🎵 Audio Commands [Commands]</fullTitle>
-    <text>
-      <text>"h3" /forward Description: This command will skip the song forward by the time given.Requirements:This command requires either https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Admin or DJ permissions. Option(s): Time : Required. The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example. Example(s): /forward time:2m /forward time:1m29s "h3" /move Description: This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to.Option(s): Channel : Optional. The voice channel to move to. If empty, it'll use the voice channel you're in. Example(s): /move /move channel:Music 1 "h3" /nowplaying Description: This command will display the song that is currently playing with timestamps.Example(s): /nowplaying "h3" /pause Description: This command will pause the music Player or unpause the Player if already paused.Example(s): /pause "h3" /play Description: This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play.Requirements:This command requires you to be connected to a Voice-Chat. Option(s): Song : Required. The song to play. Can be a URL or a search term. Soundcloud : Optional. Whether to search in Soundcloud. Only use to search. Top : Optional. Puts song at the start of the queue. Requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge DJ or Admin permissions. First : Optional. Plays the first search result. Only applies if a search is used. Example(s): /play song:https://youtu.be/dQw4w9WgXcQ /play song:Rick Astley - Never Gonna Give You Up /play song:Rick Astley - Never Gonna Give You Up soundcloud:True "h3" /queue Description: This command displays the current queue or the selected page of the queue.Subcommand(s): show : Shows the current music queue. clear : Clears the current queue. Needs https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge DJ or Admin permissions. Example(s): /queue show /queue clear "h3" /removetrack Description: This command removes the given track(s) from the queue.Requirements:This command requires either https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Admin or DJ permissions. This command requires you to be connected to the same Voice-Chat as Mantaro. Option(s): Range : Required. The song to remove, or a range of them (1-10). Can also use first, next or last. Example(s): /removetrack range:first /removetrack range:next /removetrack range:last /removetrack range:2 /removetrack range:1-10 "h3" /repeat Description: This command repeats the current song or the queue, or disables it.Requirements:This command requires you to be connected to the same Voice-Chat as Mantaro. Option(s): Queue : Optional. Repeat the entire queue instead of only the current song. Example(s): /repeat /repeat queue:True "h3" /restartsong Description: This command will rewind the current song back to the start.Requirements:This command requires either https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Admin or DJ permissions. Example(s): /restartsong "h3" /rewind Description: This command will rewind the song back by the time given.Requirements:This command requires either https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Admin or DJ permissions. Option(s): Time : Required. The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example. Example(s): /rewind time:1m29s "h3" /shuffle Description: This command will shuffle the current queue.Requirements:This command requires you to be connected to the same Voice-Chat as Mantaro. Example(s): /shuffle "h3" /skip Description: This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can skip immediately.Requirements:This command requires you to be connected to the same Voice-Chat as Mantaro. Option(s): Force : Optional. Whether to skip vote. Requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge DJ or Admin permissions. Example(s): /skip /skip force:True "h3" /stop Description: This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can stop immediately.Requirements:This command requires either https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Admin or DJ permissions to stop immediately. This command requires you to be connected to the same Voice-Chat as Mantaro. Example(s): /stop "h3" 💰 /volume Description: This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).Requirements: https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks This is a Mantaro premium only feature. Option(s): Volume : Optional. The volume to use. Values are 4-100. Leave empty to check current volume. Example(s): /volume /volume volume:25</text>
       <score>STANDARD</score>
     </text>
   </entry>
