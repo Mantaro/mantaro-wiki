@@ -58,16 +58,77 @@ toc = [ {
     "dirName" : "legal",
     "fileName" : "privacy-policy",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "Information Collection and Use",
+      "id" : "information-collection-and-use"
+    }, {
+      "title" : "Log Data",
+      "id" : "log-data"
+    }, {
+      "title" : "Website",
+      "id" : "website"
+    }, {
+      "title" : "Children's Privacy",
+      "id" : "childrens-privacy"
+    }, {
+      "title" : "Changes to This Privacy Policy",
+      "id" : "changes-to-this-privacy-policy"
+    }, {
+      "title" : "Contact Us",
+      "id" : "contact-us"
+    } ]
   } ]
 }, {
-  "chapterTitle" : "Intro",
-  "dirName" : "intro",
+  "chapterTitle" : "Basics",
+  "dirName" : "basics",
   "items" : [ {
-    "chapterTitle" : "Intro",
+    "chapterTitle" : "Basics",
+    "pageTitle" : "FAQ",
+    "pageMeta" : { },
+    "dirName" : "basics",
+    "fileName" : "FAQ",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Remember that for the most up to date FAQ you want to check the FAQ channel on our discord server.",
+      "id" : "remember-that-for-the-most-up-to-date-faq-you-want-to-check-the-faq-channel-on-our-discord-server"
+    } ]
+  }, {
+    "chapterTitle" : "Basics",
+    "pageTitle" : "Premium Perks",
+    "pageMeta" : { },
+    "dirName" : "basics",
+    "fileName" : "premium-perks",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Premium Perks",
+      "id" : "premium-perks"
+    }, {
+      "title" : "What you get for Donating via PayPal",
+      "id" : "what-you-get-for-donating-via-paypal"
+    }, {
+      "title" : "What you get for Donating via Patreon",
+      "id" : "what-you-get-for-donating-via-patreon"
+    }, {
+      "title" : "Claiming and Using your Perks",
+      "id" : "claiming-and-using-your-perks"
+    } ]
+  } ]
+}, {
+  "chapterTitle" : "Commands",
+  "dirName" : "commands",
+  "items" : [ {
+    "chapterTitle" : "Commands",
+    "pageTitle" : "Permissions",
+    "pageMeta" : { },
+    "dirName" : "commands",
+    "fileName" : "permissions",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ ]
+  }, {
+    "chapterTitle" : "Commands",
     "pageTitle" : "Command List",
     "pageMeta" : { },
-    "dirName" : "intro",
+    "dirName" : "commands",
     "fileName" : "command-list",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
@@ -100,37 +161,6 @@ toc = [ {
     }, {
       "title" : "✏️Utility Commands",
       "id" : "utility-commands"
-    } ]
-  }, {
-    "chapterTitle" : "Intro",
-    "pageTitle" : "Faq",
-    "pageMeta" : { },
-    "dirName" : "intro",
-    "fileName" : "faq",
-    "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ {
-      "title" : "Remember that for the most up to date FAQ you want to check the FAQ channel on our discord server.",
-      "id" : "remember-that-for-the-most-up-to-date-faq-you-want-to-check-the-faq-channel-on-our-discord-server"
-    } ]
-  }, {
-    "chapterTitle" : "Intro",
-    "pageTitle" : "Premium Perks",
-    "pageMeta" : { },
-    "dirName" : "intro",
-    "fileName" : "premium-perks",
-    "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ {
-      "title" : "Premium Perks",
-      "id" : "premium-perks"
-    }, {
-      "title" : "What you get for Donating via PayPal",
-      "id" : "what-you-get-for-donating-via-paypal"
-    }, {
-      "title" : "What you get for Donating via Patreon",
-      "id" : "what-you-get-for-donating-via-patreon"
-    }, {
-      "title" : "Claiming and Using your Perks",
-      "id" : "claiming-and-using-your-perks"
     } ]
   } ]
 }, {
