@@ -9,18 +9,24 @@ However, there are still some permissions that must be manually given be it to t
 The bot can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.
 
 ## Command access and restriction
-As for access permissions, these can be handled using the integrated Discord Systems. This can be done in a few ways.
+As for access permissions, these can be handled using the integrated Discord [Command Permission System](https://support.discord.com/hc/en-us/articles/4644915651095-Command-Permissions). This can be done in a few ways.
 
-### Channel permissions
-You can use channel permissions to limit the access the bot has to certain channels. Simply remove the `View Channel` permissions from the bot in the Permissions tab and the bot will not have access to said channel.
+Note: People with the permission Administrator are unaffected by any restrictions and can always use all commands. 
+
+### Integration settings
+You can find the Integration settings by going over to your `Server Settings`, then into the `Integrations` tab. Once here, locate the bot and click on `Manage`.
 
 ```columns
 left:
-:include-image: assets/images/examples/perms/edit-channel.png
+:include-image: assets/images/examples/perms/server-settings.png
 
 right:
-:include-image: assets/images/examples/perms/view-channel-perm.png {scale: 0.8}
+:include-image: assets/images/examples/perms/integrations.png {scale: 0.8}
 ```
+Once in here, you can modify which users can use commands, which channels allow commands, as well as choose which commands are allowed to either channel or users.
+
+
+:include-image: assets/images/examples/perms/integration-perms.png {scale: 0.8}
 
 
 
