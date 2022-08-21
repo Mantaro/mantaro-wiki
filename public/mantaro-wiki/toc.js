@@ -201,11 +201,8 @@ toc = [ {
       "title" : "Intro",
       "id" : "intro"
     }, {
-      "title" : "Slash Commands",
-      "id" : "slash-commands"
-    }, {
-      "title" : "Text-Commands (opts, game, etc.)",
-      "id" : "text-commands-opts-game-etc"
+      "title" : "Managing commands",
+      "id" : "managing-commands"
     }, {
       "title" : "Managing Commands (Mantaro Settings Method)",
       "id" : "managing-commands-mantaro-settings-method"
