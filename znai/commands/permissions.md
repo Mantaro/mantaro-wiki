@@ -15,9 +15,9 @@ However, a few commands may not work if the corresponding permission is missing.
 
 ```tabs
 "Slash Commands":
-:include-markdown: slash-command-permissions-tab.md
+:include-markdown: assets/md/perms/slash-command-permissions-tab.md
 "Text Commands (opts, game, etc.)":
-:include-markdown: text-command-permissions-tab.md
+:include-markdown: assets/md/perms/text-command-permissions-tab.md
 ```
 
 ---
@@ -27,6 +27,7 @@ However, a few commands may not work if the corresponding permission is missing.
 Mantaro has its own settings to disable/manage commands. You are able to disable channels, categories and entire commands
 on the entire server, a specific channel or for a specific role. Below is a list of all commands that can be used
 to restrict command usage.
-:include-markdown: assets/md/command-disabling.md
+
+:include-markdown: assets/md/perms/command-disabling.md
 
 ---
