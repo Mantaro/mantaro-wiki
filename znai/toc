@@ -7,6 +7,7 @@ basics
 commands
     permissions
     audio-commands
+    action-commands
     command-list
 configuration
     all-options
