@@ -14,6 +14,9 @@ As for access permissions, these can be handled using the integrated Discord [Co
 Note: People with the permission Administrator are unaffected by any restrictions and can always use all commands. 
 
 ### Integration settings
+
+Warning: Currently the Integration settings cannot be accessed on the mobile app. Please use a PC or browser version for this.
+
 You can find the Integration settings by going over to your `Server Settings`, then into the `Integrations` tab. Once here, locate the bot and click on `Manage`.
 
 ```columns
