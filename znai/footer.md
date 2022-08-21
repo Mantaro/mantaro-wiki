@@ -1,6 +1,6 @@
-```columns {left: {portion: 3}}
+```columns {left: {portion: 3}, right: {align: "center"}}
 left: 
-:include-image: https://cdn.discordapp.com/emojis/654322747094073365.webp { align: "left" }
+:include-image: https://cdn.discordapp.com/emojis/654322747094073365.webp
 
 right:
 Copyright 2016-2022 [David Rubio Escares / Kodehawa](https://github.com/Kodehawa).

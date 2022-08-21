@@ -1,0 +1,32 @@
+[
+  {
+    "Permission Name": "DJ",
+    "Description": "Having a role called `DJ` or the [established DJ role for the server](configuration/all-options#music-configuration), or being the one who requested the song. As well, having the bellow `Admin` permissions also grants this.",
+    "Mantaro": "-",
+    "User": "+"
+  },
+  {
+    "Permission Name": "Admin",
+    "Description": "Having a role called `Bot Commander`, or the role Permission `Manage Server`.",
+    "Mantaro": "-",
+    "User": "+"
+  },
+  {
+    "Permission Name": "Emotes",
+    "Description": "Having the role Permission `Use External Emoji`.",
+    "Mantaro": "+",
+    "User": "-"
+  },
+  {
+    "Permission Name": "Messages",
+    "Description": "Having the role Permission `Manage Messages`.",
+    "Mantaro": "+",
+    "User": "+"
+  },
+  {
+    "Permission Name": "Moderate",
+    "Description": "Having the role Permission `Moderate Member` (also called `Timeout Members`).",
+    "Mantaro": "+",
+    "User": "+"
+  }
+]

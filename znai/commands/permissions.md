@@ -3,12 +3,10 @@ title: Permissions & Managing
 ---
 
 # Intro
-Some commands require special permissions in order for them to work. Below is a list of said permissions and
+Some commands require special permissions in order for them to work. Below is a list of said permissions, who needs them, and
 their shorthands that we will mention through-out this wiki:
 
-* **DJ**: Anyone with the role called "DJ", your established DJ role for the server, or the one who requested the song.
-* **Admin**: Anyone with the role called "Bot Commander", or the role Permission "Manage Server"
-* **Messages**: Both Mantaro and the User using the command require the "Manage Messages" Discord permission.
+:include-table: assets/misc/perms/basic-perms.json {mappingPath: "assets/misc/yes-no-mapping.csv", Mantaro: {width: 80, align: "center"}, User: {width: 80, align: "center"}, 'Permission Name': {align: "center"}}
 
 The bot itself can function perfectly without these permissions. 
 However, a few commands may not work if the corresponding permission is missing.
