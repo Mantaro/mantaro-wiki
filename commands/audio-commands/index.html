@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: 🎵 Audio Commands</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>/forward</h1></header>
+<p>This command will skip the song forward by the time given. Options Time : Required. The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /forward time: 2m /forward time: 1m29s</p>
+</article>
+
+<article>
+<header><h1>/move</h1></header>
+<p>This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to. Options Channel : Optional. The voice channel to move to. If empty, it'll use the voice channel you're in. Examples /move /move channel: Music 1</p>
+</article>
+
+<article>
+<header><h1>/nowplaying</h1></header>
+<p>This command will display the song that is currently playing with timestamps. Examples /nowplaying channel: Music 1</p>
+</article>
+
+<article>
+<header><h1>/pause</h1></header>
+<p>This command will pause the music Player or unpause the Player if already paused. Examples /pause</p>
+</article>
+
+<article>
+<header><h1>/play</h1></header>
+<p>This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play. Options Song : Required. The song to play. Can be a URL or a search term. Soundcloud : Optional. Whether to search in Soundcloud. Only use to search. Top : Optional. Puts song at the start of the queue. Requires commands/permissions#intro DJ or Admin permissions. First : Optional. Plays the first search result. Only applies if a search is used. Requirements This command requires you to be connected to a Voice-Chat. Examples /play song: https://youtu.be/dQw4w9WgXcQ /play song: Rick Astley - Never Gonna Give You Up /play song: Rick Astley - Never Gonna Give You Up soundcloud: True</p>
+</article>
+
+<article>
+<header><h1>/queue</h1></header>
+<p>This command displays the current queue or the selected page of the queue. Subcommands show : Shows the current music queue. clear : Clears the current queue. Needs commands/permissions#intro DJ or Admin permissions. Examples /queue show /queue clear</p>
+</article>
+
+<article>
+<header><h1>/removetrack</h1></header>
+<p>This command removes the given track(s) from the queue. Options Range : Required. The song to remove, or a range of them (1-10). Can also use first, next or last. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /removetrack range: first /removetrack range: next /removetrack range: last /removetrack range: 2 /removetrack range: 1-10</p>
+</article>
+
+<article>
+<header><h1>/repeat</h1></header>
+<p>This command repeats the current song or the queue, or disables it. Options Queue : Optional. Repeat the entire queue instead of only the current song. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /repeat /repeat queue: True</p>
+</article>
+
+<article>
+<header><h1>/restartsong</h1></header>
+<p>This command will rewind the current song back to the start. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /restartsong</p>
+</article>
+
+<article>
+<header><h1>/rewind</h1></header>
+<p>This command will rewind the song back by the time given. Options Time : Required. The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /rewind time: 1m29s</p>
+</article>
+
+<article>
+<header><h1>/shuffle</h1></header>
+<p>This command will shuffle the current queue. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /shuffle</p>
+</article>
+
+<article>
+<header><h1>/skip</h1></header>
+<p>This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can skip immediately. Options Force : Optional. Whether to skip vote. Requires commands/permissions#intro DJ or Admin permissions. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /skip /skip force: True</p>
+</article>
+
+<article>
+<header><h1>/stop</h1></header>
+<p>This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can stop immediately. Requirements This command requires either commands/permissions#intro Admin or DJ permissions to stop immediately. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /stop</p>
+</article>
+
+<article>
+<header><h1>/volume</h1></header>
+<p>This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).Note: This feature is only available for basics/premium-perks Mantaro Premium users. Options Volume : Optional. The volume to use. Values are 1-100. Leave empty to check current volume. Examples /volume /volume volume: 25</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "forward",
+      "title" : "/forward",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command will skip the song forward by the time given.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Time",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Requirements",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "This command requires either ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "/mantaro-wiki/commands/permissions#intro",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "type" : "StrongEmphasis",
+                "content" : [ {
+                  "text" : "Admin",
+                  "type" : "SimpleText"
+                } ]
+              }, {
+                "text" : " or ",
+                "type" : "SimpleText"
+              }, {
+                "type" : "StrongEmphasis",
+                "content" : [ {
+                  "text" : "DJ",
+                  "type" : "SimpleText"
+                } ]
+              }, {
+                "text" : " permissions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/forward ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "time:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "2m",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/forward ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "time:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "1m29s",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "move",
+      "title" : "/move",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Channel",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. The voice channel to move to. If empty, it'll use the voice channel you're in.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/move",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/move ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "channel:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "Music 1",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "nowplaying",
+      "title" : "/nowplaying",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command will display the song that is currently playing with timestamps.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/nowplaying ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "channel:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "Music 1",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "pause",
+      "title" : "/pause",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command will pause the music Player or unpause the Player if already paused.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/pause",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "play",
+      "title" : "/play",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Song",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The song to play. Can be a URL or a search term.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Soundcloud",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Whether to search in Soundcloud. Only use to search.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Top",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Puts song at the start of the queue. Requires ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "DJ",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Admin",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "First",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Plays the first search result. Only applies if a search is used.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires you to be connected to a Voice-Chat.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/play ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "song:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "https://youtu.be/dQw4w9WgXcQ",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/play ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "song:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "Rick Astley - Never Gonna Give You Up",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/play ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "song:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "Rick Astley - Never Gonna Give You Up ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "soundcloud:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "True",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "queue",
+      "title" : "/queue",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command displays the current queue or the selected page of the queue.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Subcommands",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "show",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Shows the current music queue.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "clear",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Clears the current queue. Needs ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "DJ",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Admin",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/queue show",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/queue clear",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "removetrack",
+      "title" : "/removetrack",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command removes the given track(s) from the queue.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Range",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The song to remove, or a range of them (1-10). Can also use first, next or last.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires either ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Admin",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "DJ",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires you to be connected to the same Voice-Chat as Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/removetrack ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "range:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "first",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/removetrack ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "range:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "next",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/removetrack ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "range:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "last",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/removetrack ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "range:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "2",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/removetrack ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "range:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "1-10",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "repeat",
+      "title" : "/repeat",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command repeats the current song or the queue, or disables it.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Queue",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Repeat the entire queue instead of only the current song.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires you to be connected to the same Voice-Chat as Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/repeat",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/repeat ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "queue:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "True",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "restartsong",
+      "title" : "/restartsong",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command will rewind the current song back to the start.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires either ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Admin",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "DJ",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/restartsong",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "rewind",
+      "title" : "/rewind",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command will rewind the song back by the time given.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Time",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Required",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ". The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires either ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Admin",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "DJ",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/rewind ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "time:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "1m29s",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "shuffle",
+      "title" : "/shuffle",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command will shuffle the current queue.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires you to be connected to the same Voice-Chat as Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/shuffle",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "skip",
+      "title" : "/skip",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "People with DJ permissions can skip immediately",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Force",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. Whether to skip vote. Requires ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "DJ",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Admin",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires you to be connected to the same Voice-Chat as Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/skip",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/skip ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "force:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "True",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "stop",
+      "title" : "/stop",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "People with DJ permissions can stop immediately",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires either ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Admin",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "DJ",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " to stop immediately.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires you to be connected to the same Voice-Chat as Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/stop",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "id" : "volume",
+      "title" : "/volume",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: ",
+          "type" : "SimpleText"
+        }, {
+          "stroke" : "yellow",
+          "id" : "dollar-sign",
+          "type" : "Icon"
+        }, {
+          "text" : " This feature is only available for ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/mantaro-wiki/basics/premium-perks",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mantaro Premium users",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "code" : "Volume",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : ": Optional. The volume to use. Values are 1-100. Leave empty to check current volume.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/volume",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/volume ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "volume:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "25",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    } ],
+    "lastModifiedTime" : 1661113967940,
+    "tocItem" : {
+      "chapterTitle" : "Commands",
+      "pageTitle" : "🎵 Audio Commands",
+      "pageMeta" : {
+        "title" : [ "🎵 Audio Commands" ]
+      },
+      "dirName" : "commands",
+      "fileName" : "audio-commands",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "/forward",
+        "id" : "forward"
+      }, {
+        "title" : "/move",
+        "id" : "move"
+      }, {
+        "title" : "/nowplaying",
+        "id" : "nowplaying"
+      }, {
+        "title" : "/pause",
+        "id" : "pause"
+      }, {
+        "title" : "/play",
+        "id" : "play"
+      }, {
+        "title" : "/queue",
+        "id" : "queue"
+      }, {
+        "title" : "/removetrack",
+        "id" : "removetrack"
+      }, {
+        "title" : "/repeat",
+        "id" : "repeat"
+      }, {
+        "title" : "/restartsong",
+        "id" : "restartsong"
+      }, {
+        "title" : "/rewind",
+        "id" : "rewind"
+      }, {
+        "title" : "/shuffle",
+        "id" : "shuffle"
+      }, {
+        "title" : "/skip",
+        "id" : "skip"
+      }, {
+        "title" : "/stop",
+        "id" : "stop"
+      }, {
+        "title" : "/volume",
+        "id" : "volume"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

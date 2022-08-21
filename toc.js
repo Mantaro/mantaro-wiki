@@ -212,6 +212,58 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Commands",
+    "pageTitle" : "🎵 Audio Commands",
+    "pageMeta" : {
+      "title" : [ "🎵 Audio Commands" ]
+    },
+    "dirName" : "commands",
+    "fileName" : "audio-commands",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "/forward",
+      "id" : "forward"
+    }, {
+      "title" : "/move",
+      "id" : "move"
+    }, {
+      "title" : "/nowplaying",
+      "id" : "nowplaying"
+    }, {
+      "title" : "/pause",
+      "id" : "pause"
+    }, {
+      "title" : "/play",
+      "id" : "play"
+    }, {
+      "title" : "/queue",
+      "id" : "queue"
+    }, {
+      "title" : "/removetrack",
+      "id" : "removetrack"
+    }, {
+      "title" : "/repeat",
+      "id" : "repeat"
+    }, {
+      "title" : "/restartsong",
+      "id" : "restartsong"
+    }, {
+      "title" : "/rewind",
+      "id" : "rewind"
+    }, {
+      "title" : "/shuffle",
+      "id" : "shuffle"
+    }, {
+      "title" : "/skip",
+      "id" : "skip"
+    }, {
+      "title" : "/stop",
+      "id" : "stop"
+    }, {
+      "title" : "/volume",
+      "id" : "volume"
+    } ]
+  }, {
+    "chapterTitle" : "Commands",
     "pageTitle" : "Command List",
     "pageMeta" : { },
     "dirName" : "commands",
@@ -223,9 +275,6 @@ toc = [ {
     }, {
       "title" : "Basic knowledge",
       "id" : "basic-knowledge"
-    }, {
-      "title" : "🎵 Audio Commands",
-      "id" : "-audio-commands"
     }, {
       "title" : "👋 Action Commands",
       "id" : "-action-commands"

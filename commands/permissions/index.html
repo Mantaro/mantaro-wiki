@@ -84,7 +84,7 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Intro</h1></header>
-<p>Some commands require special permissions in order for them to work. Below is a list of said permissions and their shorthands that we will mention through-out this wiki:DJ: Anyone with the role called &quot;DJ&quot;, your established DJ role for the server, or the one who requested the song. Admin: Anyone with the role called &quot;Bot Commander&quot;, or the role Permission &quot;Manage Server&quot; Messages: Both Mantaro and the User using the command require the &quot;Manage Messages&quot; Discord permission. The bot itself can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.</p>
+<p>Some commands require special permissions in order for them to work. Below is a list of said permissions, who needs them, and their shorthands that we will mention through-out this wiki: Permission Name Description Mantaro User DJ Having a role called `DJ` or the [established DJ role for the server](configuration/all-options#music-configuration), or being the one who requested the song. As well, having the bellow `Admin` permissions also grants this. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Admin Having a role called `Bot Commander`, or the role Permission `Manage Server`. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Emotes Having the role Permission `Use External Emoji`. `:icon: check {stroke: &quot;green&quot;}` `:icon: slash {stroke: &quot;red&quot;}` Messages Having the role Permission `Manage Messages`. `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` Moderate Having the role Permission `Moderate Member` (also called `Timeout Members`). `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` The bot itself can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.</p>
 </article>
 
 <article>
@@ -132,7 +132,7 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Some commands require special permissions in order for them to work. Below is a list of said permissions and",
+          "text" : "Some commands require special permissions in order for them to work. Below is a list of said permissions, who needs them, and",
           "type" : "SimpleText"
         }, {
           "type" : "SoftLineBreak"
@@ -141,55 +141,213 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "table" : {
+          "columns" : [ {
+            "title" : "Permission Name",
+            "align" : "center"
+          }, {
+            "title" : "Description"
+          }, {
+            "title" : "Mantaro",
+            "width" : 80,
+            "align" : "center"
+          }, {
+            "title" : "User",
+            "width" : 80,
+            "align" : "center"
+          } ],
+          "data" : [ [ [ {
             "type" : "Paragraph",
             "content" : [ {
-              "type" : "StrongEmphasis",
+              "text" : "DJ",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Having a role called ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "DJ",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " or the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "/mantaro-wiki/configuration/all-options#music-configuration",
+              "isFile" : false,
+              "type" : "Link",
               "content" : [ {
-                "text" : "DJ",
+                "text" : "established DJ role for the server",
                 "type" : "SimpleText"
               } ]
             }, {
-              "text" : ": Anyone with the role called \"DJ\", your established DJ role for the server, or the one who requested the song.",
+              "text" : ", or being the one who requested the song. As well, having the bellow ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Admin",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " permissions also grants this.",
               "type" : "SimpleText"
             } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
+          } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Admin",
-                "type" : "SimpleText"
-              } ]
-            }, {
-              "text" : ": Anyone with the role called \"Bot Commander\", or the role Permission \"Manage Server\"",
-              "type" : "SimpleText"
+              "stroke" : "red",
+              "id" : "slash",
+              "type" : "Icon"
             } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
+          } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Messages",
-                "type" : "SimpleText"
-              } ]
-            }, {
-              "text" : ": Both Mantaro and the User using the command require the \"Manage Messages\" Discord permission.",
+              "stroke" : "green",
+              "id" : "check",
+              "type" : "Icon"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Admin",
               "type" : "SimpleText"
             } ]
-          } ]
-        } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Having a role called ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Bot Commander",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ", or the role Permission ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Manage Server",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "red",
+              "id" : "slash",
+              "type" : "Icon"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "green",
+              "id" : "check",
+              "type" : "Icon"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Emotes",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Having the role Permission ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Use External Emoji",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "green",
+              "id" : "check",
+              "type" : "Icon"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "red",
+              "id" : "slash",
+              "type" : "Icon"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Messages",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Having the role Permission ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Manage Messages",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ".",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "green",
+              "id" : "check",
+              "type" : "Icon"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "green",
+              "id" : "check",
+              "type" : "Icon"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Moderate",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Having the role Permission ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Moderate Member",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " (also called ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "Timeout Members",
+              "type" : "InlinedCode"
+            }, {
+              "text" : ").",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "green",
+              "id" : "check",
+              "type" : "Icon"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "green",
+              "id" : "check",
+              "type" : "Icon"
+            } ]
+          } ] ] ]
+        },
+        "type" : "Table"
       }, {
         "type" : "Paragraph",
         "content" : [ {
@@ -297,7 +455,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "columns" : [ {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\server-settings.png",
-            "timestamp" : 1661070646717,
+            "timestamp" : 1661057698165,
             "shapes" : [ ],
             "width" : 244.0,
             "height" : 190.0,
@@ -307,7 +465,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "content" : [ {
             "scale" : 0.8,
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integrations.png",
-            "timestamp" : 1661070646715,
+            "timestamp" : 1661059504432,
             "shapes" : [ ],
             "width" : 487.0,
             "height" : 122.0,
@@ -325,7 +483,7 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "scale" : 0.8,
         "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integration-perms.png",
-        "timestamp" : 1661070646714,
+        "timestamp" : 1661069701935,
         "shapes" : [ ],
         "width" : 664.0,
         "height" : 297.0,
@@ -431,7 +589,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ]
       }, {
         "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\edit-channel.png",
-        "timestamp" : 1661070646713,
+        "timestamp" : 1661054979046,
         "shapes" : [ ],
         "width" : 264.0,
         "height" : 74.0,
@@ -439,7 +597,7 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "scale" : 0.5,
         "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\advanced-perms.png",
-        "timestamp" : 1661071487820,
+        "timestamp" : 1661099420018,
         "shapes" : [ ],
         "width" : 787.0,
         "height" : 269.0,
@@ -449,7 +607,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "content" : [ {
             "scale" : 0.5,
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\channel-perm-add.png",
-            "timestamp" : 1661071275684,
+            "timestamp" : 1661099420019,
             "shapes" : [ ],
             "width" : 343.0,
             "height" : 486.0,
@@ -458,7 +616,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\perm-navigate.png",
-            "timestamp" : 1661071589239,
+            "timestamp" : 1661099420019,
             "shapes" : [ ],
             "width" : 294.0,
             "height" : 173.0,
@@ -469,7 +627,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Columns"
       }, {
         "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\view-channel-perm.png",
-        "timestamp" : 1661071432088,
+        "timestamp" : 1661055483473,
         "shapes" : [ ],
         "width" : 435.0,
         "height" : 102.0,
@@ -785,7 +943,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661077714813,
+    "lastModifiedTime" : 1661107212705,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "Permissions & Managing",
