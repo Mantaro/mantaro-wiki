@@ -4,7 +4,8 @@ Since this is the first page that appears when you look up Mantaro, here it's th
 
 [_Click me to join the support server if you need more help!_](https://support.mantaro.site)
 
-## Basic knowledge
+---
+# Basic knowledge
 
 **Permissions:**
 
@@ -24,17 +25,7 @@ Since this is the first page that appears when you look up Mantaro, here it's th
 * 🔥: Commands/Subcommands with this emote are **NSFW features**. They will not work on channels that are not marked as NSFW.
 * 🔧: Commands/subcommands with this emote are mostly technical commands. Its not likely you will have to use these commands as they are mostly for Developers and Helpers on the support server.
 
-## Summary
-* [Audio Commands](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#-audio-commands)
-* [Action Commands](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#-action-commands)
-* [Currency Commands](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#-currency-commands)
-* [Game Commands](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#%EF%B8%8F-game-commands)
-* [Image Commands](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#%EF%B8%8F-image-commands)
-* [Fun Commands](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#-fun-commands)
-* [Moderation Commands](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#-moderation-commands)
-* [Info Commands](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#-info-commands)
-* [Utility Commands](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#%EF%B8%8Futility-commands)
-
+---
 # 🎵 Audio Commands
 
 "h3" `/forward`
@@ -57,7 +48,7 @@ This command will skip the song forward by the time given.
 </p>
 </details>
 
----
+
 
 "h3" `/move`
 <details><summary>Click here for more details</summary>
@@ -76,7 +67,7 @@ This command will move Mantaro to the Voice-Chat you specified. If a channel isn
 </p>
 </details>
 
----
+
 
 "h3" `/nowplaying`
 <details><summary>Click here for more details</summary>
@@ -91,7 +82,7 @@ This command will display the song that is currently playing with timestamps.
 </p>
 </details>
 
----
+
 
 "h3" `/pause`
 <details><summary>Click here for more details</summary>
@@ -106,7 +97,7 @@ This command will pause the music Player or unpause the Player if already paused
 </p>
 </details>
 
----
+
 
 "h3" `/play`
 <details><summary>Click here for more details</summary>
@@ -132,7 +123,7 @@ This command automatically connects Mantaro to your current Voice-Chat and plays
 </p>
 </details>
 
----
+
 
 "h3" `/queue`
 <details><summary>Click here for more details</summary>
@@ -152,7 +143,7 @@ This command displays the current queue or the selected page of the queue.<br>
 </p>
 </details>
 
----
+
 
 "h3" `/removetrack`
 <details><summary>Click here for more details</summary>
@@ -178,7 +169,7 @@ This command removes the given track(s) from the queue.<br>
 </p>
 </details>
 
----
+
 
 "h3" `/repeat`
 <details><summary>Click here for more details</summary>
@@ -200,7 +191,7 @@ This command repeats the current song or the queue, or disables it.<br>
 </p>
 </details>
 
----
+
 
 "h3" `/restartsong`
 <details><summary>Click here for more details</summary>
@@ -218,7 +209,7 @@ This command will rewind the current song back to the start.<br>
 </p>
 </details>
 
----
+
 
 "h3" `/rewind`
 <details><summary>Click here for more details</summary>
@@ -239,7 +230,7 @@ This command will rewind the song back by the time given.<br>
 </p>
 </details>
 
----
+
 
 "h3" `/shuffle`
 <details><summary>Click here for more details</summary>
@@ -257,7 +248,7 @@ This command will shuffle the current queue.<br>
 </p>
 </details>
 
----
+
 
 "h3" `/skip`
 <details><summary>Click here for more details</summary>
@@ -279,7 +270,7 @@ This command skips the current song if 50% or more of the people in the Voice-Ch
 </p>
 </details>
 
----
+
 
 "h3" `/stop`
 <details><summary>Click here for more details</summary>
@@ -298,7 +289,7 @@ This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or 
 </p>
 </details>
 
----
+
 
 "h3" 💰 `/volume`
 <details><summary>Click here for more details</summary>
@@ -321,8 +312,6 @@ This command lets you check the current volume, as well as set the volume to the
 </details>
 
 ---
-
-
 # 👋 Action Commands
 
 "h3" `/action`
@@ -365,7 +354,7 @@ A bunch of action commands that didn't fit into a separate command
 </p>
 </details>
 
----
+
 
 "h3" `/cuddle`
 <details><summary>Click here for more details</summary>
@@ -385,7 +374,7 @@ Cuddle someone on the server.
 </p>
 </details>
 
----
+
 
 "h3" `/hug`
 <details><summary>Click here for more details</summary>
@@ -405,7 +394,7 @@ Hug someone on the server.
 </p>
 </details>
 
----
+
 
 "h3" `/kiss`
 <details><summary>Click here for more details</summary>
@@ -425,7 +414,7 @@ Kiss someone on the server.
 </p>
 </details>
 
----
+
 
 "h3" `/pat`
 <details><summary>Click here for more details</summary>
@@ -445,7 +434,7 @@ Pat someone on the server.
 </p>
 </details>
 
----
+
 
 "h3" `/poke`
 <details><summary>Click here for more details</summary>
@@ -465,7 +454,7 @@ Poke someone on the server.
 </p>
 </details>
 
----
+
 
 "h3" `/pout`
 <details><summary>Click here for more details</summary>
@@ -485,7 +474,7 @@ Pout at someone on the server
 </p>
 </details>
 
----
+
 
 "h3" `/slap`
 <details><summary>Click here for more details</summary>
@@ -505,7 +494,7 @@ Slap someone on the server.
 </p>
 </details>
 
----
+
 
 "h3" `/tickle`
 <details><summary>Click here for more details</summary>
@@ -526,8 +515,6 @@ Tickle someone on the server.
 </details>
 
 ---
-
-
 # 💸 Currency Commands
 
 "h3" `~>badges {@mention/username/user tag}`
@@ -556,7 +543,7 @@ Shows a list of your own badges or a list of the badges from the given user. A f
 </p>
 </details>
 
----
+
 
 "h3" `~>balance {@mention/username/user tag}`
 <details><summary>Click here for more details</summary>
@@ -580,7 +567,7 @@ Returns your current amount of money or the amount of money of the person that w
 </p>
 </details>
 
----
+
 
 "h3" `~>buy {amount/all/quarter/half} <item>`
 <details><summary>Click here for more details</summary>
@@ -600,7 +587,7 @@ Allows you to buy items from the market.
 </p>
 </details>
 
----
+
 
 "h3" `~>cast <item> {wrench} {-amount <amount>}`
 <details><summary>Click here for more details</summary>
@@ -629,7 +616,7 @@ Different wrenches have different amounts of items they can cast at the same tim
 </p>
 </details>
 
----
+
 
 "h3" `~>chop`
 <details><summary>Click here for more details</summary>
@@ -648,7 +635,7 @@ Use one of your axes to chop down trees.
 </p>
 </details>
 
----
+
 
 "h3" `~>daily {@mention/-check}`
 <details><summary>Click here for more details</summary>
@@ -671,7 +658,7 @@ Claim your Daily credits. You can only claim them once every 24 hours. Mentionin
 </p>
 </details>
 
----
+
 
 "h3" 💰 `~>dailycrate {-check}`
 <details><summary>Click here for more details</summary>
@@ -690,7 +677,7 @@ Allows you to receive a random crate once per day. The -check flag allows you to
 </p>
 </details>
 
----
+
 
 "h3" `~>divorce`
 <details><summary>Click here for more details</summary>
@@ -708,7 +695,7 @@ Attend the single life again.
 </p>
 </details>
 
----
+
 
 "h3" `~>dump {amount} <item>`
 <details><summary>Click here for more details</summary>
@@ -729,7 +716,7 @@ Allows you to dump an item from your inventory. Using `allof` will dump all the 
 </p>
 </details>
 
----
+
 
 "h3" `~>equip <item>`
 <details><summary>Click here for more details</summary>
@@ -748,7 +735,7 @@ Allows you to equip an item (Picks, Rods or Axes).
 </p>
 </details>
 
----
+
 
 "h3" `~>fish`
 <details><summary>Click here for more details</summary>
@@ -767,7 +754,7 @@ Catch fish using one of your fishing rods.
 </p>
 </details>
 
----
+
 
 "h3" `~>gamble <all/half/quarter/amount/percentage>`
 <details><summary>Click here for more details</summary>
@@ -789,7 +776,7 @@ Gamble your credits for possible profit. The current max of credits you can gamb
 </p>
 </details>
 
----
+
 
 "h3" `~>inventory {@mention/username/tag/nickname} {-info/-calculate}`
 <details><summary>Click here for more details</summary>
@@ -816,7 +803,7 @@ Using -info will give you a longer more detailed response and using -calculate w
 </p>
 </details>
 
----
+
 
 "h3" `~>iteminfo <item>`
 <details><summary>Click here for more details</summary>
@@ -834,7 +821,7 @@ Provides you with information about an item.
 </p>
 </details>
 
----
+
 
 "h3" `~>itemtransfer <@mention> <item> {amount}`
 <details><summary>Click here for more details</summary>
@@ -856,7 +843,7 @@ Transfer one of your items to someone else.
 </p>
 </details>
 
----
+
 
 "h3" `~>leaderboard {money/rep/lvl/streak/claim/slots/gamble}`
 <details><summary>Click here for more details</summary>
@@ -892,7 +879,7 @@ Returns the Top 10 for various statistics in Mantaro.
 </p>
 </details>
 
----
+
 
 "h3" `~>level {@mention}`
 <details><summary>Click here for more details</summary>
@@ -914,7 +901,7 @@ Allows you to check your level or the level of someone else.
 </p>
 </details>
 
----
+
 
 "h3" `~>loot`
 <details><summary>Click here for more details</summary>
@@ -932,7 +919,7 @@ Loot the chat for possible credits and items. Some items are only obtained via l
 </p>
 </details>
 
----
+
 
 "h3" `~>market {sell/buy/dump} {amount/all/quarter/half} {item name/emoji}`
 <details><summary>Click here for more details</summary>
@@ -973,7 +960,7 @@ Browse the Market. When used alone Mantaro will show you a list of all the items
 </p>
 </details>
 
----
+
 
 "h3" `~>marry <mention>`
 <details><summary>Click here for more details</summary>
@@ -1005,7 +992,7 @@ Marry someone. The person you marry also appears on your profile.
 </p>
 </details>
 
----
+
 
 "h3" `~>mine`
 <details><summary>Click here for more details</summary>
@@ -1024,7 +1011,7 @@ Use one of your pickaxes to mine minerals.
 </p>
 </details>
 
----
+
 
 "h3" `~>opencrate {crate name}`
 <details><summary>Click here for more details</summary>
@@ -1044,7 +1031,7 @@ Open one of your Lootboxes.
 </p>
 </details>
 
----
+
 
 "h3" `~>pet`
 <details><summary>Click here for more details</summary>
@@ -1084,7 +1071,7 @@ Allows you to buy a pet so that you can take care of it. A pet will also help yo
 </p>
 </details>
 
----
+
 
 "h3" `~>profile {mention/username/tag/nickname}`
 <details><summary>Click here for more details</summary>
@@ -1125,7 +1112,7 @@ Look at your own or the given person's profile.
 </p>
 </details>
 
----
+
 
 "h3" `~>rep <mention/username/user tag>`
 <details><summary>Click here for more details</summary>
@@ -1148,7 +1135,7 @@ Give someone Reputation.
 </p>
 </details>
 
----
+
 
 "h3" `~>repair <item> {wrench}`
 <details><summary>Click here for more details</summary>
@@ -1175,7 +1162,7 @@ Allows you to repair broken items. If a wrench isn't specified Mantaro will atte
 </p>
 </details>
 
----
+
 
 "h3" `~>salvage <item> {wrench}`
 <details><summary>Click here for more details</summary>
@@ -1199,7 +1186,7 @@ Allows you to salvage broken items. If a wrench isn't specified Mantaro will att
 </p>
 </details>
 
----
+
 
 "h3" `~>sell {amount/all/allof} <item>`
 <details><summary>Click here for more details</summary>
@@ -1219,7 +1206,7 @@ Allows you to sell an item in the Market. If you use `all` you will **sell all y
 </p>
 </details>
 
----
+
 
 "h3" `~>slots {amount|-useticket {-amount <amount>}}`
 <details><summary>Click here for more details</summary>
@@ -1241,7 +1228,7 @@ Uses the amount of credits specified to roll the slot machine. You can also buy 
 </p>
 </details>
 
----
+
 
 "h3" `~>tools`
 <details><summary>Click here for more details</summary>
@@ -1259,7 +1246,7 @@ Check the durability and status of your tools.
 </p>
 </details>
 
----
+
 
 "h3" `~>transfer <mention> <amount>`
 <details><summary>Click here for more details</summary>
@@ -1280,7 +1267,7 @@ Transfer someone money. You can transfer a max of 500,000 credits, and you canno
 </p>
 </details>
 
----
+
 
 "h3" `~>unequip <pick/rod/axe>`
 <details><summary>Click here for more details</summary>
@@ -1300,7 +1287,7 @@ Allows you to unequip previously equipped items. Depending on how damaged the it
 </p>
 </details>
 
----
+
 
 "h3" `~>useitem <item> {-amount <amount>}`
 <details><summary>Click here for more details</summary>
@@ -1327,7 +1314,7 @@ Allows you to use certain items. Specifying -amount X will use X items instead o
 </p>
 </details>
 
----
+
 
 "h3" `~>waifu`
 <details><summary>Click here for more details</summary>
@@ -1364,8 +1351,6 @@ Manage your waifus. Using the command on its own (no subcommands) will show you 
 </details>
 
 ---
-
-
 # 🕹️ Game Commands
 
 "h3" `~>game <game> {mention(s)/role(s)}`
@@ -1396,7 +1381,7 @@ Starts a guessing game of either Pokemon, anime characters or guessing the numbe
 </p>
 </details>
 
----
+
 
 "h3" `~>trivia {mention(s)/role(s)} {easy/medium/hard}`
 <details><summary>Click here for more details</summary>
@@ -1417,8 +1402,6 @@ Asks for the answer to a random trivia question
 </details>
 
 ---
-
-
 # 🖼️ Image Commands
 "h3" `~>cat`
 <details><summary>Click here for more details</summary>
@@ -1436,7 +1419,7 @@ Returns a cute cat image.
 </p>
 </details>
 
----
+
 
 "h3" `~>catgirl`
 <details><summary>Click here for more details</summary>
@@ -1459,7 +1442,7 @@ Returns a cute or naughty anime catgirl image.
 </p>
 </details>
 
----
+
 
 "h3" `~>danbooru {tag(s)} {rating}`
 <details><summary>Click here for more details</summary>
@@ -1484,7 +1467,7 @@ Returns an image from danbooru. You may add as many tags as you like. Each new w
 </p>
 </details>
 
----
+
 
 "h3" `~>dog`
 <details><summary>Click here for more details</summary>
@@ -1502,7 +1485,7 @@ Returns a cute dog image.
 </p>
 </details>
 
----
+
 
 "h3" 🔥 `~>e621 {tag(s)}`
 <details><summary>Click here for more details</summary>
@@ -1521,7 +1504,7 @@ Returns an image from e621. You may add as many tags as you like. Each new word 
 </p>
 </details>
 
----
+
 
 "h3" 🔥 `~>e926 {tag(s)}`
 <details><summary>Click here for more details</summary>
@@ -1540,7 +1523,7 @@ Returns an image from e926. You may add as many tags as you like. Each new word 
 </p>
 </details>
 
----
+
 
 "h3" `~>gelbooru {tag(s)} {rating}`
 <details><summary>Click here for more details</summary>
@@ -1565,7 +1548,7 @@ Returns an image from gelbooru. You may add as many tags as you like. Each new w
 </p>
 </details>
 
----
+
 
 "h3" `~>konachan {tag(s)} {rating}`
 <details><summary>Click here for more details</summary>
@@ -1590,7 +1573,7 @@ Returns an image from konachan. You may add as many tags as you like. Each new w
 </p>
 </details>
 
----
+
 
 "h3" 🔥 `~>rule34 {tag(s)}`
 <details><summary>Click here for more details</summary>
@@ -1609,7 +1592,7 @@ Returns an image from rule34. You may add as many tags as you like. Each new wor
 </p>
 </details>
 
----
+
 
 "h3" `~>safebooru {tag(s)}`
 <details><summary>Click here for more details</summary>
@@ -1627,7 +1610,7 @@ Returns an image from safebooru. You may add as many tags as you like. Each new 
 </p>
 </details>
 
----
+
 
 "h3" 🔥 `~>yandere {tag(s)} {rating}`
 <details><summary>Click here for more details</summary>
@@ -1653,8 +1636,6 @@ Returns an image from yandere. You may add as many tags as you like. Each new wo
 </details>
 
 ---
-
-
 # 🎲 Fun Commands
 
 "h3" `~>8ball <question>`
@@ -1676,7 +1657,7 @@ Ask the magic 8ball a question.
 </p>
 </details>
 
----
+
 
 "h3" `~>anime <name>`
 <details><summary>Click here for more details</summary>
@@ -1699,7 +1680,7 @@ You will be given a list of search results using the indicated anime. After this
 </p>
 </details>
 
----
+
 
 "h3" `~>character <name>`
 <details><summary>Click here for more details</summary>
@@ -1722,7 +1703,7 @@ You will be given a list of search results using the indicated character. After 
 </p>
 </details>
 
----
+
 
 "h3" `~>coinflip <times>`
 <details><summary>Click here for more details</summary>
@@ -1741,7 +1722,7 @@ Flip the coin once or multiple times.
 </p>
 </details>
 
----
+
 
 "h3" `~>love <@mention> {@mention}`
 <details><summary>Click here for more details</summary>
@@ -1760,7 +1741,7 @@ Calculate the love between two people. You can either mention one user (matches 
 </p>
 </details>
 
----
+
 
 "h3" `~>ratewaifu <text>`
 <details><summary>Click here for more details</summary>
@@ -1782,7 +1763,7 @@ Rate your waifu from 0-100.
 </p>
 </details>
 
----
+
 
 "h3" `~>roll {times} {-amount <amount>} {-size <die size>}`
 <details><summary>Click here for more details</summary>
@@ -1808,8 +1789,6 @@ The other option is to use the `-amount` field to specify how many times the die
 </details>
 
 ---
-
-
 # 🔨 Moderation Commands
 
 "h3" `~>ban <mention> {reason}`
@@ -1828,7 +1807,7 @@ Bans the given member from the server and deletes all of their messages from the
 </p>
 </details>
 
----
+
 
 "h3" `~>kick <mention> {reason}`
 <details><summary>Click here for more details</summary>
@@ -1846,7 +1825,7 @@ Kicks the given Member from the server.
 </p>
 </details>
 
----
+
 
 "h3" `~>mute [time ]<mention> {reason}`
 <details><summary>Click here for more details</summary>
@@ -1865,7 +1844,7 @@ Remember that Mantaro only assigns the specified Mute role to the user mentioned
 </p>
 </details>
 
----
+
 
 "h3" `~>opts`
 <details><summary>Click here for more details</summary>
@@ -1880,7 +1859,7 @@ The opts command includes an extensive list of option commands. You can find our
 </p>
 </details>
 
----
+
 
 "h3" `~>prune <amount>`
 <details><summary>Click here for more details</summary>
@@ -1905,7 +1884,7 @@ Deletes messages (excluding messages that are older than 14 days). Minimum of me
 </p>
 </details>
 
----
+
 
 "h3" `~>softban <mention> {reason}`
 <details><summary>Click here for more details</summary>
@@ -1923,7 +1902,7 @@ Soft-Bans (Bans and immediately unbans) the given Member from the server and del
 </p>
 </details>
 
----
+
 
 "h3" `~>unmute <mention>`
 <details><summary>Click here for more details</summary>
@@ -1942,8 +1921,6 @@ Unmute the mentioned user if muted
 </details>
 
 ---
-
-
 # 💭 Info Commands
 
 "h3" `~>avatar {@mention/username/user tag}`
@@ -1964,7 +1941,7 @@ Grab your own avatar or the given person's avatar.
 </p>
 </details>
 
----
+
 
 "h3" `~>donate`
 <details><summary>Click here for more details</summary>
@@ -1982,7 +1959,7 @@ Shows all of Mantaro's donation methods.
 </p>
 </details>
 
----
+
 
 "h3" `~>help {command/category}`
 <details><summary>Click here for more details</summary>
@@ -2006,7 +1983,7 @@ Get all commands or, if you specify a command, get more information on the comma
 </p>
 </details>
 
----
+
 
 "h3" 🔧 `~>info`
 <details><summary>Click here for more details</summary>
@@ -2027,7 +2004,7 @@ Get Mantaro's technical information.
 </p>
 </details>
 
----
+
 
 "h3" `~>invite`
 <details><summary>Click here for more details</summary>
@@ -2045,7 +2022,7 @@ Get the invite necessary to add Mantaro to your server, The support server Invit
 </p>
 </details>
 
----
+
 
 "h3" `~>lang`
 <details><summary>Click here for more details</summary>
@@ -2067,7 +2044,7 @@ Show info on how to change your language and what languages are available.
 </p>
 </details>
 
----
+
 
 "h3" `~>music`
 <details><summary>Click here for more details</summary>
@@ -2085,7 +2062,7 @@ This will tell you how to properly use Mantaros music feature.
 </p>
 </details>
 
----
+
 
 "h3" `~>ping`
 <details><summary>Click here for more details</summary>
@@ -2103,7 +2080,7 @@ Check how fast Mantaro is responding.
 </p>
 </details>
 
----
+
 
 "h3" `~>prefix`
 <details><summary>Click here for more details</summary>
@@ -2121,7 +2098,7 @@ See information about Mantaro's prefix.
 </p>
 </details>
 
----
+
 
 "h3" `~>roleinfo {role name}`
 <details><summary>Click here for more details</summary>
@@ -2140,7 +2117,7 @@ Shows info about a given role. If no role is given it will give information on y
 </p>
 </details>
 
----
+
 
 "h3" `~>season`
 <details><summary>Click here for more details</summary>
@@ -2158,7 +2135,7 @@ See information about how to take part in the seasons.
 </p>
 </details>
 
----
+
 
 "h3" `~>serverinfo`
 <details><summary>Click here for more details</summary>
@@ -2180,7 +2157,7 @@ Check some server stats.
 </p>
 </details>
 
----
+
 
 "h3" 🔧 `~>shard`
 <details><summary>Click here for more details</summary>
@@ -2198,7 +2175,7 @@ Will tell you the current shard instance your guild is on (used for debugging).
 </p>
 </details>
 
----
+
 
 "h3" 🔧 `~>shardinfo`
 <details><summary>Click here for more details</summary>
@@ -2216,7 +2193,7 @@ Check connectivity of all Mantaro shards (You wont really need this unless you a
 </p>
 </details>
 
----
+
 
 "h3" 🔧 `~>stats <subcommand>`
 <details><summary>Click here for more details</summary>
@@ -2243,7 +2220,7 @@ Get some stats about Mantaros VPS, most used commands, join/leave stats for guil
 </p>
 </details>
 
----
+
 
 "h3" `~>support`
 <details><summary>Click here for more details</summary>
@@ -2261,7 +2238,7 @@ Gives you a link to the support server.
 </p>
 </details>
 
----
+
 
 "h3" `~>userinfo {@mention/username/user tag}`
 <details><summary>Click here for more details</summary>
@@ -2280,7 +2257,7 @@ Shows information about your or the given person's roles e.t.c.
 </p>
 </details>
 
----
+
 
 "h3" `~>vipstatus {mention}`
 <details><summary>Click here for more details</summary>
@@ -2307,8 +2284,6 @@ Will show you the remaining time in days of your (or someone else) or the guilds
 </details>
 
 ---
-
-
 # ✏️Utility Commands
 
 "h3" `~>activatekey <key>`
@@ -2327,7 +2302,7 @@ Will use a premium key to make either you or the guild premium (Whenever it will
 </p>
 </details>
 
----
+
 
 "h3" `~>birthday <date>`
 <details><summary>Click here for more details</summary>
@@ -2358,7 +2333,7 @@ Set/Remove your own birthday or show everyone with a birthday this month. The da
 </p>
 </details>
 
----
+
 
 "h3" `~>createpoll <-options <options1>,<option2>,..> <-time <time>> <-name <name>> {-image <url>}`
 <details><summary>Click here for more details</summary>
@@ -2379,7 +2354,7 @@ Create a poll with options. The person that created the poll can cancel it by ty
 </p>
 </details>
 
----
+
 
 "h3" `~>custom <subcommand>`
 <details><summary>Click here for more details</summary>
@@ -2421,7 +2396,7 @@ Creates a custom command. For further info check our [Custom Commands Guide](htt
 </p>
 </details>
 
----
+
 
 "h3" `~>iam <name>`
 <details><summary>Click here for more details</summary>
@@ -2446,7 +2421,7 @@ Applies a self-assignable role to you or lists all self-assignable roles. Roles 
 </p>
 </details>
 
----
+
 
 "h3" `~>iamnot`
 <details><summary>Click here for more details</summary>
@@ -2464,7 +2439,7 @@ Removes a self-assignable role from you.
 </p>
 </details>
 
----
+
 
 "h3" `~>remindme <time> <reminder>`
 <details><summary>Click here for more details</summary>
@@ -2488,7 +2463,7 @@ Reminds you of something after the given time ran out. Mantaro will DM you when 
 </p>
 </details>
 
----
+
 
 "h3" `~>time <timezone> {mention}`
 <details><summary>Click here for more details</summary>
@@ -2507,7 +2482,7 @@ Shows the current time in the timezone set on your profile or the time in the ti
 </p>
 </details>
 
----
+
 
 "h3" 🔥 `~>urban <term>->{number}`
 <details><summary>Click here for more details</summary>
@@ -2526,7 +2501,7 @@ Search urban dictionary for something. Yes, the arrow is necessary for the numbe
 </p>
 </details>
 
----
+
 
 "h3" `~>wiki`
 <details><summary>Click here for more details</summary>

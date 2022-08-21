@@ -104,7 +104,7 @@
 
 <article>
 <header><h1>Extra</h1></header>
-<p>You can also add multiple leave and welcome message. Since this basically works the same way as this entire tutorial we will not make any visuals for it. The only change is that you use ~&gt;opts usermessage joinmessages add &lt;message&gt; for adding another welcome message and ~&gt;opts usermessage leavemessages add &lt;message&gt; for adding another leave message. In order to remove a message that you added you will need to first get a list of them ~&gt;opts usermessage joinmessages list &amp; ~&gt;opts usermessage leavemessages list and then use the number displayed next to the one you want to remove in ~&gt;opts usermessage joinmessages remove &lt;index&gt; or ~&gt;opts usermessage leavemessages remove &lt;index&gt; respectively.This of course also works in the leave message! Congrats! Now you are a master of welcome and leave messages within Mantaro!</p>
+<p>You can also add multiple leave and welcome message. Since this basically works the same way as this entire tutorial we will not make any visuals for it. The only change is that you use ~&gt;opts usermessage joinmessages add &lt;message&gt; for adding another welcome message and ~&gt;opts usermessage leavemessages add &lt;message&gt; for adding another leave message.In order to remove a message that you added you will need to first get a list of them ~&gt;opts usermessage joinmessages list &amp; ~&gt;opts usermessage leavemessages list and then use the number displayed next to the one you want to remove in ~&gt;opts usermessage joinmessages remove &lt;index&gt; or ~&gt;opts usermessage leavemessages remove &lt;index&gt; respectively.This of course also works in the leave message! Congrats! Now you are a master of welcome and leave messages within Mantaro!</p>
 </article>
 </section>
 </div>
@@ -209,6 +209,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : "Ok, with the basics being covered you can now move to the next step.",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "using-modifiers",
@@ -300,6 +302,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : "Now that you understand modifiers let's move to the final level.",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "using-embeds",
@@ -445,6 +449,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : "This will need a lot of practice. But basically you can use ANY combination of the above listed things and choose your own text in each of them :>.",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "combining-your-knowledge",
@@ -511,9 +517,10 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "text" : " for adding another leave message.",
           "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
           "text" : "In order to remove a message that you added you will need to first get a list of them ",
           "type" : "SimpleText"
         }, {
@@ -552,9 +559,11 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : "Congrats! Now you are a master of welcome and leave messages within Mantaro!",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661025937615,
+    "lastModifiedTime" : 1661072411415,
     "tocItem" : {
       "chapterTitle" : "Configuration",
       "pageTitle" : "Welcome And Leave Messages",

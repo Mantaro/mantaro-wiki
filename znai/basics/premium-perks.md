@@ -1,6 +1,6 @@
 **We appreciate everyone who pledges and/or donates to Mantaro, love you all `:icon: heart { fill: 'red' }`**
 
-# Premium Perks
+# Perks
 
 ## User perks:
 * The feel of being amazing.
@@ -23,6 +23,7 @@
 * Volume command for everyone.
 * The ability to have more than 100 custom commands.
 
+---
 # What you get for Donating via PayPal
 * 6 USD: 6-months key. (User key)
 * 12 USD: 1-year key. (User or Guild key)
@@ -33,6 +34,7 @@ Note: If you donate, let's say, $24USD, you can get either 2 1-year keys, or one
 Note: Minimum amount is $12 usd via PayPal to give you a 365 days key and $6 to give you a 180-day key!<br>
 Please ping Kodehawa#3457 on the support server if you send a donation using this way, so I can deliver your key <3
 
+---
 # What you get for Donating via Patreon
 To claim these you will have to have your Discord linked to patreon. Unsure how to do this? View [this Wiki article](https://patreon.zendesk.com/hc/en-us/articles/212052266-How-do-I-receive-my-Discord-role).
 The key(s) will last for as long as the pledge is active.
@@ -79,6 +81,7 @@ The key(s) will last for as long as the pledge is active.
 
 Note: This perk is highly to change as we don't expect anyone to actually do this much. If you do thank you very, very much.
 
+---
 # Claiming and Using your Perks
 
 ## How do I claim my rewards.
@@ -93,3 +96,5 @@ If you donated via PayPal simply poke us, and we will create the proper amount o
 * Paypal: https://www.paypal.me/kodemantaro
 
 Note: To allow the patreon bot to join a server we will need that guilds ID (unique identifier). You don't know how to get those? Easy. Go to the server settings. Browse widget and copy the server ID. Alternatively you can if you have the normal Mantaro already just run the `/info server` command and copy what you see in the footer. If none of that applies: go to your Discord appearance settings and enable Developer Mode then right-click the server icon and click "Copy ID".
+
+---

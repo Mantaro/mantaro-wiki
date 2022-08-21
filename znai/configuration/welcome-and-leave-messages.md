@@ -16,6 +16,7 @@ Now you can set a leave message using `~>opts usermessage leavemessage <yout tex
 
 Ok, with the basics being covered you can now move to the next step.
 
+---
 # Using Modifiers
 
 So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view *all* modifiers [here](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages). For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).
@@ -39,6 +40,7 @@ Now let's say you want to do something similar for the leave message. We will us
 
 Now that you understand modifiers let's move to the final level.
 
+---
 # Using Embeds
 
 You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course but you learned that already). To use an embed you will need to know how to work with them.
@@ -63,6 +65,7 @@ Setting it up & in action:
 
 This will need a lot of practice. But basically you can use ANY combination of the above listed things and choose your own text in each of them :>.
 
+---
 # Combining your knowledge
 
 Ok so you learned how to use embeds and modifiers. What about both in one?
@@ -80,7 +83,10 @@ Another way of combining what you know is by using both plain text and embeds. I
 
 # Extra
 You can also add multiple leave and welcome message. Since this basically works the same way as this entire tutorial we will not make any visuals for it. The only change is that you use `~>opts usermessage joinmessages add <message>` for adding another welcome message and `~>opts usermessage leavemessages add <message>` for adding another leave message.
-<br></br>In order to remove a message that you added you will need to first get a list of them `~>opts usermessage joinmessages list` & `~>opts usermessage leavemessages list` and then use the number displayed next to the one you want to remove in `~>opts usermessage joinmessages remove <index>` or `~>opts usermessage leavemessages remove <index>` respectively.
+
+In order to remove a message that you added you will need to first get a list of them `~>opts usermessage joinmessages list` & `~>opts usermessage leavemessages list` and then use the number displayed next to the one you want to remove in `~>opts usermessage joinmessages remove <index>` or `~>opts usermessage leavemessages remove <index>` respectively.
 
 This of course also works in the leave message!
 Congrats! Now you are a master of welcome and leave messages within Mantaro! 
+
+---

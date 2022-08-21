@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
-<title>Mantaro Wiki: 101</title>
+<title>Mantaro Wiki: 101: Custom Guide</title>
 <link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
 <link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
 <link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
@@ -83,13 +83,8 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>Mantaro's custom command guide.</h1></header>
-<p>The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.</p>
-</article>
-
-<article>
 <header><h1>What is v3?</h1></header>
-<p>v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.</p>
+<p>The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.</p>
 </article>
 
 <article>
@@ -156,19 +151,16 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "id" : "mantaros-custom-command-guide",
-      "title" : "Mantaro's custom command guide.",
-      "type" : "Section",
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "type" : "StrongEmphasis",
         "content" : [ {
-          "type" : "StrongEmphasis",
-          "content" : [ {
-            "text" : "The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.",
-            "type" : "SimpleText"
-          } ]
+          "text" : "The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.",
+          "type" : "SimpleText"
         } ]
       } ]
+    }, {
+      "type" : "ThematicBreak"
     }, {
       "id" : "what-is-v3",
       "title" : "What is v3?",
@@ -179,6 +171,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : "v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "how-do-you-use-v3",
@@ -216,6 +210,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : "Some documentation is done on the Premium bot due to not being a feature in Mantaro at the time of documenting",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "basics",
@@ -334,6 +330,8 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "simple-commands",
@@ -362,6 +360,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : ") there will be no actual difference (From here on every documentation point that has no difference will say \"no noticeable difference\"). Obviously you want to know how to go a bit more complex though.",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "marking-a-command-as-nsfw",
@@ -406,6 +406,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : " responses as nsfw as it is intended to mark the whole command. Additionally using custom edit to mark a command already made as such does not work it will be treated as if it was raw text.",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "modifiers",
@@ -602,6 +604,8 @@ ReactDOM.render(React.createElement(Documentation, {
         "alt" : "image",
         "inlined" : false,
         "type" : "Image"
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "automating-play-and-iam-roles",
@@ -705,6 +709,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : ".",
           "type" : "SimpleText"
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "embeds",
@@ -990,6 +996,8 @@ ReactDOM.render(React.createElement(Documentation, {
         "alt" : "image",
         "inlined" : false,
         "type" : "Image"
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "operative-custom-commands",
@@ -1762,20 +1770,21 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661032853465,
+    "lastModifiedTime" : 1661074699510,
     "tocItem" : {
       "chapterTitle" : "Custom Commands",
-      "pageTitle" : "101",
-      "pageMeta" : { },
+      "pageTitle" : "101: Custom Guide",
+      "pageMeta" : {
+        "title" : [ "101: Custom Guide" ]
+      },
       "dirName" : "custom-commands",
       "fileName" : "101",
       "viewOnRelativePath" : null,
       "pageSectionIdTitles" : [ {
-        "title" : "Mantaro's custom command guide.",
-        "id" : "mantaros-custom-command-guide"
-      }, {
         "title" : "What is v3?",
         "id" : "what-is-v3"
       }, {

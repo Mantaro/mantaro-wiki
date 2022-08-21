@@ -1,11 +1,14 @@
-**What are badges?**
+# What are badges?
 
 Badges are basically achievements that you can gain. Badges will show on your profile in the order shown below.
-Additionally the Badge icon of your highest badge will be drawn onto you profile picture in the embeds
-thumbnail.<br><br>
-*Almost all to all badges are applied to you after doing `~>profile` so use that first and then the `~>badges`
-command.*<br><br><br>
-**All Badges and how to get them.**
+Additionally, the Badge icon of your highest badge will be drawn onto you profile picture in the embeds
+thumbnail.
+
+Note: *Almost all to all badges are applied to you after doing `~>profile` so use that first and then the `~>badges`
+command.*
+
+---
+# Regular Badges
 
 | Badge Name               | Badge Icon                                              | Description                                                                          | How to                                                                                                                                                                                                | Currently Obtainable?                         |
 |--------------------------|---------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
@@ -96,6 +99,7 @@ command.*<br><br><br>
 | Writer                   | <img src="https://i.imgur.com/XLpiUPI.png" width="44"/> | Set a profile description.                                                           | Self explanatory                                                                                                                                                                                      | Yes                                           |
 | Christmas Spirit         | <img src="https://imgur.com/EgZ4pQH.png" width="44"/>   | Participated on the Christmas event!                                                 | Will be given to you if you have any of the Christmas items.                                                                                                                                          | Available between December 23 and December 25 |
 
+---
 # Seasonal Badges
 
 These badges are given to those who participate in one of Mantaro's seasons and obtains a high ranking. The badges are
@@ -110,11 +114,12 @@ obtained on and the ranking to which its attached (Money/Rep).
 | Season <#>: Top #4 <Money/Rep>   | <img src="https://discordapp.com/assets/c9b563417a1ff01700edc358b5fc309f.svg" width="64"/> | Given to the person who achieved fourth place in the leaderboard for either Money or Rep.          | No                    |
 | Season <#>: Top #5 <Money/Rep>   | <img src="https://discordapp.com/assets/6ca609cb5fe0c1a5a74633567c2e743f.svg" width="64"/> | Given to the person who achieved fifth place in the leaderboard for either Money or Rep.           | No                    |
 
+---
 # Riddle Badges
 
 These badges are meant to be harder to obtain. In order to find out how to get them you will have to solve the riddles
 next to their name (Sometimes the name also helps to solve it). All of these badges share the same image:
-<br></br><br></br><img src="https://i.imgur.com/Znu0pEG.png" width="44"/>
+<img src="https://i.imgur.com/Znu0pEG.png" width="44"/>
 
 Please note that there is no `~>answer` command or anything like that. These badges require you to use commands in
 certain ways for instance queuing a specific Music track.
@@ -141,6 +146,7 @@ certain ways for instance queuing a specific Music track.
 | Senseless Hoarding              | With the hoarding comes a line, overflowing in mindless casino paper, fading away in a heartbeat.                           |
 | The CPU Inside                  | I'm also a CPU. No, really!                                                                                                 |
 
+---
 # Removed/Legacy Badges
 
 | Badge Name | Badge Icon                                              | Description                                          |
@@ -150,3 +156,5 @@ certain ways for instance queuing a specific Music track.
 | Bugged     | <img src="http://i.imgur.com/FlaResW.png" width="44"/>  | Bugged Helper. (Old Broken Helper Badge).            | 
 | Bugged 2   | <img src="http://i.imgur.com/FlaResW.png" width="44"/>  | Bugged Donor. (Old Broken Donator Badge).            |
 | Isekai     | <img src="http://i.imgur.com/XcV891Z.png" width="44"/>  | Have more than 7526527671 credits at any given time. |
+
+---

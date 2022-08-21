@@ -3,7 +3,8 @@
 Mantaro has had many items across the years, some currently obtainable, some that have been removed.
 This page looks to document all the items that have been part of Mantaro and give a brief description of them.
 
-## Collectible Items
+---
+# Collectible Items
 Most of these items are just meant to be collected. A few of the items here are used as crafting materials, others have no inherent use other than maybe selling them for credits, or keeping them to make your collection of items bigger.
 
 |                                              Icon                                               |       Name        |                                                                    Description                                                                    |              Obtained from              |
@@ -53,8 +54,8 @@ Most of these items are just meant to be collected. A few of the items here are 
 |   <img src="https://discordapp.com/assets/b37d783fa2330771124219f7f13f2f31.svg" width="64"/>    |      Pencil       |                               We have plenty of those! (Appears randomly after creating or editing custom commands)                               |                  Loot                   |
 |   <img src="https://discordapp.com/assets/141d49436743034a59dec6bd5618675d.svg" width="64"/>    | Consolation Prize |                                                In the first place, how did you get so much money?                                                 |         Somehow overflow a long         |
 
-
-## Usable/Consumable Items
+---
+# Usable/Consumable Items
 These items have a use attached to them. Some items have a single-time use, meaning that after you use them any other of the same item you get becomes a collectible.
 
 |                                            Icon                                            |      Name       |                                                   Use/Description                                                    |                       How to use? / Where is it used?                       |              Obtained from               |
@@ -82,11 +83,11 @@ These items have a use attached to them. Some items have a single-time use, mean
 | <img src="https://discordapp.com/assets/2396da35337ea36298e29e868ea4407b.svg" width="64"/> |    Cat Food     |                                           Food your cat might like a lot.                                            |            Used to feed your pet with `/pet feed item:Cat Food`             |                  Market                  |
 | <img src="https://discordapp.com/assets/38002403475def186f4b7ac64cc9d04f.svg" width="64"/> |  Hamster Food   |                                            Food your hamster might enjoy.                                            |          Used to feed your pet with `/pet feed item:Hamster Food`           |                  Market                  |
 
-
-## Tool Items
+---
+# Tool Items
 These items are ofter required to use another command. The commands they are attached to won't ofter work unless you have equipped/stated the required tool.
 
-### Wrench
+## Wrench
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -111,9 +112,7 @@ A run of the mill wrench you can buy from the market. Useful for repairing items
 </p>
 </details>
 
----
-
-### Comet Wrench
+## Comet Wrench
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -140,9 +139,7 @@ A Wrench infused with pieces of Comet Gems. Somehow it feels way sturdier.
 </p>
 </details>
 
----
-
-### Sparkle Wrench
+## Sparkle Wrench
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -171,9 +168,7 @@ A Wrench infused with pieces of Sparkle Fragments. Somehow it feels a lot sturdi
 </p>
 </details>
 
----
-
-### Brom's Pickaxe
+## Brom's Pickaxe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -204,9 +199,7 @@ A normal pickaxe you bought on the local market. Seems sturdy enough to mine som
 </p>
 </details>
 
----
-
-### Diamond Pickaxe
+## Diamond Pickaxe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -239,9 +232,7 @@ A diamond pick is definitely stronger than the market-bought iron picks I could 
 </p>
 </details>
 
----
-
-### Comet Pickaxe
+## Comet Pickaxe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -281,9 +272,7 @@ You seemed eager to try it out after being impressed by its glow, so here we are
 </p>
 </details>
 
----
-
-### Star Pickaxe
+## Star Pickaxe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -323,9 +312,7 @@ Weird... it seems to attract more gems. Is it the effect of the material, or is 
 </p>
 </details>
 
----
-
-### Moon Pickaxe
+## Moon Pickaxe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -370,9 +357,7 @@ Is this really a fragment from a far away moon?
 </p>
 </details>
 
----
-
-### Sparkle Pickaxe
+## Sparkle Pickaxe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -417,9 +402,7 @@ The pick glows bright like the sun... and it seems pretty tough too... how did i
 </p>
 </details>
 
----
-
-### Hellfire Pickaxe
+## Hellfire Pickaxe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -466,9 +449,7 @@ Have I done good for this world, or have I brought the unknown to life?
 </p>
 </details>
 
----
-
-### Fishing Rod
+## Fishing Rod
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -493,9 +474,7 @@ A rod you bought at your local fishing market. Looks sturdy.
 </p>
 </details>
 
----
-
-### Comet Gem Rod
+## Comet Gem Rod
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -527,9 +506,7 @@ After testing the Comet Fragments on your axe, you also realized you could use t
 </p>
 </details>
 
----
-
-### Star Gem Rod
+## Star Gem Rod
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -562,9 +539,7 @@ The mesmerizing and shiny glow of this fragment could not be overlooked. You fus
 </p>
 </details>
 
----
-
-### Moon Rod
+## Moon Rod
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -600,9 +575,7 @@ Eitherway, you enjoy the glow of it like it's the first day you've ever seen it.
 </p>
 </details>
 
----
-
-### Sparkle Rod
+## Sparkle Rod
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -643,9 +616,7 @@ The glow it leaves on the sea is amazing, and you stare at it for hours on end. 
 </p>
 </details>
 
----
-
-### Hellfire Rod
+## Hellfire Rod
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -685,9 +656,7 @@ It works wonders. Fish come in shoals to you. Nothing can compare. But you're st
 </p>
 </details>
 
----
-
-### Axe
+## Axe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -712,9 +681,7 @@ A normal axe you bought on the local market. Good enough to chop some trees down
 </p>
 </details>
 
----
-
-###  Comet Axe
+##  Comet Axe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -746,9 +713,7 @@ After testing the Comet Fragments on your pick, you also realized you could use 
 </p>
 </details>
 
----
-
-### Star Axe
+## Star Axe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -783,9 +748,7 @@ Well, you soon realized why...
 </p>
 </details>
 
----
-
-### Moon Axe
+## Moon Axe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -823,9 +786,7 @@ The results look good. It seems to chop trees faster, too. Why is it so sharp? I
 </p>
 </details>
 
----
-
-### Sparkle Axe
+## Sparkle Axe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -863,9 +824,7 @@ The axe glows bright like the sun... and it seems pretty tough too... how did it
 </p>
 </details>
 
----
-
-### Hellfire Axe
+## Hellfire Axe
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -906,9 +865,7 @@ It works wonders. Nothing can compare. But you're still left wondering whether y
 </details>
 
 ---
-
-
-## Crate Items
+# Crate Items
 These items (minus the Crate Key) are dropped randomly from using other Currency Commands. To open any of the crates you need to have a Crate Key on your inventory.
 
 |                                            Icon                                            |          Name          |                              Description                               |              Opened with              | Drop Rate |   Obtained from    |
@@ -924,8 +881,8 @@ These items (minus the Crate Key) are dropped randomly from using other Currency
 
 ** Dailycrate and Premium Crates are [Premium only](https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks). As well, Premium Users will find only Premium Crates and never their normal version.
 
-
-## Timed Items
+---
+# Timed Items
 These items can only be obtained during certain times or events.
 
 |                                               Icon                                               |            Name             |                                   Description                                    |   Obtained during    |    Obtained from    |
@@ -933,8 +890,8 @@ These items can only be obtained during certain times or events.
 |    <img src="https://discordapp.com/assets/6201ff6add4821014e02cfc1bc82fc95.svg" width="64"/>    |       Christmas bell        |                 Gives you a cozy christmas feeling on your tree.                 |   Christmas Event    |        Loot         |
 |    <img src="https://discordapp.com/assets/2f5331445a4647af2bb317862b38502a.svg" width="64"/>    |       Christmas tree        |                       Who doesn't like a christmas tree?.                        |   Christmas Event    |        Loot         |
 
-
-## Removed/Legacy/Unobtainable Items
+---
+# Removed/Legacy/Unobtainable Items
 These items are no longer obtainable in Mantaro.
 
 |                                            Icon                                            |         Name         |                                         Description                                         |
@@ -955,3 +912,4 @@ These items are no longer obtainable in Mantaro.
 | <img src="https://discordapp.com/assets/4d1ed1d5abee26793b4c287b9896cd56.svg" width="64"/> |      Kick Boot       | Left by an admin. (Appears randomly after someone was kicked using `~>kick` or `~>softban`) |
 | <img src="https://discordapp.com/assets/e1ec53c5d89c0291001989a36716aa9a.svg" width="64"/> |       My Maths       |            Oh, I forgot my maths. (Appears randomly after using `~>stats usage`)            |
 
+---

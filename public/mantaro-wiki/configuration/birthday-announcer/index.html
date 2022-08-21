@@ -84,7 +84,22 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>What is the Birthday Announcer?</h1></header>
-<p>The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday. Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day. Important commands /birthday set date:&lt;dd-MM&gt; Allows you to specify your birthday (dd-mm format). ~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt; Allows you to set up the Birthday Announcer. ~&gt;opts birthday message set &lt;message&gt; Allows you to set a Custom Birthday Message. /birthday allowserver Allows your birthday to be announced in the server you use this command on. Other/Extra commands ~&gt;opts birthday disable Removes the Birthday Announcer. ~&gt;opts birthday test &lt;@mention&gt; Allows you to test the Birthday Announcer. ~&gt;opts birthday message set &lt;message&gt; Allows you to set a custom message for you Birthday Announcer. ~&gt;opts birthday message clear Removes the custom message you had and restores the default message for the Birthday Announcer. ~&gt;opts commands birthdayblacklist add/remove &lt;@mention&gt; Allows you to blacklist an user from having their birthday announced on the server. Important information You cannot add someone else's birthday for them. Every user needs to add their own birthday themselves. The list of users to announce each day is cached every 24 hours. Meaning that any changes to ones birthday will not be reflected until after the cache happens. Since changes are not reflected until after the cache happens, this also means that if a birthday is added before the actual day then it won't be announced. For example, if your birthday was June 6th and you add it on June 5th it will not be announced since it was not cached. Users need to use /birthday allowserver if they want their birthday announced. If they don't use the command it will not be announced. Birthdays are announced at midnight America/Chicago time. This is a global setting and cannot be changed.</p>
+<p>The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday. Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.</p>
+</article>
+
+<article>
+<header><h1>Important commands</h1></header>
+<p>/birthday set date:&lt;dd-MM&gt; Allows you to specify your birthday (dd-mm format). ~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt; Allows you to set up the Birthday Announcer. ~&gt;opts birthday message set &lt;message&gt; Allows you to set a Custom Birthday Message. /birthday allowserver Allows your birthday to be announced in the server you use this command on.</p>
+</article>
+
+<article>
+<header><h1>Other/Extra commands</h1></header>
+<p>~&gt;opts birthday disable Removes the Birthday Announcer. ~&gt;opts birthday test &lt;@mention&gt; Allows you to test the Birthday Announcer. ~&gt;opts birthday message set &lt;message&gt; Allows you to set a custom message for you Birthday Announcer. ~&gt;opts birthday message clear Removes the custom message you had and restores the default message for the Birthday Announcer. ~&gt;opts commands birthdayblacklist add/remove &lt;@mention&gt; Allows you to blacklist an user from having their birthday announced on the server.</p>
+</article>
+
+<article>
+<header><h1>Important information</h1></header>
+<p>You cannot add someone else's birthday for them. Every user needs to add their own birthday themselves. The list of users to announce each day is cached every 24 hours. Meaning that any changes to ones birthday will not be reflected until after the cache happens. Since changes are not reflected until after the cache happens, this also means that if a birthday is added before the actual day then it won't be announced. For example, if your birthday was June 6th and you add it on June 5th it will not be announced since it was not cached. Users need to use /birthday allowserver if they want their birthday announced. If they don't use the command it will not be announced. Birthdays are announced at midnight America/Chicago time. This is a global setting and cannot be changed.</p>
 </article>
 
 <article>
@@ -131,11 +146,13 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
-        "id" : "what-is-the-birthday-announcer-important-commands",
-        "level" : 2,
-        "title" : "Important commands",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "important-commands",
+      "title" : "Important commands",
+      "type" : "Section",
+      "content" : [ {
         "bulletMarker" : "*",
         "tight" : true,
         "type" : "BulletList",
@@ -187,13 +204,17 @@ ReactDOM.render(React.createElement(Documentation, {
               "type" : "SimpleText"
             } ]
           } ]
+        }, {
+          "type" : "ListItem"
         } ]
       }, {
-        "id" : "what-is-the-birthday-announcer-otherextra-commands",
-        "level" : 2,
-        "title" : "Other/Extra commands",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "otherextra-commands",
+      "title" : "Other/Extra commands",
+      "type" : "Section",
+      "content" : [ {
         "bulletMarker" : "*",
         "tight" : true,
         "type" : "BulletList",
@@ -259,11 +280,13 @@ ReactDOM.render(React.createElement(Documentation, {
           } ]
         } ]
       }, {
-        "id" : "what-is-the-birthday-announcer-important-information",
-        "level" : 2,
-        "title" : "Important information",
-        "type" : "SubHeading"
-      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "important-information",
+      "title" : "Important information",
+      "type" : "Section",
+      "content" : [ {
         "bulletMarker" : "*",
         "tight" : true,
         "type" : "BulletList",
@@ -328,6 +351,8 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "how-do-i-enable-the-birthday-announcer",
@@ -477,6 +502,8 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     }, {
       "id" : "custom-birthday-messages",
@@ -602,9 +629,11 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ]
+      }, {
+        "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661025937611,
+    "lastModifiedTime" : 1661072375589,
     "tocItem" : {
       "chapterTitle" : "Configuration",
       "pageTitle" : "Birthday Announcer",
@@ -615,6 +644,15 @@ ReactDOM.render(React.createElement(Documentation, {
       "pageSectionIdTitles" : [ {
         "title" : "What is the Birthday Announcer?",
         "id" : "what-is-the-birthday-announcer"
+      }, {
+        "title" : "Important commands",
+        "id" : "important-commands"
+      }, {
+        "title" : "Other/Extra commands",
+        "id" : "otherextra-commands"
+      }, {
+        "title" : "Important information",
+        "id" : "important-information"
       }, {
         "title" : "How do I enable the Birthday Announcer?",
         "id" : "how-do-i-enable-the-birthday-announcer"

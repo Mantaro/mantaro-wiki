@@ -1,8 +1,10 @@
 # Intro
 In order to use any of these you will have to type *exactly* what you see under the first bulletin every time, whether it is custom commands, level up messages or welcome messages. So if you for instance want the author username in a custom command you would type *exactly* $(event.author.username).
+
+---
 # Modifiers for welcome/leave messages:
-* **[All of the guild modifiers below](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#guild-modifiers)**
-* **[All of the me (Mantaro) modifiers below](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#me-mantaro-modifiers)**
+* **[All of the guild modifiers below](#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers)**
+* **[All of the me (Mantaro) modifiers below](#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers)**
 * **$(event.user)**:
     * This will return a mention of the user that joined/left.
 * **$(event.user.username)**:
@@ -19,6 +21,8 @@ In order to use any of these you will have to type *exactly* what you see under 
     * This will return the id (unique identifier) of the user that joined/left.
 * **$(event.user.avatar)**:
     * This will return the avatar URL of the user that joined/left.
+
+---
 # A list of all Modifiers that can be used in custom commands.
 
 ## Base modifier:
@@ -114,13 +118,14 @@ In order to use any of these you will have to type *exactly* what you see under 
 * **$(event.channel.id)**:
     * This will return the id (unique identifier) of the channel the command was used in.
 
+---
 # Modifiers for Log Messages
 ## Shared between edited/deleted messages and user banned/unbanned
-* **[All of the modifiers from welcome messages](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages)** (event.user in the case of bans is the person banned, in case of messages the author of the message)
+* **[All of the modifiers from welcome messages](#modifiers-for-welcomeleave-messages)** (event.user in the case of bans is the person banned, in case of messages the author of the message)
 * **$(hour)**:
     * Prints the time at which the log message occurred (Based on the location of the bot)
 ## Message Edited and Message Deleted
-* **[All of the channel modifiers above](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#channel-modifiers)**
+* **[All of the channel modifiers above](#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers)**
 ### Message Edited only
 * **$(old)**:
     * Replaced with the old content of the message.
@@ -131,3 +136,5 @@ In order to use any of these you will have to type *exactly* what you see under 
     * Replaced with the content of the deleted message.
 * **$(event.message.id)**:
     * Replaced with the unique identifier of the deleted message.
+
+---
