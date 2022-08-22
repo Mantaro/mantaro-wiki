@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: ✏️Utility Commands</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<p>&quot;h3&quot; ~&gt;activatekey &lt;key&gt; Description: Will use a premium key to make either you or the guild premium (Whenever it will be you or the guild is determined by the key itself).Requirements:This command requires you to have a https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks premium key. Example(s): ~&gt;activatekey a4e98f07-1a32-4dcc-b53f-c540214d54ec &quot;h3&quot; ~&gt;birthday &lt;date&gt; Description: Set/Remove your own birthday or show everyone with a birthday this month. The date format is dd-mm. This means day first and month second.Subcommand(s): remove : This will remove your currently set birthday date. list : This will show you a list of all the birthdays in the server. allowserver : This will allow the server in which you use this command to announce/show your birthday. denyserver : This will deny the server in which you use this command to announce/show your birthday. month &lt;number&gt; : This will show you a list of all the birthdays in the specified month. Requirements:The remove subcommand requires you to have already set a birthday. The list and month subcommand require users to use the allowserver subcommand to show them. The denyserver subcommand requires you to have already allowed yourself in a server. Example(s): ~&gt;birthday 21-11 ~&gt;birthday remove ~&gt;birthday list ~&gt;birthday allowserver ~&gt;birthday month 11 &quot;h3&quot; ~&gt;createpoll &lt;-options &lt;options1&gt;,&lt;option2&gt;,..&gt; &lt;-time &lt;time&gt;&gt; &lt;-name &lt;name&gt;&gt; {-image &lt;url&gt;} Description: Create a poll with options. The person that created the poll can cancel it by typing &amp;cancelpoll . If an url is used then it must be a direct link to the image. The maximum poll runtime is 45 minutes.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed and Reactions permissions. Alias(es): poll Example(s): ~&gt;createpoll -options Hi,Bye -time 30s -name Test &quot;h3&quot; ~&gt;custom &lt;subcommand&gt; Description: Creates a custom command. For further info check our https://github.com/Mantaro/MantaroBot/wiki/Custom-Commands-101 Custom Commands Guide.Subcommand(s): remove/rm &lt;name&gt; : This will delete the specified custom command. rename &lt;name&gt; &lt;new name&gt; : This will rename the specified custom command. clear : This will delete all custom commands. edit &lt;name&gt; &lt;response&gt; &lt;content&gt; : This will edit the specified response of the specified custom command. deleteresponse &lt;name&gt; &lt;response&gt; : This will delete the specified response from the specified custom command. unlockcommand &lt;name&gt; : This will unlock the specified command so that it can be edited once again. eval &lt;content&gt; : This will evaluate (simulate) the content of a custom command without creating it. view &lt;name&gt; &lt;response&gt; : This will show you the specified response of a custom command. list/ls : This will show a list of all custom commands on the server. info &lt;name&gt; : This will show the information about a specific custom command. lockcommand &lt;name&gt; : This will lock the specified command so that it cannot be edited by anyone. This includes people with Admin permissions. raw &lt;name&gt; : This will show the raw responses of the specified command import &lt;name&gt; : This will search for a custom command by its name from another guild and then try to import it. add &lt;name&gt; &lt;content&gt; : This will add a new command or a new reponse to an existing custom command. Requirements:If normal users aren't allowed to make custom commands with one of our https://github.com/Mantaro/MantaroBot/wiki/Configuration#basic-server-configuration opts options then this command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Admin permissions. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed and Reactions permissions. Example(s): ~&gt;custom add test This is a test! ~&gt;custom remove test ~&gt;custom rename test mycommand ~&gt;custom edit test 1 This is my second test! ~&gt;custom lockcommand test ~&gt;custom list ~&gt;custom eval I dont want to make a command yet! ~&gt;custom import test &quot;h3&quot; ~&gt;iam &lt;name&gt; Description: Applies a self-assignable role to you or lists all self-assignable roles. Roles have to be added by an Admin one of the opts commands.Subcommand(s): list/ls : This will show you a list of the currently available self-assignable roles on the server. Requirements:This command requires a self-assignable role to have been setup on the server. Alias(es): autoroles Example(s): ~&gt;iam Red ~&gt;iam list &quot;h3&quot; ~&gt;iamnot Description: Removes a self-assignable role from you.Requirements:This command requires a self-assignable role to have been setup on the server. Example(s): ~&gt;iamnot Red &quot;h3&quot; ~&gt;remindme &lt;time&gt; &lt;reminder&gt; Description: Reminds you of something after the given time ran out. Mantaro will DM you when the time runs out with the message you specified.Subcommand(s): list : This will show you a list of your reminders. cancel : This will show you a list of your reminders and ask you to choose which one to cancel. If you only have one reminder it will not show the list and just cancel it. Requirements:The cancel subcommand requires you to have a reminder set. It also requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~&gt;remindme 30m feed pet ~&gt;remindme list ~&gt;remindme cancel &quot;h3&quot; ~&gt;time &lt;timezone&gt; {mention} Description: Shows the current time in the timezone set on your profile or the time in the timezone that was specified. If an user is specified it will show the timezone of that user (if they have one set).Requirements:This command does not have any specific requirements. Example(s): ~&gt;time GMT-2 ~&gt;time @Kodehawa#3457 &quot;h3&quot; 🔥 ~&gt;urban &lt;term&gt;-&gt;{number} Description: Search urban dictionary for something. Yes, the arrow is necessary for the number to work. Using the arrow allows you to search a different result number. Why Kode? Why?Requirements:This command will only work on a NSFW channel. Example(s): ~&gt;urban school ~&gt;urban school-&gt;3 &quot;h3&quot; ~&gt;wiki Description: Will link you to the respective GitHub wiki pages.Subcommand(s): badges : This will link you to the Badges Documentation wiki page. birthday : This will link you to the Birthday 101 wiki page. premium : This will link you to the Premium Perks wiki page. opts : This will link you to the Configuration wiki page. custom : This will link you to the Custom Commands wiki page. faq : This will link you to the FAQ wiki page. usermessage : This will link you to the Welcome/Leave Messages wiki page. tos : This will link you to the TOS wiki page. collectibles : This will link you to the Collectable Items wiki page. currency : This will link you to the Currency 101 wiki page. modifiers : This will link you to the Modifiers wiki page. commands : This will link you to the Commands wiki page. Requirements:This command does not have any specific requirements. Example(s): ~&gt;wiki ~&gt;wiki opts</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>activatekey <key>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Will use a premium key to make either you or the guild premium (Whenever it will be you or the guild is determined by the key itself).",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires you to have a ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "premium key",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>activatekey a4e98f07-1a32-4dcc-b53f-c540214d54ec",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>birthday <date>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Set/Remove your own birthday or show everyone with a birthday this month. The date format is dd-mm. This means ",
+        "type" : "SimpleText"
+      }, {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "day first and month second",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "remove",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will remove your currently set birthday date.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "list",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you a list of all the birthdays in the server.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "allowserver",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will allow the server in which you use this command to announce/show your birthday.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "denyserver",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will deny the server in which you use this command to announce/show your birthday.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "month <number>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you a list of all the birthdays in the specified month.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "remove",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires you to have already set a birthday.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "list",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " and ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "month",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand require users to use the ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "allowserver",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand to show them.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "denyserver",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires you to have already allowed yourself in a server.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>birthday 21-11",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>birthday remove",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>birthday list",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>birthday allowserver",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>birthday month 11",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>createpoll <-options <options1>,<option2>,..> <-time <time>> <-name <name>> {-image <url>}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Create a poll with options. The person that created the poll can cancel it by typing ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "&cancelpoll",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ". If an url is used then it must be a direct link to the image. The maximum poll runtime is 45 minutes.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "poll",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>createpoll -options Hi,Bye -time 30s -name Test",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>custom <subcommand>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Creates a custom command. For further info check our ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Commands-101",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Custom Commands Guide",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "remove/rm <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will delete the specified custom command.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "rename <name> <new name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will rename the specified custom command.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "clear",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will delete all custom commands.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "edit <name> <response> <content>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will edit the specified response of the specified custom command.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "deleteresponse <name> <response>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will delete the specified response from the specified custom command.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "unlockcommand <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will unlock the specified command so that it can be edited once again.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "eval <content>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will evaluate (simulate) the content of a custom command without creating it.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "view <name> <response>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you the specified response of a custom command.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "list/ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show a list of all custom commands on the server.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "info <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the information about a specific custom command.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "lockcommand <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will lock the specified command so that it cannot be edited by anyone. ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "This includes people with Admin permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "raw <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show the raw responses of the specified command",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "import <name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will search for a custom command by its name from another guild and then try to import it.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "add <name> <content>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will add a new command or a new reponse to an existing custom command.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "If normal users aren't allowed to make custom commands with one of our ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Configuration#basic-server-configuration",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "opts options",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : " then this command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Admin",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " and ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Reactions",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>custom add test This is a test!",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>custom remove test",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>custom rename test mycommand",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>custom edit test 1 This is my second test!",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>custom lockcommand test",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>custom list",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>custom eval I dont want to make a command yet!",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>custom import test",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>iam <name>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Applies a self-assignable role to you or lists all self-assignable roles. Roles have to be added by an Admin one of the ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "opts",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " commands.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "list/ls",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you a list of the currently available self-assignable roles on the server.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires a self-assignable role to have been setup on the server.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Alias(es):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "autoroles",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>iam Red",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>iam list",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>iamnot",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Removes a self-assignable role from you.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command requires a self-assignable role to have been setup on the server.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>iamnot Red",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>remindme <time> <reminder>",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Reminds you of something after the given time ran out. Mantaro will DM you when the time runs out with the message you specified.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "list",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you a list of your reminders.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "cancel",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will show you a list of your reminders and ask you to choose which one to cancel. If you only have one reminder it will not show the list and just cancel it.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "cancel",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " subcommand requires you to have a reminder set. It also requires ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Embed",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " permissions",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : ".",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>remindme 30m feed pet",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>remindme list",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>remindme cancel",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>time <timezone> {mention}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Shows the current time in the timezone set on your profile or the time in the timezone that was specified. If an user is specified it will show the timezone of that user (if they have one set).",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>time GMT-2",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>time @Kodehawa#3457",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" 🔥 ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>urban <term>->{number}",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Search urban dictionary for something. Yes, the arrow is necessary for the number to work. Using the arrow allows you to search a different result number. Why Kode? Why?",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command will only work on a NSFW channel.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>urban school",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>urban school->3",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "\"h3\" ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "~>wiki",
+        "type" : "InlinedCode"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Description:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Will link you to the respective GitHub wiki pages.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Subcommand(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "badges",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Badges Documentation wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "birthday",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Birthday 101 wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "premium",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Premium Perks wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "opts",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Configuration wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "custom",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Custom Commands wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "faq",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the FAQ wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "usermessage",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Welcome/Leave Messages wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "tos",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the TOS wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "collectibles",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Collectable Items wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "currency",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Currency 101 wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "modifiers",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Modifiers wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "commands",
+            "type" : "InlinedCode"
+          }, {
+            "text" : ": This will link you to the Commands wiki page.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Requirements:",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "This command does not have any specific requirements.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Example(s):",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>wiki",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "code" : "~>wiki opts",
+            "type" : "InlinedCode"
+          } ]
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1661118189154,
+    "tocItem" : {
+      "chapterTitle" : "Commands",
+      "pageTitle" : "✏️Utility Commands",
+      "pageMeta" : {
+        "title" : [ "✏️Utility Commands" ]
+      },
+      "dirName" : "commands",
+      "fileName" : "utility-commands",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

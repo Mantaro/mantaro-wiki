@@ -201,11 +201,8 @@ toc = [ {
       "title" : "Intro",
       "id" : "intro"
     }, {
-      "title" : "Slash Commands",
-      "id" : "slash-commands"
-    }, {
-      "title" : "Text-Commands (opts, game, etc.)",
-      "id" : "text-commands-opts-game-etc"
+      "title" : "Managing commands",
+      "id" : "managing-commands"
     }, {
       "title" : "Managing Commands (Mantaro Settings Method)",
       "id" : "managing-commands-mantaro-settings-method"
@@ -264,42 +261,114 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Commands",
-    "pageTitle" : "Command List",
-    "pageMeta" : { },
+    "pageTitle" : "👋 Action Commands",
+    "pageMeta" : {
+      "title" : [ "👋 Action Commands" ]
+    },
     "dirName" : "commands",
-    "fileName" : "command-list",
+    "fileName" : "action-commands",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
-      "title" : "Mantaro Command Documentation",
-      "id" : "mantaro-command-documentation"
+      "title" : "/action",
+      "id" : "action"
     }, {
-      "title" : "Basic knowledge",
-      "id" : "basic-knowledge"
+      "title" : "/cuddle",
+      "id" : "cuddle"
     }, {
-      "title" : "👋 Action Commands",
-      "id" : "-action-commands"
+      "title" : "/hug",
+      "id" : "hug"
     }, {
-      "title" : "💸 Currency Commands",
-      "id" : "-currency-commands"
+      "title" : "/kiss",
+      "id" : "kiss"
     }, {
-      "title" : "🕹️ Game Commands",
-      "id" : "-game-commands"
+      "title" : "/pat",
+      "id" : "pat"
     }, {
-      "title" : "🖼️ Image Commands",
-      "id" : "-image-commands"
+      "title" : "/poke",
+      "id" : "poke"
     }, {
-      "title" : "🎲 Fun Commands",
-      "id" : "-fun-commands"
+      "title" : "/pout",
+      "id" : "pout"
     }, {
-      "title" : "🔨 Moderation Commands",
-      "id" : "-moderation-commands"
+      "title" : "/slap",
+      "id" : "slap"
     }, {
-      "title" : "💭 Info Commands",
-      "id" : "-info-commands"
-    }, {
-      "title" : "✏️Utility Commands",
-      "id" : "utility-commands"
+      "title" : "/tickle",
+      "id" : "tickle"
     } ]
+  }, {
+    "chapterTitle" : "Commands",
+    "pageTitle" : "💸 Currency Commands",
+    "pageMeta" : {
+      "title" : [ "💸 Currency Commands" ]
+    },
+    "dirName" : "commands",
+    "fileName" : "currency-commands",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "/badges",
+      "id" : "badges"
+    } ]
+  }, {
+    "chapterTitle" : "Commands",
+    "pageTitle" : "🕹️ Game Commands",
+    "pageMeta" : {
+      "title" : [ "🕹️ Game Commands" ]
+    },
+    "dirName" : "commands",
+    "fileName" : "game-commands",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ ]
+  }, {
+    "chapterTitle" : "Commands",
+    "pageTitle" : "🖼️ Image Commands",
+    "pageMeta" : {
+      "title" : [ "🖼️ Image Commands" ]
+    },
+    "dirName" : "commands",
+    "fileName" : "image-commands",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ ]
+  }, {
+    "chapterTitle" : "Commands",
+    "pageTitle" : "🎲 Fun Commands",
+    "pageMeta" : {
+      "title" : [ "🎲 Fun Commands" ]
+    },
+    "dirName" : "commands",
+    "fileName" : "fun-commands",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ ]
+  }, {
+    "chapterTitle" : "Commands",
+    "pageTitle" : "🔨 Moderation Commands",
+    "pageMeta" : {
+      "title" : [ "🔨 Moderation Commands" ]
+    },
+    "dirName" : "commands",
+    "fileName" : "moderation-commands",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ ]
+  }, {
+    "chapterTitle" : "Commands",
+    "pageTitle" : "💭 Info Commands",
+    "pageMeta" : {
+      "title" : [ "💭 Info Commands" ]
+    },
+    "dirName" : "commands",
+    "fileName" : "info-commands",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ ]
+  }, {
+    "chapterTitle" : "Commands",
+    "pageTitle" : "✏️Utility Commands",
+    "pageMeta" : {
+      "title" : [ "✏️Utility Commands" ]
+    },
+    "dirName" : "commands",
+    "fileName" : "utility-commands",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ ]
   } ]
 }, {
   "chapterTitle" : "Configuration",

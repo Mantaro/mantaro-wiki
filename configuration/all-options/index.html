@@ -109,7 +109,7 @@
 
 <article>
 <header><h1>Disabling Commands & Channels & Categories</h1></header>
-<p>Type Command Preview [{text=Disable a Command fully, type=SimpleText}] [{code=~&gt;opts command disable &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/tHnMpDL.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a command again, type=SimpleText}] [{code=~&gt;opts command enable &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/GnhGeev.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a channel fully, type=SimpleText}] [{code=~&gt;opts channel disable &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FVC5L1Z.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a channel again, type=SimpleText}] [{code=~&gt;opts channel enable &lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/KTpQhjr.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a command in a channel, type=SimpleText}] [{code=~&gt;opts command specific disable &lt;channel&gt; &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/hGFuR1R.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a command in a channel, type=SimpleText}] [{code=~&gt;opts command specific enable &lt;channel&gt; &lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/cpANjeY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category fully, type=SimpleText}] [{code=~&gt;opts category disable &lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FpxVVUM.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category again, type=SimpleText}] [{code=~&gt;opts category enable &lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/h2QpjQY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category in a channel, type=SimpleText}] [{code=~&gt;opts category specific disable &lt;category&gt; &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/EKKVv9w.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category in a channel, type=SimpleText}] [{code=~&gt;opts category specific enable &lt;category&gt; &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/r2AqYsN.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a role from using commands, type=SimpleText}] [{code=~&gt;opts server role disallow &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/wusK9Fu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use commands, type=SimpleText}] [{code=~&gt;opts server role allow &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/IXw05Lu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a specific command, type=SimpleText}] [{code=~&gt;opts role specific disable &lt;command name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/Lrri02q.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a specific command, type=SimpleText}] [{code=~&gt;opts role specific enable &lt;command name&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/eOCMYOg.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a whole category, type=SimpleText}] [{code=~&gt;opts category role specific disable &lt;category&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/dzkot4K.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a whole category, type=SimpleText}] [{code=~&gt;opts category role specific enable &lt;category&gt; &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/MdFKFiq.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable/Enable game lobby/multiple, type=SimpleText}] [{code=-&gt;opts commands lobby disable/enable, type=InlinedCode}] [{url=https://i.imgur.com/GaxVAKl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Warning: Please keep in mind that there is a priority to disabling settings. For example: if you disable a category for the whole server and then try to enable a command of that category on the entire server/or a channel, that command will still not work. In general the following idea holds true: Disabled Channel -&gt; Disabled Category (Server wide) -&gt; Disabled Category (Channel wide) -&gt; Disabled Command (Server wide) -&gt; Disabled Command (Channel wide) I.e. A Disabled channel is the strongest form of disabling and will ignore all other settings made to enabled/disabled commands</p>
+<p>Type Command Preview [{text=Disable a Command fully, type=SimpleText}] [{text=~&gt;opts command disable , type=SimpleText}, {code=&lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/tHnMpDL.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a command again, type=SimpleText}] [{text=~&gt;opts command enable , type=SimpleText}, {code=&lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/GnhGeev.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a channel fully, type=SimpleText}] [{text=~&gt;opts channel disable , type=SimpleText}, {code=&lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FVC5L1Z.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a channel again, type=SimpleText}] [{text=~&gt;opts channel enable , type=SimpleText}, {code=&lt;channel&gt;, type=InlinedCode}] [{url=https://i.imgur.com/KTpQhjr.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a command in a channel, type=SimpleText}] [{text=~&gt;opts command specific disable , type=SimpleText}, {code=&lt;channel&gt;, type=InlinedCode}, {text= , type=SimpleText}, {code=&lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/hGFuR1R.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a command in a channel, type=SimpleText}] [{text=~&gt;opts command specific enable , type=SimpleText}, {code=&lt;channel&gt;, type=InlinedCode}, {text= , type=SimpleText}, {code=&lt;command&gt;, type=InlinedCode}] [{url=https://i.imgur.com/cpANjeY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category fully, type=SimpleText}] [{text=~&gt;opts category disable , type=SimpleText}, {code=&lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/FpxVVUM.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category again, type=SimpleText}] [{text=~&gt;opts category enable , type=SimpleText}, {code=&lt;category&gt;, type=InlinedCode}] [{url=https://i.imgur.com/h2QpjQY.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a category in a channel, type=SimpleText}] [{text=~&gt;opts category specific disable , type=SimpleText}, {code=&lt;category&gt;, type=InlinedCode}, {text= , type=SimpleText}, {code=&lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/EKKVv9w.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable a category in a channel, type=SimpleText}] [{text=~&gt;opts category specific enable , type=SimpleText}, {code=&lt;category&gt;, type=InlinedCode}, {text= , type=SimpleText}, {code=&lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/r2AqYsN.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable a role from using commands, type=SimpleText}] [{text=~&gt;opts server role disallow , type=SimpleText}, {code=&lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/wusK9Fu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use commands, type=SimpleText}] [{text=~&gt;opts server role allow , type=SimpleText}, {code=&lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/IXw05Lu.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a specific command, type=SimpleText}] [{text=~&gt;opts role specific disable , type=SimpleText}, {code=&lt;command name&gt;, type=InlinedCode}, {text= , type=SimpleText}, {code=&lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/Lrri02q.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a specific command, type=SimpleText}] [{text=~&gt;opts role specific enable , type=SimpleText}, {code=&lt;command name&gt;, type=InlinedCode}, {text= , type=SimpleText}, {code=&lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/eOCMYOg.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disallow a role to use a whole category, type=SimpleText}] [{text=~&gt;opts category role specific disable , type=SimpleText}, {code=&lt;category&gt;, type=InlinedCode}, {text= , type=SimpleText}, {code=&lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/dzkot4K.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Allow a role to use a whole category, type=SimpleText}] [{text=~&gt;opts category role specific enable , type=SimpleText}, {code=&lt;category&gt;, type=InlinedCode}, {text= , type=SimpleText}, {code=&lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/MdFKFiq.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable/Enable game lobby/multiple, type=SimpleText}] [{text=-&gt;opts commands lobby , type=SimpleText}, {code=disable/enable, type=InlinedCode}] [{url=https://i.imgur.com/GaxVAKl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] Warning: Please keep in mind that there is a priority to disabling settings. For example: if you disable a category for the whole server and then try to enable a command of that category on the entire server/or a channel, that command will still not work. In general the following idea holds true: Disabled Channel -&gt; Disabled Category (Server wide) -&gt; Disabled Category (Channel wide) -&gt; Disabled Command (Server wide) -&gt; Disabled Command (Channel wide) I.e. A Disabled channel is the strongest form of disabling and will ignore all other settings made to enabled/disabled commands</p>
 </article>
 
 <article>
@@ -1236,7 +1236,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable a Command fully",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts command disable <command>",
+            "text" : "~>opts command disable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<command>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/tHnMpDL.png",
@@ -1250,7 +1253,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Allow a command again",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts command enable <command>",
+            "text" : "~>opts command enable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<command>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/GnhGeev.png",
@@ -1264,7 +1270,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable a channel fully",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts channel disable <channel>",
+            "text" : "~>opts channel disable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<channel>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/FVC5L1Z.png",
@@ -1278,7 +1287,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Enable a channel again",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts channel enable <channel>",
+            "text" : "~>opts channel enable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<channel>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/KTpQhjr.png",
@@ -1292,7 +1304,16 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable a command in a channel",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts command specific disable <channel> <command>",
+            "text" : "~>opts command specific disable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<channel>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<command>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/hGFuR1R.png",
@@ -1306,7 +1327,16 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Enable a command in a channel",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts command specific enable <channel> <command>",
+            "text" : "~>opts command specific enable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<channel>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<command>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/cpANjeY.png",
@@ -1320,7 +1350,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable a category fully",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts category disable <category>",
+            "text" : "~>opts category disable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<category>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/FpxVVUM.png",
@@ -1334,7 +1367,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Enable a category again",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts category enable <category>",
+            "text" : "~>opts category enable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<category>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/h2QpjQY.png",
@@ -1348,7 +1384,16 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable a category in a channel",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts category specific disable <category> <channel name>",
+            "text" : "~>opts category specific disable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<category>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<channel name>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/EKKVv9w.png",
@@ -1362,7 +1407,16 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Enable a category in a channel",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts category specific enable <category> <channel name>",
+            "text" : "~>opts category specific enable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<category>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<channel name>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/r2AqYsN.png",
@@ -1376,7 +1430,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable a role from using commands",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server role disallow <role name>",
+            "text" : "~>opts server role disallow ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<role name>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/wusK9Fu.png",
@@ -1390,7 +1447,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Allow a role to use commands",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts server role allow <role name>",
+            "text" : "~>opts server role allow ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<role name>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/IXw05Lu.png",
@@ -1404,7 +1464,16 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disallow a role to use a specific command",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts role specific disable <command name> <role name>",
+            "text" : "~>opts role specific disable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<command name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<role name>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/Lrri02q.png",
@@ -1418,7 +1487,16 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Allow a role to use a specific command",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts role specific enable <command name> <role name>",
+            "text" : "~>opts role specific enable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<command name>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<role name>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/eOCMYOg.png",
@@ -1432,7 +1510,16 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disallow a role to use a whole category",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts category role specific disable <category> <role name>",
+            "text" : "~>opts category role specific disable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<category>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<role name>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/dzkot4K.png",
@@ -1446,7 +1533,16 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Allow a role to use a whole category",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "~>opts category role specific enable <category> <role name>",
+            "text" : "~>opts category role specific enable ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<category>",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "<role name>",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/MdFKFiq.png",
@@ -1460,7 +1556,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "Disable/Enable game lobby/multiple",
             "type" : "SimpleText"
           } ], [ {
-            "code" : "->opts commands lobby disable/enable",
+            "text" : "->opts commands lobby ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "disable/enable",
             "type" : "InlinedCode"
           } ], [ {
             "url" : "https://i.imgur.com/GaxVAKl.png",
@@ -1759,7 +1858,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661099420023,
+    "lastModifiedTime" : 1661118477200,
     "tocItem" : {
       "chapterTitle" : "Configuration",
       "pageTitle" : "Server Configuration",
