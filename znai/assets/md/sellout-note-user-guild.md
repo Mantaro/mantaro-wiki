@@ -1,0 +1,1 @@
+Note: `:icon: dollar-sign {stroke: 'yellow'}` This feature is only available for [Premium users](basics/premium-perks#perks-user-perks) or users in [Premium servers](basics/premium-perks#perks-guild-server-perks).

@@ -3,7 +3,7 @@ title: 🎵 Audio Commands
 ---
 
 
-# /forward
+# /forward {style: "api"}
 This command will skip the song forward by the time given.
 
 ````tabs
@@ -24,7 +24,7 @@ Examples:
 
 
 
-# /move
+# /move {style: "api"}
 This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to.
 
 ````tabs
@@ -34,34 +34,39 @@ channel, Optional, "The voice channel to move to. If empty, it'll use the voice 
 ```
 
 Examples:
-* /move
-* /move `channel:`Music 1
+```api-parameters
+"", "", "/move"
+"", "", "/move `channel:`Music 1"
+```
 ````
 
 
 
-# /nowplaying
+# /nowplaying {style: "api"}
 This command will display the song that is currently playing with timestamps.
 
 ````tabs
 Examples:
-* /nowplaying `channel:`Music 1
+```api-parameters
+"", "", "/nowplaying `channel:`Music 1"
+```
 ````
 
 
 
-# /pause
+# /pause {style: "api"}
 This command will pause the music Player or unpause the Player if already paused.
 
 ````tabs
 Examples:
-* /pause
-
+```api-parameters
+"", "", "/pause"
+```
 ````
 
 
 
-# /play
+# /play {style: "api"}
 This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play.
 
 ````tabs
@@ -77,31 +82,35 @@ Requirements:
 * This command requires you to be connected to a Voice-Chat.
 
 Examples:
-* /play `song:`https://youtu.be/dQw4w9WgXcQ
-* /play `song:`Rick Astley - Never Gonna Give You Up
-* /play `song:`Rick Astley - Never Gonna Give You Up `soundcloud:`True
-
+```api-parameters
+"", "", "/play `song:`https://youtu.be/dQw4w9WgXcQ"
+"", "", "/play `song:`Rick Astley - Never Gonna Give You Up"
+"", "", "/play `song:`Rick Astley - Never Gonna Give You Up `soundcloud:`True"
+```
 ````
 
 
 
-# /queue
+# /queue {style: "api"}
 This command displays the current queue or the selected page of the queue.
 
 ````tabs
 Subcommands:
-* `show`: Shows the current music queue.
-* `clear`: Clears the current queue. Needs [**DJ** or **Admin** permissions](commands/permissions#intro).
+```api-parameters
+show, "", "Shows the current music queue."
+clear, "", "Clears the current queue. Needs [**DJ** or **Admin** permissions](commands/permissions#intro)."
+```
 
 Examples:
-* /queue show
-* /queue clear
-
+```api-parameters
+"", "", "/queue show"
+"", "", "/queue clear"
+```
 ````
 
 
 
-# /removetrack
+# /removetrack {style: "api"}
 This command removes the given track(s) from the queue.
 
 ````tabs
@@ -115,16 +124,18 @@ Requirements:
 * This command requires you to be connected to the same Voice-Chat as Mantaro.
 
 Examples:
-* /removetrack `range:`first
-* /removetrack `range:`next
-* /removetrack `range:`last
-* /removetrack `range:`2
-* /removetrack `range:`1-10
+```api-parameters
+"", "", "/removetrack `range:`first"
+"", "", "/removetrack `range:`next"
+"", "", "/removetrack `range:`last"
+"", "", "/removetrack `range:`2"
+"", "", "/removetrack `range:`1-10"
+```
 ````
 
 
 
-# /repeat
+# /repeat {style: "api"}
 This command repeats the current song or the queue, or disables it.
 
 ````tabs
@@ -137,13 +148,15 @@ Requirements:
 * This command requires you to be connected to the same Voice-Chat as Mantaro.
 
 Examples:
-* /repeat
-* /repeat `queue:`True
+```api-parameters
+"", "", "/repeat"
+"", "", "/repeat `queue:`True"
+```
 ````
 
 
 
-# /restartsong
+# /restartsong {style: "api"}
 This command will rewind the current song back to the start.
 
 ````tabs
@@ -151,12 +164,14 @@ Requirements:
 * This command requires either [**Admin** or **DJ** permissions](commands/permissions#intro).
 
 Examples:
-* /restartsong
+```api-parameters
+"", "", "/restartsong"
+```
 ````
 
 
 
-# /rewind
+# /rewind {style: "api"}
 This command will rewind the song back by the time given.
 
 ````tabs
@@ -169,12 +184,14 @@ Requirements:
 * This command requires either [**Admin** or **DJ** permissions](commands/permissions#intro).
 
 Examples:
-* /rewind `time:`1m29s
+```api-parameters
+"", "", "/rewind `time:`1m29s"
+```
 ````
 
 
 
-# /shuffle
+# /shuffle {style: "api"}
 This command will shuffle the current queue.
 
 ````tabs
@@ -182,12 +199,14 @@ Requirements:
 * This command requires you to be connected to the same Voice-Chat as Mantaro.
 
 Examples:
-* /shuffle
+```api-parameters
+"", "", "/shuffle"
+```
 ````
 
 
 
-# /skip
+# /skip {style: "api"}
 This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. *People with DJ permissions can skip immediately*.
 
 ````tabs
@@ -200,13 +219,15 @@ Requirements:
 * This command requires you to be connected to the same Voice-Chat as Mantaro.
 
 Examples:
-* /skip
-* /skip `force:`True
+```api-parameters
+"", "", "/skip"
+"", "", "/skip `force:`True"
+```
 ````
 
 
 
-# /stop
+# /stop {style: "api"}
 This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. *People with DJ permissions can stop immediately*.<br>
 
 ````tabs
@@ -215,23 +236,30 @@ Requirements:
 * This command requires you to be connected to the same Voice-Chat as Mantaro.
 
 Examples:
-* /stop
+```api-parameters
+"", "", "/stop"
+```
 ````
 
 
 
-# /volume
-This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).<br>
+# /volume {style: "api"}
+This command lets you check the current volume, as well as set the volume to the percentage specified (4-100).<br>
 
-Note: `:icon: dollar-sign {stroke: 'yellow'}` This feature is only available for [Mantaro Premium users](basics/premium-perks).
+
 
 ````tabs
 Options:
 ```api-parameters
-volume, Optional, "The volume to use. Values are 1-100. Leave empty to check current volume."
+volume, Optional, "
+The volume to use (4-100).
+:include-markdown: assets/md/sellout-note-user-guild.md
+"
 ```
 
 Examples:
-* /volume
-* /volume `volume:`25
+```api-parameters
+"", "", "/volume"
+"", "", "/volume `volume:`25"
+```
 ````
