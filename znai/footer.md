@@ -8,5 +8,9 @@ Copyright 2016-2022 [David Rubio Escares / Kodehawa](https://github.com/Kodehawa
 Wiki written and formatted by [Haxiz](https://github.com/Haxiz) with help from [MrLar](https://github.com/MrLar).
 This documentation was created using [Znai](https://github.com/testingisdocumenting/znai).
 
+\
 Currently the wiki is updated to Mantaro version `:badge: v7.0.0`
+
+\
+Help us keep Mantaro alive! You can support us on [Patreon](https://www.patreon.com/mantaro) and get different [perks](basics/premium-perks) from it too!
 ```
