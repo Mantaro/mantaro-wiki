@@ -2,12 +2,25 @@
 title: 💸 Currency Commands
 ---
 
-"h3" `~>badges {@mention/username/user tag}`
-<details><summary>Click here for more details</summary>
-<p>
+# /badges
+Shows a list of your own badges or a list of the badges from the given user. A full list of the badges can be found [here](currency/badges).
 
-**Description:**<br>
-Shows a list of your own badges or a list of the badges from the given user. A full list of the badges can be found [here](https://github.com/Mantaro/MantaroBot/wiki/Badge-reference-and-documentation).
+```tabs
+Subcommands:
+* `Info`: Shows info about a badge.
+* `List`: Lists all the obtainable badges.
+* `Show`: Show your badge list, or someone else's badge list. 
+
+Options:
+* `Time`: **Required**. The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example.
+
+Requirements:
+This command requires either [**Admin** or **DJ** permissions](commands/permissions#intro).
+
+Examples:
+* /forward `time:`2m
+* /forward `time:`1m29s
+```
 
 **Subcommand(s):**<br>
 * `list`: This will show you a list of all badges.
@@ -24,9 +37,6 @@ Shows a list of your own badges or a list of the badges from the given user. A f
 * `~>badges list`
 * `~>badges @Kodehawa#3457`
 * `~>badges info Miner`
-
-</p>
-</details>
 
 
 

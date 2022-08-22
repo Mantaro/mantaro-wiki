@@ -84,7 +84,7 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>/action</h1></header>
-<p>A bunch of action commands that didn't fit into a separate command. Subcommands teehee : Tease someone on the server. bite : Bite someone on the server. lick : Lick someone on the server. kinky nuzzle : Nuzzle someone on the server. smile : Smile at someone on the server. highfive : High-five someone on the server. stare : Stare at someone on the server. blush : Blushes at someone on the server. nom : Nom someone or something. holdhands : Hold someones hand. bloodsuck : Suck someone's blood on the server. meow : Meow at something or someone. facedesk : Smash your head on a desk I guess? lewd : Call something or someone lewd. Options User : Required on some subcommands, optional on others. The user on which you want to perform an action Extra : Optional, available only on certain subcommands. Extra users to which you want to perform an action. Examples /action teehee user: @Kodehawa#3457 /action bite user: @Kodehawa#3457 /action nuzzle user: @Kodehawa#3457 /action holdhands user: @Kodehawa#3457 /action nom user: @Kodehawa#3457 /action stare user: @Kodehawa#3457 /action smile user: @Kodehawa#3457 /action facedesk</p>
+<p>A bunch of action commands that didn't fit into a separate command. Subcommands teehee : Tease someone on the server. bite : Bite someone on the server. lick : Lick someone on the server. kinky nuzzle : Nuzzle someone on the server. smile : Smile at someone on the server. highfive : High-five someone on the server. stare : Stare at someone on the server. blush : Blushes at someone on the server. nom : Nom someone or something. holdhands : Hold someones hand. bloodsuck : Suck someone's blood on the server. meow : Meow at something or someone. facedesk : Smash your head on a desk I guess? lewd : Call something or someone lewd. Options volume Optional The volume to use. Values are 1-100. Leave empty to check current volume. User : Required on some subcommands, optional on others. The user on which you want to perform an action Extra : Optional, available only on certain subcommands. Extra users to which you want to perform an action. Examples /action teehee user: @Kodehawa#3457 /action bite user: @Kodehawa#3457 /action nuzzle user: @Kodehawa#3457 /action holdhands user: @Kodehawa#3457 /action nom user: @Kodehawa#3457 /action stare user: @Kodehawa#3457 /action smile user: @Kodehawa#3457 /action facedesk</p>
 </article>
 
 <article>
@@ -346,6 +346,23 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Options",
           "content" : [ {
+            "parameters" : [ {
+              "name" : "volume",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "volume",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The volume to use. Values are 1-100. Leave empty to check current volume.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          }, {
             "bulletMarker" : "*",
             "tight" : true,
             "type" : "BulletList",
@@ -1293,7 +1310,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661117802592,
+    "lastModifiedTime" : 1661125779314,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "👋 Action Commands",

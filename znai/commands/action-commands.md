@@ -5,7 +5,7 @@ title: 👋 Action Commands
 # /action
 A bunch of action commands that didn't fit into a separate command.
 
-```tabs
+````tabs
 Subcommands:
 * `teehee`:  Tease someone on the server.
 * `bite`: Bite someone on the server.
@@ -23,6 +23,9 @@ Subcommands:
 * `lewd`: Call something or someone lewd.
 
 Options:
+```api-parameters
+volume, Optional, "The volume to use. Values are 1-100. Leave empty to check current volume."
+```
 * `User`: Required on some subcommands, optional on others. The user on which you want to perform an action
 * `Extra`: Optional, available only on certain subcommands. Extra users to which you want to perform an action.
 
@@ -35,14 +38,14 @@ Examples:
 * /action stare `user:`@Kodehawa#3457
 * /action smile `user:`@Kodehawa#3457
 * /action facedesk
-```
+````
 
 
 
 # /cuddle
 Cuddle someone on the server.
 
-```tabs
+````tabs
 Options:
 * `User`: **Required**. The user you want to cuddle.
 * `Extra`: Optional. Extra users you wish to cuddle.
@@ -50,14 +53,14 @@ Options:
 Examples:
 * /cuddle `user:`@Kodehawa#3457
 * /cuddle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
-```
+````
 
 
 
 # /hug
 Hug someone on the server.
 
-```tabs
+````tabs
 Options:
 * `User`: **Required**. The user you want to hug.
 * `Extra`: Optional. Extra users you wish to hug.
@@ -65,14 +68,14 @@ Options:
 Examples:
 * /hug `user:`@Kodehawa#3457
 * /hug `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
-```
+````
 
 
 
 # /kiss
 Kiss someone on the server.
 
-```tabs
+````tabs
 Options:
 * `User`: **Required**. The user you want to kiss.
 * `Extra`: Optional. Extra users you wish to kiss.
@@ -80,14 +83,14 @@ Options:
 Examples:
 * /kiss `user:`@Kodehawa#3457
 * /kiss `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
-```
+````
 
 
 
 # /pat
 Pat someone on the server.
 
-```tabs
+````tabs
 Options:
 * `User`: **Required**. The user you want to pat.
 * `Extra`: Optional. Extra users you wish to pat.
@@ -95,14 +98,14 @@ Options:
 Examples:
 * /pat `user:`@Kodehawa#3457
 * /pat `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
-```
+````
 
 
 
 # /poke
 Poke someone on the server.
 
-```tabs
+````tabs
 Options:
 * `User`: **Required**. The user you want to poke.
 * `Extra`: Optional. Extra users you wish to poke.
@@ -110,14 +113,14 @@ Options:
 Examples:
 * /poke `user:`@Kodehawa#3457
 * /poke `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
-```
+````
 
 
 
 # /pout
 Pout at someone on the server
 
-```tabs
+````tabs
 Options:
 * `User`: **Required**. The user you want to pout at.
 * `Extra`: Optional. Extra users you wish to pout at.
@@ -125,14 +128,14 @@ Options:
 Examples:
 * /pout `user:`@Kodehawa#3457
 * /pout `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
-```
+````
 
 
 
 # /slap
 Slap someone on the server.
 
-```tabs
+````tabs
 Options:
 * `User`: **Required**. The user you want to slap.
 * `Extra`: Optional. Extra users you wish to slap.
@@ -140,14 +143,14 @@ Options:
 Examples:
 * /slap `user:`@Kodehawa#3457
 * /slap `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
-```
+````
 
 
 
 # /tickle
 Tickle someone on the server.
 
-```tabs
+````tabs
 Options:
 * `User`: **Required**. The user you want to tickle.
 * `Extra`: Optional. Extra users you wish to tickle.
@@ -155,4 +158,4 @@ Options:
 Examples:
 * /tickle `user:`@Kodehawa#3457
 * /tickle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
-```
+````

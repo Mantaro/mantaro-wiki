@@ -84,12 +84,12 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>/forward</h1></header>
-<p>This command will skip the song forward by the time given. Options Time : Required. The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /forward time: 2m /forward time: 1m29s</p>
+<p>This command will skip the song forward by the time given. Options time Required The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /forward time: 2m /forward time: 1m29s</p>
 </article>
 
 <article>
 <header><h1>/move</h1></header>
-<p>This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to. Options Channel : Optional. The voice channel to move to. If empty, it'll use the voice channel you're in. Examples /move /move channel: Music 1</p>
+<p>This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to. Options channel Optional The voice channel to move to. If empty, it'll use the voice channel you're in. Examples /move /move channel: Music 1</p>
 </article>
 
 <article>
@@ -104,7 +104,7 @@
 
 <article>
 <header><h1>/play</h1></header>
-<p>This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play. Options Song : Required. The song to play. Can be a URL or a search term. Soundcloud : Optional. Whether to search in Soundcloud. Only use to search. Top : Optional. Puts song at the start of the queue. Requires commands/permissions#intro DJ or Admin permissions. First : Optional. Plays the first search result. Only applies if a search is used. Requirements This command requires you to be connected to a Voice-Chat. Examples /play song: https://youtu.be/dQw4w9WgXcQ /play song: Rick Astley - Never Gonna Give You Up /play song: Rick Astley - Never Gonna Give You Up soundcloud: True</p>
+<p>This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play. Options song Required The song to play. Can be a URL or a search term. soundcloud Optional Whether to search in Soundcloud. Only use to search. top Optional Puts song at the start of the queue. Requires commands/permissions#intro DJ or Admin permissions. first Optional Plays the first search result. Only applies if a search is used. Requirements This command requires you to be connected to a Voice-Chat. Examples /play song: https://youtu.be/dQw4w9WgXcQ /play song: Rick Astley - Never Gonna Give You Up /play song: Rick Astley - Never Gonna Give You Up soundcloud: True</p>
 </article>
 
 <article>
@@ -114,12 +114,12 @@
 
 <article>
 <header><h1>/removetrack</h1></header>
-<p>This command removes the given track(s) from the queue. Options Range : Required. The song to remove, or a range of them (1-10). Can also use first, next or last. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /removetrack range: first /removetrack range: next /removetrack range: last /removetrack range: 2 /removetrack range: 1-10</p>
+<p>This command removes the given track(s) from the queue. Options range Required The song to remove, or a range of them (1-10). Can also use first, next or last. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /removetrack range: first /removetrack range: next /removetrack range: last /removetrack range: 2 /removetrack range: 1-10</p>
 </article>
 
 <article>
 <header><h1>/repeat</h1></header>
-<p>This command repeats the current song or the queue, or disables it. Options Queue : Optional. Repeat the entire queue instead of only the current song. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /repeat /repeat queue: True</p>
+<p>This command repeats the current song or the queue, or disables it. Options queue Optional Repeat the entire queue instead of only the current song. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /repeat /repeat queue: True</p>
 </article>
 
 <article>
@@ -129,7 +129,7 @@
 
 <article>
 <header><h1>/rewind</h1></header>
-<p>This command will rewind the song back by the time given. Options Time : Required. The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /rewind time: 1m29s</p>
+<p>This command will rewind the song back by the time given. Options time Required The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /rewind time: 1m29s</p>
 </article>
 
 <article>
@@ -139,7 +139,7 @@
 
 <article>
 <header><h1>/skip</h1></header>
-<p>This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can skip immediately. Options Force : Optional. Whether to skip vote. Requires commands/permissions#intro DJ or Admin permissions. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /skip /skip force: True</p>
+<p>This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can skip immediately. Options force Optional Whether to skip vote. Requires commands/permissions#intro DJ or Admin permissions. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /skip /skip force: True</p>
 </article>
 
 <article>
@@ -149,7 +149,7 @@
 
 <article>
 <header><h1>/volume</h1></header>
-<p>This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).Note: This feature is only available for basics/premium-perks Mantaro Premium users. Options Volume : Optional. The volume to use. Values are 1-100. Leave empty to check current volume. Examples /volume /volume volume: 25</p>
+<p>This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).Note: This feature is only available for basics/premium-perks Mantaro Premium users. Options volume Optional The volume to use. Values are 1-100. Leave empty to check current volume. Examples /volume /volume volume: 25</p>
 </article>
 </section>
 </div>
@@ -189,31 +189,22 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Options",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "time",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "time",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Time",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": ",
-                  "type" : "SimpleText"
-                }, {
-                  "type" : "StrongEmphasis",
-                  "content" : [ {
-                    "text" : "Required",
-                    "type" : "SimpleText"
-                  } ]
-                }, {
-                  "text" : ". The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example.",
+                  "text" : "The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example.",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Requirements",
@@ -253,12 +244,11 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/forward ",
@@ -272,8 +262,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/forward ",
@@ -286,7 +278,8 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
@@ -305,22 +298,22 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Options",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "channel",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "channel",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Channel",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": Optional. The voice channel to move to. If empty, it'll use the voice channel you're in.",
+                  "text" : "The voice channel to move to. If empty, it'll use the voice channel you're in.",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Examples",
@@ -439,51 +432,45 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Options",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "song",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "song",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Song",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": ",
-                  "type" : "SimpleText"
-                }, {
-                  "type" : "StrongEmphasis",
-                  "content" : [ {
-                    "text" : "Required",
-                    "type" : "SimpleText"
-                  } ]
-                }, {
-                  "text" : ". The song to play. Can be a URL or a search term.",
+                  "text" : "The song to play. Can be a URL or a search term.",
                   "type" : "SimpleText"
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "soundcloud",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "soundcloud",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Soundcloud",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": Optional. Whether to search in Soundcloud. Only use to search.",
+                  "text" : "Whether to search in Soundcloud. Only use to search.",
                   "type" : "SimpleText"
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "top",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "top",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Top",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": Optional. Puts song at the start of the queue. Requires ",
+                  "text" : "Puts song at the start of the queue. Requires ",
                   "type" : "SimpleText"
                 }, {
                   "url" : "/mantaro-wiki/commands/permissions#intro",
@@ -514,18 +501,21 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "first",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "first",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "First",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": Optional. Plays the first search result. Only applies if a search is used.",
+                  "text" : "Plays the first search result. Only applies if a search is used.",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Requirements",
@@ -718,31 +708,22 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Options",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "range",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "range",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Range",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": ",
-                  "type" : "SimpleText"
-                }, {
-                  "type" : "StrongEmphasis",
-                  "content" : [ {
-                    "text" : "Required",
-                    "type" : "SimpleText"
-                  } ]
-                }, {
-                  "text" : ". The song to remove, or a range of them (1-10). Can also use first, next or last.",
+                  "text" : "The song to remove, or a range of them (1-10). Can also use first, next or last.",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Requirements",
@@ -896,22 +877,22 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Options",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "queue",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "queue",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Queue",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": Optional. Repeat the entire queue instead of only the current song.",
+                  "text" : "Repeat the entire queue instead of only the current song.",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Requirements",
@@ -1053,31 +1034,22 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Options",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "time",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "time",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Time",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": ",
-                  "type" : "SimpleText"
-                }, {
-                  "type" : "StrongEmphasis",
-                  "content" : [ {
-                    "text" : "Required",
-                    "type" : "SimpleText"
-                  } ]
-                }, {
-                  "text" : ". The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example.",
+                  "text" : "The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example.",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Requirements",
@@ -1219,18 +1191,17 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Options",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "force",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "force",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Force",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": Optional. Whether to skip vote. Requires ",
+                  "text" : "Whether to skip vote. Requires ",
                   "type" : "SimpleText"
                 }, {
                   "url" : "/mantaro-wiki/commands/permissions#intro",
@@ -1260,7 +1231,8 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Requirements",
@@ -1444,22 +1416,22 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Options",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "volume",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "volume",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "Volume",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": Optional. The volume to use. Values are 1-100. Leave empty to check current volume.",
+                  "text" : "The volume to use. Values are 1-100. Leave empty to check current volume.",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Examples",
@@ -1497,7 +1469,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661117791578,
+    "lastModifiedTime" : 1661126609553,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🎵 Audio Commands",

@@ -305,7 +305,10 @@ toc = [ {
     "dirName" : "commands",
     "fileName" : "currency-commands",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "/badges",
+      "id" : "badges"
+    } ]
   }, {
     "chapterTitle" : "Commands",
     "pageTitle" : "🕹️ Game Commands",
