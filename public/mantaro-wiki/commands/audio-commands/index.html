@@ -109,7 +109,7 @@
 
 <article>
 <header><h1>/queue</h1></header>
-<p>This command displays the current queue or the selected page of the queue. Subcommands show : Shows the current music queue. clear : Clears the current queue. Needs commands/permissions#intro DJ or Admin permissions. Examples /queue show /queue clear</p>
+<p>This command displays the current queue or the selected page of the queue. Subcommands show Shows the current music queue. clear Clears the current queue. Needs commands/permissions#intro DJ or Admin permissions. Examples /queue show /queue clear</p>
 </article>
 
 <article>
@@ -149,7 +149,7 @@
 
 <article>
 <header><h1>/volume</h1></header>
-<p>This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).Note: This feature is only available for basics/premium-perks Mantaro Premium users. Options volume Optional The volume to use. Values are 1-100. Leave empty to check current volume. Examples /volume /volume volume: 25</p>
+<p>This command lets you check the current volume, as well as set the volume to the percentage specified (4-100). Options volume Optional The volume to use (4-100). Note: This feature is only available for basics/premium-perks#perks-user-perks Premium users or users in basics/premium-perks#perks-guild-server-perks Premium servers. Examples /volume /volume volume: 25</p>
 </article>
 </section>
 </div>
@@ -176,6 +176,7 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
+      "style" : "api",
       "id" : "forward",
       "title" : "/forward",
       "type" : "Section",
@@ -285,6 +286,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "move",
       "title" : "/move",
       "type" : "Section",
@@ -318,12 +320,11 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/move",
@@ -331,8 +332,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/move ",
@@ -345,12 +348,14 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "nowplaying",
       "title" : "/nowplaying",
       "type" : "Section",
@@ -364,12 +369,11 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/nowplaying ",
@@ -382,12 +386,14 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "pause",
       "title" : "/pause",
       "type" : "Section",
@@ -401,24 +407,25 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/pause",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "play",
       "title" : "/play",
       "type" : "Section",
@@ -537,12 +544,11 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/play ",
@@ -556,8 +562,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/play ",
@@ -571,8 +579,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/play ",
@@ -591,12 +601,14 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "queue",
       "title" : "/queue",
       "type" : "Section",
@@ -610,30 +622,25 @@ ReactDOM.render(React.createElement(Documentation, {
         "tabsContent" : [ {
           "name" : "Subcommands",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "show",
+              "type" : [ ],
+              "anchorId" : "show",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "show",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": Shows the current music queue.",
+                  "text" : "Shows the current music queue.",
                   "type" : "SimpleText"
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "clear",
+              "type" : [ ],
+              "anchorId" : "clear",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "code" : "clear",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : ": Clears the current queue. Needs ",
+                  "text" : "Clears the current queue. Needs ",
                   "type" : "SimpleText"
                 }, {
                   "url" : "/mantaro-wiki/commands/permissions#intro",
@@ -663,17 +670,17 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/queue show",
@@ -681,20 +688,24 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/queue clear",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "removetrack",
       "title" : "/removetrack",
       "type" : "Section",
@@ -780,12 +791,11 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/removetrack ",
@@ -799,8 +809,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/removetrack ",
@@ -814,8 +826,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/removetrack ",
@@ -829,8 +843,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/removetrack ",
@@ -844,8 +860,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/removetrack ",
@@ -858,12 +876,14 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "repeat",
       "title" : "/repeat",
       "type" : "Section",
@@ -914,12 +934,11 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/repeat",
@@ -927,8 +946,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/repeat ",
@@ -941,12 +962,14 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "restartsong",
       "title" : "/restartsong",
       "type" : "Section",
@@ -1003,24 +1026,25 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/restartsong",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "rewind",
       "title" : "/rewind",
       "type" : "Section",
@@ -1097,12 +1121,11 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/rewind ",
@@ -1115,12 +1138,14 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "shuffle",
       "title" : "/shuffle",
       "type" : "Section",
@@ -1151,24 +1176,25 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/shuffle",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "skip",
       "title" : "/skip",
       "type" : "Section",
@@ -1254,12 +1280,11 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/skip",
@@ -1267,8 +1292,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/skip ",
@@ -1281,12 +1308,14 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "stop",
       "title" : "/stop",
       "type" : "Section",
@@ -1361,55 +1390,32 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/stop",
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
+      "style" : "api",
       "id" : "volume",
       "title" : "/volume",
       "type" : "Section",
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Note: ",
-          "type" : "SimpleText"
-        }, {
-          "stroke" : "yellow",
-          "id" : "dollar-sign",
-          "type" : "Icon"
-        }, {
-          "text" : " This feature is only available for ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "/mantaro-wiki/basics/premium-perks",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "Mantaro Premium users",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : ".",
+          "text" : "This command lets you check the current volume, as well as set the volume to the percentage specified (4-100).",
           "type" : "SimpleText"
         } ]
       }, {
@@ -1426,7 +1432,42 @@ ReactDOM.render(React.createElement(Documentation, {
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "The volume to use. Values are 1-100. Leave empty to check current volume.",
+                  "text" : "The volume to use (4-100).",
+                  "type" : "SimpleText"
+                } ]
+              }, {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Note: ",
+                  "type" : "SimpleText"
+                }, {
+                  "stroke" : "yellow",
+                  "id" : "dollar-sign",
+                  "type" : "Icon"
+                }, {
+                  "text" : " This feature is only available for ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/basics/premium-perks#perks-user-perks",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "text" : "Premium users",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " or users in ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/basics/premium-perks#perks-guild-server-perks",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "text" : "Premium servers",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
                   "type" : "SimpleText"
                 } ]
               } ]
@@ -1436,12 +1477,11 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "Examples",
           "content" : [ {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/volume",
@@ -1449,8 +1489,10 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "type" : "ListItem",
-              "content" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "/volume ",
@@ -1463,13 +1505,14 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
-            } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661126609553,
+    "lastModifiedTime" : 1661212625751,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🎵 Audio Commands",
@@ -1481,46 +1524,60 @@ ReactDOM.render(React.createElement(Documentation, {
       "viewOnRelativePath" : null,
       "pageSectionIdTitles" : [ {
         "title" : "/forward",
-        "id" : "forward"
+        "id" : "forward",
+        "style" : "api"
       }, {
         "title" : "/move",
-        "id" : "move"
+        "id" : "move",
+        "style" : "api"
       }, {
         "title" : "/nowplaying",
-        "id" : "nowplaying"
+        "id" : "nowplaying",
+        "style" : "api"
       }, {
         "title" : "/pause",
-        "id" : "pause"
+        "id" : "pause",
+        "style" : "api"
       }, {
         "title" : "/play",
-        "id" : "play"
+        "id" : "play",
+        "style" : "api"
       }, {
         "title" : "/queue",
-        "id" : "queue"
+        "id" : "queue",
+        "style" : "api"
       }, {
         "title" : "/removetrack",
-        "id" : "removetrack"
+        "id" : "removetrack",
+        "style" : "api"
       }, {
         "title" : "/repeat",
-        "id" : "repeat"
+        "id" : "repeat",
+        "style" : "api"
       }, {
         "title" : "/restartsong",
-        "id" : "restartsong"
+        "id" : "restartsong",
+        "style" : "api"
       }, {
         "title" : "/rewind",
-        "id" : "rewind"
+        "id" : "rewind",
+        "style" : "api"
       }, {
         "title" : "/shuffle",
-        "id" : "shuffle"
+        "id" : "shuffle",
+        "style" : "api"
       }, {
         "title" : "/skip",
-        "id" : "skip"
+        "id" : "skip",
+        "style" : "api"
       }, {
         "title" : "/stop",
-        "id" : "stop"
+        "id" : "stop",
+        "style" : "api"
       }, {
         "title" : "/volume",
-        "id" : "volume"
+        "id" : "volume",
+        "style" : "api"
       } ]
     }
   }

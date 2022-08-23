@@ -1,1 +1,1 @@
-Note: `:icon: dollar-sign {stroke: 'yellow'}` This feature is only available for [Premium users](basics/premium-perks#perks-user-perks).
+Note: `:icon: dollar-sign {stroke: 'yellow'}` This feature is only available for [Premium users](basics/premium-perks#perks-user-perks) or [Mantaro Patreon users](basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot).

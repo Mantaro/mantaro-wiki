@@ -2,7 +2,7 @@
 title: 👋 Action Commands
 ---
 
-# /action
+# /action {style: "api"}
 A bunch of action commands that didn't fit into a separate command.
 
 ````tabs
@@ -50,7 +50,7 @@ Examples:
 
 
 
-# /cuddle
+# /cuddle {style: "api"}
 Cuddle someone on the server.
 
 ````tabs
@@ -72,7 +72,7 @@ Examples:
 
 
 
-# /hug
+# /hug {style: "api"}
 Hug someone on the server.
 
 ````tabs
@@ -94,7 +94,7 @@ Examples:
 
 
 
-# /kiss
+# /kiss {style: "api"}
 Kiss someone on the server.
 
 ````tabs
@@ -116,7 +116,7 @@ Examples:
 
 
 
-# /pat
+# /pat {style: "api"}
 Pat someone on the server.
 
 ````tabs
@@ -138,7 +138,7 @@ Examples:
 
 
 
-# /poke
+# /poke {style: "api"}
 Poke someone on the server.
 
 ````tabs
@@ -160,7 +160,7 @@ Examples:
 
 
 
-# /pout
+# /pout {style: "api"}
 Pout at someone on the server
 
 ````tabs
@@ -182,7 +182,7 @@ Examples:
 
 
 
-# /slap
+# /slap {style: "api"}
 Slap someone on the server.
 
 ````tabs
@@ -204,7 +204,7 @@ Examples:
 
 
 
-# /tickle
+# /tickle {style: "api"}
 Tickle someone on the server.
 
 ````tabs

@@ -218,46 +218,60 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/forward",
-      "id" : "forward"
+      "id" : "forward",
+      "style" : "api"
     }, {
       "title" : "/move",
-      "id" : "move"
+      "id" : "move",
+      "style" : "api"
     }, {
       "title" : "/nowplaying",
-      "id" : "nowplaying"
+      "id" : "nowplaying",
+      "style" : "api"
     }, {
       "title" : "/pause",
-      "id" : "pause"
+      "id" : "pause",
+      "style" : "api"
     }, {
       "title" : "/play",
-      "id" : "play"
+      "id" : "play",
+      "style" : "api"
     }, {
       "title" : "/queue",
-      "id" : "queue"
+      "id" : "queue",
+      "style" : "api"
     }, {
       "title" : "/removetrack",
-      "id" : "removetrack"
+      "id" : "removetrack",
+      "style" : "api"
     }, {
       "title" : "/repeat",
-      "id" : "repeat"
+      "id" : "repeat",
+      "style" : "api"
     }, {
       "title" : "/restartsong",
-      "id" : "restartsong"
+      "id" : "restartsong",
+      "style" : "api"
     }, {
       "title" : "/rewind",
-      "id" : "rewind"
+      "id" : "rewind",
+      "style" : "api"
     }, {
       "title" : "/shuffle",
-      "id" : "shuffle"
+      "id" : "shuffle",
+      "style" : "api"
     }, {
       "title" : "/skip",
-      "id" : "skip"
+      "id" : "skip",
+      "style" : "api"
     }, {
       "title" : "/stop",
-      "id" : "stop"
+      "id" : "stop",
+      "style" : "api"
     }, {
       "title" : "/volume",
-      "id" : "volume"
+      "id" : "volume",
+      "style" : "api"
     } ]
   }, {
     "chapterTitle" : "Commands",
@@ -308,6 +322,24 @@ toc = [ {
     "pageSectionIdTitles" : [ {
       "title" : "/badges",
       "id" : "badges"
+    }, {
+      "title" : "/balance",
+      "id" : "balance"
+    }, {
+      "title" : "/buy",
+      "id" : "buy"
+    }, {
+      "title" : "/cast",
+      "id" : "cast"
+    }, {
+      "title" : "/chop",
+      "id" : "chop"
+    }, {
+      "title" : "/daily",
+      "id" : "daily"
+    }, {
+      "title" : "/dailycrate",
+      "id" : "dailycrate"
     } ]
   }, {
     "chapterTitle" : "Commands",
@@ -523,9 +555,9 @@ toc = [ {
   "dirName" : "currency",
   "items" : [ {
     "chapterTitle" : "Currency",
-    "pageTitle" : "101: Introduction",
+    "pageTitle" : "Currency 101: Introduction",
     "pageMeta" : {
-      "title" : [ "101: Introduction" ]
+      "title" : [ "Currency 101: Introduction" ]
     },
     "dirName" : "currency",
     "fileName" : "101",
@@ -542,9 +574,9 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Currency",
-    "pageTitle" : "102: Basic knowledge",
+    "pageTitle" : "Currency 102: Basic knowledge",
     "pageMeta" : {
-      "title" : [ "102: Basic knowledge" ]
+      "title" : [ "Currency 102: Basic knowledge" ]
     },
     "dirName" : "currency",
     "fileName" : "102",
@@ -561,9 +593,9 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Currency",
-    "pageTitle" : "101: Intermediate knowledge",
+    "pageTitle" : "Currency 103: Intermediate knowledge",
     "pageMeta" : {
-      "title" : [ "101: Intermediate knowledge" ]
+      "title" : [ "Currency 103: Intermediate knowledge" ]
     },
     "dirName" : "currency",
     "fileName" : "103",
@@ -586,9 +618,9 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Currency",
-    "pageTitle" : "104: Advanced knowledge",
+    "pageTitle" : "Currency 104: Advanced knowledge",
     "pageMeta" : {
-      "title" : [ "104: Advanced knowledge" ]
+      "title" : [ "Currency 104: Advanced knowledge" ]
     },
     "dirName" : "currency",
     "fileName" : "104",

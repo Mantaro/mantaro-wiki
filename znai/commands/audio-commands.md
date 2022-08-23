@@ -246,8 +246,6 @@ Examples:
 # /volume {style: "api"}
 This command lets you check the current volume, as well as set the volume to the percentage specified (4-100).<br>
 
-
-
 ````tabs
 Options:
 ```api-parameters

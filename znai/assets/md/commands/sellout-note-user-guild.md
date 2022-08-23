@@ -1,1 +1,1 @@
-Note: `:icon: dollar-sign {stroke: 'yellow'}` This feature is only available for [Premium users](basics/premium-perks#perks-user-perks) or users in [Premium servers](basics/premium-perks#perks-guild-server-perks).
+Note: `:icon: dollar-sign {stroke: 'yellow'}` This feature is only available for [Premium users](basics/premium-perks#perks-user-perks), users in [Premium servers](basics/premium-perks#perks-guild-server-perks) or [Mantaro Patreon users](basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot).

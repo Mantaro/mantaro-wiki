@@ -13,4 +13,4 @@ Use the links on the side  to navigate to the section you would like to know mor
 
 If you need any further help, you can join [our support server on Discord](https://support.mantaro.site) and ask in the #support channel.
 
-Note: Remember you can use `/help` to get more information on the commands!
+Tip: Remember you can use `/help` to get more information on the commands!
