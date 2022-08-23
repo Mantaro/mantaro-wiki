@@ -253,7 +253,7 @@ Options:
 ```api-parameters
 volume, Optional, "
 The volume to use (4-100).
-:include-markdown: assets/md/sellout-note-user-guild.md
+:include-markdown: assets/md/commands/sellout-note-user-guild.md
 "
 ```
 

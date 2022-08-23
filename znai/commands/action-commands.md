@@ -7,37 +7,45 @@ A bunch of action commands that didn't fit into a separate command.
 
 ````tabs
 Subcommands:
-* `teehee`:  Tease someone on the server.
-* `bite`: Bite someone on the server.
-* `lick`:  Lick someone on the server. ~~kinky~~
-* `nuzzle`: Nuzzle someone on the server.
-* `smile`: Smile at someone on the server.
-* `highfive`: High-five someone on the server.
-* `stare`: Stare at someone on the server.
-* `blush`: Blushes at someone on the server.
-* `nom`: Nom someone or something.
-* `holdhands`: Hold someones hand.
-* `bloodsuck`: Suck someone's blood on the server.
-* `meow`: Meow at something or someone.
-* `facedesk`: Smash your head on a desk I guess?
-* `lewd`: Call something or someone lewd.
+```api-parameters
+Teehee, "", "Tease someone on the server."
+Bite, "", "Bite someone on the server."
+Lick, "", "Lick someone on the server. ~~kinky~~"
+Nuzzle, "", "Nuzzle someone on the server."
+Smile, "", "Smile at someone on the server."
+Highfive, "", "High-five someone on the server."
+Stare, "", "Stare at someone on the server."
+Blush, "", "Blushes at someone on the server."
+Nom, "", "Nom someone or something."
+Holdhands, "", "Hold someones hand."
+Bloodsuck, "", "Suck someone's blood on the server."
+Meow, "", "Meow at something or someone."
+Facedesk, "", "Smash your head on a desk I guess?"
+Lewd, "", "Call something or someone lewd."
+```
 
 Options:
 ```api-parameters
-volume, Optional, "The volume to use. Values are 1-100. Leave empty to check current volume."
+Type 1, Click me!, "Options for the `Teehee`, `Bite`, `Lick`, `Nuzzle`, `Smile`, `Highfive`, `Stare`, `Blush`, `Holdhands` and `Bloodsuck` Subcommands"
+Type 1.user, Required, "The user on which you want to perform an action."
+Type 1.extra, Optional, "Extra users to which you want to perform an action."
+
+Type 2, Click me!, "Options for the `Nom`, `Meow` and `Lewd` Subcommands"
+Type 2.user, Optional, "The user on which you want to perform an action."
 ```
-* `User`: Required on some subcommands, optional on others. The user on which you want to perform an action
-* `Extra`: Optional, available only on certain subcommands. Extra users to which you want to perform an action.
+ Note: The `Facedesk` subcommand has no options.
 
 Examples:
-* /action teehee `user:`@Kodehawa#3457
-* /action bite `user:`@Kodehawa#3457
-* /action nuzzle `user:`@Kodehawa#3457
-* /action holdhands `user:`@Kodehawa#3457
-* /action nom `user:`@Kodehawa#3457
-* /action stare `user:`@Kodehawa#3457
-* /action smile `user:`@Kodehawa#3457
-* /action facedesk
+```api-parameters
+"", "", "/action teehee `user:`@Kodehawa#3457"
+"", "", "/action bite `user:`@Kodehawa#3457"
+"", "", "/action nuzzle `user:`@Kodehawa#3457"
+"", "", "/action holdhands `user:`@Kodehawa#3457"
+"", "", "/action nom `user:`@Kodehawa#3457"
+"", "", "/action stare `user:`@Kodehawa#3457"
+"", "", "/action smile `user:`@Kodehawa#3457"
+"", "", "/action facedesk"
+```
 ````
 
 
@@ -47,12 +55,19 @@ Cuddle someone on the server.
 
 ````tabs
 Options:
-* `User`: **Required**. The user you want to cuddle.
-* `Extra`: Optional. Extra users you wish to cuddle.
+```api-parameters
+user, Required, "The user you want to cuddle."
+extra, Optional, "
+Extra users you wish to cuddle.
+:include-markdown: assets/md/commands/action-commands-option-extra-note.md
+"
+```
 
 Examples:
-* /cuddle `user:`@Kodehawa#3457
-* /cuddle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
+```api-parameters
+"", "", "/cuddle `user:`@Kodehawa#3457"
+"", "", "/cuddle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+```
 ````
 
 
@@ -62,12 +77,19 @@ Hug someone on the server.
 
 ````tabs
 Options:
-* `User`: **Required**. The user you want to hug.
-* `Extra`: Optional. Extra users you wish to hug.
+```api-parameters
+user, Required, "The user you want to hug."
+extra, Optional, "
+Extra users you wish to hug.
+:include-markdown: assets/md/commands/action-commands-option-extra-note.md
+"
+```
 
 Examples:
-* /hug `user:`@Kodehawa#3457
-* /hug `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
+```api-parameters
+"", "", "/hug `user:`@Kodehawa#3457"
+"", "", "/hug `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+```
 ````
 
 
@@ -77,12 +99,19 @@ Kiss someone on the server.
 
 ````tabs
 Options:
-* `User`: **Required**. The user you want to kiss.
-* `Extra`: Optional. Extra users you wish to kiss.
+```api-parameters
+user, Required, "The user you want to kiss."
+extra, Optional, "
+Extra users you wish to kiss.
+:include-markdown: assets/md/commands/action-commands-option-extra-note.md
+"
+```
 
 Examples:
-* /kiss `user:`@Kodehawa#3457
-* /kiss `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
+```api-parameters
+"", "", "/kiss `user:`@Kodehawa#3457"
+"", "", "/kiss `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+```
 ````
 
 
@@ -92,12 +121,19 @@ Pat someone on the server.
 
 ````tabs
 Options:
-* `User`: **Required**. The user you want to pat.
-* `Extra`: Optional. Extra users you wish to pat.
+```api-parameters
+user, Required, "The user you want to pat."
+extra, Optional, "
+Extra users you wish to pat.
+:include-markdown: assets/md/commands/action-commands-option-extra-note.md
+"
+```
 
 Examples:
-* /pat `user:`@Kodehawa#3457
-* /pat `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
+```api-parameters
+"", "", "/pat `user:`@Kodehawa#3457"
+"", "", "/pat `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+```
 ````
 
 
@@ -107,12 +143,19 @@ Poke someone on the server.
 
 ````tabs
 Options:
-* `User`: **Required**. The user you want to poke.
-* `Extra`: Optional. Extra users you wish to poke.
+```api-parameters
+user, Required, "The user you want to poke."
+extra, Optional, "
+Extra users you wish to poke.
+:include-markdown: assets/md/commands/action-commands-option-extra-note.md
+"
+```
 
 Examples:
-* /poke `user:`@Kodehawa#3457
-* /poke `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
+```api-parameters
+"", "", "/poke `user:`@Kodehawa#3457"
+"", "", "/poke `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+```
 ````
 
 
@@ -122,12 +165,19 @@ Pout at someone on the server
 
 ````tabs
 Options:
-* `User`: **Required**. The user you want to pout at.
-* `Extra`: Optional. Extra users you wish to pout at.
+```api-parameters
+user, Required, "The user you want to pout."
+extra, Optional, "
+Extra users you wish to pout.
+:include-markdown: assets/md/commands/action-commands-option-extra-note.md
+"
+```
 
 Examples:
-* /pout `user:`@Kodehawa#3457
-* /pout `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
+```api-parameters
+"", "", "/pout `user:`@Kodehawa#3457"
+"", "", "/pout `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+```
 ````
 
 
@@ -137,12 +187,19 @@ Slap someone on the server.
 
 ````tabs
 Options:
-* `User`: **Required**. The user you want to slap.
-* `Extra`: Optional. Extra users you wish to slap.
+```api-parameters
+user, Required, "The user you want to slap."
+extra, Optional, "
+Extra users you wish to slap.
+:include-markdown: assets/md/commands/action-commands-option-extra-note.md
+"
+```
 
 Examples:
-* /slap `user:`@Kodehawa#3457
-* /slap `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
+```api-parameters
+"", "", "/slap `user:`@Kodehawa#3457"
+"", "", "/slap `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+```
 ````
 
 
@@ -152,10 +209,17 @@ Tickle someone on the server.
 
 ````tabs
 Options:
-* `User`: **Required**. The user you want to tickle.
-* `Extra`: Optional. Extra users you wish to tickle.
+```api-parameters
+user, Required, "The user you want to tickle."
+extra, Optional, "
+Extra users you wish to tickle.
+:include-markdown: assets/md/commands/action-commands-option-extra-note.md
+"
+```
 
 Examples:
-* /tickle `user:`@Kodehawa#3457
-* /tickle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569
+```api-parameters
+"", "", "/tickle `user:`@Kodehawa#3457"
+"", "", "/tickle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+```
 ````
