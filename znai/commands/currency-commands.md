@@ -2,845 +2,912 @@
 title: 💸 Currency Commands
 ---
 
-# /badges
+# /badges {style: "api"}
 Shows a list of your own badges or a list of the badges from the given user. A full list of the badges can be found [here](currency/badges).
 
-```tabs
+````tabs
 Subcommands:
-* `Info`: Shows info about a badge.
-* `List`: Lists all the obtainable badges.
-* `Show`: Show your badge list, or someone else's badge list. 
-
-Options:
-* `Time`: **Required**. The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example.
-
-Requirements:
-This command requires either [**Admin** or **DJ** permissions](commands/permissions#intro).
-
-Examples:
-* /forward `time:`2m
-* /forward `time:`1m29s
+```api-parameters
+Info, "", "Shows info about a badge."
+List, "", "Lists all the obtainable badges."
+Show, "", "Show your badge list, or someone else's badge list." 
 ```
 
-**Subcommand(s):**<br>
-* `list`: This will show you a list of all badges.
-* `info <name>`: This will show information on the specified badge.
+Options:
+```api-parameters
+Info, Click me!, "Options for the `Info` Subcommand"
+Info.badge, "Required", "The badge to check info for."
+Show, Click me!, "Options for the `Show` Subcommand"
+Show.user, "Optional", "The user to check. If none, you."
+Show.brief, "Optional", "Whether to show this in brief format. Default is false."
+```
 
-**Requirements:**<br>
-* This command requires [**Embed**, **Emotes** and **Reactions** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+Requirements:
+* This command requires the [**Emotes** permission](commands/permissions#intro).
 
-**Alias(es):**<br>
-* `badge`
+Examples:
+```api-parameters
+"", "", "/badges show"
+"", "", "/badges show `user:`@Kodehawa#3457"
+"", "", "/badges list"
+"", "", "/badges info `badge:`Donator"
+```
+````
 
-**Example(s):**<br>
-* `~>badges`
-* `~>badges list`
-* `~>badges @Kodehawa#3457`
-* `~>badges info Miner`
 
 
-
-"h3" `~>balance {@mention/username/user tag}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /balance {style: "api"}
 Returns your current amount of money or the amount of money of the person that was given.
 
-**Requirements:**<br>
-* This command does not have any specific requirements.
+````tabs
+Options:
+```api-parameters
+user, Optional, "The user to check the balance of."
+```
 
-**Alias(es):**<br>
-* `credits`
-* `bal`
-
-**Example(s):**<br>
-* `~>balance`
-* `~>bal`
-* `~>bal @Kodehawa#3457`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/balance"
+"", "", "/balance `user:`@Kodehawa#3457"
+```
+````
 
 
-
-"h3" `~>buy {amount/all/quarter/half} <item>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description**<br>
+# /buy {style: "api"}
 Allows you to buy items from the market.
 
-**Requirements:**<br>
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+````tabs
+Options:
+```api-parameters
+item, Required, "The item to buy."
+amount, Optional, "The amount of the item to buy."
+```
+
+Requirements:
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 * This command requires you to have the credits needed to buy the item.
 
-**Example(s):**<br>
-* `~>buy 2 Diamond`
-* `~>buy House`
+Examples:
+```api-parameters
+"", "", "/buy `item:`Diamond"
+"", "", "/buy `item:`Diamond `amount:`2"
+```
+````
 
-</p>
-</details>
 
 
+# /cast {style: "api"}
+Cast various items.
+Different wrenches have different amounts of items they can cast at the same time. 
+For more in-depth information you can go to our [Currency 101 page](currency/101#concepts-dust).
 
-"h3" `~>cast <item> {wrench} {-amount <amount>}`
-<details><summary>Click here for more details</summary>
-<p>
+````tabs
+Subcommands:
+```api-parameters
+Item, "", "Cast an item."
+List, "", "Shows a list of castable items."
+```
 
-**Description:**<br>
-Cast various items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory.
-Different wrenches have different amounts of items they can cast at the same time. For more in-depth information you can go to our [Currency 101 page](https://github.com/Mantaro/MantaroBot/wiki/Currency-101#casting--dust-level).
-
-**Subcommand(s):**<br>
-* `ls`: This will show a list of all castable items.
-
-**Requirements:**<br>
+Options:
+```api-parameters
+Item, Click me!, "Options for the `Item` Subcommand"
+Item.item, "Required", "The item to cast."
+Item.amount, "Optional", "The amount of the item to cast, 1 by default. Depends on your wrench, maximum is 10."
+```
+ Note: The `List` subcommand has no options.
+ 
+Requirements:
 * This command requires you to have the items needed to cast the specified item.
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* The `ls` subcommand requires [**Embed**, **Emotes** and **Reactions** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+* This command requires [**Emotes** permissions](commands/permissions#intro).
+* The `List` subcommand requires [ **Emotes** permissions](commands/permissions#intro).
 
-**Alias(es):**<br>
-* `craft`
-
-**Example(s):**<br>
-* `~>cast ls`
-* `~>cast "diamond pickaxe"`
-* `~>cast "comet gem" "sparkle wrench" 10`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/cast list"
+"", "", "/cast item `item:`Diamond Pickaxe"
+"", "", "/cast item `item:`Diamond Pickaxe `amount:`5"
+```
+````
 
 
 
-"h3" `~>chop`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /chop {style: "api"}
 Use one of your axes to chop down trees.
 
-**Requirements:**<br>
+````tabs 
+Requirements:
 * This command requires you to have an axe equipped.
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 
-**Example(s):**<br>
-* `~>chop`
-
-</p>
-</details>
-
-
-
-"h3" `~>daily {@mention/-check}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Claim your Daily credits. You can only claim them once every 24 hours. Mentioning someone will give your daily credits to them instead. The -check flag allows you to check if you daily is ready without claiming it.
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Alias(es):**<br>
-* `dailies`
-
-**Example(s):**<br>
-* `~>daily`
-* `~>dailies`
-* `~>daily @Kodehawa#3457`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/chop"
+```
+````
 
 
 
-"h3" 💰 `~>dailycrate {-check}`
-<details><summary>Click here for more details</summary>
-<p>
+# /daily {style: "api"}
+Gives you $150 credits per day (or between 150 and 180 if you transfer it to another person).
+Maximum amount it can give is ~2000 credits (a bit more for shared dailies).
+This command gives a reward for claiming it every day (daily streak). You lose the streak if you miss two days in a row.
 
-**Description:**<br>
-Allows you to receive a random crate once per day. The -check flag allows you to check if you daily crate is ready without claiming it.
+````tabs 
+Options:
+```api-parameters
+user, Optional, "The user to give your daily to, without this it gives it to yourself."
+check, Optional, "Whether you want to check if you can claim your daily"
+```
 
-**Requirements:**<br>
-* [**This is a Mantaro premium only feature**](https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks).
-
-**Example(s):**<br>
-* `~>dailycrate`
-* `~>dailycrate -check`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/daily"
+"", "", "/daily `user:`@Kodehawa#3457"
+"", "", "/daily `check:`True"
+```
+````
 
 
 
-"h3" `~>divorce`
-<details><summary>Click here for more details</summary>
-<p>
+# /dailycrate {style: "api"}
+Allows you to receive a random crate once per day. The -check flag allows you to check if your daily crate is ready without claiming it.
 
-**Description:**<br>
+:include-markdown: assets/md/commands/sellout-note-user.md
+
+````tabs 
+Options:
+```api-parameters
+check, Optional, "Check the time left for you to be able to claim your crate"
+```
+
+Examples:
+```api-parameters
+"", "", "/dailycrate"
+```
+````
+
+
+
+# /divorce {style: "api"}
 Attend the single life again.
 
-**Requirements:**<br>
+````tabs 
+Requirements:
 * This command requires you to be married beforehand.
 
-**Example(s):**<br>
-* `~>divorce`
+Examples:
+```api-parameters
+"", "", "/divorce"
+```
+````
 
-</p>
-</details>
 
 
+# /dump {style: "api"}
+Allows you to dump an item from your inventory.
 
-"h3" `~>dump {amount} <item>`
-<details><summary>Click here for more details</summary>
-<p>
+````tabs 
+Options:
+```api-parameters
+item, Required, "The item to dump."
+amount, Optional, "The amount of the item to dump."
+```
 
-**Description:**<br>
-Allows you to dump an item from your inventory. Using `allof` will dump all the items you have of the specified item.
-
-**Requirements:**<br>
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+Requirements:
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 * This command requires you to have the specified item on your inventory.
 
-**Example(s):**<br>
-* `~>dump Milk`
-* `~>dump 5 Diamond`
-* `~>dump allof House`
-
-</p>
-</details>
-
-
-
-"h3" `~>equip <item>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Allows you to equip an item (Picks, Rods or Axes).
-
-**Requirements:**<br>
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Example(s):**<br>
-* `~>equip pick`
-* `~>equip "diamond pickaxe"`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/dump `item:`Milk"
+"", "", "/dump `item:`Diamond `amount:`5"
+```
+````
 
 
 
-"h3" `~>fish`
-<details><summary>Click here for more details</summary>
-<p>
+# /equip {style: "api"}
+Allows you to equip an item (Picks, Rods, Axes or Wrenches).
 
-**Description:**<br>
+````tabs 
+Options:
+```api-parameters
+item, Required, "The item to equip."
+```
+
+Requirements:
+* This command requires [**Emotes** permissions](commands/permissions#intro).
+
+Examples:
+```api-parameters
+"", "", "/equip `item:`pick"
+"", "", "/equip `item:`Diamond Pickaxe"
+```
+````
+
+
+
+# /fish {style: "api"}
 Catch fish using one of your fishing rods.
 
-**Requirements:**<br>
+````tabs 
+Requirements:
 * This command requires you to have a rod equipped.
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 
-**Example(s):**<br>
-* `~>fish`
+Examples:
+```api-parameters
+"", "", "/fish"
+```
+````
 
-</p>
-</details>
 
 
+# /gamble {style: "api"}
+Gamble your credits for possible profit. The current max of credits you can gamble at once is 10 000 credits (update 5.7).
 
-"h3" `~>gamble <all/half/quarter/amount/percentage>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Gamble your credits for possible profit. The current max of credits you can gamble at once is 10000 (update 5.7).
-
-**Requirements:**<br>
+````tabs 
+Options:
+```api-parameters
+amount, Required, "How much money you want to gamble. This can be either all (all your money), half, quarter, a percentage or an amount of money. You can also express this on K (10k is 10 000, for example)."
+```
+Requirements:
 * This command requires you to have credits to gamble away.
 
-**Example(s):**<br>
-* `~>gamble all`
-* `~>gamble half`
-* `~>gamble quarter`
-* `~>gamble 30`
-* `~>gamble 30%`
-
-</p>
-</details>
-
-
-
-"h3" `~>inventory {@mention/username/tag/nickname} {-info/-calculate}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Shows your current inventory and item stats. Mentioning someone or typing someone's name/nickname/tag will show their inventory.
-Using -info will give you a longer more detailed response and using -calculate will show your your items worth.
-
-**Requirements:**<br>
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* The `-info` option requires [**Embed**, **Emotes** and **Reactions** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Alias(es):**<br>
-* `inv`
-
-**Example(s):**<br>
-* `~>inventory`
-* `~>inv`
-* `~>inv @Kodehawa#3457`
-* `~>inv -info`
-* `~>inv -calculate`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/gamble `amount:`600"
+"", "", "/gamble `amount:`all"
+"", "", "/gamble `amount:`half"
+"", "", "/gamble `amount:`quarter"
+"", "", "/gamble `amount:`50%"
+```
+````
 
 
 
-"h3" `~>iteminfo <item>`
-<details><summary>Click here for more details</summary>
-<p>
+# /inventory {style: "api"}
+Shows your current inventory and item stats.
 
-**Description:**<br>
+````tabs 
+Subcommands:
+```api-parameters
+Calculate, "", "Calculate an inventory's worth."
+Show, "", "Shows your inventory or a user's."
+Brief, "", "Shows your brief inventory or a user's."
+```
+
+Options:
+```api-parameters
+user, Optional, "The user you want to check. This option is available on all subcommands."
+```
+Requirements:
+* This command requires [**Emotes** permissions](commands/permissions#intro).
+
+Examples:
+```api-parameters
+"", "", "/inventory show"
+"", "", "/inventory show `user:@Kodehawa#3457`"
+"", "", "/inventory calculate"
+"", "", "/inventory calculate `user:`@Kodehawa#3457"
+"", "", "/inventory brief"
+"", "", "/inventory brief `user:`@Kodehawa#3457"
+```
+````
+
+
+
+# /iteminfo {style: "api"}
 Provides you with information about an item.
 
-**Requirements:**<br>
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+````tabs 
+Options:
+```api-parameters
+item, Required, "The name of the item you want to check."
+```
+Requirements:
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 
-**Example(s):**<br>
-* `~>iteminfo "Diamond Pickaxe"`
-
-</p>
-</details>
-
-
-
-"h3" `~>itemtransfer <@mention> <item> {amount}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Transfer one of your items to someone else.
-
-**Requirements:**<br>
-* This command requires you to have the item to be transfered.
-
-**Alias(es):**<br>
-* `transferitems`
-* `transferitem`
-
-**Example(s):**<br>
-* `~>itemtransfer @Kodehawa#3457 "Diamond Pickaxe" 5`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/iteminfo `item:`Diamond Pickaxe"
+"", "", "/iteminfo `item:`Apple"
+```
+````
 
 
 
-"h3" `~>leaderboard {money/rep/lvl/streak/claim/slots/gamble}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /leaderboard {style: "api"}
 Returns the Top 10 for various statistics in Mantaro.
 
-**Subcommand(s):**<br>
-* `lvl`: This will show the leaderboard for level.
-* `money`: This will show the leaderboard for money.
-* `games`: This will show the leaderboard for games.
-* `rep`: This will show the leaderboard for rep.
-* `claim`: This will show the leaderboard for claim.
-* `streak`: This will show the leaderboard for daily streak.
-* `slots`: This will show the leaderboard for slots.
-* `gamble`: This will show the leaderboard for gamble.
+````tabs 
+Subcommands:
+```api-parameters
+Slots, "", "Sends the slots leaderboard."
+Money, "", "Sends the money leaderboard."
+Gamble, "", "Sends the gamble leaderboard."
+Games, "", "Sends the games leaderboard."
+Reputation, "", "Sends the reputation leaderboard."
+Claim, "", "Sends the claim leaderboard."
+Daily, "", "Sends the daily leaderboard."
+```
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Alias(es):**<br>
-* `richest`
-* `lb`
-* `top`
-
-**Example(s):**<br>
-* `~>leaderboard`
-* `~>lb`
-* `~>lb money`
-* `~>leaderboard slots`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/leaderboard slots"
+"", "", "/leaderboard money"
+"", "", "/leaderboard gamble"
+"", "", "/leaderboard games"
+"", "", "/leaderboard reputation"
+"", "", "/leaderboard claim"
+"", "", "/leaderboard daily"
+```
+````
 
 
 
-"h3" `~>level {@mention}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Allows you to check your level or the level of someone else.
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Alias(es):**<br>
-* `rank`
-
-**Example(s):**<br>
-* `~>level`
-* `~>level @Kodehawa#3457`
-
-</p>
-</details>
-
-
-
-"h3" `~>loot`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /loot {style: "api"}
 Loot the chat for possible credits and items. Some items are only obtained via loot. Very rarely you will also be able to find a Loot Crate.
 
-**Requirements:**<br>
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+````tabs 
+Requirements:
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 
-**Example(s):**<br>
-* `~>loot`
+Examples:
+```api-parameters
+"", "", "/loot"
+```
+````
 
-</p>
-</details>
 
 
-
-"h3" `~>market {sell/buy/dump} {amount/all/quarter/half} {item name/emoji}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /market {style: "api"}
 Browse the Market. When used alone Mantaro will show you a list of all the items on the Market.
 
-**Subcommand(s):**<br>
-* `dump {amount} <item>`: This will dump an item from your inventory.
-* `common`: This will filter the market to only show **Common items**.
-* `tools`: This will filter the market to only show **Tool items**.
-* `potions`: This will filter the market to only show **Potion items**.
-* `buyable`: This will filter the market to only show **Buyable items**.
-* `pet`: This will filter the market to only show **Pet items**.
-* `sellable`: This will filter the market to only show **Sellable items**.
-* `price <item>`: This will show the price of the specified item.
-* `buy {amount/all/quarter/half} <item>`: This allows you to buy an item from the Market.
-* `sell {all/allof} <item>`: This allows you to sell an item in the Market. If you use `all` you will **sell all your items**. If you use `allof` you will sell all your items of the specified item.
+````tabs 
+Subcommands:
+```api-parameters
+Pet, "", "List current pet items."
+Tools, "", "List current tool items."
+Common, "", "List current common items."
+Potions, "", "List current potion items."
+Buyable, "", "List current buyable items."
+Sellable, "", "List current sellable items."
+Price, "", "Looks up the price of an item."
+Show, "", "List current items for buying and selling."
+```
 
-**Requirements:**<br>
-* This command requires [**Embed**, **Emotes** and **Reactions** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* The `dump` subcommand requires you to have the specified item on your inventory.
-* The `buy` subcommand requires you to have the credits needed to buy the item.
-* The `sell` subcommand requires you to have the specified item on your inventory.
+Options:
+```api-parameters
+item, Required, "The name of the item. This option is only for the `Price` subcommand."
+```
+Requirements:
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 
-**Alias(es):**<br>
-* `shop`
-
-**Example(s):**<br>
-* `~>market`
-* `~>market dump 2 Diamond`
-* `~>market sell 2 Diamond`
-* `~>market buy 2 Diamond`
-* `~>market sell all`
-* `~>market buy all Diamond`
-
-</p>
-</details>
-
+Examples:
+```api-parameters
+"", "", "/market pet"
+"", "", "/market tools"
+"", "", "/market common"
+"", "", "/market potions"
+"", "", "/market buyable"
+"", "", "/market sellable"
+"", "", "/market price `item:`Diamond Pickaxe"
+"", "", "/market show"
+```
+````
 
 
-"h3" `~>marry <mention>`
-<details><summary>Click here for more details</summary>
-<p>
 
-**Description:**<br>
+# /marry {style: "api"}
 Marry someone. The person you marry also appears on your profile.
 
-**Subcommand(s):**<br>
-* `status`: This will show you the status of your marriage.
-* `timezone <timezone>`: This will set the shared timezone for your marriage.
-* `createletter <content>`: This will create your love letter for your partner.
-* `buyhouse <name>`: This will buy a shared house for your marriage.
-* `buycar <name>`: This will buy a shared car for your marriage.
+````tabs 
+Subcommands:
+```api-parameters
+User, "", "Marries another user."
+Createletter, "", "Creates a marriage letter."
+Status, "", "Shows the status of your marriage."
+Car, "", "Buys a car for the marriage. You need to buy a car in market first."
+House, "", "Buys a house for the marriage. You need to buy a house in market first."
+```
 
-**Requirements:**<br>
+Options:
+```api-parameters
+User, Click me!, "Options for the `User` Subcommand"
+User.user, Required, "The user your want to marry."
+Createletter, Click me!, "Options for the `Createletter` Subcommand"
+Createletter.content, Required, "The content of the letter."
+Car, Click me!, "Options for the `Car` Subcommand"
+Car.name, Required, "Name for the new car."
+House, Click me!, "Options for the `House` Subcommand"
+House.name, Required, "Name for the new house."
+```
+Requirements:
 * This command requires 2 rings to be in your inventory to marry someone.
-* The `status` subcommand requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
 
-**Alias(es):**<br>
-* `marriage`
-
-**Example(s):**<br>
-* `~>marry @Kodehawa#3457`
-* `~>marry createletter This is my letter!`
-* `~>marry status`
-* `~>marry buyhouse Our House`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/marry user `user:`@Kodehawa#3457"
+"", "", "/marry createletter `content:`This is my letter!"
+"", "", "/marry status"
+"", "", "/marry car `name:`Big ride"
+"", "", "/marry house `name:`Our house"
+```
+````
 
 
 
-"h3" `~>mine`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /mine {style: "api"}
 Use one of your pickaxes to mine minerals.
 
-**Requirements:**<br>
+````tabs 
+Requirements:
 * This command requires you to have a pick equipped.
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 
-**Example(s):**<br>
-* `~>mine`
+Examples:
+```api-parameters
+"", "", "/mine"
+```
+````
 
-</p>
-</details>
 
 
-
-"h3" `~>opencrate {crate name}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /opencrate {style: "api"}
 Open one of your Lootboxes.
 
-**Requirements:**<br>
+````tabs 
+Options:
+```api-parameters
+crate, Optional, "The name of the crate to open. If left empty it will attempt to open the default crate."
+```
+
+Requirements:
 * This command requires you to have a crate key to open it. You can buy one from the market.
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 
-**Example(s):**<br>
-* `~>opencrate`
-* `~>opencrate "gem crate"`
+Examples:
+```api-parameters
+"", "", "/opencrate"
+"", "", "/opencrate `crate:`gem premium crate"
+"", "", "/opencrate `crate:`treasure"
+```
+````
 
-</p>
-</details>
 
 
-
-"h3" `~>pet`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /pet {style: "api"}
 Allows you to buy a pet so that you can take care of it. A pet will also help you out with other commands and give you several bonuses.
 
-**Subcommand(s):**<br>
-* `info <type>`: This will show you more information on the specified pet type.
-* `list`: This will show you a list of the currently available pets and their abilities.
-* `status`: This will show you the current status of your pet.
-* `rename <name>`: This will rename your pet with the given name.
-* `check`: This will show you the thirst, hunger and dust levels of your current pet.
-* `level`: This will show the level and experience of your current pet.
-* `clean`: This will clean your pet's dust.
-* `choice`: This will let you switch between Personal pet and Marriage pet.
-* `pet {@mention}`: This will pet your pet. If you mention someone you will instead pet that person's pet.
-* `sell`: This will sell your pet and reset all your pet stats.
-* `hydrate {amount/all}`: This will hydrate your pet. Typing all will max out your pet's thirst bar.
-* `buy <name> <type>`: This will buy and name your pet with the specified information.
-* `feed <food> {amount/all}`: This will feed your pet the specified food. Typing all will max out your pet's hunger bar.
+````tabs 
+Subcommands:
+```api-parameters
+Feed, "", "Feeds your pet."
+Rename, "", "Renames your pet."
+Hydrate, "", "Hydrates your pet."
+Pet, "", "Pets your pet. Cute."
+Info, "", "Shows info about a pet type."
+List, "", "Lists the available pet types."
+Status, "", "Shows the status of your current pet."
+Explanation, "", "Shows an explanation about the pet system."
+Check, "", "Check thirst, hunger and dust of your current pet."
+Level, "", "Shows the level and experience of your current pet."
+Clean, "", "Cleans your pet when it's too dusty. Costs 600 credits."
+Choice, "", "Lets you choose whether you want to use a personal or marriage pet."
+Buy, "", "Buys a pet to have adventures with. You need to buy a pet house in market first."
+Sell, "", "Sells this pet. This will _reset all pet stats_. Just like buying a new tamagotchi."
+```
 
-**Requirements:**<br>
-* Currently pets can only be bought if you are married, and you both have bought a house using the `marry` command. Pets will be expanded upon in later updates.
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+Options:
+```api-parameters
+Feed, Click me!, "Options for the `Feed` Subcommand"
+Feed.item, Required, "The item to feed your pet with."
+Feed.amount, Optional, "The amount of food to give the pet."
+Feed.full, Optional, "Give all the food possible. Makes it so amount is ignored."
 
-**Example(s):**<br>
-* `~>pet info dog`
-* `~>pet list`
-* `~>pet buy Doggo dog`
-* `~>pet pet @Kodehawa#3457`
-* `~>pet status`
-* `~>pet hydrate all`
-* `~>pet sell`
+Rename, Click me!, "Options for the `Rename` Subcommand"
+Rename.name, Required, "The new name for your pet."
 
-</p>
-</details>
+Hydrate, Click me!, "Options for the `Hydrate` Subcommand"
+Hydrate.amount, Optional, "The amount of water to give the pet."
+Hydrate.full, Optional, "Give all the water possible. Makes it so amount is ignored."
+
+Info, Click me!, "Options for the `Info` Subcommand"
+Info.type, Required, "The pet type to check."
+
+Choice, Click me!, "Options for the `Choice` Subcommand"
+Choice.type, Required, "The type to use. Either marriage or personal."
+
+Buy, Click me!, "Options for the `Buy` Subcommand"
+Buy.type, Required, "The pet type."
+Buy.name, Required, "The pet name."
+```
+ Note: The Subcommands `Pet`, `List`, `Status`, `Explanation`, `Check`, `Level`, `Clean` and `Sell` have no options.
+
+Requirements:
+* Most of the subcommands require you to already own a pet to use them.
+* The `Feed` subcommand requires you to have bought the appropiate food for your pet from the market.
+* The `Hydrate` subcommand requires you to have bought `Water Bottles` from the market. 
+
+Examples:
+```api-parameters
+"", "", "/pet info `type:`Dog"
+"", "", "/pet list"
+"", "", "/pet buy `type:`Dog `name:`Doggo"
+"", "", "/pet pet"
+"", "", "/pet hydrate `full:`True"
+"", "", "/pet sell"
+"", "", "/pet clean"
+"", "", "/pet choice `type:`Marriage Pet"
+```
+````
 
 
 
-"h3" `~>profile {mention/username/tag/nickname}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /profile {style: "api"}
 Look at your own or the given person's profile.
 
-**Subcommand(s):**<br>
-* `stats`: This will show all sorts of statistics about your usage of Mantaro's currency.
-* `timezone <timezone>`: This will set your timezone. If you don't know what your timezone is you can search it in Google.
-* `togglelegacy`: This will show or hide your legacy credits.
-* `description <desc>`: This will change your current description. Use `~>profile description clear` to remove your description.
-* `language {language code}`: This will change the language in which Mantaro responds to you. Use `~>lang` to get a full list of the available language codes.
-* `toggleaction`: This will disallow or allow action commands to be done on you.
-* 💰 `widgets {ls/reset}`: This will change the order in which information is presented on your profile. You can also remove certain things from your profile.
-* `hidetag`: This will hide the tags (#xxxx) and IDs from your profile and your waifu list.
-* `claimlock {remove}`: This will lock you from being a waifu, meaning you can't be claimed anymore. You need to buy a claim key from the market to use this command. Use the `remove` option to become claimable once again.
-* `autoequip {disable}`: This will autoequip tools (Axe, Rod and Axe) when they break, assuming you have more of them in your inventory. Use the `disable` option to turn this off.
-* `inventorysort <type>`: This will sort your inventory based on the type of sort you specify. You can sort by VALUE, VALUE_TOTAL, AMOUNT, TYPE or RANDOM.
-* `displaybadge <badge/reset/none>`: This will change the current badge on display for your profile. Use the `reset` option to reset your badge. Use the `none` option to have no badge show up.
+````tabs 
+Subcommands:
+```api-parameters
+Inventorysort, "", "Sort your inventory."
+Stats, "", "See profile statistics."
+Displaybadge, "", "Sets your display badge."
+Timezone, "", "Sets your profile timezone."
+Show, "", "Shows your current profile."
+Language, "", "Sets your profile language."
+Togglelegacy, "", "Toggles the display of legacy credits."
+Toggleaction, "", "Toggles the ability to do action commands to you."
+Widgets, "", "
+Set the profile widget order.
+:include-markdown: assets/md/commands/sellout-note-user.md
+"
+Hidetag, "", "Hide or show the member id/tag from profile/waifu ls."
+Claimlock, "", "Locks you from being claimed. Use remove to remove it."
+Description, "", "Sets your profile description. This will open a modal (pop-up)."
+Autoequip, "", "Toggles auto-equipping a new tool on break. Use disable to disable it."
+```
 
-**Requirements:**<br>
-* This command requires [**Embed** and **Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* The `widgets` subcommand is a [**Mantaro premium only feature**](https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks).
-* The `claimlock` subcommand requires you to have a claim key on your inventory.
+Options:
+```api-parameters
+Inventorysort, Click me!, "Options for the `Inventorysort` Subcommand"
+Inventorysort.type, Required, "The sort type to use."
 
-**Example(s):**<br>
-* `~>profile`
-* `~>profile @Kodehawa#3457`
-* `~>profile timezone GMT+2`
-* `~>profile togglelegacy`
-* `~>profile lang es_ES`
-* `~>profile widgets header, credits, reputation, birthday, marriage, badges`
-* `~>profile inventorysort RANDOM`
-* `~>profile toggleaction`
+Stats, Click me!, "Options for the `Stats` Subcommand"
+Stats.user, Optional, "The user to see the stats of."
 
-</p>
-</details>
+Displaybadge, Click me!, "Options for the `Displaybadge` Subcommand"
+Displaybadge.badge, Required, "The badge to use."
+
+Timezone, Click me!, "Options for the `Timezone` Subcommand"
+Timezone.timezone, Required, "The timezone to use."
+
+Show, Click me!, "Options for the `Show` Subcommand"
+Show.user, Optional, "The user to see the profile of."
+
+Language, Click me!, "Options for the `Language` Subcommand"
+Language.lang, "Required", "The language to use. See /mantaro language for a list."
+
+Widgets, Click me!, "Options for the `Widgets` Subcommand"
+Widgets.order, Optional, "The widget order. Use reset to reset them. If nothing is specified, it prints a list."
+Widgets.reset, Optional, "Set to true if you want to reset the order."
+
+Claimlock, Click me!, "Options for the `Claimlock` Subcommand"
+Claimlock.remove, Optional, "Removes claimlock."
+
+Description, Click me!, "Options for the `Description` Subcommand"
+Description.clear, Optional, "Clear your profile description if set to true."
+
+Autoequip, Click me!, "Options for the `Autoequip` Subcommand"
+Autoequip.disable, Optional, "Whether to disable it."
+```
+ Note: The Subcommands `Togglelegacy`, `Toggleaction` and `Hidetag` have no options.
+
+Requirements:
+* This command requires [**Emotes** permissions](commands/permissions#intro).
+* The `Claimlock` subcommand requires you to have a claim key on your inventory.
+
+Examples:
+```api-parameters
+"", "", "/profile show"
+"", "", "/profile show `user:`@Kodehawa#3457"
+"", "", "/profile description"
+"", "", "/profile language `lang:`es_ES"
+"", "", "/profile togglelegacy"
+"", "", "/profile widgets `order:`header, credits, reputation, birthday, marriage, badges"
+"", "", "/profile timezone `timezone:`GMT+2"
+"", "", "/profile inventorysort `type:`Sort randomly"
+"", "", "/profile toggleaction"
+```
+````
 
 
 
-"h3" `~>rep <mention/username/user tag>`
-<details><summary>Click here for more details</summary>
-<p>
+# /repair {style: "api"}
+Allows you to repair broken items using your equipped wrench.
+For more in-depth information you can go to our [Currency 101 page](currency/101).
 
-**Description:**<br>
+````tabs 
+Subcommands:
+```api-parameters
+Item, "", "Repair an item."
+List, "", "List all items that can be repaired."
+```
+
+Options:
+```api-parameters
+Item, Click me!, "Options for the `Item` Subcommand"
+Item.item, Required, "The item to repair."
+```
+ Note: The `List` Subcommand has no options.
+
+Requirements:
+* This command requires you to have the items needed to repair the specified item.
+* This command requires [**Emotes** permissions](commands/permissions#intro).
+
+
+Examples:
+```api-parameters
+"", "", "/repair item `item:`Broken Sparkle Pickaxe"
+"", "", "/repair list"
+```
+````
+
+
+
+# /reputation {style: "api"}
 Give someone Reputation.
 
-**Requirements:**<br>
-* This command does not have any specific requirements.
+````tabs 
+Options:
+```api-parameters
+user, Required, "The user to give reputation to."
+check, Optional, "Check if you can give reputation"
+```
 
-**Alias(es):**<br>
-* `reputation`
-
-**Example(s):**<br>
-* `~>rep @Kodehawa#3457`
-* `~>rep Kodehawa#3457`
-* `~>rep 155867458203287552`
-
-</p>
-</details>
-
-
-
-"h3" `~>repair <item> {wrench}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Allows you to repair broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory. For more in-depth information you can go to our [Currency 101 page](https://github.com/Mantaro/MantaroBot/wiki/Currency-101#repairing-items).
-
-**Subcommand(s):**<br>
-* `ls`: This will show a list of all repairable items.
-
-**Requirements:**<br>
-* This command requires you to have the items needed to repair the specified item.
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* The `ls` subcommand requires [**Embed**, **Emotes** and **Reactions** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Alias(es):**<br>
-* `fix`
-
-**Example(s):**<br>
-* `~>repair ls`
-* `~>repair "broken sparkle pickaxe" "sparkle wrench"`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/reputation `user:`@Kodehawa#3457"
+"", "", "/reputation `check:`True"
+```
+````
 
 
 
-"h3" `~>salvage <item> {wrench}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /salvage {style: "api"}
 Allows you to salvage broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory.
 
-**Subcommand(s):**<br>
-* `ls`: This will show a list of all salvageable items.
+````tabs 
+Subcommands:
+```api-parameters
+Item, "", "Salvages an item."
+List, "", "List all salvageable items."
+```
 
-**Requirements:**<br>
-* This command requires you to have the broken item you specified.
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* The `ls` subcommand requires [**Embed**, **Emotes** and **Reactions** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+Options:
+```api-parameters
+Item, Click me!, "Options for the `Item` Subcommand"
+Item.item, Required, "The item to salvage."
+```
+ Note: The `List` Subcommand has no options.
 
-**Example(s):**<br>
-* `~>salvage "broken sparkle pickaxe"`
-* `~>salvage "broken sparkle pickaxe" "sparkle wrench"`
-
-</p>
-</details>
-
+Requirements:
+* This command requires you to have the items needed to repair the specified item.
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 
 
-"h3" `~>sell {amount/all/allof} <item>`
-<details><summary>Click here for more details</summary>
-<p>
+Examples:
+```api-parameters
+"", "", "/salvage item `item:`Broken Sparkle Pickaxe"
+"", "", "/salvage list"
+```
+````
 
-**Description:**<br>
-Allows you to sell an item in the Market. If you use `all` you will **sell all your items**. If you use `allof` you will sell all your items of the specified item.
 
-**Requirements:**<br>
+
+# /sell {style: "api"}
+Allows you to sell an item in the Market.
+
+````tabs 
+Options:
+```api-parameters
+item, Required, "The name of the item to sell."
+amount, Optional, "The amount of the item to sell."
+```
+
+Requirements:
 * This command requires you to have the specified item on your inventory.
 
-**Example(s):**<br>
-* `~>sell 5 Diamonds`
-* `~>sell House`
-* `~>sell all`
-
-</p>
-</details>
-
+Examples:
+```api-parameters
+"", "", "/sell `item:`Diamond"
+"", "", "/sell `item:`Diamond `amount:`5"
+```
+````
 
 
-"h3" `~>slots {amount|-useticket {-amount <amount>}}`
-<details><summary>Click here for more details</summary>
-<p>
 
-**Description:**<br>
-Uses the amount of credits specified to roll the slot machine. You can also buy a "Slot-Ticket" and use that instead. The current credit max you can use at once is 50000, for tickets you can use a max of 50 at once (update 5.7).
+# /slots {style: "api"}
+Uses the amount of credits specified to roll the slot machine. 
+You can also buy a "Slot-Ticket" and use that instead. 
+The current credit max you can use at once is 50000, for tickets you can use a max of 50 at once (update 5.7).
 
-**Requirements:**<br>
+````tabs 
+Options:
+```api-parameters
+credits, Optional, "The amount of credits to put on the slot machine. You can also express this on K (10k is 10000, for example)"
+useticket, Optional, "Whether to use a ticket. False by default. If you specify this, the credit amount will be ignored."
+ticketamount, Optional, "The amount of credits to put on the slot machine. You can also express this on K (10k is 10000, for example) "
+```
+
+Requirements:
 * This command requires you to have credits to gamble away.
-* The `-useticket` option requires you to have Slot Tickets in your inventory.
+* The `ticketamount` option requires you to have Slot Tickets in your inventory.
 
-**Example(s):**<br>
-* `~>slots`
-* `~>slots 420`
-* `~>slots -useticket`
-* `~>slots -useticket -amount 420`
-
-</p>
-</details>
-
+Examples:
+```api-parameters
+"", "", "/slots"
+"", "", "/slots `credits:`500"
+"", "", "/slots `useticket:`True `ticketamount:`5"
+```
+````
 
 
-"h3" `~>tools`
-<details><summary>Click here for more details</summary>
-<p>
 
-**Description:**<br>
+# /tools {style: "api"}
 Check the durability and status of your tools.
 
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>tools`
-
-</p>
-</details>
+````tabs 
+Examples:
+```api-parameters
+"", "", "/tools"
+```
+````
 
 
 
-"h3" `~>transfer <mention> <amount>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /transfer {style: "api"}
 Transfer someone money. You can transfer a max of 500,000 credits, and you cannot transfer to/from a new Discord account (update 6.0.5).
 
-**Requirements:**<br>
+````tabs 
+Options:
+```api-parameters
+user, Required, "The user to transfer money to."
+money, Required, "The amount to transfer to the user."
+```
+
+Requirements:
 * This command requires you to have credits to transfer.
 
-**Alias(es):**<br>
-* `give`
-
-**Example(s):**<br>
-* `~>transfer @Kodehawa#3457 420`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/transfer `user:`@Kodehawa#3457 money:420"
+```
+````
 
 
 
-"h3" `~>unequip <pick/rod/axe>`
-<details><summary>Click here for more details</summary>
-<p>
+# /transferitems {style: "api"}
+Transfer one of your items to someone else.
 
-**Description:**<br>
+````tabs 
+Options:
+```api-parameters
+user, Required, "The user to transfer money to. Needs to be in the server you're running the command in."
+item, Required, "The item to transfer. Can be a shorten name."
+amount, Optional, "The amount of the item to transfer. If not specified, this is 1. Maximum is 5000."
+```
+Requirements:
+* This command requires you to have the item to be transferred.
+
+Examples:
+```api-parameters
+"", "", "/transferitems `user:`@Kodehawa#3457 `item:`Diamond Pickaxe"
+"", "", "/transferitems `user:`@Kodehawa#3457 `item:`Apple `amount:`500"
+```
+````
+
+
+
+# /unequip {style: "api"}
 Allows you to unequip previously equipped items. Depending on how damaged the item is, you may get a broken version of the item.
 
-**Requirements:**<br>
+````tabs 
+Options:
+```api-parameters
+item, Required, "The item to unequip."
+```
+Requirements:
 * This command requires you to have an item equipped for the specified field.
 
-**Example(s):**<br>
-* `~>unequip pick`
-* `~>unequip rod`
-* `~>unequip axe`
-
-</p>
-</details>
-
+Examples:
+```api-parameters
+"", "", "/unequip `item:`Equipped Pickaxe"
+"", "", "/unequip `item:`Equipped Axe"
+```
+````
 
 
-"h3" `~>useitem <item> {-amount <amount>}`
-<details><summary>Click here for more details</summary>
-<p>
 
-**Description:**<br>
-Allows you to use certain items. Specifying -amount X will use X items instead of just one. For more in-depth information you can go to our [Currency 101 page](https://github.com/Mantaro/MantaroBot/wiki/Currency-101#items-and-their-uses).
+# /use {style: "api"}
+Allows you to use certain items. 
+For more in-depth information you can go to our [Currency 101 page](currency/101).
 
-**Subcommand(s):**<br>
-* `ls`: This will show a list of all useable items.
+````tabs 
+Subcommands:
+```api-parameters
+Item, "", "Use a interactive item."
+List, "", "Shows all interactive items"
+```
 
-**Requirements:**<br>
+Options:
+```api-parameters
+Item, Click me!, "Options for the `Item` Subcommand"
+Item.item, Required, "The item to use."
+Item.amount, Optional, "The amount of the item to use. Maximum of 15."
+```
+Requirements:
 * This command requires you to have the item you specified to be used.
-* This command requires [**Emotes** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* The `ls` subcommand requires [**Embed**, **Emotes** and **Reactions** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+* This command requires [**Emotes** permissions](commands/permissions#intro).
 
-**Alias(es):**<br>
-* `use`
-
-**Example(s):**<br>
-* `~>useitem "Energy Beverage"`
-* `~>useitem "Haste Potion" -amount 5`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/use item `item:`Energy Beverage"
+"", "", "/use item `item:`Haste Potion `amount:`5"
+"", "", "/use list"
+```
+````
 
 
 
-"h3" `~>waifu`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /waifu {style: "api"}
 Manage your waifus. Using the command on its own (no subcommands) will show you a list of your own waifus.
 
-**Subcommand(s):**<br>
-* `stats`: This shows you your current waifu status and values.
-* `buyslot`: This lets you buy one more waifu slot. You can have a max of 30 slots.
-* `claim <mention/id>`: This lets you claim an user as your waifu.
-* `optout`: This will opt you out **completely** from the waifu command. **YOU CANNOT UNDO THIS**. You will become unclaimable and you wont be able to claim people either.
-* `unclaim <mention/id>`: This lets you unclaim an user. You can also use User ID's to unclaim people you do not share servers with. Check our FAQ on unclaiming ["Unknown Users"](https://github.com/Mantaro/MantaroBot/wiki/FAQ#10--can-i-unclaim-people-who-i-no-longer-share-a-server-with-or-that-show-as-unknown-user-waifu-command) for more help.
+````tabs 
+Subcommands:
+```api-parameters
+Unclaim, "", "Unclaims a waifu."
+Claim, "", "Claim a waifu. Yeah, this is all fiction."
+List, "", "Show a list of all your waifu(s) and their value."
+Stats, "", "Shows your waifu stats or the stats or someone else."
+Optout, "", "
+Opt-out of the waifu stuff. This will disable the waifu system permanently.
+:include-markdown: assets/md/commands/optout-warning.md
+"
+Buyslow, "", "Buys a new waifu slot. Maximum slots are 30, costs get increasingly higher."
+```
 
-**Requirements:**<br>
-* This command requires [**Embed** and **Reactions** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* The `buyslot` subcommand requires you to have enough credits to buy more slots.
-* The `claim` subcommand requires that the user you are trying to claim is not claim locked.
-* The `unclaim` subcommand requires you to have enough credits to unclaim the user.
+Options:
+```api-parameters
+Unclaim, Click me!, "Options for the `Unclaim` Subcommand"
+Unclaim.user, Required, "The user to unclaim."
 
-**Alias(es):**<br>
-* `waifus`
+Claim, Click me!, "Options for the `Claim` Subcommand"
+Claim.user, Required, "The user to claim."
 
-**Example(s):**<br>
-* `~>waifu`
-* `~>waifu stats`
-* `~>waifu buyslot`
-* `~>waifu claim @Kodehawa#3457`
-* `~>waifu unclaim @Kodehawa#3457`
-* `~>waifu optout`
+Stats, Click me!, "Options for the `Stats` Subcommand"
+Stats.user, Optional, "The user to check. Yourself, if nothing specified."
 
-</p>
-</details>
+List, Click me!, "Options for the `List` Subcommand"
+List.id, Optional, "Whether to show the user ID or not."
+
+
+```
+ Note: The `Buyslow` Subcommands have no options.
+
+Requirements:
+* The `Buyslot` subcommand requires you to have enough credits to buy more slots.
+* The `Claim` subcommand requires that the user you are trying to claim is not claim locked.
+* The `Unclaim` subcommand requires you to have enough credits to unclaim the user.
+
+Examples:
+```api-parameters
+"", "", "/waifu stats"
+"", "", "/waifu stats `user:`@Kodehawa#3457"
+"", "", "/waifu buyslot"
+"", "", "/waifu claim `user:`@Kodehawa#3457"
+"", "", "/waifu unclaim `user:`@Kodehawa#3457"
+"", "", "/waifu list"
+```
+````
