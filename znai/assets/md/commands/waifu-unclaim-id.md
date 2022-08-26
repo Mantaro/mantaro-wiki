@@ -1,0 +1,1 @@
+Note: This command works globally, meaning that you can unclaim a waifu on any server by using their ID. This is useful if you want to unclaim a waifu on a server that you aren't in. Check the Options for the `List` Subcommand to know how to get their ID.

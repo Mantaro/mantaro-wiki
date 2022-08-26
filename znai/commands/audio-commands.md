@@ -228,7 +228,7 @@ Examples:
 
 
 # /stop {style: "api"}
-This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. *People with DJ permissions can stop immediately*.<br>
+This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. *People with DJ permissions can stop immediately*.
 
 ````tabs
 Requirements:
@@ -244,7 +244,7 @@ Examples:
 
 
 # /volume {style: "api"}
-This command lets you check the current volume, as well as set the volume to the percentage specified (4-100).<br>
+This command lets you check the current volume, as well as set the volume to the percentage specified (4-100).
 
 ````tabs
 Options:

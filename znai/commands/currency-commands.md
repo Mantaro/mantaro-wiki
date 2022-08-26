@@ -881,7 +881,10 @@ Buyslow, "", "Buys a new waifu slot. Maximum slots are 30, costs get increasingl
 Options:
 ```api-parameters
 Unclaim, Click me!, "Options for the `Unclaim` Subcommand"
-Unclaim.user, Required, "The user to unclaim."
+Unclaim.user, Required, "
+The user to unclaim. It can also be the ID of the user.
+:include-markdown: assets/md/commands/waifu-unclaim-id.md
+"
 
 Claim, Click me!, "Options for the `Claim` Subcommand"
 Claim.user, Required, "The user to claim."
