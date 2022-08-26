@@ -1,0 +1,1 @@
+Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly.
