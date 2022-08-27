@@ -2,234 +2,243 @@
 title: 🖼️ Image Commands
 ---
 
-"h3" `~>cat`
-<details><summary>Click here for more details</summary>
-<p>
+# /danbooru {style: "api"}
+Returns an image from danbooru. 
+You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. 
+You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe` rating will be used.
 
-**Description:**<br>
-Returns a cute cat image.
+:include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+````tabs
+Options:
+```api-parameters
+rating, Optional, "The image rating. `Safe` is the default."
+tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
+```
+Ratings:
+* Safe
+* Questionable
+* Explicit
+* Random
 
-**Example(s):**<br>
-* `~>cat`
+Requiements:
+*  This command can only be used in NSFW channels.
 
-</p>
-</details>
-
-
-
-"h3" `~>catgirl`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Returns a cute or naughty anime catgirl image.
-
-**Subcommand(s):**<br>
-* 🔥 `nsfw`: This will send a NSFW picture of a catgirl.
-
-**Requirements:**<br>
-* This command requires [**Files** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* The `nsfw` subcommand will only work on a NSFW channel.
-
-**Example(s):**<br>
-* `~>catgirl`
-* `~>catgirl nsfw`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/danbooru"
+"", "", "/danbooru `tags:`yuri `rating:`explicit"
+"", "", "/danbooru `rating:`random"
+```
+````
 
 
 
-"h3" `~>danbooru {tag(s)} {rating}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Returns an image from danbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe` rating will be used.
-
-**Ratings:**
-* `Safe`
-* 🔥 `Questionable`
-* 🔥 `Explicit`
-
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* Some ratings will make this command only work on a NSFW channel.
-
-**Example(s):**<br>
-* `~>danbooru Flat safe`
-* `~>danbooru explicit`
-
-</p>
-</details>
-
-
-
-"h3" `~>dog`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Returns a cute dog image.
-
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Example(s):**<br>
-* `~>dog`
-
-</p>
-</details>
-
-
-
-"h3" 🔥 `~>e621 {tag(s)}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /e621 {style: "api"}
 Returns an image from e621. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* This command will only work on a NSFW channel.
+:include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
-**Example(s):**<br>
-* `~>e621 Flat`
+````tabs
+Options:
+```api-parameters
+tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
+```
 
-</p>
-</details>
+Requiements:
+*  This command can only be used in NSFW channels.
+
+Examples:
+```api-parameters
+"", "", "/e621"
+"", "", "/e621 `tags:`yuri"
+```
+````
 
 
 
-"h3" 🔥 `~>e926 {tag(s)}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /e926 {style: "api"}
 Returns an image from e926. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* This command will only work on a NSFW channel.
+:include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
-**Example(s):**<br>
-* `~>e926 Flat`
+````tabs
+Options:
+```api-parameters
+tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
+```
 
-</p>
-</details>
+Requiements:
+*  This command can only be used in NSFW channels.
+
+Examples:
+```api-parameters
+"", "", "/e926"
+"", "", "/e926 `tags:`yuri"
+```
+````
 
 
 
-"h3" `~>gelbooru {tag(s)} {rating}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /gelbooru {style: "api"}
 Returns an image from gelbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe` rating will be used.
 
-**Ratings:**
-* `Safe`
-* 🔥 `Questionable`
-* 🔥 `Explicit`
+:include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* Some ratings will make this command only work on a NSFW channel.
+````tabs
+Options:
+```api-parameters
+rating, Optional, "The image rating. `Safe` is the default."
+tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
+```
+Ratings:
+* Safe
+* Questionable
+* Explicit
+* Random
 
-**Example(s):**<br>
-* `~>gelbooru Flat safe`
-* `~>gelbooru explicit`
+Requiements:
+*  This command can only be used in NSFW channels.
 
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/gelbooru"
+"", "", "/gelbooru `tags:`yuri `rating:`explicit"
+"", "", "/gelbooru `rating:`random"
+```
+````
 
 
 
-"h3" `~>konachan {tag(s)} {rating}`
-<details><summary>Click here for more details</summary>
-<p>
+# /image {style: "api"}
+Contains various imageboard commands.
+````tabs
+Subcommands:
+```api-parameters
+Catgirl, "", "Sends images of catgirl(s). Maybe."
+Cat, "", "Sends a random cat image. Really cute stuff."
+Dog, "", "Sends a random dog image. Woof woof."
+```
 
-**Description:**<br>
+Options:
+```api-parameters
+Catgirl, Click me!, "Options for the `Catgirl` Subcommand"
+Catgirl.nsfw, Optional, "
+Whether to send a NSFW image.
+:include-markdown: assets/md/commands/nsfw-command-disclaimer.md
+"
+```
+ Note: The `Cat` and `Dog` subcommands have no options.
+ 
+Examples:
+```api-parameters
+"", "", "/image catgirl"
+"", "", "/image catgirl `nsfw:`true"
+"", "", "/image cat"
+"", "", "/image dog"
+```
+````
+
+# /konachan {style: "api"}
 Returns an image from konachan. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe` rating will be used.
 
-**Ratings:**
-* `Safe`
-* 🔥 `Questionable`
-* 🔥 `Explicit`
+:include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* This command will only work on a NSFW channel.
+````tabs
+Options:
+```api-parameters
+rating, Optional, "The image rating. `Safe` is the default."
+tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
+```
+Ratings:
+* Safe
+* Questionable
+* Explicit
+* Random
 
-**Example(s):**<br>
-* `~>konachan Flat safe`
-* `~>konachan explicit`
+Requiements:
+*  This command can only be used in NSFW channels.
 
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/konachan"
+"", "", "/konachan `tags:`yuri `rating:`explicit"
+"", "", "/konachan `rating:`random"
+```
+````
 
 
 
-"h3" 🔥 `~>rule34 {tag(s)}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /rule34 {style: "api"}
 Returns an image from rule34. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* This command will only work on a NSFW channel.
+:include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
-**Example(s):**<br>
-* `~>rule34 Flat`
+````tabs
+Options:
+```api-parameters
+tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
+```
 
-</p>
-</details>
+Requiements:
+*  This command can only be used in NSFW channels.
+
+Examples:
+```api-parameters
+"", "", "/rule34"
+"", "", "/rule34 `tags:`yuri"
+```
+````
 
 
 
-"h3" `~>safebooru {tag(s)}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /safebooru {style: "api"}
 Returns an image from safebooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+:include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
-**Example(s):**<br>
-* `~>safebooru Flat`
+````tabs
+Options:
+```api-parameters
+tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
+```
 
-</p>
-</details>
+Requiements:
+*  This command can only be used in NSFW channels.
+
+Examples:
+```api-parameters
+"", "", "/safebooru"
+"", "", "/safebooru `tags:`yuri"
+```
+````
 
 
 
-"h3" 🔥 `~>yandere {tag(s)} {rating}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /yandere {style: "api"}
 Returns an image from yandere. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags.  Unless a different rating is specified, the `Safe` rating will be used.
 
-**Ratings:**
-* `Safe`
-* `Questionable`
-* `Explicit`
+:include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-* This command will only work on a NSFW channel.
+````tabs
+Options:
+```api-parameters
+rating, Optional, "The image rating. `Safe` is the default."
+tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
+```
+Ratings:
+* Safe
+* Questionable
+* Explicit
+* Random
 
-**Example(s):**<br>
-* `~>yandere Flat safe`
-* `~>yandere explicit`
+Requiements:
+*  This command can only be used in NSFW channels.
 
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/yandere"
+"", "", "/yandere `tags:`yuri `rating:`explicit"
+"", "", "/yandere `rating:`random"
+```
+````
