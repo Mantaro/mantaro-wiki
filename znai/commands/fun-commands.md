@@ -2,152 +2,129 @@
 title: 🎲 Fun Commands
 ---
 
-"h3" `~>8ball <question>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /8ball {style: "api"}
 Ask the magic 8ball a question.
 
-**Requirements:**<br>
-* This command does not have any specific requirements.
+````tabs 
+Options:
+```api-parameters
+question, Required, "The question to ask."
+```
 
-**Alias(es):**<br>
-* `8b`
-
-**Example(s):**<br>
-* `~>8ball Will Mantaro ever be consistent?`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/8ball `question:`Will Mantaro ever be consistent?"
+```
+````
 
 
 
-"h3" `~>anime <name>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /anime {style: "api"}
 Searches for the anime specified using [Kitsu.io](https://kitsu.io/).
-You will be given a list of search results using the indicated anime. After this you will have to type the number related to the option you wish to see more information for.
+You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for.
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+````tabs 
+Options:
+```api-parameters
+name, Required, "The name of the anime/manga to look for."
+```
 
-**Alias(es):**<br>
-* `animu`
+Examples:
+```api-parameters
+"", "", "/anime `name:`One Piece"
+"", "", "/anime `name:`Hunter x Hunter"
 
-**Example(s):**<br>
-* `~>anime One Piece`
-* `~>anime Hunter x Hunter`
-
-</p>
-</details>
+```
+````
 
 
 
-"h3" `~>character <name>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /character {style: "api"}
 Searches for the anime character specified.
-You will be given a list of search results using the indicated character. After this you will have to type the number related to the option you wish to see more information for.
+You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for.
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+````tabs 
+Options:
+```api-parameters
+name, Required, "The name of the character to look for."
+```
 
-**Alias(es):**<br>
-* `char`
-
-**Example(s):**<br>
-* `~>character Luffy`
-* `~>character Gon`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/character `name:`Luffy"
+"", "", "/character `name:`Gon Freecss"
+```
+````
 
 
 
-"h3" `~>coinflip <times>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /coinflip {style: "api"}
 Flip the coin once or multiple times.
 
-**Requirements:**<br>
-* This command does not have any specific requirements.
+````tabs 
+Options:
+```api-parameters
+times, Optional, "The amount of times to flip the coin."
+```
 
-**Example(s):**<br>
-* `~>coinflip`
-* `~>coinflip 50`
-
-</p>
-</details>
-
-
-
-"h3" `~>love <@mention> {@mention}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Calculate the love between two people. You can either mention one user (matches with yourself) or two (matches 2 users).
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>love @Kodehawa#3457`
-* `~>love @Kodehawa#3457 @Adam#9261`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/coinflip"
+"", "", "/coinflip `times:`50"
+```
+````
 
 
 
-"h3" `~>ratewaifu <text>`
-<details><summary>Click here for more details</summary>
-<p>
+# /love {style: "api"}
+Calculate the love between two people. Results may vary. This is random, for real.
 
-**Description:**<br>
-Rate your waifu from 0-100.
+````tabs 
+Options:
+```api-parameters
+user, Required, "The user to compare with."
+```
 
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Alias(es):**<br>
-* `rw`
-* `rate`
-
-**Example(s):**<br>
-* `~>ratewaifu Kode`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/love `user:`@Kodehawa#3457"
+"", "", "/love `user:`@Adam#9261"
+```
+````
 
 
 
-"h3" `~>roll {times} {-amount <amount>} {-size <die size>}`
-<details><summary>Click here for more details</summary>
-<p>
+# /ratewaifu {style: "api"}
+Rate your waifu from 0-100. Results may vary.
 
-**Description:**<br>
-Roll the die. The `times` field allows you to use Die Format or to select how many times a normal die will roll.<br>
-Die Format is formed like this: `<amount>d<size>` <br>
-The other option is to use the `-amount` field to specify how many times the die will roll, and the `-size` to specify the size of the die.
+````tabs 
+Options:
+```api-parameters
+user, Required, "The user to rate."
+```
 
-**Requirements:**<br>
-* This command does not have any specific requirements.
+Examples:
+```api-parameters
+"", "", "/ratewaifu `user:`@Kodehawa#3457"
+"", "", "/ratewaifu `user:`@Adam#9261"
+```
+````
 
-**Example(s):**<br>
-* `~>roll`
-* `~>roll 5`
-* `~>roll -amount 4`
-* `~>roll -amount 1 -size 20`
-* `~>roll 1d20`
-* `~>roll 5d1000`
 
-</p>
-</details>
+
+# /roll {style: "api"}
+Roll an any-sided dice a 1 or more times.
+By default, this command will roll a 6-sized dice 1 time.
+
+````tabs 
+Options:
+```api-parameters
+times, Optional, "The amount of times to roll, in d20 format."
+```
+
+Examples:
+```api-parameters
+"", "", "/roll"
+"", "", "/roll `times:`5d1000"
+"", "", "/roll `times:`1d20"
+````
