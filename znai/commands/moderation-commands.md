@@ -2,131 +2,87 @@
 title: 🔨 Moderation Commands
 ---
 
-"h3" `~>ban <mention> {reason}`
-<details><summary>Click here for more details</summary>
-<p>
+# /mute {style: "api"}
+Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted.
 
-**Description:**<br>
-Bans the given member from the server and deletes all of their messages from the last 7 days.
+````tabs
+Options:
+```api-parameters
+user, Required, "The user to mute."
+time, Optional, "The amount of time to mute the user for. For example 1m20s. The format is, for example, 1h20m10s for 1 hour, 20 minutes and 10 seconds. If not specified, this uses the default mute timeout set for this server, if set."
+reason, Optional, "The reason of the mute. This will show in the logs, if enabled."
+```
 
-**Requirements:**<br>
-* This command requires [**Ban** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+Requirements:
+* This command requires either [**Ban** or **Kick** permissions](commands/permissions#intro).
 
-**Example(s):**<br>
-* `~>ban @Adam#9261`
-
-</p>
-</details>
-
-
-
-"h3" `~>kick <mention> {reason}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Kicks the given Member from the server.
-
-**Requirements:**<br>
-* This command requires [**Kick** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Example(s):**<br>
-* `~>kick @Adam#9261`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/mute `user:`@Adam#9261"
+"", "", "/mute `user:`@Adam#9261 `time:`1h20m10s"
+"", "", "/mute `user:`@Adam#9261 `reason:`good meme"
+```
+````
 
 
 
-"h3" `~>mute [time ]<mention> {reason}`
-<details><summary>Click here for more details</summary>
-<p>
+# ~>opts {style: "api"}
+The opts command includes an extensive list of option commands. 
+You can find our complete list of the opts commands and their examples in our [Configuration Page](configuration/all-options).
 
-**Description:**<br>
-Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted.<br>
-Remember that Mantaro only assigns the specified Mute role to the user mentioned. Its up to the server admins to remove the Discord Permissions for said Mute role.
+:include-markdown: assets/md/text-commands-disclaimer.md
 
-**Requirements:**<br>
-* This command requires either [**Ban** or **Kick** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+````tabs
+Requirements:
+* This command requires [**Admin** permissions](commands/permissions#intro).
 
-**Example(s):**<br>
-* `~>mute 30s @Adam#9261 good meme`
-
-</p>
-</details>
+````
 
 
 
-"h3" `~>opts`
-<details><summary>Click here for more details</summary>
-<p>
+# /prune {style: "api"}
+Delete messages (excluding messages that are older than 14 days). Minimum of messages to delete is 5 and maximum is 100.
 
-**Description:**<br>
-The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our [Configuration Page](https://github.com/Mantaro/MantaroBot/wiki/Configuration).
+````tabs
+Options:
+```api-parameters
+amount, Required, "The amount of messages to prune, from 5 to 100."
+user, Optional, "Only prune from this specific user."
+botonly, Optional, "Only prune messages from bots."
+skippinned, Optional, "Don't prune pinned messages."
+reason, Optional, "The reason of the prune. This will show in the logs, if enabled."
+```
 
-**Requirements:**<br>
-* This command requires [**Admin** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+Requirements:
+* This command requires [**Messages** permissions](commands/permissions#intro).
 
-</p>
-</details>
-
-
-
-"h3" `~>prune <amount>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Deletes messages (excluding messages that are older than 14 days). Minimum of messagesto delete is 5 and maximum is 100.
-
-**Subcommand(s):**<br>
-* `bot {amount}`: This will delete the specified amount of messages that were made by bots.
-* `nopins {amount}`: This will delete the specified amount of messages that are not pinned.
-
-**Requirements:**<br>
-* This command requires [**Messages** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Example(s):**<br>
-* `~>prune 60`
-* `~>prune 70 @Adam#9261`
-* `~>prune bot`
-* `~>prune nopins 60`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/prune `amount:`10"
+"", "", "/prune `amount:`10 `user:`@Adam#9261"
+"", "", "/prune `amount:`10 `botonly:`true"
+"", "", "/prune `amount:`10 `skippinned:`true"
+```
+````
 
 
 
-"h3" `~>softban <mention> {reason}`
-<details><summary>Click here for more details</summary>
-<p>
+# /unmute {style: "api"}
+Unmute the mentioned user if muted.
 
-**Description:**<br>
-Soft-Bans (Bans and immediately unbans) the given Member from the server and deletes all of their messages from the last 7 days.
+````tabs
+Options:
+```api-parameters
+user, Required, "The user to unmute."
+reason, Optional, "The reason of the unmute. This will show in the logs, if enabled."
+```
 
-**Requirements:**<br>
-* This command requires [**Ban** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+Requirements:
+* This command requires either [**Ban** or **Kick** permissions](commands/permissions#intro).
 
-**Example(s):**<br>
-* `~>softban @Adam#9261`.
-
-</p>
-</details>
-
-
-
-"h3" `~>unmute <mention>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Unmute the mentioned user if muted
-
-**Requirements:**<br>
-* This command requires either [**Ban** or **Kick** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Example(s):**<br>
-* `~>unmute @Adam#9261`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/unmute `user:`@Adam#9261"
+"", "", "/unmute `user:`@Adam#9261 `reason:`good meme"
+```
+````
