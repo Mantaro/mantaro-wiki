@@ -2,362 +2,120 @@
 title: 💭 Info Commands
 ---
 
-"h3" `~>avatar {@mention/username/user tag}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /avatar {style: "api"}
 Grab your own avatar or the given person's avatar.
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
+````tabs
+Options:
+```api-parameters
+user, Optional, "The user to get the avatar of."
+```
 
-**Example(s):**<br>
-* `~>avatar`
-* `~>avatar @Kodehawa#3457`
-* `~>avatar Kodehawa`
-
-</p>
-</details>
-
-
-
-"h3" `~>donate`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Shows all of Mantaro's donation methods.
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>donate`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/avatar"
+"", "", "/avatar `user:`@Kodehawa#3457"
+```
+````
 
 
 
-"h3" `~>help {command/category}`
-<details><summary>Click here for more details</summary>
-<p>
+# /help {style: "api"}
+Get all commands or, if you specify a command, get more information on the command specified.
 
-**Description:**<br>
-Get all commands or, if you specify a command, get more information on the command specified or if you specified a category, you will see all commands in that category.
+````tabs
+Options:
+```api-parameters
+command, Optional, "The command to check help for. You can use sub-commands too."
+```
 
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Alias(es):**<br>
-* `commands`
-* `halp`
-
-**Example(s):**<br>
-* `~>help`
-* `~>help cast`
-* `~>help action`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/help"
+"", "", "/help `command:`profile"
+"", "", "/help `command:`cast item"
+```
+````
 
 
 
-"h3" 🔧 `~>info`
-<details><summary>Click here for more details</summary>
-<p>
+# /info {style: "api"}
+The hub for (user/role/server) info related commands.
 
-**Description:**<br>
-Get Mantaro's technical information.
+````tabs
+Sub-commands:
+```api-parameters
+Role, "", "See information about a role."
+Server, "", "See your server's current stats."
+User, "", "See information about specific users."
+```
 
-**Requirements:**<br>
-* This command does not have any specific requirements.
+Options:
+```api-parameters
+Role, Click me!, "Options for the `Role` Subcommand"
+Role.role, "Required", "The role you want to see the information of."
 
-**Alias(es)**<br>
-* `status`
+User, Click me!, "Options for the `Role` Subcommand"
+User.user, "Optional", "The user you want to look."
+```
+ Note: The `Server` Subcommand has no options.
 
-**Example(s):**<br>
-* `~>info`
-
-</p>
-</details>
-
-
-
-"h3" `~>invite`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Get the invite necessary to add Mantaro to your server, The support server Invite, and the Patreon URL.
-
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Example(s):**<br>
-* `~>invite`
-
-</p>
-</details>
+Examples:
+```api-parameters
+"", "", "/info user"
+"", "", "/info user `user:`@Kodehawa#3457"
+"", "", "/info server"
+"", "", "/info role `role:`Member"
+```
+````
 
 
 
-"h3" `~>lang`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Show info on how to change your language and what languages are available.
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Alias(es):**<br>
-* `language`
-
-**Example(s):**<br>
-* `~>lang`
-* `~>language`
-
-</p>
-</details>
-
-
-
-"h3" `~>music`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-This will tell you how to properly use Mantaros music feature.
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>music`
-
-</p>
-</details>
-
-
-
-"h3" `~>ping`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
+# /ping {style: "api"}
 Check how fast Mantaro is responding.
 
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>ping`
-
-</p>
-</details>
-
-
-
-"h3" `~>prefix`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-See information about Mantaro's prefix.
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>prefix`
-
-</p>
-</details>
-
-
-
-"h3" `~>roleinfo {role name}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Shows info about a given role. If no role is given it will give information on your highest role.
-
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Example(s):**<br>
-* `~>roleinfo`
-* `~>roleinfo Member`
-
-</p>
-</details>
-
-
-
-"h3" `~>season`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-See information about how to take part in the seasons.
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>season`
-
-</p>
-</details>
-
-
-
-"h3" `~>serverinfo`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Check some server stats.
-
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Alias(es):**<br>
-* `guildinfo`
-
-**Example(s):**<br>
-* `~>serverinfo`
-* `~>guildinfo`
-
-</p>
-</details>
-
-
-
-"h3" 🔧 `~>shard`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Will tell you the current shard instance your guild is on (used for debugging).
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>shard`
-
-</p>
-</details>
-
-
-
-"h3" 🔧 `~>shardinfo`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Check connectivity of all Mantaro shards (You wont really need this unless you are a Dev or Helper for Mantaro.)
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>shardinfo`
-
-</p>
-</details>
-
-
-
-"h3" 🔧 `~>stats <subcommand>`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Get some stats about Mantaros VPS, most used commands, join/leave stats for guilds and usages or just general stats for Manataro. You must specify one of the subcommands to get information.
-
-**Subcommand(s):**<br>
-* `cmds`: This will show the bot's command usage.
-* `nodes`: This will show Mantaro node statistics.
-* `category`: This will show the bot's category usage.
-* `lavalink`: This will show Lavalink node statistics.
-* `usage`: This will show the bot's (and JVM) hardware usage.
-
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Example(s):**<br>
-* `~>stats cmds`
-* `~>stats category`
-* `~>stats usage`
-
-</p>
-</details>
-
-
-
-"h3" `~>support`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Gives you a link to the support server.
-
-**Requirements:**<br>
-* This command does not have any specific requirements.
-
-**Example(s):**<br>
-* `~>support`
-
-</p>
-</details>
-
-
-
-"h3" `~>userinfo {@mention/username/user tag}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Shows information about your or the given person's roles e.t.c.
-
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Example(s):**<br>
-* `~>userinfo`
-* `~>userinfo @Kodehawa#3457`
-
-</p>
-</details>
-
-
-
-"h3" `~>vipstatus {mention}`
-<details><summary>Click here for more details</summary>
-<p>
-
-**Description:**<br>
-Will show you the remaining time in days of your (or someone else) or the guilds premium perks.
-
-**Subcommand(s):**<br>
-* `guild`: Will show you the current guild's premium status.
-
-**Requirements:**<br>
-* This command requires [**Embed** permissions](https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge).
-
-**Alias(es):**<br>
-* `premium`
-
-**Example(s):**<br>
-* `~>vipstatus`
-* `~>vipstatus @Kodehawa#3457`
-* `~>vipstatus guild`
-
-</p>
-</details>
+````tabs
+Examples:
+```api-parameters
+"", "", "/ping"
+```
+````
+
+
+
+# /mantaro {style: "api"}
+Shows useful bot information.
+
+````tabs
+Subcommands:
+```api-parameters
+Shard, "", "Returns in what shard I am."
+Shardlist, "", "Returns information about shards."
+Support, "", "Shows a link to the support server."
+Welcome, "", "Shows the message the bot sends when it's added to a server."
+Donate, "", "Shows the donation methods in case you want to support Mantaro."
+Invite, "", "Gives you a bot OAuth invite link and some other important links."
+Language, "", "Shows how to change the server and user languages, along with a language list."
+```
+
+Examples:
+```api-parameters
+"", "", "/mantaro shard"
+"", "", "/mantaro shardlist"
+"", "", "/mantaro support"
+"", "", "/mantaro welcome"
+"", "", "/mantaro donate"
+"", "", "/mantaro invite"
+"", "", "/mantaro language"
+```
+````
+
+# /stats {style: "api"}
+Gets the bot technical information. Nothing all that interesting, but shows cute stats.
+
+````tabs
+Examples:
+```api-parameters
+"", "", "/stats"
+```
+````

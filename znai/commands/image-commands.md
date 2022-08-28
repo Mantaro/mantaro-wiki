@@ -5,21 +5,21 @@ title: 🖼️ Image Commands
 # /danbooru {style: "api"}
 Returns an image from danbooru. 
 You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. 
-You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe` rating will be used.
+You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe for Work Image` rating will be used.
 
 :include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
 ````tabs
 Options:
 ```api-parameters
-rating, Optional, "The image rating. `Safe` is the default."
+rating, Optional, "The image rating. `Safe for Work Image` is the default."
 tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
 ```
 Ratings:
-* Safe
-* Questionable
-* Explicit
-* Random
+* Safe for Work Image
+* Questionable/Potentially Unsafe Image
+* Not Safe for Work (NSFW/Explicit) Image
+* Random (any of the above) Image
 
 Requiements:
 *  This command can only be used in NSFW channels.
@@ -27,8 +27,8 @@ Requiements:
 Examples:
 ```api-parameters
 "", "", "/danbooru"
-"", "", "/danbooru `tags:`yuri `rating:`explicit"
-"", "", "/danbooru `rating:`random"
+"", "", "/danbooru `tags:`yuri `rating:`Not Safe for Work (NSFW/Explicit) Image"
+"", "", "/danbooru `rating:`Random (any of the above) Image"
 ```
 ````
 
@@ -81,21 +81,21 @@ Examples:
 
 
 # /gelbooru {style: "api"}
-Returns an image from gelbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe` rating will be used.
+Returns an image from gelbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe for Work Image` rating will be used.
 
 :include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
 ````tabs
 Options:
 ```api-parameters
-rating, Optional, "The image rating. `Safe` is the default."
+rating, Optional, "The image rating. `Safe for Work Image` is the default."
 tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
 ```
 Ratings:
-* Safe
-* Questionable
-* Explicit
-* Random
+* Safe for Work Image
+* Questionable/Potentially Unsafe Image
+* Not Safe for Work (NSFW/Explicit) Image
+* Random (any of the above) Image
 
 Requiements:
 *  This command can only be used in NSFW channels.
@@ -103,8 +103,8 @@ Requiements:
 Examples:
 ```api-parameters
 "", "", "/gelbooru"
-"", "", "/gelbooru `tags:`yuri `rating:`explicit"
-"", "", "/gelbooru `rating:`random"
+"", "", "/gelbooru `tags:`yuri `rating:`Not Safe for Work (NSFW/Explicit) Image"
+"", "", "/gelbooru `rating:`Random (any of the above) Image"
 ```
 ````
 
@@ -140,21 +140,21 @@ Examples:
 ````
 
 # /konachan {style: "api"}
-Returns an image from konachan. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe` rating will be used.
+Returns an image from konachan. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe for Work Image` rating will be used.
 
 :include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
 ````tabs
 Options:
 ```api-parameters
-rating, Optional, "The image rating. `Safe` is the default."
+rating, Optional, "The image rating. `Safe for Work Image` is the default."
 tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
 ```
 Ratings:
-* Safe
-* Questionable
-* Explicit
-* Random
+* Safe for Work Image
+* Questionable/Potentially Unsafe Image
+* Not Safe for Work (NSFW/Explicit) Image
+* Random (any of the above) Image
 
 Requiements:
 *  This command can only be used in NSFW channels.
@@ -162,8 +162,8 @@ Requiements:
 Examples:
 ```api-parameters
 "", "", "/konachan"
-"", "", "/konachan `tags:`yuri `rating:`explicit"
-"", "", "/konachan `rating:`random"
+"", "", "/konachan `tags:`yuri `rating:`Not Safe for Work (NSFW/Explicit) Image"
+"", "", "/konachan `rating:`Random (any of the above) Image"
 ```
 ````
 
@@ -216,21 +216,21 @@ Examples:
 
 
 # /yandere {style: "api"}
-Returns an image from yandere. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags.  Unless a different rating is specified, the `Safe` rating will be used.
+Returns an image from yandere. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags.  Unless a different rating is specified, the `Safe for Work Image` rating will be used.
 
 :include-markdown: assets/md/commands/nsfw-command-disclaimer.md
 
 ````tabs
 Options:
 ```api-parameters
-rating, Optional, "The image rating. `Safe` is the default."
+rating, Optional, "The image rating. `Safe for Work Image` is the default."
 tags, Optional, "The image tag you're looking for. You can see a list of valid tags on the imageboard website."
 ```
 Ratings:
-* Safe
-* Questionable
-* Explicit
-* Random
+* Safe for Work Image
+* Questionable/Potentially Unsafe Image
+* Not Safe for Work (NSFW/Explicit) Image
+* Random (any of the above) Image
 
 Requiements:
 *  This command can only be used in NSFW channels.
@@ -238,7 +238,7 @@ Requiements:
 Examples:
 ```api-parameters
 "", "", "/yandere"
-"", "", "/yandere `tags:`yuri `rating:`explicit"
-"", "", "/yandere `rating:`random"
+"", "", "/yandere `tags:`yuri `rating:`Not Safe for Work (NSFW/Explicit) Image"
+"", "", "/yandere `rating:`Random (any of the above) Image"
 ```
 ````
