@@ -83,7 +83,13 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<p>&quot;h3&quot; ~&gt;game &lt;game&gt; {mention(s)/role(s)} Description: Starts a guessing game of either Pokemon, anime characters or guessing the number.Subcommand(s): wins : This will show you the amount of games you have won. number : This will start a game of Guess the Number. character : This will start a game of Guess the Character. pokemon : This will start a game of Guess the Pokemon. multiple &lt;game&gt; &lt;amount&gt; : This will start multiple instances of the selected game. lobby &lt;list of games&gt; : This will start a lobby with the indicated games. Requirements:The subcommands character and pokemon require https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~&gt;game wins ~&gt;game pokemon ~&gt;game pokemon @Kodehawa#3457 ~&gt;game lobby pokemon, trivia, number ~&gt;game multiple pokemon 10 &quot;h3&quot; ~&gt;trivia {mention(s)/role(s)} {easy/medium/hard} Description: Asks for the answer to a random trivia questionRequirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~&gt;trivia ~&gt;trivia @Kodehawa#3457 ~&gt;trivia @Members</p>
+<header><h1>~>game</h1></header>
+<p>Starts a guessing game of either Pokemon, anime characters or guessing the number. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Parameters game Required The game you want to play, refer to subcommands. user Optional Whoever you want to play this game with. Subcommands wins This will show you the amount of games you have won. number This will start a game of Guess the Number. character This will start a game of Guess the Character. pokemon This will start a game of Guess the Pokemon. multiple &lt;game&gt; &lt;amount&gt; This will start multiple instances of the selected game. lobby &lt;list of games&gt; This will start a lobby with the indicated games. Examples ~&gt;game wins ~&gt;game pokemon ~&gt;game pokemon @Kodehawa#3457 ~&gt;game lobby pokemon, trivia, number ~&gt;game multiple pokemon 10</p>
+</article>
+
+<article>
+<header><h1>~>trivia</h1></header>
+<p>Asks for the answer to a random trivia question Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Parameters difficulty Optional The difficulty of the game, it can be easy, medium or hard. user Optional Whoever you want to play trivia with. Examples ~&gt;trivia ~&gt;trivia @Kodehawa#3457 ~&gt;trivia @Members</p>
 </article>
 </section>
 </div>
@@ -110,358 +116,317 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "game",
+      "title" : "~>game",
+      "type" : "Section",
       "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>game <game> {mention(s)/role(s)}",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Description:",
+          "text" : "Starts a guessing game of either Pokemon, anime characters or guessing the number.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Starts a guessing game of either Pokemon, anime characters or guessing the number.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Subcommand(s):",
+          "text" : "Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly.",
           "type" : "SimpleText"
         } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "wins",
-            "type" : "InlinedCode"
-          }, {
-            "text" : ": This will show you the amount of games you have won.",
-            "type" : "SimpleText"
-          } ]
-        } ]
       }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        "tabsContent" : [ {
+          "name" : "Parameters",
           "content" : [ {
-            "code" : "number",
-            "type" : "InlinedCode"
-          }, {
-            "text" : ": This will start a game of ",
-            "type" : "SimpleText"
-          }, {
-            "type" : "StrongEmphasis",
-            "content" : [ {
-              "text" : "Guess the Number",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "character",
-            "type" : "InlinedCode"
-          }, {
-            "text" : ": This will start a game of ",
-            "type" : "SimpleText"
-          }, {
-            "type" : "StrongEmphasis",
-            "content" : [ {
-              "text" : "Guess the Character",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "pokemon",
-            "type" : "InlinedCode"
-          }, {
-            "text" : ": This will start a game of ",
-            "type" : "SimpleText"
-          }, {
-            "type" : "StrongEmphasis",
-            "content" : [ {
-              "text" : "Guess the Pokemon",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "multiple <game> <amount>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : ": This will start multiple instances of the selected game.",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "lobby <list of games>",
-            "type" : "InlinedCode"
-          }, {
-            "text" : ": This will start a lobby with the indicated games.",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "text" : "The subcommands ",
-            "type" : "SimpleText"
-          }, {
-            "code" : "character",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " and ",
-            "type" : "SimpleText"
-          }, {
-            "code" : "pokemon",
-            "type" : "InlinedCode"
-          }, {
-            "text" : " require ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
-            "content" : [ {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Embed",
-                "type" : "SimpleText"
+            "parameters" : [ {
+              "name" : "game",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "game",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The game you want to play, refer to subcommands.",
+                  "type" : "SimpleText"
+                } ]
               } ]
             }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
+              "name" : "user",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "user",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Whoever you want to play this game with.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        }, {
+          "name" : "Subcommands",
           "content" : [ {
-            "code" : "~>game wins",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>game pokemon",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>game pokemon @Kodehawa#3457",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>game lobby pokemon, trivia, number",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>game multiple pokemon 10",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>trivia {mention(s)/role(s)} {easy/medium/hard}",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Asks for the answer to a random trivia question",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "text" : "This command requires ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
-            "content" : [ {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Embed",
-                "type" : "SimpleText"
+            "parameters" : [ {
+              "name" : "wins",
+              "type" : [ ],
+              "anchorId" : "wins",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will show you the amount of games you have won.",
+                  "type" : "SimpleText"
+                } ]
               } ]
             }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
+              "name" : "number",
+              "type" : [ ],
+              "anchorId" : "number",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will start a game of ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Guess the Number",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "character",
+              "type" : [ ],
+              "anchorId" : "character",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will start a game of ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Guess the Character",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "pokemon",
+              "type" : [ ],
+              "anchorId" : "pokemon",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will start a game of ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Guess the Pokemon",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "multiple <game> <amount>",
+              "type" : [ ],
+              "anchorId" : "multiplegameamount",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will start multiple instances of the selected game.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "lobby <list of games>",
+              "type" : [ ],
+              "anchorId" : "lobbylistofgames",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This will start a lobby with the indicated games.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "noWrap" : true,
+            "type" : "ApiParameters"
           } ]
-        } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "~>game wins",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "~>game pokemon",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "~>game pokemon @Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "~>game lobby pokemon, trivia, number",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "~>game multiple pokemon 10",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          } ]
+        } ],
+        "type" : "Tabs"
       } ]
     }, {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "trivia",
+      "title" : "~>trivia",
+      "type" : "Section",
       "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Example(s):",
+          "text" : "Asks for the answer to a random trivia question",
           "type" : "SimpleText"
         } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
+      }, {
+        "type" : "Paragraph",
         "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>trivia",
-            "type" : "InlinedCode"
-          } ]
+          "text" : "Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly.",
+          "type" : "SimpleText"
         } ]
       }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        "tabsContent" : [ {
+          "name" : "Parameters",
           "content" : [ {
-            "code" : "~>trivia @Kodehawa#3457",
-            "type" : "InlinedCode"
+            "parameters" : [ {
+              "name" : "difficulty",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "difficulty",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The difficulty of the game, it can be easy, medium or hard.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "user",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "user",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Whoever you want to play trivia with.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        }, {
+          "name" : "Examples",
           "content" : [ {
-            "code" : "~>trivia @Members",
-            "type" : "InlinedCode"
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "~>trivia",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "~>trivia @Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "~>trivia @Members",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
+        } ],
+        "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661117943753,
+    "lastModifiedTime" : 1661553042103,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🕹️ Game Commands",
@@ -471,7 +436,15 @@ ReactDOM.render(React.createElement(Documentation, {
       "dirName" : "commands",
       "fileName" : "game-commands",
       "viewOnRelativePath" : null,
-      "pageSectionIdTitles" : [ ]
+      "pageSectionIdTitles" : [ {
+        "title" : "~>game",
+        "id" : "game",
+        "style" : "api"
+      }, {
+        "title" : "~>trivia",
+        "id" : "trivia",
+        "style" : "api"
+      } ]
     }
   }
 }), document.getElementById("znai"));

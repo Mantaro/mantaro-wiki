@@ -218,46 +218,60 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/forward",
-      "id" : "forward"
+      "id" : "forward",
+      "style" : "api"
     }, {
       "title" : "/move",
-      "id" : "move"
+      "id" : "move",
+      "style" : "api"
     }, {
       "title" : "/nowplaying",
-      "id" : "nowplaying"
+      "id" : "nowplaying",
+      "style" : "api"
     }, {
       "title" : "/pause",
-      "id" : "pause"
+      "id" : "pause",
+      "style" : "api"
     }, {
       "title" : "/play",
-      "id" : "play"
+      "id" : "play",
+      "style" : "api"
     }, {
       "title" : "/queue",
-      "id" : "queue"
+      "id" : "queue",
+      "style" : "api"
     }, {
       "title" : "/removetrack",
-      "id" : "removetrack"
+      "id" : "removetrack",
+      "style" : "api"
     }, {
       "title" : "/repeat",
-      "id" : "repeat"
+      "id" : "repeat",
+      "style" : "api"
     }, {
       "title" : "/restartsong",
-      "id" : "restartsong"
+      "id" : "restartsong",
+      "style" : "api"
     }, {
       "title" : "/rewind",
-      "id" : "rewind"
+      "id" : "rewind",
+      "style" : "api"
     }, {
       "title" : "/shuffle",
-      "id" : "shuffle"
+      "id" : "shuffle",
+      "style" : "api"
     }, {
       "title" : "/skip",
-      "id" : "skip"
+      "id" : "skip",
+      "style" : "api"
     }, {
       "title" : "/stop",
-      "id" : "stop"
+      "id" : "stop",
+      "style" : "api"
     }, {
       "title" : "/volume",
-      "id" : "volume"
+      "id" : "volume",
+      "style" : "api"
     } ]
   }, {
     "chapterTitle" : "Commands",
@@ -270,31 +284,40 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/action",
-      "id" : "action"
+      "id" : "action",
+      "style" : "api"
     }, {
       "title" : "/cuddle",
-      "id" : "cuddle"
+      "id" : "cuddle",
+      "style" : "api"
     }, {
       "title" : "/hug",
-      "id" : "hug"
+      "id" : "hug",
+      "style" : "api"
     }, {
       "title" : "/kiss",
-      "id" : "kiss"
+      "id" : "kiss",
+      "style" : "api"
     }, {
       "title" : "/pat",
-      "id" : "pat"
+      "id" : "pat",
+      "style" : "api"
     }, {
       "title" : "/poke",
-      "id" : "poke"
+      "id" : "poke",
+      "style" : "api"
     }, {
       "title" : "/pout",
-      "id" : "pout"
+      "id" : "pout",
+      "style" : "api"
     }, {
       "title" : "/slap",
-      "id" : "slap"
+      "id" : "slap",
+      "style" : "api"
     }, {
       "title" : "/tickle",
-      "id" : "tickle"
+      "id" : "tickle",
+      "style" : "api"
     } ]
   }, {
     "chapterTitle" : "Commands",
@@ -307,7 +330,136 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/badges",
-      "id" : "badges"
+      "id" : "badges",
+      "style" : "api"
+    }, {
+      "title" : "/balance",
+      "id" : "balance",
+      "style" : "api"
+    }, {
+      "title" : "/buy",
+      "id" : "buy",
+      "style" : "api"
+    }, {
+      "title" : "/cast",
+      "id" : "cast",
+      "style" : "api"
+    }, {
+      "title" : "/chop",
+      "id" : "chop",
+      "style" : "api"
+    }, {
+      "title" : "/daily",
+      "id" : "daily",
+      "style" : "api"
+    }, {
+      "title" : "/dailycrate",
+      "id" : "dailycrate",
+      "style" : "api"
+    }, {
+      "title" : "/divorce",
+      "id" : "divorce",
+      "style" : "api"
+    }, {
+      "title" : "/dump",
+      "id" : "dump",
+      "style" : "api"
+    }, {
+      "title" : "/equip",
+      "id" : "equip",
+      "style" : "api"
+    }, {
+      "title" : "/fish",
+      "id" : "fish",
+      "style" : "api"
+    }, {
+      "title" : "/gamble",
+      "id" : "gamble",
+      "style" : "api"
+    }, {
+      "title" : "/inventory",
+      "id" : "inventory",
+      "style" : "api"
+    }, {
+      "title" : "/iteminfo",
+      "id" : "iteminfo",
+      "style" : "api"
+    }, {
+      "title" : "/leaderboard",
+      "id" : "leaderboard",
+      "style" : "api"
+    }, {
+      "title" : "/loot",
+      "id" : "loot",
+      "style" : "api"
+    }, {
+      "title" : "/market",
+      "id" : "market",
+      "style" : "api"
+    }, {
+      "title" : "/marry",
+      "id" : "marry",
+      "style" : "api"
+    }, {
+      "title" : "/mine",
+      "id" : "mine",
+      "style" : "api"
+    }, {
+      "title" : "/opencrate",
+      "id" : "opencrate",
+      "style" : "api"
+    }, {
+      "title" : "/pet",
+      "id" : "pet",
+      "style" : "api"
+    }, {
+      "title" : "/profile",
+      "id" : "profile",
+      "style" : "api"
+    }, {
+      "title" : "/repair",
+      "id" : "repair",
+      "style" : "api"
+    }, {
+      "title" : "/reputation",
+      "id" : "reputation",
+      "style" : "api"
+    }, {
+      "title" : "/salvage",
+      "id" : "salvage",
+      "style" : "api"
+    }, {
+      "title" : "/sell",
+      "id" : "sell",
+      "style" : "api"
+    }, {
+      "title" : "/slots",
+      "id" : "slots",
+      "style" : "api"
+    }, {
+      "title" : "/tools",
+      "id" : "tools",
+      "style" : "api"
+    }, {
+      "title" : "/transfer",
+      "id" : "transfer",
+      "style" : "api"
+    }, {
+      "title" : "/transferitems",
+      "id" : "transferitems",
+      "style" : "api"
+    }, {
+      "title" : "/unequip",
+      "id" : "unequip",
+      "style" : "api"
+    }, {
+      "title" : "/use",
+      "id" : "use",
+      "style" : "api"
+    }, {
+      "title" : "/waifu",
+      "id" : "waifu",
+      "style" : "api"
     } ]
   }, {
     "chapterTitle" : "Commands",
@@ -318,7 +470,15 @@ toc = [ {
     "dirName" : "commands",
     "fileName" : "game-commands",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "~>game",
+      "id" : "game",
+      "style" : "api"
+    }, {
+      "title" : "~>trivia",
+      "id" : "trivia",
+      "style" : "api"
+    } ]
   }, {
     "chapterTitle" : "Commands",
     "pageTitle" : "🖼️ Image Commands",
@@ -328,7 +488,43 @@ toc = [ {
     "dirName" : "commands",
     "fileName" : "image-commands",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "/danbooru",
+      "id" : "danbooru",
+      "style" : "api"
+    }, {
+      "title" : "/e621",
+      "id" : "e621",
+      "style" : "api"
+    }, {
+      "title" : "/e926",
+      "id" : "e926",
+      "style" : "api"
+    }, {
+      "title" : "/gelbooru",
+      "id" : "gelbooru",
+      "style" : "api"
+    }, {
+      "title" : "/image",
+      "id" : "image",
+      "style" : "api"
+    }, {
+      "title" : "/konachan",
+      "id" : "konachan",
+      "style" : "api"
+    }, {
+      "title" : "/rule34",
+      "id" : "rule34",
+      "style" : "api"
+    }, {
+      "title" : "/safebooru",
+      "id" : "safebooru",
+      "style" : "api"
+    }, {
+      "title" : "/yandere",
+      "id" : "yandere",
+      "style" : "api"
+    } ]
   }, {
     "chapterTitle" : "Commands",
     "pageTitle" : "🎲 Fun Commands",
@@ -338,7 +534,35 @@ toc = [ {
     "dirName" : "commands",
     "fileName" : "fun-commands",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "/8ball",
+      "id" : "8ball",
+      "style" : "api"
+    }, {
+      "title" : "/anime",
+      "id" : "anime",
+      "style" : "api"
+    }, {
+      "title" : "/character",
+      "id" : "character",
+      "style" : "api"
+    }, {
+      "title" : "/coinflip",
+      "id" : "coinflip",
+      "style" : "api"
+    }, {
+      "title" : "/love",
+      "id" : "love",
+      "style" : "api"
+    }, {
+      "title" : "/ratewaifu",
+      "id" : "ratewaifu",
+      "style" : "api"
+    }, {
+      "title" : "/roll",
+      "id" : "roll",
+      "style" : "api"
+    } ]
   }, {
     "chapterTitle" : "Commands",
     "pageTitle" : "🔨 Moderation Commands",
@@ -348,7 +572,23 @@ toc = [ {
     "dirName" : "commands",
     "fileName" : "moderation-commands",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "/mute",
+      "id" : "mute",
+      "style" : "api"
+    }, {
+      "title" : "~>opts",
+      "id" : "opts",
+      "style" : "api"
+    }, {
+      "title" : "/prune",
+      "id" : "prune",
+      "style" : "api"
+    }, {
+      "title" : "/unmute",
+      "id" : "unmute",
+      "style" : "api"
+    } ]
   }, {
     "chapterTitle" : "Commands",
     "pageTitle" : "💭 Info Commands",
@@ -358,7 +598,31 @@ toc = [ {
     "dirName" : "commands",
     "fileName" : "info-commands",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "/avatar",
+      "id" : "avatar",
+      "style" : "api"
+    }, {
+      "title" : "/help",
+      "id" : "help",
+      "style" : "api"
+    }, {
+      "title" : "/info",
+      "id" : "info",
+      "style" : "api"
+    }, {
+      "title" : "/ping",
+      "id" : "ping",
+      "style" : "api"
+    }, {
+      "title" : "/mantaro",
+      "id" : "mantaro",
+      "style" : "api"
+    }, {
+      "title" : "/stats",
+      "id" : "stats",
+      "style" : "api"
+    } ]
   }, {
     "chapterTitle" : "Commands",
     "pageTitle" : "✏️Utility Commands",
@@ -368,7 +632,38 @@ toc = [ {
     "dirName" : "commands",
     "fileName" : "utility-commands",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "/birthday",
+      "id" : "birthday",
+      "style" : "api"
+    }, {
+      "title" : "/custom",
+      "id" : "custom",
+      "style" : "api"
+    }, {
+      "title" : "/iam",
+      "id" : "iam",
+      "style" : "api"
+    }, {
+      "title" : "/poll",
+      "id" : "poll",
+      "style" : "api"
+    }, {
+      "title" : "/premium",
+      "id" : "premium",
+      "style" : "api"
+    }, {
+      "title" : "/remindme",
+      "id" : "remindme",
+      "style" : "api"
+    }, {
+      "title" : "/time",
+      "id" : "time",
+      "style" : "api"
+    }, {
+      "title" : "~>wiki",
+      "id" : "wiki"
+    } ]
   } ]
 }, {
   "chapterTitle" : "Configuration",
@@ -462,9 +757,9 @@ toc = [ {
   "dirName" : "custom-commands",
   "items" : [ {
     "chapterTitle" : "Custom Commands",
-    "pageTitle" : "101: Custom Guide",
+    "pageTitle" : "Custom 101: Your guide",
     "pageMeta" : {
-      "title" : [ "101: Custom Guide" ]
+      "title" : [ "Custom 101: Your guide" ]
     },
     "dirName" : "custom-commands",
     "fileName" : "101",
@@ -523,9 +818,9 @@ toc = [ {
   "dirName" : "currency",
   "items" : [ {
     "chapterTitle" : "Currency",
-    "pageTitle" : "101: Introduction",
+    "pageTitle" : "Currency 101: Introduction",
     "pageMeta" : {
-      "title" : [ "101: Introduction" ]
+      "title" : [ "Currency 101: Introduction" ]
     },
     "dirName" : "currency",
     "fileName" : "101",
@@ -542,9 +837,9 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Currency",
-    "pageTitle" : "102: Basic knowledge",
+    "pageTitle" : "Currency 102: Basic knowledge",
     "pageMeta" : {
-      "title" : [ "102: Basic knowledge" ]
+      "title" : [ "Currency 102: Basic knowledge" ]
     },
     "dirName" : "currency",
     "fileName" : "102",
@@ -561,9 +856,9 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Currency",
-    "pageTitle" : "101: Intermediate knowledge",
+    "pageTitle" : "Currency 103: Intermediate knowledge",
     "pageMeta" : {
-      "title" : [ "101: Intermediate knowledge" ]
+      "title" : [ "Currency 103: Intermediate knowledge" ]
     },
     "dirName" : "currency",
     "fileName" : "103",
@@ -586,9 +881,9 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Currency",
-    "pageTitle" : "104: Advanced knowledge",
+    "pageTitle" : "Currency 104: Advanced knowledge",
     "pageMeta" : {
-      "title" : [ "104: Advanced knowledge" ]
+      "title" : [ "Currency 104: Advanced knowledge" ]
     },
     "dirName" : "currency",
     "fileName" : "104",

@@ -72,11 +72,43 @@ footer = {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Currently the wiki is updated to Mantaro version ",
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Currently the wiki is updated to Mantaro version",
           "type" : "SimpleText"
         }, {
           "text" : "v7.0.0",
           "type" : "TextBadge"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Help us keep Mantaro alive! You can support us on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://www.patreon.com/mantaro",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Patreon",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " and get different ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/mantaro-wiki/basics/premium-perks",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "perks",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " from it too!",
+          "type" : "SimpleText"
         } ]
       } ]
     } ],

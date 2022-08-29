@@ -3,7 +3,7 @@
     <url>/mantaro-wiki</url>
     <fullTitle>Mantaro Wiki Mantaro Bot Wiki</fullTitle>
     <text>
-      <text>Hello there!This is the official Wiki for the Mantaro Discord Bot.Mantaro is a simple but powerful Discord bot used to enhance your Discord experience. It includes many fun and useful features such as moderation, music, games and currency. It's currently in over 750,000 servers serving over 60 million users!I hope you like your time with the bot, in this page you'll find quite a lot of information in regards on how to use Mantaro and her features. Use the links on the side to navigate to the section you would like to know more of. Alternatively, you can use the search bar to poke around.If you need any further help, you can join https://support.mantaro.site our support server on Discord and ask in the #support channel.Note: Remember you can use /help to get more information on the commands!</text>
+      <text>Hello there!This is the official Wiki for the Mantaro Discord Bot.Mantaro is a simple but powerful Discord bot used to enhance your Discord experience. It includes many fun and useful features such as moderation, music, games and currency. It's currently in over 750,000 servers serving over 60 million users!I hope you like your time with the bot, in this page you'll find quite a lot of information in regards on how to use Mantaro and her features. Use the links on the side to navigate to the section you would like to know more of. Alternatively, you can use the search bar to poke around.If you need any further help, you can join https://support.mantaro.site our support server on Discord and ask in the #support channel.Tip: Remember you can use /help to get more information on the commands!</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -427,7 +427,7 @@
     <url>/mantaro-wiki/commands/audio-commands#queue</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /queue [Commands]</fullTitle>
     <text>
-      <text>This command displays the current queue or the selected page of the queue. Subcommands show : Shows the current music queue. clear : Clears the current queue. Needs commands/permissions#intro DJ or Admin permissions. Examples /queue show /queue clear</text>
+      <text>This command displays the current queue or the selected page of the queue. Subcommands show Shows the current music queue. clear Clears the current queue. Needs commands/permissions#intro DJ or Admin permissions. Examples /queue show /queue clear</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -491,7 +491,7 @@
     <url>/mantaro-wiki/commands/audio-commands#volume</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /volume [Commands]</fullTitle>
     <text>
-      <text>This command lets you check the current volume, as well as set the volume to the percentage specified (1-100).Note: This feature is only available for basics/premium-perks Mantaro Premium users. Options volume Optional The volume to use. Values are 1-100. Leave empty to check current volume. Examples /volume /volume volume: 25</text>
+      <text>This command lets you check the current volume, as well as set the volume to the percentage specified (4-100). Options volume Optional The volume to use (4-100). Note: This feature is only available for basics/premium-perks#perks-user-perks Premium users, users in basics/premium-perks#perks-guild-server-perks Premium servers or basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon users. Examples /volume /volume volume: 25</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -499,7 +499,7 @@
     <url>/mantaro-wiki/commands/action-commands#action</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /action [Commands]</fullTitle>
     <text>
-      <text>A bunch of action commands that didn't fit into a separate command. Subcommands teehee : Tease someone on the server. bite : Bite someone on the server. lick : Lick someone on the server. kinky nuzzle : Nuzzle someone on the server. smile : Smile at someone on the server. highfive : High-five someone on the server. stare : Stare at someone on the server. blush : Blushes at someone on the server. nom : Nom someone or something. holdhands : Hold someones hand. bloodsuck : Suck someone's blood on the server. meow : Meow at something or someone. facedesk : Smash your head on a desk I guess? lewd : Call something or someone lewd. Options volume Optional The volume to use. Values are 1-100. Leave empty to check current volume. User : Required on some subcommands, optional on others. The user on which you want to perform an action Extra : Optional, available only on certain subcommands. Extra users to which you want to perform an action. Examples /action teehee user: @Kodehawa#3457 /action bite user: @Kodehawa#3457 /action nuzzle user: @Kodehawa#3457 /action holdhands user: @Kodehawa#3457 /action nom user: @Kodehawa#3457 /action stare user: @Kodehawa#3457 /action smile user: @Kodehawa#3457 /action facedesk</text>
+      <text>A bunch of action commands that didn't fit into a separate command. Subcommands Teehee Tease someone on the server. Bite Bite someone on the server. Lick Lick someone on the server. kinky Nuzzle Nuzzle someone on the server. Smile Smile at someone on the server. Highfive High-five someone on the server. Stare Stare at someone on the server. Blush Blushes at someone on the server. Nom Nom someone or something. Holdhands Hold someones hand. Bloodsuck Suck someone's blood on the server. Meow Meow at something or someone. Facedesk Smash your head on a desk I guess? Lewd Call something or someone lewd. Options Type 1 Click me! Options for the Teehee , Bite , Lick , Nuzzle , Smile , Highfive , Stare , Blush , Holdhands and Bloodsuck Subcommands user Required The user on which you want to perform an action. extra Optional Extra users to which you want to perform an action. Type 2 Click me! Options for the Nom , Meow and Lewd Subcommands user Optional The user on which you want to perform an action. Note: The Facedesk subcommand has no options. Examples /action teehee user: @Kodehawa#3457 /action bite user: @Kodehawa#3457 /action nuzzle user: @Kodehawa#3457 /action holdhands user: @Kodehawa#3457 /action nom user: @Kodehawa#3457 /action stare user: @Kodehawa#3457 /action smile user: @Kodehawa#3457 /action facedesk</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -507,7 +507,7 @@
     <url>/mantaro-wiki/commands/action-commands#cuddle</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /cuddle [Commands]</fullTitle>
     <text>
-      <text>Cuddle someone on the server. Options User : Required. The user you want to cuddle. Extra : Optional. Extra users you wish to cuddle. Examples /cuddle user: @Kodehawa#3457 /cuddle user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
+      <text>Cuddle someone on the server. Options user Required The user you want to cuddle. extra Optional Extra users you wish to cuddle. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /cuddle user: @Kodehawa#3457 /cuddle user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -515,7 +515,7 @@
     <url>/mantaro-wiki/commands/action-commands#hug</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /hug [Commands]</fullTitle>
     <text>
-      <text>Hug someone on the server. Options User : Required. The user you want to hug. Extra : Optional. Extra users you wish to hug. Examples /hug user: @Kodehawa#3457 /hug user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
+      <text>Hug someone on the server. Options user Required The user you want to hug. extra Optional Extra users you wish to hug. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /hug user: @Kodehawa#3457 /hug user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -523,7 +523,7 @@
     <url>/mantaro-wiki/commands/action-commands#kiss</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /kiss [Commands]</fullTitle>
     <text>
-      <text>Kiss someone on the server. Options User : Required. The user you want to kiss. Extra : Optional. Extra users you wish to kiss. Examples /kiss user: @Kodehawa#3457 /kiss user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
+      <text>Kiss someone on the server. Options user Required The user you want to kiss. extra Optional Extra users you wish to kiss. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /kiss user: @Kodehawa#3457 /kiss user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -531,7 +531,7 @@
     <url>/mantaro-wiki/commands/action-commands#pat</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /pat [Commands]</fullTitle>
     <text>
-      <text>Pat someone on the server. Options User : Required. The user you want to pat. Extra : Optional. Extra users you wish to pat. Examples /pat user: @Kodehawa#3457 /pat user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
+      <text>Pat someone on the server. Options user Required The user you want to pat. extra Optional Extra users you wish to pat. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /pat user: @Kodehawa#3457 /pat user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -539,7 +539,7 @@
     <url>/mantaro-wiki/commands/action-commands#poke</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /poke [Commands]</fullTitle>
     <text>
-      <text>Poke someone on the server. Options User : Required. The user you want to poke. Extra : Optional. Extra users you wish to poke. Examples /poke user: @Kodehawa#3457 /poke user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
+      <text>Poke someone on the server. Options user Required The user you want to poke. extra Optional Extra users you wish to poke. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /poke user: @Kodehawa#3457 /poke user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -547,7 +547,7 @@
     <url>/mantaro-wiki/commands/action-commands#pout</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /pout [Commands]</fullTitle>
     <text>
-      <text>Pout at someone on the server Options User : Required. The user you want to pout at. Extra : Optional. Extra users you wish to pout at. Examples /pout user: @Kodehawa#3457 /pout user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
+      <text>Pout at someone on the server Options user Required The user you want to pout. extra Optional Extra users you wish to pout. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /pout user: @Kodehawa#3457 /pout user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -555,7 +555,7 @@
     <url>/mantaro-wiki/commands/action-commands#slap</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /slap [Commands]</fullTitle>
     <text>
-      <text>Slap someone on the server. Options User : Required. The user you want to slap. Extra : Optional. Extra users you wish to slap. Examples /slap user: @Kodehawa#3457 /slap user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
+      <text>Slap someone on the server. Options user Required The user you want to slap. extra Optional Extra users you wish to slap. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /slap user: @Kodehawa#3457 /slap user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -563,7 +563,7 @@
     <url>/mantaro-wiki/commands/action-commands#tickle</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /tickle [Commands]</fullTitle>
     <text>
-      <text>Tickle someone on the server. Options User : Required. The user you want to tickle. Extra : Optional. Extra users you wish to tickle. Examples /tickle user: @Kodehawa#3457 /tickle user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
+      <text>Tickle someone on the server. Options user Required The user you want to tickle. extra Optional Extra users you wish to tickle. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /tickle user: @Kodehawa#3457 /tickle user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -571,55 +571,551 @@
     <url>/mantaro-wiki/commands/currency-commands#badges</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /badges [Commands]</fullTitle>
     <text>
-      <text>Shows a list of your own badges or a list of the badges from the given user. A full list of the badges can be found currency/badges here. Subcommands Info : Shows info about a badge. List : Lists all the obtainable badges. Show : Show your badge list, or someone else's badge list. Options Time : Required. The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /forward time: 2m /forward time: 1m29s Subcommand(s): list : This will show you a list of all badges. info &lt;name> : This will show information on the specified badge. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): badge Example(s): ~>badges ~>badges list ~>badges @Kodehawa#3457 ~>badges info Miner "h3" ~>balance {@mention/username/user tag} Description: Returns your current amount of money or the amount of money of the person that was given.Requirements:This command does not have any specific requirements. Alias(es): credits bal Example(s): ~>balance ~>bal ~>bal @Kodehawa#3457 "h3" ~>buy {amount/all/quarter/half} &lt;item> Description Allows you to buy items from the market.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. This command requires you to have the credits needed to buy the item. Example(s): ~>buy 2 Diamond ~>buy House "h3" ~>cast &lt;item> {wrench} {-amount &lt;amount>} Description: Cast various items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory. Different wrenches have different amounts of items they can cast at the same time. For more in-depth information you can go to our https://github.com/Mantaro/MantaroBot/wiki/Currency-101#casting--dust-level Currency 101 page.Subcommand(s): ls : This will show a list of all castable items. Requirements:This command requires you to have the items needed to cast the specified item. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The ls subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): craft Example(s): ~>cast ls ~>cast "diamond pickaxe" ~>cast "comet gem" "sparkle wrench" 10 "h3" ~>chop Description: Use one of your axes to chop down trees.Requirements:This command requires you to have an axe equipped. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~>chop "h3" ~>daily {@mention/-check} Description: Claim your Daily credits. You can only claim them once every 24 hours. Mentioning someone will give your daily credits to them instead. The -check flag allows you to check if you daily is ready without claiming it.Requirements:This command does not have any specific requirements. Alias(es): dailies Example(s): ~>daily ~>dailies ~>daily @Kodehawa#3457 "h3" 💰 ~>dailycrate {-check} Description: Allows you to receive a random crate once per day. The -check flag allows you to check if you daily crate is ready without claiming it.Requirements: https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks This is a Mantaro premium only feature. Example(s): ~>dailycrate ~>dailycrate -check "h3" ~>divorce Description: Attend the single life again.Requirements:This command requires you to be married beforehand. Example(s): ~>divorce "h3" ~>dump {amount} &lt;item> Description: Allows you to dump an item from your inventory. Using allof will dump all the items you have of the specified item.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. This command requires you to have the specified item on your inventory. Example(s): ~>dump Milk ~>dump 5 Diamond ~>dump allof House "h3" ~>equip &lt;item> Description: Allows you to equip an item (Picks, Rods or Axes).Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~>equip pick ~>equip "diamond pickaxe" "h3" ~>fish Description: Catch fish using one of your fishing rods.Requirements:This command requires you to have a rod equipped. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~>fish "h3" ~>gamble &lt;all/half/quarter/amount/percentage> Description: Gamble your credits for possible profit. The current max of credits you can gamble at once is 10000 (update 5.7).Requirements:This command requires you to have credits to gamble away. Example(s): ~>gamble all ~>gamble half ~>gamble quarter ~>gamble 30 ~>gamble 30% "h3" ~>inventory {@mention/username/tag/nickname} {-info/-calculate} Description: Shows your current inventory and item stats. Mentioning someone or typing someone's name/nickname/tag will show their inventory. Using -info will give you a longer more detailed response and using -calculate will show your your items worth.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The -info option requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): inv Example(s): ~>inventory ~>inv ~>inv @Kodehawa#3457 ~>inv -info ~>inv -calculate "h3" ~>iteminfo &lt;item> Description: Provides you with information about an item.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~>iteminfo "Diamond Pickaxe" "h3" ~>itemtransfer &lt;@mention> &lt;item> {amount} Description: Transfer one of your items to someone else.Requirements:This command requires you to have the item to be transfered. Alias(es): transferitems transferitem Example(s): ~>itemtransfer @Kodehawa#3457 "Diamond Pickaxe" 5 "h3" ~>leaderboard {money/rep/lvl/streak/claim/slots/gamble} Description: Returns the Top 10 for various statistics in Mantaro.Subcommand(s): lvl : This will show the leaderboard for level. money : This will show the leaderboard for money. games : This will show the leaderboard for games. rep : This will show the leaderboard for rep. claim : This will show the leaderboard for claim. streak : This will show the leaderboard for daily streak. slots : This will show the leaderboard for slots. gamble : This will show the leaderboard for gamble. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): richest lb top Example(s): ~>leaderboard ~>lb ~>lb money ~>leaderboard slots "h3" ~>level {@mention} Description: Allows you to check your level or the level of someone else.Requirements:This command does not have any specific requirements. Alias(es): rank Example(s): ~>level ~>level @Kodehawa#3457 "h3" ~>loot Description: Loot the chat for possible credits and items. Some items are only obtained via loot. Very rarely you will also be able to find a Loot Crate.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~>loot "h3" ~>market {sell/buy/dump} {amount/all/quarter/half} {item name/emoji} Description: Browse the Market. When used alone Mantaro will show you a list of all the items on the Market.Subcommand(s): dump {amount} &lt;item> : This will dump an item from your inventory. common : This will filter the market to only show Common items. tools : This will filter the market to only show Tool items. potions : This will filter the market to only show Potion items. buyable : This will filter the market to only show Buyable items. pet : This will filter the market to only show Pet items. sellable : This will filter the market to only show Sellable items. price &lt;item> : This will show the price of the specified item. buy {amount/all/quarter/half} &lt;item> : This allows you to buy an item from the Market. sell {all/allof} &lt;item> : This allows you to sell an item in the Market. If you use all you will sell all your items. If you use allof you will sell all your items of the specified item. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. The dump subcommand requires you to have the specified item on your inventory. The buy subcommand requires you to have the credits needed to buy the item. The sell subcommand requires you to have the specified item on your inventory. Alias(es): shop Example(s): ~>market ~>market dump 2 Diamond ~>market sell 2 Diamond ~>market buy 2 Diamond ~>market sell all ~>market buy all Diamond "h3" ~>marry &lt;mention> Description: Marry someone. The person you marry also appears on your profile.Subcommand(s): status : This will show you the status of your marriage. timezone &lt;timezone> : This will set the shared timezone for your marriage. createletter &lt;content> : This will create your love letter for your partner. buyhouse &lt;name> : This will buy a shared house for your marriage. buycar &lt;name> : This will buy a shared car for your marriage. Requirements:This command requires 2 rings to be in your inventory to marry someone. The status subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): marriage Example(s): ~>marry @Kodehawa#3457 ~>marry createletter This is my letter! ~>marry status ~>marry buyhouse Our House "h3" ~>mine Description: Use one of your pickaxes to mine minerals.Requirements:This command requires you to have a pick equipped. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~>mine "h3" ~>opencrate {crate name} Description: Open one of your Lootboxes.Requirements:This command requires you to have a crate key to open it. You can buy one from the market. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. Example(s): ~>opencrate ~>opencrate "gem crate" "h3" ~>pet Description: Allows you to buy a pet so that you can take care of it. A pet will also help you out with other commands and give you several bonuses.Subcommand(s): info &lt;type> : This will show you more information on the specified pet type. list : This will show you a list of the currently available pets and their abilities. status : This will show you the current status of your pet. rename &lt;name> : This will rename your pet with the given name. check : This will show you the thirst, hunger and dust levels of your current pet. level : This will show the level and experience of your current pet. clean : This will clean your pet's dust. choice : This will let you switch between Personal pet and Marriage pet. pet {@mention} : This will pet your pet. If you mention someone you will instead pet that person's pet. sell : This will sell your pet and reset all your pet stats. hydrate {amount/all} : This will hydrate your pet. Typing all will max out your pet's thirst bar. buy &lt;name> &lt;type> : This will buy and name your pet with the specified information. feed &lt;food> {amount/all} : This will feed your pet the specified food. Typing all will max out your pet's hunger bar. Requirements:Currently pets can only be bought if you are married, and you both have bought a house using the marry command. Pets will be expanded upon in later updates. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>pet info dog ~>pet list ~>pet buy Doggo dog ~>pet pet @Kodehawa#3457 ~>pet status ~>pet hydrate all ~>pet sell "h3" ~>profile {mention/username/tag/nickname} Description: Look at your own or the given person's profile.Subcommand(s): stats : This will show all sorts of statistics about your usage of Mantaro's currency. timezone &lt;timezone> : This will set your timezone. If you don't know what your timezone is you can search it in Google. togglelegacy : This will show or hide your legacy credits. description &lt;desc> : This will change your current description. Use ~>profile description clear to remove your description. language {language code} : This will change the language in which Mantaro responds to you. Use ~>lang to get a full list of the available language codes. toggleaction : This will disallow or allow action commands to be done on you. 💰 widgets {ls/reset} : This will change the order in which information is presented on your profile. You can also remove certain things from your profile. hidetag : This will hide the tags (#xxxx) and IDs from your profile and your waifu list. claimlock {remove} : This will lock you from being a waifu, meaning you can't be claimed anymore. You need to buy a claim key from the market to use this command. Use the remove option to become claimable once again. autoequip {disable} : This will autoequip tools (Axe, Rod and Axe) when they break, assuming you have more of them in your inventory. Use the disable option to turn this off. inventorysort &lt;type> : This will sort your inventory based on the type of sort you specify. You can sort by VALUE, VALUE_TOTAL, AMOUNT, TYPE or RANDOM. displaybadge &lt;badge/reset/none> : This will change the current badge on display for your profile. Use the reset option to reset your badge. Use the none option to have no badge show up. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed and Emotes permissions. The widgets subcommand is a https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks Mantaro premium only feature. The claimlock subcommand requires you to have a claim key on your inventory. Example(s): ~>profile ~>profile @Kodehawa#3457 ~>profile timezone GMT+2 ~>profile togglelegacy ~>profile lang es_ES ~>profile widgets header, credits, reputation, birthday, marriage, badges ~>profile inventorysort RANDOM ~>profile toggleaction "h3" ~>rep &lt;mention/username/user tag> Description: Give someone Reputation.Requirements:This command does not have any specific requirements. Alias(es): reputation Example(s): ~>rep @Kodehawa#3457 ~>rep Kodehawa#3457 ~>rep 155867458203287552 "h3" ~>repair &lt;item> {wrench} Description: Allows you to repair broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory. For more in-depth information you can go to our https://github.com/Mantaro/MantaroBot/wiki/Currency-101#repairing-items Currency 101 page.Subcommand(s): ls : This will show a list of all repairable items. Requirements:This command requires you to have the items needed to repair the specified item. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The ls subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): fix Example(s): ~>repair ls ~>repair "broken sparkle pickaxe" "sparkle wrench" "h3" ~>salvage &lt;item> {wrench} Description: Allows you to salvage broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory.Subcommand(s): ls : This will show a list of all salvageable items. Requirements:This command requires you to have the broken item you specified. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The ls subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Example(s): ~>salvage "broken sparkle pickaxe" ~>salvage "broken sparkle pickaxe" "sparkle wrench" "h3" ~>sell {amount/all/allof} &lt;item> Description: Allows you to sell an item in the Market. If you use all you will sell all your items. If you use allof you will sell all your items of the specified item.Requirements:This command requires you to have the specified item on your inventory. Example(s): ~>sell 5 Diamonds ~>sell House ~>sell all "h3" ~>slots {amount|-useticket {-amount &lt;amount>}} Description: Uses the amount of credits specified to roll the slot machine. You can also buy a "Slot-Ticket" and use that instead. The current credit max you can use at once is 50000, for tickets you can use a max of 50 at once (update 5.7).Requirements:This command requires you to have credits to gamble away. The -useticket option requires you to have Slot Tickets in your inventory. Example(s): ~>slots ~>slots 420 ~>slots -useticket ~>slots -useticket -amount 420 "h3" ~>tools Description: Check the durability and status of your tools.Requirements:This command does not have any specific requirements. Example(s): ~>tools "h3" ~>transfer &lt;mention> &lt;amount> Description: Transfer someone money. You can transfer a max of 500,000 credits, and you cannot transfer to/from a new Discord account (update 6.0.5).Requirements:This command requires you to have credits to transfer. Alias(es): give Example(s): ~>transfer @Kodehawa#3457 420 "h3" ~>unequip &lt;pick/rod/axe> Description: Allows you to unequip previously equipped items. Depending on how damaged the item is, you may get a broken version of the item.Requirements:This command requires you to have an item equipped for the specified field. Example(s): ~>unequip pick ~>unequip rod ~>unequip axe "h3" ~>useitem &lt;item> {-amount &lt;amount>} Description: Allows you to use certain items. Specifying -amount X will use X items instead of just one. For more in-depth information you can go to our https://github.com/Mantaro/MantaroBot/wiki/Currency-101#items-and-their-uses Currency 101 page.Subcommand(s): ls : This will show a list of all useable items. Requirements:This command requires you to have the item you specified to be used. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Emotes permissions. The ls subcommand requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed, Emotes and Reactions permissions. Alias(es): use Example(s): ~>useitem "Energy Beverage" ~>useitem "Haste Potion" -amount 5 "h3" ~>waifu Description: Manage your waifus. Using the command on its own (no subcommands) will show you a list of your own waifus.Subcommand(s): stats : This shows you your current waifu status and values. buyslot : This lets you buy one more waifu slot. You can have a max of 30 slots. claim &lt;mention/id> : This lets you claim an user as your waifu. optout : This will opt you out completely from the waifu command. YOU CANNOT UNDO THIS. You will become unclaimable and you wont be able to claim people either. unclaim &lt;mention/id> : This lets you unclaim an user. You can also use User ID's to unclaim people you do not share servers with. Check our FAQ on unclaiming https://github.com/Mantaro/MantaroBot/wiki/FAQ#10--can-i-unclaim-people-who-i-no-longer-share-a-server-with-or-that-show-as-unknown-user-waifu-command "Unknown Users" for more help. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed and Reactions permissions. The buyslot subcommand requires you to have enough credits to buy more slots. The claim subcommand requires that the user you are trying to claim is not claim locked. The unclaim subcommand requires you to have enough credits to unclaim the user. Alias(es): waifus Example(s): ~>waifu ~>waifu stats ~>waifu buyslot ~>waifu claim @Kodehawa#3457 ~>waifu unclaim @Kodehawa#3457 ~>waifu optout</text>
+      <text>Shows a list of your own badges or a list of the badges from the given user. A full list of the badges can be found currency/badges here. Subcommands Info Shows info about a badge. List Lists all the obtainable badges. Show Show your badge list, or someone else's badge list. Options Info Click me! Options for the Info Subcommand badge Required The badge to check info for. Show Click me! Options for the Show Subcommand user Optional The user to check. If none, you. brief Optional Whether to show this in brief format. Default is false. Requirements This command requires the commands/permissions#intro Emotes permission. Examples /badges show /badges show user: @Kodehawa#3457 /badges list /badges info badge: Donator</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/game-commands</url>
-    <fullTitle>Mantaro Wiki: 🕹️ Game Commands,  [Commands]</fullTitle>
+    <url>/mantaro-wiki/commands/currency-commands#balance</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /balance [Commands]</fullTitle>
     <text>
-      <text>"h3" ~>game &lt;game> {mention(s)/role(s)} Description: Starts a guessing game of either Pokemon, anime characters or guessing the number.Subcommand(s): wins : This will show you the amount of games you have won. number : This will start a game of Guess the Number. character : This will start a game of Guess the Character. pokemon : This will start a game of Guess the Pokemon. multiple &lt;game> &lt;amount> : This will start multiple instances of the selected game. lobby &lt;list of games> : This will start a lobby with the indicated games. Requirements:The subcommands character and pokemon require https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>game wins ~>game pokemon ~>game pokemon @Kodehawa#3457 ~>game lobby pokemon, trivia, number ~>game multiple pokemon 10 "h3" ~>trivia {mention(s)/role(s)} {easy/medium/hard} Description: Asks for the answer to a random trivia questionRequirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>trivia ~>trivia @Kodehawa#3457 ~>trivia @Members</text>
+      <text>Returns your current amount of money or the amount of money of the person that was given. Options user Optional The user to check the balance of. Examples /balance /balance user: @Kodehawa#3457</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands</url>
-    <fullTitle>Mantaro Wiki: 🖼️ Image Commands,  [Commands]</fullTitle>
+    <url>/mantaro-wiki/commands/currency-commands#buy</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /buy [Commands]</fullTitle>
     <text>
-      <text>"h3" ~>cat Description: Returns a cute cat image.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>cat "h3" ~>catgirl Description: Returns a cute or naughty anime catgirl image.Subcommand(s):🔥 nsfw : This will send a NSFW picture of a catgirl. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Files permissions. The nsfw subcommand will only work on a NSFW channel. Example(s): ~>catgirl ~>catgirl nsfw "h3" ~>danbooru {tag(s)} {rating} Description: Returns an image from danbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe rating will be used.Ratings: Safe 🔥 Questionable 🔥 Explicit Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Some ratings will make this command only work on a NSFW channel. Example(s): ~>danbooru Flat safe ~>danbooru explicit "h3" ~>dog Description: Returns a cute dog image.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>dog "h3" 🔥 ~>e621 {tag(s)} Description: Returns an image from e621. You may add as many tags as you like. Each new word (separated by space) is considered a new TagRequirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. This command will only work on a NSFW channel. Example(s): ~>e621 Flat "h3" 🔥 ~>e926 {tag(s)} Description: Returns an image from e926. You may add as many tags as you like. Each new word (separated by space) is considered a new TagRequirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. This command will only work on a NSFW channel. Example(s): ~>e926 Flat "h3" ~>gelbooru {tag(s)} {rating} Description: Returns an image from gelbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe rating will be used.Ratings: Safe 🔥 Questionable 🔥 Explicit Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Some ratings will make this command only work on a NSFW channel. Example(s): ~>gelbooru Flat safe ~>gelbooru explicit "h3" ~>konachan {tag(s)} {rating} Description: Returns an image from konachan. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe rating will be used.Ratings: Safe 🔥 Questionable 🔥 Explicit Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. This command will only work on a NSFW channel. Example(s): ~>konachan Flat safe ~>konachan explicit "h3" 🔥 ~>rule34 {tag(s)} Description: Returns an image from rule34. You may add as many tags as you like. Each new word (separated by space) is considered a new TagRequirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. This command will only work on a NSFW channel. Example(s): ~>rule34 Flat "h3" ~>safebooru {tag(s)} Description: Returns an image from safebooru. You may add as many tags as you like. Each new word (separated by space) is considered a new TagRequirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>safebooru Flat "h3" 🔥 ~>yandere {tag(s)} {rating} Description: Returns an image from yandere. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe rating will be used.Ratings: Safe Questionable Explicit Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. This command will only work on a NSFW channel. Example(s): ~>yandere Flat safe ~>yandere explicit</text>
+      <text>Allows you to buy items from the market. Options item Required The item to buy. amount Optional The amount of the item to buy. Requirements This command requires commands/permissions#intro Emotes permissions. This command requires you to have the credits needed to buy the item. Examples /buy item: Diamond /buy item: Diamond amount: 2</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/fun-commands</url>
-    <fullTitle>Mantaro Wiki: 🎲 Fun Commands,  [Commands]</fullTitle>
+    <url>/mantaro-wiki/commands/currency-commands#cast</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /cast [Commands]</fullTitle>
     <text>
-      <text>"h3" ~>8ball &lt;question> Description: Ask the magic 8ball a question.Requirements:This command does not have any specific requirements. Alias(es): 8b Example(s): ~>8ball Will Mantaro ever be consistent? "h3" ~>anime &lt;name> Description: Searches for the anime specified using https://kitsu.io/ Kitsu.io. You will be given a list of search results using the indicated anime. After this you will have to type the number related to the option you wish to see more information for.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): animu Example(s): ~>anime One Piece ~>anime Hunter x Hunter "h3" ~>character &lt;name> Description: Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to type the number related to the option you wish to see more information for.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): char Example(s): ~>character Luffy ~>character Gon "h3" ~>coinflip &lt;times> Description: Flip the coin once or multiple times.Requirements:This command does not have any specific requirements. Example(s): ~>coinflip ~>coinflip 50 "h3" ~>love &lt;@mention> {@mention} Description: Calculate the love between two people. You can either mention one user (matches with yourself) or two (matches 2 users).Requirements:This command does not have any specific requirements. Example(s): ~>love @Kodehawa#3457 ~>love @Kodehawa#3457 @Adam#9261 "h3" ~>ratewaifu &lt;text> Description: Rate your waifu from 0-100.Requirements:This command does not have any specific requirements. Alias(es): rw rate Example(s): ~>ratewaifu Kode "h3" ~>roll {times} {-amount &lt;amount>} {-size &lt;die size>} Description: Roll the die. The times field allows you to use Die Format or to select how many times a normal die will roll. Die Format is formed like this: &lt;amount>d&lt;size> The other option is to use the -amount field to specify how many times the die will roll, and the -size to specify the size of the die.Requirements:This command does not have any specific requirements. Example(s): ~>roll ~>roll 5 ~>roll -amount 4 ~>roll -amount 1 -size 20 ~>roll 1d20 ~>roll 5d1000</text>
+      <text>Cast various items. Different wrenches have different amounts of items they can cast at the same time. For more in-depth information you can go to our currency/101#concepts-dust Currency 101 page. Subcommands Item Cast an item. List Shows a list of castable items. Options Item Click me! Options for the Item Subcommand item Required The item to cast. amount Optional The amount of the item to cast, 1 by default. Depends on your wrench, maximum is 10. Note: The List subcommand has no options. Requirements This command requires you to have the items needed to cast the specified item. This command requires commands/permissions#intro Emotes permissions. The List subcommand requires commands/permissions#intro Emotes permissions. Examples /cast list /cast item item: Diamond Pickaxe /cast item item: Diamond Pickaxe amount: 5</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/moderation-commands</url>
-    <fullTitle>Mantaro Wiki: 🔨 Moderation Commands,  [Commands]</fullTitle>
+    <url>/mantaro-wiki/commands/currency-commands#chop</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /chop [Commands]</fullTitle>
     <text>
-      <text>"h3" ~>ban &lt;mention> {reason} Description: Bans the given member from the server and deletes all of their messages from the last 7 days.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Ban permissions. Example(s): ~>ban @Adam#9261 "h3" ~>kick &lt;mention> {reason} Description: Kicks the given Member from the server.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Kick permissions. Example(s): ~>kick @Adam#9261 "h3" ~>mute [time ]&lt;mention> {reason} Description: Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted. Remember that Mantaro only assigns the specified Mute role to the user mentioned. Its up to the server admins to remove the Discord Permissions for said Mute role.Requirements:This command requires either https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Ban or Kick permissions. Example(s): ~>mute 30s @Adam#9261 good meme "h3" ~>opts Description: The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our https://github.com/Mantaro/MantaroBot/wiki/Configuration Configuration Page.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Admin permissions. "h3" ~>prune &lt;amount> Description: Deletes messages (excluding messages that are older than 14 days). Minimum of messagesto delete is 5 and maximum is 100.Subcommand(s): bot {amount} : This will delete the specified amount of messages that were made by bots. nopins {amount} : This will delete the specified amount of messages that are not pinned. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Messages permissions. Example(s): ~>prune 60 ~>prune 70 @Adam#9261 ~>prune bot ~>prune nopins 60 "h3" ~>softban &lt;mention> {reason} Description: Soft-Bans (Bans and immediately unbans) the given Member from the server and deletes all of their messages from the last 7 days.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Ban permissions. Example(s): ~>softban @Adam#9261 . "h3" ~>unmute &lt;mention> Description: Unmute the mentioned user if mutedRequirements:This command requires either https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Ban or Kick permissions. Example(s): ~>unmute @Adam#9261</text>
+      <text>Use one of your axes to chop down trees. Requirements This command requires you to have an axe equipped. This command requires commands/permissions#intro Emotes permissions. Examples /chop</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/info-commands</url>
-    <fullTitle>Mantaro Wiki: 💭 Info Commands,  [Commands]</fullTitle>
+    <url>/mantaro-wiki/commands/currency-commands#daily</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /daily [Commands]</fullTitle>
     <text>
-      <text>"h3" ~>avatar {@mention/username/user tag} Description: Grab your own avatar or the given person's avatar.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>avatar ~>avatar @Kodehawa#3457 ~>avatar Kodehawa "h3" ~>donate Description: Shows all of Mantaro's donation methods.Requirements:This command does not have any specific requirements. Example(s): ~>donate "h3" ~>help {command/category} Description: Get all commands or, if you specify a command, get more information on the command specified or if you specified a category, you will see all commands in that category.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): commands halp Example(s): ~>help ~>help cast ~>help action "h3" 🔧 ~>info Description: Get Mantaro's technical information.Requirements:This command does not have any specific requirements. Alias(es) status Example(s): ~>info "h3" ~>invite Description: Get the invite necessary to add Mantaro to your server, The support server Invite, and the Patreon URL.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>invite "h3" ~>lang Description: Show info on how to change your language and what languages are available.Requirements:This command does not have any specific requirements. Alias(es): language Example(s): ~>lang ~>language "h3" ~>music Description: This will tell you how to properly use Mantaros music feature.Requirements:This command does not have any specific requirements. Example(s): ~>music "h3" ~>ping Description: Check how fast Mantaro is responding.Requirements:This command does not have any specific requirements. Example(s): ~>ping "h3" ~>prefix Description: See information about Mantaro's prefix.Requirements:This command does not have any specific requirements. Example(s): ~>prefix "h3" ~>roleinfo {role name} Description: Shows info about a given role. If no role is given it will give information on your highest role.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>roleinfo ~>roleinfo Member "h3" ~>season Description: See information about how to take part in the seasons.Requirements:This command does not have any specific requirements. Example(s): ~>season "h3" ~>serverinfo Description: Check some server stats.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): guildinfo Example(s): ~>serverinfo ~>guildinfo "h3" 🔧 ~>shard Description: Will tell you the current shard instance your guild is on (used for debugging).Requirements:This command does not have any specific requirements. Example(s): ~>shard "h3" 🔧 ~>shardinfo Description: Check connectivity of all Mantaro shards (You wont really need this unless you are a Dev or Helper for Mantaro.)Requirements:This command does not have any specific requirements. Example(s): ~>shardinfo "h3" 🔧 ~>stats &lt;subcommand> Description: Get some stats about Mantaros VPS, most used commands, join/leave stats for guilds and usages or just general stats for Manataro. You must specify one of the subcommands to get information.Subcommand(s): cmds : This will show the bot's command usage. nodes : This will show Mantaro node statistics. category : This will show the bot's category usage. lavalink : This will show Lavalink node statistics. usage : This will show the bot's (and JVM) hardware usage. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>stats cmds ~>stats category ~>stats usage "h3" ~>support Description: Gives you a link to the support server.Requirements:This command does not have any specific requirements. Example(s): ~>support "h3" ~>userinfo {@mention/username/user tag} Description: Shows information about your or the given person's roles e.t.c.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>userinfo ~>userinfo @Kodehawa#3457 "h3" ~>vipstatus {mention} Description: Will show you the remaining time in days of your (or someone else) or the guilds premium perks.Subcommand(s): guild : Will show you the current guild's premium status. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): premium Example(s): ~>vipstatus ~>vipstatus @Kodehawa#3457 ~>vipstatus guild</text>
+      <text>Gives you $150 credits per day (or between 150 and 180 if you transfer it to another person). Maximum amount it can give is ~2000 credits (a bit more for shared dailies). This command gives a reward for claiming it every day (daily streak). You lose the streak if you miss two days in a row. Options user Optional The user to give your daily to, without this it gives it to yourself. check Optional Whether you want to check if you can claim your daily Examples /daily /daily user: @Kodehawa#3457 /daily check: True</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/utility-commands</url>
-    <fullTitle>Mantaro Wiki: ✏️Utility Commands,  [Commands]</fullTitle>
+    <url>/mantaro-wiki/commands/currency-commands#dailycrate</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /dailycrate [Commands]</fullTitle>
     <text>
-      <text>"h3" ~>activatekey &lt;key> Description: Will use a premium key to make either you or the guild premium (Whenever it will be you or the guild is determined by the key itself).Requirements:This command requires you to have a https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks premium key. Example(s): ~>activatekey a4e98f07-1a32-4dcc-b53f-c540214d54ec "h3" ~>birthday &lt;date> Description: Set/Remove your own birthday or show everyone with a birthday this month. The date format is dd-mm. This means day first and month second.Subcommand(s): remove : This will remove your currently set birthday date. list : This will show you a list of all the birthdays in the server. allowserver : This will allow the server in which you use this command to announce/show your birthday. denyserver : This will deny the server in which you use this command to announce/show your birthday. month &lt;number> : This will show you a list of all the birthdays in the specified month. Requirements:The remove subcommand requires you to have already set a birthday. The list and month subcommand require users to use the allowserver subcommand to show them. The denyserver subcommand requires you to have already allowed yourself in a server. Example(s): ~>birthday 21-11 ~>birthday remove ~>birthday list ~>birthday allowserver ~>birthday month 11 "h3" ~>createpoll &lt;-options &lt;options1>,&lt;option2>,..> &lt;-time &lt;time>> &lt;-name &lt;name>> {-image &lt;url>} Description: Create a poll with options. The person that created the poll can cancel it by typing &amp;cancelpoll . If an url is used then it must be a direct link to the image. The maximum poll runtime is 45 minutes.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed and Reactions permissions. Alias(es): poll Example(s): ~>createpoll -options Hi,Bye -time 30s -name Test "h3" ~>custom &lt;subcommand> Description: Creates a custom command. For further info check our https://github.com/Mantaro/MantaroBot/wiki/Custom-Commands-101 Custom Commands Guide.Subcommand(s): remove/rm &lt;name> : This will delete the specified custom command. rename &lt;name> &lt;new name> : This will rename the specified custom command. clear : This will delete all custom commands. edit &lt;name> &lt;response> &lt;content> : This will edit the specified response of the specified custom command. deleteresponse &lt;name> &lt;response> : This will delete the specified response from the specified custom command. unlockcommand &lt;name> : This will unlock the specified command so that it can be edited once again. eval &lt;content> : This will evaluate (simulate) the content of a custom command without creating it. view &lt;name> &lt;response> : This will show you the specified response of a custom command. list/ls : This will show a list of all custom commands on the server. info &lt;name> : This will show the information about a specific custom command. lockcommand &lt;name> : This will lock the specified command so that it cannot be edited by anyone. This includes people with Admin permissions. raw &lt;name> : This will show the raw responses of the specified command import &lt;name> : This will search for a custom command by its name from another guild and then try to import it. add &lt;name> &lt;content> : This will add a new command or a new reponse to an existing custom command. Requirements:If normal users aren't allowed to make custom commands with one of our https://github.com/Mantaro/MantaroBot/wiki/Configuration#basic-server-configuration opts options then this command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Admin permissions. This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed and Reactions permissions. Example(s): ~>custom add test This is a test! ~>custom remove test ~>custom rename test mycommand ~>custom edit test 1 This is my second test! ~>custom lockcommand test ~>custom list ~>custom eval I dont want to make a command yet! ~>custom import test "h3" ~>iam &lt;name> Description: Applies a self-assignable role to you or lists all self-assignable roles. Roles have to be added by an Admin one of the opts commands.Subcommand(s): list/ls : This will show you a list of the currently available self-assignable roles on the server. Requirements:This command requires a self-assignable role to have been setup on the server. Alias(es): autoroles Example(s): ~>iam Red ~>iam list "h3" ~>iamnot Description: Removes a self-assignable role from you.Requirements:This command requires a self-assignable role to have been setup on the server. Example(s): ~>iamnot Red "h3" ~>remindme &lt;time> &lt;reminder> Description: Reminds you of something after the given time ran out. Mantaro will DM you when the time runs out with the message you specified.Subcommand(s): list : This will show you a list of your reminders. cancel : This will show you a list of your reminders and ask you to choose which one to cancel. If you only have one reminder it will not show the list and just cancel it. Requirements:The cancel subcommand requires you to have a reminder set. It also requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Example(s): ~>remindme 30m feed pet ~>remindme list ~>remindme cancel "h3" ~>time &lt;timezone> {mention} Description: Shows the current time in the timezone set on your profile or the time in the timezone that was specified. If an user is specified it will show the timezone of that user (if they have one set).Requirements:This command does not have any specific requirements. Example(s): ~>time GMT-2 ~>time @Kodehawa#3457 "h3" 🔥 ~>urban &lt;term>->{number} Description: Search urban dictionary for something. Yes, the arrow is necessary for the number to work. Using the arrow allows you to search a different result number. Why Kode? Why?Requirements:This command will only work on a NSFW channel. Example(s): ~>urban school ~>urban school->3 "h3" ~>wiki Description: Will link you to the respective GitHub wiki pages.Subcommand(s): badges : This will link you to the Badges Documentation wiki page. birthday : This will link you to the Birthday 101 wiki page. premium : This will link you to the Premium Perks wiki page. opts : This will link you to the Configuration wiki page. custom : This will link you to the Custom Commands wiki page. faq : This will link you to the FAQ wiki page. usermessage : This will link you to the Welcome/Leave Messages wiki page. tos : This will link you to the TOS wiki page. collectibles : This will link you to the Collectable Items wiki page. currency : This will link you to the Currency 101 wiki page. modifiers : This will link you to the Modifiers wiki page. commands : This will link you to the Commands wiki page. Requirements:This command does not have any specific requirements. Example(s): ~>wiki ~>wiki opts</text>
+      <text>Allows you to receive a random crate once per day. The -check flag allows you to check if your daily crate is ready without claiming it. Note: This feature is only available for basics/premium-perks#perks-user-perks Premium users or basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon users. Options check Optional Check the time left for you to be able to claim your crate Examples /dailycrate</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#divorce</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /divorce [Commands]</fullTitle>
+    <text>
+      <text>Attend the single life again. Requirements This command requires you to be married beforehand. Examples /divorce</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#dump</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /dump [Commands]</fullTitle>
+    <text>
+      <text>Allows you to dump an item from your inventory. Options item Required The item to dump. amount Optional The amount of the item to dump. Requirements This command requires commands/permissions#intro Emotes permissions. This command requires you to have the specified item on your inventory. Examples /dump item: Milk /dump item: Diamond amount: 5</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#equip</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /equip [Commands]</fullTitle>
+    <text>
+      <text>Allows you to equip an item (Picks, Rods, Axes or Wrenches). Options item Required The item to equip. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /equip item: pick /equip item: Diamond Pickaxe</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#fish</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /fish [Commands]</fullTitle>
+    <text>
+      <text>Catch fish using one of your fishing rods. Requirements This command requires you to have a rod equipped. This command requires commands/permissions#intro Emotes permissions. Examples /fish</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#gamble</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /gamble [Commands]</fullTitle>
+    <text>
+      <text>Gamble your credits for possible profit. The current max of credits you can gamble at once is 10 000 credits (update 5.7). Options amount Required How much money you want to gamble. This can be either all (all your money), half, quarter, a percentage or an amount of money. You can also express this on K (10k is 10 000, for example). Requirements This command requires you to have credits to gamble away. Examples /gamble amount: 600 /gamble amount: all /gamble amount: half /gamble amount: quarter /gamble amount: 50%</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#inventory</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /inventory [Commands]</fullTitle>
+    <text>
+      <text>Shows your current inventory and item stats. Subcommands Calculate Calculate an inventory's worth. Show Shows your inventory or a user's. Brief Shows your brief inventory or a user's. Options user Optional The user you want to check. This option is available on all subcommands. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /inventory show /inventory show user:@Kodehawa#3457 /inventory calculate /inventory calculate user: @Kodehawa#3457 /inventory brief /inventory brief user: @Kodehawa#3457</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#iteminfo</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /iteminfo [Commands]</fullTitle>
+    <text>
+      <text>Provides you with information about an item. Options item Required The name of the item you want to check. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /iteminfo item: Diamond Pickaxe /iteminfo item: Apple</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#leaderboard</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /leaderboard [Commands]</fullTitle>
+    <text>
+      <text>Returns the Top 10 for various statistics in Mantaro. Subcommands Slots Sends the slots leaderboard. Money Sends the money leaderboard. Gamble Sends the gamble leaderboard. Games Sends the games leaderboard. Reputation Sends the reputation leaderboard. Claim Sends the claim leaderboard. Daily Sends the daily leaderboard. Examples /leaderboard slots /leaderboard money /leaderboard gamble /leaderboard games /leaderboard reputation /leaderboard claim /leaderboard daily</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#loot</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /loot [Commands]</fullTitle>
+    <text>
+      <text>Loot the chat for possible credits and items. Some items are only obtained via loot. Very rarely you will also be able to find a Loot Crate. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /loot</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#market</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /market [Commands]</fullTitle>
+    <text>
+      <text>Browse the Market. When used alone Mantaro will show you a list of all the items on the Market. Subcommands Pet List current pet items. Tools List current tool items. Common List current common items. Potions List current potion items. Buyable List current buyable items. Sellable List current sellable items. Price Looks up the price of an item. Show List current items for buying and selling. Options item Required The name of the item. This option is only for the Price subcommand. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /market pet /market tools /market common /market potions /market buyable /market sellable /market price item: Diamond Pickaxe /market show</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#marry</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /marry [Commands]</fullTitle>
+    <text>
+      <text>Marry someone. The person you marry also appears on your profile. Subcommands User Marries another user. Createletter Creates a marriage letter. Status Shows the status of your marriage. Car Buys a car for the marriage. You need to buy a car in market first. House Buys a house for the marriage. You need to buy a house in market first. Options User Click me! Options for the User Subcommand user Required The user your want to marry. Createletter Click me! Options for the Createletter Subcommand content Required The content of the letter. Car Click me! Options for the Car Subcommand name Required Name for the new car. House Click me! Options for the House Subcommand name Required Name for the new house. Requirements This command requires 2 rings to be in your inventory to marry someone. Examples /marry user user: @Kodehawa#3457 /marry createletter content: This is my letter! /marry status /marry car name: Big ride /marry house name: Our house</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#mine</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /mine [Commands]</fullTitle>
+    <text>
+      <text>Use one of your pickaxes to mine minerals. Requirements This command requires you to have a pick equipped. This command requires commands/permissions#intro Emotes permissions. Examples /mine</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#opencrate</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /opencrate [Commands]</fullTitle>
+    <text>
+      <text>Open one of your Lootboxes. Options crate Optional The name of the crate to open. If left empty it will attempt to open the default crate. Requirements This command requires you to have a crate key to open it. You can buy one from the market. This command requires commands/permissions#intro Emotes permissions. Examples /opencrate /opencrate crate: gem premium crate /opencrate crate: treasure</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#pet</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /pet [Commands]</fullTitle>
+    <text>
+      <text>Allows you to buy a pet so that you can take care of it. A pet will also help you out with other commands and give you several bonuses. Subcommands Feed Feeds your pet. Rename Renames your pet. Hydrate Hydrates your pet. Pet Pets your pet. Cute. Info Shows info about a pet type. List Lists the available pet types. Status Shows the status of your current pet. Explanation Shows an explanation about the pet system. Check Check thirst, hunger and dust of your current pet. Level Shows the level and experience of your current pet. Clean Cleans your pet when it's too dusty. Costs 600 credits. Choice Lets you choose whether you want to use a personal or marriage pet. Buy Buys a pet to have adventures with. You need to buy a pet house in market first. Sell Sells this pet. This will reset all pet stats. Just like buying a new tamagotchi. Options Feed Click me! Options for the Feed Subcommand item Required The item to feed your pet with. amount Optional The amount of food to give the pet. full Optional Give all the food possible. Makes it so amount is ignored. Rename Click me! Options for the Rename Subcommand name Required The new name for your pet. Hydrate Click me! Options for the Hydrate Subcommand amount Optional The amount of water to give the pet. full Optional Give all the water possible. Makes it so amount is ignored. Info Click me! Options for the Info Subcommand type Required The pet type to check. Choice Click me! Options for the Choice Subcommand type Required The type to use. Either marriage or personal. Buy Click me! Options for the Buy Subcommand type Required The pet type. name Required The pet name. Note: The Subcommands Pet , List , Status , Explanation , Check , Level , Clean and Sell have no options. Requirements Most of the subcommands require you to already own a pet to use them. The Feed subcommand requires you to have bought the appropiate food for your pet from the market. The Hydrate subcommand requires you to have bought Water Bottles from the market. Examples /pet info type: Dog /pet list /pet buy type: Dog name: Doggo /pet pet /pet hydrate full: True /pet sell /pet clean /pet choice type: Marriage Pet</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#profile</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /profile [Commands]</fullTitle>
+    <text>
+      <text>Look at your own or the given person's profile. Subcommands Inventorysort Sort your inventory. Stats See profile statistics. Displaybadge Sets your display badge. Timezone Sets your profile timezone. Show Shows your current profile. Language Sets your profile language. Togglelegacy Toggles the display of legacy credits. Toggleaction Toggles the ability to do action commands to you. Widgets Set the profile widget order. Note: This feature is only available for basics/premium-perks#perks-user-perks Premium users or basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon users. Hidetag Hide or show the member id/tag from profile/waifu ls. Claimlock Locks you from being claimed. Use remove to remove it. Description Sets your profile description. This will open a modal (pop-up). Autoequip Toggles auto-equipping a new tool on break. Use disable to disable it. Options Inventorysort Click me! Options for the Inventorysort Subcommand type Required The sort type to use. Stats Click me! Options for the Stats Subcommand user Optional The user to see the stats of. Displaybadge Click me! Options for the Displaybadge Subcommand badge Required The badge to use. Timezone Click me! Options for the Timezone Subcommand timezone Required The timezone to use. Show Click me! Options for the Show Subcommand user Optional The user to see the profile of. Language Click me! Options for the Language Subcommand lang Required The language to use. See /mantaro language for a list. Widgets Click me! Options for the Widgets Subcommand order Optional The widget order. Use reset to reset them. If nothing is specified, it prints a list. reset Optional Set to true if you want to reset the order. Claimlock Click me! Options for the Claimlock Subcommand remove Optional Removes claimlock. Description Click me! Options for the Description Subcommand clear Optional Clear your profile description if set to true. Autoequip Click me! Options for the Autoequip Subcommand disable Optional Whether to disable it. Note: The Subcommands Togglelegacy , Toggleaction and Hidetag have no options. Requirements This command requires commands/permissions#intro Emotes permissions. The Claimlock subcommand requires you to have a claim key on your inventory. Examples /profile show /profile show user: @Kodehawa#3457 /profile description /profile language lang: es_ES /profile togglelegacy /profile widgets order: header, credits, reputation, birthday, marriage, badges /profile timezone timezone: GMT+2 /profile inventorysort type: Sort randomly /profile toggleaction</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#repair</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /repair [Commands]</fullTitle>
+    <text>
+      <text>Allows you to repair broken items using your equipped wrench. For more in-depth information you can go to our currency/101 Currency 101 page. Subcommands Item Repair an item. List List all items that can be repaired. Options Item Click me! Options for the Item Subcommand item Required The item to repair. Note: The List Subcommand has no options. Requirements This command requires you to have the items needed to repair the specified item. This command requires commands/permissions#intro Emotes permissions. Examples /repair item item: Broken Sparkle Pickaxe /repair list</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#reputation</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /reputation [Commands]</fullTitle>
+    <text>
+      <text>Give someone Reputation. Options user Required The user to give reputation to. check Optional Check if you can give reputation Examples /reputation user: @Kodehawa#3457 /reputation check: True</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#salvage</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /salvage [Commands]</fullTitle>
+    <text>
+      <text>Allows you to salvage broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory. Subcommands Item Salvages an item. List List all salvageable items. Options Item Click me! Options for the Item Subcommand item Required The item to salvage. Note: The List Subcommand has no options. Requirements This command requires you to have the items needed to repair the specified item. This command requires commands/permissions#intro Emotes permissions. Examples /salvage item item: Broken Sparkle Pickaxe /salvage list</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#sell</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /sell [Commands]</fullTitle>
+    <text>
+      <text>Allows you to sell an item in the Market. Options item Required The name of the item to sell. amount Optional The amount of the item to sell. Requirements This command requires you to have the specified item on your inventory. Examples /sell item: Diamond /sell item: Diamond amount: 5</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#slots</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /slots [Commands]</fullTitle>
+    <text>
+      <text>Uses the amount of credits specified to roll the slot machine. You can also buy a "Slot-Ticket" and use that instead. The current credit max you can use at once is 50000, for tickets you can use a max of 50 at once (update 5.7). Options credits Optional The amount of credits to put on the slot machine. You can also express this on K (10k is 10000, for example) useticket Optional Whether to use a ticket. False by default. If you specify this, the credit amount will be ignored. ticketamount Optional The amount of credits to put on the slot machine. You can also express this on K (10k is 10000, for example) Requirements This command requires you to have credits to gamble away. The ticketamount option requires you to have Slot Tickets in your inventory. Examples /slots /slots credits: 500 /slots useticket: True ticketamount: 5</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#tools</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /tools [Commands]</fullTitle>
+    <text>
+      <text>Check the durability and status of your tools. Examples /tools</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#transfer</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /transfer [Commands]</fullTitle>
+    <text>
+      <text>Transfer someone money. You can transfer a max of 500,000 credits, and you cannot transfer to/from a new Discord account (update 6.0.5). Options user Required The user to transfer money to. money Required The amount to transfer to the user. Requirements This command requires you to have credits to transfer. Examples /transfer user: @Kodehawa#3457 money:420</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#transferitems</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /transferitems [Commands]</fullTitle>
+    <text>
+      <text>Transfer one of your items to someone else. Options user Required The user to transfer money to. Needs to be in the server you're running the command in. item Required The item to transfer. Can be a shorten name. amount Optional The amount of the item to transfer. If not specified, this is 1. Maximum is 5000. Requirements This command requires you to have the item to be transferred. Examples /transferitems user: @Kodehawa#3457 item: Diamond Pickaxe /transferitems user: @Kodehawa#3457 item: Apple amount: 500</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#unequip</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /unequip [Commands]</fullTitle>
+    <text>
+      <text>Allows you to unequip previously equipped items. Depending on how damaged the item is, you may get a broken version of the item. Options item Required The item to unequip. Requirements This command requires you to have an item equipped for the specified field. Examples /unequip item: Equipped Pickaxe /unequip item: Equipped Axe</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#use</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /use [Commands]</fullTitle>
+    <text>
+      <text>Allows you to use certain items. For more in-depth information you can go to our currency/101 Currency 101 page. Subcommands Item Use a interactive item. List Shows all interactive items Options Item Click me! Options for the Item Subcommand item Required The item to use. amount Optional The amount of the item to use. Maximum of 15. Requirements This command requires you to have the item you specified to be used. This command requires commands/permissions#intro Emotes permissions. Examples /use item item: Energy Beverage /use item item: Haste Potion amount: 5 /use list</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/currency-commands#waifu</url>
+    <fullTitle>Mantaro Wiki: 💸 Currency Commands, /waifu [Commands]</fullTitle>
+    <text>
+      <text>Manage your waifus. Using the command on its own (no subcommands) will show you a list of your own waifus. Subcommands Unclaim Unclaims a waifu. Claim Claim a waifu. Yeah, this is all fiction. List Show a list of all your waifu(s) and their value. Stats Shows your waifu stats or the stats or someone else. Optout Opt-out of the waifu stuff. This will disable the waifu system permanently. Avoid: THIS OPTION IS PERMANENT AND CANNOT BE REVERSED. USE ONLY IF ABSOLUTELY SURE. Buyslow Buys a new waifu slot. Maximum slots are 30, costs get increasingly higher. Options Unclaim Click me! Options for the Unclaim Subcommand user Required The user to unclaim. It can also be the ID of the user. Note: This command works globally, meaning that you can unclaim a waifu on any server by using their ID. This is useful if you want to unclaim a waifu on a server that you aren't in. Check the Options for the List Subcommand to know how to get their ID. Claim Click me! Options for the Claim Subcommand user Required The user to claim. Stats Click me! Options for the Stats Subcommand user Optional The user to check. Yourself, if nothing specified. List Click me! Options for the List Subcommand id Optional Whether to show the user ID or not. Note: The Buyslow Subcommands have no options. Requirements The Buyslot subcommand requires you to have enough credits to buy more slots. The Claim subcommand requires that the user you are trying to claim is not claim locked. The Unclaim subcommand requires you to have enough credits to unclaim the user. Examples /waifu stats /waifu stats user: @Kodehawa#3457 /waifu buyslot /waifu claim user: @Kodehawa#3457 /waifu unclaim user: @Kodehawa#3457 /waifu list</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/game-commands#game</url>
+    <fullTitle>Mantaro Wiki: 🕹️ Game Commands, ~>game [Commands]</fullTitle>
+    <text>
+      <text>Starts a guessing game of either Pokemon, anime characters or guessing the number. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Parameters game Required The game you want to play, refer to subcommands. user Optional Whoever you want to play this game with. Subcommands wins This will show you the amount of games you have won. number This will start a game of Guess the Number. character This will start a game of Guess the Character. pokemon This will start a game of Guess the Pokemon. multiple &lt;game> &lt;amount> This will start multiple instances of the selected game. lobby &lt;list of games> This will start a lobby with the indicated games. Examples ~>game wins ~>game pokemon ~>game pokemon @Kodehawa#3457 ~>game lobby pokemon, trivia, number ~>game multiple pokemon 10</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/game-commands#trivia</url>
+    <fullTitle>Mantaro Wiki: 🕹️ Game Commands, ~>trivia [Commands]</fullTitle>
+    <text>
+      <text>Asks for the answer to a random trivia question Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Parameters difficulty Optional The difficulty of the game, it can be easy, medium or hard. user Optional Whoever you want to play trivia with. Examples ~>trivia ~>trivia @Kodehawa#3457 ~>trivia @Members</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/image-commands#danbooru</url>
+    <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /danbooru [Commands]</fullTitle>
+    <text>
+      <text>Returns an image from danbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe for Work Image rating will be used. Warning: This is a NSFW command. It will not work outside NSFW channels. Options rating Optional The image rating. Safe for Work Image is the default. tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Ratings Safe for Work Image Questionable/Potentially Unsafe Image Not Safe for Work (NSFW/Explicit) Image Random (any of the above) Image Requiements This command can only be used in NSFW channels. Examples /danbooru /danbooru tags: yuri rating: Not Safe for Work (NSFW/Explicit) Image /danbooru rating: Random (any of the above) Image</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/image-commands#e621</url>
+    <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /e621 [Commands]</fullTitle>
+    <text>
+      <text>Returns an image from e621. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag Warning: This is a NSFW command. It will not work outside NSFW channels. Options tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Requiements This command can only be used in NSFW channels. Examples /e621 /e621 tags: yuri</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/image-commands#e926</url>
+    <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /e926 [Commands]</fullTitle>
+    <text>
+      <text>Returns an image from e926. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag Warning: This is a NSFW command. It will not work outside NSFW channels. Options tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Requiements This command can only be used in NSFW channels. Examples /e926 /e926 tags: yuri</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/image-commands#gelbooru</url>
+    <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /gelbooru [Commands]</fullTitle>
+    <text>
+      <text>Returns an image from gelbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe for Work Image rating will be used. Warning: This is a NSFW command. It will not work outside NSFW channels. Options rating Optional The image rating. Safe for Work Image is the default. tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Ratings Safe for Work Image Questionable/Potentially Unsafe Image Not Safe for Work (NSFW/Explicit) Image Random (any of the above) Image Requiements This command can only be used in NSFW channels. Examples /gelbooru /gelbooru tags: yuri rating: Not Safe for Work (NSFW/Explicit) Image /gelbooru rating: Random (any of the above) Image</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/image-commands#image</url>
+    <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /image [Commands]</fullTitle>
+    <text>
+      <text>Contains various imageboard commands. Subcommands Catgirl Sends images of catgirl(s). Maybe. Cat Sends a random cat image. Really cute stuff. Dog Sends a random dog image. Woof woof. Options Catgirl Click me! Options for the Catgirl Subcommand nsfw Optional Whether to send a NSFW image. Warning: This is a NSFW command. It will not work outside NSFW channels. Note: The Cat and Dog subcommands have no options. Examples /image catgirl /image catgirl nsfw: true /image cat /image dog</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/image-commands#konachan</url>
+    <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /konachan [Commands]</fullTitle>
+    <text>
+      <text>Returns an image from konachan. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe for Work Image rating will be used. Warning: This is a NSFW command. It will not work outside NSFW channels. Options rating Optional The image rating. Safe for Work Image is the default. tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Ratings Safe for Work Image Questionable/Potentially Unsafe Image Not Safe for Work (NSFW/Explicit) Image Random (any of the above) Image Requiements This command can only be used in NSFW channels. Examples /konachan /konachan tags: yuri rating: Not Safe for Work (NSFW/Explicit) Image /konachan rating: Random (any of the above) Image</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/image-commands#rule34</url>
+    <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /rule34 [Commands]</fullTitle>
+    <text>
+      <text>Returns an image from rule34. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag Warning: This is a NSFW command. It will not work outside NSFW channels. Options tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Requiements This command can only be used in NSFW channels. Examples /rule34 /rule34 tags: yuri</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/image-commands#safebooru</url>
+    <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /safebooru [Commands]</fullTitle>
+    <text>
+      <text>Returns an image from safebooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag Warning: This is a NSFW command. It will not work outside NSFW channels. Options tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Requiements This command can only be used in NSFW channels. Examples /safebooru /safebooru tags: yuri</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/image-commands#yandere</url>
+    <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /yandere [Commands]</fullTitle>
+    <text>
+      <text>Returns an image from yandere. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe for Work Image rating will be used. Warning: This is a NSFW command. It will not work outside NSFW channels. Options rating Optional The image rating. Safe for Work Image is the default. tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Ratings Safe for Work Image Questionable/Potentially Unsafe Image Not Safe for Work (NSFW/Explicit) Image Random (any of the above) Image Requiements This command can only be used in NSFW channels. Examples /yandere /yandere tags: yuri rating: Not Safe for Work (NSFW/Explicit) Image /yandere rating: Random (any of the above) Image</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/fun-commands#8ball</url>
+    <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /8ball [Commands]</fullTitle>
+    <text>
+      <text>Ask the magic 8ball a question. Options question Required The question to ask. Examples /8ball question: Will Mantaro ever be consistent?</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/fun-commands#anime</url>
+    <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /anime [Commands]</fullTitle>
+    <text>
+      <text>Searches for the anime specified using https://kitsu.io/ Kitsu.io. You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the anime/manga to look for. Examples /anime name: One Piece /anime name: Hunter x Hunter</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/fun-commands#character</url>
+    <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /character [Commands]</fullTitle>
+    <text>
+      <text>Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the character to look for. Examples /character name: Luffy /character name: Gon Freecss</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/fun-commands#coinflip</url>
+    <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /coinflip [Commands]</fullTitle>
+    <text>
+      <text>Flip the coin once or multiple times. Options times Optional The amount of times to flip the coin. Examples /coinflip /coinflip times: 50</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/fun-commands#love</url>
+    <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /love [Commands]</fullTitle>
+    <text>
+      <text>Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/fun-commands#ratewaifu</url>
+    <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /ratewaifu [Commands]</fullTitle>
+    <text>
+      <text>Rate your waifu from 0-100. Results may vary. Options user Required The user to rate. Examples /ratewaifu user: @Kodehawa#3457 /ratewaifu user: @Adam#9261</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/fun-commands#roll</url>
+    <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /roll [Commands]</fullTitle>
+    <text>
+      <text>Roll an any-sided dice a 1 or more times. By default, this command will roll a 6-sized dice 1 time. Options times Optional The amount of times to roll, in d20 format. Examples /roll /roll times: 5d1000 /roll times: 1d20</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/moderation-commands#mute</url>
+    <fullTitle>Mantaro Wiki: 🔨 Moderation Commands, /mute [Commands]</fullTitle>
+    <text>
+      <text>Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted. Options user Required The user to mute. time Optional The amount of time to mute the user for. For example 1m20s. The format is, for example, 1h20m10s for 1 hour, 20 minutes and 10 seconds. If not specified, this uses the default mute timeout set for this server, if set. reason Optional The reason of the mute. This will show in the logs, if enabled. Requirements This command requires either commands/permissions#intro Ban or Kick permissions. Examples /mute user: @Adam#9261 /mute user: @Adam#9261 time: 1h20m10s /mute user: @Adam#9261 reason: good meme</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/moderation-commands#opts</url>
+    <fullTitle>Mantaro Wiki: 🔨 Moderation Commands, ~>opts [Commands]</fullTitle>
+    <text>
+      <text>The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our configuration/all-options Configuration Page. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Requirements This command requires commands/permissions#intro Admin permissions.</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/moderation-commands#prune</url>
+    <fullTitle>Mantaro Wiki: 🔨 Moderation Commands, /prune [Commands]</fullTitle>
+    <text>
+      <text>Delete messages (excluding messages that are older than 14 days). Minimum of messages to delete is 5 and maximum is 100. Options amount Required The amount of messages to prune, from 5 to 100. user Optional Only prune from this specific user. botonly Optional Only prune messages from bots. skippinned Optional Don't prune pinned messages. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Messages permissions. Examples /prune amount: 10 /prune amount: 10 user: @Adam#9261 /prune amount: 10 botonly: true /prune amount: 10 skippinned: true</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/moderation-commands#unmute</url>
+    <fullTitle>Mantaro Wiki: 🔨 Moderation Commands, /unmute [Commands]</fullTitle>
+    <text>
+      <text>Unmute the mentioned user if muted. Options user Required The user to unmute. reason Optional The reason of the unmute. This will show in the logs, if enabled. Requirements This command requires either commands/permissions#intro Ban or Kick permissions. Examples /unmute user: @Adam#9261 /unmute user: @Adam#9261 reason: good meme</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/info-commands#avatar</url>
+    <fullTitle>Mantaro Wiki: 💭 Info Commands, /avatar [Commands]</fullTitle>
+    <text>
+      <text>Grab your own avatar or the given person's avatar. Options user Optional The user to get the avatar of. Examples /avatar /avatar user: @Kodehawa#3457</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/info-commands#help</url>
+    <fullTitle>Mantaro Wiki: 💭 Info Commands, /help [Commands]</fullTitle>
+    <text>
+      <text>Get all commands or, if you specify a command, get more information on the command specified. Options command Optional The command to check help for. You can use sub-commands too. Examples /help /help command: profile /help command: cast item</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/info-commands#info</url>
+    <fullTitle>Mantaro Wiki: 💭 Info Commands, /info [Commands]</fullTitle>
+    <text>
+      <text>The hub for (user/role/server) info related commands. Sub-commands Role See information about a role. Server See your server's current stats. User See information about specific users. Options Role Click me! Options for the Role Subcommand role Required The role you want to see the information of. User Click me! Options for the Role Subcommand user Optional The user you want to look. Note: The Server Subcommand has no options. Examples /info user /info user user: @Kodehawa#3457 /info server /info role role: Member</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/info-commands#ping</url>
+    <fullTitle>Mantaro Wiki: 💭 Info Commands, /ping [Commands]</fullTitle>
+    <text>
+      <text>Check how fast Mantaro is responding. Examples /ping</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/info-commands#mantaro</url>
+    <fullTitle>Mantaro Wiki: 💭 Info Commands, /mantaro [Commands]</fullTitle>
+    <text>
+      <text>Shows useful bot information. Subcommands Shard Returns in what shard I am. Shardlist Returns information about shards. Support Shows a link to the support server. Welcome Shows the message the bot sends when it's added to a server. Donate Shows the donation methods in case you want to support Mantaro. Invite Gives you a bot OAuth invite link and some other important links. Language Shows how to change the server and user languages, along with a language list. Examples /mantaro shard /mantaro shardlist /mantaro support /mantaro welcome /mantaro donate /mantaro invite /mantaro language</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/info-commands#stats</url>
+    <fullTitle>Mantaro Wiki: 💭 Info Commands, /stats [Commands]</fullTitle>
+    <text>
+      <text>Gets the bot technical information. Nothing all that interesting, but shows cute stats. Examples /stats</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/utility-commands#birthday</url>
+    <fullTitle>Mantaro Wiki: ✏️Utility Commands, /birthday [Commands]</fullTitle>
+    <text>
+      <text>Set/Remove your own birthday or show everyone with a birthday this month. The date format is dd-mm. This means day first and month second. Subcommands Remove Removes your set birthday date. List Gives all of the birthdays for this server. Month Checks the current birthday date for the specified month. Allowserver Allows the server where you send this command to announce your birthday. Denyserver Denies the server where you send this command from announcing your birthday. Set Sets your birthday date. Only useful if the server has enabled this functionality. Options Month Click me! Options for the Month Subcommand month Optional The month, in number format (January is 1, etc). Set Click me! Options for the Set Subcommand date Required A date in dd-MM format (13-02 for February 13th for example). Note: The Remove , List , Allowserver and Denyserver Subcommands have no options. Requirements The Remove subcommand requires you to have already set a birthday. The List and Month subcommand require users to use the allowserver subcommand to show them. The Denyserver subcommand requires you to have already allowed yourself in a server. Examples /birthday remove /birthday list /birthday month month: 3 /birthday allowserver /birthday denyserver /birthday set date: 13-02</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/utility-commands#custom</url>
+    <fullTitle>Mantaro Wiki: ✏️Utility Commands, /custom [Commands]</fullTitle>
+    <text>
+      <text>Creates a custom command. For further info check our custom-commands/101 Custom Commands Guide. Subcommands Lockcommand Lock a custom command. Remove Remove a custom command. Unlockcommand Unlock a custom command. Rename Rename a custom command. List List all custom commands. Raw View a custom command in raw form. Eval Eval the result of a custom command. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. View Views the response of a custom command. Deleteresponse Deletes a response from a custom command. Info Shows information about a custom command. Add Add a custom command. This will open a pop-up. Edit Edits a custom command. This will open a pop-up for content. Options Lockcommand Click me! Options for the Lockcommand Subcommand name Required The custom command to lock. Remove Click me! Options for the Remove Subcommand name Required The custom command to remove. Unlockcommand Click me! Options for the Unlockcommand Subcommand name Required The custom command to unlock. Rename Click me! Options for the Rename Subcommand name Required The name of the custom command to rename. new Required The new name to use. Raw Click me! Options for the Raw Subcommand name Required The name of the custom command to view. View Click me! Options for the View Subcommand name Required The name of the custom command to view. response Required The response number of the response to view (shown on /custom raw ). Deleteresponse Click me! Options for the Deleteresponse Subcommand name Required The name of the custom command to delete a response of. response Required The response number of the response to delete (shown on /custom raw ). Info Click me! Options for the Info Subcommand name Required The name of the custom command to view info of. Add Click me! Options for the Add Subcommand nsfw Required Whether the command is NSFW or not. Edit Click me! Options for the Edit Subcommand name Required The name of the custom command to edit. response Required The response number of the response to edit. nsfw Required Whether the entire command should be marked as nsfw. Note: The List and Eval Subcommands have no options. Requirements If normal users aren't allowed to make custom commands with one of our configuration/all-options opts options then this command requires commands/permissions#intro Admin permissions. Examples /custom lockcommand name: test /custom remove name: test /custom unlockcommand name: test /custom rename name: test new: test2 /custom raw name: test /custom add nsfw: false /custom edit name: test response: 1 nsfw: true</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/utility-commands#iam</url>
+    <fullTitle>Mantaro Wiki: ✏️Utility Commands, /iam [Commands]</fullTitle>
+    <text>
+      <text>Applies a self-assignable role to you or lists all self-assignable roles. Roles have to be added by an Admin one of the opts commands. Subcommands List List all autoroles. Not Remove an autorole from you. Add Get an autorole assigned to you. Options Not Click me! Options for the Not Subcommand role Required The role to remove. Add Click me! Options for the Add Subcommand role Required The role to assign. Note: The List Subcommand has no options. Requirements This command requires a self-assignable role to have been set up on the server. Examples /iam list /iam not role: Red /iam add role: Blue</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/utility-commands#poll</url>
+    <fullTitle>Mantaro Wiki: ✏️Utility Commands, /poll [Commands]</fullTitle>
+    <text>
+      <text>Create a poll with options. The person that created the poll can cancel it by typing &amp;cancelpoll . If an url is used then it must be a direct link to the image. The maximum poll runtime is 45 minutes. Options name Required The name of the poll. time Required The time the poll is gonna run for. The format is as follows 1m30s for 1 minute and 30 seconds. Maximum poll runtime is 45 minutes. options Required The options to add. Minimum is 2 and maximum is 9. For instance: Pizza,Spaghetti,Pasta (Enclose options with multiple words in double quotes, there has to be no spaces between the commas) image Optional The image to embed to the poll. Examples /poll name: test poll time: 10m30s options: hi,wew,owo</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/utility-commands#premium</url>
+    <fullTitle>Mantaro Wiki: ✏️Utility Commands, /premium [Commands]</fullTitle>
+    <text>
+      <text>Check or activate premium status for a user or server. Subcommands Activate Activates a premium key. User Checks the premium status of a user. Server Checks the premium status of this server. Options Activate Click me! Options for the Activate Subcommand key Required The key to activate. If it's a server key, make sure to run this command in the server where you want to enable premium on. User Click me! Options for the User Subcommand user Optional The user to check for. Yourself if empty. Note: The Server Subcommand has no options. Examples /premium activate key: a4e98f07-1a32-4dcc-b53f-c540214d54ec /premium user /premium server</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/utility-commands#remindme</url>
+    <fullTitle>Mantaro Wiki: ✏️Utility Commands, /remindme [Commands]</fullTitle>
+    <text>
+      <text>Reminds you of something after the given time ran out. Mantaro will DM you when the time runs out with the message you specified. Subcommands Add Adds a reminder. Cancel Cancels a reminder. List Lists your reminders. Options Add Click me! Options for the Add Subcommand time Required How much time until I remind you of it. Time is in this format: 1h20m (1 hour and 20m). reminder Required The thing to remind you of. Note: The Cancel and List Subcommands have no options. Requirements The Cancel subcommand requires you to have a reminder set. Examples /remindme add time: 1h20m reminder: do homework /remindme cancel /remindme list</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/utility-commands#time</url>
+    <fullTitle>Mantaro Wiki: ✏️Utility Commands, /time [Commands]</fullTitle>
+    <text>
+      <text>Shows the current time in the timezone set on your profile or the time in the timezone that was specified. If a user is specified it will show the timezone of that user (if they have one set). Options timezone Optional The timezone in GMT or UTC offset (Example: GMT-3) or a ZoneId (such as Europe/London). If empty it will show the timezone of the user. user Optional The user to see the timezone of. Examples /time /time timezone: Europe/London /time user: @Kodehawa#3457</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/commands/utility-commands#wiki</url>
+    <fullTitle>Mantaro Wiki: ✏️Utility Commands, ~>wiki [Commands]</fullTitle>
+    <text>
+      <text>Will link you to the respective GitHub wiki pages. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Subcommands Badges This will link you to the Badges Documentation wiki page. Birthday This will link you to the Birthday 101 wiki page. Premium This will link you to the Premium Perks wiki page. Opts This will link you to the Configuration wiki page. Custom This will link you to the Custom Commands wiki page. Faq This will link you to the FAQ wiki page. Usermessage This will link you to the Welcome/Leave Messages wiki page. Tos This will link you to the TOS wiki page. Collectibles This will link you to the Collectable Items wiki page. Currency This will link you to the Currency 101 wiki page. Modifiers This will link you to the Modifiers wiki page. Commands This will link you to the Commands wiki page. Examples ~>wiki ~>wiki opts ~>wiki usermessage</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -777,7 +1273,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/custom-commands/101#what-is-v3</url>
-    <fullTitle>Mantaro Wiki: 101: Custom Guide, What is v3? [Custom Commands]</fullTitle>
+    <fullTitle>Mantaro Wiki: Custom 101: Your guide, What is v3? [Custom Commands]</fullTitle>
     <text>
       <text>The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.</text>
       <score>STANDARD</score>
@@ -785,7 +1281,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/custom-commands/101#how-do-you-use-v3</url>
-    <fullTitle>Mantaro Wiki: 101: Custom Guide, How do you use v3? [Custom Commands]</fullTitle>
+    <fullTitle>Mantaro Wiki: Custom 101: Your guide, How do you use v3? [Custom Commands]</fullTitle>
     <text>
       <text>First of all for normal non-embed, non-operative commands there is no actual difference. A general thing to understand is that in order to use v3 you will have to prepend v3: to your custom command contents. However you cannot use v3: with iam:, iamnot: and embed:. For the sake of future migration and ease of reading we will however go over all aspects of custom commands here.Some documentation is done on the Premium bot due to not being a feature in Mantaro at the time of documenting</text>
       <score>STANDARD</score>
@@ -793,7 +1289,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/custom-commands/101#basics</url>
-    <fullTitle>Mantaro Wiki: 101: Custom Guide, Basics [Custom Commands]</fullTitle>
+    <fullTitle>Mantaro Wiki: Custom 101: Your guide, Basics [Custom Commands]</fullTitle>
     <text>
       <text>~>custom add/new &lt;name> &lt;response> Will create an additional response if a command with that name already exists, otherwise it will make a new one. ~>custom rm &lt;name> Removes a custom command entirely. ~>custom raw &lt;name> Will show you all responses (including response numbers) of a custom command. ~>custom info &lt;name> Will print detailed information about a custom command. Creator, nsfw flag etc. ~>custom view &lt;name> &lt;response number> Will show you the exact content of a specific response. ~>custom rename &lt;name> Allows you to rename a command. ~>custom edit &lt;name> &lt;response number> &lt;new content> Allows you to edit a specific response of a custom command. ~>custom eval &lt;content> Allows you to evaluate (run without creating it) a custom command. ~>custom import &lt;name> Allows you to import a custom command from another server you are in.</text>
       <score>STANDARD</score>
@@ -801,7 +1297,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/custom-commands/101#simple-commands</url>
-    <fullTitle>Mantaro Wiki: 101: Custom Guide, Simple Commands [Custom Commands]</fullTitle>
+    <fullTitle>Mantaro Wiki: Custom 101: Your guide, Simple Commands [Custom Commands]</fullTitle>
     <text>
       <text>Okay so let's start off super simple by just creating a very easy custom command. null https://i.imgur.com/7drG29o.png image Seems easy enough right? Well it is. Please note that even if you do use v3 here ( v3:Hi! ) there will be no actual difference (From here on every documentation point that has no difference will say "no noticeable difference"). Obviously you want to know how to go a bit more complex though.</text>
       <score>STANDARD</score>
@@ -809,7 +1305,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/custom-commands/101#marking-a-command-as-nsfw</url>
-    <fullTitle>Mantaro Wiki: 101: Custom Guide, Marking a command as nsfw [Custom Commands]</fullTitle>
+    <fullTitle>Mantaro Wiki: Custom 101: Your guide, Marking a command as nsfw [Custom Commands]</fullTitle>
     <text>
       <text>This is as simple as adding -nsfw to the very end of the command while either using ~>custom new or ~>custom add , example being ~>custom new nsfwtest This is a test -nsfw . Please do note that when you add a new response with custom add and append -nsfw to mark it you will mark all responses as nsfw as it is intended to mark the whole command. Additionally using custom edit to mark a command already made as such does not work it will be treated as if it was raw text.</text>
       <score>STANDARD</score>
@@ -817,7 +1313,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/custom-commands/101#modifiers</url>
-    <fullTitle>Mantaro Wiki: 101: Custom Guide, Modifiers [Custom Commands]</fullTitle>
+    <fullTitle>Mantaro Wiki: Custom 101: Your guide, Modifiers [Custom Commands]</fullTitle>
     <text>
       <text>Custom commands support what's called modifiers, which are a set of predetermined custom command actions which might make your commands spicier and better. A list of those can be found https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers here, so here we will see examples on how they work. The most useful ones are:$(event.author.mention) Mentions the person who executed the command. $(event.me.mention) Mentions mantaro. $(event.message.raw) Basically you can use this to make a ~>say command. Repeats what's after the command. $(event.channel.mention) Mentions the channel the command was executed on. $(event.channel.topic) Says the channel topic. $(event.guild.name) The name of your server. $(event.guild.owner.name) The server owner's name. $(event.guild.region) The server region. Basically, you can use those in any form of command.To create a command with those modifiers just create a command and use those. ( https://i.imgur.com/HBbUZzt.png Example). Works with multiple responses too. There is only one noticeable difference in v3. The difference is that you can basically set up your own modifiers per command. What that means is that you can define a value that you can then call using its modifier. And example of this would be: null https://i.imgur.com/GdmaZYk.png image</text>
       <score>STANDARD</score>
@@ -825,7 +1321,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/custom-commands/101#automating-play-and-iam-roles</url>
-    <fullTitle>Mantaro Wiki: 101: Custom Guide, Automating Play and Iam roles [Custom Commands]</fullTitle>
+    <fullTitle>Mantaro Wiki: Custom 101: Your guide, Automating Play and Iam roles [Custom Commands]</fullTitle>
     <text>
       <text>You can also automate playing music and claiming/unclaiming self-assignable roles.If you want to create a music shortcut your content will have to be play:&lt;url to song> . Mantaro will then act as if you were using the play command with this url when you run the command.If you want to make the command assign an existing iam role your content will have to be iam:&lt;name of the iam role> If you want to do the opposite and you want the command unassigned an existing iam role you will have to put iamnot:&lt;name of the iam role> . In both cases Mantaro will act as if that person did ~>iam &lt;name of the iam role> and ~>iamnot &lt;name of the iam role> respectively if they run the command. You can also specify your own custom message if you would like to, this works in both v3 and v2. The v2 syntax for this would be iamcustom:&lt;name of the iam role> "&lt;message>" (same for iamnotcustom:). The v3 syntax for this is @{iam/iamnot;name of iam role;message} where the message is optional, meaning you can use iam roles in v3 now, and that combined with embeds, texts, ifs and so on. For more info on iam roles please check https://github.com/Mantaro/MantaroBot/wiki/Configuration here.</text>
       <score>STANDARD</score>
@@ -833,7 +1329,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/custom-commands/101#embeds</url>
-    <fullTitle>Mantaro Wiki: 101: Custom Guide, Embeds [Custom Commands]</fullTitle>
+    <fullTitle>Mantaro Wiki: Custom 101: Your guide, Embeds [Custom Commands]</fullTitle>
     <text>
       <text>What is new with this in v3? The syntax has changed from embed:&lt;json> to @{embed;&lt;json>} .Additionally, you can now use embeds and normal text at once. For instance This is text @{embed;title:"Hi"} would both display the text "This is a text" and the embed with the title Hi. You will need to add v3: before any of the command's contents for this to work as in this example: null https://i.imgur.com/VGwGhwl.png image What is an Embed? Okay let's start by making a simple embed. First let's look at what an embed even is: null https://i.imgur.com/PqSsAMG.png image title:"your text here" - Will set what you see as "Title Text" in the image above. description:"your text here" - Will set what you see as "Description". thumbnail:"valid image url here" - Will set the top-right image. image:"valid image url here" - Will set the big bottom image. author:"your text here" - Will set what you see as "Author Name". authorImg:"valid image url here" - Will set the image you see next to "Author Name". footer:"your text here" - Will set what you see as "Footer text" footerImg:"valid image url here" - Will set the image you see next to "Footer text". color:"hex code/color name here" - Will set the color of the purple strip you see on the left. fields:&lt;field sytanx (check slightly below)> - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as "Field name" and value what you see as "Field value", inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely. Field Syntax: [ {name:"name of the first field", value:"value of the first field", inline:true}, {name:"name of the second field", value:"value of the second field", inline:false} ] How to use an embed in custom commands? Please pay close attention to the character limits in the image above as-well as the maximum amount of fields. Exceeding those will make your custom command fail! You do not have to use all of the things above you can create your own combinations of them as you like. Additionally please note that title , author , field names and footer do not support any form of mentions due to discord limitations.Our syntax for the custom command will have to be @{embed;&lt;json>} . With "json" being any assortment of the things you learned above. For instance: title:"text",description:"text" . (Note the comma between 2 variables)As an example we will build the embed above using Mantaro. We will be using this as content: v3:@{embed;title:"Title text (256 chars)", description:"Description (2048 chars, Character limit for the **entire** embed is 6000)", fields:[ {name:"Field name (256 chars)", value:"Field value (1024 chars, Max 25 fields)"}, {name:"Inline", value:"Field", inline:true}, {name:"Inline", value:"Field", inline:true} ], author:"Author Name (256 chars)", authorImg:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png", thumbnail:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png", footer:"Footer text (2048 chars)", footerImg:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png", image:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png", color:"c91191"} In action: null https://i.imgur.com/oPs5t44.png image</text>
       <score>STANDARD</score>
@@ -841,7 +1337,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/custom-commands/101#operative-custom-commands</url>
-    <fullTitle>Mantaro Wiki: 101: Custom Guide, Operative Custom Commands [Custom Commands]</fullTitle>
+    <fullTitle>Mantaro Wiki: Custom 101: Your guide, Operative Custom Commands [Custom Commands]</fullTitle>
     <text>
       <text>Comparing Comparing is the act of taking one value and comparing it to another, for instance with this you can check if the content of a message is equal to something you set, or in our example check if someone's user ID is equal to the correct one: null https://i.imgur.com/UwEaIDA.png image The syntax for a comparing with if-else is always @{if;thing to compare;comparator;thing compare with;if met;if not met (else)} . Additionally you can also use the compare operation to assert a boolean (true or false), uses for that are in the Asserting section down below. Syntax for this is @{compare;thing to compare;comparator;thing to compare with} . Available comparators equals : As seen in the example above will check if the thing to compare equals the thing to compare with. not-equals : Same as equals but reversed*. ignorecase-equals : Same as equals but ignores casing (i.e A == a). ignorecase-not-equals : Same as ignorecase-equals but reversed*. greater-than : Whether or not the thing to compare is greater than what the thing to compare with is (i.e 2 > 1). less-than :Whether or not the thing to compare is less than what the thing to compare with is (i.e 1 &lt; 2). not-greater-than : Same as greater-than but reversed*. not-less-than : Same as less-than but reversed*. ignorecase-greater-than : Same as greater-than but ignores casing. ignorecase-less-than : Same as less-than but ignores casing. ignorecase-not-greater-than : Same as not-greater-than but ignores casing. ignorecase-not-less-than : Same as not-less-than but ignores casing. contains : Whether or not the thing to compare includes the thing to compare with. not-contains : Same as contains but reversed*. starts-with : Checks if the thing to compare starts with the thing to compare with. ignorecase-starts-with : Same as starts-with but ignores casing. ends-with : Checks if the thing to compare ends with the thing to compare with. ignorecase-ends-with : Same as ends-with but ignores casing. * Note: Reversed means logically reversed i.E contains checks if it is in the thing and not-contains checks if it is not in the thing. Predicting Predicting is the act of checking whether or not something meets a predicate. In simpler terms this can be anything like checking if a value is empty or checking if it's equal to a preset value.The syntax for if-else for this one is @{if;thing to predict;predicate;if met;if not met (else)} . You can additionally use the test operation to assert a boolean, uses for that are in the Asserting section down below. Syntax for this is @{test;predicate;value to predict} Available Predicates usermention : Check if the thing you check is a user mention. is-empty : Checks whether the thing to check is empty (aka has no characters). is-not-empty : Same as is-empty but reversed*. * Note: Reversed means logically reversed i.E contains checks if it is in the thing and not-contains checks if it is not in the thing. Asserting (True and False) Asserting a boolean means anything that returns a true or a false. We have mentioned the compare and test operations up above, both of these will when used outside of an if give you a "true" or a "false" as a message. However these truth values can be used in if commands to make more complex structures.The structure for if-else changes drastically for this one. It is as follows: @{if;if met;assertive;if not met} This all comes with very handy logical operators: @{and;operation;operation;....} : This can be used to only return true when all operations passed assert to true. @{or;operation;operation;....} : This can be used to return true when any of the operations passed assert to true. @{not;assertive} : This can be used to negate an assertive, meaning a true will become a false and vice versa. Operations You have a handful of operations to choose from, while we already talked about most of them, here is a list of all: @{if;syntax} : Used to make conditional responses, it's syntax is dependent on how it is used and all syntax are explained in the respective sections for predicting, comparing and asserting. @{not-empty;argument1;argument2;....} : Returns the first value that is not empty (You can feed this unlimited arguments). https://i.imgur.com/KRLgId2.png Example (Note: this does not ignore values that are only a space) @{not-empty-strict;argument1;argument2;....} : Same as not-empty but also considers values that are only a space to be empty. @{set;key;value} : Explained in detail in the Modifiers section up above @{embed;embed syntax} : Explained in detail in the embeds section up above @{compare;syntax} : Explained in detail in the comparing section up above @{test;syntax} : Explained in detail in the predicting section up above @{and;syntax} : Explained in detail in the asserting section up above @{or;syntax} : Explained in detail in the asserting section up above @{not;syntax} : Explained in detail in the asserting section up above @{timestamp;format;zone} : Used to print a time/date in any format you like from any timezone you like. Format is a bit more complex an example would be: d MMM uuuu , for the current date (more info for format on https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html Java Docs, the time zone can be any of https://en.wikipedia.org/wiki/List_of_tz_database_time_zones these TZ database names (include every character even underlines). @{upper;text} : Used to convert a text to fully uppercase @{lower;text} : Same as upper but with lowercase @{replace;character(s) to replace;replace with;replace in} : Used for replacing occurrences of characters in a text. Example would be @{replace;r;test;$(event.message)} to replace all r's with test in event.message What do we get in v3 vs old v2 You can now nest ifs (i.E use a new if as else of another to create chains)! You can now use embed fields in ifs You can now use newlines in ifs You can now check whether or not something contains a discord mention You can now chain if's (use multiple ifs in the same command) and have their else actually work. In general you can use all conditions/special syntaxes anywhere in your command. Meaning you can have text with an embed etc Generally a far more in depth and detailed interaction with if-else due to the high amount of operations available</text>
       <score>STANDARD</score>
@@ -881,7 +1377,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/101#introduction</url>
-    <fullTitle>Mantaro Wiki: 101: Introduction, Introduction [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 101: Introduction, Introduction [Currency]</fullTitle>
     <text>
       <text>Mantaro has an extensive currency system. At times, new people don't know where to even begin. The purpose of these pages is to steadily introduce a few concepts and commands needed to progress while using the currency system.These pages are merely an explanation of concepts and commands in an order we believe is easy to understand for progressing. It is in no way the "correct", the "best" or the "only" way of using Mantaro. It is up to every user to decide themselves what they want to do with the system.</text>
       <score>STANDARD</score>
@@ -889,7 +1385,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/101#concepts</url>
-    <fullTitle>Mantaro Wiki: 101: Introduction, Concepts [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 101: Introduction, Concepts [Currency]</fullTitle>
     <text>
       <text>Global Currency Mantaro's currency system is global. What this means is that your progress/items/credits/etc are the same across all servers. This means that something like spawning credits or items with a command is not possible, as it would throw the currency system into complete chaos. Credits The currency used in Mantaro is called Credits. The main purpose of the currency system is to collect Credits. Credits are necessary for many of the purchases in the currency system. Items Mantaro counts with over 100 items for users to collect and use. Some items are only meant to be collected, other items can bring bonuses to the user and other items can enable certain commands. A full Item Documentation page can be found https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation here. It is not necessary to know all items or to look into this page, but know that it can be a good resource in the future. Dust Sometimes a few of the currency commands will "fail" and won't give you credits or items. A lot of those times you will gather dust instead. A few commands gather dust when successfully used. When starting out, dust shouldn't be one of your main concerns until later on. If your dust levels are high enough then you will not be able to cast new items until you clean your dust, but more on that later. Help Command This one is very important. If you ever feel lost or don't remember how a command works, you can check that command's help to get the information without having to open this wiki. To get a commands help you can use /help command:&lt;name of command> . Additionally, the command /help will show you the full list of commands. You can also check our Command Documentation page https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation here. Premium influence Premium status for users influences the currency in very specific ways, and we will probably mention it a few times in the next pages. However, there is more that premium can do. For the sake of not making this wiki any longer you may view what premium does https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks here.</text>
       <score>STANDARD</score>
@@ -897,7 +1393,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/101#disclaimers</url>
-    <fullTitle>Mantaro Wiki: 101: Introduction, Disclaimers [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 101: Introduction, Disclaimers [Currency]</fullTitle>
     <text>
       <text>Regarding External Software, Macros, etc. (Cheating) If you have been caught using any external software, Macros (yes Macros are cheating) or similar you are breaking our https://github.com/Mantaro/MantaroBot/wiki/Terms-of-Service Terms of Service and https://discordapp.com/terms Discord's Terms of Service. Very notable is that automating your user account in any way using Discord API wrappers is a very bannable offense by discord. ( https://support.discordapp.com/hc/en-us/articles/115002192352-Automated-user-accounts-self-bots- Context)You will be blacklisted from using the bot and reported to discord in major cases. In minor cases you will be blacklisted from the bot and you may send a polite appeal. An appeal is not simply saying you won't do it again.In very rare cases you may be blacklisted from the bot for being a huge d*ck to Developers or Staff. In even rarer cases you may be blacklisted from the bot when you have been blacklisted on other bots. Regarding Exploiting bugs If you are caught exploiting major bugs in Mantaro to gain an advantage we will reset your profile entirely. Depending on the situation you may even be blacklisted. Not reporting a major bug after having found it may cause us to misinterpret things. Your best bet is to simply report them. If you have reported the bug and accidentally used it multiple times, you are fine. However, intentionally using it multiple times is still a no-go despite reporting it. Regarding selling/buying stuff for real money Under no circumstances are you are allowed to sell/buy anything related to Mantaro for real money (this includes crypto currency of any kind). This is to prevent scams. If you are being offered a trade like this report them immediately and do not trade with them. Falling for a scam like this will be faced with no support. You have been warned.Offering such trades is a permanent blacklistable offense.</text>
       <score>STANDARD</score>
@@ -905,7 +1401,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/102#basic-knowledge</url>
-    <fullTitle>Mantaro Wiki: 102: Basic knowledge, Basic knowledge [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 102: Basic knowledge, Basic knowledge [Currency]</fullTitle>
     <text>
       <text>In this page we seek to cover the most basic commands to get you started with the currency system.</text>
       <score>STANDARD</score>
@@ -913,7 +1409,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/102#credits---where-to-start</url>
-    <fullTitle>Mantaro Wiki: 102: Basic knowledge, Credits - Where to start [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 102: Basic knowledge, Credits - Where to start [Currency]</fullTitle>
     <text>
       <text>There are many ways of getting credits in Mantaro. However, we believe that the following commands are good places for you to get started. Daily The command that's most likely to be your first currency command is /daily , which you can run every 24 hours for a base of 150$. However, if you run daily consecutively every 24 hours your streak will increase eventually gaining your more money up to a cap of 1000$ as well as a random crate every multiple of 20 and a Magical Watch every multiple of 50. Failing to collect your daily for 48 hours results in your streak getting reset to 0. You can also give the money to someone else (will not affect your streak) yielding them ever so slightly more. To do so simply mention them while running the command. null https://i.imgur.com/shjAPTz.png image Loot Loot is another command which can be used to gain easy credits. You can run it using /loot every ~5 minutes which can yield credits and/or items (more credits than normal when a user is premium). In certain conditions you can even find unique items. Take a look at our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation Item Documentation page if you want to find out what exact drops you can get. null https://i.imgur.com/qL5URi8.png image Market The market is the place to go for buying or selling your items. For starters, you can use /market buyable to bring up a list of all the items you can buy. You can use the arrow reactions to navigate through the different pages. null https://i.imgur.com/YYzvgxr.png image To buy items you use /buy &lt;amount> &lt;item> . To sell items you use /sell &lt;amount> &lt;item> . null https://i.imgur.com/NxrkDA2.png image null https://i.imgur.com/8549gts.png image Additionally, you can use /market price item:&lt;name> to view a specific item's sell and buy price. You can also get rid of items completely (for instance if they can't be sold) with /dump amount:&lt;amount> item:&lt;name> . Profile Your profile is your main point in the currency system. It will display your top items, your balance and a bunch more. To view your profile simply use /profile show , or to check someone else's profile use /profile show user:&lt;mention> . You can also right-click on someone's name, then click on Apps and finally on Show currency profile to also see their profile. null https://i.imgur.com/a2bOfRn.png image Your profile has many things you can customize. Here's a few of them:Description: To change your description around you can use /profile description description:&lt;your description> . Display Badge: To change your display badge you can use /profile displaybadge badge:&lt;badge name> . Of course, you need to have the badge you want to display, but we'll get into that later. Timezone: To change your timezone you can use /profile timezone timezone:&lt;your timezone> . Widgets: This option is https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks Premium only. With this you can change around the order of how things show up on your profile, or keep them from showing up at all. Use /profile widgets to get the instructions on how to use it. Birthday: To change your birthday you can use /birthday set date:&lt;dd-MM> . You can also view all sorts of stats involving your activity in Currency using /profile stats . Finally, you can change the language in which Mantaro answers you using /profile language lang:&lt;language code> . Use /mantaro language for more information. Balance Here is where you can check out your current balance. While your balance also shows up in your profile, sometimes you just want to check without all the other information showing up. To check how many credits you have on your balance use /balance . null https://i.imgur.com/Q7ReRVW.png image Inventory Here is where you can check out all your items. Your profile will only show your top items, so here is the place to check all those items you have. To check your item list use /inventory show . If you want a simpler version you can also use /inventory brief . null https://i.imgur.com/DWz7k77.png image</text>
       <score>STANDARD</score>
@@ -921,7 +1417,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/102#tools---where-to-start</url>
-    <fullTitle>Mantaro Wiki: 102: Basic knowledge, Tools - Where to start [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 102: Basic knowledge, Tools - Where to start [Currency]</fullTitle>
     <text>
       <text>The commands you just learned will help you get started out. However, they won't be enough for what's to come. For that, the next thing to learn is about tools. There are many tools available, each with different tiers, but for now we will focus on the 3 most basic tools: pickaxe, fishing rod and axe. Name Icon [{text=Brom's Pickaxe, type=SimpleText}] [{text=Fishing Rod, type=SimpleText}] [{text=Axe, type=SimpleText}] These 3 basic tools are always available for you to buy at the market. As you progress you will be able to create better tools. Durability Most tools at your disposal have a durability value. As you use your tools, this value will continue to drop until your tool breaks. Durability changes across each type of tool and its different tiers, meaning better tools have more durability. When your tool does break it will disappear. However, if the tool that broke has a broken item version, then you have ~80% chance of getting the broken version back. Not all tools have a broken version.After equipping your tools (see next section), you can check their durability by using /profile stats . null https://i.imgur.com/n8OdRl1.png image Equip and Unequip To keep going forward first off you will need to equip your new tools. To equip one of your tools you can use /equip item:&lt;tool name> . null https://i.imgur.com/bO0vPk7.png image If you want to unequip one of your tools you can use /unequip item:&lt;tool type> . Do bear in mind that the durability of the item you are unequipping comes into play here as well. If your item has not been used (has 100% durability) you will recover your item when unequipped. However, if you have used the item then two things can happen:If the tool you are unequipping has a broken version, then you will get the broken version back. If the tool you are unequipping doesn't have a broken version, then the tool will be lost, and you will get back some credits instead. null https://i.imgur.com/AdD7GPF.png image Mine Required Tool: Any Pickaxe.When you use /mine you will go mining to get credits and/or items. The better the pickaxe you use the more credits you will get, and the better chances you will have of finding items. Some items can only be found depending on the quality of your tool. Each time you mine you will get anywhere from 1 to 4 Mining EXP. Take a look at our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation Item Documentation page if you want to find out what exact drops you can get. null https://i.imgur.com/bwmSGau.png image Fish Required Tool: Any Fishing rod.When you use /fish you will go fishing to get credits and/or items. The better the fishing rod you use the more credits you will get, and the better chances you will have of finding items. Some items can only be found depending on the quality of your tool. Each time you mine you will get anywhere from 1 to 4 Fishing EXP. Take a look at our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation Item Documentation page if you want to find out what exact drops you can get. null https://i.imgur.com/eeGBGaN.png image Chop Required Tool: Any Axe.When you use /chop you will go chopping trees to get credits and/or items. The better the axe you use the more credits you will get, and the better chances you will have of finding items. Some items can only be found depending on the quality of your tool. Each time you mine you will get anywhere from 1 to 4 Chopping EXP. Take a look at our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation Item Documentation page if you want to find out what exact drops you can get. null https://i.imgur.com/FgxXOss.png image</text>
       <score>STANDARD</score>
@@ -929,7 +1425,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/103#intermediate-knowledge</url>
-    <fullTitle>Mantaro Wiki: 101: Intermediate knowledge, Intermediate knowledge [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 103: Intermediate knowledge, Intermediate knowledge [Currency]</fullTitle>
     <text>
       <text>In this page we seek to cover more of the advanced commands available in the currency system. We call them advanced because they usually require you to know or need an item dropped from the previously explained commands.</text>
       <score>STANDARD</score>
@@ -937,7 +1433,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/103#tools---getting-an-upgrade</url>
-    <fullTitle>Mantaro Wiki: 101: Intermediate knowledge, Tools - Getting an upgrade [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 103: Intermediate knowledge, Tools - Getting an upgrade [Currency]</fullTitle>
     <text>
       <text>If you've been following so far, you have been using the default tools bought at the shop. They don't have a lot of durability, and their chance of getting items isn't that great. As you might have figured out by now, there are better tools available for you to use. In this section we'll try to teach you about these tools and how to get them.First things first, the different tool tiers. Not all tools have every single tier (meaning some skip a few tiers), but the order should still be the same.Default tools Diamond tools Comet tools Star tools Moon tools Sparkle tools Hellfire tools Each tier requires different materials to be created. The better the tool, the rarer the material. Some tools allow you as well to get items you were not able to get before. As well, the better the tool you use, the better the drop rate for items.Sparkle Fragments () can only drop if you use a Star tool or better. Shells () can only drop if you use a Comet tool or better. Sharks () can only drop if you use a Sparkle tool or better. Casting Before you start casting items you will need a new tool, a wrench. As with the previous tools, wrenches have different tiers. Different tiers are needed to cast different items, so you will need them eventually. Wrenches are different from other tools in that you don't need to equip them. Instead, you specify the wrench you want to use when you cast something. Name Icon [{text=Wrench, type=SimpleText}] For now go to market and get yourself a few of the default wrenches.You need to equip your wrench with the /equip command, just like you equip your pick, rod or axe.Casting is the main way in which you will be getting these new tools. You can start by viewing a list of all castable items with ~>cast list . Check out the items and look at the recipes and prices of each of them. To cast the item you can use /cast item item:&lt;name> . For example, /cast item item:Comet Gem . null https://i.imgur.com/HBAvCxH.png image If you have a better wrench than the default one (which you can cast) you can also equip it to cast Items for cheaper as well as multiple items at once. To cast multiple items at once, put the amount before the item name (For example, /cast item item:Star Pickaxe amount:5 ).As we mentioned before, remember that if your dust level is too high you won't be able to cast. We explain how to clean your dust a bit further on the Potions section. If you don't know how to get an item then take a look at our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation Item Documentation page if you want to find out where exactly you can find the items you need. Repairing Sometimes when your tool breaks you will get a broken version back. With the repair command you can repair your broken tool to use it once again. Just as with cast, you will need a wrench to use this command. However, the default wrench from the market won't be enough, so cast yourself a better wrench before repairing. First off, check out the list of repairable items and their recipes with /repair list . You need to equip your wrench with the /equip command, just like you equip your pick, rod or axe. If you have one equipped, you don't need to worry.After you found the recipe to repair your broken tool you can use /repair item item:&lt;name> Salvaging Sometimes you don't want to spend resources repairing a tool, or you simply don't have them. In those cases you might want to consider salvaging your tool. When you salvage a tool you randomly get back one of its components. First off, check out the list of salvageable items and their possible drops with /salvage list . To salvage an item you can use /salvage item item:&lt;name> . You can use any wrench tier to salvage items. Remember to have it equipped.</text>
       <score>STANDARD</score>
@@ -945,7 +1441,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/103#usable-items---where-to-start</url>
-    <fullTitle>Mantaro Wiki: 101: Intermediate knowledge, Usable items - Where to start [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 103: Intermediate knowledge, Usable items - Where to start [Currency]</fullTitle>
     <text>
       <text>By now you may be wondering if all these items you are collecting have any use at all, and the answer to that is: yes, some of them do. A full list of the items with actual uses (minus the ones needed for recipes) can be found https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation#usableconsumable-items here. However, in this page we won't cover all the usable items, only a few of them. Potions While not all the items we will cover here are "potions", they fall under the same category. First off, use /use list to see the items used in the use command. All the items we'll list here are used with /use item item:&lt;name> . You can use several items at once with ~>use item item:&lt;name> amount:&lt;amount> . Name Icon Use/Description [{text=Haste Potion, type=SimpleText}] [{text=Allows you to collect more stuff from currency commands for 2 sessions., type=SimpleText}] [{text=Milky Potion, type=SimpleText}] [{text=Clears all potion effects., type=SimpleText}] [{text=Energy Beverage, type=SimpleText}] [{text=Makes a tool lose less durability per swing. Lasts 3 sessions., type=SimpleText}] [{text=Mop, type=SimpleText}] [{text=A delightful way to clean all the dust you have around. I bet there's a lot of it., type=SimpleText}] [{text=Waifu Pill, type=SimpleText}] [{text=Gives you a significant advantage on mine and fish if one of your waifus is valued at over 20,000. Lasts 3 sessions., type=SimpleText}] [{text=Fishing Bait, type=SimpleText}] [{text=Gives you a higher chance of catching fish., type=SimpleText}] *For potions that affect drop rates: These will affect the drop rate of all items minus Sparkle Fragments. Crates If you were lucky (or if you have https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks Premium and used /dailycrate ) then you might have already found a Crate. Crates are rare drops from some currency commands. When you open them you will get random items depending on the type of crate you open. To open a Crate first your need to buy a Crate Key from the market. After that you can use /opencrate crate:&lt;name of crate> to open the Crate. If you are still having trouble, go to our https://github.com/Mantaro/MantaroBot/wiki/Item-Documentation#crate-items Item Documentation page you can find a section with all the Crate types and their specific commands.</text>
       <score>STANDARD</score>
@@ -953,7 +1449,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/103#credits---more-money-commands</url>
-    <fullTitle>Mantaro Wiki: 101: Intermediate knowledge, Credits - More money commands [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 103: Intermediate knowledge, Credits - More money commands [Currency]</fullTitle>
     <text>
       <text>You are probably wondering if there are any other ways of getting credits aside from the ones you have already learned, and yes, there are. In this section we'll try to teach you a few other commands that may be useful on getting more credits. Some are relatively safe, and some are more on the risky side. Transferitems/Transfer Chances are, unless you are alone in a server with a bot, there are other people in the server with you. In those cases you can work together with friends, trade items and/or credits with them to reach your goals. To transfer items you can use /transferitems user:&lt;mention> item:&lt;name> amount:{amount} . null https://i.imgur.com/t1mgh3y.png image To transfer credits you can use /transfer user:&lt;mention> money:&lt;amount> . null https://i.imgur.com/mnUI1nZ.png image Note on the Transfer command: Due to a previous iteration of the currency system that had several bugs, credits became heavily inflated. People were abusing this, and we had to introduce a transfer tax. Not long ago from the time of writing this (November 27, 2020) we performed a Currency reset to try to fix this issue. However, people still found ways to abuse the systems we have. For this reason, we decided to leave in the credit tax. As well, we made it so that you cannot transfer credits to or from a new Discord account. We also limited the max amount of credits you can transfer to 500,000 and increased considerably the ratelimit of the Transfer command.While these measures may disappear or be changed in the future, we feel the need to explain why they are there in the first place. We thank everyone for their understanding. Games Mantaro offers 3 types of games which can each earn you some credits. All the games below (except trivia) can be started using ~>game &lt;type> . You can start multiple instances of a single game using ~>game multiple &lt;type> &lt;amount> . You can start multiple games in a lobby using ~>game lobby &lt;types> for instance ~>game lobby pokemon, trivia . You can play with people by simply mentioning them at the very end of the command. Trivia Unlike the other game commands, trivia can be used with ~>trivia or ~>trivia &lt;difficulty> where difficulty can be easy, medium or hard. However if you want to play multiple instances after another or have it be part of the lobby you would still refer to the above. (Note that appending the difficulty works on multiple and lobby as well using -diff &lt;difficulty> )Trivia is essentially a game of answering the asked question. The difficulty you pick will determine how many credits you get. You get 2 attempts to solve normal questions and one for true and false questions. Due to technical limitations you may not specify a category. Pokeguess (Who is that pokemon) You can start this game with ~>game pokemon . Pokeguess is a simple game of being shown a silhouette of a specific pokemon (and sometimes a very specific form of it). You then get 4-5 attempts to guess the pokemon correctly. If you do, you will be rewarded a handful of credits. Number You can start this game with ~>game number . This is by far the hardest game. You will be asked to guess a number between 0 and 150 within 5 attempts and 30 seconds. You will get hints whether the number is lower or higher than you last guess. Guessing right will reward you a handful of credits. Character You can start this game with ~>game character . In this game you will be shown an anime character. You then get 4-5 attempts to guess either their full name, or their first name. Guessing correctly will grant you a handful of credits. Gamble Gamble is arguably the best for making fast money however it does come with a risk. The odds are not in your favor You can initiate a gamble by using /gamble amount:&lt;amount> . The minimum amount is 100 credits, and the maximum is 10,000 credits. You can also type "all", "half" or "quarter" for the respective amount of your total credits (Assuming it falls in the range of credits given before). With a bit of luck you get to keep what you bet and win some extra credits, if you are out of luck you lose it all.\ Slots Slot is very similar to gamble however it has a higher chance of winning at the cost of a lower reward. You can roll the slots using /slots credits:&lt;amount> . The minimum amount is 25 credits, and the maximum is 50,000 credits. You can also make use of slot tickets which you can buy from the market. You can however not combine tickets with credits and vice versa. Tickets can be used by issuing the command like so: /slots useticket:True or ~>slots useticket:True ticketamount:&lt;amount> for multiple.</text>
       <score>STANDARD</score>
@@ -961,7 +1457,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/103#more---a-few-other-commands</url>
-    <fullTitle>Mantaro Wiki: 101: Intermediate knowledge, More - A few other commands [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 103: Intermediate knowledge, More - A few other commands [Currency]</fullTitle>
     <text>
       <text>This section is to mention a few commands that are part of the currency system, but do not give credits or items. Reputation Reputation is basically just a number that you can be proud of. Every 12 hours you can give someone 1 reputation point using /reputation user:&lt;mention> . You cannot give reputation to yourself. Your reputation counter does not affect you in most situations. It can serve as bragging rights, or to get you ranked on our leaderboards (which we'll cover later). You can check your reputation on your profile. null https://i.imgur.com/lm0MsQq.png image Badges While using Mantaro's currency you may stumble across the fact that you have earned badges. Badges essentially are achievements. Some are easy to get, some a hard to get. Some even are tied to riddles, and you won't know how to get them based on other people's badge list. To check your badges use /badges show . For more information regarding badges you can click https://github.com/Mantaro/MantaroBot/wiki/Badge-reference-and-documentation here. null https://i.imgur.com/zSG2oRs.png image Marry The marry command allows you to marry another user. To do so, you will first need to own 2 Rings. Then, simply type /marry user user:&lt;mention> . After that, the user you are marrying has to accept your marriage. null https://i.imgur.com/xy6PGAC.png image Once you are married, you can set both a Marry House and a Marry Car. To set the Marry House you need to have a House on your inventory to set. Then, simply use /marry house name:&lt;name of your house> . null https://i.imgur.com/4uMUOjM.png image To set the Marry Car you need to have a Car on your inventory to set. Then, simply use /marry car name:&lt;name of your car> . null https://i.imgur.com/GMXVuje.png image You may also end your marriage by typing /divorce . null https://i.imgur.com/Or5K0bY.png image</text>
       <score>STANDARD</score>
@@ -969,7 +1465,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/104#advanced-knowledge</url>
-    <fullTitle>Mantaro Wiki: 104: Advanced knowledge, Advanced knowledge [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 104: Advanced knowledge, Advanced knowledge [Currency]</fullTitle>
     <text>
       <text>In this page we seek to cover the more advanced commands in Mantaro's currency system. These commands require an understanding of the previously taught commands, or have a certain complexity to them.</text>
       <score>STANDARD</score>
@@ -977,7 +1473,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/104#pets</url>
-    <fullTitle>Mantaro Wiki: 104: Advanced knowledge, Pets [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 104: Advanced knowledge, Pets [Currency]</fullTitle>
     <text>
       <text>Pets are useful companions you can get to help you out. They help you gain more money, loot more, find random stuff on the mine, chop down trees, and even catch fish. The higher the level of your pet, the higher the rewards. Each pet has its own abilities. Check the section bellow to see what each ability does and what pet has which ability. Be sure to check it out before choosing your pet.You have two choices: either buy a marriage pet or a personal pet. You can switch between the two types by using /pet choice (for marriage pet choice, use /pet choice marriage ). A personal pet is the default if you don't have a marriage pet already at the time of update 6.2For marriage pets you need to buy a marriage Car and House ( /marry car and /marry house ). To do this you need to have a house and a car on your inventory.The next requirement is for you to have a Pet House. You can buy one from the market. If you're going to have a personal pet, you need to cast an Incubator Egg.To buy your pet you can use /pet buy type:&lt;type of pet> name:&lt;name for your pet> . null https://i.imgur.com/2u6xCoL.png image You can use /pet status to check the current status of your pet. null https://i.imgur.com/VmlZmYC.png image Icon Stat Description How to gain? [{text=Level, type=SimpleText}] [{text=Your pet's level establishes how many credits/items your pet can get for you., type=SimpleText}] [{text=Your pet gets EXP everytime they help you out., type=SimpleText}] [{text=Pats, type=SimpleText}] [{text=Be nice to your pet and pat it from time to time., type=SimpleText}] [{text=Use , type=SimpleText}, {code=/pet pet, type=InlinedCode}, {text=., type=SimpleText}] [{text=Health, type=SimpleText}] [{text=Your pet's health is symbolic right now (meaning it does nothing). Still, take care of your pet and don't let it drop. No, pets can't die., type=SimpleText}] [{text=Health is recovered whenever you feed and hydrate your pet., type=SimpleText}] [{text=Stamina, type=SimpleText}] [{text=Your pet's stamina is symbolic right now (meaning it does nothing)., type=SimpleText}] [{text=Stamina is recovered whenever you feed and hydrate your pet., type=SimpleText}] [{text=Thirst, type=SimpleText}] [{text=Your pet's thirst establishes if your pet can help you or not. Either way, take care of it ok?, type=SimpleText}] [{text=Use , type=SimpleText}, {code=/pet hydrate, type=InlinedCode}] [{text=Hunger, type=SimpleText}] [{text=Your pet's hunger establishes if your pet can help you or not. Either way, take care of it ok?, type=SimpleText}] [{text=Use , type=SimpleText}, {code=/pet feed &lt;name of food>, type=InlinedCode}] You have to take care of your new friend. You need to make sure they are well-fed and hydrated. To feed your pet you need to have its corresponding food in your inventory, which you can get from market (see below to know what type of food each pet eats). You can use /pet feed item:&lt;name of food> . null https://i.imgur.com/vmRirbw.png image To hydrate your pet you need to have Water Bottles in your inventory, which you can get from market. You can use /pet hydrate . null https://i.imgur.com/2EbbQPx.png image Pets bonuses stack with the other bonuses you can get. For example, if you have an Energy Beverage running, and your pet helps you, the bonus you get will be increased by a lot. Pet Types Icon Name Value Abilities Food [{text=Rock, type=SimpleText}] [{text=1,000 credits, type=SimpleText}] [{text=Cheer, type=SimpleText}] [{text= Steak, type=SimpleText}] [{text=Hamster, type=SimpleText}] [{text=30,000 credits, type=SimpleText}] [{text=Chop, Cheer, type=SimpleText}] [{text= Steak , type=SimpleText}, {text= , type=SimpleText}, {text= Hamster Food, type=SimpleText}] [{text=Cat, type=SimpleText}] [{text=35,000 credits, type=SimpleText}] [{text=Fish, Cheer, type=SimpleText}] [{text= Steak , type=SimpleText}, {text= , type=SimpleText}, {text= Chicken , type=SimpleText}, {text= , type=SimpleText}, {text= Milk Bottle , type=SimpleText}, {text= , type=SimpleText}, {text= Cat Food, type=SimpleText}] [{text=Dog, type=SimpleText}] [{text=40,000 credits, type=SimpleText}] [{text=Catch, Cheer, type=SimpleText}] [{text= Steak , type=SimpleText}, {text= , type=SimpleText}, {text= Dog Food, type=SimpleText}] [{text=Dev, type=SimpleText}] [{text=3,000,000 credits, type=SimpleText}] [{text=Cheer, Fish, Catch, Chop, type=SimpleText}] [{text= Steak, type=SimpleText}] Pet Abilities Name Description [{text=Fish, type=SimpleText}] [{text=Your pet will help you out when you use , type=SimpleText}, {code=/fish, type=InlinedCode}, {text=., type=SimpleText}] [{text=Catch, type=SimpleText}] [{text=Your pet will help you out when you use , type=SimpleText}, {code=/mine, type=InlinedCode}, {text=., type=SimpleText}] [{text=Chop, type=SimpleText}] [{text=Your pet will help you out when you use , type=SimpleText}, {code=/chop, type=InlinedCode}, {text=., type=SimpleText}] [{text=Cheer, type=SimpleText}] [{text=Gives you a nice morale boost., type=SimpleText}] *Note on the Catch ability: Instead of providing an item buildup like the Fish and Chop abilities, the Catch ability provides an increased drop rate for items. It increases the drop rate for gems, Diamonds and Sparkle Fragments (for Sparkle Fragments only if you are using a Sparkle tool or better).</text>
       <score>STANDARD</score>
@@ -985,7 +1481,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/104#leaderboards</url>
-    <fullTitle>Mantaro Wiki: 104: Advanced knowledge, Leaderboards [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 104: Advanced knowledge, Leaderboards [Currency]</fullTitle>
     <text>
       <text>Mantaro offers a variety of leaderboard you can compete on. The available leaderboards include things like:Amount of wins in slots ( slots ) Money ( money ) Level ( level ) Amount of wins in gamble ( gamble ) Amount of games won ( games ) Reputation ( reputation ) Amount of times claimed as waifu ( claim ) Daily streak ( daily ) To view any of the leaderboards simply use /leaderboard &lt;name> , where &lt;name> is what is in () above. For instance /leaderboard gamble .</text>
       <score>STANDARD</score>
@@ -993,7 +1489,7 @@
   </entry>
   <entry>
     <url>/mantaro-wiki/currency/104#waifus</url>
-    <fullTitle>Mantaro Wiki: 104: Advanced knowledge, Waifus [Currency]</fullTitle>
+    <fullTitle>Mantaro Wiki: Currency 104: Advanced knowledge, Waifus [Currency]</fullTitle>
     <text>
       <text>The waifu system of Mantaro basically allows you to "claim" (please note that this does not imply any relationships or real life events) users for whatever they are worth. Why would you care? Well, the only real reason to care is either the Waifu Pill item mentioned before, or to show off how expensive the people you "own" are. It is however noteworthy that you cannot sell waifus, and unclaiming them actually requires you to pay money. They are also are not unique to you, one user can claim a user you already claimed. How do you claim a user? This is actually rather easy you simply type /waifu claim user:&lt;mention> . You will then spend the money that user is worth to claim them. This will occupy a slot. By default, you have 3 slots. You can buy up to 20 slots using /waifu buyslot .You can list the waifus you have claimed at any time using /waifu list . How do you unclaim a user? It is almost as easy as claiming a user if you still share a server with said person. You simply have to type /waifu unclaim user:&lt;mention> .In the event that you do not share a server with a user you claimed anymore you will have to obtain their unique identifier (ID) which is not the numbers after the # in their user handle. To find out their ID use /waifu list id:True . This will show you your usual waifu list, but it will also include the ID of each waifu. After that simply use /waifu unclaim id:&lt;id> . How do I check someone else's waifu value and how do I raise my own? To check your own or someone else's waifu value you can simply type /waifu stats for your own or /waifu stats user:&lt;mention> for someone else.In this menu you will see so-called "weight values", and a reputation multiplier along your total performance points and your total value. Your performance and value can be raised by increasing any of the weight values and or gaining more reputation (please note that a reputation multiplier below 1 gets treated as 1). For instance to raise your badge weight you would have to gain more badges. To raise your claim weight you would have to have yourself get waifu claimed and so on. This also means your total value can drop if any of these values decrease (the only ones that actually can decrease is money and claim).</text>
       <score>STANDARD</score>

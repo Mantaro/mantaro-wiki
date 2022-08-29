@@ -83,7 +83,23 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<p>&quot;h3&quot; ~&gt;ban &lt;mention&gt; {reason} Description: Bans the given member from the server and deletes all of their messages from the last 7 days.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Ban permissions. Example(s): ~&gt;ban @Adam#9261 &quot;h3&quot; ~&gt;kick &lt;mention&gt; {reason} Description: Kicks the given Member from the server.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Kick permissions. Example(s): ~&gt;kick @Adam#9261 &quot;h3&quot; ~&gt;mute [time ]&lt;mention&gt; {reason} Description: Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted. Remember that Mantaro only assigns the specified Mute role to the user mentioned. Its up to the server admins to remove the Discord Permissions for said Mute role.Requirements:This command requires either https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Ban or Kick permissions. Example(s): ~&gt;mute 30s @Adam#9261 good meme &quot;h3&quot; ~&gt;opts Description: The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our https://github.com/Mantaro/MantaroBot/wiki/Configuration Configuration Page.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Admin permissions. &quot;h3&quot; ~&gt;prune &lt;amount&gt; Description: Deletes messages (excluding messages that are older than 14 days). Minimum of messagesto delete is 5 and maximum is 100.Subcommand(s): bot {amount} : This will delete the specified amount of messages that were made by bots. nopins {amount} : This will delete the specified amount of messages that are not pinned. Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Messages permissions. Example(s): ~&gt;prune 60 ~&gt;prune 70 @Adam#9261 ~&gt;prune bot ~&gt;prune nopins 60 &quot;h3&quot; ~&gt;softban &lt;mention&gt; {reason} Description: Soft-Bans (Bans and immediately unbans) the given Member from the server and deletes all of their messages from the last 7 days.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Ban permissions. Example(s): ~&gt;softban @Adam#9261 . &quot;h3&quot; ~&gt;unmute &lt;mention&gt; Description: Unmute the mentioned user if mutedRequirements:This command requires either https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Ban or Kick permissions. Example(s): ~&gt;unmute @Adam#9261</p>
+<header><h1>/mute</h1></header>
+<p>Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted. Options user Required The user to mute. time Optional The amount of time to mute the user for. For example 1m20s. The format is, for example, 1h20m10s for 1 hour, 20 minutes and 10 seconds. If not specified, this uses the default mute timeout set for this server, if set. reason Optional The reason of the mute. This will show in the logs, if enabled. Requirements This command requires either commands/permissions#intro Ban or Kick permissions. Examples /mute user: @Adam#9261 /mute user: @Adam#9261 time: 1h20m10s /mute user: @Adam#9261 reason: good meme</p>
+</article>
+
+<article>
+<header><h1>~>opts</h1></header>
+<p>The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our configuration/all-options Configuration Page. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Requirements This command requires commands/permissions#intro Admin permissions.</p>
+</article>
+
+<article>
+<header><h1>/prune</h1></header>
+<p>Delete messages (excluding messages that are older than 14 days). Minimum of messages to delete is 5 and maximum is 100. Options amount Required The amount of messages to prune, from 5 to 100. user Optional Only prune from this specific user. botonly Optional Only prune messages from bots. skippinned Optional Don't prune pinned messages. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Messages permissions. Examples /prune amount: 10 /prune amount: 10 user: @Adam#9261 /prune amount: 10 botonly: true /prune amount: 10 skippinned: true</p>
+</article>
+
+<article>
+<header><h1>/unmute</h1></header>
+<p>Unmute the mentioned user if muted. Options user Required The user to unmute. reason Optional The reason of the unmute. This will show in the logs, if enabled. Requirements This command requires either commands/permissions#intro Ban or Kick permissions. Examples /unmute user: @Adam#9261 /unmute user: @Adam#9261 reason: good meme</p>
 </article>
 </section>
 </div>
@@ -110,688 +126,608 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "mute",
+      "title" : "/mute",
+      "type" : "Section",
       "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>ban <mention> {reason}",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Description:",
+          "text" : "Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Bans the given member from the server and deletes all of their messages from the last 7 days.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        "tabsContent" : [ {
+          "name" : "Options",
           "content" : [ {
-            "text" : "This command requires ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
+            "parameters" : [ {
+              "name" : "user",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "user",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The user to mute.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "time",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "time",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The amount of time to mute the user for. For example 1m20s. The format is, for example, 1h20m10s for 1 hour, 20 minutes and 10 seconds. If not specified, this uses the default mute timeout set for this server, if set.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "reason",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "reason",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The reason of the mute. This will show in the logs, if enabled.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          } ]
+        }, {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
             "content" : [ {
-              "type" : "StrongEmphasis",
+              "type" : "ListItem",
               "content" : [ {
-                "text" : "Ban",
-                "type" : "SimpleText"
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires either ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Ban",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Kick",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mute ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Adam#9261",
+                  "type" : "SimpleText"
+                } ]
               } ]
             }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mute ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Adam#9261 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "time:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "1h20m10s",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mute ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Adam#9261 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "reason:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "good meme",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "style" : "api",
+      "id" : "opts",
+      "title" : "~>opts",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The opts command includes an extensive list of option commands.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "You can find our complete list of the opts commands and their examples in our ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/mantaro-wiki/configuration/all-options",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Configuration Page",
             "type" : "SimpleText"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
+        }, {
+          "text" : ".",
           "type" : "SimpleText"
         } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
+      }, {
+        "type" : "Paragraph",
         "content" : [ {
-          "type" : "Paragraph",
+          "text" : "Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Requirements",
           "content" : [ {
-            "code" : "~>ban @Adam#9261",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>kick <mention> {reason}",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Kicks the given Member from the server.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "text" : "This command requires ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
             "content" : [ {
-              "type" : "StrongEmphasis",
+              "type" : "ListItem",
               "content" : [ {
-                "text" : "Kick",
-                "type" : "SimpleText"
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Admin",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "style" : "api",
+      "id" : "prune",
+      "title" : "/prune",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Delete messages (excluding messages that are older than 14 days). Minimum of messages to delete is 5 and maximum is 100.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "parameters" : [ {
+              "name" : "amount",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "amount",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The amount of messages to prune, from 5 to 100.",
+                  "type" : "SimpleText"
+                } ]
               } ]
             }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
+              "name" : "user",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "user",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Only prune from this specific user.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "botonly",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "botonly",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Only prune messages from bots.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "skippinned",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "skippinned",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Don't prune pinned messages.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "reason",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "reason",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The reason of the prune. This will show in the logs, if enabled.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        }, {
+          "name" : "Requirements",
           "content" : [ {
-            "code" : "~>kick @Adam#9261",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>mute [time ]<mention> {reason}",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted.",
-        "type" : "SimpleText"
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Remember that Mantaro only assigns the specified Mute role to the user mentioned. Its up to the server admins to remove the Discord Permissions for said Mute role.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "text" : "This command requires either ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
             "content" : [ {
-              "type" : "StrongEmphasis",
+              "type" : "ListItem",
               "content" : [ {
-                "text" : "Ban",
-                "type" : "SimpleText"
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Messages",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
               } ]
-            }, {
-              "text" : " or ",
-              "type" : "SimpleText"
-            }, {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Kick",
-                "type" : "SimpleText"
-              } ]
-            }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        }, {
+          "name" : "Examples",
           "content" : [ {
-            "code" : "~>mute 30s @Adam#9261 good meme",
-            "type" : "InlinedCode"
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/prune ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "amount:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "10",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/prune ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "amount:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "10 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Adam#9261",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/prune ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "amount:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "10 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "botonly:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "true",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/prune ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "amount:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "10 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "skippinned:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "true",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
+        } ],
+        "type" : "Tabs"
       } ]
     }, {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "unmute",
+      "title" : "/unmute",
+      "type" : "Section",
       "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>opts",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Description:",
+          "text" : "Unmute the mentioned user if muted.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our ",
-        "type" : "SimpleText"
-      }, {
-        "url" : "https://github.com/Mantaro/MantaroBot/wiki/Configuration",
-        "isFile" : false,
-        "type" : "Link",
-        "content" : [ {
-          "text" : "Configuration Page",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "text" : ".",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        "tabsContent" : [ {
+          "name" : "Options",
           "content" : [ {
-            "text" : "This command requires ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
+            "parameters" : [ {
+              "name" : "user",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "user",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The user to unmute.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "reason",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "reason",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The reason of the unmute. This will show in the logs, if enabled.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          } ]
+        }, {
+          "name" : "Requirements",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
             "content" : [ {
-              "type" : "StrongEmphasis",
+              "type" : "ListItem",
               "content" : [ {
-                "text" : "Admin",
-                "type" : "SimpleText"
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "This command requires either ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Ban",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Kick",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
               } ]
-            }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>prune <amount>",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Deletes messages (excluding messages that are older than 14 days). Minimum of messagesto delete is 5 and maximum is 100.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Subcommand(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        }, {
+          "name" : "Examples",
           "content" : [ {
-            "code" : "bot {amount}",
-            "type" : "InlinedCode"
-          }, {
-            "text" : ": This will delete the specified amount of messages that were made by bots.",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "nopins {amount}",
-            "type" : "InlinedCode"
-          }, {
-            "text" : ": This will delete the specified amount of messages that are not pinned.",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "text" : "This command requires ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
-            "content" : [ {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Messages",
-                "type" : "SimpleText"
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/unmute ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Adam#9261",
+                  "type" : "SimpleText"
+                } ]
               } ]
             }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>prune 60",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>prune 70 @Adam#9261",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>prune bot",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>prune nopins 60",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>softban <mention> {reason}",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Soft-Bans (Bans and immediately unbans) the given Member from the server and deletes all of their messages from the last 7 days.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "text" : "This command requires ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
-            "content" : [ {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Ban",
-                "type" : "SimpleText"
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/unmute ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Adam#9261 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "reason:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "good meme",
+                  "type" : "SimpleText"
+                } ]
               } ]
-            }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>softban @Adam#9261",
-            "type" : "InlinedCode"
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>unmute <mention>",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Unmute the mentioned user if muted",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "text" : "This command requires either ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
-            "content" : [ {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Ban",
-                "type" : "SimpleText"
-              } ]
-            }, {
-              "text" : " or ",
-              "type" : "SimpleText"
-            }, {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Kick",
-                "type" : "SimpleText"
-              } ]
-            }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>unmute @Adam#9261",
-            "type" : "InlinedCode"
-          } ]
-        } ]
+        } ],
+        "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661118056859,
+    "lastModifiedTime" : 1661566615626,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🔨 Moderation Commands",
@@ -801,7 +737,23 @@ ReactDOM.render(React.createElement(Documentation, {
       "dirName" : "commands",
       "fileName" : "moderation-commands",
       "viewOnRelativePath" : null,
-      "pageSectionIdTitles" : [ ]
+      "pageSectionIdTitles" : [ {
+        "title" : "/mute",
+        "id" : "mute",
+        "style" : "api"
+      }, {
+        "title" : "~>opts",
+        "id" : "opts",
+        "style" : "api"
+      }, {
+        "title" : "/prune",
+        "id" : "prune",
+        "style" : "api"
+      }, {
+        "title" : "/unmute",
+        "id" : "unmute",
+        "style" : "api"
+      } ]
     }
   }
 }), document.getElementById("znai"));
