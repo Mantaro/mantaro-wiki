@@ -45,7 +45,7 @@ Examples:
 
 
 # /custom {style: "api"}
-Creates a custom command. For further info check our [Custom Commands Guide](custom-commands/101).
+Creates a custom command. For further info check our [Custom Commands Guide](guides/custom-commands).
 
 ````tabs 
 Subcommands:
@@ -108,7 +108,7 @@ Edit.nsfw, Required, "Whether the entire command should be marked as nsfw."
  Note: The `List` and `Eval` Subcommands have no options.
 
 Requirements:
-* If normal users aren't allowed to make custom commands with one of our [opts options](configuration/all-options) then this command requires [**Admin** permissions](commands/permissions#intro).
+* If normal users aren't allowed to make custom commands with one of our [opts options](basics/server-configuration) then this command requires [**Admin** permissions](commands/permissions#intro).
 
 Examples:
 ```api-parameters

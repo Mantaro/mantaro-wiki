@@ -1,6 +1,3 @@
----
-title: Custom 101: Your guide
----
 
 **The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.**
 

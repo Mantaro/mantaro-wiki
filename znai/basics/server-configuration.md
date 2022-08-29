@@ -1,5 +1,3 @@
----
-title: Server Configuration
 # Intro
 _**You can get a list of all options without going to this wiki by doing:**_ `~>opts ls` or `~>opts list`.
 

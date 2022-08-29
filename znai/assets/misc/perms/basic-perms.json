@@ -1,7 +1,7 @@
 [
   {
     "Permission Name": "DJ",
-    "Description": "Having a role called `DJ` or the [established DJ role for the server](configuration/all-options#music-configuration), or being the one who requested the song. As well, having the bellow `Admin` permissions also grants this.",
+    "Description": "Having a role called `DJ` or the [established DJ role for the server](basics/server-configuration#music-configuration), or being the one who requested the song. As well, having the bellow `Admin` permissions also grants this.",
     "Mantaro": "-",
     "User": "+"
   },

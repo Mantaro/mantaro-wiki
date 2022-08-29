@@ -28,7 +28,7 @@ Examples:
 
 # ~>opts {style: "api"}
 The opts command includes an extensive list of option commands. 
-You can find our complete list of the opts commands and their examples in our [Configuration Page](configuration/all-options).
+You can find our complete list of the opts commands and their examples in our [Configuration Page](basics/server-configuration).
 
 :include-markdown: assets/md/text-commands-disclaimer.md
 

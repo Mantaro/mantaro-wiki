@@ -1,9 +1,7 @@
-legal
-    terms-of-service
-    privacy-policy
 basics
     FAQ
     premium-perks
+    server-configuration
 commands
     permissions
     audio-commands
@@ -15,12 +13,10 @@ commands
     moderation-commands
     info-commands
     utility-commands
-configuration
-    all-options
+guides
     welcome-and-leave-messages
     birthday-announcer
-custom-commands
-    101
+    custom-commands
     modifiers
 currency
     101
@@ -29,3 +25,6 @@ currency
     104
     badges
     items
+legal
+    terms-of-service
+    privacy-policy
