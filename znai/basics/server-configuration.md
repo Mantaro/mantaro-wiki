@@ -5,6 +5,8 @@ Just as a general statement, don't include the `<>` from the examples on the act
 
 If the role has a space, try wrapping it in quotes if it doesn't work when you try to set it as x thing.
 
+Warning: Since the `opts` command has not been ported to Slash Commands, this page is subject to massive changes in the future.
+
 ---
 # Basic Server Configuration
 These include some basic configuration you can do like setting a custom Prefix
@@ -13,17 +15,17 @@ These include some basic configuration you can do like setting a custom Prefix
 |:--------------------------------------------------------:|:-----------------------------------------------:|:--------------------------------------------:|
 |                      Custom Prefix                       |          `~>opts prefix set <prefix>`           | [Like This](https://i.imgur.com/LPkMAuL.png) |
 |                   Reset Custom Prefix                    |              `~>opts prefix clear`              | [Like This](https://i.imgur.com/JDPKVCC.png) |
-|          Restricting Custom<br>Command Creation          |         `~>opts admincustom true/false`         | [Like This](https://i.imgur.com/igMkJ5I.png) |
+|           Restricting Custom Command Creation            |         `~>opts admincustom true/false`         | [Like This](https://i.imgur.com/igMkJ5I.png) |
 |           Time Setting for time based commands           |        `~>opts timedisplay set 12h/24h`         | [Like This](https://i.imgur.com/ea8AUeZ.png) |
 | Blacklist a tag from imageboard commands (danbooru etc.) |  `~>opts imageboard tags blacklist add <tag>`   | [Like This](https://i.imgur.com/7lhsI2B.png) |
-|        Unblacklist a tag from imageboard commands        | `~>opts imageboard tags blacklist remove <tag>` | [Like This](https://i.imgur.com/lttgtkY.png) |
+|       Un-blacklist a tag from imageboard commands        | `~>opts imageboard tags blacklist remove <tag>` | [Like This](https://i.imgur.com/lttgtkY.png) |
 |                  Set the guild language                  |          `~>opts language set <lang>`           | [Like This](https://i.imgur.com/45NZOr7.png) |
 |           Toggle message for disabled commands           |      `~>opts commands showdisablewarning`       | [Like This](https://i.imgur.com/2amfDaU.png) |
 
 
 ---
 # Birthday Announcer
-These are the commands you can use to allow/edit the Birthday Announcer. You can check our birthday announcer tutorial [here](https://github.com/Mantaro/MantaroBot/wiki/Birthday-101).
+These are the commands you can use to allow/edit the Birthday Announcer. You can check our birthday announcer tutorial [here](guides/birthday-announcer).
 
 |                    Type                     |                         Command                         |                   Preview                    |
 |:-------------------------------------------:|:-------------------------------------------------------:|:--------------------------------------------:|
@@ -40,10 +42,9 @@ Please note that the role you provide in the birthday announcer commands is **no
 
 ---
 # Welcome and Leave messages
-These include all the things you need for Welcome and Leave messages, you can also use any of [these](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers---
-#modifiers-for-welcomeleave-messages) in them. They also support embedded messages
-check the [custom command documentation.](https://github.com/Mantaro/MantaroBot/wiki/Custom-Commands-101) for that.
-For a detailed tutorial click [here](https://github.com/Mantaro/MantaroBot/wiki/Welcome-and-Leave-Messages-tutorial)
+These include all the things you need for Welcome and Leave messages, you can also use any of [these](guides/modifiers#modifiers-for-welcomeleave-messages) in them. 
+They also support embedded messages, check our [Embed guide](guides/embeds) for that.
+For a detailed tutorial click [here](guides/welcome-and-leave-messages).
 
 |                 Type                 |                                      Command                                       |                   Preview                    |
 |:------------------------------------:|:----------------------------------------------------------------------------------:|:--------------------------------------------:|
@@ -67,7 +68,7 @@ For a detailed tutorial click [here](https://github.com/Mantaro/MantaroBot/wiki/
 
 ---
 # Autorole on join & Self-assignable roles
-You can assign newly joined members to a specific role as well as you can setup roles that people can claim themselves using the `~>iam` command
+You can assign newly joined members to a specific role as well as you can set up roles that people can claim themselves using the `/iam` command
 
 |                       Type                       |                            Command                            |                   Preview                    |
 |:------------------------------------------------:|:-------------------------------------------------------------:|:--------------------------------------------:|
@@ -76,7 +77,7 @@ You can assign newly joined members to a specific role as well as you can setup 
 |  Enable/Disable ignoring bots for the autorole   |          `~>opts server ignorebots autoroles toggle`          | [Like This](https://i.imgur.com/BPYuJKa.png) |
 |              Add a Self-Assignable               |     `~>opts autoroles add <iam name> <name of the role>`      | [Like This](https://i.imgur.com/KPWrQEH.png) |
 |             Remove a Self-Assignable             |             `~>opts autoroles remove <iam name>`              | [Like This](https://i.imgur.com/hjq4PYw.png) |
-|            Clear all Self-Assignables            |                   `~>opts autoroles clear`                    | [Like This](https://i.imgur.com/ysPMOXO.png) |
+|            Clear all Self-Assignable             |                   `~>opts autoroles clear`                    | [Like This](https://i.imgur.com/ysPMOXO.png) |
 | Categorize a Self-Assignable (used for ~>iam ls) |  `~>opts autoroles category add <category name> <iam name>`   | [Like This](https://i.imgur.com/DYnYWHb.png) |
 |     Remove a Self-Assignable from a category     | `~>opts autoroles category remove <category name> <iam name>` | [Like This](https://i.imgur.com/iXyocbV.png) |
 
@@ -84,8 +85,7 @@ You can assign newly joined members to a specific role as well as you can setup 
 ---
 # Server Logs
 You can enable server logs to see deleted and edited messages as well as Moderation actions etc.
-Custom log messages (editmessage, deletemessage and banmessage) support all of [these](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers---
-#modifiers-for-log-messages).
+Custom log messages (editmessage, deletemessage and banmessage) support all of [these](guides/modifiers#modifiers-for-log-messages).
 
 |                   Type                   |                                  Command                                  |                   Preview                    |
 |:----------------------------------------:|:-------------------------------------------------------------------------:|:--------------------------------------------:|
@@ -131,7 +131,7 @@ Some small configuration options for the Music feature.
 
 ---
 # Auto-Mod & Moderation Options
-Configure the basic moderation and setup an auto-mod for discord invites and spam.
+Configure the basic moderation and set up an auto-mod for discord invites and spam.
 
 |                  Type                  |                 Command                 |                   Preview                    |
 |:--------------------------------------:|:---------------------------------------:|:--------------------------------------------:|
