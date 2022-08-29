@@ -83,7 +83,38 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<p>&quot;h3&quot; ~&gt;8ball &lt;question&gt; Description: Ask the magic 8ball a question.Requirements:This command does not have any specific requirements. Alias(es): 8b Example(s): ~&gt;8ball Will Mantaro ever be consistent? &quot;h3&quot; ~&gt;anime &lt;name&gt; Description: Searches for the anime specified using https://kitsu.io/ Kitsu.io. You will be given a list of search results using the indicated anime. After this you will have to type the number related to the option you wish to see more information for.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): animu Example(s): ~&gt;anime One Piece ~&gt;anime Hunter x Hunter &quot;h3&quot; ~&gt;character &lt;name&gt; Description: Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to type the number related to the option you wish to see more information for.Requirements:This command requires https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge Embed permissions. Alias(es): char Example(s): ~&gt;character Luffy ~&gt;character Gon &quot;h3&quot; ~&gt;coinflip &lt;times&gt; Description: Flip the coin once or multiple times.Requirements:This command does not have any specific requirements. Example(s): ~&gt;coinflip ~&gt;coinflip 50 &quot;h3&quot; ~&gt;love &lt;@mention&gt; {@mention} Description: Calculate the love between two people. You can either mention one user (matches with yourself) or two (matches 2 users).Requirements:This command does not have any specific requirements. Example(s): ~&gt;love @Kodehawa#3457 ~&gt;love @Kodehawa#3457 @Adam#9261 &quot;h3&quot; ~&gt;ratewaifu &lt;text&gt; Description: Rate your waifu from 0-100.Requirements:This command does not have any specific requirements. Alias(es): rw rate Example(s): ~&gt;ratewaifu Kode &quot;h3&quot; ~&gt;roll {times} {-amount &lt;amount&gt;} {-size &lt;die size&gt;} Description: Roll the die. The times field allows you to use Die Format or to select how many times a normal die will roll. Die Format is formed like this: &lt;amount&gt;d&lt;size&gt; The other option is to use the -amount field to specify how many times the die will roll, and the -size to specify the size of the die.Requirements:This command does not have any specific requirements. Example(s): ~&gt;roll ~&gt;roll 5 ~&gt;roll -amount 4 ~&gt;roll -amount 1 -size 20 ~&gt;roll 1d20 ~&gt;roll 5d1000</p>
+<header><h1>/8ball</h1></header>
+<p>Ask the magic 8ball a question. Options question Required The question to ask. Examples /8ball question: Will Mantaro ever be consistent?</p>
+</article>
+
+<article>
+<header><h1>/anime</h1></header>
+<p>Searches for the anime specified using https://kitsu.io/ Kitsu.io. You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the anime/manga to look for. Examples /anime name: One Piece /anime name: Hunter x Hunter</p>
+</article>
+
+<article>
+<header><h1>/character</h1></header>
+<p>Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the character to look for. Examples /character name: Luffy /character name: Gon Freecss</p>
+</article>
+
+<article>
+<header><h1>/coinflip</h1></header>
+<p>Flip the coin once or multiple times. Options times Optional The amount of times to flip the coin. Examples /coinflip /coinflip times: 50</p>
+</article>
+
+<article>
+<header><h1>/love</h1></header>
+<p>Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261</p>
+</article>
+
+<article>
+<header><h1>/ratewaifu</h1></header>
+<p>Rate your waifu from 0-100. Results may vary. Options user Required The user to rate. Examples /ratewaifu user: @Kodehawa#3457 /ratewaifu user: @Adam#9261</p>
+</article>
+
+<article>
+<header><h1>/roll</h1></header>
+<p>Roll an any-sided dice a 1 or more times. By default, this command will roll a 6-sized dice 1 time. Options times Optional The amount of times to roll, in d20 format. Examples /roll /roll times: 5d1000 /roll times: 1d20</p>
 </article>
 </section>
 </div>
@@ -110,761 +141,546 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "8ball",
+      "title" : "/8ball",
+      "type" : "Section",
       "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>8ball <question>",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Description:",
+          "text" : "Ask the magic 8ball a question.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Ask the magic 8ball a question.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        "tabsContent" : [ {
+          "name" : "Options",
           "content" : [ {
-            "text" : "This command does not have any specific requirements.",
+            "parameters" : [ {
+              "name" : "question",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "question",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The question to ask.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/8ball ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "question:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "Will Mantaro ever be consistent?",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "style" : "api",
+      "id" : "anime",
+      "title" : "/anime",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Searches for the anime specified using ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://kitsu.io/",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Kitsu.io",
             "type" : "SimpleText"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Alias(es):",
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for.",
           "type" : "SimpleText"
         } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+      }, {
+        "tabsContent" : [ {
+          "name" : "Options",
           "content" : [ {
-            "code" : "8b",
-            "type" : "InlinedCode"
+            "parameters" : [ {
+              "name" : "name",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "name",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The name of the anime/manga to look for.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        }, {
+          "name" : "Examples",
           "content" : [ {
-            "code" : "~>8ball Will Mantaro ever be consistent?",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>anime <name>",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Searches for the anime specified using ",
-        "type" : "SimpleText"
-      }, {
-        "url" : "https://kitsu.io/",
-        "isFile" : false,
-        "type" : "Link",
-        "content" : [ {
-          "text" : "Kitsu.io",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "text" : ".",
-        "type" : "SimpleText"
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "You will be given a list of search results using the indicated anime. After this you will have to type the number related to the option you wish to see more information for.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "text" : "This command requires ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
-            "content" : [ {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Embed",
-                "type" : "SimpleText"
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/anime ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "name:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "One Piece",
+                  "type" : "SimpleText"
+                } ]
               } ]
             }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/anime ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "name:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "Hunter x Hunter",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
+        } ],
+        "type" : "Tabs"
       } ]
     }, {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "character",
+      "title" : "/character",
+      "type" : "Section",
       "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Alias(es):",
+          "text" : "Searches for the anime character specified.",
           "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "animu",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>anime One Piece",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>anime Hunter x Hunter",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>character <name>",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Searches for the anime character specified.",
-        "type" : "SimpleText"
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "You will be given a list of search results using the indicated character. After this you will have to type the number related to the option you wish to see more information for.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        "tabsContent" : [ {
+          "name" : "Options",
           "content" : [ {
-            "text" : "This command requires ",
-            "type" : "SimpleText"
-          }, {
-            "url" : "https://github.com/Mantaro/MantaroBot/wiki/Command-reference-and-documentation#basic-knowledge",
-            "isFile" : false,
-            "type" : "Link",
-            "content" : [ {
-              "type" : "StrongEmphasis",
-              "content" : [ {
-                "text" : "Embed",
-                "type" : "SimpleText"
+            "parameters" : [ {
+              "name" : "name",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "name",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The name of the character to look for.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/character ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "name:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "Luffy",
+                  "type" : "SimpleText"
+                } ]
               } ]
             }, {
-              "text" : " permissions",
-              "type" : "SimpleText"
-            } ]
-          }, {
-            "text" : ".",
-            "type" : "SimpleText"
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/character ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "name:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "Gon Freecss",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
+        } ],
+        "type" : "Tabs"
       } ]
     }, {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "coinflip",
+      "title" : "/coinflip",
+      "type" : "Section",
       "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Alias(es):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "char",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>character Luffy",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>character Gon",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>coinflip <times>",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
+          "text" : "Flip the coin once or multiple times.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Flip the coin once or multiple times.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        "tabsContent" : [ {
+          "name" : "Options",
           "content" : [ {
-            "text" : "This command does not have any specific requirements.",
-            "type" : "SimpleText"
+            "parameters" : [ {
+              "name" : "times",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "times",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The amount of times to flip the coin.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        }, {
+          "name" : "Examples",
           "content" : [ {
-            "code" : "~>coinflip",
-            "type" : "InlinedCode"
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/coinflip",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/coinflip ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "times:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "50",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>coinflip 50",
-            "type" : "InlinedCode"
-          } ]
-        } ]
+        } ],
+        "type" : "Tabs"
       } ]
     }, {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "love",
+      "title" : "/love",
+      "type" : "Section",
       "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>love <@mention> {@mention}",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Description:",
+          "text" : "Calculate the love between two people. Results may vary. This is random, for real.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Calculate the love between two people. You can either mention one user (matches with yourself) or two (matches 2 users).",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        "tabsContent" : [ {
+          "name" : "Options",
           "content" : [ {
-            "text" : "This command does not have any specific requirements.",
-            "type" : "SimpleText"
+            "parameters" : [ {
+              "name" : "user",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "user",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The user to compare with.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        }, {
+          "name" : "Examples",
           "content" : [ {
-            "code" : "~>love @Kodehawa#3457",
-            "type" : "InlinedCode"
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/love ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/love ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Adam#9261",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>love @Kodehawa#3457 @Adam#9261",
-            "type" : "InlinedCode"
-          } ]
-        } ]
+        } ],
+        "type" : "Tabs"
       } ]
     }, {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "ratewaifu",
+      "title" : "/ratewaifu",
+      "type" : "Section",
       "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>ratewaifu <text>",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Description:",
+          "text" : "Rate your waifu from 0-100. Results may vary.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Rate your waifu from 0-100.",
-        "type" : "SimpleText"
+        "tabsContent" : [ {
+          "name" : "Options",
+          "content" : [ {
+            "parameters" : [ {
+              "name" : "user",
+              "type" : [ {
+                "text" : "Required",
+                "url" : ""
+              } ],
+              "anchorId" : "user",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The user to rate.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/ratewaifu ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/ratewaifu ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "user:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Adam#9261",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
+          } ]
+        } ],
+        "type" : "Tabs"
       } ]
     }, {
-      "type" : "Paragraph",
+      "style" : "api",
+      "id" : "roll",
+      "title" : "/roll",
+      "type" : "Section",
       "content" : [ {
-        "type" : "StrongEmphasis",
+        "type" : "Paragraph",
         "content" : [ {
-          "text" : "Requirements:",
+          "text" : "Roll an any-sided dice a 1 or more times.",
           "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "text" : "This command does not have any specific requirements.",
-            "type" : "SimpleText"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Alias(es):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "rw",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "rate",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>ratewaifu Kode",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "\"h3\" ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "~>roll {times} {-amount <amount>} {-size <die size>}",
-        "type" : "InlinedCode"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Description:",
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "By default, this command will roll a 6-sized dice 1 time.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Roll the die. The ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "times",
-        "type" : "InlinedCode"
-      }, {
-        "text" : " field allows you to use Die Format or to select how many times a normal die will roll.",
-        "type" : "SimpleText"
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "Die Format is formed like this: ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "<amount>d<size>",
-        "type" : "InlinedCode"
-      }, {
-        "text" : " ",
-        "type" : "SimpleText"
-      }, {
-        "type" : "SoftLineBreak"
-      }, {
-        "text" : "The other option is to use the ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "-amount",
-        "type" : "InlinedCode"
-      }, {
-        "text" : " field to specify how many times the die will roll, and the ",
-        "type" : "SimpleText"
-      }, {
-        "code" : "-size",
-        "type" : "InlinedCode"
-      }, {
-        "text" : " to specify the size of the die.",
-        "type" : "SimpleText"
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Requirements:",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        "tabsContent" : [ {
+          "name" : "Options",
           "content" : [ {
-            "text" : "This command does not have any specific requirements.",
-            "type" : "SimpleText"
+            "parameters" : [ {
+              "name" : "times",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "times",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The amount of times to roll, in d20 format.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      } ]
-    }, {
-      "type" : "Paragraph",
-      "content" : [ {
-        "type" : "StrongEmphasis",
-        "content" : [ {
-          "text" : "Example(s):",
-          "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "bulletMarker" : "*",
-      "tight" : true,
-      "type" : "BulletList",
-      "content" : [ {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
+        }, {
+          "name" : "Examples",
           "content" : [ {
-            "code" : "~>roll",
-            "type" : "InlinedCode"
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/roll",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/roll ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "times:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "5d1000",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/roll ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "times:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "1d20",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "type" : "ApiParameters"
           } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>roll 5",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>roll -amount 4",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>roll -amount 1 -size 20",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>roll 1d20",
-            "type" : "InlinedCode"
-          } ]
-        } ]
-      }, {
-        "type" : "ListItem",
-        "content" : [ {
-          "type" : "Paragraph",
-          "content" : [ {
-            "code" : "~>roll 5d1000",
-            "type" : "InlinedCode"
-          } ]
-        } ]
+        } ],
+        "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661118025094,
+    "lastModifiedTime" : 1661564685852,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🎲 Fun Commands",
@@ -874,7 +690,35 @@ ReactDOM.render(React.createElement(Documentation, {
       "dirName" : "commands",
       "fileName" : "fun-commands",
       "viewOnRelativePath" : null,
-      "pageSectionIdTitles" : [ ]
+      "pageSectionIdTitles" : [ {
+        "title" : "/8ball",
+        "id" : "8ball",
+        "style" : "api"
+      }, {
+        "title" : "/anime",
+        "id" : "anime",
+        "style" : "api"
+      }, {
+        "title" : "/character",
+        "id" : "character",
+        "style" : "api"
+      }, {
+        "title" : "/coinflip",
+        "id" : "coinflip",
+        "style" : "api"
+      }, {
+        "title" : "/love",
+        "id" : "love",
+        "style" : "api"
+      }, {
+        "title" : "/ratewaifu",
+        "id" : "ratewaifu",
+        "style" : "api"
+      }, {
+        "title" : "/roll",
+        "id" : "roll",
+        "style" : "api"
+      } ]
     }
   }
 }), document.getElementById("znai"));
