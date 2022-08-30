@@ -39,7 +39,7 @@ This is as simple as adding `-nsfw` to the very end of the command while either 
 ---
 # Modifiers
 Custom commands support what's called *modifiers*, which are a set of predetermined custom command actions which might make your commands *spicier* and better.
-A list of those can be found [here](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers), so here we will see examples on how they work.
+A list of those can be found [here](guides/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands), so here we will see examples on how they work.
 The most useful ones are:
 * $(event.author.mention) `Mentions the person who executed the command.`
 * $(event.me.mention) `Mentions mantaro.`
@@ -70,7 +70,7 @@ In both cases Mantaro will act as if that person did `~>iam <name of the iam rol
 You can also specify your own custom message if you would like to, this works in both v3 and v2.\
 The v2 syntax for this would be `iamcustom:<name of the iam role> "<message>"` (same for iamnotcustom:).\
 The v3 syntax for this is `@{iam/iamnot;name of iam role;message}` where the message is optional, meaning you can use iam roles in v3 now, and that combined with embeds, texts, ifs and so on.
-For more info on iam roles please check [here](https://github.com/Mantaro/MantaroBot/wiki/Configuration).
+For more info on iam roles please check [here](basics/server-configuration#autorole-on-join-self-assignable-roles).
 
 ---
 # Embeds
