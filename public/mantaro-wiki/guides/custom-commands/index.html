@@ -84,7 +84,7 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>What is v3?</h1></header>
-<p>The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.</p>
+<p>Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.</p>
 </article>
 
 <article>
@@ -109,12 +109,12 @@
 
 <article>
 <header><h1>Modifiers</h1></header>
-<p>Custom commands support what's called modifiers, which are a set of predetermined custom command actions which might make your commands spicier and better. A list of those can be found https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers here, so here we will see examples on how they work. The most useful ones are:$(event.author.mention) Mentions the person who executed the command. $(event.me.mention) Mentions mantaro. $(event.message.raw) Basically you can use this to make a ~&gt;say command. Repeats what's after the command. $(event.channel.mention) Mentions the channel the command was executed on. $(event.channel.topic) Says the channel topic. $(event.guild.name) The name of your server. $(event.guild.owner.name) The server owner's name. $(event.guild.region) The server region. Basically, you can use those in any form of command.To create a command with those modifiers just create a command and use those. ( https://i.imgur.com/HBbUZzt.png Example). Works with multiple responses too. There is only one noticeable difference in v3. The difference is that you can basically set up your own modifiers per command. What that means is that you can define a value that you can then call using its modifier. And example of this would be: null https://i.imgur.com/GdmaZYk.png image</p>
+<p>Custom commands support what's called modifiers, which are a set of predetermined custom command actions which might make your commands spicier and better. A list of those can be found guides/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands here, so here we will see examples on how they work. The most useful ones are:$(event.author.mention) Mentions the person who executed the command. $(event.me.mention) Mentions mantaro. $(event.message.raw) Basically you can use this to make a ~&gt;say command. Repeats what's after the command. $(event.channel.mention) Mentions the channel the command was executed on. $(event.channel.topic) Says the channel topic. $(event.guild.name) The name of your server. $(event.guild.owner.name) The server owner's name. $(event.guild.region) The server region. Basically, you can use those in any form of command.To create a command with those modifiers just create a command and use those. ( https://i.imgur.com/HBbUZzt.png Example). Works with multiple responses too. There is only one noticeable difference in v3. The difference is that you can basically set up your own modifiers per command. What that means is that you can define a value that you can then call using its modifier. And example of this would be: null https://i.imgur.com/GdmaZYk.png image</p>
 </article>
 
 <article>
 <header><h1>Automating Play and Iam roles</h1></header>
-<p>You can also automate playing music and claiming/unclaiming self-assignable roles.If you want to create a music shortcut your content will have to be play:&lt;url to song&gt; . Mantaro will then act as if you were using the play command with this url when you run the command.If you want to make the command assign an existing iam role your content will have to be iam:&lt;name of the iam role&gt; If you want to do the opposite and you want the command unassigned an existing iam role you will have to put iamnot:&lt;name of the iam role&gt; . In both cases Mantaro will act as if that person did ~&gt;iam &lt;name of the iam role&gt; and ~&gt;iamnot &lt;name of the iam role&gt; respectively if they run the command. You can also specify your own custom message if you would like to, this works in both v3 and v2. The v2 syntax for this would be iamcustom:&lt;name of the iam role&gt; &quot;&lt;message&gt;&quot; (same for iamnotcustom:). The v3 syntax for this is @{iam/iamnot;name of iam role;message} where the message is optional, meaning you can use iam roles in v3 now, and that combined with embeds, texts, ifs and so on. For more info on iam roles please check https://github.com/Mantaro/MantaroBot/wiki/Configuration here.</p>
+<p>You can also automate playing music and claiming/unclaiming self-assignable roles.If you want to create a music shortcut your content will have to be play:&lt;url to song&gt; . Mantaro will then act as if you were using the play command with this url when you run the command.If you want to make the command assign an existing iam role your content will have to be iam:&lt;name of the iam role&gt; If you want to do the opposite and you want the command unassigned an existing iam role you will have to put iamnot:&lt;name of the iam role&gt; . In both cases Mantaro will act as if that person did ~&gt;iam &lt;name of the iam role&gt; and ~&gt;iamnot &lt;name of the iam role&gt; respectively if they run the command. You can also specify your own custom message if you would like to, this works in both v3 and v2. The v2 syntax for this would be iamcustom:&lt;name of the iam role&gt; &quot;&lt;message&gt;&quot; (same for iamnotcustom:). The v3 syntax for this is @{iam/iamnot;name of iam role;message} where the message is optional, meaning you can use iam roles in v3 now, and that combined with embeds, texts, ifs and so on. For more info on iam roles please check basics/server-configuration#autorole-on-join-self-assignable-roles here.</p>
 </article>
 
 <article>
@@ -151,6 +151,18 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience ",
+        "type" : "SimpleText"
+      }, {
+        "fill" : "red",
+        "id" : "heart",
+        "type" : "Icon"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
       "type" : "Paragraph",
       "content" : [ {
         "type" : "StrongEmphasis",
@@ -442,7 +454,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : "A list of those can be found ",
           "type" : "SimpleText"
         }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers",
+          "url" : "/mantaro-wiki/guides/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands",
           "isFile" : false,
           "type" : "Link",
           "content" : [ {
@@ -698,7 +710,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : "For more info on iam roles please check ",
           "type" : "SimpleText"
         }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Configuration",
+          "url" : "/mantaro-wiki/basics/server-configuration#autorole-on-join-self-assignable-roles",
           "isFile" : false,
           "type" : "Link",
           "content" : [ {
@@ -911,7 +923,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ]
       }, {
         "lang" : "",
-        "snippet" : "[\n{name:\"name of the first field\",\nvalue:\"value of the first field\", inline:true},\n{name:\"name of the second field\",\nvalue:\"value of the second field\",\ninline:false}\n]",
+        "snippet" : "[\n{name:\"name of the first field\",\nvalue:\"value of the first field\", inline:true},\n{name:\"name of the second field\",\nvalue:\"value of the second field\", inline:false}\n]",
         "type" : "Snippet"
       }, {
         "id" : "embeds-how-to-use-an-embed-in-custom-commands",
@@ -1774,7 +1786,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661808392435,
+    "lastModifiedTime" : 1661900142970,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Custom Commands",

@@ -83,128 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>1. How do I change the prefix for this bot?</h1></header>
-<p>Note: Remember that for the most up-to-date FAQ you want to check the FAQ channel on our discord server.You can change the prefix in this bot using ~&gt;opts prefix set &lt;prefix&gt; , where &lt;prefix&gt; would be replaced with whatever you desire it to be. Keep in mind that for technical and convenience reasons the prefixes ~&gt; , -&gt; and mantaro will always work and cannot be disabled.You can also mention the bot in replacement for a prefix.</p>
-</article>
-
-<article>
-<header><h1>2. What is premium and what is the Patreon bot?</h1></header>
-<p>Premium is a status that can be applied to both servers and users and provide perks like no music length limit and more. You can obtain premium keys by becoming a Patreon. The Patreon bot is however essentially a second Mantaro that runs on a different server, causing better Music quality. It is also the bot to receive new features first providing you with an insight of what is to come. You can read more info about premium, the Patreon bot and PayPal and Patreon donations in https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks this page.</p>
-</article>
-
-<article>
-<header><h1>3. How does EXP in Mantaro work and what use do levels have?</h1></header>
-<p>While levels do not serve much of a purpose right now they kind of give you an idea of how active someone is on discord (within servers that Mantaro is also in). To gain experience you simple send messages in any server with Mantaro. Spam won't work, there's a 30-35 seconds ratelimit between it counting messages. Every counted message counts towards 1-8XP and commands/interactive operation stuff won't gain you experience.</p>
-</article>
-
-<article>
-<header><h1>4. Some of Mantaro's commands are not showing any content (empty message), for instance on help?</h1></header>
-<p>Make sure that within your https://i.imgur.com/BhTarjg.png user settings you have https://i.imgur.com/8TV4qn0.png &quot;Link Preview&quot; enabled, as that is necessary to be able to see embeds. If that does not help the server you are on might have disabled Embed Links as a permission. If however neither is the case feel free to report it in #support, to gain assistance or insight as to why that's happening.</p>
-</article>
-
-<article>
-<header><h1>5. The bot is not responding or lagging behind what do I do?</h1></header>
-<p>There really isn't much that you can do besides wait. We will usually announce issues within this guild as soon as we become aware of them. In most cases this is just a temporary hiccup within discord and should resolve itself.</p>
-</article>
-
-<article>
-<header><h1>6. Mantaro joined a VC, but she isn't playing anything/she is lagging</h1></header>
-<p>There are a couple of troubleshooting steps that you can follow to fix this.Make sure that Mantaro has perms to both see and talk in the VC you are using. Make sure that Mantaro is not muted be it server mute, a role that mutes her or by you having lowered her volume on Discord to 0 before. 2.1) If someone has premium in the server/the server is premium, check the ~&gt;volume command to make sure her volume is not 0. Check the video that you are trying to play and/or try a different video. Sometimes Youtube videos get muted for copyright reasons, or they are region locked which could make it so Mantaro can't play the video. Change server region. To do this go into Server Settings and then pick any other region that is not the one you are currently using. If after all of this Mantaro is still not playing anything then it would mean that there is either an issue with Mantaro or a third party issue that goes out of our hands. If you get to this point then please let us know.</p>
-</article>
-
-<article>
-<header><h1>7. What do the items within Mantaro do? How to earn credits? What are waifu's and how to raise my waifu value?</h1></header>
-<p>We have a detailed wiki explaining all of these questions. Simply visit our https://github.com/Mantaro/MantaroBot/wiki/Currency-101 Currency-101 page and have all of them and more answered.</p>
-</article>
-
-<article>
-<header><h1>8. Can I add money to people in my own server/s server that I admin?</h1></header>
-<p>Short answer: no you cannot. Long answer: All of Mantaro's currency related features are on a global scale, allowing you to summon money from no where would tip the scale.</p>
-</article>
-
-<article>
-<header><h1>9. What is the Birthday announcer? Why are my birthdays not being announced? Can I set other people's Birthday?</h1></header>
-<p>We have a detailed wiki explaining all of these questions. Simply visit our https://github.com/Mantaro/MantaroBot/wiki/Birthday-101 Birthday-101 page and have all of them and more answered.</p>
-</article>
-
-<article>
-<header><h1>10. Can I unclaim people who I no longer share a server with or that show as unknown user? (Waifu command)</h1></header>
-<p>You can unclaim them using their Discord ID (not username#xxxx), you can get access to those by invoking the following ~&gt;waifu -id . Then you would simply put their ID in place of the mention ( ~&gt;waifu unclaim ID ).In the event that a user shows as unknown under your waifu list: You will be provided their user ID as their name, regardless of if you invoke with -id or not, and can do the above using that ID however you will have to append -unknown to the message i.E: ~&gt;waifu unclaim ID -unknown</p>
-</article>
-
-<article>
-<header><h1>11. When trying to waifu claim a user it says they are locked? How to get rid of claim keys?</h1></header>
-<p>When a user is &quot;locked&quot; that means they have prevented themselves from being claimed by another user. To turn this off the locked person needs to use ~&gt;profile claimlock remove .</p>
-</article>
-
-<article>
-<header><h1>12. What is dust?</h1></header>
-<p>Dust is something you will accumulate every time you, well, find dust in any command. At 97% it will prevent you from doing ~&gt;cast until you clear your dust using a mop that you can buy from the market ( ~&gt;useitem mop ).</p>
-</article>
-
-<article>
-<header><h1>13. How do I change my Profile description?</h1></header>
-<p>You can change your description at any time using ~&gt;profile description set &lt;text&gt; .</p>
-</article>
-
-<article>
-<header><h1>14. What are love letters? What are they used for? How do I get one?</h1></header>
-<p>Love letters are given to each person upon marrying using ~&gt;marry . They can be used to create a love letter between those people (only the proposer may do so) using ~&gt;marry createletter &lt;text&gt; .</p>
-</article>
-
-<article>
-<header><h1>15. How do I make a custom action command like ~>hug?</h1></header>
-<p>You would use something like this: ~&gt;custom new action v3:@{ if; $(event.message); usermention; @{embed; description:&quot;$(event.author) is using an action on $(event.message)&quot;, image:&quot;https://mrlar.dev/i/5NCuLZswrZgqHq5.png&quot; }; You need to mention a user! } Where you replace the URL with an URL to an image of your choice and the text with any text of your choice. You can use multiple images by using the above statement with custom add instead of custom new repeatedly, it will add multiple reponses and pick one at random.</p>
-</article>
-
-<article>
-<header><h1>16. Mantaro has deleted all my roles/channels/banned all my user/or similar</h1></header>
-<p>Before reporting ensure the action was taken by the real Mantaro. To identify the real one you check one of 3 things, though it is best to check them all.Check if the Username is exactly the same as the real one no weird letter that looks the same but is different. Check if the discriminator (numbers after the # in the username) is 4454 Check if the ID of that Mantaro is 213466096718708737 (You can view IDs by going to your user settings &gt; appearance &gt; developer mode &gt; right click user &gt; Copy ID) If one or none of the above are identical you have likely fallen victim to a fake Mantaro. And while we feel deeply sorry for it there is not much we can do about it. You can help prevent this sort of stuff by reporting it to the https://support.discord.com/hc/en-us/requests/new Trust and Safety team. They will need as much proof as you can provide.To be absolutely safe never invite a bot called &quot;Mantaro&quot; if any of the above things are altered. A real invite will always direct you to https://discordapp.com/oauth2/authorize?client_id=213466096718708737&amp;scope=bot +/- the permission bit.</p>
-</article>
-
-<article>
-<header><h1>17. How do I invite the bot? My server does not show when inviting the bot? (Or anything related to inviting the bot)</h1></header>
-<p>You can invite the bot over at https://add.mantaro.site/ this link it will redirect you to Discords authorization page. For this to work properly you will have to make sure that you are logged into the right account on the web version of discord (No, being logged into the desktop/phone app does not guarantee this). To double check this you can head to https://discordapp.com/app discord's web version. If you are logged into the right account you may choose a server in the dropdown, you may also modify the permissions we add by default, though if you are unsure it's best to leave them as is. After hitting authorize the bot will join the chosen server.If the server you are planning to invite the bot to does not show that can mean 1 of 3 things. Either the bot is already on the server, you are not logged into the right account after all, or you do not have Manage Server permissions. In the event of none of those 3 applying contact https://support.discordapp.com/hc/en-us/requests/new discord support.In the event that you invited the bot and it does not appear on the server there is a high chance someone else is kicking it (There seems to be bot's around who automatically kick other bots).</p>
-</article>
-
-<article>
-<header><h1>18. What is "Old Sparkle Pickaxe" and can I restore/use it?</h1></header>
-<p>You cannot. This is a replacement item for an old bug and it does not serve a purpose and never will. You can dump it.</p>
-</article>
-
-<article>
-<header><h1>19. I have been blacklisted from using the bot. What do I do? Can I be unblacklisted?</h1></header>
-<p>Chances are you will not be unblacklisted due to you likely having used external scrips to use currency. You however may send a polite and detailed appeal to Kodehawa on contact@mantaro.site (No an appeal is not is not &quot;I won't do it again&quot;, neither is some obviously made up story). You will have to patiently wait for him to reply, if he never does that means you will not be unblacklisted. If Kodehawa says no, there is no point in begging. No means no. Kodehawa is the only one who can unblacklist you and will not be taking any direct requests for being unblacklisted. You need to send the email. Complaining about not having received warns will reduce your chance of being unblacklisted to effectively 0. We do not give warns, this is how zero tolerance policies work.You may read our https://github.com/Mantaro/MantaroBot/wiki/Terms-of-Service Terms and Service before appealing to see if appealing will actually serve any purpose.</p>
-</article>
-
-<article>
-<header><h1>20. I am trying to cast an item but it is not working?</h1></header>
-<p>Chances are you need to type the name of the item/wrench in quotes (i.E Star Pickaxe -&gt; &quot;Star Pickaxe&quot;). If you don't type it on quotes it won't work. If you are using a normal wrench (the one bought from the market) you don't need to specify it on the command.</p>
-</article>
-
-<article>
-<header><h1>21. I have lost my daily can I get it back?</h1></header>
-<p>No, there is no actual way for us to refund a daily. And if you have lost it there is probably a very good reason why you did. For instance using the daily command right after another command (which fucks with our data). Users have a time frame bigger than 24 hours to claim their daily. For more detail refer to https://github.com/Mantaro/MantaroBot/issues/258 issue #258.</p>
-</article>
-
-<article>
-<header><h1>22. I just donated and I want to know how to add Mantaro Patreon or get my premium keys</h1></header>
-<p>If you donated via Paypal then please get in contact with Kodehawa#3457 so that he can give you the corresponding rewards. If you donated via Patreon then first make sure that you have linked your Discord account to your Patreon account (check https://support.patreon.com/hc/en-us/articles/212052266-How-do-I-receive-my-Discord-role- here for more help). After this Mantaro will attempt to DM you your first key (make sure you have open DMs for this). After this same as with Paypal, contact Kodehawa#3457 if you wish to get any other rewards.</p>
-</article>
-
-<article>
-<header><h1>23. Can I buy credits in Mantaro? Do I get credits for donating/pledging? Is there any way to obtain credits/items/badges using real money?</h1></header>
-<p>We do not exchange Money for credits within Mantaro (or Mantaro Patreon for that matter) what so ever. Please do not ask this here. Anyone spreading that we do offer &quot;Money for Credits&quot; is spreading a false rumor. It is true that, that used to be a thing in the very first version of currency (which is now over 2 years ago), but it no longer holds true and never will anymore. Additionally all credits that were ever given for real money (which was only through patreon pledges) were also reset with the big reset after said currency version (We mention this here mainly for the sake of transparency and to clear up any misunderstandings).Additionally, we also forbid people from offering credits for real money on their own (This is part of our Terms of Service, reachable on github).Don't: Ask for credits. There is absolutely no way to obtain credits through donations/pledges or the use of real money.</p>
-</article>
-
-<article>
-<header><h1>24. I want to request my data / I want to delete my data</h1></header>
-<p>Send a formal request to contact@mantaro.site and we'll process it as soon as possible. Data deletion is irreversible and leads to a permanent blacklist from the bot to ensure we don't collect any further data about you, so only do it if you're sure about it.Data requests will be processed in 1 to 7 days. Keep in mind the data won't be human-readable. It only includes Player / User / Seasonal data, NOT guild data. We need proof you're the owner of the data before processing it, so ping me before sending the email.</p>
-</article>
-
-<article>
-<header><h1>25. I used the waifu optout option, is there a way to reverse it/optin?</h1></header>
-<p>Short answer: No, you cannot opt in after you opt out. This is final. Long answer: The optout option is very heavy on our system. Since it forces a user to be unclaimed from all users, we need to check all users, and theres a lot of users. Not only that, unclaim usually takes money but since this forces you to be unclaimed, you can do it for free. These things mentioned before can be abused if we allowed users to opt in/out as they wish.As well, since it was introduced we have not allowed people to opt in. Due to fairness to others this will remain the same.</p>
+<p>0. Why move to Slash Commands?/Can I stay with text commands? The move to Slash Commands is something being enforced by Discord on verified bots. They seek to make it easier for users to find and use commands.However, they also seek to remove certain permissions from bots that are verified for security, such as having access to message contents (unless they have a good reason to have them). This essentially kills text based commands. While Mantaro managed to keep its access to message contents (for the logs), it doesn't mean we can avoid Slash Commands.Currently most commands have already been ported to Slash Commands, and some are still text based. The reason for this is we haven't figured out a way to make the remaining commands work correctly using Slash Commands. However, they too will be ported to Slash Commands in the future.For more information, check out Discord's https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ Slash Commands FAQ or their https://discord.com/blog/slash-commands-are-here Blog Post. 1. What is premium and what is the Patreon bot? Premium is a status that can be applied to both servers and users and provide perks like no music length limit and more. You can obtain premium keys by becoming a Patreon. The Patreon bot is however essentially a second Mantaro that runs on a different server, causing better Music quality. It is also the bot to receive new features first providing you with an insight of what is to come. You can read more info about premium, the Patreon bot and PayPal and Patreon donations in basics/premium-perks this page. 2. Some of Mantaro's commands are not showing any content (empty message), for instance on help? Make sure that within your https://i.imgur.com/BhTarjg.png user settings you have https://i.imgur.com/8TV4qn0.png &quot;Link Preview&quot; enabled, as that is necessary to be able to see embeds. If however neither is the case feel free to report it in #support, to gain assistance or insight as to why that's happening. 3. The bot is not responding or lagging behind what do I do? There really isn't much that you can do besides wait. We will usually announce issues within this guild as soon as we become aware of them. In most cases this is just a temporary hiccup within discord and should resolve itself. 4. Mantaro joined a VC, but she isn't playing anything/she is lagging There are a couple of troubleshooting steps that you can follow to fix this.Make sure that Mantaro has perms to both see and talk in the VC you are using. Make sure that Mantaro is not muted be it server mute, a role that mutes her or by you having lowered her volume on Discord to 0 before. 2.1) If someone has premium in the server/the server is premium, check the /volume command to make sure her volume is not 0. Check the video that you are trying to play and/or try a different video. Sometimes YouTube videos get muted for copyright reasons, or they are region locked which could make it so Mantaro can't play the video. Change server region. To do this go into Server Settings and then pick any other region that is not the one you are currently using. If after all of this Mantaro is still not playing anything then it would mean that there is either an issue with Mantaro or a third party issue that goes out of our hands. If you get to this point then please let us know. 5. What do the items within Mantaro do? How to earn credits? What are waifus and how to raise my waifu value? We have a detailed wiki explaining all of these questions. Simply visit our currency/101 Currency-101 page and have all of them and more answered. 6. Can I add money to people in my own server/s server that I have admin? Short answer: no you cannot. Long answer: All of Mantaro's currency related features are on a global scale, allowing you to summon money from nowhere would tip the scale. 7. What is the Birthday announcer? Why are my birthdays not being announced? Can I set other people's Birthday? We have a detailed wiki explaining all of these questions. Simply visit our guides/birthday-announcer Birthday-101 page and have all of them and more answered. 8. Can I unclaim people who I no longer share a server with or that show as unknown user? (Waifu command) You can unclaim them using their Discord ID (not username#xxxx), you can get access to those by invoking the following /waifu list id:True . Then you would simply put their ID in place of the mention ( /waifu unclaim user:&lt;id goes here&gt; ). 9. When trying to waifu claim a user it says they are locked? How to get rid of claim keys? When a user is &quot;locked&quot; that means they have prevented themselves from being claimed by another user. To turn this off the locked person needs to use /waifu claimlock remove:True . 10. What is dust? Dust is something you will accumulate every time you, well, find dust in any command. At 97% it will prevent you from doing /cast until you clear your dust using a mop that you can buy from the market ( /use item item:Mop ). 11. How do I change my Profile description? You can change your description at any time using /profile description . This will open a popup where you can write your description. 12. What are love letters? What are they used for? How do I get one? Love letters are given to each person upon marrying using /marry . They can be used to create a love letter between those people (only the proposer may do so) using /marry createletter content:&lt;content goes here&gt; . 13. How do I make a custom action command like ~&gt;hug? You would use something like this: ~&gt;custom new action v3:@{ if; $(event.message); usermention; @{embed; description:&quot;$(event.author) is using an action on $(event.message)&quot;, image:&quot;https://mrlar.dev/i/5NCuLZswrZgqHq5.png&quot; }; You need to mention a user! } Where you replace the URL with a URL to an image of your choice and the text with any text of your choice. You can use multiple images by using the above statement with custom add instead of custom new repeatedly, it will add multiple responses and pick one at random. 14. Mantaro has deleted all my roles/channels/banned all my user/or similar Before reporting ensure the action was taken by the real Mantaro. To identify the real one you check one of 3 things, though it is best to check them all.Check to see if Mantaro has the verified Bot badge next to her name. If not, then it is not the real Mantaro. Check if the Username is exactly the same as the real one no weird letter that looks the same but is different. Check if the discriminator (numbers after the # in the username) is 4454 Check if the ID of that Mantaro is 213466096718708737 (You can view IDs by going to your user settings &gt; appearance &gt; developer mode &gt; right click user &gt; Copy ID) If one or none of the above are identical you have likely fallen victim to a fake Mantaro. And while we feel deeply sorry for it there is not much we can do about it. You can help prevent this sort of stuff by reporting it to the https://support.discord.com/hc/en-us/requests/new Trust and Safety team. They will need as much proof as you can provide.To be absolutely safe never invite a bot called &quot;Mantaro&quot; if any of the above things are altered. A real invite will always direct you to https://discordapp.com/oauth2/authorize?client_id=213466096718708737&amp;scope=bot%20application.commands +/- the permission bit. 15. How do I invite the bot? My server does not show when inviting the bot? (Or anything related to inviting the bot) You can invite the bot over at https://add.mantaro.site/ this link it will redirect you to Discords authorization page. For this to work properly you will have to make sure that you are logged into the right account on the web version of discord (No, being logged into the desktop/phone app does not guarantee this). To double-check this you can head to https://discordapp.com/app discord's web version. If you are logged into the right account you may choose a server in the dropdown, you may also modify the permissions we add by default, though if you are unsure it's best to leave them as is. After hitting authorize the bot will join the chosen server.If the server you are planning to invite the bot to does not show that can mean 1 of 3 things. Either the bot is already on the server, you are not logged into the right account after all, or you do not have Manage Server permissions. In the event of none of those 3 applying contact https://support.discordapp.com/hc/en-us/requests/new discord support.In the event that you invited the bot, and it does not appear on the server there is a high chance someone else is kicking it (There seems to be bots around who automatically kick other bots). 16. What is &quot;Old Sparkle Pickaxe&quot; and can I restore/use it? You cannot. This is a replacement item for an old bug, and it does not serve a purpose and never will. You can dump it. 17. I have been blacklisted from using the bot. What do I do? Can I be un-blacklisted? Chances are you will not be un-blacklisted due to you likely having used external scrips to use currency. You however may send a polite and detailed appeal to Kodehawa on contact@mantaro.site (No an appeal is not &quot;I won't do it again&quot;, neither is some obviously made up story). You will have to patiently wait for him to reply, if he never does that means you will not be un-blacklisted. If Kodehawa says no, there is no point in begging. No means no. Kodehawa is the only one who can un-blacklist you and will not be taking any direct requests for being un-blacklisted. You need to send the email. Complaining about not having received warns will reduce your chance of being un-blacklisted to effectively 0. We do not give warns, this is how zero tolerance policies work.You may read our legal/terms-of-service Terms and Service before appealing to see if appealing will actually serve any purpose. 18. I have lost my daily can I get it back? No, there is no actual way for us to refund a daily. And if you have lost it there is probably a very good reason why you did. For instance using the daily command right after another command (which fucks with our data). Users have a time frame bigger than 24 hours to claim their daily. For more detail refer to https://github.com/Mantaro/MantaroBot/issues/258 issue #258. 19. I just donated and I want to know how to add Mantaro Patreon or get my premium keys If you donated via PayPal then please get in contact with Kodehawa#3457 so that he can give you the corresponding rewards. If you donated via Patreon then first make sure that you have linked your Discord account to your Patreon account (check https://support.patreon.com/hc/en-us/articles/212052266-How-do-I-receive-my-Discord-role- here for more help). After this Mantaro will attempt to DM you your first key (make sure you have open DMs for this). After this same as with PayPal, contact Kodehawa#3457 if you wish to get any other rewards. 20. Can I buy credits in Mantaro? Do I get credits for donating/pledging? Is there any way to obtain credits/items/badges using real money? We do not exchange Money for credits within Mantaro (or Mantaro Patreon for that matter) whatsoever. Please do not ask this here. Anyone spreading that we do offer &quot;Money for Credits&quot; is spreading a false rumor. It is true that, that used to be a thing in the very first version of currency (which is now over 2 years ago), but it no longer holds true and never will anymore. Additionally, all credits that were ever given for real money (which was only through patreon pledges) were also reset with the big reset after said currency version (We mention this here mainly for the sake of transparency and to clear up any misunderstandings).Additionally, we also forbid people from offering credits for real money on their own (This is part of our legal/terms-of-service Terms and Service).Don't: Ask for credits. There is absolutely no way to obtain credits through donations/pledges or the use of real money. 21. I want to request my data / I want to delete my data Send a formal request to contact@mantaro.site and we'll process it as soon as possible. Data deletion is irreversible and leads to a permanent blacklist from the bot to ensure we don't collect any further data about you, so only do it if you're sure about it.Data requests will be processed in 1 to 7 days. Keep in mind the data won't be human-readable. It only includes Player / User / Seasonal data, NOT guild data. We need proof you're the owner of the data before processing it, so ping me before sending the email. 22. I used the waifu opt out option, is there a way to reverse it/opt in? Short answer: No, you cannot opt in after you opt out. This is final. Long answer: The optout option is very heavy on our system. Since it forces a user to be unclaimed from all users, we need to check all users, and there's a lot of users. Not only that, unclaim usually takes money but since this forces you to be unclaimed, you can do it for free. These things mentioned before can be abused if we allowed users to opt in/out as they wish.As well, since it was introduced we have not allowed people to opt in. Due to fairness to others this will remain the same.</p>
 </article>
 </section>
 </div>
@@ -231,866 +110,970 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
+      "id" : "0-why-move-to-slash-commandscan-i-stay-with-text-commands",
+      "level" : 2,
+      "title" : "0. Why move to Slash Commands?/Can I stay with text commands?",
+      "type" : "SubHeading"
+    }, {
       "type" : "Paragraph",
       "content" : [ {
-        "text" : "Note: Remember that for the most up-to-date FAQ you want to check the FAQ channel on our discord server.",
+        "text" : "The move to Slash Commands is something being enforced by Discord on verified bots. They seek to make it easier for users to find and use commands.",
         "type" : "SimpleText"
       } ]
     }, {
-      "id" : "1-how-do-i-change-the-prefix-for-this-bot",
-      "title" : "1. How do I change the prefix for this bot?",
-      "type" : "Section",
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "You can change the prefix in this bot using ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts prefix set <prefix>",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ", where ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "<prefix>",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " would be replaced with whatever you desire it to be.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "Keep in mind that for technical and convenience reasons the prefixes ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ", ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "->",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " and ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "mantaro",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " will always work and cannot be disabled.",
-          "type" : "SimpleText"
-        } ]
+        "text" : "However, they also seek to remove certain permissions from bots that are verified for security, such as having access to message contents (unless they have a good reason to have them).",
+        "type" : "SimpleText"
       }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "You can also mention the bot in replacement for a prefix.",
-          "type" : "SimpleText"
-        } ]
+        "type" : "SoftLineBreak"
       }, {
-        "type" : "ThematicBreak"
+        "text" : "This essentially kills text based commands. While Mantaro managed to keep its access to message contents (for the logs), it doesn't mean we can avoid Slash Commands.",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "2-what-is-premium-and-what-is-the-patreon-bot",
-      "title" : "2. What is premium and what is the Patreon bot?",
-      "type" : "Section",
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "text" : "Currently most commands have already been ported to Slash Commands, and some are still text based.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "The reason for this is we haven't figured out a way to make the remaining commands work correctly using Slash Commands.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "However, they too will be ported to Slash Commands in the future.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "For more information, check out Discord's ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ",
+        "isFile" : false,
+        "type" : "Link",
         "content" : [ {
-          "text" : "Premium is a status that can be applied to both servers and users and provide perks like no music length limit and more. You can obtain premium keys by becoming a Patreon.",
+          "text" : "Slash Commands FAQ",
           "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "The Patreon bot is however essentially a second Mantaro that runs on a different server, causing better Music quality. It is also the bot to receive new features first providing you with an insight of what is to come.",
+        } ]
+      }, {
+        "text" : " or their ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://discord.com/blog/slash-commands-are-here",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Blog Post",
           "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "You can read more info about premium, the Patreon bot and PayPal and Patreon donations in ",
+        } ]
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "1-what-is-premium-and-what-is-the-patreon-bot",
+      "level" : 2,
+      "title" : "1. What is premium and what is the Patreon bot?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Premium is a status that can be applied to both servers and users and provide perks like no music length limit and more. You can obtain premium keys by becoming a Patreon.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "The Patreon bot is however essentially a second Mantaro that runs on a different server, causing better Music quality.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "It is also the bot to receive new features first providing you with an insight of what is to come.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "You can read more info about premium, the Patreon bot and PayPal and Patreon donations in ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "/mantaro-wiki/basics/premium-perks",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "this page",
           "type" : "SimpleText"
-        }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks",
-          "isFile" : false,
-          "type" : "Link",
+        } ]
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "2-some-of-mantaros-commands-are-not-showing-any-content-empty-message-for-instance-on-help",
+      "level" : 2,
+      "title" : "2. Some of Mantaro's commands are not showing any content (empty message), for instance on help?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Make sure that within your ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://i.imgur.com/BhTarjg.png",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "user settings",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : " you have ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://i.imgur.com/8TV4qn0.png",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "\"Link Preview\"",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : " enabled, as that is necessary to be able to see embeds.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "If however neither is the case feel free to report it in #support, to gain assistance or insight as to why that's happening.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "3-the-bot-is-not-responding-or-lagging-behind-what-do-i-do",
+      "level" : 2,
+      "title" : "3. The bot is not responding or lagging behind what do I do?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "There really isn't much that you can do besides wait.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "We will usually announce issues within this guild as soon as we become aware of them.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "In most cases this is just a temporary hiccup within discord and should resolve itself.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "4-mantaro-joined-a-vc-but-she-isnt-playing-anythingshe-is-lagging",
+      "level" : 2,
+      "title" : "4. Mantaro joined a VC, but she isn't playing anything/she is lagging",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "There are a couple of troubleshooting steps that you can follow to fix this.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "delimiter" : ")",
+      "startNumber" : 1,
+      "type" : "OrderedList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
           "content" : [ {
-            "text" : "this page",
+            "text" : "Make sure that Mantaro has perms to both see and talk in the VC you are using.",
             "type" : "SimpleText"
           } ]
-        }, {
-          "text" : ".",
-          "type" : "SimpleText"
         } ]
       }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "3-how-does-exp-in-mantaro-work-and-what-use-do-levels-have",
-      "title" : "3. How does EXP in Mantaro work and what use do levels have?",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
+        "type" : "ListItem",
         "content" : [ {
-          "text" : "While levels do not serve much of a purpose right now they kind of give you an idea of how active someone is on discord (within servers that Mantaro is also in). To gain experience you simple send messages in any server with Mantaro. Spam won't work, there's a 30-35 seconds ratelimit between it counting messages. Every counted message counts towards 1-8XP and commands/interactive operation stuff won't gain you experience.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "4-some-of-mantaros-commands-are-not-showing-any-content-empty-message-for-instance-on-help",
-      "title" : "4. Some of Mantaro's commands are not showing any content (empty message), for instance on help?",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Make sure that within your ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://i.imgur.com/BhTarjg.png",
-          "isFile" : false,
-          "type" : "Link",
+          "type" : "Paragraph",
           "content" : [ {
-            "text" : "user settings",
+            "text" : "Make sure that Mantaro is not muted be it server mute, a role that mutes her or by you having lowered her volume on Discord to 0 before.",
+            "type" : "SimpleText"
+          }, {
+            "type" : "SoftLineBreak"
+          }, {
+            "text" : "2.1) If someone has premium in the server/the server is premium, check the ",
+            "type" : "SimpleText"
+          }, {
+            "code" : "/volume",
+            "type" : "InlinedCode"
+          }, {
+            "text" : " command to make sure her volume is not 0.",
             "type" : "SimpleText"
           } ]
-        }, {
-          "text" : " you have ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://i.imgur.com/8TV4qn0.png",
-          "isFile" : false,
-          "type" : "Link",
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
           "content" : [ {
-            "text" : "\"Link Preview\"",
+            "text" : "Check the video that you are trying to play and/or try a different video. Sometimes YouTube videos get muted for copyright reasons, or they are region locked which could make it so Mantaro can't play the video.",
             "type" : "SimpleText"
           } ]
-        }, {
-          "text" : " enabled, as that is necessary to be able to see embeds.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "If that does not help the server you are on might have disabled Embed Links as a permission.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "If however neither is the case feel free to report it in #support, to gain assistance or insight as to why that's happening.",
-          "type" : "SimpleText"
         } ]
       }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "5-the-bot-is-not-responding-or-lagging-behind-what-do-i-do",
-      "title" : "5. The bot is not responding or lagging behind what do I do?",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
+        "type" : "ListItem",
         "content" : [ {
-          "text" : "There really isn't much that you can do besides wait. We will usually announce issues within this guild as soon as we become aware of them. In most cases this is just a temporary hiccup within discord and should resolve itself.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "6-mantaro-joined-a-vc-but-she-isnt-playing-anythingshe-is-lagging",
-      "title" : "6. Mantaro joined a VC, but she isn't playing anything/she is lagging",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "There are a couple of troubleshooting steps that you can follow to fix this.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "delimiter" : ")",
-        "startNumber" : 1,
-        "type" : "OrderedList",
-        "content" : [ {
-          "type" : "ListItem",
+          "type" : "Paragraph",
           "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "Make sure that Mantaro has perms to both see and talk in the VC you are using.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "Make sure that Mantaro is not muted be it server mute, a role that mutes her or by you having lowered her volume on Discord to 0 before.",
-              "type" : "SimpleText"
-            }, {
-              "type" : "SoftLineBreak"
-            }, {
-              "text" : "2.1) If someone has premium in the server/the server is premium, check the ",
-              "type" : "SimpleText"
-            }, {
-              "code" : "~>volume",
-              "type" : "InlinedCode"
-            }, {
-              "text" : " command to make sure her volume is not 0.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "Check the video that you are trying to play and/or try a different video. Sometimes Youtube videos get muted for copyright reasons, or they are region locked which could make it so Mantaro can't play the video.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "Change server region. To do this go into Server Settings and then pick any other region that is not the one you are currently using.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "If after all of this Mantaro is still not playing anything then it would mean that there is either an issue with Mantaro or a third party issue that goes out of our hands. If you get to this point then please let us know.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "7-what-do-the-items-within-mantaro-do-how-to-earn-credits-what-are-waifus-and-how-to-raise-my-waifu-value",
-      "title" : "7. What do the items within Mantaro do? How to earn credits? What are waifu's and how to raise my waifu value?",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "We have a detailed wiki explaining all of these questions. Simply visit our ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Currency-101",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "Currency-101",
+            "text" : "Change server region. To do this go into Server Settings and then pick any other region that is not the one you are currently using.",
             "type" : "SimpleText"
           } ]
-        }, {
-          "text" : " page and have all of them and more answered.",
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "If after all of this Mantaro is still not playing anything then it would mean that there is either an issue with Mantaro or a third party issue that goes out of our hands. If you get to this point then please let us know.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "5-what-do-the-items-within-mantaro-do-how-to-earn-credits-what-are-waifus-and-how-to-raise-my-waifu-value",
+      "level" : 2,
+      "title" : "5. What do the items within Mantaro do? How to earn credits? What are waifus and how to raise my waifu value?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "We have a detailed wiki explaining all of these questions.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Simply visit our ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "/mantaro-wiki/currency/101",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Currency-101",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "ThematicBreak"
+        "text" : " page and have all of them and more answered.",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "8-can-i-add-money-to-people-in-my-own-servers-server-that-i-admin",
-      "title" : "8. Can I add money to people in my own server/s server that I admin?",
-      "type" : "Section",
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "6-can-i-add-money-to-people-in-my-own-servers-server-that-i-have-admin",
+      "level" : 2,
+      "title" : "6. Can I add money to people in my own server/s server that I have admin?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "text" : "Short answer: no you cannot.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Long answer: All of Mantaro's currency related features are on a global scale, allowing you to summon money from nowhere would tip the scale.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "7-what-is-the-birthday-announcer-why-are-my-birthdays-not-being-announced-can-i-set-other-peoples-birthday",
+      "level" : 2,
+      "title" : "7. What is the Birthday announcer? Why are my birthdays not being announced? Can I set other people's Birthday?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "We have a detailed wiki explaining all of these questions.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Simply visit our ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "/mantaro-wiki/guides/birthday-announcer",
+        "isFile" : false,
+        "type" : "Link",
         "content" : [ {
-          "text" : "Short answer: no you cannot.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "Long answer: All of Mantaro's currency related features are on a global scale, allowing you to summon money from no where would tip the scale.",
+          "text" : "Birthday-101",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "ThematicBreak"
+        "text" : " page and have all of them and more answered.",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "9-what-is-the-birthday-announcer-why-are-my-birthdays-not-being-announced-can-i-set-other-peoples-birthday",
-      "title" : "9. What is the Birthday announcer? Why are my birthdays not being announced? Can I set other people's Birthday?",
-      "type" : "Section",
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "8-can-i-unclaim-people-who-i-no-longer-share-a-server-with-or-that-show-as-unknown-user-waifu-command",
+      "level" : 2,
+      "title" : "8. Can I unclaim people who I no longer share a server with or that show as unknown user? (Waifu command)",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "text" : "You can unclaim them using their Discord ID (not username#xxxx), you can get access to those by invoking the following ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "/waifu list id:True",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Then you would simply put their ID in place of the mention (",
+        "type" : "SimpleText"
+      }, {
+        "code" : "/waifu unclaim user:<id goes here>",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ").",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "9-when-trying-to-waifu-claim-a-user-it-says-they-are-locked-how-to-get-rid-of-claim-keys",
+      "level" : 2,
+      "title" : "9. When trying to waifu claim a user it says they are locked? How to get rid of claim keys?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "When a user is \"locked\" that means they have prevented themselves from being claimed by another user.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "To turn this off the locked person needs to use ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "/waifu claimlock remove:True",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "10-what-is-dust",
+      "level" : 2,
+      "title" : "10. What is dust?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Dust is something you will accumulate every time you, well, find dust in any command.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "At 97% it will prevent you from doing ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "/cast",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " until you clear your dust using a mop that you can buy from the market (",
+        "type" : "SimpleText"
+      }, {
+        "code" : "/use item item:Mop",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ").",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "11-how-do-i-change-my-profile-description",
+      "level" : 2,
+      "title" : "11. How do I change my Profile description?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "You can change your description at any time using ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "/profile description",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ". This will open a popup where you can write your description.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "12-what-are-love-letters-what-are-they-used-for-how-do-i-get-one",
+      "level" : 2,
+      "title" : "12. What are love letters? What are they used for? How do I get one?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Love letters are given to each person upon marrying using ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "/marry",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "They can be used to create a love letter between those people (only the proposer may do so) using ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "/marry createletter content:<content goes here>",
+        "type" : "InlinedCode"
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "13-how-do-i-make-a-custom-action-command-like-hug",
+      "level" : 2,
+      "title" : "13. How do I make a custom action command like ~>hug?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "You would use something like this:",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "lang" : "",
+      "snippet" : "~>custom new action v3:@{\n  if;\n  $(event.message);\n  usermention;\n  @{embed;\n    description:\"$(event.author) is using an action on $(event.message)\",\n     image:\"https://mrlar.dev/i/5NCuLZswrZgqHq5.png\"\n  };\n  You need to mention a user!\n}\n",
+      "lineNumber" : "",
+      "type" : "Snippet"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Where you replace the URL with a URL to an image of your choice and the text with any text of your choice.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "You can use multiple images by using the above statement with custom add instead of custom new repeatedly, it will add multiple responses and pick one at random.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "14-mantaro-has-deleted-all-my-roleschannelsbanned-all-my-useror-similar",
+      "level" : 2,
+      "title" : "14. Mantaro has deleted all my roles/channels/banned all my user/or similar",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Before reporting ensure the action was taken by the real Mantaro. To identify the real one you check one of 3 things, though it is best to check them all.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "delimiter" : ")",
+      "startNumber" : 1,
+      "type" : "OrderedList",
+      "content" : [ {
+        "type" : "ListItem",
         "content" : [ {
-          "text" : "We have a detailed wiki explaining all of these questions. Simply visit our ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Birthday-101",
-          "isFile" : false,
-          "type" : "Link",
+          "type" : "Paragraph",
           "content" : [ {
-            "text" : "Birthday-101",
+            "text" : "Check to see if Mantaro has the verified Bot badge next to her name. If not, then it is not the real Mantaro.",
             "type" : "SimpleText"
           } ]
-        }, {
-          "text" : " page and have all of them and more answered.",
-          "type" : "SimpleText"
         } ]
       }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "10-can-i-unclaim-people-who-i-no-longer-share-a-server-with-or-that-show-as-unknown-user-waifu-command",
-      "title" : "10. Can I unclaim people who I no longer share a server with or that show as unknown user? (Waifu command)",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
+        "type" : "ListItem",
         "content" : [ {
-          "text" : "You can unclaim them using their Discord ID (not username#xxxx), you can get access to those by invoking the following ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>waifu -id",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ". Then you would simply put their ID in place of the mention (",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>waifu unclaim ID",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ").",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "In the event that a user shows as unknown under your waifu list: You will be provided their user ID as their name, regardless of if you invoke with -id or not, and can do the above using that ID however you will have to append -unknown to the message i.E: ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>waifu unclaim ID -unknown",
-          "type" : "InlinedCode"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "11-when-trying-to-waifu-claim-a-user-it-says-they-are-locked-how-to-get-rid-of-claim-keys",
-      "title" : "11. When trying to waifu claim a user it says they are locked? How to get rid of claim keys?",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "When a user is \"locked\" that means they have prevented themselves from being claimed by another user. To turn this off the locked person needs to use ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>profile claimlock remove",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ".",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "12-what-is-dust",
-      "title" : "12. What is dust?",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Dust is something you will accumulate every time you, well, find dust in any command. At 97% it will prevent you from doing ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>cast",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " until you clear your dust using a mop that you can buy from the market (",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>useitem mop",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ").",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "13-how-do-i-change-my-profile-description",
-      "title" : "13. How do I change my Profile description?",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "You can change your description at any time using ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>profile description set <text>",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ".",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "14-what-are-love-letters-what-are-they-used-for-how-do-i-get-one",
-      "title" : "14. What are love letters? What are they used for? How do I get one?",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Love letters are given to each person upon marrying using ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>marry",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ". They can be used to create a love letter between those people (only the proposer may do so) using ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>marry createletter <text>",
-          "type" : "InlinedCode"
-        }, {
-          "text" : ".",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "15-how-do-i-make-a-custom-action-command-like-hug",
-      "title" : "15. How do I make a custom action command like ~>hug?",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "You would use something like this:",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "lang" : "",
-        "snippet" : "~>custom new action v3:@{\n  if;\n  $(event.message);\n  usermention;\n  @{embed;\n    description:\"$(event.author) is using an action on $(event.message)\",\n     image:\"https://mrlar.dev/i/5NCuLZswrZgqHq5.png\"\n  };\n  You need to mention a user!\n}\n",
-        "lineNumber" : "",
-        "type" : "Snippet"
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Where you replace the URL with an URL to an image of your choice and the text with any text of your choice. You can use multiple images by using the above statement with custom add instead of custom new repeatedly, it will add multiple reponses and pick one at random.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "16-mantaro-has-deleted-all-my-roleschannelsbanned-all-my-useror-similar",
-      "title" : "16. Mantaro has deleted all my roles/channels/banned all my user/or similar",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Before reporting ensure the action was taken by the real Mantaro. To identify the real one you check one of 3 things, though it is best to check them all.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "delimiter" : ")",
-        "startNumber" : 1,
-        "type" : "OrderedList",
-        "content" : [ {
-          "type" : "ListItem",
+          "type" : "Paragraph",
           "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "Check if the Username is exactly the same as the real one no weird letter that looks the same but is different.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "Check if the discriminator (numbers after the # in the username) is 4454",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "Check if the ID of that Mantaro is 213466096718708737 (You can view IDs by going to your user settings > appearance > developer mode > right click user > Copy ID)",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "If one or none of the above are identical you have likely fallen victim to a fake Mantaro. And while we feel deeply sorry for it there is not much we can do about it.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "You can help prevent this sort of stuff by reporting it to the ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://support.discord.com/hc/en-us/requests/new",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "Trust and Safety team",
+            "text" : "Check if the Username is exactly the same as the real one no weird letter that looks the same but is different.",
             "type" : "SimpleText"
           } ]
-        }, {
-          "text" : ". They will need as much proof as you can provide.",
-          "type" : "SimpleText"
         } ]
       }, {
-        "type" : "Paragraph",
+        "type" : "ListItem",
         "content" : [ {
-          "text" : "To be absolutely safe never invite a bot called \"Mantaro\" if any of the above things are altered.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "A real invite will always direct you to ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "https://discordapp.com/oauth2/authorize?client_id=213466096718708737&scope=bot",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " +/- the permission bit.",
-          "type" : "SimpleText"
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "Check if the discriminator (numbers after the # in the username) is 4454",
+            "type" : "SimpleText"
+          } ]
         } ]
       }, {
-        "type" : "ThematicBreak"
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "Check if the ID of that Mantaro is 213466096718708737 (You can view IDs by going to your user settings > appearance > developer mode > right click user > Copy ID)",
+            "type" : "SimpleText"
+          } ]
+        } ]
       } ]
     }, {
-      "id" : "17-how-do-i-invite-the-bot-my-server-does-not-show-when-inviting-the-bot-or-anything-related-to-inviting-the-bot",
-      "title" : "17. How do I invite the bot? My server does not show when inviting the bot? (Or anything related to inviting the bot)",
-      "type" : "Section",
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "text" : "If one or none of the above are identical you have likely fallen victim to a fake Mantaro. And while we feel deeply sorry for it there is not much we can do about it.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "You can help prevent this sort of stuff by reporting it to the ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://support.discord.com/hc/en-us/requests/new",
+        "isFile" : false,
+        "type" : "Link",
         "content" : [ {
-          "text" : "You can invite the bot over at ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://add.mantaro.site/",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "this link",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : " it will redirect you to Discords authorization page. For this to work properly you will have to make sure that you are logged into the right account on the ",
-          "type" : "SimpleText"
-        }, {
-          "type" : "StrongEmphasis",
-          "content" : [ {
-            "text" : "web version",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : " of discord (No, being logged into the desktop/phone app does not guarantee this). To double check this you can head to ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://discordapp.com/app",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "discord's web version",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : ". If you are logged into the right account you may choose a server in the dropdown, you may also modify the permissions we add by default, though if you are unsure it's best to leave them as is. After hitting authorize the bot will join the chosen server.",
+          "text" : "Trust and Safety team",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "If the server you are planning to invite the bot to does not show that can mean 1 of 3 things. Either the bot is already on the server, you are not logged into the right account after all, or you do not have Manage Server permissions. In the event of none of those 3 applying contact ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://support.discordapp.com/hc/en-us/requests/new",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "discord support",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : ".",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "In the event that you invited the bot and it does not appear on the server there is a high chance someone else is kicking it (There seems to be bot's around who automatically kick other bots).",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
+        "text" : ". They will need as much proof as you can provide.",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "18-what-is-old-sparkle-pickaxe-and-can-i-restoreuse-it",
-      "title" : "18. What is \"Old Sparkle Pickaxe\" and can I restore/use it?",
-      "type" : "Section",
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "You cannot. This is a replacement item for an old bug and it does not serve a purpose and never will. You can dump it.",
-          "type" : "SimpleText"
-        } ]
+        "text" : "To be absolutely safe never invite a bot called \"Mantaro\" if any of the above things are altered.",
+        "type" : "SimpleText"
       }, {
-        "type" : "ThematicBreak"
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "A real invite will always direct you to ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "https://discordapp.com/oauth2/authorize?client_id=213466096718708737&scope=bot%20application.commands",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " +/- the permission bit.",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "19-i-have-been-blacklisted-from-using-the-bot-what-do-i-do-can-i-be-unblacklisted",
-      "title" : "19. I have been blacklisted from using the bot. What do I do? Can I be unblacklisted?",
-      "type" : "Section",
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "15-how-do-i-invite-the-bot-my-server-does-not-show-when-inviting-the-bot-or-anything-related-to-inviting-the-bot",
+      "level" : 2,
+      "title" : "15. How do I invite the bot? My server does not show when inviting the bot? (Or anything related to inviting the bot)",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "text" : "You can invite the bot over at ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://add.mantaro.site/",
+        "isFile" : false,
+        "type" : "Link",
         "content" : [ {
-          "text" : "Chances are you will not be unblacklisted due to you likely having used external scrips to use currency.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "You however may send a ",
-          "type" : "SimpleText"
-        }, {
-          "type" : "StrongEmphasis",
-          "content" : [ {
-            "text" : "polite and detailed",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : " appeal to Kodehawa on ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "contact@mantaro.site",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " (No an appeal is not is not \"I won't do it again\", neither is some obviously made up story). You will have to patiently wait for him to reply, if he never does that means you will not be unblacklisted. If Kodehawa says no, there is no point in begging. No means no.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "type" : "StrongEmphasis",
-          "content" : [ {
-            "text" : "Kodehawa is the only one who can unblacklist you and will not be taking any direct requests for being unblacklisted.",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : " You need to send the email.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "Complaining about not having received warns will reduce your chance of being unblacklisted to effectively 0. We do not give warns, this is how zero tolerance policies work.",
+          "text" : "this link",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "Paragraph",
+        "text" : " it will redirect you to Discords authorization page.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "For this to work properly you will have to make sure that you are logged into the right account on the ",
+        "type" : "SimpleText"
+      }, {
+        "type" : "StrongEmphasis",
         "content" : [ {
-          "text" : "You may read our ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Terms-of-Service",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "Terms and Service",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : " before appealing to see if appealing will actually serve any purpose.",
+          "text" : "web version",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "ThematicBreak"
+        "text" : " of discord (No, being logged into the desktop/phone app does not guarantee this).",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "To double-check this you can head to ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://discordapp.com/app",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "discord's web version",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ".",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "If you are logged into the right account you may choose a server in the dropdown, you may also modify the permissions we add by default, though if you are unsure it's best to leave them as is.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "After hitting authorize the bot will join the chosen server.",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "20-i-am-trying-to-cast-an-item-but-it-is-not-working",
-      "title" : "20. I am trying to cast an item but it is not working?",
-      "type" : "Section",
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "text" : "If the server you are planning to invite the bot to does not show that can mean 1 of 3 things.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Either the bot is already on the server, you are not logged into the right account after all, or you do not have Manage Server permissions.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "In the event of none of those 3 applying contact ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://support.discordapp.com/hc/en-us/requests/new",
+        "isFile" : false,
+        "type" : "Link",
         "content" : [ {
-          "text" : "Chances are you need to type the name of the item/wrench in quotes (i.E Star Pickaxe -> \"Star Pickaxe\"). If you don't type it on quotes it won't work.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "If you are using a normal wrench (the one bought from the market) you don't need to specify it on the command.",
+          "text" : "discord support",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "ThematicBreak"
+        "text" : ".",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "21-i-have-lost-my-daily-can-i-get-it-back",
-      "title" : "21. I have lost my daily can I get it back?",
-      "type" : "Section",
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "No, there is no actual way for us to refund a daily. And if you have lost it there is probably a very good reason why you did. For instance using the daily command right after another command (which fucks with our data).",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "Users have a time frame bigger than 24 hours to claim their daily.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "For more detail refer to ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/issues/258",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "issue #258",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : ".",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
+        "text" : "In the event that you invited the bot, and it does not appear on the server there is a high chance someone else is kicking it (There seems to be bots around who automatically kick other bots).",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "22-i-just-donated-and-i-want-to-know-how-to-add-mantaro-patreon-or-get-my-premium-keys",
-      "title" : "22. I just donated and I want to know how to add Mantaro Patreon or get my premium keys",
-      "type" : "Section",
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "16-what-is-old-sparkle-pickaxe-and-can-i-restoreuse-it",
+      "level" : 2,
+      "title" : "16. What is \"Old Sparkle Pickaxe\" and can I restore/use it?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "If you donated via Paypal then please get in contact with Kodehawa#3457 so that he can give you the corresponding rewards.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "If you donated via Patreon then first make sure that you have linked your Discord account to your Patreon account (check ",
-          "type" : "SimpleText"
-        }, {
-          "url" : "https://support.patreon.com/hc/en-us/articles/212052266-How-do-I-receive-my-Discord-role-",
-          "isFile" : false,
-          "type" : "Link",
-          "content" : [ {
-            "text" : "here",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "text" : " for more help). After this Mantaro will attempt to DM you your first key (make sure you have open DMs for this). After this same as with Paypal, contact Kodehawa#3457 if you wish to get any other rewards.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
+        "text" : "You cannot. This is a replacement item for an old bug, and it does not serve a purpose and never will. You can dump it.",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "23-can-i-buy-credits-in-mantaro-do-i-get-credits-for-donatingpledging-is-there-any-way-to-obtain-creditsitemsbadges-using-real-money",
-      "title" : "23. Can I buy credits in Mantaro? Do I get credits for donating/pledging? Is there any way to obtain credits/items/badges using real money?",
-      "type" : "Section",
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "17-i-have-been-blacklisted-from-using-the-bot-what-do-i-do-can-i-be-un-blacklisted",
+      "level" : 2,
+      "title" : "17. I have been blacklisted from using the bot. What do I do? Can I be un-blacklisted?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "text" : "Chances are you will not be un-blacklisted due to you likely having used external scrips to use currency.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "You however may send a ",
+        "type" : "SimpleText"
+      }, {
+        "type" : "StrongEmphasis",
         "content" : [ {
-          "text" : "We do not exchange Money for credits within Mantaro (or Mantaro Patreon for that matter) what so ever. Please do not ask this here. Anyone spreading that we do offer \"Money for Credits\" is spreading a false rumor. It is true that, that used to be a thing in the very first version of currency (which is now over 2 years ago), but it no longer holds true and never will anymore. Additionally all credits that were ever given for real money (which was only through patreon pledges) were also reset with the big reset after said currency version (We mention this here mainly for the sake of transparency and to clear up any misunderstandings).",
+          "text" : "polite and detailed",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "Paragraph",
+        "text" : " appeal to Kodehawa on ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "contact@mantaro.site",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " (No an appeal is not \"I won't do it again\", neither is some obviously made up story).",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "You will have to patiently wait for him to reply, if he never does that means you will not be un-blacklisted. If Kodehawa says no, there is no point in begging. No means no.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "type" : "StrongEmphasis",
         "content" : [ {
-          "text" : "Additionally, we also forbid people from offering credits for real money on their own (This is part of our Terms of Service, reachable on github).",
+          "text" : "Kodehawa is the only one who can un-blacklist you and will not be taking any direct requests for being un-blacklisted.",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Don't: Ask for credits. There is absolutely no way to obtain credits through donations/pledges or the use of real money.",
-          "type" : "SimpleText"
-        } ]
+        "text" : " You need to send the email.",
+        "type" : "SimpleText"
       }, {
-        "type" : "ThematicBreak"
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Complaining about not having received warns will reduce your chance of being un-blacklisted to effectively 0. We do not give warns, this is how zero tolerance policies work.",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "24-i-want-to-request-my-data-i-want-to-delete-my-data",
-      "title" : "24. I want to request my data / I want to delete my data",
-      "type" : "Section",
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "text" : "You may read our ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "/mantaro-wiki/legal/terms-of-service",
+        "isFile" : false,
+        "type" : "Link",
         "content" : [ {
-          "text" : "Send a formal request to ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "contact@mantaro.site",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " and we'll process it as soon as possible.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "Data deletion is irreversible and leads to a permanent blacklist from the bot to ensure we don't collect any further data about you, so only do it if you're sure about it.",
+          "text" : "Terms and Service",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Data requests will be processed in 1 to 7 days. Keep in mind the data won't be human-readable.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "It only includes Player / User / Seasonal data, NOT guild data.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "We need proof you're the owner of the data before processing it, so ping me before sending the email.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
+        "text" : " before appealing to see if appealing will actually serve any purpose.",
+        "type" : "SimpleText"
       } ]
     }, {
-      "id" : "25-i-used-the-waifu-optout-option-is-there-a-way-to-reverse-itoptin",
-      "title" : "25. I used the waifu optout option, is there a way to reverse it/optin?",
-      "type" : "Section",
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "18-i-have-lost-my-daily-can-i-get-it-back",
+      "level" : 2,
+      "title" : "18. I have lost my daily can I get it back?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
       "content" : [ {
-        "type" : "Paragraph",
+        "text" : "No, there is no actual way for us to refund a daily.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "And if you have lost it there is probably a very good reason why you did. For instance using the daily command right after another command (which fucks with our data).",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Users have a time frame bigger than 24 hours to claim their daily.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "For more detail refer to ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://github.com/Mantaro/MantaroBot/issues/258",
+        "isFile" : false,
+        "type" : "Link",
         "content" : [ {
-          "text" : "Short answer: ",
-          "type" : "SimpleText"
-        }, {
-          "type" : "StrongEmphasis",
-          "content" : [ {
-            "text" : "No, you cannot opt in after you opt out. This is final.",
-            "type" : "SimpleText"
-          } ]
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "Long answer: The optout option is very heavy on our system. Since it forces a user to be unclaimed from all users, we need to check all users, and theres a lot of users.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "Not only that, unclaim usually takes money but since this forces you to be unclaimed, you can do it for free. These things mentioned before can be abused if we allowed users to opt in/out as they wish.",
+          "text" : "issue #258",
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "As well, since it was introduced we have not allowed people to opt in. Due to fairness to others this will remain the same.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "ThematicBreak"
+        "text" : ".",
+        "type" : "SimpleText"
       } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "19-i-just-donated-and-i-want-to-know-how-to-add-mantaro-patreon-or-get-my-premium-keys",
+      "level" : 2,
+      "title" : "19. I just donated and I want to know how to add Mantaro Patreon or get my premium keys",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "If you donated via PayPal then please get in contact with Kodehawa#3457 so that he can give you the corresponding rewards.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "If you donated via Patreon then first make sure that you have linked your Discord account to your Patreon account (check ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://support.patreon.com/hc/en-us/articles/212052266-How-do-I-receive-my-Discord-role-",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "here",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : " for more help).",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "After this Mantaro will attempt to DM you your first key (make sure you have open DMs for this). After this same as with PayPal, contact Kodehawa#3457 if you wish to get any other rewards.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "20-can-i-buy-credits-in-mantaro-do-i-get-credits-for-donatingpledging-is-there-any-way-to-obtain-creditsitemsbadges-using-real-money",
+      "level" : 2,
+      "title" : "20. Can I buy credits in Mantaro? Do I get credits for donating/pledging? Is there any way to obtain credits/items/badges using real money?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "We do not exchange Money for credits within Mantaro (or Mantaro Patreon for that matter) whatsoever.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Please do not ask this here. Anyone spreading that we do offer \"Money for Credits\" is spreading a false rumor.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "It is true that, that used to be a thing in the very first version of currency (which is now over 2 years ago), but it no longer holds true and never will anymore.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Additionally, all credits that were ever given for real money (which was only through patreon pledges) were also reset with the big reset after said currency version (We mention this here mainly for the sake of transparency and to clear up any misunderstandings).",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Additionally, we also forbid people from offering credits for real money on their own (This is part of our ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "/mantaro-wiki/legal/terms-of-service",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Terms and Service",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : ").",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Don't: Ask for credits. There is absolutely no way to obtain credits through donations/pledges or the use of real money.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "21-i-want-to-request-my-data-i-want-to-delete-my-data",
+      "level" : 2,
+      "title" : "21. I want to request my data / I want to delete my data",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Send a formal request to ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "contact@mantaro.site",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " and we'll process it as soon as possible.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Data deletion is irreversible and leads to a permanent blacklist from the bot to ensure we don't collect any further data about you, so only do it if you're sure about it.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Data requests will be processed in 1 to 7 days. Keep in mind the data won't be human-readable.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "It only includes Player / User / Seasonal data, NOT guild data.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "We need proof you're the owner of the data before processing it, so ping me before sending the email.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
+    }, {
+      "id" : "22-i-used-the-waifu-opt-out-option-is-there-a-way-to-reverse-itopt-in",
+      "level" : 2,
+      "title" : "22. I used the waifu opt out option, is there a way to reverse it/opt in?",
+      "type" : "SubHeading"
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Short answer: ",
+        "type" : "SimpleText"
+      }, {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "No, you cannot opt in after you opt out. This is final.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Long answer: The ",
+        "type" : "SimpleText"
+      }, {
+        "code" : "optout",
+        "type" : "InlinedCode"
+      }, {
+        "text" : " option is very heavy on our system. Since it forces a user to be unclaimed from all users, we need to check all users, and there's a lot of users.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "Not only that, unclaim usually takes money but since this forces you to be unclaimed, you can do it for free.",
+        "type" : "SimpleText"
+      }, {
+        "type" : "SoftLineBreak"
+      }, {
+        "text" : "These things mentioned before can be abused if we allowed users to opt in/out as they wish.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "As well, since it was introduced we have not allowed people to opt in. Due to fairness to others this will remain the same.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "ThematicBreak"
     } ],
-    "lastModifiedTime" : 1661099420020,
+    "lastModifiedTime" : 1661886352807,
     "tocItem" : {
       "chapterTitle" : "Basics",
       "pageTitle" : "FAQ",
@@ -1098,82 +1081,7 @@ ReactDOM.render(React.createElement(Documentation, {
       "dirName" : "basics",
       "fileName" : "FAQ",
       "viewOnRelativePath" : null,
-      "pageSectionIdTitles" : [ {
-        "title" : "1. How do I change the prefix for this bot?",
-        "id" : "1-how-do-i-change-the-prefix-for-this-bot"
-      }, {
-        "title" : "2. What is premium and what is the Patreon bot?",
-        "id" : "2-what-is-premium-and-what-is-the-patreon-bot"
-      }, {
-        "title" : "3. How does EXP in Mantaro work and what use do levels have?",
-        "id" : "3-how-does-exp-in-mantaro-work-and-what-use-do-levels-have"
-      }, {
-        "title" : "4. Some of Mantaro's commands are not showing any content (empty message), for instance on help?",
-        "id" : "4-some-of-mantaros-commands-are-not-showing-any-content-empty-message-for-instance-on-help"
-      }, {
-        "title" : "5. The bot is not responding or lagging behind what do I do?",
-        "id" : "5-the-bot-is-not-responding-or-lagging-behind-what-do-i-do"
-      }, {
-        "title" : "6. Mantaro joined a VC, but she isn't playing anything/she is lagging",
-        "id" : "6-mantaro-joined-a-vc-but-she-isnt-playing-anythingshe-is-lagging"
-      }, {
-        "title" : "7. What do the items within Mantaro do? How to earn credits? What are waifu's and how to raise my waifu value?",
-        "id" : "7-what-do-the-items-within-mantaro-do-how-to-earn-credits-what-are-waifus-and-how-to-raise-my-waifu-value"
-      }, {
-        "title" : "8. Can I add money to people in my own server/s server that I admin?",
-        "id" : "8-can-i-add-money-to-people-in-my-own-servers-server-that-i-admin"
-      }, {
-        "title" : "9. What is the Birthday announcer? Why are my birthdays not being announced? Can I set other people's Birthday?",
-        "id" : "9-what-is-the-birthday-announcer-why-are-my-birthdays-not-being-announced-can-i-set-other-peoples-birthday"
-      }, {
-        "title" : "10. Can I unclaim people who I no longer share a server with or that show as unknown user? (Waifu command)",
-        "id" : "10-can-i-unclaim-people-who-i-no-longer-share-a-server-with-or-that-show-as-unknown-user-waifu-command"
-      }, {
-        "title" : "11. When trying to waifu claim a user it says they are locked? How to get rid of claim keys?",
-        "id" : "11-when-trying-to-waifu-claim-a-user-it-says-they-are-locked-how-to-get-rid-of-claim-keys"
-      }, {
-        "title" : "12. What is dust?",
-        "id" : "12-what-is-dust"
-      }, {
-        "title" : "13. How do I change my Profile description?",
-        "id" : "13-how-do-i-change-my-profile-description"
-      }, {
-        "title" : "14. What are love letters? What are they used for? How do I get one?",
-        "id" : "14-what-are-love-letters-what-are-they-used-for-how-do-i-get-one"
-      }, {
-        "title" : "15. How do I make a custom action command like ~>hug?",
-        "id" : "15-how-do-i-make-a-custom-action-command-like-hug"
-      }, {
-        "title" : "16. Mantaro has deleted all my roles/channels/banned all my user/or similar",
-        "id" : "16-mantaro-has-deleted-all-my-roleschannelsbanned-all-my-useror-similar"
-      }, {
-        "title" : "17. How do I invite the bot? My server does not show when inviting the bot? (Or anything related to inviting the bot)",
-        "id" : "17-how-do-i-invite-the-bot-my-server-does-not-show-when-inviting-the-bot-or-anything-related-to-inviting-the-bot"
-      }, {
-        "title" : "18. What is \"Old Sparkle Pickaxe\" and can I restore/use it?",
-        "id" : "18-what-is-old-sparkle-pickaxe-and-can-i-restoreuse-it"
-      }, {
-        "title" : "19. I have been blacklisted from using the bot. What do I do? Can I be unblacklisted?",
-        "id" : "19-i-have-been-blacklisted-from-using-the-bot-what-do-i-do-can-i-be-unblacklisted"
-      }, {
-        "title" : "20. I am trying to cast an item but it is not working?",
-        "id" : "20-i-am-trying-to-cast-an-item-but-it-is-not-working"
-      }, {
-        "title" : "21. I have lost my daily can I get it back?",
-        "id" : "21-i-have-lost-my-daily-can-i-get-it-back"
-      }, {
-        "title" : "22. I just donated and I want to know how to add Mantaro Patreon or get my premium keys",
-        "id" : "22-i-just-donated-and-i-want-to-know-how-to-add-mantaro-patreon-or-get-my-premium-keys"
-      }, {
-        "title" : "23. Can I buy credits in Mantaro? Do I get credits for donating/pledging? Is there any way to obtain credits/items/badges using real money?",
-        "id" : "23-can-i-buy-credits-in-mantaro-do-i-get-credits-for-donatingpledging-is-there-any-way-to-obtain-creditsitemsbadges-using-real-money"
-      }, {
-        "title" : "24. I want to request my data / I want to delete my data",
-        "id" : "24-i-want-to-request-my-data-i-want-to-delete-my-data"
-      }, {
-        "title" : "25. I used the waifu optout option, is there a way to reverse it/optin?",
-        "id" : "25-i-used-the-waifu-optout-option-is-there-a-way-to-reverse-itoptin"
-      } ]
+      "pageSectionIdTitles" : [ ]
     }
   }
 }), document.getElementById("znai"));

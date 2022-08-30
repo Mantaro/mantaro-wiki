@@ -83,28 +83,43 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>Getting started</h1></header>
-<p>To get started you will first have to set your channel(s). You can do that by doing ~&gt;opts usermessage join channel for welcoming and ~&gt;opts usermessage leave channel for bidding farewell respectively. For example: null https://i.imgur.com/mehwPN8.png image null https://i.imgur.com/pfi4ZuM.png image After you have done that you can set your very first and basic welcome and leave message. To set your join message you will have use ~&gt;opts usermessage joinmessage &lt;your text here&gt; : null https://i.imgur.com/OrGDph3.png image Now you can set a leave message using ~&gt;opts usermessage leavemessage &lt;yout text&gt; null https://i.imgur.com/27mp02Z.png image Ok, with the basics being covered you can now move to the next step.</p>
+<header><h1>What are welcome and leave messages?</h1></header>
+<p>The welcome and leave messages are messages that are sent to a user when they join or leave the server. Mantaro will send a message in the specified channel.Warning: Since the opts command has not been ported to Slash Commands, this page is subject to massive changes in the future.</p>
+</article>
+
+<article>
+<header><h1>Important/Main commands</h1></header>
+<p>1) What is it for? ~&gt;opts usermessage join channel &lt;channel name&gt; Used for: Setting the channel for the welcome message. 2) What is it for? ~&gt;opts usermessage leave channel &lt;channel name&gt; Used for: Setting the channel for the leave message. 3) What is it for? ~&gt;opts usermessage joinmessage &lt;your text here&gt; Used for: Setting your welcome message. 4) What is it for? ~&gt;opts usermessage leavemessage &lt;your text here&gt; Used for: Setting your leave message.</p>
+</article>
+
+<article>
+<header><h1>Setting your channels</h1></header>
+<p>To get started you will first have to set your channel(s). Your messages will be sent in the channels you set.For welcome messages use: ~&gt;opts usermessage join channel &lt;channel name&gt; null https://i.imgur.com/mehwPN8.png image For leave messages use: ~&gt;opts usermessage leave channel &lt;channel name&gt; null https://i.imgur.com/pfi4ZuM.png image</p>
+</article>
+
+<article>
+<header><h1>Setting your first message</h1></header>
+<p>After you have set up your channels, you can set your very first and basic welcome and leave message.For welcome messages use: ~&gt;opts usermessage joinmessage &lt;your text here&gt; null https://i.imgur.com/OrGDph3.png image For leave messages use: ~&gt;opts usermessage leavemessage &lt;yout text&gt; null https://i.imgur.com/27mp02Z.png image Ok, with the basics being covered you can now move to the next step.</p>
 </article>
 
 <article>
 <header><h1>Using Modifiers</h1></header>
-<p>So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view all modifiers guides/modifiers#modifiers-for-welcomeleave-messages here. For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).So, let's say you want to mention the user that joined. Tell him how many users your server has with him/her joining and also include the server name for simple aesthetics. For this you would do something like. ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member! null https://i.imgur.com/7nGWxjr.png image To break this down.$(event.guild.name) is replaced with the name of the server.$(event.user.mention) is replaced with the mention of the user that just joined.$(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.Now let's say you want to do something similar for the leave message. We will use: ~&gt;opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers). null https://i.imgur.com/fuyNDjq.png image Now that you understand modifiers let's move to the final level.</p>
+<p>So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view all modifiers guides/modifiers#modifiers-for-welcomeleave-messages here. For the sake of this tutorial we will only cover $(event.user.mention) , $(event.user.username) , $(event.guild.name) and $(event.guild.totalusers) .So, let's say you want to mention the user that joined. Tell them how many users your server has with them joining and also include the server name for simple aesthetics. For this you would do something like the following: md ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member! null https://i.imgur.com/7nGWxjr.png image To break this down. $(event.guild.name) is replaced with the name of the server. $(event.user.mention) is replaced with the mention of the user that just joined. $(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.Now let's say you want to do something similar for the leave message. We will use: md ~&gt;opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers). null https://i.imgur.com/fuyNDjq.png image Now that you understand modifiers let's move to the final level.</p>
 </article>
 
 <article>
 <header><h1>Using Embeds</h1></header>
-<p>You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course, but you learned that already). To use an embed you will need to know how to work with them. To start you will need to start off you message with embed: followed by one or more of these:title:&quot;text&quot; description&quot;text&quot; thumbnail:&quot;image url&quot; image:&quot;image url&quot; fields:[{name:&quot;name here&quot;, value:&quot;text here&quot;}, name:&quot;name&quot;, value:&quot;text here&quot;, inline: true, .....}] color:&quot;hex code or member&quot; footer:&quot;text&quot; footerImg:&quot;image url&quot; author:&quot;text&quot; authorImg:&quot;image url&quot; Ok, yes this is complicated so let's make an example: ~&gt;opts usermessage joinmessage embed:author:&quot;Welcome to our server&quot;, authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please enjoy your stay :&gt;&quot;, description:&quot;Please be sure to read our rules carefully thanks~&quot;, image:&quot;https://i.imgur.com/fjmcMHL.jpg&quot;, thumbnail:&quot;https://i.imgur.com/KYblACB.png&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by MrLar&quot;, footerImg:&quot;https://i.imgur.com/R5MoVC5.png&quot; Setting it up &amp; in action: null https://i.imgur.com/68xlljt.png image This will need a lot of practice. But basically you can use ANY combination of the above listed things and choose your own text in each of them :&gt;.</p>
+<p>For this section you will need to also check out our guides/embeds Embeds Guide. It will teach you how you can make your desired embeds to make your fancy messages.Once you have your embed ready, you want to add embed: to the start of it. This is necessary so the bot realizes your content is an embed. An example would be as follows: md ~&gt;opts usermessage joinmessage embed:author:&quot;Welcome to our server&quot;, authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please enjoy your stay :&gt;&quot;, description:&quot;Please be sure to read our rules carefully thanks~&quot;, image:&quot;https://i.imgur.com/fjmcMHL.jpg&quot;, thumbnail:&quot;https://i.imgur.com/KYblACB.png&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by MrLar&quot;, footerImg:&quot;https://i.imgur.com/R5MoVC5.png&quot; Setting it up &amp; in action: null https://i.imgur.com/68xlljt.png image</p>
 </article>
 
 <article>
 <header><h1>Combining your knowledge</h1></header>
-<p>Ok so you learned how to use embeds and modifiers. What about both in one? (Please note that using mentions in the title, footer, field names, author and some other places will not work and display them how they look internally to discord. This is a discord limitation that we cannot do anything about.) ~&gt;opts usermessage joinmessage embed:author:&quot;Welcome to $(event.guild.name)&quot;, authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please be sure to read our rules carefully thanks~&quot;, description:&quot;Please enjoy your stay $(event.user.mention)&quot;, thumbnail:&quot;$(event.user.avatar)&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by $(event.guild.owner.username)&quot;, footerImg:&quot;$(event.guild.owner.avatar)&quot; null https://i.imgur.com/3aBjQIh.png image Another way of combining what you know is by using both plain text and embeds. It may sound complicated but it is not. All you have to do is write whatever you want as plain text and then follow it with an embed, like so: ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name) embed:authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please be sure to read our rules carefully thanks~&quot;, description:&quot;Please enjoy your stay $(event.user.mention)&quot;, thumbnail:&quot;$(event.user.avatar)&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by $(event.guild.owner.username)&quot;, footerImg:&quot;$(event.guild.owner.avatar)&quot; null https://i.imgur.com/pqXQund.png image</p>
+<p>Ok so you learned how to use embeds and modifiers. What about both in one? md ~&gt;opts usermessage joinmessage embed:author:&quot;Welcome to $(event.guild.name)&quot;, authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please be sure to read our rules carefully thanks~&quot;, description:&quot;Please enjoy your stay $(event.user.mention)&quot;, thumbnail:&quot;$(event.user.avatar)&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by $(event.guild.owner.username)&quot;, footerImg:&quot;$(event.guild.owner.avatar)&quot; null https://i.imgur.com/3aBjQIh.png image Another way of combining what you know is by using both plain text and embeds. It may sound complicated but it is not. All you have to do is write whatever you want as plain text and then follow it with an embed, like so: md ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name) embed:authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please be sure to read our rules carefully thanks~&quot;, description:&quot;Please enjoy your stay $(event.user.mention)&quot;, thumbnail:&quot;$(event.user.avatar)&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by $(event.guild.owner.username)&quot;, footerImg:&quot;$(event.guild.owner.avatar)&quot; null https://i.imgur.com/pqXQund.png image</p>
 </article>
 
 <article>
-<header><h1>Extra</h1></header>
-<p>You can also add multiple leave and welcome message. Since this basically works the same way as this entire tutorial we will not make any visuals for it. The only change is that you use ~&gt;opts usermessage joinmessages add &lt;message&gt; for adding another welcome message and ~&gt;opts usermessage leavemessages add &lt;message&gt; for adding another leave message.In order to remove a message that you added you will need to first get a list of them ~&gt;opts usermessage joinmessages list &amp; ~&gt;opts usermessage leavemessages list and then use the number displayed next to the one you want to remove in ~&gt;opts usermessage joinmessages remove &lt;index&gt; or ~&gt;opts usermessage leavemessages remove &lt;index&gt; respectively.This of course also works in the leave message! Congrats! Now you are a master of welcome and leave messages within Mantaro!</p>
+<header><h1>Other/Extra commands</h1></header>
+<p>[1] What is it for? ~&gt;opts usermessage resetjoinmessage Used for: Resetting the welcome message. [2] What is it for? ~&gt;opts usermessage resetleavemessage Used for: Resetting the leave message. [3] What is it for? ~&gt;opts server ignorebots joinleave toggle Used for: Ignoring bots when they join or leave the server. [4] What is it for? ~&gt;opts usermessage joinmessages add &lt;your text here&gt; Used for: Adding aditional welcome messages. [5] What is it for? ~&gt;opts usermessage leavemessages add &lt;your text here&gt; Used for: Adding aditional leave messages. [6] What is it for? ~&gt;opts usermessage joinmessages list Used for: Listing all your welcome messages. [7] What is it for? ~&gt;opts usermessage leavemessages list Used for: Listing all your leave messages. [8] What is it for? ~&gt;opts usermessage joinmessages remove &lt;index&gt; Used for: Removing the specified welcome messages. [9] What is it for? ~&gt;opts usermessage joinmessages remove &lt;index&gt; Used for: Removing the specified leave messages. Congrats! Now you are a master of welcome and leave messages within Mantaro!</p>
 </article>
 </section>
 </div>
@@ -131,58 +146,214 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "id" : "getting-started",
-      "title" : "Getting started",
+      "id" : "what-are-welcome-and-leave-messages",
+      "title" : "What are welcome and leave messages?",
       "type" : "Section",
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "To get started you will first have to set your channel(s). You can do that by doing ",
+          "text" : "The welcome and leave messages are messages that are sent to a user when they join or leave the server.",
           "type" : "SimpleText"
         }, {
-          "code" : "~>opts usermessage join channel",
-          "type" : "InlinedCode"
+          "type" : "SoftLineBreak"
         }, {
-          "text" : " for welcoming and ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts usermessage leave channel",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " for bidding farewell respectively. For example:",
+          "text" : "Mantaro will send a message in the specified channel.",
           "type" : "SimpleText"
         } ]
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "destination" : "https://i.imgur.com/mehwPN8.png",
-          "alt" : "image",
-          "inlined" : true,
-          "type" : "Image"
+          "text" : "Warning: Since the ",
+          "type" : "SimpleText"
         }, {
-          "type" : "SoftLineBreak"
+          "code" : "opts",
+          "type" : "InlinedCode"
         }, {
-          "destination" : "https://i.imgur.com/pfi4ZuM.png",
-          "alt" : "image",
-          "inlined" : true,
-          "type" : "Image"
+          "text" : " command has not been ported to Slash Commands, this page is subject to massive changes in the future.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "importantmain-commands",
+      "title" : "Important/Main commands",
+      "type" : "Section",
+      "content" : [ {
+        "parameters" : [ {
+          "name" : "1)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "1)",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage join channel ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<channel name>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "1)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Setting the channel for the welcome message.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "2)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "2)",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage leave channel ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<channel name>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "2)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Setting the channel for the leave message.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "3)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "3)",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage joinmessage ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<your text here>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "3)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Setting your welcome message.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "4)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "4)",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage leavemessage ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<your text here>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "4)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Setting your leave message.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ApiParameters"
+      } ]
+    }, {
+      "id" : "setting-your-channels",
+      "title" : "Setting your channels",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "To get started you will first have to set your channel(s). Your messages will be sent in the channels you set.",
+          "type" : "SimpleText"
         } ]
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "After you have done that you can set your very first and basic welcome and leave message.",
+          "text" : "For welcome messages use: ~>opts usermessage join channel ",
           "type" : "SimpleText"
         }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "To set your join message you will have use ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts usermessage joinmessage <your text here>",
+          "code" : "<channel name>",
           "type" : "InlinedCode"
-        }, {
-          "text" : ":",
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/mehwPN8.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For leave messages use: ~>opts usermessage leave channel ",
           "type" : "SimpleText"
+        }, {
+          "code" : "<channel name>",
+          "type" : "InlinedCode"
+        } ]
+      }, {
+        "destination" : "https://i.imgur.com/pfi4ZuM.png",
+        "alt" : "image",
+        "inlined" : false,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "setting-your-first-message",
+      "title" : "Setting your first message",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "After you have set up your channels, you can set your very first and basic welcome and leave message.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For welcome messages use: ~>opts usermessage joinmessage ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "<your text here>",
+          "type" : "InlinedCode"
         } ]
       }, {
         "destination" : "https://i.imgur.com/OrGDph3.png",
@@ -192,10 +363,10 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Now you can set a leave message using ",
+          "text" : "For leave messages use: ~>opts usermessage leavemessage ",
           "type" : "SimpleText"
         }, {
-          "code" : "~>opts usermessage leavemessage <yout text>",
+          "code" : "<yout text>",
           "type" : "InlinedCode"
         } ]
       }, {
@@ -244,20 +415,51 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "type" : "SoftLineBreak"
         }, {
-          "text" : "For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).",
+          "text" : "For the sake of this tutorial we will only cover ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "$(event.user.mention)",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "$(event.user.username)",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "$(event.guild.name)",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " and ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "$(event.guild.totalusers)",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
           "type" : "SimpleText"
         } ]
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "So, let's say you want to mention the user that joined. Tell him how many users your server has with him/her joining and also include the server name for simple aesthetics. For this you would do something like.",
+          "text" : "So, let's say you want to mention the user that joined.",
           "type" : "SimpleText"
         }, {
           "type" : "SoftLineBreak"
         }, {
-          "code" : "~>opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member!",
-          "type" : "InlinedCode"
+          "text" : "Tell them how many users your server has with them joining and also include the server name for simple aesthetics. For this you would do something like the following:",
+          "type" : "SimpleText"
         } ]
+      }, {
+        "lang" : "md",
+        "snippet" : "~>opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member!\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "wide" : true,
+        "type" : "Snippet"
       }, {
         "destination" : "https://i.imgur.com/7nGWxjr.png",
         "alt" : "image",
@@ -272,19 +474,28 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "$(event.guild.name) is replaced with the name of the server.",
+          "code" : "$(event.guild.name)",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " is replaced with the name of the server.",
           "type" : "SimpleText"
         } ]
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "$(event.user.mention) is replaced with the mention of the user that just joined.",
+          "code" : "$(event.user.mention)",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " is replaced with the mention of the user that just joined.",
           "type" : "SimpleText"
         } ]
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "$(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.",
+          "code" : "$(event.guild.totalusers)",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " is replaced with the total member count of the server including the person that just joined.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -295,12 +506,16 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "type" : "SoftLineBreak"
         }, {
-          "text" : "We will use: ",
+          "text" : "We will use:",
           "type" : "SimpleText"
-        }, {
-          "code" : "~>opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers).",
-          "type" : "InlinedCode"
         } ]
+      }, {
+        "lang" : "md",
+        "snippet" : "~>opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers).\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "wide" : true,
+        "type" : "Snippet"
       }, {
         "destination" : "https://i.imgur.com/fuyNDjq.png",
         "alt" : "image",
@@ -322,129 +537,48 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course, but you learned that already).",
+          "text" : "For this section you will need to also check out our ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/mantaro-wiki/guides/embeds",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Embeds Guide",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
           "type" : "SimpleText"
         }, {
           "type" : "SoftLineBreak"
         }, {
-          "text" : "To use an embed you will need to know how to work with them.",
+          "text" : "It will teach you how you can make your desired embeds to make your fancy messages.",
           "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "To start you will need to start off you message with ",
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Once you have your embed ready, you want to add ",
           "type" : "SimpleText"
         }, {
           "code" : "embed:",
           "type" : "InlinedCode"
         }, {
-          "text" : " followed by one or more of these:",
+          "text" : " to the start of it. This is necessary so the bot realizes your content is an embed.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "An example would be as follows:",
           "type" : "SimpleText"
         } ]
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "title:\"text\"",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "description\"text\"",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "thumbnail:\"image url\"",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "image:\"image url\"",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "fields:[{name:\"name here\", value:\"text here\"}, name:\"name\", value:\"text here\", inline: true, .....}]",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "color:\"hex code or member\"",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "footer:\"text\"",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "footerImg:\"image url\"",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "author:\"text\"",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "authorImg:\"image url\"",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Ok, yes this is complicated so let's make an example: ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts usermessage joinmessage embed:author:\"Welcome to our server\", authorImg:\"https://i.imgur.com/VoVaJ0K.png\", title:\"Please enjoy your stay :>\", description:\"Please be sure to read our rules carefully thanks~\", image:\"https://i.imgur.com/fjmcMHL.jpg\", thumbnail:\"https://i.imgur.com/KYblACB.png\", color:\"c91191\",footer:\"Server owned by MrLar\", footerImg:\"https://i.imgur.com/R5MoVC5.png\"",
-          "type" : "InlinedCode"
-        } ]
+        "lang" : "md",
+        "snippet" : "~>opts usermessage joinmessage embed:author:\"Welcome to our server\", authorImg:\"https://i.imgur.com/VoVaJ0K.png\", title:\"Please enjoy your stay :>\", description:\"Please be sure to read our rules carefully thanks~\", image:\"https://i.imgur.com/fjmcMHL.jpg\", thumbnail:\"https://i.imgur.com/KYblACB.png\", color:\"c91191\",footer:\"Server owned by MrLar\", footerImg:\"https://i.imgur.com/R5MoVC5.png\"\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
       }, {
         "type" : "Paragraph",
         "content" : [ {
@@ -457,12 +591,6 @@ ReactDOM.render(React.createElement(Documentation, {
         "inlined" : false,
         "type" : "Image"
       }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "This will need a lot of practice. But basically you can use ANY combination of the above listed things and choose your own text in each of them :>.",
-          "type" : "SimpleText"
-        } ]
-      }, {
         "type" : "ThematicBreak"
       } ]
     }, {
@@ -474,18 +602,13 @@ ReactDOM.render(React.createElement(Documentation, {
         "content" : [ {
           "text" : "Ok so you learned how to use embeds and modifiers. What about both in one?",
           "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "(Please note that using mentions in the title, footer, field names, author and some other places will not work and display them how they look internally to discord. This is a discord limitation that we cannot do anything about.)",
-          "type" : "SimpleText"
         } ]
       }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "code" : "~>opts usermessage joinmessage embed:author:\"Welcome to $(event.guild.name)\", authorImg:\"https://i.imgur.com/VoVaJ0K.png\", title:\"Please be sure to read our rules carefully thanks~\", description:\"Please enjoy your stay $(event.user.mention)\", thumbnail:\"$(event.user.avatar)\", color:\"c91191\",footer:\"Server owned by $(event.guild.owner.username)\", footerImg:\"$(event.guild.owner.avatar)\"",
-          "type" : "InlinedCode"
-        } ]
+        "lang" : "md",
+        "snippet" : "~>opts usermessage joinmessage embed:author:\"Welcome to $(event.guild.name)\", authorImg:\"https://i.imgur.com/VoVaJ0K.png\", title:\"Please be sure to read our rules carefully thanks~\", description:\"Please enjoy your stay $(event.user.mention)\", thumbnail:\"$(event.user.avatar)\", color:\"c91191\",footer:\"Server owned by $(event.guild.owner.username)\", footerImg:\"$(event.guild.owner.avatar)\"\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
       }, {
         "destination" : "https://i.imgur.com/3aBjQIh.png",
         "alt" : "image",
@@ -498,11 +621,11 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "code" : "~>opts usermessage joinmessage Welcome to $(event.guild.name) embed:authorImg:\"https://i.imgur.com/VoVaJ0K.png\", title:\"Please be sure to read our rules carefully thanks~\", description:\"Please enjoy your stay $(event.user.mention)\", thumbnail:\"$(event.user.avatar)\", color:\"c91191\",footer:\"Server owned by $(event.guild.owner.username)\", footerImg:\"$(event.guild.owner.avatar)\"",
-          "type" : "InlinedCode"
-        } ]
+        "lang" : "md",
+        "snippet" : "~>opts usermessage joinmessage Welcome to $(event.guild.name) embed:authorImg:\"https://i.imgur.com/VoVaJ0K.png\", title:\"Please be sure to read our rules carefully thanks~\", description:\"Please enjoy your stay $(event.user.mention)\", thumbnail:\"$(event.user.avatar)\", color:\"c91191\",footer:\"Server owned by $(event.guild.owner.username)\", footerImg:\"$(event.guild.owner.avatar)\"\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
       }, {
         "destination" : "https://i.imgur.com/pqXQund.png",
         "alt" : "image",
@@ -510,65 +633,261 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Image"
       } ]
     }, {
-      "id" : "extra",
-      "title" : "Extra",
+      "id" : "otherextra-commands",
+      "title" : "Other/Extra commands",
       "type" : "Section",
       "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "You can also add multiple leave and welcome message. Since this basically works the same way as this entire tutorial we will not make any visuals for it. The only change is that you use ",
-          "type" : "SimpleText"
+        "parameters" : [ {
+          "name" : "[1]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[1]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage resetjoinmessage",
+              "type" : "SimpleText"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[1]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Resetting the welcome message.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
         }, {
-          "code" : "~>opts usermessage joinmessages add <message>",
-          "type" : "InlinedCode"
+          "name" : "[2]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[2]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage resetleavemessage",
+              "type" : "SimpleText"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[2]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Resetting the leave message.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
         }, {
-          "text" : " for adding another welcome message and ",
-          "type" : "SimpleText"
+          "name" : "[3]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[3]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts server ignorebots joinleave toggle",
+              "type" : "SimpleText"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[3]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Ignoring bots when they join or leave the server.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
         }, {
-          "code" : "~>opts usermessage leavemessages add <message>",
-          "type" : "InlinedCode"
+          "name" : "[4]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[4]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage joinmessages add ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<your text here>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[4]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Adding aditional welcome messages.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
         }, {
-          "text" : " for adding another leave message.",
-          "type" : "SimpleText"
-        } ]
+          "name" : "[5]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[5]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage leavemessages add ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<your text here>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[5]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Adding aditional leave messages.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "[6]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[6]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage joinmessages list",
+              "type" : "SimpleText"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[6]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Listing all your welcome messages.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "[7]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[7]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage leavemessages list",
+              "type" : "SimpleText"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[7]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Listing all your leave messages.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "[8]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[8]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage joinmessages remove ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<index>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[8]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Removing the specified welcome messages.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "[9]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[9]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts usermessage joinmessages remove ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<index>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[9]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Removing the specified leave messages.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "In order to remove a message that you added you will need to first get a list of them ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts usermessage joinmessages list",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " & ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts usermessage leavemessages list",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " and then use the number displayed next to the one you want to remove in ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts usermessage joinmessages remove <index>",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " or ",
-          "type" : "SimpleText"
-        }, {
-          "code" : "~>opts usermessage leavemessages remove <index>",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " respectively.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "This of course also works in the leave message!",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
           "text" : "Congrats! Now you are a master of welcome and leave messages within Mantaro!",
           "type" : "SimpleText"
         } ]
@@ -576,7 +895,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661816585351,
+    "lastModifiedTime" : 1661899742756,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Welcome And Leave Messages",
@@ -585,8 +904,17 @@ ReactDOM.render(React.createElement(Documentation, {
       "fileName" : "welcome-and-leave-messages",
       "viewOnRelativePath" : null,
       "pageSectionIdTitles" : [ {
-        "title" : "Getting started",
-        "id" : "getting-started"
+        "title" : "What are welcome and leave messages?",
+        "id" : "what-are-welcome-and-leave-messages"
+      }, {
+        "title" : "Important/Main commands",
+        "id" : "importantmain-commands"
+      }, {
+        "title" : "Setting your channels",
+        "id" : "setting-your-channels"
+      }, {
+        "title" : "Setting your first message",
+        "id" : "setting-your-first-message"
       }, {
         "title" : "Using Modifiers",
         "id" : "using-modifiers"
@@ -597,8 +925,8 @@ ReactDOM.render(React.createElement(Documentation, {
         "title" : "Combining your knowledge",
         "id" : "combining-your-knowledge"
       }, {
-        "title" : "Extra",
-        "id" : "extra"
+        "title" : "Other/Extra commands",
+        "id" : "otherextra-commands"
       } ]
     }
   }
