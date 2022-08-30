@@ -62,7 +62,7 @@ Then you would simply put their ID in place of the mention (`/waifu unclaim user
 ---
 ## 9. When trying to waifu claim a user it says they are locked? How to get rid of claim keys?
 When a user is "locked" that means they have prevented themselves from being claimed by another user. 
-To turn this off the locked person needs to use `/profile claimlock remove:True`.
+To turn this off the locked person needs to use `/waifu claimlock remove:True`.
 
 ---
 ## 10. What is dust?
