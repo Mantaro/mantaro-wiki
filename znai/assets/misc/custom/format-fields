@@ -2,6 +2,5 @@
 {name:"name of the first field",
 value:"value of the first field", inline:true},
 {name:"name of the second field",
-value:"value of the second field",
-inline:false}
+value:"value of the second field", inline:false}
 ]
