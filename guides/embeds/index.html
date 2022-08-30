@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Mantaro Wiki: Embeds</title>
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/main.css">
+<link rel="stylesheet" type="text/css" href="/mantaro-wiki/static/css/global-overrides.css">
+</head>
+<link rel="shortcut icon" href="/mantaro-wiki/favicon.png"type="image/ico"/>
+<body class="theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Introduction</h1></header>
+<p>Embeds are used to display rich content in messages. They are very powerful and can be used to display information in a variety of ways. In Mantaro, they are used to display information in the following ways:Welcome and leave messages Custom commands Birthday announcer In this page we will cover how to use embeds in Mantaro.</p>
+</article>
+
+<article>
+<header><h1>What is an embed?</h1></header>
+<p>Let's start off with identifying an embed.IMAGE HEREThis is an example of an embed using Mantaro. Here you can easily identify what field corresponds to which text on the embed.</p>
+</article>
+
+<article>
+<header><h1>Creating your own embed</h1></header>
+<p>Let's start by working on designing your own embed. We offer you two ways to create your own embed. The easy way We have good news! There is a really easy way to create your own embed. We worked on a tool that can help you create embeds for you with the appropriate format used by Mantaro.You can find this page https://www.mantaro.site/mantaro-embed-builder here! How to use it Once you open the page, you will see its made up of two parts. An editing area, and a preview area. As you edit around you will see the changes live in the preview area. Now simply edit away until you get your embed ready. Tips You can click on this button to clear out the current data in the embed. The hard way TBD</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/mantaro-wiki/footer.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/toc.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/assets.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/static/main.js"></script>
+<script type="text/javascript" src="/mantaro-wiki/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "The official wiki for the Mantaro Discord Bot.",
+    "id" : "mantaro-wiki",
+    "title" : "Mantaro Wiki",
+    "type" : "Docs",
+    "previewEnabled" : false,
+    "support" : {
+      "link" : "https://support.mantaro.site",
+      "title" : "Our support server"
+    }
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "introduction",
+      "title" : "Introduction",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Embeds are used to display rich content in messages. They are very powerful and can be used to display information in a variety of ways.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "In Mantaro, they are used to display information in the following ways:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Welcome and leave messages",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Custom commands",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Birthday announcer",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In this page we will cover how to use embeds in Mantaro.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "what-is-an-embed",
+      "title" : "What is an embed?",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Let's start off with identifying an embed.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "IMAGE HERE",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is an example of an embed using Mantaro. Here you can easily identify what field corresponds to which text on the embed.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "creating-your-own-embed",
+      "title" : "Creating your own embed",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Let's start by working on designing your own embed. We offer you two ways to create your own embed.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "The easy way",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "We have good news! There is a really easy way to create your own embed.",
+              "type" : "SimpleText"
+            }, {
+              "type" : "SoftLineBreak"
+            }, {
+              "text" : "We worked on a tool that can help you create embeds for you with the appropriate format used by Mantaro.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You can find this page ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://www.mantaro.site/mantaro-embed-builder",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "here!",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "id" : "how-to-use-it",
+            "level" : 2,
+            "title" : "How to use it",
+            "type" : "SubHeading"
+          }, {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Once you open the page, you will see its made up of two parts. An editing area, and a preview area. As you edit around you will see the changes live in the preview area.",
+              "type" : "SimpleText"
+            }, {
+              "type" : "SoftLineBreak"
+            }, {
+              "text" : "Now simply edit away until you get your embed ready.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "id" : "tips",
+            "level" : 2,
+            "title" : "Tips",
+            "type" : "SubHeading"
+          }, {
+            "delimiter" : ")",
+            "startNumber" : 1,
+            "type" : "OrderedList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "You can click on this button to clear out the current data in the embed.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          }, {
+            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\embeds\\maker-clean-embed.png",
+            "timestamp" : 1661833026441,
+            "shapes" : [ ],
+            "width" : 256.0,
+            "height" : 80.0,
+            "type" : "AnnotatedImage"
+          } ]
+        }, {
+          "name" : "The hard way",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "TBD",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    } ],
+    "lastModifiedTime" : 1661875292230,
+    "tocItem" : {
+      "chapterTitle" : "Guides",
+      "pageTitle" : "Embeds",
+      "pageMeta" : { },
+      "dirName" : "guides",
+      "fileName" : "embeds",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Introduction",
+        "id" : "introduction"
+      }, {
+        "title" : "What is an embed?",
+        "id" : "what-is-an-embed"
+      }, {
+        "title" : "Creating your own embed",
+        "id" : "creating-your-own-embed"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

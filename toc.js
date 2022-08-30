@@ -14,71 +14,6 @@ toc = [ {
     } ]
   } ]
 }, {
-  "chapterTitle" : "Legal",
-  "dirName" : "legal",
-  "items" : [ {
-    "chapterTitle" : "Legal",
-    "pageTitle" : "Terms Of Service",
-    "pageMeta" : { },
-    "dirName" : "legal",
-    "fileName" : "terms-of-service",
-    "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ {
-      "title" : "Mantaro Bot Terms of Service",
-      "id" : "mantaro-bot-terms-of-service"
-    }, {
-      "title" : "1. The bot and its systems",
-      "id" : "1-the-bot-and-its-systems"
-    }, {
-      "title" : "2. Music and Transmission.",
-      "id" : "2-music-and-transmission"
-    }, {
-      "title" : "3. Use of the Mantaro \"currency\" and game system",
-      "id" : "3-use-of-the-mantaro-currency-and-game-system"
-    }, {
-      "title" : "4. Premium Features",
-      "id" : "4-premium-features"
-    }, {
-      "title" : "5. Warranty and Liability.",
-      "id" : "5-warranty-and-liability"
-    }, {
-      "title" : "6. Abuse",
-      "id" : "6-abuse"
-    }, {
-      "title" : "7. Acknowledge",
-      "id" : "7-acknowledge"
-    }, {
-      "title" : "8. Donations",
-      "id" : "8-donations"
-    } ]
-  }, {
-    "chapterTitle" : "Legal",
-    "pageTitle" : "Privacy Policy",
-    "pageMeta" : { },
-    "dirName" : "legal",
-    "fileName" : "privacy-policy",
-    "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ {
-      "title" : "Information Collection and Use",
-      "id" : "information-collection-and-use"
-    }, {
-      "title" : "Log Data",
-      "id" : "log-data"
-    }, {
-      "title" : "Website",
-      "id" : "website"
-    }, {
-      "title" : "Children's Privacy",
-      "id" : "childrens-privacy"
-    }, {
-      "title" : "Changes to This Privacy Policy",
-      "id" : "changes-to-this-privacy-policy"
-    }, {
-      "title" : "Contact Us",
-      "id" : "contact-us"
-    } ]
-  } ]
-}, {
   "chapterTitle" : "Basics",
   "dirName" : "basics",
   "items" : [ {
@@ -183,6 +118,41 @@ toc = [ {
     }, {
       "title" : "Claiming and Using your Perks",
       "id" : "claiming-and-using-your-perks"
+    } ]
+  }, {
+    "chapterTitle" : "Basics",
+    "pageTitle" : "Server Configuration",
+    "pageMeta" : { },
+    "dirName" : "basics",
+    "fileName" : "server-configuration",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Intro",
+      "id" : "intro"
+    }, {
+      "title" : "Basic Server Configuration",
+      "id" : "basic-server-configuration"
+    }, {
+      "title" : "Birthday Announcer",
+      "id" : "birthday-announcer"
+    }, {
+      "title" : "Welcome and Leave messages",
+      "id" : "welcome-and-leave-messages"
+    }, {
+      "title" : "Autorole on join & Self-assignable roles",
+      "id" : "autorole-on-join-self-assignable-roles"
+    }, {
+      "title" : "Server Logs",
+      "id" : "server-logs"
+    }, {
+      "title" : "Disabling Commands & Channels & Categories",
+      "id" : "disabling-commands-channels-categories"
+    }, {
+      "title" : "Music Configuration",
+      "id" : "music-configuration"
+    }, {
+      "title" : "Auto-Mod & Moderation Options",
+      "id" : "auto-mod-moderation-options"
     } ]
   } ]
 }, {
@@ -666,47 +636,13 @@ toc = [ {
     } ]
   } ]
 }, {
-  "chapterTitle" : "Configuration",
-  "dirName" : "configuration",
+  "chapterTitle" : "Guides",
+  "dirName" : "guides",
   "items" : [ {
-    "chapterTitle" : "Configuration",
-    "pageTitle" : "Server Configuration",
-    "pageMeta" : {
-      "title" : [ "Server Configuration" ]
-    },
-    "dirName" : "configuration",
-    "fileName" : "all-options",
-    "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ {
-      "title" : "Basic Server Configuration",
-      "id" : "basic-server-configuration"
-    }, {
-      "title" : "Birthday Announcer",
-      "id" : "birthday-announcer"
-    }, {
-      "title" : "Welcome and Leave messages",
-      "id" : "welcome-and-leave-messages"
-    }, {
-      "title" : "Autorole on join & Self-assignable roles",
-      "id" : "autorole-on-join-self-assignable-roles"
-    }, {
-      "title" : "Server Logs",
-      "id" : "server-logs"
-    }, {
-      "title" : "Disabling Commands & Channels & Categories",
-      "id" : "disabling-commands-channels-categories"
-    }, {
-      "title" : "Music Configuration",
-      "id" : "music-configuration"
-    }, {
-      "title" : "Auto-Mod & Moderation Options",
-      "id" : "auto-mod-moderation-options"
-    } ]
-  }, {
-    "chapterTitle" : "Configuration",
+    "chapterTitle" : "Guides",
     "pageTitle" : "Welcome And Leave Messages",
     "pageMeta" : { },
-    "dirName" : "configuration",
+    "dirName" : "guides",
     "fileName" : "welcome-and-leave-messages",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
@@ -726,10 +662,10 @@ toc = [ {
       "id" : "extra"
     } ]
   }, {
-    "chapterTitle" : "Configuration",
+    "chapterTitle" : "Guides",
     "pageTitle" : "Birthday Announcer",
     "pageMeta" : { },
-    "dirName" : "configuration",
+    "dirName" : "guides",
     "fileName" : "birthday-announcer",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
@@ -751,18 +687,12 @@ toc = [ {
       "title" : "Custom Birthday Messages",
       "id" : "custom-birthday-messages"
     } ]
-  } ]
-}, {
-  "chapterTitle" : "Custom Commands",
-  "dirName" : "custom-commands",
-  "items" : [ {
-    "chapterTitle" : "Custom Commands",
-    "pageTitle" : "Custom 101: Your guide",
-    "pageMeta" : {
-      "title" : [ "Custom 101: Your guide" ]
-    },
-    "dirName" : "custom-commands",
-    "fileName" : "101",
+  }, {
+    "chapterTitle" : "Guides",
+    "pageTitle" : "Custom Commands",
+    "pageMeta" : { },
+    "dirName" : "guides",
+    "fileName" : "custom-commands",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "What is v3?",
@@ -793,10 +723,27 @@ toc = [ {
       "id" : "operative-custom-commands"
     } ]
   }, {
-    "chapterTitle" : "Custom Commands",
+    "chapterTitle" : "Guides",
+    "pageTitle" : "Embeds",
+    "pageMeta" : { },
+    "dirName" : "guides",
+    "fileName" : "embeds",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Introduction",
+      "id" : "introduction"
+    }, {
+      "title" : "What is an embed?",
+      "id" : "what-is-an-embed"
+    }, {
+      "title" : "Creating your own embed",
+      "id" : "creating-your-own-embed"
+    } ]
+  }, {
+    "chapterTitle" : "Guides",
     "pageTitle" : "Modifiers",
     "pageMeta" : { },
-    "dirName" : "custom-commands",
+    "dirName" : "guides",
     "fileName" : "modifiers",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
@@ -952,6 +899,71 @@ toc = [ {
     }, {
       "title" : "Removed/Legacy/Unobtainable Items",
       "id" : "removedlegacyunobtainable-items"
+    } ]
+  } ]
+}, {
+  "chapterTitle" : "Legal",
+  "dirName" : "legal",
+  "items" : [ {
+    "chapterTitle" : "Legal",
+    "pageTitle" : "Terms Of Service",
+    "pageMeta" : { },
+    "dirName" : "legal",
+    "fileName" : "terms-of-service",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Mantaro Bot Terms of Service",
+      "id" : "mantaro-bot-terms-of-service"
+    }, {
+      "title" : "1. The bot and its systems",
+      "id" : "1-the-bot-and-its-systems"
+    }, {
+      "title" : "2. Music and Transmission.",
+      "id" : "2-music-and-transmission"
+    }, {
+      "title" : "3. Use of the Mantaro \"currency\" and game system",
+      "id" : "3-use-of-the-mantaro-currency-and-game-system"
+    }, {
+      "title" : "4. Premium Features",
+      "id" : "4-premium-features"
+    }, {
+      "title" : "5. Warranty and Liability.",
+      "id" : "5-warranty-and-liability"
+    }, {
+      "title" : "6. Abuse",
+      "id" : "6-abuse"
+    }, {
+      "title" : "7. Acknowledge",
+      "id" : "7-acknowledge"
+    }, {
+      "title" : "8. Donations",
+      "id" : "8-donations"
+    } ]
+  }, {
+    "chapterTitle" : "Legal",
+    "pageTitle" : "Privacy Policy",
+    "pageMeta" : { },
+    "dirName" : "legal",
+    "fileName" : "privacy-policy",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Information Collection and Use",
+      "id" : "information-collection-and-use"
+    }, {
+      "title" : "Log Data",
+      "id" : "log-data"
+    }, {
+      "title" : "Website",
+      "id" : "website"
+    }, {
+      "title" : "Children's Privacy",
+      "id" : "childrens-privacy"
+    }, {
+      "title" : "Changes to This Privacy Policy",
+      "id" : "changes-to-this-privacy-policy"
+    }, {
+      "title" : "Contact Us",
+      "id" : "contact-us"
     } ]
   } ]
 } ]
