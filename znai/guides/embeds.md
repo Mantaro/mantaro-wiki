@@ -21,6 +21,8 @@ Tip: Not all fields are required to build your embed, so you can mix and match t
 # Creating your own embed
 Let's start by working on designing your own embed. We offer you two ways to create your own embed. **We highly recommend you go with the easy way.**
 
+Note: Due to Discord limitations, mentions will not work in the `author`, `title`, `field names` and `footer` fields. So bear that in mind when creating your embed.
+
 ````tabs
 "The easy way":
 We have good news! There is a really easy way to create your own embed. 
