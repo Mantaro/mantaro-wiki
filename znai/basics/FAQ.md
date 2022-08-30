@@ -9,7 +9,6 @@ You can read more info about premium, the Patreon bot and PayPal and Patreon don
 ---
 ## 2. Some of Mantaro's commands are not showing any content (empty message), for instance on help?
 Make sure that within your [user settings](https://i.imgur.com/BhTarjg.png) you have ["Link Preview"](https://i.imgur.com/8TV4qn0.png) enabled, as that is necessary to be able to see embeds.
-If that does not help the server you are on might have disabled Embed Links as a permission.
 If however neither is the case feel free to report it in #support, to gain assistance or insight as to why that's happening.
 
 ---
@@ -89,15 +88,16 @@ You can use multiple images by using the above statement with custom add instead
 ---
 ## 14. Mantaro has deleted all my roles/channels/banned all my user/or similar
 Before reporting ensure the action was taken by the real Mantaro. To identify the real one you check one of 3 things, though it is best to check them all.
-1) Check if the Username is exactly the same as the real one no weird letter that looks the same but is different.
-2) Check if the discriminator (numbers after the # in the username) is 4454
-3) Check if the ID of that Mantaro is 213466096718708737 (You can view IDs by going to your user settings > appearance > developer mode > right click user > Copy ID)
+1) Check to see if Mantaro has the verified Bot badge next to her name. If not, then it is not the real Mantaro.
+2) Check if the Username is exactly the same as the real one no weird letter that looks the same but is different.
+3) Check if the discriminator (numbers after the # in the username) is 4454
+4) Check if the ID of that Mantaro is 213466096718708737 (You can view IDs by going to your user settings > appearance > developer mode > right click user > Copy ID)
 
 If one or none of the above are identical you have likely fallen victim to a fake Mantaro. And while we feel deeply sorry for it there is not much we can do about it.
 You can help prevent this sort of stuff by reporting it to the [Trust and Safety team](https://support.discord.com/hc/en-us/requests/new). They will need as much proof as you can provide.
 
 To be absolutely safe never invite a bot called "Mantaro" if any of the above things are altered.
-A real invite will always direct you to `https://discordapp.com/oauth2/authorize?client_id=213466096718708737&scope=bot` +/- the permission bit.
+A real invite will always direct you to `https://discordapp.com/oauth2/authorize?client_id=213466096718708737&scope=bot%20application.commands` +/- the permission bit.
 
 ---
 ## 15. How do I invite the bot? My server does not show when inviting the bot? (Or anything related to inviting the bot)
