@@ -11,7 +11,7 @@ footer = {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Copyright 2016-2022 ",
+          "text" : "Copyright 2016 ",
           "type" : "SimpleText"
         }, {
           "url" : "https://github.com/Kodehawa",

@@ -89,12 +89,12 @@
 
 <article>
 <header><h1>Using Modifiers</h1></header>
-<p>So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view all modifiers https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages here. For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).So, let's say you want to mention the user that joined. Tell him how many users your server has with him/her joining and also include the server name for simple aesthetics. For this you would do something like. ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member! null https://i.imgur.com/7nGWxjr.png image To break this down.$(event.guild.name) is replaced with the name of the server.$(event.user.mention) is replaced with the mention of the user that just joined.$(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.Now let's say you want to do something similar for the leave message. We will use: ~&gt;opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers). null https://i.imgur.com/fuyNDjq.png image Now that you understand modifiers let's move to the final level.</p>
+<p>So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view all modifiers guides/modifiers#modifiers-for-welcomeleave-messages here. For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).So, let's say you want to mention the user that joined. Tell him how many users your server has with him/her joining and also include the server name for simple aesthetics. For this you would do something like. ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member! null https://i.imgur.com/7nGWxjr.png image To break this down.$(event.guild.name) is replaced with the name of the server.$(event.user.mention) is replaced with the mention of the user that just joined.$(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.Now let's say you want to do something similar for the leave message. We will use: ~&gt;opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers). null https://i.imgur.com/fuyNDjq.png image Now that you understand modifiers let's move to the final level.</p>
 </article>
 
 <article>
 <header><h1>Using Embeds</h1></header>
-<p>You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course but you learned that already). To use an embed you will need to know how to work with them. To start you will need to start off you message with embed: followed by one or more of these:title:&quot;text&quot; description&quot;text&quot; thumbnail:&quot;image url&quot; image:&quot;image url&quot; fields:[{name:&quot;name here&quot;, value:&quot;text here&quot;}, name:&quot;name&quot;, value:&quot;text here&quot;, inline: true, .....}] color:&quot;hex code or member&quot; footer:&quot;text&quot; footerImg:&quot;image url&quot; author:&quot;text&quot; authorImg:&quot;image url&quot; Ok, yes this is complicated so let's make an example: ~&gt;opts usermessage joinmessage embed:author:&quot;Welcome to our server&quot;, authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please enjoy your stay :&gt;&quot;, description:&quot;Please be sure to read our rules carefully thanks~&quot;, image:&quot;https://i.imgur.com/fjmcMHL.jpg&quot;, thumbnail:&quot;https://i.imgur.com/KYblACB.png&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by MrLar&quot;, footerImg:&quot;https://i.imgur.com/R5MoVC5.png&quot; Setting it up &amp; in action: null https://i.imgur.com/68xlljt.png image This will need a lot of practice. But basically you can use ANY combination of the above listed things and choose your own text in each of them :&gt;.</p>
+<p>You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course, but you learned that already). To use an embed you will need to know how to work with them. To start you will need to start off you message with embed: followed by one or more of these:title:&quot;text&quot; description&quot;text&quot; thumbnail:&quot;image url&quot; image:&quot;image url&quot; fields:[{name:&quot;name here&quot;, value:&quot;text here&quot;}, name:&quot;name&quot;, value:&quot;text here&quot;, inline: true, .....}] color:&quot;hex code or member&quot; footer:&quot;text&quot; footerImg:&quot;image url&quot; author:&quot;text&quot; authorImg:&quot;image url&quot; Ok, yes this is complicated so let's make an example: ~&gt;opts usermessage joinmessage embed:author:&quot;Welcome to our server&quot;, authorImg:&quot;https://i.imgur.com/VoVaJ0K.png&quot;, title:&quot;Please enjoy your stay :&gt;&quot;, description:&quot;Please be sure to read our rules carefully thanks~&quot;, image:&quot;https://i.imgur.com/fjmcMHL.jpg&quot;, thumbnail:&quot;https://i.imgur.com/KYblACB.png&quot;, color:&quot;c91191&quot;,footer:&quot;Server owned by MrLar&quot;, footerImg:&quot;https://i.imgur.com/R5MoVC5.png&quot; Setting it up &amp; in action: null https://i.imgur.com/68xlljt.png image This will need a lot of practice. But basically you can use ANY combination of the above listed things and choose your own text in each of them :&gt;.</p>
 </article>
 
 <article>
@@ -231,7 +231,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : " modifiers ",
           "type" : "SimpleText"
         }, {
-          "url" : "https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages",
+          "url" : "/mantaro-wiki/guides/modifiers#modifiers-for-welcomeleave-messages",
           "isFile" : false,
           "type" : "Link",
           "content" : [ {
@@ -239,7 +239,12 @@ ReactDOM.render(React.createElement(Documentation, {
             "type" : "SimpleText"
           } ]
         }, {
-          "text" : ". For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).",
+          "text" : ".",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).",
           "type" : "SimpleText"
         } ]
       }, {
@@ -285,7 +290,12 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Now let's say you want to do something similar for the leave message. We will use: ",
+          "text" : "Now let's say you want to do something similar for the leave message.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "We will use: ",
           "type" : "SimpleText"
         }, {
           "code" : "~>opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers).",
@@ -312,7 +322,12 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course but you learned that already). To use an embed you will need to know how to work with them.",
+          "text" : "You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course, but you learned that already).",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "To use an embed you will need to know how to work with them.",
           "type" : "SimpleText"
         }, {
           "type" : "SoftLineBreak"
@@ -323,9 +338,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "code" : "embed:",
           "type" : "InlinedCode"
         }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "followed by one or more of these:",
+          "text" : " followed by one or more of these:",
           "type" : "SimpleText"
         } ]
       }, {
@@ -563,12 +576,12 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661099420024,
+    "lastModifiedTime" : 1661816585351,
     "tocItem" : {
-      "chapterTitle" : "Configuration",
+      "chapterTitle" : "Guides",
       "pageTitle" : "Welcome And Leave Messages",
       "pageMeta" : { },
-      "dirName" : "configuration",
+      "dirName" : "guides",
       "fileName" : "welcome-and-leave-messages",
       "viewOnRelativePath" : null,
       "pageSectionIdTitles" : [ {
