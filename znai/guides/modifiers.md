@@ -1,3 +1,5 @@
+Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience `:icon: heart { fill: 'red' }`
+
 # Intro
 In order to use any of these you will have to type *exactly* what you see under the first bulletin every time, whether it is custom commands, level up messages or welcome messages. So if you for instance want the author username in a custom command you would type *exactly* $(event.author.username).
 

@@ -1,3 +1,5 @@
+Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience `:icon: heart { fill: 'red' }`
+
 # What is the Birthday Announcer?
 The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday. Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.
 
@@ -7,7 +9,7 @@ The Birthday Announcer is a function in Mantaro that allows her to send a birthd
 *   `~>opts birthday enable <channel name> <role name>` Allows you to set up the Birthday Announcer.
 *   `~>opts birthday message set <message>` Allows you to set a Custom Birthday Message.
 *   `/birthday allowserver` Allows your birthday to be announced in the server you use this command on.
-* 
+
 ---
 # Other/Extra commands
 *   `~>opts birthday disable` Removes the Birthday Announcer.

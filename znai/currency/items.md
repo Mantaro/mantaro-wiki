@@ -1,3 +1,4 @@
+Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience `:icon: heart { fill: 'red' }`
 
 # Intro
 Mantaro has had many items across the years, some currently obtainable, some that have been removed.

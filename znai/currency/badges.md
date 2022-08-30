@@ -1,3 +1,6 @@
+Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience `:icon: heart { fill: 'red' }`
+
+
 # What are badges?
 
 Badges are basically achievements that you can gain. Badges will show on your profile in the order shown below.

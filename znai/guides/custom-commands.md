@@ -1,4 +1,6 @@
+Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience `:icon: heart { fill: 'red' }`
 
+---
 **The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.**
 
 ---
