@@ -19,7 +19,8 @@ Ok, with the basics being covered you can now move to the next step.
 ---
 # Using Modifiers
 
-So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view *all* modifiers [here](https://github.com/Mantaro/MantaroBot/wiki/Custom-Command-Modifiers#modifiers-for-welcomeleave-messages). For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).
+So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view *all* modifiers [here](guides/modifiers#modifiers-for-welcomeleave-messages). 
+For the sake of this tutorial we will only cover $(event.user.mention), $(event.user.username), $(event.guild.name) and $(event.guild.totalusers).
 
 So, let's say you want to mention the user that joined. Tell him how many users your server has with him/her joining and also include the server name for simple aesthetics. For this you would do something like.
 `~>opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member!`
@@ -34,7 +35,8 @@ $(event.user.mention) is replaced with the mention of the user that just joined.
 
 $(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.
 
-Now let's say you want to do something similar for the leave message. We will use: `~>opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers).`
+Now let's say you want to do something similar for the leave message. 
+We will use: `~>opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers).`
 
 ![](https://i.imgur.com/fuyNDjq.png)
 
@@ -43,9 +45,9 @@ Now that you understand modifiers let's move to the final level.
 ---
 # Using Embeds
 
-You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course but you learned that already). To use an embed you will need to know how to work with them.
-To start you will need to start off you message with `embed:`
-followed by one or more of these:
+You can also use embeds in Welcome and leave messages (Just that the command is different for leave message of course, but you learned that already).
+To use an embed you will need to know how to work with them.
+To start you will need to start off you message with `embed:` followed by one or more of these:
 * title:"text"
 * description"text"
 * thumbnail:"image url"
@@ -69,7 +71,7 @@ This will need a lot of practice. But basically you can use ANY combination of t
 # Combining your knowledge
 
 Ok so you learned how to use embeds and modifiers. What about both in one?
-<br></br>(Please note that using mentions in the title, footer, field names, author and some other places will not work and display them how they look internally to discord. This is a discord limitation that we cannot do anything about.)
+(Please note that using mentions in the title, footer, field names, author and some other places will not work and display them how they look internally to discord. This is a discord limitation that we cannot do anything about.)
 
 `~>opts usermessage joinmessage embed:author:"Welcome to $(event.guild.name)", authorImg:"https://i.imgur.com/VoVaJ0K.png", title:"Please be sure to read our rules carefully thanks~", description:"Please enjoy your stay $(event.user.mention)", thumbnail:"$(event.user.avatar)", color:"c91191",footer:"Server owned by $(event.guild.owner.username)", footerImg:"$(event.guild.owner.avatar)"`
 
