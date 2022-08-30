@@ -1,5 +1,16 @@
-Note: Remember that for the most up-to-date FAQ you want to check the FAQ channel on our discord server.
+## 0. Why move to Slash Commands?/Can I stay with text commands?
+The move to Slash Commands is something being enforced by Discord on verified bots. They seek to make it easier for users to find and use commands.
 
+However, they also seek to remove certain permissions from bots that are verified for security, such as having access to message contents (unless they have a good reason to have them). 
+This essentially kills text based commands. While Mantaro managed to keep its access to message contents (for the logs), it doesn't mean we can avoid Slash Commands.
+
+Currently most commands have already been ported to Slash Commands, and some are still text based. 
+The reason for this is we haven't figured out a way to make the remaining commands work correctly using Slash Commands.
+However, they too will be ported to Slash Commands in the future.
+
+For more information, check out Discord's [Slash Commands FAQ](https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ) or their [Blog Post](https://discord.com/blog/slash-commands-are-here).
+
+---
 ## 1. What is premium and what is the Patreon bot?
 Premium is a status that can be applied to both servers and users and provide perks like no music length limit and more. You can obtain premium keys by becoming a Patreon.
 The Patreon bot is however essentially a second Mantaro that runs on a different server, causing better Music quality. 
