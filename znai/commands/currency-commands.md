@@ -8,6 +8,7 @@ Shows a list of your own badges or a list of the badges from the given user. A f
 ````tabs
 Subcommands:
 ```api-parameters
+Display, "", "Sets your display badge."
 Info, "", "Shows info about a badge."
 List, "", "Lists all the obtainable badges."
 Show, "", "Show your badge list, or someone else's badge list." 
@@ -15,8 +16,12 @@ Show, "", "Show your badge list, or someone else's badge list."
 
 Options:
 ```api-parameters
+Display, Click me!, "Options for the `Display` Subcommand"
+Display.badge, "Required", "The badge to user."
+
 Info, Click me!, "Options for the `Info` Subcommand"
 Info.badge, "Required", "The badge to check info for."
+
 Show, Click me!, "Options for the `Show` Subcommand"
 Show.user, "Optional", "The user to check. If none, you."
 Show.brief, "Optional", "Whether to show this in brief format. Default is false."
@@ -31,6 +36,7 @@ Examples:
 "", "", "/badges show `user:`@Kodehawa#3457"
 "", "", "/badges list"
 "", "", "/badges info `badge:`Donator"
+"", "", "/badges display `badge:`Donator"
 ```
 ````
 
@@ -272,22 +278,22 @@ Shows your current inventory and item stats.
 ````tabs 
 Subcommands:
 ```api-parameters
+Sort, "", "Sort your inventory."
 Calculate, "", "Calculate an inventory's worth."
 Show, "", "Shows your inventory or a user's."
-Sort, "", "Sort your inventory."
 Brief, "", "Shows your brief inventory or a user's."
 ```
 
 Options:
 ```api-parameters
+Sort, Click me!, "Options for the `Sort` Subcommand"
+Sort.type, Required, "The sort type to use."
+
 Calculate, Click me!, "Options for the `Calculate` Subcommand"
 Calculate.user, Optional, "The user you want to check."
 
 Show, Click me!, "Options for the `Show` Subcommand"
 Show.user, Optional, "The user you want to check."
-
-Sort, Click me!, "Options for the `Sort` Subcommand"
-Sort.type, Required, "The sort type to use."
 
 Brief, Click me!, "Options for the `Brief` Subcommand"
 Brief.user, Optional, "The user you want to check."
@@ -565,7 +571,6 @@ Look at your own or the given person's profile.
 Subcommands:
 ```api-parameters
 Stats, "", "See profile statistics."
-Displaybadge, "", "Sets your display badge."
 Timezone, "", "Sets your profile timezone."
 Show, "", "Shows your current profile."
 Language, "", "Sets your profile language."
@@ -576,7 +581,6 @@ Set the profile widget order.
 :include-markdown: assets/md/commands/sellout-note-user.md
 "
 Hidetag, "", "Hide or show the member id/tag from profile/waifu ls."
-Claimlock, "", "Locks you from being claimed. Use remove to remove it."
 Description, "", "Sets your profile description. This will open a modal (pop-up)."
 Autoequip, "", "Toggles auto-equipping a new tool on break. Use disable to disable it."
 ```
@@ -585,9 +589,6 @@ Options:
 ```api-parameters
 Stats, Click me!, "Options for the `Stats` Subcommand"
 Stats.user, Optional, "The user to see the stats of."
-
-Displaybadge, Click me!, "Options for the `Displaybadge` Subcommand"
-Displaybadge.badge, Required, "The badge to use."
 
 Timezone, Click me!, "Options for the `Timezone` Subcommand"
 Timezone.timezone, Required, "The timezone to use."
@@ -602,9 +603,6 @@ Widgets, Click me!, "Options for the `Widgets` Subcommand"
 Widgets.order, Optional, "The widget order. Use reset to reset them. If nothing is specified, it prints a list."
 Widgets.reset, Optional, "Set to true if you want to reset the order."
 
-Claimlock, Click me!, "Options for the `Claimlock` Subcommand"
-Claimlock.remove, Optional, "Removes claimlock."
-
 Description, Click me!, "Options for the `Description` Subcommand"
 Description.clear, Optional, "Clear your profile description if set to true."
 
@@ -615,7 +613,6 @@ Autoequip.disable, Optional, "Whether to disable it."
 
 Requirements:
 * This command requires [**Emotes** permissions](commands/permissions#intro).
-* The `Claimlock` subcommand requires you to have a claim key on your inventory.
 
 Examples:
 ```api-parameters
@@ -879,6 +876,7 @@ Unclaim, "", "Unclaims a waifu."
 Claim, "", "Claim a waifu. Yeah, this is all fiction."
 List, "", "Show a list of all your waifu(s) and their value."
 Stats, "", "Shows your waifu stats or the stats or someone else."
+Claimlock, "", "Locks you from being claimed. Use remove to remove it."
 Optout, "", "
 Opt-out of the waifu stuff. This will disable the waifu system permanently.
 :include-markdown: assets/md/commands/optout-warning.md
@@ -900,6 +898,9 @@ Claim.user, Required, "The user to claim."
 Stats, Click me!, "Options for the `Stats` Subcommand"
 Stats.user, Optional, "The user to check. Yourself, if nothing specified."
 
+Claimlock, Click me!, "Options for the `Claimlock` Subcommand"
+Claimlock.remove, Optional, "Removes claimlock."
+
 List, Click me!, "Options for the `List` Subcommand"
 List.id, Optional, "Whether to show the user ID or not."
 
@@ -920,5 +921,7 @@ Examples:
 "", "", "/waifu claim `user:`@Kodehawa#3457"
 "", "", "/waifu unclaim `user:`@Kodehawa#3457"
 "", "", "/waifu list"
+"", "", "/waifu claimlock"
+"", "", "/waifu claimlock `remove:`True"
 ```
 ````
