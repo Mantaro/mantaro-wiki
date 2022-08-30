@@ -84,7 +84,7 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Intro</h1></header>
-<p>In order to use any of these you will have to type exactly what you see under the first bulletin every time, whether it is custom commands, level up messages or welcome messages. So if you for instance want the author username in a custom command you would type exactly $(event.author.username).</p>
+<p>Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience In order to use any of these you will have to type exactly what you see under the first bulletin every time, whether it is custom commands, level up messages or welcome messages. So if you for instance want the author username in a custom command you would type exactly $(event.author.username).</p>
 </article>
 
 <article>
@@ -126,6 +126,16 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience ",
+        "type" : "SimpleText"
+      }, {
+        "fill" : "red",
+        "id" : "heart",
+        "type" : "Icon"
+      } ]
+    }, {
       "id" : "intro",
       "title" : "Intro",
       "type" : "Section",
@@ -1833,7 +1843,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661808587896,
+    "lastModifiedTime" : 1661900193945,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Modifiers",

@@ -84,17 +84,22 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Introduction</h1></header>
-<p>Embeds are used to display rich content in messages. They are very powerful and can be used to display information in a variety of ways. In Mantaro, they are used to display information in the following ways:Welcome and leave messages Custom commands Birthday announcer In this page we will cover how to use embeds in Mantaro.</p>
+<p>Embeds are used to display rich content in messages. They are very powerful and can be used to display information in a variety of ways. In Mantaro, they are used to display information in the following ways:Welcome and leave messages Custom commands Birthday announcer In this page we will cover how to create embeds for use in Mantaro.Note: This page will teach you how to create embeds only. Visit the Guide page corresponding for the command you are interested in to learn how to use the embed you create.</p>
 </article>
 
 <article>
 <header><h1>What is an embed?</h1></header>
-<p>Let's start off with identifying an embed.IMAGE HEREThis is an example of an embed using Mantaro. Here you can easily identify what field corresponds to which text on the embed.</p>
+<p>Let's start off with identifying an embed.This is an example of an embed using Mantaro. Here you can easily identify what field corresponds to which text on the embed.Tip: Not all fields are required to build your embed, so you can mix and match to make it however you want!</p>
 </article>
 
 <article>
 <header><h1>Creating your own embed</h1></header>
-<p>Let's start by working on designing your own embed. We offer you two ways to create your own embed. The easy way We have good news! There is a really easy way to create your own embed. We worked on a tool that can help you create embeds for you with the appropriate format used by Mantaro.You can find this page https://www.mantaro.site/mantaro-embed-builder here! How to use it Once you open the page, you will see its made up of two parts. An editing area, and a preview area. As you edit around you will see the changes live in the preview area. Now simply edit away until you get your embed ready. Tips You can click on this button to clear out the current data in the embed. The hard way TBD</p>
+<p>Let's start by working on designing your own embed. We offer you two ways to create your own embed. We highly recommend you go with the easy way.Note: Due to Discord limitations, mentions will not work in the author , title , field names and footer fields. So bear that in mind when creating your embed. The easy way We have good news! There is a really easy way to create your own embed. We worked on a tool that can help you create embeds for you with the appropriate format used by Mantaro.You can find this page https://www.mantaro.site/mantaro-embed-builder here! How to use it Once you open the page, you will see its made up of two parts. An editing area, and a preview area. As you edit around you will see the changes live in the preview area. Now simply edit away until you get your embed ready. Tips Tip: You can click on this button to clear out the current data in the embed. This is useful if you want to start of fresh.Tip: You can click on this button to copy the embed to your clipboard. This will copy the embed content you need to your clipboard, ready for you to copy it into a command that allows embeds.Tip: You can find a few miscellaneous options if you click this button. The hard way The hard way is to create your own embed manually. For this you have to first understand once again the different parts of an embed, as well as the format that Mantaro uses.title:&quot;your text here&quot; - Will set what you see as &quot;Title Text&quot; in the image above. description:&quot;your text here&quot; - Will set what you see as &quot;Description&quot;. thumbnail:&quot;valid image url here&quot; - Will set the top-right image. image:&quot;valid image url here&quot; - Will set the big bottom image. author:&quot;your text here&quot; - Will set what you see as &quot;Author Name&quot;. authorImg:&quot;valid image url here&quot; - Will set the image you see next to &quot;Author Name&quot;. footer:&quot;your text here&quot; - Will set what you see as &quot;Footer text&quot; footerImg:&quot;valid image url here&quot; - Will set the image you see next to &quot;Footer text&quot;. color:&quot;hex code/color name here&quot; - Will set the color of the purple strip you see on the left. fields:&lt;field sytanx (check slightly below)&gt; - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as &quot;Field name&quot; and value what you see as &quot;Field value&quot;, inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely. Field Syntax: [ {name:&quot;name of the first field&quot;, value:&quot;value of the first field&quot;, inline:true}, {name:&quot;name of the second field&quot;, value:&quot;value of the second field&quot;, inline:false} ]</p>
+</article>
+
+<article>
+<header><h1>Examples</h1></header>
+<p>Here are some examples of finished embeds.If you went with the easy way, the copy button should give you something similar to these. If you went with the hard way, your embed structure should look something like these. {wrap: &quot;title&quot;: &quot;Title text (256 chars)&quot;, &quot;description&quot;: &quot;Description (4096 chars, Character limit for the **entire** embed is 6000)&quot;, &quot;color&quot;: &quot;ff69b4&quot;, &quot;author&quot;: &quot;Author Name (256 chars)&quot;, &quot;authorUrl&quot;: &quot;https://add.mantaro.site/&quot;, &quot;authorImg&quot;: &quot;https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png?size=1024&quot;, &quot;thumbnail&quot;: &quot;https://cdn.discordapp.com/emojis/654322747094073365.png&quot;, &quot;image&quot;: &quot;https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048&quot;, &quot;footer&quot;: &quot;Footer text (2048 chars)&quot;, &quot;footerImg&quot;: &quot;https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png?size=1024&quot;, &quot;fields&quot;: [ { &quot;name&quot;: &quot;Field name (256 chars)&quot;, &quot;value&quot;: &quot;Field value (1024 chars, Max 25 fields)&quot; }, { &quot;name&quot;: &quot;Inline&quot;, &quot;value&quot;: &quot;Field&quot;, &quot;inline&quot;: true }, { &quot;name&quot;: &quot;Inline&quot;, &quot;value&quot;: &quot;Field&quot;, &quot;inline&quot;: true } ] &quot;title&quot;: &quot;Welcome to the server!&quot;, &quot;description&quot;: &quot;Please read our rules and have a great time!&quot;, &quot;image&quot;: &quot;https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048&quot;</p>
 </article>
 </section>
 </div>
@@ -170,7 +175,31 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "In this page we will cover how to use embeds in Mantaro.",
+          "text" : "In this page we will cover how to create embeds for use in Mantaro.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: This page will teach you how to create embeds ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "only",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". Visit the Guide page corresponding for the command you are interested in to learn how to ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "use",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " the embed you create.",
           "type" : "SimpleText"
         } ]
       } ]
@@ -185,15 +214,22 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
+        "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\embeds\\embed-example.png",
+        "timestamp" : 1661881280285,
+        "shapes" : [ ],
+        "width" : 527.0,
+        "height" : 581.0,
+        "type" : "AnnotatedImage"
+      }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "IMAGE HERE",
+          "text" : "This is an example of an embed using Mantaro. Here you can easily identify what field corresponds to which text on the embed.",
           "type" : "SimpleText"
         } ]
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "This is an example of an embed using Mantaro. Here you can easily identify what field corresponds to which text on the embed.",
+          "text" : "Tip: Not all fields are required to build your embed, so you can mix and match to make it however you want!",
           "type" : "SimpleText"
         } ]
       } ]
@@ -204,7 +240,43 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Let's start by working on designing your own embed. We offer you two ways to create your own embed.",
+          "text" : "Let's start by working on designing your own embed. We offer you two ways to create your own embed. ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "We highly recommend you go with the easy way.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Due to Discord limitations, mentions will not work in the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "author",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "title",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "field names",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " and ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "footer",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " fields. So bear that in mind when creating your embed.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -257,18 +329,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "title" : "Tips",
             "type" : "SubHeading"
           }, {
-            "delimiter" : ")",
-            "startNumber" : 1,
-            "type" : "OrderedList",
+            "type" : "Paragraph",
             "content" : [ {
-              "type" : "ListItem",
-              "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "You can click on this button to clear out the current data in the embed.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
+              "text" : "Tip: You can click on this button to clear out the current data in the embed. This is useful if you want to start of fresh.",
+              "type" : "SimpleText"
             } ]
           }, {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\embeds\\maker-clean-embed.png",
@@ -277,21 +341,249 @@ ReactDOM.render(React.createElement(Documentation, {
             "width" : 256.0,
             "height" : 80.0,
             "type" : "AnnotatedImage"
+          }, {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Tip: You can click on this button to copy the embed to your clipboard. This will copy the embed content you need to your clipboard, ready for you to copy it into a command that allows embeds.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\embeds\\maker-copy-embed.png",
+            "timestamp" : 1661880269444,
+            "shapes" : [ ],
+            "width" : 239.0,
+            "height" : 76.0,
+            "type" : "AnnotatedImage"
+          }, {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Tip: You can find a few miscellaneous options if you click this button.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\embeds\\maker-misc-options.png",
+            "timestamp" : 1661880409606,
+            "shapes" : [ ],
+            "width" : 272.0,
+            "height" : 377.0,
+            "type" : "AnnotatedImage"
           } ]
         }, {
           "name" : "The hard way",
           "content" : [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "TBD",
+              "text" : "The hard way is to create your own embed manually.",
+              "type" : "SimpleText"
+            }, {
+              "type" : "SoftLineBreak"
+            }, {
+              "text" : "For this you have to first understand once again the different parts of an embed, as well as the format that Mantaro uses.",
               "type" : "SimpleText"
             } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "title:\"your text here\"",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - Will set what you see as \"Title Text\" in the image above.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "description:\"your text here\"",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - Will set what you see as \"Description\".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "thumbnail:\"valid image url here\"",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - Will set the top-right image.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "image:\"valid image url here\"",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - Will set the big bottom image.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "author:\"your text here\"",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - Will set what you see as \"Author Name\".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "authorImg:\"valid image url here\"",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - Will set the image you see next to \"Author Name\".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "footer:\"your text here\"",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - Will set what you see as \"Footer text\"",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "footerImg:\"valid image url here\"",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - Will set the image you see next to \"Footer text\".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "color:\"hex code/color name here\"",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - Will set the color of the purple strip you see on the left.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "fields:<field sytanx (check slightly below)>",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as \"Field name\" and value what you see as \"Field value\", inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Field Syntax:",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "lang" : "",
+            "snippet" : "[\n{name:\"name of the first field\",\nvalue:\"value of the first field\", inline:true},\n{name:\"name of the second field\",\nvalue:\"value of the second field\", inline:false}\n]",
+            "type" : "Snippet"
           } ]
         } ],
         "type" : "Tabs"
       } ]
+    }, {
+      "id" : "examples",
+      "title" : "Examples",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Here are some examples of finished embeds.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you went with the easy way, the copy button should give you something similar to these.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "If you went with the hard way, your embed structure should look something like these.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "{wrap:",
+        "snippet" : "\"title\": \"Title text (256 chars)\",\n\"description\": \"Description (4096 chars, Character limit for the **entire** embed is 6000)\",\n\"color\": \"ff69b4\",\n\"author\": \"Author Name (256 chars)\",\n\"authorUrl\": \"https://add.mantaro.site/\",\n\"authorImg\": \"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png?size=1024\",\n\"thumbnail\": \"https://cdn.discordapp.com/emojis/654322747094073365.png\",\n\"image\": \"https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048\",\n\"footer\": \"Footer text (2048 chars)\",\n\"footerImg\": \"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png?size=1024\",\n\"fields\": [\n    {\n        \"name\": \"Field name (256 chars)\",\n        \"value\": \"Field value (1024 chars, Max 25 fields)\"\n    },\n    {\n        \"name\": \"Inline\",\n        \"value\": \"Field\",\n        \"inline\": true\n    },\n    {\n        \"name\": \"Inline\",\n        \"value\": \"Field\",\n        \"inline\": true\n    }\n]\n",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "lang" : "",
+        "snippet" : "\"title\": \"Welcome to the server!\",\n\"description\": \"Please read our rules and have a great time!\",\n\"image\": \"https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048\"\n",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      } ]
     } ],
-    "lastModifiedTime" : 1661875292230,
+    "lastModifiedTime" : 1661898005891,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Embeds",
@@ -308,6 +600,9 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "title" : "Creating your own embed",
         "id" : "creating-your-own-embed"
+      }, {
+        "title" : "Examples",
+        "id" : "examples"
       } ]
     }
   }
