@@ -274,12 +274,24 @@ Subcommands:
 ```api-parameters
 Calculate, "", "Calculate an inventory's worth."
 Show, "", "Shows your inventory or a user's."
+Sort, "", "Sort your inventory."
 Brief, "", "Shows your brief inventory or a user's."
 ```
 
 Options:
 ```api-parameters
-user, Optional, "The user you want to check. This option is available on all subcommands."
+Calculate, Click me!, "Options for the `Calculate` Subcommand"
+Calculate.user, Optional, "The user you want to check."
+
+Show, Click me!, "Options for the `Show` Subcommand"
+Show.user, Optional, "The user you want to check."
+
+Sort, Click me!, "Options for the `Sort` Subcommand"
+Sort.type, Required, "The sort type to use."
+
+Brief, Click me!, "Options for the `Brief` Subcommand"
+Brief.user, Optional, "The user you want to check."
+
 ```
 Requirements:
 * This command requires [**Emotes** permissions](commands/permissions#intro).
@@ -292,6 +304,7 @@ Examples:
 "", "", "/inventory calculate `user:`@Kodehawa#3457"
 "", "", "/inventory brief"
 "", "", "/inventory brief `user:`@Kodehawa#3457"
+"", "", "/inventory sort `type:`Sort randomly"
 ```
 ````
 
@@ -551,7 +564,6 @@ Look at your own or the given person's profile.
 ````tabs 
 Subcommands:
 ```api-parameters
-Inventorysort, "", "Sort your inventory."
 Stats, "", "See profile statistics."
 Displaybadge, "", "Sets your display badge."
 Timezone, "", "Sets your profile timezone."
@@ -571,9 +583,6 @@ Autoequip, "", "Toggles auto-equipping a new tool on break. Use disable to disab
 
 Options:
 ```api-parameters
-Inventorysort, Click me!, "Options for the `Inventorysort` Subcommand"
-Inventorysort.type, Required, "The sort type to use."
-
 Stats, Click me!, "Options for the `Stats` Subcommand"
 Stats.user, Optional, "The user to see the stats of."
 
@@ -617,7 +626,6 @@ Examples:
 "", "", "/profile togglelegacy"
 "", "", "/profile widgets `order:`header, credits, reputation, birthday, marriage, badges"
 "", "", "/profile timezone `timezone:`GMT+2"
-"", "", "/profile inventorysort `type:`Sort randomly"
 "", "", "/profile toggleaction"
 ```
 ````
