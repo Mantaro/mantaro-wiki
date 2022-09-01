@@ -85,7 +85,14 @@ Once you have your embed ready, you want to add `embed:` to the start of it. Thi
 An example would be as follows:
 
 ```md {wrap: true}
-~>opts usermessage joinmessage embed:author:"Welcome to our server", authorImg:"https://i.imgur.com/VoVaJ0K.png", title:"Please enjoy your stay :>", description:"Please be sure to read our rules carefully thanks~", image:"https://i.imgur.com/fjmcMHL.jpg", thumbnail:"https://i.imgur.com/KYblACB.png", color:"c91191",footer:"Server owned by MrLar", footerImg:"https://i.imgur.com/R5MoVC5.png"
+~>opts usermessage joinmessage embed:author:"Welcome to our server",
+    authorImg:"https://i.imgur.com/VoVaJ0K.png",
+    title:"Please enjoy your stay :>",
+    description:"Please be sure to read our rules carefully thanks~",
+    image:"https://i.imgur.com/fjmcMHL.jpg",
+    thumbnail:"https://i.imgur.com/KYblACB.png",
+    color:"c91191",footer:"Server owned by MrLar",
+    footerImg:"https://i.imgur.com/R5MoVC5.png"
 ```
 
 Setting it up & in action:
