@@ -81,7 +81,7 @@ They can be used to create a love letter between those people (only the proposer
 ---
 ## 13. How do I make a custom action command like ~>hug?
 You would use something like this:
-```
+```md {wrap: true}
 ~>custom new action v3:@{
   if;
   $(event.message);
@@ -108,7 +108,7 @@ If one or none of the above are identical you have likely fallen victim to a fak
 You can help prevent this sort of stuff by reporting it to the [Trust and Safety team](https://support.discord.com/hc/en-us/requests/new). They will need as much proof as you can provide.
 
 To be absolutely safe never invite a bot called "Mantaro" if any of the above things are altered.
-A real invite will always direct you to `https://discordapp.com/oauth2/authorize?client_id=213466096718708737&scope=bot%20application.commands` +/- the permission bit.
+A real invite will always direct you to _https://discordapp.com/oauth2/authorize?client_id=213466096718708737&scope=bot%20application.commands_ +/- the permission bit.
 
 ---
 ## 15. How do I invite the bot? My server does not show when inviting the bot? (Or anything related to inviting the bot)
