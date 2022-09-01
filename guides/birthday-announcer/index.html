@@ -84,17 +84,12 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>What is the Birthday Announcer?</h1></header>
-<p>Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday. Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.</p>
+<p>The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday. Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.Warning: Since the opts command has not been ported to Slash Commands, this page is subject to massive changes in the future.</p>
 </article>
 
 <article>
-<header><h1>Important commands</h1></header>
-<p>/birthday set date:&lt;dd-MM&gt; Allows you to specify your birthday (dd-mm format). ~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt; Allows you to set up the Birthday Announcer. ~&gt;opts birthday message set &lt;message&gt; Allows you to set a Custom Birthday Message. /birthday allowserver Allows your birthday to be announced in the server you use this command on.</p>
-</article>
-
-<article>
-<header><h1>Other/Extra commands</h1></header>
-<p>~&gt;opts birthday disable Removes the Birthday Announcer. ~&gt;opts birthday test &lt;@mention&gt; Allows you to test the Birthday Announcer. ~&gt;opts birthday message set &lt;message&gt; Allows you to set a custom message for you Birthday Announcer. ~&gt;opts birthday message clear Removes the custom message you had and restores the default message for the Birthday Announcer. ~&gt;opts commands birthdayblacklist add/remove &lt;@mention&gt; Allows you to blacklist an user from having their birthday announced on the server.</p>
+<header><h1>Important/Main commands</h1></header>
+<p>1) What is it for? /birthday set date: dd-MM Used for: Specifying your birthday (dd-MM format) 2) What is it for? ~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt; Used for: Setting up the Birthday Announcer. 3) What is it for? ~&gt;opts birthday message set &lt;message&gt; Used for: Setting a Custom Birthday Message. 4) What is it for? /birthday allowserver Used for: Allowing your birthday to be announced in the server you use this command on.</p>
 </article>
 
 <article>
@@ -104,12 +99,22 @@
 
 <article>
 <header><h1>How do I enable the Birthday Announcer?</h1></header>
-<p>Before enabling the birthday announcer you need to check some things first.You need to choose a channel in which Mantaro will announce the birthdays. You need to choose a role to be assigned on each birthday.* *Make sure that the role you choose is not a role with permissions you would not want all users to have. As well, make sure that the role is not an actively used role, for example a role called Member that is given to everyone is not a good choice.Once you have those two you can use ~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt; to activate the Birthday Announcer. null https://i.imgur.com/c1T9vAd.png image Once again there's a couple of things to keep in mind.You have to type the name of both channel and role. Do not mention them. If your role name has spaces on it (it's not a single word) then you have to type the name in quotes. &quot;Just like this&quot; If your role/channel name has special characters on it know that Mantaro at times does not recognize them and will fail the command because of them. You can rename the role so it does not have special characters, setup the announcer and then rename your role back.</p>
+<p>Before enabling the birthday announcer you need to check some things first.You need to choose a channel in which Mantaro will announce the birthdays. You need to choose a role to be assigned on each birthday. Warning: Make sure that the role you choose is not a role with permissions you would not want all users to have. As well, make sure that the role is not an actively used role, for example a role called Member that is given to everyone is not a good choice.Once you have those two you can activate the Birthday Announcer with:~&gt;opts birthday enable &lt;channel name&gt; &lt;role name&gt; null https://i.imgur.com/c1T9vAd.png image Once again there's a couple of things to keep in mind.You have to type the name of both channel and role. Do not mention them. If your role name has spaces on it (it's not a single word) then you have to type the name in quotes. &quot;Just like this&quot; If your role/channel name has special characters on it know that Mantaro at times does not recognize them and will fail the command because of them. You can rename the role so it does not have special characters, setup the announcer and then rename your role back.</p>
 </article>
 
 <article>
 <header><h1>Custom Birthday Messages</h1></header>
-<p>You can change the default message sent by Mantaro on someone's birthday. The messages do not support embeds, meaning you will only be able to use plain text for them. To set them up you need to use ~&gt;opts birthday message set &lt;message&gt; . You have two modifiers at your disposal for birthday messages: $(user) This will return the name of the user. $(usermention) This will return a mention of the user. $(tag) This will return the user tag. For example Kodehawa#3457. To use them you just have to type the modifier wherever you want it to be in your message. null https://i.imgur.com/eoM44Qg.png image Important things to keep in mind:Do not start the message with a new line! Put the message right after ~&gt;opts birthday message set , like ~&gt;opts birthday message set Hello there . If you use a new line (aka ctrl + enter before the actual message), you'll get an error message. You cannot mention @everyone. This is intentional. The size of your message is limited by Discord's own message limit (2000 characters - 26 characters from the command - 2 characters from the default prefix (this one can vary if you have a custom prefix)).</p>
+<p>You can change the default message sent by Mantaro on someone's birthday. To set them up you need to use ~&gt;opts birthday message set &lt;message&gt; . You have two modifiers at your disposal for birthday messages: $(user) This will return the name of the user. $(usermention) This will return a mention of the user. $(tag) This will return the user tag. For example Kodehawa#3457. To use them you just have to type the modifier wherever you want it to be in your message. null https://i.imgur.com/eoM44Qg.png image Important things to keep in mind:Do not start the message with a new line! Put the message right after ~&gt;opts birthday message set , like ~&gt;opts birthday message set Hello there . If you use a new line (aka ctrl + enter before the actual message), you'll get an error message. You cannot mention @everyone. This is intentional.</p>
+</article>
+
+<article>
+<header><h1>Embeds</h1></header>
+<p>For this section you will need to also check out our guides/embeds Embeds Guide. It will teach you how you can make your desired embeds to make your fancy messages.Once you have your embed ready, you want to add embed: to the start of it. This is necessary so the bot realizes your content is an embed. An example would be as follows: md ~&gt;opts birthday message set embed:title: &quot;Say happy birthday to $(user)!&quot;, description: &quot;We hope you have a fantastic day!&quot;, color: &quot;ff69b4&quot;, author: &quot;Happy birthday!&quot;, authorImg: &quot;https://static.vecteezy.com/system/resources/previews/001/201/708/original/cake-png.png&quot;, thumbnail: &quot;https://cdn.discordapp.com/emojis/654322747094073365.png&quot;, footer: &quot;Have a nice day!&quot;, footerImg: &quot;https://static.vecteezy.com/system/resources/previews/001/201/708/original/cake-png.png&quot;</p>
+</article>
+
+<article>
+<header><h1>Other/Extra commands</h1></header>
+<p>[1] What is it for? ~&gt;opts birthday disable Used for: Removes the Birthday Announcer. [2] What is it for? ~&gt;opts birthday test &lt;@mention&gt; Used for: Allows you to test the Birthday Announcer. Doesn't process embeds. [3] What is it for? ~&gt;opts birthday message clear Used for: Removes the custom message you had and restores the default message for the Birthday Announcer. [4] What is it for? ~&gt;opts commands birthdayblacklist add/remove &lt;@mention&gt; Used for: Allows you to blacklist a user from having their birthday announced on the server.</p>
 </article>
 </section>
 </div>
@@ -136,157 +141,164 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience ",
-        "type" : "SimpleText"
-      }, {
-        "fill" : "red",
-        "id" : "heart",
-        "type" : "Icon"
-      } ]
-    }, {
       "id" : "what-is-the-birthday-announcer",
       "title" : "What is the Birthday Announcer?",
       "type" : "Section",
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday. Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.",
+          "text" : "The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: Since the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "opts",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " command has not been ported to Slash Commands, this page is subject to massive changes in the future.",
           "type" : "SimpleText"
         } ]
       }, {
         "type" : "ThematicBreak"
       } ]
     }, {
-      "id" : "important-commands",
-      "title" : "Important commands",
+      "id" : "importantmain-commands",
+      "title" : "Important/Main commands",
       "type" : "Section",
       "content" : [ {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "parameters" : [ {
+          "name" : "1)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "1)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
-              "code" : "/birthday set date:<dd-MM>",
+              "text" : "/birthday set ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "date:",
               "type" : "InlinedCode"
             }, {
-              "text" : " Allows you to specify your birthday (dd-mm format).",
+              "text" : "dd-MM",
               "type" : "SimpleText"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "1)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Specifying your birthday (dd-MM format)",
+                "type" : "SimpleText"
+              } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "2)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "2)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
-              "code" : "~>opts birthday enable <channel name> <role name>",
+              "text" : "~>opts birthday enable ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<channel name>",
               "type" : "InlinedCode"
             }, {
-              "text" : " Allows you to set up the Birthday Announcer.",
+              "text" : " ",
               "type" : "SimpleText"
+            }, {
+              "code" : "<role name>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "2)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Setting up the Birthday Announcer.",
+                "type" : "SimpleText"
+              } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "3)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "3)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
-              "code" : "~>opts birthday message set <message>",
-              "type" : "InlinedCode"
-            }, {
-              "text" : " Allows you to set a Custom Birthday Message.",
+              "text" : "~>opts birthday message set ",
               "type" : "SimpleText"
+            }, {
+              "code" : "<message>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "3)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Setting a Custom Birthday Message.",
+                "type" : "SimpleText"
+              } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "4)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "4)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
-              "code" : "/birthday allowserver",
-              "type" : "InlinedCode"
-            }, {
-              "text" : " Allows your birthday to be announced in the server you use this command on.",
+              "text" : "/birthday allowserver",
               "type" : "SimpleText"
             } ]
-          } ]
-        } ]
-      }, {
-        "type" : "ThematicBreak"
-      } ]
-    }, {
-      "id" : "otherextra-commands",
-      "title" : "Other/Extra commands",
-      "type" : "Section",
-      "content" : [ {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "code" : "~>opts birthday disable",
-              "type" : "InlinedCode"
-            }, {
-              "text" : " Removes the Birthday Announcer.",
-              "type" : "SimpleText"
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "4)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Allowing your birthday to be announced in the server you use this command on.",
+                "type" : "SimpleText"
+              } ]
             } ]
           } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "code" : "~>opts birthday test <@mention>",
-              "type" : "InlinedCode"
-            }, {
-              "text" : " Allows you to test the Birthday Announcer.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "code" : "~>opts birthday message set <message>",
-              "type" : "InlinedCode"
-            }, {
-              "text" : " Allows you to set a custom message for you Birthday Announcer.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "code" : "~>opts birthday message clear",
-              "type" : "InlinedCode"
-            }, {
-              "text" : " Removes the custom message you had and restores the default message for the Birthday Announcer.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "code" : "~>opts commands birthdayblacklist add/remove <@mention>",
-              "type" : "InlinedCode"
-            }, {
-              "text" : " Allows you to blacklist an user from having their birthday announced on the server.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "type" : "ThematicBreak"
       } ]
@@ -390,7 +402,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "content" : [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "You need to choose a role to be assigned on each birthday.*",
+              "text" : "You need to choose a role to be assigned on each birthday.",
               "type" : "SimpleText"
             } ]
           } ]
@@ -398,7 +410,7 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "*Make sure that the role you choose is ",
+          "text" : "Warning: Make sure that the role you choose is ",
           "type" : "SimpleText"
         }, {
           "type" : "StrongEmphasis",
@@ -422,14 +434,31 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Once you have those two you can use ",
+          "text" : "Once you have those two you can activate the Birthday Announcer with:",
           "type" : "SimpleText"
-        }, {
-          "code" : "~>opts birthday enable <channel name> <role name>",
-          "type" : "InlinedCode"
-        }, {
-          "text" : " to activate the Birthday Announcer.",
-          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts birthday enable ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<channel name>",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<role name>",
+              "type" : "InlinedCode"
+            } ]
+          } ]
         } ]
       }, {
         "destination" : "https://i.imgur.com/c1T9vAd.png",
@@ -520,7 +549,7 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "You can change the default message sent by Mantaro on someone's birthday. The messages do not support embeds, meaning you will only be able to use plain text for them. To set them up you need to use ",
+          "text" : "You can change the default message sent by Mantaro on someone's birthday. To set them up you need to use ",
           "type" : "SimpleText"
         }, {
           "code" : "~>opts birthday message set <message>",
@@ -627,21 +656,182 @@ ReactDOM.render(React.createElement(Documentation, {
               "type" : "SimpleText"
             } ]
           } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "The size of your message is limited by Discord's own message limit (2000 characters - 26 characters from the command - 2 characters from the default prefix (this one can vary if you have a custom prefix)).",
-              "type" : "SimpleText"
-            } ]
-          } ]
         } ]
       }, {
         "type" : "ThematicBreak"
       } ]
+    }, {
+      "id" : "embeds",
+      "title" : "Embeds",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For this section you will need to also check out our ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/mantaro-wiki/guides/embeds",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Embeds Guide",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "It will teach you how you can make your desired embeds to make your fancy messages.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Once you have your embed ready, you want to add ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "embed:",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " to the start of it. This is necessary so the bot realizes your content is an embed.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "An example would be as follows:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "md",
+        "snippet" : "~>opts birthday message set embed:title: \"Say happy birthday to $(user)!\",\n    description: \"We hope you have a fantastic day!\",\n    color: \"ff69b4\",\n    author: \"Happy birthday!\",\n    authorImg: \"https://static.vecteezy.com/system/resources/previews/001/201/708/original/cake-png.png\",\n    thumbnail: \"https://cdn.discordapp.com/emojis/654322747094073365.png\",\n    footer: \"Have a nice day!\",\n    footerImg: \"https://static.vecteezy.com/system/resources/previews/001/201/708/original/cake-png.png\"\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
+      }, {
+        "type" : "ThematicBreak"
+      } ]
+    }, {
+      "id" : "otherextra-commands",
+      "title" : "Other/Extra commands",
+      "type" : "Section",
+      "content" : [ {
+        "parameters" : [ {
+          "name" : "[1]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[1]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts birthday disable",
+              "type" : "SimpleText"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[1]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Removes the Birthday Announcer.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "[2]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[2]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts birthday test ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<@mention>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[2]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Allows you to test the Birthday Announcer. Doesn't process embeds.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "[3]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[3]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts birthday message clear",
+              "type" : "SimpleText"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[3]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Removes the custom message you had and restores the default message for the Birthday Announcer.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "name" : "[4]",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "[4]",
+          "description" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "~>opts commands birthdayblacklist add/remove ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "<@mention>",
+              "type" : "InlinedCode"
+            } ]
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "[4]_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Allows you to blacklist a user from having their birthday announced on the server.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ApiParameters"
+      } ]
     } ],
-    "lastModifiedTime" : 1661900102028,
+    "lastModifiedTime" : 1662002411812,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Birthday Announcer",
@@ -653,11 +843,8 @@ ReactDOM.render(React.createElement(Documentation, {
         "title" : "What is the Birthday Announcer?",
         "id" : "what-is-the-birthday-announcer"
       }, {
-        "title" : "Important commands",
-        "id" : "important-commands"
-      }, {
-        "title" : "Other/Extra commands",
-        "id" : "otherextra-commands"
+        "title" : "Important/Main commands",
+        "id" : "importantmain-commands"
       }, {
         "title" : "Important information",
         "id" : "important-information"
@@ -667,6 +854,12 @@ ReactDOM.render(React.createElement(Documentation, {
       }, {
         "title" : "Custom Birthday Messages",
         "id" : "custom-birthday-messages"
+      }, {
+        "title" : "Embeds",
+        "id" : "embeds"
+      }, {
+        "title" : "Other/Extra commands",
+        "id" : "otherextra-commands"
       } ]
     }
   }

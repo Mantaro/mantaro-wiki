@@ -606,11 +606,8 @@ toc = [ {
       "title" : "What is the Birthday Announcer?",
       "id" : "what-is-the-birthday-announcer"
     }, {
-      "title" : "Important commands",
-      "id" : "important-commands"
-    }, {
-      "title" : "Other/Extra commands",
-      "id" : "otherextra-commands"
+      "title" : "Important/Main commands",
+      "id" : "importantmain-commands"
     }, {
       "title" : "Important information",
       "id" : "important-information"
@@ -620,6 +617,12 @@ toc = [ {
     }, {
       "title" : "Custom Birthday Messages",
       "id" : "custom-birthday-messages"
+    }, {
+      "title" : "Embeds",
+      "id" : "embeds"
+    }, {
+      "title" : "Other/Extra commands",
+      "id" : "otherextra-commands"
     } ]
   }, {
     "chapterTitle" : "Guides",
