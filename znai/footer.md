@@ -9,7 +9,7 @@ Wiki written and formatted by [Haxiz](https://github.com/Haxiz) with help from [
 This documentation was created using [Znai](https://github.com/testingisdocumenting/znai).
 
 \
-Currently the wiki is updated to Mantaro version`:badge: v7.0.0`
+Currently the wiki is updated to Mantaro version`:badge: v7.0.1`
 
 \
 Help us keep Mantaro alive! You can support us on [Patreon](https://www.patreon.com/mantaro) and get different [perks](basics/premium-perks) from it too!

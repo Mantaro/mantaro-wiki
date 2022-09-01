@@ -1,4 +1,4 @@
-# Mantaro Bot Wiki {badge: "v7.0.0"}
+# Mantaro Bot Wiki {badge: "v7.0.1"}
 
 :include-image: assets/images/banner.jpg 
 
