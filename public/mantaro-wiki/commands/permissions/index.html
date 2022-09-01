@@ -84,7 +84,7 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Intro</h1></header>
-<p>Some commands require special permissions in order for them to work. Below is a list of said permissions, who needs them, and their shorthands that we will mention through-out this wiki: Permission Name Description Mantaro User DJ Having a role called `DJ` or the [established DJ role for the server](basics/server-configuration#music-configuration), or being the one who requested the song. As well, having the bellow `Admin` permissions also grants this. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Admin Having a role called `Bot Commander`, or the role Permission `Manage Server`. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Emotes Having the role Permission `Use External Emoji`. `:icon: check {stroke: &quot;green&quot;}` `:icon: slash {stroke: &quot;red&quot;}` Messages Having the role Permission `Manage Messages`. `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` Moderate Having the role Permission `Moderate Member` (also called `Timeout Members`). `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` The bot itself can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.</p>
+<p>Some commands require special permissions in order for them to work. Below is a list of said permissions, who needs them, and their shorthands that we will mention through-out this wiki:Note: The bot requires the Send Messages and View Channel permissions to function properly in most, if not all, commands. Permission Name Description Mantaro User DJ Having a role called `DJ` or the [established DJ role for the server](basics/server-configuration#music-configuration), or being the one who requested the song. As well, having the bellow `Admin` permissions also grants this. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Admin Having a role called `Bot Commander`, or the role Permission `Manage Server`. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Emotes Having the role Permission `Use External Emoji`. `:icon: check {stroke: &quot;green&quot;}` `:icon: slash {stroke: &quot;red&quot;}` Messages Having the role Permission `Manage Messages`. `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` Moderate Having the role Permission `Moderate Member` (also called `Timeout Members`). `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` The bot itself can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.Tip: For Threads, you will need to give the bot the Send Messages in Threads permission on the channel the thread belongs to.</p>
 </article>
 
 <article>
@@ -133,6 +133,24 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SoftLineBreak"
         }, {
           "text" : "their shorthands that we will mention through-out this wiki:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: The bot requires the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "Send Messages",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " and ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "View Channel",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " permissions to function properly in most, if not all, commands.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -352,6 +370,18 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SoftLineBreak"
         }, {
           "text" : "However, a few commands may not work if the corresponding permission is missing.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Tip: For Threads, you will need to give the bot the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "Send Messages in Threads",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " permission on the channel the thread belongs to.",
           "type" : "SimpleText"
         } ]
       } ]
@@ -1037,7 +1067,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661118393384,
+    "lastModifiedTime" : 1662003686817,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "Permissions & Managing",
