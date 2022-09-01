@@ -1,22 +1,24 @@
-Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience `:icon: heart { fill: 'red' }`
-
 # What is the Birthday Announcer?
-The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday. Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.
+The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday.
+Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.
+
+Warning: Since the `opts` command has not been ported to Slash Commands, this page is subject to massive changes in the future.
 
 ---
-# Important commands
-*   `/birthday set date:<dd-MM>` Allows you to specify your birthday (dd-mm format).
-*   `~>opts birthday enable <channel name> <role name>` Allows you to set up the Birthday Announcer.
-*   `~>opts birthday message set <message>` Allows you to set a Custom Birthday Message.
-*   `/birthday allowserver` Allows your birthday to be announced in the server you use this command on.
+# Important/Main commands
+```api-parameters
+1), What is it for?, "/birthday set `date:`dd-MM"
+1).Used for:, "", "Specifying your birthday (dd-MM format)"
 
----
-# Other/Extra commands
-*   `~>opts birthday disable` Removes the Birthday Announcer.
-*   `~>opts birthday test <@mention>` Allows you to test the Birthday Announcer.
-*   `~>opts birthday message set <message>` Allows you to set a custom message for you Birthday Announcer.
-*   `~>opts birthday message clear` Removes the custom message you had and restores the default message for the Birthday Announcer.
-*   `~>opts commands birthdayblacklist add/remove <@mention>` Allows you to blacklist an user from having their birthday announced on the server.
+2), What is it for?, "~>opts birthday enable `<channel name>` `<role name>`"
+2).Used for:, "", "Setting up the Birthday Announcer."
+
+3), What is it for?, "~>opts birthday message set `<message>`"
+3).Used for:, "", "Setting a Custom Birthday Message."
+
+4), What is it for?, "/birthday allowserver"
+4).Used for:, "", "Allowing your birthday to be announced in the server you use this command on."
+```
 
 ---
 # Important information
@@ -31,11 +33,13 @@ The Birthday Announcer is a function in Mantaro that allows her to send a birthd
 Before enabling the birthday announcer you need to check some things first.
 
 *   You need to choose a channel in which Mantaro will announce the birthdays.
-*   You need to choose a role to be assigned on each birthday.*
+*   You need to choose a role to be assigned on each birthday.
 
-*Make sure that the role you choose is **not** a role with permissions you would not want all users to have. As well, make sure that the role is **not** an actively used role, for example a role called Member that is given to everyone is not a good choice.
+Warning: Make sure that the role you choose is **not** a role with permissions you would not want all users to have. As well, make sure that the role is **not** an actively used role, for example a role called Member that is given to everyone is not a good choice.
 
-Once you have those two you can use `~>opts birthday enable <channel name> <role name>` to activate the Birthday Announcer.
+Once you have those two you can activate the Birthday Announcer with:
+
+* ~>opts birthday enable `<channel name>` `<role name>`
 
 ![](https://i.imgur.com/c1T9vAd.png)
 
@@ -47,7 +51,7 @@ Once again there's a couple of things to keep in mind.
 
 ---
 # Custom Birthday Messages
-You can change the default message sent by Mantaro on someone's birthday. The messages do not support embeds, meaning you will only be able to use plain text for them. To set them up you need to use `~>opts birthday message set <message>`. You have two modifiers at your disposal for birthday messages:
+You can change the default message sent by Mantaro on someone's birthday. To set them up you need to use `~>opts birthday message set <message>`. You have two modifiers at your disposal for birthday messages:
 
 *   `$(user)` This will return the name of the user.
 *   `$(usermention)` This will return a mention of the user.
@@ -61,8 +65,41 @@ Important things to keep in mind:
 
 *   Do not start the message with a new line! Put the message right after `~>opts birthday message set`, like `~>opts birthday message set Hello there`. If you use a new line (aka ctrl + enter before the actual message), you'll get an error message.
 *   **You cannot mention @everyone**. This is intentional.
-*   The size of your message is limited by Discord's own message limit (2000 characters - 26 characters from the command - 2 characters from the default prefix (this one can vary if you have a custom prefix)).
 ---
+
+# Embeds
+For this section you will need to also check out our [Embeds Guide](guides/embeds).
+It will teach you how you can make your desired embeds to make your fancy messages.
+
+Once you have your embed ready, you want to add `embed:` to the start of it. This is necessary so the bot realizes your content is an embed.
+An example would be as follows:
+
+```md {wrap: true}
+~>opts birthday message set embed:title: "Say happy birthday to $(user)!",
+    description: "We hope you have a fantastic day!",
+    color: "ff69b4",
+    author: "Happy birthday!",
+    authorImg: "https://static.vecteezy.com/system/resources/previews/001/201/708/original/cake-png.png",
+    thumbnail: "https://cdn.discordapp.com/emojis/654322747094073365.png",
+    footer: "Have a nice day!",
+    footerImg: "https://static.vecteezy.com/system/resources/previews/001/201/708/original/cake-png.png"
+```
+---
+
+# Other/Extra commands
+```api-parameters
+[1], What is it for?, "~>opts birthday disable"
+[1].Used for:, "", "Removes the Birthday Announcer."
+
+[2], What is it for?, "~>opts birthday test `<@mention>`"
+[2].Used for:, "", "Allows you to test the Birthday Announcer. Doesn't process embeds."
+
+[3], What is it for?, "~>opts birthday message clear"
+[3].Used for:, "", "Removes the custom message you had and restores the default message for the Birthday Announcer."
+
+[4], What is it for?, "~>opts commands birthdayblacklist add/remove `<@mention>`"
+[4].Used for:, "", "Allows you to blacklist a user from having their birthday announced on the server."
+```
 
 
 
