@@ -8,7 +8,7 @@ Currently most commands have already been ported to Slash Commands, and some are
 The reason for this is we haven't figured out a way to make the remaining commands work correctly using Slash Commands.
 However, they too will be ported to Slash Commands in the future.
 
-Note: Some commands have not been ported to Slash Commands yet and still use text base commands like before. Commands like `Custom`, `Trivia`, `Opts`, among others are still text based. Said commands are marked accordingly in this wiki when mentioned. They will be ported to Slash Commands in the future.
+Note: Some commands have not been ported to Slash Commands yet and still use text base commands like before. Commands like `Game`, `Trivia`, `Opts`, as well as Custom Commands you create, are still text based. Said commands are marked accordingly in this wiki when mentioned. They will be ported to Slash Commands in the future.
 
 For more information, check out Discord's [Slash Commands FAQ](https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ) or their [Blog Post](https://discord.com/blog/slash-commands-are-here).
 
