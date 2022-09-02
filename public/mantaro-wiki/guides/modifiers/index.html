@@ -84,22 +84,22 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Intro</h1></header>
-<p>Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience In order to use any of these you will have to type exactly what you see under the first bulletin every time, whether it is custom commands, level up messages or welcome messages. So if you for instance want the author username in a custom command you would type exactly $(event.author.username).</p>
+<p>In order to use any of these you will have to type exactly what you see under the first bulletin every time, whether it is custom commands, birthday messages or welcome messages. So if you for instance want the author username in a custom command you would type exactly $(event.author.username).</p>
 </article>
 
 <article>
 <header><h1>Modifiers for welcome/leave messages:</h1></header>
-<p>#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers All of the guild modifiers below #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers All of the me (Mantaro) modifiers below $(event.user):This will return a mention of the user that joined/left. $(event.user.username):This will return the username of the user that joined/left. $(event.user.name):This will return the nickname of the user that joined/left. $(event.user.discriminator):This will return the discriminator (#XXXX) of the user that joined/left. $(event.user.tag):Short hand for username#discriminator. $(event.user.game):This will return the current playing game of the user that joined/left (None if no game). $(event.user.id):This will return the id (unique identifier) of the user that joined/left. $(event.user.avatar):This will return the avatar URL of the user that joined/left.</p>
+<p>#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers All the guild modifiers below #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers All the me (Mantaro) modifiers below 1) What is it for? $(event.user) Used for: This will return a mention of the user that joined/left. 2) What is it for? $(event.user.username) Used for: This will return the username of the user that joined/left. 3) What is it for? $(event.user.name) Used for: This will return the nickname of the user that joined/left. 4) What is it for? $(event.user.discriminator) Used for: This will return the discriminator (#XXXX) of the user that joined/left. 5) What is it for? $(event.user.tag) Used for: Shorthand for username#discriminator. 6) What is it for? $(event.user.game) Used for: This will return the current playing game of the user that joined/left (None if no game). 7) What is it for? $(event.user.id) Used for: This will return the id (unique identifier) of the user that joined/left. 8) What is it for? $(event.user.avatar) Used for: This will return the avatar URL of the user that joined/left.</p>
 </article>
 
 <article>
 <header><h1>A list of all Modifiers that can be used in custom commands.</h1></header>
-<p>Base modifier: $(event):This will return a mention of the one who executed the command together with a mention of the channel the command was used in. Guild modifiers: $(event.guild):This will return the name of the guild the command was used in. $(event.guild.name):This will return the name of the guild the command was used in. $(event.guild.owner):This will return a mention of the guild owner of the guild command was used in. $(event.guild.owner.username):This will return the username of the guild owner of the guild the command was used in. $(event.guild.owner.discriminator):This will return the discriminator (#XXXX) of the guild owner of the guild the command was used in. $(event.guild.owner.game):This will return the current playing status of the guild owner of the guild the command was used in. (None if no game) $(event.guild.owner.status):This will return the current online status of the guild owner of the guild the command was used in. $(event.guild.owner.id):This will return the id (unique identifier) of the guild owner of the guild the command was used in. $(event.guild.owner.name):This will return the current nickname of the guild owner of the guild the command was used in. (Username if none) $(event.guild.owner.avatar):This will return the avatar url of the guild owner of the guild the command was used in. $(event.guild.region):This will return the Voice Region of the guild the command was used in. $(event.guild.totalusers):This will return the ammount of users inside the guild the command was used in. $(event.guild.icon):This will return the url of the guild icon. Me (Mantaro) modifiers: $(event.me):This will return a mention of Mantaro. $(event.me.username):This will return the username of Mantaro. $(event.me.name):This will return the current nickname of Mantaro. (Username if non) $(event.me.game):This will return the current playing game of Mantaro. (Note: this will always be &quot;Hold on to your seatbelts&quot;) $(event.me.status):This will return the current online status of Mantaro. (Note: this will always be &quot;Online&quot;.) $(event.me.id):This will return the id (unique identifier) of Mantaro. $(event.me.avatar):This will return the avatar URL of Mantaro. Author (Command executer) modifiers: $(event.author):This will return a mention of the command user. $(event.author.username):This will return the username of the command user. $(event.author.name):This will return the username of the command user. $(event.author.discriminator):This will return the discriminator (#XXXX) of the command user. $(event.author.tag):Short hand for $(event.author.username)#$(event.author.discriminator). $(event.author.game):This will return the current playing game of the command user. (None if no game) $(event.author.status):This will return the current status of the command user. $(event.author.id):This will return the id (unique identifier) of the command user. $(event.author.avatar):This will return the avatar URL of the command user. $(event.author.nickname):This will return the nickname of the user that is using the command (If the user has no nickname it returns their username). Message modifiers: $(event.message):This will return the raw content of the message. (Does not include prefix and command name) $(event.message.mentionnames):This will return the names of everyone mentioned on the command. $(event.message.firstmentionid):This will return the ID of the first mention on custom commands. Channel modifiers: $(event.channel):This will return the mention of the channel the command was used in. $(event.channel.topic):This will return the topic of the channel the command was used in. $(event.channel.name):This will return the name of the channel the command was used in. $(event.channel.id):This will return the id (unique identifier) of the channel the command was used in.</p>
+<p>Base modifier: 9) What is it for? $(event) Used for: This will return a mention of the one who executed the command together with a mention of the channel the command was used in. Guild modifiers: 10) What is it for? $(event.guild) Used for: This will return the name of the guild the command was used in. 11) What is it for? $(event.guild.name) Used for: This will return the name of the guild the command was used in. 12) What is it for? $(event.guild.owner) Used for: This will return a mention of the guild owner of the guild command was used in. 13) What is it for? $(event.guild.owner.username) Used for: This will return the username of the guild owner of the guild the command was used in. 14) What is it for? $(event.guild.owner.discriminator) Used for: This will return the discriminator (#XXXX) of the guild owner of the guild the command was used in. 15) What is it for? $(event.guild.owner.game) Used for: This will return the current playing status of the guild owner of the guild the command was used in. (None if no game) 16) What is it for? $(event.guild.owner.status) Used for: This will return the current online status of the guild owner of the guild the command was used in. 17) What is it for? $(event.guild.owner.id) Used for: This will return the id (unique identifier) of the guild owner of the guild the command was used in. 18) What is it for? $(event.guild.owner.name) Used for: This will return the current nickname of the guild owner of the guild the command was used in. (Username if none) 19) What is it for? $(event.guild.owner.avatar) Used for: This will return the avatar url of the guild owner of the guild the command was used in. 20) What is it for? $(event.guild.region) Used for: This will return the Voice Region of the guild the command was used in. 21) What is it for? $(event.guild.totalusers) Used for: This will return the ammount of users inside the guild the command was used in. 22) What is it for? $(event.guild.icon) Used for: This will return the url of the guild icon. Me (Mantaro) modifiers: 23) What is it for? $(event.me) Used for: This will return a mention of Mantaro. 24) What is it for? $(event.me.username) Used for: This will return the username of Mantaro. 25) What is it for? $(event.me.name) Used for: This will return the current nickname of Mantaro. (Username if none) 26) What is it for? $(event.me.game) Used for: This will return the current playing game of Mantaro. 27) What is it for? $(event.me.status) Used for: This will return the current online status of Mantaro. 28) What is it for? $(event.me.id) Used for: This will return the id (unique identifier) of Mantaro. 29) What is it for? $(event.me.avatar) Used for: This will return the avatar URL of Mantaro. Author (Command execute) modifiers: 30) What is it for? $(event.author) Used for: This will return a mention of the command user. 31) What is it for? $(event.author.username) Used for: This will return the username of the command user. 32) What is it for? $(event.author.name) Used for: This will return the username of the command user. 33) What is it for? $(event.author.discriminator) Used for: This will return the discriminator (#XXXX) of the command user. 34) What is it for? $(event.author.tag) Used for: Short hand for $(event.author.username)#$(event.author.discriminator). 35) What is it for? $(event.author.game) Used for: This will return the current playing game of the command user. (None if no game) 36) What is it for? $(event.author.status) Used for: This will return the current status of the command user. 37) What is it for? $(event.author.id) Used for: This will return the id (unique identifier) of the command user. 38) What is it for? $(event.author.avatar) Used for: This will return the avatar URL of the command user. 39) What is it for? $(event.author.nickname) Used for: This will return the nickname of the user that is using the command (If the user has no nickname it returns their username). Message modifiers: 40) What is it for? $(event.message) Used for: This will return the raw content of the message. (Does not include prefix and command name) 41) What is it for? $(event.message.mentionnames) Used for: This will return the names of everyone mentioned on the command. 42) What is it for? $(event.message.firstmentionid) Used for: This will return the ID of the first mention on custom commands. Channel modifiers: 43) What is it for? $(event.channel) Used for: This will return the mention of the channel the command was used in. 44) What is it for? $(event.channel.topic) Used for: This will return the topic of the channel the command was used in. 45) What is it for? $(event.channel.name) Used for: This will return the name of the channel the command was used in. 46) What is it for? $(event.channel.id) Used for: This will return the id (unique identifier) of the channel the command was used in.</p>
 </article>
 
 <article>
 <header><h1>Modifiers for Log Messages</h1></header>
-<p>Shared between edited/deleted messages and user banned/unbanned #modifiers-for-welcomeleave-messages All of the modifiers from welcome messages (event.user in the case of bans is the person banned, in case of messages the author of the message) $(hour):Prints the time at which the log message occurred (Based on the location of the bot) Message Edited and Message Deleted #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers All of the channel modifiers above Message Edited only $(old):Replaced with the old content of the message. $(new):Replaced with the new content of the message. Message Deleted only $(content):Replaced with the content of the deleted message. $(event.message.id):Replaced with the unique identifier of the deleted message.</p>
+<p>Shared between edited/deleted messages and user banned/unbanned #modifiers-for-welcomeleave-messages All the modifiers from welcome messages (event.user in the case of bans is the person banned, in case of messages the author of the message) 47) What is it for? $(hour) Used for: Prints the time at which the log message occurred (Based on the location of the bot) Message Edited and Message Deleted #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers All the channel modifiers above Message Edited only 48) What is it for? $(old) Used for: Replaced with the old content of the message. 49) What is it for? $(new) Used for: Replaced with the new content of the message. Message Deleted only 50) What is it for? $(content) Used for: Replaced with the content of the deleted message. 51) What is it for? $(event.message.id) Used for: Replaced with the unique identifier of the deleted message.</p>
 </article>
 </section>
 </div>
@@ -126,16 +126,6 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
-      "type" : "Paragraph",
-      "content" : [ {
-        "text" : "Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience ",
-        "type" : "SimpleText"
-      }, {
-        "fill" : "red",
-        "id" : "heart",
-        "type" : "Icon"
-      } ]
-    }, {
       "id" : "intro",
       "title" : "Intro",
       "type" : "Section",
@@ -151,7 +141,12 @@ ReactDOM.render(React.createElement(Documentation, {
             "type" : "SimpleText"
           } ]
         }, {
-          "text" : " what you see under the first bulletin every time, whether it is custom commands, level up messages or welcome messages. So if you for instance want the author username in a custom command you would type ",
+          "text" : " what you see under the first bulletin every time, whether it is custom commands, birthday messages or welcome messages.",
+          "type" : "SimpleText"
+        }, {
+          "type" : "SoftLineBreak"
+        }, {
+          "text" : "So if you for instance want the author username in a custom command you would type ",
           "type" : "SimpleText"
         }, {
           "type" : "Emphasis",
@@ -185,7 +180,13 @@ ReactDOM.render(React.createElement(Documentation, {
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
-                  "text" : "All of the guild modifiers below",
+                  "text" : "All the ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "guild",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : " modifiers below",
                   "type" : "SimpleText"
                 } ]
               } ]
@@ -202,15 +203,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
-                  "text" : "All of the me (Mantaro) modifiers below",
+                  "text" : "All the ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "me",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : " (Mantaro) modifiers below",
                   "type" : "SimpleText"
                 } ]
               } ]
             } ]
           } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
+        } ]
+      }, {
+        "parameters" : [ {
+          "name" : "1)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "1)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -218,28 +232,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.user)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "1)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return a mention of the user that joined/left.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return a mention of the user that joined/left.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "2)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "2)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -247,28 +261,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.user.username)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "2)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the username of the user that joined/left.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the username of the user that joined/left.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "3)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "3)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -276,28 +290,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.user.name)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "3)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the nickname of the user that joined/left.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the nickname of the user that joined/left.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "4)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "4)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -305,28 +319,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.user.discriminator)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "4)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the discriminator (#XXXX) of the user that joined/left.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the discriminator (#XXXX) of the user that joined/left.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "5)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "5)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -334,28 +348,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.user.tag)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "5)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Short hand for username#discriminator.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "Shorthand for username#discriminator.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "6)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "6)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -363,28 +377,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.user.game)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "6)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the current playing game of the user that joined/left (None if no game).",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the current playing game of the user that joined/left (None if no game).",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "7)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "7)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -392,28 +406,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.user.id)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "7)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the id (unique identifier) of the user that joined/left.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the id (unique identifier) of the user that joined/left.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "8)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "8)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -421,26 +435,22 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.user.avatar)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "8)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the avatar URL of the user that joined/left.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the avatar URL of the user that joined/left.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "type" : "ThematicBreak"
       } ]
@@ -454,12 +464,14 @@ ReactDOM.render(React.createElement(Documentation, {
         "title" : "Base modifier:",
         "type" : "SubHeading"
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "parameters" : [ {
+          "name" : "9)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "9)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -467,38 +479,36 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "9)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return a mention of the one who executed the command together with a mention of the channel the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return a mention of the one who executed the command together with a mention of the channel the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers",
         "level" : 2,
         "title" : "Guild modifiers:",
         "type" : "SubHeading"
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "parameters" : [ {
+          "name" : "10)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "10)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -506,28 +516,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "10)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the name of the guild the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the name of the guild the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "11)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "11)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -535,28 +545,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.name)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "11)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the name of the guild the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the name of the guild the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "12)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "12)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -564,28 +574,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.owner)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "12)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return a mention of the guild owner of the guild command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return a mention of the guild owner of the guild command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "13)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "13)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -593,28 +603,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.owner.username)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "13)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the username of the guild owner of the guild the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the username of the guild owner of the guild the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "14)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "14)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -622,28 +632,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.owner.discriminator)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "14)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the discriminator (#XXXX) of the guild owner of the guild the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the discriminator (#XXXX) of the guild owner of the guild the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "15)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "15)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -651,28 +661,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.owner.game)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "15)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the current playing status of the guild owner of the guild the command was used in. (None if no game)",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the current playing status of the guild owner of the guild the command was used in. (None if no game)",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "16)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "16)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -680,28 +690,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.owner.status)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "16)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the current online status of the guild owner of the guild the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the current online status of the guild owner of the guild the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "17)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "17)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -709,28 +719,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.owner.id)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "17)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the id (unique identifier) of the guild owner of the guild the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the id (unique identifier) of the guild owner of the guild the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "18)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "18)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -738,28 +748,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.owner.name)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "18)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the current nickname of the guild owner of the guild the command was used in. (Username if none)",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the current nickname of the guild owner of the guild the command was used in. (Username if none)",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "19)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "19)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -767,28 +777,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.owner.avatar)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "19)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the avatar url of the guild owner of the guild the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the avatar url of the guild owner of the guild the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "20)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "20)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -796,28 +806,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.region)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "20)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the Voice Region of the guild the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the Voice Region of the guild the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "21)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "21)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -825,28 +835,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.totalusers)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "21)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the ammount of users inside the guild the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the ammount of users inside the guild the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "22)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "22)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -854,38 +864,36 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.guild.icon)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "22)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the url of the guild icon.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the url of the guild icon.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers",
         "level" : 2,
         "title" : "Me (Mantaro) modifiers:",
         "type" : "SubHeading"
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "parameters" : [ {
+          "name" : "23)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "23)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -893,28 +901,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.me)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "23)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return a mention of Mantaro.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return a mention of Mantaro.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "24)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "24)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -922,28 +930,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.me.username)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "24)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the username of Mantaro.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the username of Mantaro.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "25)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "25)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -951,28 +959,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.me.name)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "25)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the current nickname of Mantaro. (Username if non)",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the current nickname of Mantaro. (Username if none)",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "26)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "26)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -980,28 +988,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.me.game)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "26)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the current playing game of Mantaro. (Note: this will always be \"Hold on to your seatbelts\")",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the current playing game of Mantaro.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "27)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "27)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1009,28 +1017,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.me.status)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "27)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the current online status of Mantaro. (Note: this will always be \"Online\".)",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the current online status of Mantaro.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "28)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "28)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1038,28 +1046,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.me.id)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "28)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the id (unique identifier) of Mantaro.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the id (unique identifier) of Mantaro.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "29)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "29)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1067,38 +1075,36 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.me.avatar)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "29)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the avatar URL of Mantaro.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the avatar URL of Mantaro.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
-        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-author-command-executer-modifiers",
+        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-author-command-execute-modifiers",
         "level" : 2,
-        "title" : "Author (Command executer) modifiers:",
+        "title" : "Author (Command execute) modifiers:",
         "type" : "SubHeading"
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "parameters" : [ {
+          "name" : "30)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "30)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1106,28 +1112,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "30)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return a mention of the command user.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return a mention of the command user.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "31)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "31)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1135,28 +1141,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author.username)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "31)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the username of the command user.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the username of the command user.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "32)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "32)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1164,28 +1170,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author.name)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "32)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the username of the command user.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the username of the command user.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "33)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "33)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1193,28 +1199,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author.discriminator)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "33)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the discriminator (#XXXX) of the command user.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the discriminator (#XXXX) of the command user.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "34)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "34)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1222,28 +1228,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author.tag)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "34)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Short hand for $(event.author.username)#$(event.author.discriminator).",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "Short hand for $(event.author.username)#$(event.author.discriminator).",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "35)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "35)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1251,28 +1257,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author.game)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "35)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the current playing game of the command user. (None if no game)",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the current playing game of the command user. (None if no game)",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "36)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "36)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1280,28 +1286,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author.status)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "36)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the current status of the command user.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the current status of the command user.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "37)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "37)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1309,28 +1315,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author.id)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "37)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the id (unique identifier) of the command user.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the id (unique identifier) of the command user.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "38)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "38)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1338,28 +1344,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author.avatar)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "38)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the avatar URL of the command user.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the avatar URL of the command user.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "39)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "39)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1367,38 +1373,36 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.author.nickname)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "39)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the nickname of the user that is using the command (If the user has no nickname it returns their username).",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the nickname of the user that is using the command (If the user has no nickname it returns their username).",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-message-modifiers",
         "level" : 2,
         "title" : "Message modifiers:",
         "type" : "SubHeading"
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "parameters" : [ {
+          "name" : "40)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "40)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1406,28 +1410,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.message)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "40)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the raw content of the message. (Does not include prefix and command name)",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the raw content of the message. (Does not include prefix and command name)",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "41)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "41)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1435,28 +1439,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.message.mentionnames)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "41)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the names of everyone mentioned on the command.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the names of everyone mentioned on the command.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "42)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "42)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1464,38 +1468,36 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.message.firstmentionid)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "42)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the ID of the first mention on custom commands.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the ID of the first mention on custom commands.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers",
         "level" : 2,
         "title" : "Channel modifiers:",
         "type" : "SubHeading"
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "parameters" : [ {
+          "name" : "43)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "43)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1503,28 +1505,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.channel)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "43)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the mention of the channel the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the mention of the channel the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "44)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "44)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1532,28 +1534,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.channel.topic)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "44)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the topic of the channel the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the topic of the channel the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "45)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "45)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1561,28 +1563,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.channel.name)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "45)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the name of the channel the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the name of the channel the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "46)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "46)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1590,26 +1592,22 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.channel.id)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "46)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "This will return the id (unique identifier) of the channel the command was used in.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "This will return the id (unique identifier) of the channel the command was used in.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "type" : "ThematicBreak"
       } ]
@@ -1637,7 +1635,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
-                  "text" : "All of the modifiers from welcome messages",
+                  "text" : "All the modifiers from welcome messages",
                   "type" : "SimpleText"
                 } ]
               } ]
@@ -1646,9 +1644,16 @@ ReactDOM.render(React.createElement(Documentation, {
               "type" : "SimpleText"
             } ]
           } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
+        } ]
+      }, {
+        "parameters" : [ {
+          "name" : "47)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "47)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1656,26 +1661,22 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(hour)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "47)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Prints the time at which the log message occurred (Based on the location of the bot)",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "Prints the time at which the log message occurred (Based on the location of the bot)",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "id" : "modifiers-for-log-messages-message-edited-and-message-deleted",
         "level" : 2,
@@ -1696,7 +1697,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
-                  "text" : "All of the channel modifiers above",
+                  "text" : "All the channel modifiers above",
                   "type" : "SimpleText"
                 } ]
               } ]
@@ -1709,12 +1710,14 @@ ReactDOM.render(React.createElement(Documentation, {
         "title" : "Message Edited only",
         "type" : "SubHeading"
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "parameters" : [ {
+          "name" : "48)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "48)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1722,28 +1725,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(old)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "48)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Replaced with the old content of the message.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "Replaced with the old content of the message.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "49)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "49)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1751,38 +1754,36 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(new)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "49)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Replaced with the new content of the message.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "Replaced with the new content of the message.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "id" : "modifiers-for-log-messages-message-edited-and-message-deleted-message-deleted-only",
         "level" : 3,
         "title" : "Message Deleted only",
         "type" : "SubHeading"
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
+        "parameters" : [ {
+          "name" : "50)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "50)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1790,28 +1791,28 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(content)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "50)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Replaced with the content of the deleted message.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "Replaced with the content of the deleted message.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
         }, {
-          "type" : "ListItem",
-          "content" : [ {
+          "name" : "51)",
+          "type" : [ {
+            "text" : "What is it for?",
+            "url" : ""
+          } ],
+          "anchorId" : "51)",
+          "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
               "type" : "StrongEmphasis",
@@ -1819,31 +1820,27 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "$(event.message.id)",
                 "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ":",
-              "type" : "SimpleText"
             } ]
-          }, {
-            "bulletMarker" : "*",
-            "tight" : true,
-            "type" : "BulletList",
-            "content" : [ {
-              "type" : "ListItem",
+          } ],
+          "children" : [ {
+            "name" : "Used for:",
+            "type" : [ ],
+            "anchorId" : "51)_Usedfor:",
+            "description" : [ {
+              "type" : "Paragraph",
               "content" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Replaced with the unique identifier of the deleted message.",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "Replaced with the unique identifier of the deleted message.",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
-        } ]
+        } ],
+        "type" : "ApiParameters"
       }, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661900193945,
+    "lastModifiedTime" : 1662072679548,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Modifiers",
