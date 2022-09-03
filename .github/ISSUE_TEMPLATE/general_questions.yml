@@ -1,5 +1,5 @@
-name: Incorrect Documentation
-description: Report an issue with the documentation.
+name: General Question
+description: For general questions about the wiki you might have.
 title: "[General Question]: "
 labels: ["Question"]
 body:
