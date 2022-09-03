@@ -18,7 +18,7 @@ footer = {
           "isFile" : false,
           "type" : "Link",
           "content" : [ {
-            "text" : "David Rubio Escares / Kodehawa",
+            "text" : "Kodehawa",
             "type" : "SimpleText"
           } ]
         }, {
