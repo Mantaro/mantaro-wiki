@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ github.event.head_commit.message == "build" }}
+    if: ${{ github.event.head_commit.message == 'build' }}
 
     steps:
       - uses: actions/checkout@v2
