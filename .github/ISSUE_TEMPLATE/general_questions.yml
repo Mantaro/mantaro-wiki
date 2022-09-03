@@ -1,0 +1,32 @@
+name: Incorrect Documentation
+description: Report an issue with the documentation.
+title: "[General Question]: "
+labels: ["Question"]
+body:
+  - type: markdown
+    attributes:
+      value: |-
+        For general questions please instead visit our [support server](https://support.mantaro.site).
+  - type: checkboxes
+    attributes:
+      label: Before submitting, make sure that
+      description: Please ensure you have done all the below things before you submit.
+      options:
+        - label: You are not asking for general bot support.
+          required: true
+        - label: You are not asking where to find content on the wiki.
+          required: true
+  - type: textarea
+    attributes:
+      label: Your question
+      description: Provide a clear and concise description of the question you have.
+      placeholder: I wanted to ask...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Provide any additional context or words you would like.
+      placeholder: I...
+    validations:
+      required: false

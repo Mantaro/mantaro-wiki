@@ -1,0 +1,37 @@
+name: Clarifications
+description: Sometimes the documentation is not clear enough. This template is for those cases.
+title: "[Clarification]: "
+labels: ["Clarification"]
+body:
+  - type: markdown
+    attributes:
+      value: |-
+        For general questions please instead visit our [support server](https://support.mantaro.site).
+  - type: textarea
+    attributes:
+      label: Describe the possible confusion
+      description: Provide a clear and concise description of the Issue you found.
+      placeholder: I found...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Location of the issue
+      description: Please provide us with a direct link to the section in which you found the Issue.
+      placeholder: https://www.mantaro.site/mantaro-wiki/...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Suggestions
+      description: If you would like to suggest us on how to fix the confusion.
+      placeholder: You could change this to...
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Provide any additional context or words you would like.
+      placeholder: I...
+    validations:
+      required: false
