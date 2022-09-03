@@ -1,13 +1,14 @@
 name: Build and deploy documentation
 
 on:
-  issues:
-    types: [opened]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.issue.title, 'Deploy documentation')
+    if: ${{ github.event.head_commit.message == "build" }}
 
     steps:
       - uses: actions/checkout@v2
