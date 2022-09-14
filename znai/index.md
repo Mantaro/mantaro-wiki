@@ -1,6 +1,7 @@
 # Mantaro Bot Wiki {badge: "v7.0.1"}
 
-:include-image: assets/images/banner.jpg 
+:include-image: assets/images/banner.jpg {desktopOnly: true}
+:include-image: assets/images/emotes/m-genius.png {mobileOnly: true}
 
 Hello there!
 
