@@ -81,17 +81,21 @@ Love letters are given to each person upon marrying using `/marry`.
 They can be used to create a love letter between those people (only the proposer may do so) using `/marry createletter content:<content goes here>`.
 
 ---
-## 13. How do I make a custom action command like ~>hug?
-You would use something like this:
+## 13. How do I make a custom action command like /pat?
+First you would use the following command: 
+
+* /custom add `nsfw:`[True/False]
+
+This will open a pop-up for you in which you can write the content of the command. Then you could set the content to something like this:
+
 ```md {wrap: true}
-~>custom new action v3:@{
-  if;
-  $(event.message);
-  usermention;
-  @{embed;
-    description:"$(event.author) is using an action on $(event.message)",
-     image:"https://mrlar.dev/i/5NCuLZswrZgqHq5.png"
-  };
+v3:@{if;
+   $(event.message);
+   usermention;
+      @{embed;
+         description:"$(event.author) is using an action on $(event.message)",
+         image:"https://mrlar.dev/i/5NCuLZswrZgqHq5.png"
+      };
   You need to mention a user!
 }
 ```
