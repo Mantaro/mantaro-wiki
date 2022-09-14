@@ -3,9 +3,9 @@ In order to use any of these you will have to type *exactly* what you see under 
 So if you for instance want the author username in a custom command you would type *exactly* $(event.author.username).
 
 ---
-# Modifiers for welcome/leave messages:
-* **[All the `guild` modifiers below](#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers)**
-* **[All the `me` (Mantaro) modifiers below](#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers)**
+# Modifiers for welcome and leave messages:
+* [All the `guild` modifiers bellow](#modifiers-for-custom-commands)
+* [All the `me` (Mantaro) modifiers bellow](#modifiers-for-custom-commands)
 
 ```api-parameters
 1), What is it for?, "**$(event.user)**"
@@ -35,7 +35,7 @@ So if you for instance want the author username in a custom command you would ty
 
 
 ---
-# A list of all Modifiers that can be used in custom commands.
+# Modifiers for Custom Commands
 
 ## Base modifier:
 
@@ -182,7 +182,7 @@ So if you for instance want the author username in a custom command you would ty
 
 ## Shared between edited/deleted messages and user banned/unbanned
 
-* **[All the modifiers from welcome messages](#modifiers-for-welcomeleave-messages)** (event.user in the case of bans is the person banned, in case of messages the author of the message)
+* **[All the modifiers from welcome messages](#modifiers-for-welcome-and-leave-messages)** (event.user in the case of bans is the person banned, in case of messages the author of the message)
     
 ```api-parameters
 47), What is it for?, "**$(hour)**"
@@ -191,7 +191,7 @@ So if you for instance want the author username in a custom command you would ty
 
 ## Message Edited and Message Deleted
 
-* **[All the channel modifiers above](#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers)**
+* **[All the channel modifiers above](#modifiers-for-custom-commands)**
 
 ### Message Edited only
 

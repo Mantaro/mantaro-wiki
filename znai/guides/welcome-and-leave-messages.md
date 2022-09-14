@@ -45,7 +45,7 @@ Ok, with the basics being covered you can now move to the next step.
 
 ---
 # Using Modifiers
-So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view *all* modifiers [here](guides/modifiers#modifiers-for-welcomeleave-messages). 
+So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view *all* modifiers [here](guides/modifiers#modifiers-for-welcome-and-leave-messages). 
 For the sake of this tutorial we will only cover `$(event.user.mention)`, `$(event.user.username)`, `$(event.guild.name)` and `$(event.guild.totalusers)`.
 
 So, let's say you want to mention the user that joined. 

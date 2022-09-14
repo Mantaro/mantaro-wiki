@@ -42,7 +42,7 @@ Please note that the role you provide in the birthday announcer commands is **no
 
 ---
 # Welcome and Leave messages
-These include all the things you need for Welcome and Leave messages, you can also use any of [these](guides/modifiers#modifiers-for-welcomeleave-messages) in them. 
+These include all the things you need for Welcome and Leave messages, you can also use any of [these](guides/modifiers#modifiers-for-welcome-and-leave-messages) in them. 
 They also support embedded messages, check our [Embed guide](guides/embeds) for that.
 For a detailed tutorial click [here](guides/welcome-and-leave-messages).
 
