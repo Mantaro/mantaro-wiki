@@ -77,7 +77,7 @@ footer = {
           "text" : "Currently the wiki is updated to Mantaro version",
           "type" : "SimpleText"
         }, {
-          "text" : "v7.0.1",
+          "text" : "v7.0.1.4",
           "type" : "TextBadge"
         } ]
       }, {

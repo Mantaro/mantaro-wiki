@@ -113,59 +113,59 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/forward",
-      "id" : "forward",
+      "id" : "-forward",
       "style" : "api"
     }, {
       "title" : "/move",
-      "id" : "move",
+      "id" : "-move",
       "style" : "api"
     }, {
       "title" : "/nowplaying",
-      "id" : "nowplaying",
+      "id" : "-nowplaying",
       "style" : "api"
     }, {
       "title" : "/pause",
-      "id" : "pause",
+      "id" : "-pause",
       "style" : "api"
     }, {
       "title" : "/play",
-      "id" : "play",
+      "id" : "-play",
       "style" : "api"
     }, {
       "title" : "/queue",
-      "id" : "queue",
+      "id" : "-queue",
       "style" : "api"
     }, {
       "title" : "/removetrack",
-      "id" : "removetrack",
+      "id" : "-removetrack",
       "style" : "api"
     }, {
       "title" : "/repeat",
-      "id" : "repeat",
+      "id" : "-repeat",
       "style" : "api"
     }, {
       "title" : "/restartsong",
-      "id" : "restartsong",
+      "id" : "-restartsong",
       "style" : "api"
     }, {
       "title" : "/rewind",
-      "id" : "rewind",
+      "id" : "-rewind",
       "style" : "api"
     }, {
       "title" : "/shuffle",
-      "id" : "shuffle",
+      "id" : "-shuffle",
       "style" : "api"
     }, {
       "title" : "/skip",
-      "id" : "skip",
+      "id" : "-skip",
       "style" : "api"
     }, {
       "title" : "/stop",
-      "id" : "stop",
+      "id" : "-stop",
       "style" : "api"
     }, {
       "title" : "/volume",
-      "id" : "volume",
+      "id" : "-volume",
       "style" : "api"
     } ]
   }, {
@@ -179,39 +179,39 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/action",
-      "id" : "action",
+      "id" : "-action",
       "style" : "api"
     }, {
       "title" : "/cuddle",
-      "id" : "cuddle",
+      "id" : "-cuddle",
       "style" : "api"
     }, {
       "title" : "/hug",
-      "id" : "hug",
+      "id" : "-hug",
       "style" : "api"
     }, {
       "title" : "/kiss",
-      "id" : "kiss",
+      "id" : "-kiss",
       "style" : "api"
     }, {
       "title" : "/pat",
-      "id" : "pat",
+      "id" : "-pat",
       "style" : "api"
     }, {
       "title" : "/poke",
-      "id" : "poke",
+      "id" : "-poke",
       "style" : "api"
     }, {
       "title" : "/pout",
-      "id" : "pout",
+      "id" : "-pout",
       "style" : "api"
     }, {
       "title" : "/slap",
-      "id" : "slap",
+      "id" : "-slap",
       "style" : "api"
     }, {
       "title" : "/tickle",
-      "id" : "tickle",
+      "id" : "-tickle",
       "style" : "api"
     } ]
   }, {
@@ -225,135 +225,135 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/badges",
-      "id" : "badges",
+      "id" : "-badges",
       "style" : "api"
     }, {
       "title" : "/balance",
-      "id" : "balance",
+      "id" : "-balance",
       "style" : "api"
     }, {
       "title" : "/buy",
-      "id" : "buy",
+      "id" : "-buy",
       "style" : "api"
     }, {
       "title" : "/cast",
-      "id" : "cast",
+      "id" : "-cast",
       "style" : "api"
     }, {
       "title" : "/chop",
-      "id" : "chop",
+      "id" : "-chop",
       "style" : "api"
     }, {
       "title" : "/daily",
-      "id" : "daily",
+      "id" : "-daily",
       "style" : "api"
     }, {
       "title" : "/dailycrate",
-      "id" : "dailycrate",
+      "id" : "-dailycrate",
       "style" : "api"
     }, {
       "title" : "/divorce",
-      "id" : "divorce",
+      "id" : "-divorce",
       "style" : "api"
     }, {
       "title" : "/dump",
-      "id" : "dump",
+      "id" : "-dump",
       "style" : "api"
     }, {
       "title" : "/equip",
-      "id" : "equip",
+      "id" : "-equip",
       "style" : "api"
     }, {
       "title" : "/fish",
-      "id" : "fish",
+      "id" : "-fish",
       "style" : "api"
     }, {
       "title" : "/gamble",
-      "id" : "gamble",
+      "id" : "-gamble",
       "style" : "api"
     }, {
       "title" : "/inventory",
-      "id" : "inventory",
+      "id" : "-inventory",
       "style" : "api"
     }, {
       "title" : "/iteminfo",
-      "id" : "iteminfo",
+      "id" : "-iteminfo",
       "style" : "api"
     }, {
       "title" : "/leaderboard",
-      "id" : "leaderboard",
+      "id" : "-leaderboard",
       "style" : "api"
     }, {
       "title" : "/loot",
-      "id" : "loot",
+      "id" : "-loot",
       "style" : "api"
     }, {
       "title" : "/market",
-      "id" : "market",
+      "id" : "-market",
       "style" : "api"
     }, {
       "title" : "/marry",
-      "id" : "marry",
+      "id" : "-marry",
       "style" : "api"
     }, {
       "title" : "/mine",
-      "id" : "mine",
+      "id" : "-mine",
       "style" : "api"
     }, {
       "title" : "/opencrate",
-      "id" : "opencrate",
+      "id" : "-opencrate",
       "style" : "api"
     }, {
       "title" : "/pet",
-      "id" : "pet",
+      "id" : "-pet",
       "style" : "api"
     }, {
       "title" : "/profile",
-      "id" : "profile",
+      "id" : "-profile",
       "style" : "api"
     }, {
       "title" : "/repair",
-      "id" : "repair",
+      "id" : "-repair",
       "style" : "api"
     }, {
       "title" : "/reputation",
-      "id" : "reputation",
+      "id" : "-reputation",
       "style" : "api"
     }, {
       "title" : "/salvage",
-      "id" : "salvage",
+      "id" : "-salvage",
       "style" : "api"
     }, {
       "title" : "/sell",
-      "id" : "sell",
+      "id" : "-sell",
       "style" : "api"
     }, {
       "title" : "/slots",
-      "id" : "slots",
+      "id" : "-slots",
       "style" : "api"
     }, {
       "title" : "/tools",
-      "id" : "tools",
+      "id" : "-tools",
       "style" : "api"
     }, {
       "title" : "/transfer",
-      "id" : "transfer",
+      "id" : "-transfer",
       "style" : "api"
     }, {
       "title" : "/transferitems",
-      "id" : "transferitems",
+      "id" : "-transferitems",
       "style" : "api"
     }, {
       "title" : "/unequip",
-      "id" : "unequip",
+      "id" : "-unequip",
       "style" : "api"
     }, {
       "title" : "/use",
-      "id" : "use",
+      "id" : "-use",
       "style" : "api"
     }, {
       "title" : "/waifu",
-      "id" : "waifu",
+      "id" : "-waifu",
       "style" : "api"
     } ]
   }, {
@@ -385,39 +385,39 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/danbooru",
-      "id" : "danbooru",
+      "id" : "-danbooru",
       "style" : "api"
     }, {
       "title" : "/e621",
-      "id" : "e621",
+      "id" : "-e621",
       "style" : "api"
     }, {
       "title" : "/e926",
-      "id" : "e926",
+      "id" : "-e926",
       "style" : "api"
     }, {
       "title" : "/gelbooru",
-      "id" : "gelbooru",
+      "id" : "-gelbooru",
       "style" : "api"
     }, {
       "title" : "/image",
-      "id" : "image",
+      "id" : "-image",
       "style" : "api"
     }, {
       "title" : "/konachan",
-      "id" : "konachan",
+      "id" : "-konachan",
       "style" : "api"
     }, {
       "title" : "/rule34",
-      "id" : "rule34",
+      "id" : "-rule34",
       "style" : "api"
     }, {
       "title" : "/safebooru",
-      "id" : "safebooru",
+      "id" : "-safebooru",
       "style" : "api"
     }, {
       "title" : "/yandere",
-      "id" : "yandere",
+      "id" : "-yandere",
       "style" : "api"
     } ]
   }, {
@@ -431,31 +431,31 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/8ball",
-      "id" : "8ball",
+      "id" : "-8ball",
       "style" : "api"
     }, {
       "title" : "/anime",
-      "id" : "anime",
+      "id" : "-anime",
       "style" : "api"
     }, {
       "title" : "/character",
-      "id" : "character",
+      "id" : "-character",
       "style" : "api"
     }, {
       "title" : "/coinflip",
-      "id" : "coinflip",
+      "id" : "-coinflip",
       "style" : "api"
     }, {
       "title" : "/love",
-      "id" : "love",
+      "id" : "-love",
       "style" : "api"
     }, {
       "title" : "/ratewaifu",
-      "id" : "ratewaifu",
+      "id" : "-ratewaifu",
       "style" : "api"
     }, {
       "title" : "/roll",
-      "id" : "roll",
+      "id" : "-roll",
       "style" : "api"
     } ]
   }, {
@@ -469,7 +469,7 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/mute",
-      "id" : "mute",
+      "id" : "-mute",
       "style" : "api"
     }, {
       "title" : "~>opts",
@@ -477,11 +477,11 @@ toc = [ {
       "style" : "api"
     }, {
       "title" : "/prune",
-      "id" : "prune",
+      "id" : "-prune",
       "style" : "api"
     }, {
       "title" : "/unmute",
-      "id" : "unmute",
+      "id" : "-unmute",
       "style" : "api"
     } ]
   }, {
@@ -495,27 +495,27 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/avatar",
-      "id" : "avatar",
+      "id" : "-avatar",
       "style" : "api"
     }, {
       "title" : "/help",
-      "id" : "help",
+      "id" : "-help",
       "style" : "api"
     }, {
       "title" : "/info",
-      "id" : "info",
+      "id" : "-info",
       "style" : "api"
     }, {
       "title" : "/ping",
-      "id" : "ping",
+      "id" : "-ping",
       "style" : "api"
     }, {
       "title" : "/mantaro",
-      "id" : "mantaro",
+      "id" : "-mantaro",
       "style" : "api"
     }, {
       "title" : "/stats",
-      "id" : "stats",
+      "id" : "-stats",
       "style" : "api"
     } ]
   }, {
@@ -529,31 +529,31 @@ toc = [ {
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
       "title" : "/birthday",
-      "id" : "birthday",
+      "id" : "-birthday",
       "style" : "api"
     }, {
       "title" : "/custom",
-      "id" : "custom",
+      "id" : "-custom",
       "style" : "api"
     }, {
       "title" : "/iam",
-      "id" : "iam",
+      "id" : "-iam",
       "style" : "api"
     }, {
       "title" : "/poll",
-      "id" : "poll",
+      "id" : "-poll",
       "style" : "api"
     }, {
       "title" : "/premium",
-      "id" : "premium",
+      "id" : "-premium",
       "style" : "api"
     }, {
       "title" : "/remindme",
-      "id" : "remindme",
+      "id" : "-remindme",
       "style" : "api"
     }, {
       "title" : "/time",
-      "id" : "time",
+      "id" : "-time",
       "style" : "api"
     }, {
       "title" : "~>wiki",
@@ -575,7 +575,7 @@ toc = [ {
       "id" : "what-are-welcome-and-leave-messages"
     }, {
       "title" : "Important/Main commands",
-      "id" : "importantmain-commands"
+      "id" : "important-main-commands"
     }, {
       "title" : "Setting your channels",
       "id" : "setting-your-channels"
@@ -593,7 +593,7 @@ toc = [ {
       "id" : "combining-your-knowledge"
     }, {
       "title" : "Other/Extra commands",
-      "id" : "otherextra-commands"
+      "id" : "other-extra-commands"
     } ]
   }, {
     "chapterTitle" : "Guides",
@@ -607,7 +607,7 @@ toc = [ {
       "id" : "what-is-the-birthday-announcer"
     }, {
       "title" : "Important/Main commands",
-      "id" : "importantmain-commands"
+      "id" : "important-main-commands"
     }, {
       "title" : "Important information",
       "id" : "important-information"
@@ -622,7 +622,7 @@ toc = [ {
       "id" : "embeds"
     }, {
       "title" : "Other/Extra commands",
-      "id" : "otherextra-commands"
+      "id" : "other-extra-commands"
     } ]
   }, {
     "chapterTitle" : "Guides",
@@ -632,26 +632,29 @@ toc = [ {
     "fileName" : "custom-commands",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
-      "title" : "What is v3?",
-      "id" : "what-is-v3"
+      "title" : "What are Custom Commands?",
+      "id" : "what-are-custom-commands"
     }, {
-      "title" : "How do you use v3?",
-      "id" : "how-do-you-use-v3"
+      "title" : "Important/Main Commands",
+      "id" : "important-main-commands"
     }, {
-      "title" : "Basics",
-      "id" : "basics"
+      "title" : "Basic Information",
+      "id" : "basic-information"
     }, {
-      "title" : "Simple Commands",
-      "id" : "simple-commands"
+      "title" : "Types of Custom Commands",
+      "id" : "types-of-custom-commands"
     }, {
-      "title" : "Marking a command as nsfw",
-      "id" : "marking-a-command-as-nsfw"
+      "title" : "When to use Simple or Complex Commands",
+      "id" : "when-to-use-simple-or-complex-commands"
     }, {
       "title" : "Modifiers",
       "id" : "modifiers"
     }, {
-      "title" : "Automating Play and Iam roles",
-      "id" : "automating-play-and-iam-roles"
+      "title" : "Iam and Iamnot role commands",
+      "id" : "iam-and-iamnot-role-commands"
+    }, {
+      "title" : "Playing music with custom commands",
+      "id" : "playing-music-with-custom-commands"
     }, {
       "title" : "Embeds",
       "id" : "embeds"
@@ -690,11 +693,11 @@ toc = [ {
       "title" : "Intro",
       "id" : "intro"
     }, {
-      "title" : "Modifiers for welcome/leave messages:",
-      "id" : "modifiers-for-welcomeleave-messages"
+      "title" : "Modifiers for welcome and leave messages:",
+      "id" : "modifiers-for-welcome-and-leave-messages"
     }, {
-      "title" : "A list of all Modifiers that can be used in custom commands.",
-      "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands"
+      "title" : "Modifiers for Custom Commands",
+      "id" : "modifiers-for-custom-commands"
     }, {
       "title" : "Modifiers for Log Messages",
       "id" : "modifiers-for-log-messages"
@@ -809,7 +812,7 @@ toc = [ {
       "id" : "riddle-badges"
     }, {
       "title" : "Removed/Legacy Badges",
-      "id" : "removedlegacy-badges"
+      "id" : "removed-legacy-badges"
     } ]
   }, {
     "chapterTitle" : "Currency",
@@ -826,7 +829,7 @@ toc = [ {
       "id" : "collectible-items"
     }, {
       "title" : "Usable/Consumable Items",
-      "id" : "usableconsumable-items"
+      "id" : "usable-consumable-items"
     }, {
       "title" : "Tool Items",
       "id" : "tool-items"
@@ -838,7 +841,7 @@ toc = [ {
       "id" : "timed-items"
     }, {
       "title" : "Removed/Legacy/Unobtainable Items",
-      "id" : "removedlegacyunobtainable-items"
+      "id" : "removed-legacy-unobtainable-items"
     } ]
   } ]
 }, {
@@ -859,7 +862,7 @@ toc = [ {
       "id" : "1-the-bot-and-its-systems"
     }, {
       "title" : "2. Music and Transmission.",
-      "id" : "2-music-and-transmission"
+      "id" : "2-music-and-transmission-"
     }, {
       "title" : "3. Use of the Mantaro \"currency\" and game system",
       "id" : "3-use-of-the-mantaro-currency-and-game-system"
@@ -868,7 +871,7 @@ toc = [ {
       "id" : "4-premium-features"
     }, {
       "title" : "5. Warranty and Liability.",
-      "id" : "5-warranty-and-liability"
+      "id" : "5-warranty-and-liability-"
     }, {
       "title" : "6. Abuse",
       "id" : "6-abuse"

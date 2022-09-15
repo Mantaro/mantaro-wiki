@@ -104,7 +104,7 @@
 
 <article>
 <header><h1>/love</h1></header>
-<p>Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261</p>
+<p>Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. otheruser Optional The other user to compare with. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261 otheruser: @Kodehawa#3457</p>
 </article>
 
 <article>
@@ -142,7 +142,7 @@ ReactDOM.render(React.createElement(Documentation, {
     "type" : "Page",
     "content" : [ {
       "style" : "api",
-      "id" : "8ball",
+      "id" : "-8ball",
       "title" : "/8ball",
       "type" : "Section",
       "content" : [ {
@@ -200,7 +200,7 @@ ReactDOM.render(React.createElement(Documentation, {
       } ]
     }, {
       "style" : "api",
-      "id" : "anime",
+      "id" : "-anime",
       "title" : "/anime",
       "type" : "Section",
       "content" : [ {
@@ -291,7 +291,7 @@ ReactDOM.render(React.createElement(Documentation, {
       } ]
     }, {
       "style" : "api",
-      "id" : "character",
+      "id" : "-character",
       "title" : "/character",
       "type" : "Section",
       "content" : [ {
@@ -371,7 +371,7 @@ ReactDOM.render(React.createElement(Documentation, {
       } ]
     }, {
       "style" : "api",
-      "id" : "coinflip",
+      "id" : "-coinflip",
       "title" : "/coinflip",
       "type" : "Section",
       "content" : [ {
@@ -440,7 +440,7 @@ ReactDOM.render(React.createElement(Documentation, {
       } ]
     }, {
       "style" : "api",
-      "id" : "love",
+      "id" : "-love",
       "title" : "/love",
       "type" : "Section",
       "content" : [ {
@@ -464,6 +464,20 @@ ReactDOM.render(React.createElement(Documentation, {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "The user to compare with.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "otheruser",
+              "type" : [ {
+                "text" : "Optional",
+                "url" : ""
+              } ],
+              "anchorId" : "otheruser",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The other user to compare with.",
                   "type" : "SimpleText"
                 } ]
               } ]
@@ -503,7 +517,13 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "user:",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : "@Adam#9261",
+                  "text" : "@Adam#9261 ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "otheruser:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "@Kodehawa#3457",
                   "type" : "SimpleText"
                 } ]
               } ]
@@ -515,7 +535,7 @@ ReactDOM.render(React.createElement(Documentation, {
       } ]
     }, {
       "style" : "api",
-      "id" : "ratewaifu",
+      "id" : "-ratewaifu",
       "title" : "/ratewaifu",
       "type" : "Section",
       "content" : [ {
@@ -590,7 +610,7 @@ ReactDOM.render(React.createElement(Documentation, {
       } ]
     }, {
       "style" : "api",
-      "id" : "roll",
+      "id" : "-roll",
       "title" : "/roll",
       "type" : "Section",
       "content" : [ {
@@ -680,7 +700,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661564685852,
+    "lastModifiedTime" : 1663221878382,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🎲 Fun Commands",
@@ -692,31 +712,31 @@ ReactDOM.render(React.createElement(Documentation, {
       "viewOnRelativePath" : null,
       "pageSectionIdTitles" : [ {
         "title" : "/8ball",
-        "id" : "8ball",
+        "id" : "-8ball",
         "style" : "api"
       }, {
         "title" : "/anime",
-        "id" : "anime",
+        "id" : "-anime",
         "style" : "api"
       }, {
         "title" : "/character",
-        "id" : "character",
+        "id" : "-character",
         "style" : "api"
       }, {
         "title" : "/coinflip",
-        "id" : "coinflip",
+        "id" : "-coinflip",
         "style" : "api"
       }, {
         "title" : "/love",
-        "id" : "love",
+        "id" : "-love",
         "style" : "api"
       }, {
         "title" : "/ratewaifu",
-        "id" : "ratewaifu",
+        "id" : "-ratewaifu",
         "style" : "api"
       }, {
         "title" : "/roll",
-        "id" : "roll",
+        "id" : "-roll",
         "style" : "api"
       } ]
     }

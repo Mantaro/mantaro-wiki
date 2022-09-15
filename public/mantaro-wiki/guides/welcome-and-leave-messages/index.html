@@ -104,7 +104,7 @@
 
 <article>
 <header><h1>Using Modifiers</h1></header>
-<p>So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view all modifiers guides/modifiers#modifiers-for-welcomeleave-messages here. For the sake of this tutorial we will only cover $(event.user.mention) , $(event.user.username) , $(event.guild.name) and $(event.guild.totalusers) .So, let's say you want to mention the user that joined. Tell them how many users your server has with them joining and also include the server name for simple aesthetics. For this you would do something like the following: md ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member! null https://i.imgur.com/7nGWxjr.png image To break this down. $(event.guild.name) is replaced with the name of the server. $(event.user.mention) is replaced with the mention of the user that just joined. $(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.Now let's say you want to do something similar for the leave message. We will use: md ~&gt;opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers). null https://i.imgur.com/fuyNDjq.png image Now that you understand modifiers let's move to the final level.</p>
+<p>So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view all modifiers guides/modifiers#modifiers-for-welcome-and-leave-messages here. For the sake of this tutorial we will only cover $(event.user.mention) , $(event.user.username) , $(event.guild.name) and $(event.guild.totalusers) .So, let's say you want to mention the user that joined. Tell them how many users your server has with them joining and also include the server name for simple aesthetics. For this you would do something like the following: md ~&gt;opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member! null https://i.imgur.com/7nGWxjr.png image To break this down. $(event.guild.name) is replaced with the name of the server. $(event.user.mention) is replaced with the mention of the user that just joined. $(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.Now let's say you want to do something similar for the leave message. We will use: md ~&gt;opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers). null https://i.imgur.com/fuyNDjq.png image Now that you understand modifiers let's move to the final level.</p>
 </article>
 
 <article>
@@ -174,7 +174,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ]
       } ]
     }, {
-      "id" : "importantmain-commands",
+      "id" : "important-main-commands",
       "title" : "Important/Main commands",
       "type" : "Section",
       "content" : [ {
@@ -402,7 +402,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : " modifiers ",
           "type" : "SimpleText"
         }, {
-          "url" : "/mantaro-wiki/guides/modifiers#modifiers-for-welcomeleave-messages",
+          "url" : "/mantaro-wiki/guides/modifiers#modifiers-for-welcome-and-leave-messages",
           "isFile" : false,
           "type" : "Link",
           "content" : [ {
@@ -633,7 +633,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Image"
       } ]
     }, {
-      "id" : "otherextra-commands",
+      "id" : "other-extra-commands",
       "title" : "Other/Extra commands",
       "type" : "Section",
       "content" : [ {
@@ -895,7 +895,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1661986027611,
+    "lastModifiedTime" : 1663093018578,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Welcome And Leave Messages",
@@ -908,7 +908,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "id" : "what-are-welcome-and-leave-messages"
       }, {
         "title" : "Important/Main commands",
-        "id" : "importantmain-commands"
+        "id" : "important-main-commands"
       }, {
         "title" : "Setting your channels",
         "id" : "setting-your-channels"
@@ -926,7 +926,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "id" : "combining-your-knowledge"
       }, {
         "title" : "Other/Extra commands",
-        "id" : "otherextra-commands"
+        "id" : "other-extra-commands"
       } ]
     }
   }
