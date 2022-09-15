@@ -5,7 +5,7 @@ The custom command creation in Mantaro can be as complex or as simple as you wan
 ---
 # Important/Main Commands
 
-```api-parameters
+```api-parameters {anchorPrefix: "commands"}
 1), "What is this for?", "/custom add `nsfw:`[True/False]"
 1).Used for:, "", "This will open a pop up that will allow you to insert the content of your Custom Command."
 
@@ -249,7 +249,7 @@ The syntax for this is:
 
 ### Available comparators
 
-```api-parameters
+```api-parameters {anchorPrefix: "comparators"}
 "equals", "", "It will check if the thing to compare is equal to the thing to compare with."
 "not-equals", "", "It will check if the thing to compare is not equal to the thing to compare with."
 "ignorecase-equals", "", "It will check if the thing to compare is equal to the thing to compare with, ignoring case."
@@ -307,7 +307,7 @@ The syntax for this is:
 
 ### Available Predicates
 
-```api-parameters
+```api-parameters {anchorPrefix: "predicates"}
 "usermention", "", "It will check if the thing to predict is a user mention."
 "is-empty", "", "It will check if the thing to predict is empty."
 "is-not-empty", "", "It will check if the thing to predict is not empty."
@@ -346,17 +346,17 @@ The structure for if-else changes drastically for this one. It is as follows:
 
 ### Available Logical Operators
 
-```api-parameters
+```api-parameters {anchorPrefix: "logical"}
 "@{and;<operation>;...}", "", "It will check if all the operations are true."
 "@{or;<operation>;...}", "", "It will check if any of the operations are true."
-"@{not;<operation>}", "", "It will check if the operation is false."
+"@{not;<operation>}", "", "It will flip the result of the operation."
 ```
 
 ## Other Operations
 
 You have a handful of operations to choose from, while we already talked about most of them, here is a list of a few we didn't mention:
 
-```api-parameters
+```api-parameters {anchorPrefix: "other"}
 "1)", "What is it used for?", "@{not-empty;`<argument1>`;`<argument2>`...}"
 "1).use", "", "This will return the first non-empty argument."
 

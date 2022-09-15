@@ -5,7 +5,7 @@ Mantaro will send a message in the specified channel.
 Warning: Since the `opts` command has not been ported to Slash Commands, this page is subject to massive changes in the future.
 
 # Important/Main commands
-```api-parameters
+```api-parameters {anchorPrefix: "commands"}
 1), What is it for?, "~>opts usermessage join channel `<channel name>`"
 1).Used for:, "", "Setting the channel for the welcome message."
 
@@ -119,33 +119,33 @@ Another way of combining what you know is by using both plain text and embeds. I
 ![](https://i.imgur.com/pqXQund.png)
 
 # Other/Extra commands
-```api-parameters
-[1], What is it for?, "~>opts usermessage resetjoinmessage"
-[1].Used for:, "", "Resetting the welcome message."
+```api-parameters {anchorPrefix: "other"}
+1), What is it for?, "~>opts usermessage resetjoinmessage"
+1).Used for:, "", "Resetting the welcome message."
 
-[2], What is it for?, "~>opts usermessage resetleavemessage"
-[2].Used for:, "", "Resetting the leave message."
+2), What is it for?, "~>opts usermessage resetleavemessage"
+2).Used for:, "", "Resetting the leave message."
 
-[3], What is it for?, "~>opts server ignorebots joinleave toggle"
-[3].Used for:, "", "Ignoring bots when they join or leave the server."
+3), What is it for?, "~>opts server ignorebots joinleave toggle"
+3).Used for:, "", "Ignoring bots when they join or leave the server."
 
-[4], What is it for?, "~>opts usermessage joinmessages add `<your text here>`"
-[4].Used for:, "", "Adding aditional welcome messages."
+4), What is it for?, "~>opts usermessage joinmessages add `<your text here>`"
+4).Used for:, "", "Adding aditional welcome messages."
 
-[5], What is it for?, "~>opts usermessage leavemessages add `<your text here>`"
-[5].Used for:, "", "Adding aditional leave messages."
+5), What is it for?, "~>opts usermessage leavemessages add `<your text here>`"
+5).Used for:, "", "Adding aditional leave messages."
 
-[6], What is it for?, "~>opts usermessage joinmessages list"
-[6].Used for:, "", "Listing all your welcome messages."
+6), What is it for?, "~>opts usermessage joinmessages list"
+6).Used for:, "", "Listing all your welcome messages."
 
-[7], What is it for?, "~>opts usermessage leavemessages list"
-[7].Used for:, "", "Listing all your leave messages."
+7), What is it for?, "~>opts usermessage leavemessages list"
+7).Used for:, "", "Listing all your leave messages."
 
-[8], What is it for?, "~>opts usermessage joinmessages remove `<index>`"
-[8].Used for:, "", "Removing the specified welcome messages."
+8), What is it for?, "~>opts usermessage joinmessages remove `<index>`"
+8).Used for:, "", "Removing the specified welcome messages."
 
-[9], What is it for?, "~>opts usermessage joinmessages remove `<index>`"
-[9].Used for:, "", "Removing the specified leave messages."
+9), What is it for?, "~>opts usermessage joinmessages remove `<index>`"
+9).Used for:, "", "Removing the specified leave messages."
 ```
 
 Congrats! Now you are a master of welcome and leave messages within Mantaro! 

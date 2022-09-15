@@ -6,7 +6,7 @@ Warning: Since the `opts` command has not been ported to Slash Commands, this pa
 
 ---
 # Important/Main commands
-```api-parameters
+```api-parameters {anchorPrefix: "commands"}
 1), What is it for?, "/birthday set `date:`dd-MM"
 1).Used for:, "", "Specifying your birthday (dd-MM format)"
 
@@ -87,18 +87,18 @@ An example would be as follows:
 ---
 
 # Other/Extra commands
-```api-parameters
-[1], What is it for?, "~>opts birthday disable"
-[1].Used for:, "", "Removes the Birthday Announcer."
+```api-parameters {anchorPrefix: "other"}
+1), What is it for?, "~>opts birthday disable"
+1).Used for:, "", "Removes the Birthday Announcer."
 
-[2], What is it for?, "~>opts birthday test `<@mention>`"
-[2].Used for:, "", "Allows you to test the Birthday Announcer. Doesn't process embeds."
+2), What is it for?, "~>opts birthday test `<@mention>`"
+2).Used for:, "", "Allows you to test the Birthday Announcer. Doesn't process embeds."
 
-[3], What is it for?, "~>opts birthday message clear"
-[3].Used for:, "", "Removes the custom message you had and restores the default message for the Birthday Announcer."
+3), What is it for?, "~>opts birthday message clear"
+3).Used for:, "", "Removes the custom message you had and restores the default message for the Birthday Announcer."
 
-[4], What is it for?, "~>opts commands birthdayblacklist add/remove `<@mention>`"
-[4].Used for:, "", "Allows you to blacklist a user from having their birthday announced on the server."
+4), What is it for?, "~>opts commands birthdayblacklist add/remove `<@mention>`"
+4).Used for:, "", "Allows you to blacklist a user from having their birthday announced on the server."
 ```
 
 
