@@ -30,6 +30,8 @@ We worked on a tool that can help you create embeds for you with the appropriate
 
 You can find this page [here!](https://www.mantaro.site/mantaro-embed-builder)
 
+:include-markdown: assets/md/safari-bad.md
+
 ## How to use it
 Once you open the page, you will see its made up of two parts. An editing area, and a preview area. As you edit around you will see the changes live in the preview area.
 Now simply edit away until you get your embed ready.

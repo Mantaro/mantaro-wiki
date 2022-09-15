@@ -1,0 +1,1 @@
+Warning: **The Embed Builder WILL NOT work on Safari. Please use a different browser.**
