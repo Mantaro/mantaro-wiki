@@ -1,2 +1,3 @@
 +, `:icon: check {stroke: "green"}`
 -, `:icon: slash {stroke: "red"}`
+*, `:icon: alert-triangle {stroke: "yellow"}`

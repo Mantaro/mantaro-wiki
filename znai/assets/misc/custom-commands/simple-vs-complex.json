@@ -1,0 +1,37 @@
+[
+  {
+    "Use Case": "Simple text commands",
+    "Simple": "+",
+    "Complex": "*"
+  },
+  {
+    "Use Case": "NSFW commands",
+    "Simple": "+",
+    "Complex": "+"
+  },
+  {
+    "Use Case": "Using modifiers",
+    "Simple": "+",
+    "Complex": "+"
+  },
+  {
+    "Use Case": "Iam/Iamnot commands",
+    "Simple": "+",
+    "Complex": "+"
+  },
+  {
+    "Use Case": "Playlist commands",
+    "Simple": "+",
+    "Complex": "-"
+  },
+  {
+    "Use Case": "Embeds",
+    "Simple": "-",
+    "Complex": "+"
+  },
+  {
+    "Use Case": "Operative commands",
+    "Simple": "-",
+    "Complex": "+"
+  }
+]

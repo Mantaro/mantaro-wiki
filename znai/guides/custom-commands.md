@@ -1,201 +1,366 @@
-Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience `:icon: heart { fill: 'red' }`
+# What are Custom Commands?
+Custom commands are a feature in Mantaro that allows you to create your own commands, and use them in your server.
+The custom command creation in Mantaro can be as complex or as simple as you want it to be. She can be really flexible about it.
 
 ---
-**The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.**
+# Important/Main Commands
+
+```api-parameters
+1), "What is this for?", "/custom add `nsfw:`[True/False]"
+1).Used for:, "", "This will open a pop up that will allow you to insert the content of your Custom Command."
+
+2), "What is this for?", "/custom remove `name:`[name of custom command]"
+2).Used for:, "", "This will delete the Custom Command you specify."
+
+3), "What is this for?", "/custom edit `name:`[name of custom command] `response:`[response # of the custom command] `nsfw:`[True/False]"
+3).Used for:, "", "This will open a pop up that will allow you to edit the specific response you set, for the command you chose."
+
+4), "What is this for?", "/custom remove `name:`[name of custom command]"
+4).Used for:, "", "This will delete the Custom Command you specify."
+
+5), "What is this for?", "/custom list"
+5).Used for:, "", "This will show you a list of all the Custom Commands in your server."
+```
+Tip: Use the `/help` command to see all the commands for Custom Commands.
 
 ---
-# What is v3?
-v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.
+# Basic Information
+Custom commands, be them simple or complex, use pop up forms in some places. Specifically on `/custom add` and `/custom edit`. This form will allow you to insert the name and content of your custom command.
+
+The pop-up form will look like this:
+
+:include-image: assets/images/examples/custom/custom-form.png
+
+Tip: Remember this, as this will always be where you add the content of your command.
 
 ---
-# How do you use v3?
-First of all for normal non-embed, non-operative commands there is no actual difference.\
-A general thing to understand is that in order to use v3 you will *have* to prepend `v3:` to your custom command contents. However you cannot use v3: with iam:, iamnot: and embed:. For the sake of future migration and ease of reading we will however go over all aspects of custom commands here.
+# Types of Custom Commands
+There are two types of Custom Commands: Simple and Complex.
 
-<sub>Some documentation is done on the Premium bot due to not being a feature in Mantaro at the time of documenting</sub>
+````tabs
+"Simple Commands":
+Simple commands are text only commands. They can be as simple as a single word, or as complex as a paragraph. 
 
----
-# Basics
-*   `~>custom add/new <name> <response>` Will create an additional response if a command with that name already exists, otherwise it will make a new one.
-*   `~>custom rm <name>` Removes a custom command entirely.
-*   `~>custom raw <name>` Will show you all responses (including response numbers) of a custom command.
-*   `~>custom info <name>` Will print detailed information about a custom command. Creator, nsfw flag etc.
-*   `~>custom view <name> <response number>` Will show you the exact content of a specific response.
-*   `~>custom rename <name>` Allows you to rename a command.
-*   `~>custom edit <name> <response number> <new content>` Allows you to edit a specific response of a custom command.
-*   `~>custom eval <content>` Allows you to evaluate (run without creating it) a custom command.
-*   `~>custom import <name>` Allows you to import a custom command from another server you are in.
+These do not have any special features, and are just text.
 
----
-# Simple Commands
+## How to use them
 Okay so let's start off super simple by just creating a very easy custom command.
+First, use the following command:
 
-![](https://i.imgur.com/7drG29o.png)
+* /custom add `nsfw:`[True/False]
 
-Seems easy enough right? Well it is. Please note that even if you do use v3 here (`v3:Hi!`) there will be no actual difference (From here on every documentation point that has no difference will say "no noticeable difference"). Obviously you want to know how to go a bit more complex though.
+After this, fill out the form with the name and content of your command. Here we will call our command `hello` and the content will be `Hello there!`
 
----
-# Marking a command as nsfw
-This is as simple as adding `-nsfw` to the very end of the command while either using `~>custom new` or `~>custom add`, example being `~>custom new nsfwtest This is a test -nsfw`. Please do note that when you add a new response with custom add and append -nsfw to mark it you will mark **all** responses as nsfw as it is intended to mark the whole command. Additionally using custom edit to mark a command already made as such does not work it will be treated as if it was raw text.
+:include-image: assets/images/examples/custom/simple/custom-add.png
+
+Then, simply hit the Submit button, and you're done!
+
+:include-image: assets/images/examples/custom/simple/custom-run.png
+
+
+"Complex Commands (v3)":
+Complex Commands are also known as v3 commands. This is because they are the third version of the custom commands.
+
+These can also be simple, but they are usually used for more complex messages, such as embeds, images, and more.
+
+While you can recreate simple commands with complex commands, it is **not recommended**. Simple commands are much easier to use.
+
+## How to use them
+Okay so let's start off with the main difference between simple and complex commands. 
+All complex commands start with `v3:`. This is how Mantaro knows that you want to use a complex command.
+
+ Note: Almost all of the components used in complex commands follow the syntax `@{<component data here>}`. You will be able to see this later down in further examples.
+ 
+Now, let's create a simple complex command. We will make a small embed. We will expand on them later. For now, we will also use the help of our [Embed Builder](https://www.mantaro.site/mantaro-embed-builder/).
+
+:include-markdown: assets/md/safari-bad.md
+
+:include-image: assets/images/examples/custom/complex/custom-add.png
+
+Then, simply hit the Submit button, and you're done!
+
+:include-image: assets/images/examples/custom/complex/custom-run.png
+````
+
+# When to use Simple or Complex Commands
+Each type of commands has their own uses. Some can do things that the other can't, and vice versa.
+
+:include-table: assets/misc/custom-commands/simple-vs-complex.json {mappingPath: "assets/misc/yes-no-mapping.csv", 'Use Case': {width: 70, align: "center"}, Simple: {width: 40, align: "center"}, Complex: {width: 40, align: "center"}}
+
+Warning: While you can use Complex commands to make Simple commands (Text only commands), it is **not recommended**. Simple commands are much easier to use and there's no real reason to use Complex in these cases. 
 
 ---
 # Modifiers
 Custom commands support what's called *modifiers*, which are a set of predetermined custom command actions which might make your commands *spicier* and better.
-A list of those can be found [here](guides/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands), so here we will see examples on how they work.
+A list of those can be found [here](guides/modifiers#modifiers-for-custom-commands), so here we will see examples on how they work.
+
 The most useful ones are:
-* $(event.author.mention) `Mentions the person who executed the command.`
-* $(event.me.mention) `Mentions mantaro.`
-* $(event.message.raw) `Basically you can use this to make a ~>say command. Repeats what's after the command.`
-* $(event.channel.mention) `Mentions the channel the command was executed on.`
-* $(event.channel.topic) `Says the channel topic.`
-* $(event.guild.name) `The name of your server.`
-* $(event.guild.owner.name) `The server owner's name.`
-* $(event.guild.region) `The server region.`
+* `$(event.author)` : Mentions the person who executed the command.
+* `$(event.me)` : Mentions mantaro.
+* `$(event.message)` : Basically you can use this to make a ~>say command. Repeats what's after the command.
+* `$(event.channel)` : Mentions the channel the command was executed on.
+* `$(event.channel.topic)` : Says the channel topic.
+* `$(event.guild.name)` : The name of your server.
+* `$(event.guild.owner.name)` : The server owner's name.
+* `$(event.guild.region)` : The server region.
 
-_Basically, you can use those in any form of command._
+You can use modifiers in both Simple and Complex commands.
 
-To create a command with those modifiers just create a command and use those. ([Example](https://i.imgur.com/HBbUZzt.png)). Works with multiple responses too.
-There is only one noticeable difference in v3. The difference is that you can basically set up your own modifiers *per command*. What that means is that you can define a value that you can then call using its modifier. And example of this would be:
+To create a command with modifiers, simply create a command like normal and insert the modifier in the place you want the appropriate value to show up. It works with multiple responses too.
 
-![](https://i.imgur.com/GdmaZYk.png)
+```columns
+left:
+:include-image: assets/images/examples/custom/modifiers/example.png
+
+right:
+:include-image: assets/images/examples/custom/modifiers/run.png
+```
+
+## Custom modifiers
+With complex commands you can also achieve your own custom modifiers **per command**. An example of this would be as follows:
+
+```columns
+left:
+:include-image: assets/images/examples/custom/modifiers/custom-example.png
+
+right:
+:include-image: assets/images/examples/custom/modifiers/custom-run.png
+```
 
 ---
-# Automating Play and Iam roles
+# Iam and Iamnot role commands
+You can make a command that will give a role to a user, or remove a role from a user. This can only be done with both **Simple** and **Complex** commands.
 
-You can also automate playing music and claiming/unclaiming self-assignable roles.
+The first requirement you have is having an existing self assignable role set-up.
+If you don't know how to do that, you can find the commands for it [here](basics/server-configuration#autorole-on-join-self-assignable-roles).
 
-If you want to create a music shortcut your content will have to be `play:<url to song>`. Mantaro will then act as if you were using the play command with this url when you run the command.
+Once you have a self assignable role set-up, you can add one of the following to your Simple command:
 
-If you want to make the command assign an existing iam role your content will have to be `iam:<name of the iam role>`\
-If you want to do the opposite and you want the command unassigned an existing iam role you will have to put `iamnot:<name of the iam role>`.\
-In both cases Mantaro will act as if that person did `~>iam <name of the iam role>` and `~>iamnot <name of the iam role>` respectively if they run the command.\
-You can also specify your own custom message if you would like to, this works in both v3 and v2.\
-The v2 syntax for this would be `iamcustom:<name of the iam role> "<message>"` (same for iamnotcustom:).\
-The v3 syntax for this is `@{iam/iamnot;name of iam role;message}` where the message is optional, meaning you can use iam roles in v3 now, and that combined with embeds, texts, ifs and so on.
-For more info on iam roles please check [here](basics/server-configuration#autorole-on-join-self-assignable-roles).
+* iam:`<name of the role>`
+* iamnot:`<name of the role>`
+
+As for Complex commands, you can use the following syntax:
+
+* @{iam;`<name of the role>`;`<your message here>`}
+* @{iamnot;`<name of the role>`;`<your message here>`}
+
+Note: The message here is optional. And the message can be a complex command too. i.e. an embed.
+
+Of course, iam will give the role to the user, and iamnot will remove it.
+
+---
+# Playing music with custom commands
+Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.
+
+You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both **Simple** commands only.
+
+To make such a command, you need to add the following to your Simple command:
+* play:`<song or playlist link>`
+
+After this, Mantaro will act as if you had used the `/play` command, and will play the song or playlist for you.
 
 ---
 # Embeds
-## What is new with this in v3?
-The syntax has changed from `embed:<json>` to `@{embed;<json>}`.
+For this section you will need to also check out our [Embeds Guide](guides/embeds).
+It will teach you how you can make your desired embeds to make your fancy messages.
 
-Additionally, you can now use embeds and normal text at once. For instance `This is text @{embed;title:"Hi"}` would both display the text "This is a text" and the embed with the title Hi. You will need to add ``v3:`` before any of the command's contents for this to work as in this example:
+Once you have your embed ready, you can use it in your custom commands. You can use it in **Complex** commands only.
+The embed syntax is as follows:
 
-![](https://i.imgur.com/VGwGhwl.png)
+* @{embed;`<embed json>`}
 
-## What is an Embed?
-Okay let's start by making a simple embed. First let's look at what an embed even is:
+#### Example
+```md {wrap: true}
+@{embed;
+    "title": "My name is Mantaro!",
+    "color": "ff69b4",
+    "author": "Hi there!",
+    "thumbnail": "https://cdn.discordapp.com/emojis/654322747094073365.png",
+    "image": "https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048",
+    "footer": "Have a nice day!",
+    "footerImg": "https://cdn.discordapp.com/avatars/213466096718708737/84b83a87f8e7a1475f989cbbd76c48d8.png",
+    "description": "I hope we have a good time together!"
+}
+```
 
-![](https://i.imgur.com/PqSsAMG.png)
+```columns
+left:
+:include-image: assets/images/examples/custom/embeds/add.png
 
-* `title:"your text here"` - Will set what you see as "Title Text" in the image above.
-* `description:"your text here"` - Will set what you see as "Description".
-* `thumbnail:"valid image url here"` - Will set the top-right image.
-* `image:"valid image url here"` - Will set the big bottom image.
-* `author:"your text here"` - Will set what you see as "Author Name".
-* `authorImg:"valid image url here"` - Will set the image you see next to "Author Name".
-* `footer:"your text here"` - Will set what you see as "Footer text"
-* `footerImg:"valid image url here"` - Will set the image you see next to "Footer text".
-* `color:"hex code/color name here"` - Will set the color of the purple strip you see on the left.
-* `fields:<field sytanx (check slightly below)>` - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as "Field name" and value what you see as "Field value", inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely.
-
-Field Syntax:
-:include-file: assets/misc/custom/format-fields
-
-## How to use an embed in custom commands?
-Please pay close attention to the character limits in the image above as-well as the maximum amount of fields. Exceeding those will make your custom command fail! You do not have to use all of the things above you can create your own combinations of them as you like. Additionally please note that `title`, `author`, `field names` and `footer` do *not* support any form of mentions due to discord limitations.
-
-Our syntax for the custom command will have to be `@{embed;<json>}`. With "json" being any assortment of the things you learned above. For instance: `title:"text",description:"text"`. (Note the comma between 2 variables)
-
-As an example we will build the embed above using Mantaro. We will be using this as content:
-
-:include-file: assets/misc/custom/format-full
-
-In action:
-
-![](https://i.imgur.com/oPs5t44.png)
+right:
+:include-image: assets/images/examples/custom/embeds/run.png
+```
 
 ---
 # Operative Custom Commands
+
+Warning: These types of commands can become really complicated. If you're not sure how to use them, you can always ask for help in our [support server](https://support.mantaro.site/). **However**, bear in mind that even the support team might not be able to help you with these due to their complexity.
+
 ## Comparing
 Comparing is the act of taking one value and comparing it to another, for instance with this you can check if the content of a message is equal to something you set, or in our example check if someone's user ID is equal to the correct one:
 
-![](https://i.imgur.com/UwEaIDA.png)
+#### Example
+```md {wrap: true}
+v3:@{if;
+    $(event.author.id);equals;276458692914839552;
+        Yes this is you;
+        No this is not you
+    }
+```
 
-The syntax for a comparing with if-else is always `@{if;thing to compare;comparator;thing compare with;if met;if not met (else)}`.\
-Additionally you can also use the compare operation to assert a boolean (true or false), uses for that are in the Asserting section down below. Syntax for this is `@{compare;thing to compare;comparator;thing to compare with}`.
+```columns
+left:
+:include-image: assets/images/examples/custom/operative/comparing-add.png
+
+right:
+:include-image: assets/images/examples/custom/operative/comparing-run.png
+```
+
+The syntax for a comparing with if-else is:
+```md {wrap: true}
+@{if;<thing to compare>;<comparator>;<thing compare with>;<if met>;<if not met (else)>}
+```
+
+Additionally, you can also use the compare operation to assert a boolean (true or false), uses for that are in the Asserting section down below. 
+The syntax for this is:
+
+```md {wrap: true}
+@{compare;<thing to compare>;<comparator>;<thing compare with>}
+```
 
 ### Available comparators
 
-- `equals`: As seen in the example above will check if the thing to compare equals the thing to compare with.
-- `not-equals`: Same as equals but reversed*.
-- `ignorecase-equals`: Same as equals but ignores casing (i.e A == a).
-- `ignorecase-not-equals`: Same as ignorecase-equals but reversed*.
-- `greater-than`: Whether or not the thing to compare is greater than what the thing to compare with is (i.e 2 > 1).
-- `less-than`:Whether or not the thing to compare is less than what the thing to compare with is (i.e 1 < 2).
-- `not-greater-than`: Same as greater-than but reversed*.
-- `not-less-than`: Same as less-than but reversed*.
-- `ignorecase-greater-than`: Same as greater-than but ignores casing.
-- `ignorecase-less-than`: Same as less-than but ignores casing.
-- `ignorecase-not-greater-than`: Same as not-greater-than but ignores casing.
-- `ignorecase-not-less-than`: Same as not-less-than but ignores casing.
-- `contains`: Whether or not the thing to compare includes the thing to compare with.
-- `not-contains`: Same as contains but reversed*.
-- `starts-with`: Checks if the thing to compare starts with the thing to compare with.
-- `ignorecase-starts-with`: Same as starts-with but ignores casing.
-- `ends-with`: Checks if the thing to compare ends with the thing to compare with.
-- `ignorecase-ends-with`: Same as ends-with but ignores casing.
-
-
-\* Note: Reversed means logically reversed i.E contains checks if it is *in* the thing and not-contains checks if it is *not in* the thing.
+```api-parameters
+"equals", "", "It will check if the thing to compare is equal to the thing to compare with."
+"not-equals", "", "It will check if the thing to compare is not equal to the thing to compare with."
+"ignorecase-equals", "", "It will check if the thing to compare is equal to the thing to compare with, ignoring case."
+"ignorecase-not-equals", "", "It will check if the thing to compare is not equal to the thing to compare with, ignoring case."
+"greater-than", "", "It will check if the thing to compare is greater than the thing to compare with. (i.e 5 > 3)"
+"less-than", "", "It will check if the thing to compare is less than the thing to compare with. (i.e 5 < 3)"
+"not-greater-than", "", "It will check if the thing to compare is not greater than the thing to compare with. (i.e 5 !> 3)"
+"not-less-than", "", "It will check if the thing to compare is not less than the thing to compare with. (i.e 5 !< 3)"
+"ignorecase-greater-than", "", "It will check if the thing to compare is greater than the thing to compare with, ignoring case. (i.e 5 > 3)"
+"ignorecase-less-than", "", "It will check if the thing to compare is less than the thing to compare with, ignoring case. (i.e 5 < 3)"
+"ignorecase-not-greater-than", "", "It will check if the thing to compare is not greater than the thing to compare with, ignoring case. (i.e 5 !> 3)"
+"ignorecase-not-less-than", "", "It will check if the thing to compare is not less than the thing to compare with, ignoring case. (i.e 5 !< 3)"
+"contains", "", "It will check if the thing to compare contains the thing to compare with."
+"not-contains", "", "It will check if the thing to compare does not contain the thing to compare with."
+"starts-with", "", "It will check if the thing to compare starts with the thing to compare with."
+"ignorecase-starts-with", "", "It will check if the thing to compare starts with the thing to compare with, ignoring case."
+"ends-with", "", "It will check if the thing to compare ends with the thing to compare with."
+"ignorecase-ends-with", "", "It will check if the thing to compare ends with the thing to compare with, ignoring case."
+```
 
 ## Predicting
-Predicting is the act of checking whether or not something meets a predicate. In simpler terms this can be anything like checking if a value is empty or checking if it's equal to a preset value.
+Predicting is the act of checking whether something meets a predicate. In simpler terms this can be anything like checking if a value is empty or checking if it's equal to a preset value.
 
-The syntax for if-else for this one is `@{if;thing to predict;predicate;if met;if not met (else)}`.\
-You can additionally use the test operation to assert a boolean, uses for that are in the Asserting section down below. Syntax for this is `@{test;predicate;value to predict}`
+#### Example
+```md {wrap: true}
+v3:@{if;
+    $(event.message);usermention;
+        You mentioned someone!;
+        You didn't mention anybody :(
+    }
+```
+
+```columns
+left:
+:include-image: assets/images/examples/custom/operative/predicting-add.png
+
+right:
+:include-image: assets/images/examples/custom/operative/predicting-run.png
+```
+
+
+The syntax for if-else for this one is:
+
+```md {wrap: true}
+@{if;<thing to predict>;<predicate>;<if met>;<if not met (else)>}
+```
+
+You can additionally use the test operation to assert a boolean, uses for that are in the Asserting section down below.
+
+The syntax for this is:
+
+```md {wrap: true}
+@{test;<predicate>;<value to predict>}
+```
 
 ### Available Predicates
-- `usermention`: Check if the thing you check is a user mention.
-- `is-empty`: Checks whether the thing to check is empty (aka has no characters).
-- `is-not-empty`: Same as is-empty but reversed*.
 
-
-\* Note: Reversed means logically reversed i.E contains checks if it is *in* the thing and not-contains checks if it is *not in* the thing.
+```api-parameters
+"usermention", "", "It will check if the thing to predict is a user mention."
+"is-empty", "", "It will check if the thing to predict is empty."
+"is-not-empty", "", "It will check if the thing to predict is not empty."
+```
 
 ## Asserting (True and False)
-Asserting a boolean means anything that returns a true or a false. We have mentioned the compare and test operations up above, both of these will when used outside of an if give you a "true" or a "false" as a message. However these truth values can be used in if commands to make more complex structures.
+Asserting a boolean means anything that returns a true or a false. 
+We have mentioned the compare and test operations up above, both of these will when used outside an if give you a "true" or a "false" as a message. 
+However, these truth values can be used in if commands to make more complex structures.
 
-The structure for if-else changes drastically for this one. It is as follows: `@{if;if met;assertive;if not met}`
-This all comes with very handy logical operators:
-- `@{and;operation;operation;....}`: This can be used to only return true when all operations passed assert to true.
-- `@{or;operation;operation;....}`: This can be used to return true when *any* of the operations passed assert to true.
-- `@{not;assertive}`: This can be used to negate an assertive, meaning a true will become a false and vice versa.
+#### Example
+```md {wrap: true}
+v3:@{if;
+    You did it!;
+        @{and;
+            @{test;usermention;$(event.message)};
+            @{compare;$(event.message);contains;hi}
+        };
+    You didn't do it :(
+    }
+```
 
-## Operations
+```columns
+left:
+:include-image: assets/images/examples/custom/operative/asserting-add.png
 
-You have a handful of operations to choose from, while we already talked about most of them, here is a list of all:
-- `@{if;syntax}`: Used to make conditional responses, it's syntax is dependent on how it is used and all syntax are explained in the respective sections for predicting, comparing and asserting.
-- `@{not-empty;argument1;argument2;....}`: Returns the first value that is not empty (You can feed this unlimited arguments). [Example](https://i.imgur.com/KRLgId2.png) (Note: this does not ignore values that are only a space)
-- `@{not-empty-strict;argument1;argument2;....}`: Same as not-empty but also considers values that are only a space to be empty.
-- `@{set;key;value}`: Explained in detail in the Modifiers section up above
-- `@{embed;embed syntax}`: Explained in detail in the embeds section up above
-- `@{compare;syntax}`: Explained in detail in the comparing section up above
-- `@{test;syntax}`: Explained in detail in the predicting section up above
-- `@{and;syntax}`: Explained in detail in the asserting section up above
-- `@{or;syntax}`: Explained in detail in the asserting section up above
-- `@{not;syntax}`: Explained in detail in the asserting section up above
-- `@{timestamp;format;zone}`: Used to print a time/date in any format you like from any timezone you like. Format is a bit more complex an example would be: `d MMM uuuu`, for the current date (more info for format on [Java Docs](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html), the time zone can be any of [these TZ database names](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (include every character even underlines).
-- `@{upper;text}`: Used to convert a text to fully uppercase
-- `@{lower;text}`: Same as upper but with lowercase
-- `@{replace;character(s) to replace;replace with;replace in}`: Used for replacing occurrences of characters in a text. Example would be `@{replace;r;test;$(event.message)}` to replace all r's with test in event.message
+right:
+:include-image: assets/images/examples/custom/operative/asserting-run.png
+```
 
-## What do we get in v3 vs old v2
-- You can now nest ifs (i.E use a new if as else of another to create chains)!
-- You can now use embed fields in ifs
-- You can now use newlines in ifs
-- You can now check whether or not something contains a discord mention
-- You can now chain if's (use multiple ifs in the same command) and have their else actually work. In general you can use all conditions/special syntaxes *anywhere in your command*. Meaning you can have text with an embed etc
-- Generally a far more in depth and detailed interaction with if-else due to the high amount of operations available
+The structure for if-else changes drastically for this one. It is as follows:
 
----
+```md {wrap: true}
+@{if;<if met>;<assertive>;<if not met>}
+```
+
+### Available Logical Operators
+
+```api-parameters
+"@{and;<operation>;...}", "", "It will check if all the operations are true."
+"@{or;<operation>;...}", "", "It will check if any of the operations are true."
+"@{not;<operation>}", "", "It will check if the operation is false."
+```
+
+## Other Operations
+
+You have a handful of operations to choose from, while we already talked about most of them, here is a list of a few we didn't mention:
+
+```api-parameters
+"1)", "What is it used for?", "@{not-empty;`<argument1>`;`<argument2>`...}"
+"1).use", "", "This will return the first non-empty argument."
+
+"2)", "What is it used for?", "@{not-empty-strict;`<argument1>`;`<argument2>`...}"
+"2).use", "", "This will return the first non-empty argument, but will consider space only values as empty."
+
+"3)", "What is it used for?", "@{timestamp;`<format>`;`<zone>`}"
+"3).use", "", "
+This will return the current timestamp in the specified format and timezone.
+Format is a bit more complex. 
+An example would be: `d MMM uuuu` for the current date (more info for format on [Java Docs](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html). 
+The time zone can be any of [these TZ database names](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (include every character even underlines).
+"
+
+"4)", "What is it used for?", "@{upper;`<text>`}"
+"4).use", "", "This will return the text in uppercase."
+
+"5)", "What is it used for?", "@{lower;`<text>`}"
+"5).use", "", "This will return the text in lowercase."
+
+"6)", "What is it used for?", "@{replace;`<character(s) to replace>`;`<replace with>`;`<replace in>`}"
+"6).use", "", "
+This will replace the occurrences of characters in a text.
+An example would be `@{replace;r;test;$(event.message)}` to replace all r's with test in event.message
+"
+```
