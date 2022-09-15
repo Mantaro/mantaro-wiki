@@ -26,12 +26,12 @@
   },
   {
     "Use Case": "Embeds",
-    "Simple": "-",
+    "Simple": "*",
     "Complex": "+"
   },
   {
     "Use Case": "Operative commands",
-    "Simple": "-",
+    "Simple": "*",
     "Complex": "+"
   }
 ]

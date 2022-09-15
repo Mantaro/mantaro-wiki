@@ -87,7 +87,11 @@ Each type of commands has their own uses. Some can do things that the other can'
 
 :include-table: assets/misc/custom-commands/simple-vs-complex.json {mappingPath: "assets/misc/yes-no-mapping.csv", 'Use Case': {width: 70, align: "center"}, Simple: {width: 40, align: "center"}, Complex: {width: 40, align: "center"}}
 
-Warning: While you can use Complex commands to make Simple commands (Text only commands), it is **not recommended**. Simple commands are much easier to use and there's no real reason to use Complex in these cases. 
+```attention-warning {label: "Warning"}
+While you can use Complex commands to make Simple commands (Text only commands), it is **not recommended**. Simple commands are much easier to use and there's no real reason to use Complex in these cases. 
+
+While you can make Embeds and Operative commands on Simple commands due to previous versions of Custom Commands, it is **not recommended**. These are no longer supported, and you will be told to use v3 instead.
+```
 
 ---
 # Modifiers
