@@ -1051,7 +1051,7 @@
     <url>/mantaro-wiki/guides/custom-commands#iam-and-iamnot-role-commands</url>
     <fullTitle>Mantaro Wiki: Custom Commands, Iam and Iamnot role commands [Guides]</fullTitle>
     <text>
-      <text>You can make a command that will give a role to a user, or remove a role from a user. This can only be done with both Simple and Complex commands.The first requirement you have is having an existing self assignable role set-up. If you don't know how to do that, you can find the commands for it basics/server-configuration#autorole-on-join-self-assignable-roles here.Once you have a self assignable role set-up, you can add one of the following to your Simple command:iam: &lt;name of the role> iamnot: &lt;name of the role> As for Complex commands, you can use the following syntax:@{iam; &lt;name of the role> ; &lt;your message here> } @{iamnot; &lt;name of the role> ; &lt;your message here> } Note: The message here is optional. And the message can be a complex command too. i.e. an embed.Of course, iam will give the role to the user, and iamnot will remove it.</text>
+      <text>You can make a command that will give a role to a user, or remove a role from a user. This can only be done with both Simple and Complex commands.The first requirement you have is having an existing self assignable role set-up. If you don't know how to do that, you can find the commands for it basics/server-configuration#autorole-on-join-self-assignable-roles here.Once you have a self assignable role set-up, you can add one of the following to your Simple command: md iam:&lt;name of the role> md iamnot:&lt;name of the role> As for Complex commands, you can use the following syntax: md @{iam;&lt;name of the role>;&lt;your message here>} md @{iamnot;&lt;name of the role>;&lt;your message here>} Note: The message here is optional. And the message can be a complex command too. i.e. an embed.Of course, iam will give the role to the user, and iamnot will remove it.</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -1059,7 +1059,7 @@
     <url>/mantaro-wiki/guides/custom-commands#playing-music-with-custom-commands</url>
     <fullTitle>Mantaro Wiki: Custom Commands, Playing music with custom commands [Guides]</fullTitle>
     <text>
-      <text>Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both Simple commands only.To make such a command, you need to add the following to your Simple command:play: &lt;song or playlist link> After this, Mantaro will act as if you had used the /play command, and will play the song or playlist for you.</text>
+      <text>Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both Simple commands only.To make such a command, you need to add the following to your Simple command: md play:&lt;song or playlist link> After this, Mantaro will act as if you had used the /play command, and will play the song or playlist for you.</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -1067,7 +1067,7 @@
     <url>/mantaro-wiki/guides/custom-commands#embeds</url>
     <fullTitle>Mantaro Wiki: Custom Commands, Embeds [Guides]</fullTitle>
     <text>
-      <text>For this section you will need to also check out our guides/embeds Embeds Guide. It will teach you how you can make your desired embeds to make your fancy messages.Once you have your embed ready, you can use it in your custom commands. You can use it in Complex commands only. The embed syntax is as follows:@{embed; &lt;embed json> } Example md @{embed; "title": "My name is Mantaro!", "color": "ff69b4", "author": "Hi there!", "thumbnail": "https://cdn.discordapp.com/emojis/654322747094073365.png", "image": "https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048", "footer": "Have a nice day!", "footerImg": "https://cdn.discordapp.com/avatars/213466096718708737/84b83a87f8e7a1475f989cbbd76c48d8.png", "description": "I hope we have a good time together!" }</text>
+      <text>For this section you will need to also check out our guides/embeds Embeds Guide. It will teach you how you can make your desired embeds to make your fancy messages.Once you have your embed ready, you can use it in your custom commands. You can use it in Complex commands only. The embed syntax is as follows: md @{embed;&lt;embed json>} Example md @{embed; "title": "My name is Mantaro!", "color": "ff69b4", "author": "Hi there!", "thumbnail": "https://cdn.discordapp.com/emojis/654322747094073365.png", "image": "https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048", "footer": "Have a nice day!", "footerImg": "https://cdn.discordapp.com/avatars/213466096718708737/84b83a87f8e7a1475f989cbbd76c48d8.png", "description": "I hope we have a good time together!" }</text>
       <score>STANDARD</score>
     </text>
   </entry>

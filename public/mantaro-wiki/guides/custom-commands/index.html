@@ -114,17 +114,17 @@
 
 <article>
 <header><h1>Iam and Iamnot role commands</h1></header>
-<p>You can make a command that will give a role to a user, or remove a role from a user. This can only be done with both Simple and Complex commands.The first requirement you have is having an existing self assignable role set-up. If you don't know how to do that, you can find the commands for it basics/server-configuration#autorole-on-join-self-assignable-roles here.Once you have a self assignable role set-up, you can add one of the following to your Simple command:iam: &lt;name of the role&gt; iamnot: &lt;name of the role&gt; As for Complex commands, you can use the following syntax:@{iam; &lt;name of the role&gt; ; &lt;your message here&gt; } @{iamnot; &lt;name of the role&gt; ; &lt;your message here&gt; } Note: The message here is optional. And the message can be a complex command too. i.e. an embed.Of course, iam will give the role to the user, and iamnot will remove it.</p>
+<p>You can make a command that will give a role to a user, or remove a role from a user. This can only be done with both Simple and Complex commands.The first requirement you have is having an existing self assignable role set-up. If you don't know how to do that, you can find the commands for it basics/server-configuration#autorole-on-join-self-assignable-roles here.Once you have a self assignable role set-up, you can add one of the following to your Simple command: md iam:&lt;name of the role&gt; md iamnot:&lt;name of the role&gt; As for Complex commands, you can use the following syntax: md @{iam;&lt;name of the role&gt;;&lt;your message here&gt;} md @{iamnot;&lt;name of the role&gt;;&lt;your message here&gt;} Note: The message here is optional. And the message can be a complex command too. i.e. an embed.Of course, iam will give the role to the user, and iamnot will remove it.</p>
 </article>
 
 <article>
 <header><h1>Playing music with custom commands</h1></header>
-<p>Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both Simple commands only.To make such a command, you need to add the following to your Simple command:play: &lt;song or playlist link&gt; After this, Mantaro will act as if you had used the /play command, and will play the song or playlist for you.</p>
+<p>Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both Simple commands only.To make such a command, you need to add the following to your Simple command: md play:&lt;song or playlist link&gt; After this, Mantaro will act as if you had used the /play command, and will play the song or playlist for you.</p>
 </article>
 
 <article>
 <header><h1>Embeds</h1></header>
-<p>For this section you will need to also check out our guides/embeds Embeds Guide. It will teach you how you can make your desired embeds to make your fancy messages.Once you have your embed ready, you can use it in your custom commands. You can use it in Complex commands only. The embed syntax is as follows:@{embed; &lt;embed json&gt; } Example md @{embed; &quot;title&quot;: &quot;My name is Mantaro!&quot;, &quot;color&quot;: &quot;ff69b4&quot;, &quot;author&quot;: &quot;Hi there!&quot;, &quot;thumbnail&quot;: &quot;https://cdn.discordapp.com/emojis/654322747094073365.png&quot;, &quot;image&quot;: &quot;https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048&quot;, &quot;footer&quot;: &quot;Have a nice day!&quot;, &quot;footerImg&quot;: &quot;https://cdn.discordapp.com/avatars/213466096718708737/84b83a87f8e7a1475f989cbbd76c48d8.png&quot;, &quot;description&quot;: &quot;I hope we have a good time together!&quot; }</p>
+<p>For this section you will need to also check out our guides/embeds Embeds Guide. It will teach you how you can make your desired embeds to make your fancy messages.Once you have your embed ready, you can use it in your custom commands. You can use it in Complex commands only. The embed syntax is as follows: md @{embed;&lt;embed json&gt;} Example md @{embed; &quot;title&quot;: &quot;My name is Mantaro!&quot;, &quot;color&quot;: &quot;ff69b4&quot;, &quot;author&quot;: &quot;Hi there!&quot;, &quot;thumbnail&quot;: &quot;https://cdn.discordapp.com/emojis/654322747094073365.png&quot;, &quot;image&quot;: &quot;https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048&quot;, &quot;footer&quot;: &quot;Have a nice day!&quot;, &quot;footerImg&quot;: &quot;https://cdn.discordapp.com/avatars/213466096718708737/84b83a87f8e7a1475f989cbbd76c48d8.png&quot;, &quot;description&quot;: &quot;I hope we have a good time together!&quot; }</p>
 </article>
 
 <article>
@@ -1111,34 +1111,17 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "iam:",
-              "type" : "SimpleText"
-            }, {
-              "code" : "<name of the role>",
-              "type" : "InlinedCode"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "iamnot:",
-              "type" : "SimpleText"
-            }, {
-              "code" : "<name of the role>",
-              "type" : "InlinedCode"
-            } ]
-          } ]
-        } ]
+        "lang" : "md",
+        "snippet" : "iam:<name of the role>\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
+      }, {
+        "lang" : "md",
+        "snippet" : "iamnot:<name of the role>\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
       }, {
         "type" : "Paragraph",
         "content" : [ {
@@ -1146,52 +1129,17 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "@{iam;",
-              "type" : "SimpleText"
-            }, {
-              "code" : "<name of the role>",
-              "type" : "InlinedCode"
-            }, {
-              "text" : ";",
-              "type" : "SimpleText"
-            }, {
-              "code" : "<your message here>",
-              "type" : "InlinedCode"
-            }, {
-              "text" : "}",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "@{iamnot;",
-              "type" : "SimpleText"
-            }, {
-              "code" : "<name of the role>",
-              "type" : "InlinedCode"
-            }, {
-              "text" : ";",
-              "type" : "SimpleText"
-            }, {
-              "code" : "<your message here>",
-              "type" : "InlinedCode"
-            }, {
-              "text" : "}",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        } ]
+        "lang" : "md",
+        "snippet" : "@{iam;<name of the role>;<your message here>}\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
+      }, {
+        "lang" : "md",
+        "snippet" : "@{iamnot;<name of the role>;<your message here>}\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
       }, {
         "type" : "Paragraph",
         "content" : [ {
@@ -1239,22 +1187,11 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "play:",
-              "type" : "SimpleText"
-            }, {
-              "code" : "<song or playlist link>",
-              "type" : "InlinedCode"
-            } ]
-          } ]
-        } ]
+        "lang" : "md",
+        "snippet" : "play:<song or playlist link>\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
       }, {
         "type" : "Paragraph",
         "content" : [ {
@@ -1317,25 +1254,11 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
-        "bulletMarker" : "*",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "@{embed;",
-              "type" : "SimpleText"
-            }, {
-              "code" : "<embed json>",
-              "type" : "InlinedCode"
-            }, {
-              "text" : "}",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        } ]
+        "lang" : "md",
+        "snippet" : "@{embed;<embed json>}\n",
+        "lineNumber" : "",
+        "wrap" : true,
+        "type" : "Snippet"
       }, {
         "id" : "embeds-example",
         "level" : 4,
@@ -2195,7 +2118,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ApiParameters"
       } ]
     } ],
-    "lastModifiedTime" : 1663263792602,
+    "lastModifiedTime" : 1663264512200,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Custom Commands",
