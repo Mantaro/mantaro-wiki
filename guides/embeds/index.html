@@ -94,7 +94,7 @@
 
 <article>
 <header><h1>Creating your own embed</h1></header>
-<p>Let's start by working on designing your own embed. We offer you two ways to create your own embed. We highly recommend you go with the easy way.Note: Due to Discord limitations, mentions will not work in the author , title , field names and footer fields. So bear that in mind when creating your embed. The easy way We have good news! There is a really easy way to create your own embed. We worked on a tool that can help you create embeds for you with the appropriate format used by Mantaro.You can find this page https://www.mantaro.site/mantaro-embed-builder here! How to use it Once you open the page, you will see its made up of two parts. An editing area, and a preview area. As you edit around you will see the changes live in the preview area. Now simply edit away until you get your embed ready. Tips Tip: You can click on this button to clear out the current data in the embed. This is useful if you want to start of fresh.Tip: You can click on this button to copy the embed to your clipboard. This will copy the embed content you need to your clipboard, ready for you to copy it into a command that allows embeds.Tip: You can find a few miscellaneous options if you click this button. The hard way The hard way is to create your own embed manually. For this you have to first understand once again the different parts of an embed, as well as the format that Mantaro uses.title:&quot;your text here&quot; - Will set what you see as &quot;Title Text&quot; in the image above. description:&quot;your text here&quot; - Will set what you see as &quot;Description&quot;. thumbnail:&quot;valid image url here&quot; - Will set the top-right image. image:&quot;valid image url here&quot; - Will set the big bottom image. author:&quot;your text here&quot; - Will set what you see as &quot;Author Name&quot;. authorImg:&quot;valid image url here&quot; - Will set the image you see next to &quot;Author Name&quot;. footer:&quot;your text here&quot; - Will set what you see as &quot;Footer text&quot; footerImg:&quot;valid image url here&quot; - Will set the image you see next to &quot;Footer text&quot;. color:&quot;hex code/color name here&quot; - Will set the color of the purple strip you see on the left. fields:&lt;field sytanx (check slightly below)&gt; - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as &quot;Field name&quot; and value what you see as &quot;Field value&quot;, inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely. Field Syntax: [ {name:&quot;name of the first field&quot;, value:&quot;value of the first field&quot;, inline:true}, {name:&quot;name of the second field&quot;, value:&quot;value of the second field&quot;, inline:false} ]</p>
+<p>Let's start by working on designing your own embed. We offer you two ways to create your own embed. We highly recommend you go with the easy way.Note: Due to Discord limitations, mentions will not work in the author , title , field names and footer fields. So bear that in mind when creating your embed. The easy way We have good news! There is a really easy way to create your own embed. We worked on a tool that can help you create embeds for you with the appropriate format used by Mantaro.You can find this page https://www.mantaro.site/mantaro-embed-builder here! Warning: The Embed Builder WILL NOT work on Safari. Please use a different browser. How to use it Once you open the page, you will see its made up of two parts. An editing area, and a preview area. As you edit around you will see the changes live in the preview area. Now simply edit away until you get your embed ready. Tips Tip: You can click on this button to clear out the current data in the embed. This is useful if you want to start of fresh.Tip: You can click on this button to copy the embed to your clipboard. This will copy the embed content you need to your clipboard, ready for you to copy it into a command that allows embeds.Tip: You can find a few miscellaneous options if you click this button. The hard way The hard way is to create your own embed manually. For this you have to first understand once again the different parts of an embed, as well as the format that Mantaro uses.title:&quot;your text here&quot; - Will set what you see as &quot;Title Text&quot; in the image above. description:&quot;your text here&quot; - Will set what you see as &quot;Description&quot;. thumbnail:&quot;valid image url here&quot; - Will set the top-right image. image:&quot;valid image url here&quot; - Will set the big bottom image. author:&quot;your text here&quot; - Will set what you see as &quot;Author Name&quot;. authorImg:&quot;valid image url here&quot; - Will set the image you see next to &quot;Author Name&quot;. footer:&quot;your text here&quot; - Will set what you see as &quot;Footer text&quot; footerImg:&quot;valid image url here&quot; - Will set the image you see next to &quot;Footer text&quot;. color:&quot;hex code/color name here&quot; - Will set the color of the purple strip you see on the left. fields:&lt;field sytanx (check slightly below)&gt; - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as &quot;Field name&quot; and value what you see as &quot;Field value&quot;, inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely. Field Syntax: [ {name:&quot;name of the first field&quot;, value:&quot;value of the first field&quot;, inline:true}, {name:&quot;name of the second field&quot;, value:&quot;value of the second field&quot;, inline:false} ]</p>
 </article>
 
 <article>
@@ -308,7 +308,19 @@ ReactDOM.render(React.createElement(Documentation, {
               } ]
             } ]
           }, {
-            "id" : "how-to-use-it",
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Warning: ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "The Embed Builder WILL NOT work on Safari. Please use a different browser.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "id" : "creating-your-own-embed-how-to-use-it",
             "level" : 2,
             "title" : "How to use it",
             "type" : "SubHeading"
@@ -324,7 +336,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "type" : "SimpleText"
             } ]
           }, {
-            "id" : "tips",
+            "id" : "creating-your-own-embed-tips",
             "level" : 2,
             "title" : "Tips",
             "type" : "SubHeading"
@@ -583,7 +595,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Snippet"
       } ]
     } ],
-    "lastModifiedTime" : 1661898005891,
+    "lastModifiedTime" : 1663183571635,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Embeds",

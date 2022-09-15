@@ -11,7 +11,7 @@
     <url>/mantaro-wiki/basics/FAQ</url>
     <fullTitle>Mantaro Wiki: FAQ,  [Basics]</fullTitle>
     <text>
-      <text>0. Why move to Slash Commands?/Can I stay with text commands? The move to Slash Commands is something being enforced by Discord on verified bots. They seek to make it easier for users to find and use commands.However, they also seek to remove certain permissions from bots that are verified for security, such as having access to message contents (unless they have a good reason to have them). This essentially kills text based commands. While Mantaro managed to keep its access to message contents (for the logs), it doesn't mean we can avoid Slash Commands.Currently most commands have already been ported to Slash Commands, and some are still text based. The reason for this is we haven't figured out a way to make the remaining commands work correctly using Slash Commands. However, they too will be ported to Slash Commands in the future.Note: Some commands have not been ported to Slash Commands yet and still use text base commands like before. Commands like Game , Trivia , Opts , as well as Custom Commands you create, are still text based. Said commands are marked accordingly in this wiki when mentioned. They will be ported to Slash Commands in the future.For more information, check out Discord's https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ Slash Commands FAQ or their https://discord.com/blog/slash-commands-are-here Blog Post. 1. What is premium and what is the Patreon bot? Premium is a status that can be applied to both servers and users and provide perks like no music length limit and more. You can obtain premium keys by becoming a Patreon. The Patreon bot is however essentially a second Mantaro that runs on a different server, causing better Music quality. It is also the bot to receive new features first providing you with an insight of what is to come. You can read more info about premium, the Patreon bot and PayPal and Patreon donations in basics/premium-perks this page. 2. Some of Mantaro's commands are not showing any content (empty message), for instance on help? Make sure that within your https://i.imgur.com/BhTarjg.png user settings you have https://i.imgur.com/8TV4qn0.png "Link Preview" enabled, as that is necessary to be able to see embeds. If however neither is the case feel free to report it in #support, to gain assistance or insight as to why that's happening. 3. The bot is not responding or lagging behind what do I do? There really isn't much that you can do besides wait. We will usually announce issues within this guild as soon as we become aware of them. In most cases this is just a temporary hiccup within discord and should resolve itself. 4. Mantaro joined a VC, but she isn't playing anything/she is lagging There are a couple of troubleshooting steps that you can follow to fix this.Make sure that Mantaro has perms to both see and talk in the VC you are using. Make sure that Mantaro is not muted be it server mute, a role that mutes her or by you having lowered her volume on Discord to 0 before. 2.1) If someone has premium in the server/the server is premium, check the /volume command to make sure her volume is not 0. Check the video that you are trying to play and/or try a different video. Sometimes YouTube videos get muted for copyright reasons, or they are region locked which could make it so Mantaro can't play the video. Change server region. To do this go into Server Settings and then pick any other region that is not the one you are currently using. If after all of this Mantaro is still not playing anything then it would mean that there is either an issue with Mantaro or a third party issue that goes out of our hands. If you get to this point then please let us know. 5. What do the items within Mantaro do? How to earn credits? What are waifus and how to raise my waifu value? We have a detailed wiki explaining all of these questions. Simply visit our currency/101 Currency-101 page and have all of them and more answered. 6. Can I add money to people in my own server/s server that I have admin? Short answer: no you cannot. Long answer: All of Mantaro's currency related features are on a global scale, allowing you to summon money from nowhere would tip the scale. 7. What is the Birthday announcer? Why are my birthdays not being announced? Can I set other people's Birthday? We have a detailed wiki explaining all of these questions. Simply visit our guides/birthday-announcer Birthday-101 page and have all of them and more answered. 8. Can I unclaim people who I no longer share a server with or that show as unknown user? (Waifu command) You can unclaim them using their Discord ID (not username#xxxx), you can get access to those by invoking the following /waifu list id:True . Then you would simply put their ID in place of the mention ( /waifu unclaim user:&lt;id goes here> ). 9. When trying to waifu claim a user it says they are locked? How to get rid of claim keys? When a user is "locked" that means they have prevented themselves from being claimed by another user. To turn this off the locked person needs to use /waifu claimlock remove:True . 10. What is dust? Dust is something you will accumulate every time you, well, find dust in any command. At 97% it will prevent you from doing /cast until you clear your dust using a mop that you can buy from the market ( /use item item:Mop ). 11. How do I change my Profile description? You can change your description at any time using /profile description . This will open a popup where you can write your description. 12. What are love letters? What are they used for? How do I get one? Love letters are given to each person upon marrying using /marry . They can be used to create a love letter between those people (only the proposer may do so) using /marry createletter content:&lt;content goes here> . 13. How do I make a custom action command like ~>hug? You would use something like this: md ~>custom new action v3:@{ if; $(event.message); usermention; @{embed; description:"$(event.author) is using an action on $(event.message)", image:"https://mrlar.dev/i/5NCuLZswrZgqHq5.png" }; You need to mention a user! } Where you replace the URL with a URL to an image of your choice and the text with any text of your choice. You can use multiple images by using the above statement with custom add instead of custom new repeatedly, it will add multiple responses and pick one at random. 14. Mantaro has deleted all my roles/channels/banned all my user/or similar Before reporting ensure the action was taken by the real Mantaro. To identify the real one you check one of 3 things, though it is best to check them all.Check to see if Mantaro has the verified Bot badge next to her name. If not, then it is not the real Mantaro. Check if the Username is exactly the same as the real one no weird letter that looks the same but is different. Check if the discriminator (numbers after the # in the username) is 4454 Check if the ID of that Mantaro is 213466096718708737 (You can view IDs by going to your user settings > appearance > developer mode > right click user > Copy ID) If one or none of the above are identical you have likely fallen victim to a fake Mantaro. And while we feel deeply sorry for it there is not much we can do about it. You can help prevent this sort of stuff by reporting it to the https://support.discord.com/hc/en-us/requests/new Trust and Safety team. They will need as much proof as you can provide.To be absolutely safe never invite a bot called "Mantaro" if any of the above things are altered. A real invite will always direct you to https://discordapp.com/oauth2/authorize?client_id=213466096718708737&amp;scope=bot%20application.commands +/- the permission bit. 15. How do I invite the bot? My server does not show when inviting the bot? (Or anything related to inviting the bot) You can invite the bot over at https://add.mantaro.site/ this link it will redirect you to Discords authorization page. For this to work properly you will have to make sure that you are logged into the right account on the web version of discord (No, being logged into the desktop/phone app does not guarantee this). To double-check this you can head to https://discordapp.com/app discord's web version. If you are logged into the right account you may choose a server in the dropdown, you may also modify the permissions we add by default, though if you are unsure it's best to leave them as is. After hitting authorize the bot will join the chosen server.If the server you are planning to invite the bot to does not show that can mean 1 of 3 things. Either the bot is already on the server, you are not logged into the right account after all, or you do not have Manage Server permissions. In the event of none of those 3 applying contact https://support.discordapp.com/hc/en-us/requests/new discord support.In the event that you invited the bot, and it does not appear on the server there is a high chance someone else is kicking it (There seems to be bots around who automatically kick other bots). 16. What is "Old Sparkle Pickaxe" and can I restore/use it? You cannot. This is a replacement item for an old bug, and it does not serve a purpose and never will. You can dump it. 17. I have been blacklisted from using the bot. What do I do? Can I be un-blacklisted? Chances are you will not be un-blacklisted due to you likely having used external scrips to use currency. You however may send a polite and detailed appeal to Kodehawa on contact@mantaro.site (No an appeal is not "I won't do it again", neither is some obviously made up story). You will have to patiently wait for him to reply, if he never does that means you will not be un-blacklisted. If Kodehawa says no, there is no point in begging. No means no. Kodehawa is the only one who can un-blacklist you and will not be taking any direct requests for being un-blacklisted. You need to send the email. Complaining about not having received warns will reduce your chance of being un-blacklisted to effectively 0. We do not give warns, this is how zero tolerance policies work.You may read our legal/terms-of-service Terms and Service before appealing to see if appealing will actually serve any purpose. 18. I have lost my daily can I get it back? No, there is no actual way for us to refund a daily. And if you have lost it there is probably a very good reason why you did. For instance using the daily command right after another command (which fucks with our data). Users have a time frame bigger than 24 hours to claim their daily. For more detail refer to https://github.com/Mantaro/MantaroBot/issues/258 issue #258. 19. I just donated and I want to know how to add Mantaro Patreon or get my premium keys If you donated via PayPal then please get in contact with Kodehawa#3457 so that he can give you the corresponding rewards. If you donated via Patreon then first make sure that you have linked your Discord account to your Patreon account (check https://support.patreon.com/hc/en-us/articles/212052266-How-do-I-receive-my-Discord-role- here for more help). After this Mantaro will attempt to DM you your first key (make sure you have open DMs for this). After this same as with PayPal, contact Kodehawa#3457 if you wish to get any other rewards. 20. Can I buy credits in Mantaro? Do I get credits for donating/pledging? Is there any way to obtain credits/items/badges using real money? We do not exchange Money for credits within Mantaro (or Mantaro Patreon for that matter) whatsoever. Please do not ask this here. Anyone spreading that we do offer "Money for Credits" is spreading a false rumor. It is true that, that used to be a thing in the very first version of currency (which is now over 2 years ago), but it no longer holds true and never will anymore. Additionally, all credits that were ever given for real money (which was only through patreon pledges) were also reset with the big reset after said currency version (We mention this here mainly for the sake of transparency and to clear up any misunderstandings).Additionally, we also forbid people from offering credits for real money on their own (This is part of our legal/terms-of-service Terms and Service).Don't: Ask for credits. There is absolutely no way to obtain credits through donations/pledges or the use of real money. 21. I want to request my data / I want to delete my data Send a formal request to contact@mantaro.site and we'll process it as soon as possible. Data deletion is irreversible and leads to a permanent blacklist from the bot to ensure we don't collect any further data about you, so only do it if you're sure about it.Data requests will be processed in 1 to 7 days. Keep in mind the data won't be human-readable. It only includes Player / User / Seasonal data, NOT guild data. We need proof you're the owner of the data before processing it, so ping me before sending the email. 22. I used the waifu opt out option, is there a way to reverse it/opt in? Short answer: No, you cannot opt in after you opt out. This is final. Long answer: The optout option is very heavy on our system. Since it forces a user to be unclaimed from all users, we need to check all users, and there's a lot of users. Not only that, unclaim usually takes money but since this forces you to be unclaimed, you can do it for free. These things mentioned before can be abused if we allowed users to opt in/out as they wish.As well, since it was introduced we have not allowed people to opt in. Due to fairness to others this will remain the same.</text>
+      <text>0. Why move to Slash Commands?/Can I stay with text commands? The move to Slash Commands is something being enforced by Discord on verified bots. They seek to make it easier for users to find and use commands.However, they also seek to remove certain permissions from bots that are verified for security, such as having access to message contents (unless they have a good reason to have them). This essentially kills text based commands. While Mantaro managed to keep its access to message contents (for the logs), it doesn't mean we can avoid Slash Commands.Currently most commands have already been ported to Slash Commands, and some are still text based. The reason for this is we haven't figured out a way to make the remaining commands work correctly using Slash Commands. However, they too will be ported to Slash Commands in the future.Note: Some commands have not been ported to Slash Commands yet and still use text base commands like before. Commands like Game , Trivia , Opts , as well as Custom Commands you create, are still text based. Said commands are marked accordingly in this wiki when mentioned. They will be ported to Slash Commands in the future.For more information, check out Discord's https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ Slash Commands FAQ or their https://discord.com/blog/slash-commands-are-here Blog Post. 1. What is premium and what is the Patreon bot? Premium is a status that can be applied to both servers and users and provide perks like no music length limit and more. You can obtain premium keys by becoming a Patreon. The Patreon bot is however essentially a second Mantaro that runs on a different server, causing better Music quality. It is also the bot to receive new features first providing you with an insight of what is to come. You can read more info about premium, the Patreon bot and PayPal and Patreon donations in basics/premium-perks this page. 2. Some of Mantaro's commands are not showing any content (empty message), for instance on help? Make sure that within your https://i.imgur.com/BhTarjg.png user settings you have https://i.imgur.com/8TV4qn0.png "Link Preview" enabled, as that is necessary to be able to see embeds. If however neither is the case feel free to report it in #support, to gain assistance or insight as to why that's happening. 3. The bot is not responding or lagging behind what do I do? There really isn't much that you can do besides wait. We will usually announce issues within this guild as soon as we become aware of them. In most cases this is just a temporary hiccup within discord and should resolve itself. 4. Mantaro joined a VC, but she isn't playing anything/she is lagging There are a couple of troubleshooting steps that you can follow to fix this.Make sure that Mantaro has perms to both see and talk in the VC you are using. Make sure that Mantaro is not muted be it server mute, a role that mutes her or by you having lowered her volume on Discord to 0 before. 2.1) If someone has premium in the server/the server is premium, check the /volume command to make sure her volume is not 0. Check the video that you are trying to play and/or try a different video. Sometimes YouTube videos get muted for copyright reasons, or they are region locked which could make it so Mantaro can't play the video. Change server region. To do this go into Server Settings and then pick any other region that is not the one you are currently using. If after all of this Mantaro is still not playing anything then it would mean that there is either an issue with Mantaro or a third party issue that goes out of our hands. If you get to this point then please let us know. 5. What do the items within Mantaro do? How to earn credits? What are waifus and how to raise my waifu value? We have a detailed wiki explaining all of these questions. Simply visit our currency/101 Currency-101 page and have all of them and more answered. 6. Can I add money to people in my own server/s server that I have admin? Short answer: no you cannot. Long answer: All of Mantaro's currency related features are on a global scale, allowing you to summon money from nowhere would tip the scale. 7. What is the Birthday announcer? Why are my birthdays not being announced? Can I set other people's Birthday? We have a detailed wiki explaining all of these questions. Simply visit our guides/birthday-announcer Birthday-101 page and have all of them and more answered. 8. Can I unclaim people who I no longer share a server with or that show as unknown user? (Waifu command) You can unclaim them using their Discord ID (not username#xxxx), you can get access to those by invoking the following /waifu list id:True . Then you would simply put their ID in place of the mention ( /waifu unclaim user:&lt;id goes here> ). 9. When trying to waifu claim a user it says they are locked? How to get rid of claim keys? When a user is "locked" that means they have prevented themselves from being claimed by another user. To turn this off the locked person needs to use /waifu claimlock remove:True . 10. What is dust? Dust is something you will accumulate every time you, well, find dust in any command. At 97% it will prevent you from doing /cast until you clear your dust using a mop that you can buy from the market ( /use item item:Mop ). 11. How do I change my Profile description? You can change your description at any time using /profile description . This will open a popup where you can write your description. 12. What are love letters? What are they used for? How do I get one? Love letters are given to each person upon marrying using /marry . They can be used to create a love letter between those people (only the proposer may do so) using /marry createletter content:&lt;content goes here> . 13. How do I make a custom action command like /pat? First you would use the following command:/custom add nsfw: [True/False] This will open a pop-up for you in which you can write the content of the command. Then you could set the content to something like this: md v3:@{if; $(event.message); usermention; @{embed; description:"$(event.author) is using an action on $(event.message)", image:"https://mrlar.dev/i/5NCuLZswrZgqHq5.png" }; You need to mention a user! } Where you replace the URL with a URL to an image of your choice and the text with any text of your choice. You can use multiple images by using the above statement with custom add instead of custom new repeatedly, it will add multiple responses and pick one at random. 14. Mantaro has deleted all my roles/channels/banned all my user/or similar Before reporting ensure the action was taken by the real Mantaro. To identify the real one you check one of 3 things, though it is best to check them all.Check to see if Mantaro has the verified Bot badge next to her name. If not, then it is not the real Mantaro. Check if the Username is exactly the same as the real one no weird letter that looks the same but is different. Check if the discriminator (numbers after the # in the username) is 4454 Check if the ID of that Mantaro is 213466096718708737 (You can view IDs by going to your user settings > appearance > developer mode > right click user > Copy ID) If one or none of the above are identical you have likely fallen victim to a fake Mantaro. And while we feel deeply sorry for it there is not much we can do about it. You can help prevent this sort of stuff by reporting it to the https://support.discord.com/hc/en-us/requests/new Trust and Safety team. They will need as much proof as you can provide.To be absolutely safe never invite a bot called "Mantaro" if any of the above things are altered. A real invite will always direct you to https://discordapp.com/oauth2/authorize?client_id=213466096718708737&amp;scope=bot%20application.commands +/- the permission bit. 15. How do I invite the bot? My server does not show when inviting the bot? (Or anything related to inviting the bot) You can invite the bot over at https://add.mantaro.site/ this link it will redirect you to Discords authorization page. For this to work properly you will have to make sure that you are logged into the right account on the web version of discord (No, being logged into the desktop/phone app does not guarantee this). To double-check this you can head to https://discordapp.com/app discord's web version. If you are logged into the right account you may choose a server in the dropdown, you may also modify the permissions we add by default, though if you are unsure it's best to leave them as is. After hitting authorize the bot will join the chosen server.If the server you are planning to invite the bot to does not show that can mean 1 of 3 things. Either the bot is already on the server, you are not logged into the right account after all, or you do not have Manage Server permissions. In the event of none of those 3 applying contact https://support.discordapp.com/hc/en-us/requests/new discord support.In the event that you invited the bot, and it does not appear on the server there is a high chance someone else is kicking it (There seems to be bots around who automatically kick other bots). 16. What is "Old Sparkle Pickaxe" and can I restore/use it? You cannot. This is a replacement item for an old bug, and it does not serve a purpose and never will. You can dump it. 17. I have been blacklisted from using the bot. What do I do? Can I be un-blacklisted? Chances are you will not be un-blacklisted due to you likely having used external scrips to use currency. You however may send a polite and detailed appeal to Kodehawa on contact@mantaro.site (No an appeal is not "I won't do it again", neither is some obviously made up story). You will have to patiently wait for him to reply, if he never does that means you will not be un-blacklisted. If Kodehawa says no, there is no point in begging. No means no. Kodehawa is the only one who can un-blacklist you and will not be taking any direct requests for being un-blacklisted. You need to send the email. Complaining about not having received warns will reduce your chance of being un-blacklisted to effectively 0. We do not give warns, this is how zero tolerance policies work.You may read our legal/terms-of-service Terms and Service before appealing to see if appealing will actually serve any purpose. 18. I have lost my daily can I get it back? No, there is no actual way for us to refund a daily. And if you have lost it there is probably a very good reason why you did. For instance using the daily command right after another command (which fucks with our data). Users have a time frame bigger than 24 hours to claim their daily. For more detail refer to https://github.com/Mantaro/MantaroBot/issues/258 issue #258. 19. I just donated and I want to know how to add Mantaro Patreon or get my premium keys If you donated via PayPal then please get in contact with Kodehawa#3457 so that he can give you the corresponding rewards. If you donated via Patreon then first make sure that you have linked your Discord account to your Patreon account (check https://support.patreon.com/hc/en-us/articles/212052266-How-do-I-receive-my-Discord-role- here for more help). After this Mantaro will attempt to DM you your first key (make sure you have open DMs for this). After this same as with PayPal, contact Kodehawa#3457 if you wish to get any other rewards. 20. Can I buy credits in Mantaro? Do I get credits for donating/pledging? Is there any way to obtain credits/items/badges using real money? We do not exchange Money for credits within Mantaro (or Mantaro Patreon for that matter) whatsoever. Please do not ask this here. Anyone spreading that we do offer "Money for Credits" is spreading a false rumor. It is true that, that used to be a thing in the very first version of currency (which is now over 2 years ago), but it no longer holds true and never will anymore. Additionally, all credits that were ever given for real money (which was only through patreon pledges) were also reset with the big reset after said currency version (We mention this here mainly for the sake of transparency and to clear up any misunderstandings).Additionally, we also forbid people from offering credits for real money on their own (This is part of our legal/terms-of-service Terms and Service).Don't: Ask for credits. There is absolutely no way to obtain credits through donations/pledges or the use of real money. 21. I want to request my data / I want to delete my data Send a formal request to contact@mantaro.site and we'll process it as soon as possible. Data deletion is irreversible and leads to a permanent blacklist from the bot to ensure we don't collect any further data about you, so only do it if you're sure about it.Data requests will be processed in 1 to 7 days. Keep in mind the data won't be human-readable. It only includes Player / User / Seasonal data, NOT guild data. We need proof you're the owner of the data before processing it, so ping me before sending the email. 22. I used the waifu opt out option, is there a way to reverse it/opt in? Short answer: No, you cannot opt in after you opt out. This is final. Long answer: The optout option is very heavy on our system. Since it forces a user to be unclaimed from all users, we need to check all users, and there's a lot of users. Not only that, unclaim usually takes money but since this forces you to be unclaimed, you can do it for free. These things mentioned before can be abused if we allowed users to opt in/out as they wish.As well, since it was introduced we have not allowed people to opt in. Due to fairness to others this will remain the same.</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -75,7 +75,7 @@
     <url>/mantaro-wiki/basics/server-configuration#welcome-and-leave-messages</url>
     <fullTitle>Mantaro Wiki: Server Configuration, Welcome and Leave messages [Basics]</fullTitle>
     <text>
-      <text>These include all the things you need for Welcome and Leave messages, you can also use any of guides/modifiers#modifiers-for-welcomeleave-messages these in them. They also support embedded messages, check our guides/embeds Embed guide for that. For a detailed tutorial click guides/welcome-and-leave-messages here. Type Command Preview [{text=Set a Channel for the Message, type=SimpleText}] [{code=~>opts usermessage channel &lt;channel>, type=InlinedCode}] [{url=https://i.imgur.com/qVOZGgF.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Join/Leave Message, type=SimpleText}] [{code=~>opts usermessage leavemessage/joinmessage, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts leavemessage/joinmessage, type=InlinedCode}] [{url=https://i.imgur.com/dLo0VAQ.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable/Disable ignoring bots, type=SimpleText}] [{code=~>opts server ignorebots joinleave toggle, type=InlinedCode}] [{url=https://i.imgur.com/5ftNF7v.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disabling, type=SimpleText}] [{code=~>opts usermessage resetdata, type=InlinedCode}] [{url=https://i.imgur.com/VSbjJQx.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the Join Message, type=SimpleText}] [{code=~>opts usermessage resetjoinmessage, type=InlinedCode}] [{url=https://i.imgur.com/1MOnoQl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the Leave Message, type=SimpleText}] [{code=~>opts usermessage resetleavemessage, type=InlinedCode}] [{url=https://i.imgur.com/TGugmvX.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a separate channel for join, type=SimpleText}] [{code=~>opts usermessage join channel &lt;channel>, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts joinchannel &lt;channel>, type=InlinedCode}] [{url=https://i.imgur.com/CFOZWPh.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a separate channel for leave, type=SimpleText}] [{code=~>opts usermessage leave channel &lt;channel>, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts leavechannel &lt;channel>, type=InlinedCode}] [{url=https://i.imgur.com/6Su2Kf5.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the separate channel for join, type=SimpleText}] [{code=~>opts usermessage join resetchannel, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts resetjoinchannel, type=InlinedCode}] [{url=https://i.imgur.com/GnkPkAq.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the separate channel for leave, type=SimpleText}] [{code=~>opts usermessage leave resetchannel, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts resetleavechannel, type=InlinedCode}] [{url=https://i.imgur.com/zUKIzeb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add additional welcome messages, type=SimpleText}] [{code=~>opts usermessage joinmessages add &lt;message>, type=InlinedCode}] [{url=https://i.imgur.com/SZxr2lz.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove additional welcome messages, type=SimpleText}] [{code=~>opts usermessage joinmessages remove &lt;index>, type=InlinedCode}] [{url=https://i.imgur.com/3OfTnnR.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=List Additional welcome messages, type=SimpleText}] [{code=~>opts usermessage joinmessages list, type=InlinedCode}] [{url=https://i.imgur.com/sV1BAZl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add additional leave messages, type=SimpleText}] [{code=~>opts usermessage leavemessages add &lt;message>, type=InlinedCode}] [{url=https://i.imgur.com/YDzSTQ8.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove additional leave messages, type=SimpleText}] [{code=~>opts usermessage leavemessages remove &lt;index>, type=InlinedCode}] [{url=https://i.imgur.com/bWusCmT.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=List Additional leave messages, type=SimpleText}] [{code=~>opts usermessage leavemessages list, type=InlinedCode}] [{url=https://i.imgur.com/TxawELm.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}]</text>
+      <text>These include all the things you need for Welcome and Leave messages, you can also use any of guides/modifiers#modifiers-for-welcome-and-leave-messages these in them. They also support embedded messages, check our guides/embeds Embed guide for that. For a detailed tutorial click guides/welcome-and-leave-messages here. Type Command Preview [{text=Set a Channel for the Message, type=SimpleText}] [{code=~>opts usermessage channel &lt;channel>, type=InlinedCode}] [{url=https://i.imgur.com/qVOZGgF.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Join/Leave Message, type=SimpleText}] [{code=~>opts usermessage leavemessage/joinmessage, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts leavemessage/joinmessage, type=InlinedCode}] [{url=https://i.imgur.com/dLo0VAQ.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Enable/Disable ignoring bots, type=SimpleText}] [{code=~>opts server ignorebots joinleave toggle, type=InlinedCode}] [{url=https://i.imgur.com/5ftNF7v.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disabling, type=SimpleText}] [{code=~>opts usermessage resetdata, type=InlinedCode}] [{url=https://i.imgur.com/VSbjJQx.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the Join Message, type=SimpleText}] [{code=~>opts usermessage resetjoinmessage, type=InlinedCode}] [{url=https://i.imgur.com/1MOnoQl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the Leave Message, type=SimpleText}] [{code=~>opts usermessage resetleavemessage, type=InlinedCode}] [{url=https://i.imgur.com/TGugmvX.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a separate channel for join, type=SimpleText}] [{code=~>opts usermessage join channel &lt;channel>, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts joinchannel &lt;channel>, type=InlinedCode}] [{url=https://i.imgur.com/CFOZWPh.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a separate channel for leave, type=SimpleText}] [{code=~>opts usermessage leave channel &lt;channel>, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts leavechannel &lt;channel>, type=InlinedCode}] [{url=https://i.imgur.com/6Su2Kf5.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the separate channel for join, type=SimpleText}] [{code=~>opts usermessage join resetchannel, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts resetjoinchannel, type=InlinedCode}] [{url=https://i.imgur.com/GnkPkAq.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the separate channel for leave, type=SimpleText}] [{code=~>opts usermessage leave resetchannel, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>opts resetleavechannel, type=InlinedCode}] [{url=https://i.imgur.com/zUKIzeb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add additional welcome messages, type=SimpleText}] [{code=~>opts usermessage joinmessages add &lt;message>, type=InlinedCode}] [{url=https://i.imgur.com/SZxr2lz.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove additional welcome messages, type=SimpleText}] [{code=~>opts usermessage joinmessages remove &lt;index>, type=InlinedCode}] [{url=https://i.imgur.com/3OfTnnR.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=List Additional welcome messages, type=SimpleText}] [{code=~>opts usermessage joinmessages list, type=InlinedCode}] [{url=https://i.imgur.com/sV1BAZl.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Add additional leave messages, type=SimpleText}] [{code=~>opts usermessage leavemessages add &lt;message>, type=InlinedCode}] [{url=https://i.imgur.com/YDzSTQ8.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Remove additional leave messages, type=SimpleText}] [{code=~>opts usermessage leavemessages remove &lt;index>, type=InlinedCode}] [{url=https://i.imgur.com/bWusCmT.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=List Additional leave messages, type=SimpleText}] [{code=~>opts usermessage leavemessages list, type=InlinedCode}] [{url=https://i.imgur.com/TxawELm.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}]</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -144,7 +144,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#forward</url>
+    <url>/mantaro-wiki/commands/audio-commands#-forward</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /forward [Commands]</fullTitle>
     <text>
       <text>This command will skip the song forward by the time given. Options time Required The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /forward time: 2m /forward time: 1m29s</text>
@@ -152,7 +152,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#move</url>
+    <url>/mantaro-wiki/commands/audio-commands#-move</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /move [Commands]</fullTitle>
     <text>
       <text>This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to. Options channel Optional The voice channel to move to. If empty, it'll use the voice channel you're in. Examples /move /move channel: Music 1</text>
@@ -160,7 +160,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#nowplaying</url>
+    <url>/mantaro-wiki/commands/audio-commands#-nowplaying</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /nowplaying [Commands]</fullTitle>
     <text>
       <text>This command will display the song that is currently playing with timestamps. Examples /nowplaying channel: Music 1</text>
@@ -168,7 +168,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#pause</url>
+    <url>/mantaro-wiki/commands/audio-commands#-pause</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /pause [Commands]</fullTitle>
     <text>
       <text>This command will pause the music Player or unpause the Player if already paused. Examples /pause</text>
@@ -176,7 +176,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#play</url>
+    <url>/mantaro-wiki/commands/audio-commands#-play</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /play [Commands]</fullTitle>
     <text>
       <text>This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play. Options song Required The song to play. Can be a URL or a search term. soundcloud Optional Whether to search in Soundcloud. Only use to search. top Optional Puts song at the start of the queue. Requires commands/permissions#intro DJ or Admin permissions. first Optional Plays the first search result. Only applies if a search is used. Requirements This command requires you to be connected to a Voice-Chat. Examples /play song: https://youtu.be/dQw4w9WgXcQ /play song: Rick Astley - Never Gonna Give You Up /play song: Rick Astley - Never Gonna Give You Up soundcloud: True</text>
@@ -184,7 +184,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#queue</url>
+    <url>/mantaro-wiki/commands/audio-commands#-queue</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /queue [Commands]</fullTitle>
     <text>
       <text>This command displays the current queue or the selected page of the queue. Subcommands show Shows the current music queue. clear Clears the current queue. Needs commands/permissions#intro DJ or Admin permissions. Examples /queue show /queue clear</text>
@@ -192,7 +192,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#removetrack</url>
+    <url>/mantaro-wiki/commands/audio-commands#-removetrack</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /removetrack [Commands]</fullTitle>
     <text>
       <text>This command removes the given track(s) from the queue. Options range Required The song to remove, or a range of them (1-10). Can also use first, next or last. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /removetrack range: first /removetrack range: next /removetrack range: last /removetrack range: 2 /removetrack range: 1-10</text>
@@ -200,7 +200,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#repeat</url>
+    <url>/mantaro-wiki/commands/audio-commands#-repeat</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /repeat [Commands]</fullTitle>
     <text>
       <text>This command repeats the current song or the queue, or disables it. Options queue Optional Repeat the entire queue instead of only the current song. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /repeat /repeat queue: True</text>
@@ -208,7 +208,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#restartsong</url>
+    <url>/mantaro-wiki/commands/audio-commands#-restartsong</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /restartsong [Commands]</fullTitle>
     <text>
       <text>This command will rewind the current song back to the start. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /restartsong</text>
@@ -216,7 +216,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#rewind</url>
+    <url>/mantaro-wiki/commands/audio-commands#-rewind</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /rewind [Commands]</fullTitle>
     <text>
       <text>This command will rewind the song back by the time given. Options time Required The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /rewind time: 1m29s</text>
@@ -224,7 +224,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#shuffle</url>
+    <url>/mantaro-wiki/commands/audio-commands#-shuffle</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /shuffle [Commands]</fullTitle>
     <text>
       <text>This command will shuffle the current queue. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /shuffle</text>
@@ -232,7 +232,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#skip</url>
+    <url>/mantaro-wiki/commands/audio-commands#-skip</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /skip [Commands]</fullTitle>
     <text>
       <text>This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can skip immediately. Options force Optional Whether to skip vote. Requires commands/permissions#intro DJ or Admin permissions. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /skip /skip force: True</text>
@@ -240,7 +240,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#stop</url>
+    <url>/mantaro-wiki/commands/audio-commands#-stop</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /stop [Commands]</fullTitle>
     <text>
       <text>This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can stop immediately. Requirements This command requires either commands/permissions#intro Admin or DJ permissions to stop immediately. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /stop</text>
@@ -248,7 +248,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/audio-commands#volume</url>
+    <url>/mantaro-wiki/commands/audio-commands#-volume</url>
     <fullTitle>Mantaro Wiki: 🎵 Audio Commands, /volume [Commands]</fullTitle>
     <text>
       <text>This command lets you check the current volume, as well as set the volume to the percentage specified (4-100). Options volume Optional The volume to use (4-100). Note: This feature is only available for basics/premium-perks#perks-user-perks Premium users, users in basics/premium-perks#perks-guild-server-perks Premium servers or basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon users. Examples /volume /volume volume: 25</text>
@@ -256,7 +256,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/action-commands#action</url>
+    <url>/mantaro-wiki/commands/action-commands#-action</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /action [Commands]</fullTitle>
     <text>
       <text>A bunch of action commands that didn't fit into a separate command. Subcommands Teehee Tease someone on the server. Bite Bite someone on the server. Lick Lick someone on the server. kinky Nuzzle Nuzzle someone on the server. Smile Smile at someone on the server. Highfive High-five someone on the server. Stare Stare at someone on the server. Blush Blushes at someone on the server. Nom Nom someone or something. Holdhands Hold someones hand. Bloodsuck Suck someone's blood on the server. Meow Meow at something or someone. Facedesk Smash your head on a desk I guess? Lewd Call something or someone lewd. Options Type 1 Click me! Options for the Teehee , Bite , Lick , Nuzzle , Smile , Highfive , Stare , Blush , Holdhands and Bloodsuck Subcommands user Required The user on which you want to perform an action. extra Optional Extra users to which you want to perform an action. Type 2 Click me! Options for the Nom , Meow and Lewd Subcommands user Optional The user on which you want to perform an action. Note: The Facedesk subcommand has no options. Examples /action teehee user: @Kodehawa#3457 /action bite user: @Kodehawa#3457 /action nuzzle user: @Kodehawa#3457 /action holdhands user: @Kodehawa#3457 /action nom user: @Kodehawa#3457 /action stare user: @Kodehawa#3457 /action smile user: @Kodehawa#3457 /action facedesk</text>
@@ -264,7 +264,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/action-commands#cuddle</url>
+    <url>/mantaro-wiki/commands/action-commands#-cuddle</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /cuddle [Commands]</fullTitle>
     <text>
       <text>Cuddle someone on the server. Options user Required The user you want to cuddle. extra Optional Extra users you wish to cuddle. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /cuddle user: @Kodehawa#3457 /cuddle user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
@@ -272,7 +272,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/action-commands#hug</url>
+    <url>/mantaro-wiki/commands/action-commands#-hug</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /hug [Commands]</fullTitle>
     <text>
       <text>Hug someone on the server. Options user Required The user you want to hug. extra Optional Extra users you wish to hug. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /hug user: @Kodehawa#3457 /hug user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
@@ -280,7 +280,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/action-commands#kiss</url>
+    <url>/mantaro-wiki/commands/action-commands#-kiss</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /kiss [Commands]</fullTitle>
     <text>
       <text>Kiss someone on the server. Options user Required The user you want to kiss. extra Optional Extra users you wish to kiss. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /kiss user: @Kodehawa#3457 /kiss user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
@@ -288,7 +288,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/action-commands#pat</url>
+    <url>/mantaro-wiki/commands/action-commands#-pat</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /pat [Commands]</fullTitle>
     <text>
       <text>Pat someone on the server. Options user Required The user you want to pat. extra Optional Extra users you wish to pat. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /pat user: @Kodehawa#3457 /pat user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
@@ -296,7 +296,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/action-commands#poke</url>
+    <url>/mantaro-wiki/commands/action-commands#-poke</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /poke [Commands]</fullTitle>
     <text>
       <text>Poke someone on the server. Options user Required The user you want to poke. extra Optional Extra users you wish to poke. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /poke user: @Kodehawa#3457 /poke user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
@@ -304,7 +304,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/action-commands#pout</url>
+    <url>/mantaro-wiki/commands/action-commands#-pout</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /pout [Commands]</fullTitle>
     <text>
       <text>Pout at someone on the server Options user Required The user you want to pout. extra Optional Extra users you wish to pout. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /pout user: @Kodehawa#3457 /pout user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
@@ -312,7 +312,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/action-commands#slap</url>
+    <url>/mantaro-wiki/commands/action-commands#-slap</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /slap [Commands]</fullTitle>
     <text>
       <text>Slap someone on the server. Options user Required The user you want to slap. extra Optional Extra users you wish to slap. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /slap user: @Kodehawa#3457 /slap user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
@@ -320,7 +320,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/action-commands#tickle</url>
+    <url>/mantaro-wiki/commands/action-commands#-tickle</url>
     <fullTitle>Mantaro Wiki: 👋 Action Commands, /tickle [Commands]</fullTitle>
     <text>
       <text>Tickle someone on the server. Options user Required The user you want to tickle. extra Optional Extra users you wish to tickle. Note: You will need to fully mention a user in this field as Discord will not auto-complete it. As well, this field allows you to write things other than mentions. Examples /tickle user: @Kodehawa#3457 /tickle user: @Kodehawa#3457 extra: @Mantaro Patreon#0569</text>
@@ -328,7 +328,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#badges</url>
+    <url>/mantaro-wiki/commands/currency-commands#-badges</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /badges [Commands]</fullTitle>
     <text>
       <text>Shows a list of your own badges or a list of the badges from the given user. A full list of the badges can be found currency/badges here. Subcommands Display Sets your display badge. Info Shows info about a badge. List Lists all the obtainable badges. Show Show your badge list, or someone else's badge list. Options Display Click me! Options for the Display Subcommand badge Required The badge to user. Info Click me! Options for the Info Subcommand badge Required The badge to check info for. Show Click me! Options for the Show Subcommand user Optional The user to check. If none, you. brief Optional Whether to show this in brief format. Default is false. Requirements This command requires the commands/permissions#intro Emotes permission. Examples /badges show /badges show user: @Kodehawa#3457 /badges list /badges info badge: Donator /badges display badge: Donator</text>
@@ -336,7 +336,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#balance</url>
+    <url>/mantaro-wiki/commands/currency-commands#-balance</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /balance [Commands]</fullTitle>
     <text>
       <text>Returns your current amount of money or the amount of money of the person that was given. Options user Optional The user to check the balance of. Examples /balance /balance user: @Kodehawa#3457</text>
@@ -344,7 +344,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#buy</url>
+    <url>/mantaro-wiki/commands/currency-commands#-buy</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /buy [Commands]</fullTitle>
     <text>
       <text>Allows you to buy items from the market. Options item Required The item to buy. amount Optional The amount of the item to buy. Requirements This command requires commands/permissions#intro Emotes permissions. This command requires you to have the credits needed to buy the item. Examples /buy item: Diamond /buy item: Diamond amount: 2</text>
@@ -352,7 +352,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#cast</url>
+    <url>/mantaro-wiki/commands/currency-commands#-cast</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /cast [Commands]</fullTitle>
     <text>
       <text>Cast various items. Different wrenches have different amounts of items they can cast at the same time. For more in-depth information you can go to our currency/101#concepts-dust Currency 101 page. Subcommands Item Cast an item. List Shows a list of castable items. Options Item Click me! Options for the Item Subcommand item Required The item to cast. amount Optional The amount of the item to cast, 1 by default. Depends on your wrench, maximum is 10. Note: The List subcommand has no options. Requirements This command requires you to have the items needed to cast the specified item. This command requires commands/permissions#intro Emotes permissions. The List subcommand requires commands/permissions#intro Emotes permissions. Examples /cast list /cast item item: Diamond Pickaxe /cast item item: Diamond Pickaxe amount: 5</text>
@@ -360,7 +360,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#chop</url>
+    <url>/mantaro-wiki/commands/currency-commands#-chop</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /chop [Commands]</fullTitle>
     <text>
       <text>Use one of your axes to chop down trees. Requirements This command requires you to have an axe equipped. This command requires commands/permissions#intro Emotes permissions. Examples /chop</text>
@@ -368,7 +368,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#daily</url>
+    <url>/mantaro-wiki/commands/currency-commands#-daily</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /daily [Commands]</fullTitle>
     <text>
       <text>Gives you $150 credits per day (or between 150 and 180 if you transfer it to another person). Maximum amount it can give is ~2000 credits (a bit more for shared dailies). This command gives a reward for claiming it every day (daily streak). You lose the streak if you miss two days in a row. Options user Optional The user to give your daily to, without this it gives it to yourself. check Optional Whether you want to check if you can claim your daily Examples /daily /daily user: @Kodehawa#3457 /daily check: True</text>
@@ -376,7 +376,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#dailycrate</url>
+    <url>/mantaro-wiki/commands/currency-commands#-dailycrate</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /dailycrate [Commands]</fullTitle>
     <text>
       <text>Allows you to receive a random crate once per day. The -check flag allows you to check if your daily crate is ready without claiming it. Note: This feature is only available for basics/premium-perks#perks-user-perks Premium users or basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon users. Options check Optional Check the time left for you to be able to claim your crate Examples /dailycrate</text>
@@ -384,7 +384,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#divorce</url>
+    <url>/mantaro-wiki/commands/currency-commands#-divorce</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /divorce [Commands]</fullTitle>
     <text>
       <text>Attend the single life again. Requirements This command requires you to be married beforehand. Examples /divorce</text>
@@ -392,7 +392,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#dump</url>
+    <url>/mantaro-wiki/commands/currency-commands#-dump</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /dump [Commands]</fullTitle>
     <text>
       <text>Allows you to dump an item from your inventory. Options item Required The item to dump. amount Optional The amount of the item to dump. Requirements This command requires commands/permissions#intro Emotes permissions. This command requires you to have the specified item on your inventory. Examples /dump item: Milk /dump item: Diamond amount: 5</text>
@@ -400,7 +400,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#equip</url>
+    <url>/mantaro-wiki/commands/currency-commands#-equip</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /equip [Commands]</fullTitle>
     <text>
       <text>Allows you to equip an item (Picks, Rods, Axes or Wrenches). Options item Required The item to equip. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /equip item: pick /equip item: Diamond Pickaxe</text>
@@ -408,7 +408,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#fish</url>
+    <url>/mantaro-wiki/commands/currency-commands#-fish</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /fish [Commands]</fullTitle>
     <text>
       <text>Catch fish using one of your fishing rods. Requirements This command requires you to have a rod equipped. This command requires commands/permissions#intro Emotes permissions. Examples /fish</text>
@@ -416,7 +416,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#gamble</url>
+    <url>/mantaro-wiki/commands/currency-commands#-gamble</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /gamble [Commands]</fullTitle>
     <text>
       <text>Gamble your credits for possible profit. The current max of credits you can gamble at once is 10 000 credits (update 5.7). Options amount Required How much money you want to gamble. This can be either all (all your money), half, quarter, a percentage or an amount of money. You can also express this on K (10k is 10 000, for example). Requirements This command requires you to have credits to gamble away. Examples /gamble amount: 600 /gamble amount: all /gamble amount: half /gamble amount: quarter /gamble amount: 50%</text>
@@ -424,7 +424,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#inventory</url>
+    <url>/mantaro-wiki/commands/currency-commands#-inventory</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /inventory [Commands]</fullTitle>
     <text>
       <text>Shows your current inventory and item stats. Subcommands Sort Sort your inventory. Calculate Calculate an inventory's worth. Show Shows your inventory or a user's. Brief Shows your brief inventory or a user's. Options Sort Click me! Options for the Sort Subcommand type Required The sort type to use. Calculate Click me! Options for the Calculate Subcommand user Optional The user you want to check. Show Click me! Options for the Show Subcommand user Optional The user you want to check. Brief Click me! Options for the Brief Subcommand user Optional The user you want to check. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /inventory show /inventory show user:@Kodehawa#3457 /inventory calculate /inventory calculate user: @Kodehawa#3457 /inventory brief /inventory brief user: @Kodehawa#3457 /inventory sort type: Sort randomly</text>
@@ -432,7 +432,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#iteminfo</url>
+    <url>/mantaro-wiki/commands/currency-commands#-iteminfo</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /iteminfo [Commands]</fullTitle>
     <text>
       <text>Provides you with information about an item. Options item Required The name of the item you want to check. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /iteminfo item: Diamond Pickaxe /iteminfo item: Apple</text>
@@ -440,7 +440,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#leaderboard</url>
+    <url>/mantaro-wiki/commands/currency-commands#-leaderboard</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /leaderboard [Commands]</fullTitle>
     <text>
       <text>Returns the Top 10 for various statistics in Mantaro. Subcommands Slots Sends the slots leaderboard. Money Sends the money leaderboard. Gamble Sends the gamble leaderboard. Games Sends the games leaderboard. Reputation Sends the reputation leaderboard. Claim Sends the claim leaderboard. Daily Sends the daily leaderboard. Examples /leaderboard slots /leaderboard money /leaderboard gamble /leaderboard games /leaderboard reputation /leaderboard claim /leaderboard daily</text>
@@ -448,7 +448,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#loot</url>
+    <url>/mantaro-wiki/commands/currency-commands#-loot</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /loot [Commands]</fullTitle>
     <text>
       <text>Loot the chat for possible credits and items. Some items are only obtained via loot. Very rarely you will also be able to find a Loot Crate. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /loot</text>
@@ -456,7 +456,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#market</url>
+    <url>/mantaro-wiki/commands/currency-commands#-market</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /market [Commands]</fullTitle>
     <text>
       <text>Browse the Market. When used alone Mantaro will show you a list of all the items on the Market. Subcommands Pet List current pet items. Tools List current tool items. Common List current common items. Potions List current potion items. Buyable List current buyable items. Sellable List current sellable items. Price Looks up the price of an item. Show List current items for buying and selling. Options item Required The name of the item. This option is only for the Price subcommand. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /market pet /market tools /market common /market potions /market buyable /market sellable /market price item: Diamond Pickaxe /market show</text>
@@ -464,7 +464,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#marry</url>
+    <url>/mantaro-wiki/commands/currency-commands#-marry</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /marry [Commands]</fullTitle>
     <text>
       <text>Marry someone. The person you marry also appears on your profile. Subcommands User Marries another user. Createletter Creates a marriage letter. Status Shows the status of your marriage. Car Buys a car for the marriage. You need to buy a car in market first. House Buys a house for the marriage. You need to buy a house in market first. Options User Click me! Options for the User Subcommand user Required The user your want to marry. Createletter Click me! Options for the Createletter Subcommand content Required The content of the letter. Car Click me! Options for the Car Subcommand name Required Name for the new car. House Click me! Options for the House Subcommand name Required Name for the new house. Requirements This command requires 2 rings to be in your inventory to marry someone. Examples /marry user user: @Kodehawa#3457 /marry createletter content: This is my letter! /marry status /marry car name: Big ride /marry house name: Our house</text>
@@ -472,7 +472,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#mine</url>
+    <url>/mantaro-wiki/commands/currency-commands#-mine</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /mine [Commands]</fullTitle>
     <text>
       <text>Use one of your pickaxes to mine minerals. Requirements This command requires you to have a pick equipped. This command requires commands/permissions#intro Emotes permissions. Examples /mine</text>
@@ -480,7 +480,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#opencrate</url>
+    <url>/mantaro-wiki/commands/currency-commands#-opencrate</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /opencrate [Commands]</fullTitle>
     <text>
       <text>Open one of your Lootboxes. Options crate Optional The name of the crate to open. If left empty it will attempt to open the default crate. Requirements This command requires you to have a crate key to open it. You can buy one from the market. This command requires commands/permissions#intro Emotes permissions. Examples /opencrate /opencrate crate: gem premium crate /opencrate crate: treasure</text>
@@ -488,7 +488,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#pet</url>
+    <url>/mantaro-wiki/commands/currency-commands#-pet</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /pet [Commands]</fullTitle>
     <text>
       <text>Allows you to buy a pet so that you can take care of it. A pet will also help you out with other commands and give you several bonuses. Subcommands Feed Feeds your pet. Rename Renames your pet. Hydrate Hydrates your pet. Pet Pets your pet. Cute. Info Shows info about a pet type. List Lists the available pet types. Status Shows the status of your current pet. Explanation Shows an explanation about the pet system. Check Check thirst, hunger and dust of your current pet. Level Shows the level and experience of your current pet. Clean Cleans your pet when it's too dusty. Costs 600 credits. Choice Lets you choose whether you want to use a personal or marriage pet. Buy Buys a pet to have adventures with. You need to buy a pet house in market first. Sell Sells this pet. This will reset all pet stats. Just like buying a new tamagotchi. Options Feed Click me! Options for the Feed Subcommand item Required The item to feed your pet with. amount Optional The amount of food to give the pet. full Optional Give all the food possible. Makes it so amount is ignored. Rename Click me! Options for the Rename Subcommand name Required The new name for your pet. Hydrate Click me! Options for the Hydrate Subcommand amount Optional The amount of water to give the pet. full Optional Give all the water possible. Makes it so amount is ignored. Info Click me! Options for the Info Subcommand type Required The pet type to check. Choice Click me! Options for the Choice Subcommand type Required The type to use. Either marriage or personal. Buy Click me! Options for the Buy Subcommand type Required The pet type. name Required The pet name. Note: The Subcommands Pet , List , Status , Explanation , Check , Level , Clean and Sell have no options. Requirements Most of the subcommands require you to already own a pet to use them. The Feed subcommand requires you to have bought the appropiate food for your pet from the market. The Hydrate subcommand requires you to have bought Water Bottles from the market. Examples /pet info type: Dog /pet list /pet buy type: Dog name: Doggo /pet pet /pet hydrate full: True /pet sell /pet clean /pet choice type: Marriage Pet</text>
@@ -496,7 +496,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#profile</url>
+    <url>/mantaro-wiki/commands/currency-commands#-profile</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /profile [Commands]</fullTitle>
     <text>
       <text>Look at your own or the given person's profile. Subcommands Stats See profile statistics. Timezone Sets your profile timezone. Show Shows your current profile. Language Sets your profile language. Togglelegacy Toggles the display of legacy credits. Toggleaction Toggles the ability to do action commands to you. Widgets Set the profile widget order. Note: This feature is only available for basics/premium-perks#perks-user-perks Premium users or basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon users. Hidetag Hide or show the member id/tag from profile/waifu ls. Description Sets your profile description. This will open a modal (pop-up). Autoequip Toggles auto-equipping a new tool on break. Use disable to disable it. Options Stats Click me! Options for the Stats Subcommand user Optional The user to see the stats of. Timezone Click me! Options for the Timezone Subcommand timezone Required The timezone to use. Show Click me! Options for the Show Subcommand user Optional The user to see the profile of. Language Click me! Options for the Language Subcommand lang Required The language to use. See /mantaro language for a list. Widgets Click me! Options for the Widgets Subcommand order Optional The widget order. Use reset to reset them. If nothing is specified, it prints a list. reset Optional Set to true if you want to reset the order. Description Click me! Options for the Description Subcommand clear Optional Clear your profile description if set to true. Autoequip Click me! Options for the Autoequip Subcommand disable Optional Whether to disable it. Note: The Subcommands Togglelegacy , Toggleaction and Hidetag have no options. Requirements This command requires commands/permissions#intro Emotes permissions. Examples /profile show /profile show user: @Kodehawa#3457 /profile description /profile language lang: es_ES /profile togglelegacy /profile widgets order: header, credits, reputation, birthday, marriage, badges /profile timezone timezone: GMT+2 /profile toggleaction</text>
@@ -504,7 +504,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#repair</url>
+    <url>/mantaro-wiki/commands/currency-commands#-repair</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /repair [Commands]</fullTitle>
     <text>
       <text>Allows you to repair broken items using your equipped wrench. For more in-depth information you can go to our currency/101 Currency 101 page. Subcommands Item Repair an item. List List all items that can be repaired. Options Item Click me! Options for the Item Subcommand item Required The item to repair. Note: The List Subcommand has no options. Requirements This command requires you to have the items needed to repair the specified item. This command requires commands/permissions#intro Emotes permissions. Examples /repair item item: Broken Sparkle Pickaxe /repair list</text>
@@ -512,7 +512,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#reputation</url>
+    <url>/mantaro-wiki/commands/currency-commands#-reputation</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /reputation [Commands]</fullTitle>
     <text>
       <text>Give someone Reputation. Options user Required The user to give reputation to. check Optional Check if you can give reputation Examples /reputation user: @Kodehawa#3457 /reputation check: True</text>
@@ -520,7 +520,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#salvage</url>
+    <url>/mantaro-wiki/commands/currency-commands#-salvage</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /salvage [Commands]</fullTitle>
     <text>
       <text>Allows you to salvage broken items. If a wrench isn't specified Mantaro will attempt to cast item with any available wrenches in your inventory. Subcommands Item Salvages an item. List List all salvageable items. Options Item Click me! Options for the Item Subcommand item Required The item to salvage. Note: The List Subcommand has no options. Requirements This command requires you to have the items needed to repair the specified item. This command requires commands/permissions#intro Emotes permissions. Examples /salvage item item: Broken Sparkle Pickaxe /salvage list</text>
@@ -528,7 +528,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#sell</url>
+    <url>/mantaro-wiki/commands/currency-commands#-sell</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /sell [Commands]</fullTitle>
     <text>
       <text>Allows you to sell an item in the Market. Options item Required The name of the item to sell. amount Optional The amount of the item to sell. Requirements This command requires you to have the specified item on your inventory. Examples /sell item: Diamond /sell item: Diamond amount: 5</text>
@@ -536,7 +536,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#slots</url>
+    <url>/mantaro-wiki/commands/currency-commands#-slots</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /slots [Commands]</fullTitle>
     <text>
       <text>Uses the amount of credits specified to roll the slot machine. You can also buy a "Slot-Ticket" and use that instead. The current credit max you can use at once is 50000, for tickets you can use a max of 50 at once (update 5.7). Options credits Optional The amount of credits to put on the slot machine. You can also express this on K (10k is 10000, for example) useticket Optional Whether to use a ticket. False by default. If you specify this, the credit amount will be ignored. ticketamount Optional The amount of credits to put on the slot machine. You can also express this on K (10k is 10000, for example) Requirements This command requires you to have credits to gamble away. The ticketamount option requires you to have Slot Tickets in your inventory. Examples /slots /slots credits: 500 /slots useticket: True ticketamount: 5</text>
@@ -544,7 +544,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#tools</url>
+    <url>/mantaro-wiki/commands/currency-commands#-tools</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /tools [Commands]</fullTitle>
     <text>
       <text>Check the durability and status of your tools. Examples /tools</text>
@@ -552,7 +552,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#transfer</url>
+    <url>/mantaro-wiki/commands/currency-commands#-transfer</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /transfer [Commands]</fullTitle>
     <text>
       <text>Transfer someone money. You can transfer a max of 500,000 credits, and you cannot transfer to/from a new Discord account (update 6.0.5). Options user Required The user to transfer money to. money Required The amount to transfer to the user. Requirements This command requires you to have credits to transfer. Examples /transfer user: @Kodehawa#3457 money:420</text>
@@ -560,7 +560,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#transferitems</url>
+    <url>/mantaro-wiki/commands/currency-commands#-transferitems</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /transferitems [Commands]</fullTitle>
     <text>
       <text>Transfer one of your items to someone else. Options user Required The user to transfer money to. Needs to be in the server you're running the command in. item Required The item to transfer. Can be a shorten name. amount Optional The amount of the item to transfer. If not specified, this is 1. Maximum is 5000. Requirements This command requires you to have the item to be transferred. Examples /transferitems user: @Kodehawa#3457 item: Diamond Pickaxe /transferitems user: @Kodehawa#3457 item: Apple amount: 500</text>
@@ -568,7 +568,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#unequip</url>
+    <url>/mantaro-wiki/commands/currency-commands#-unequip</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /unequip [Commands]</fullTitle>
     <text>
       <text>Allows you to unequip previously equipped items. Depending on how damaged the item is, you may get a broken version of the item. Options item Required The item to unequip. Requirements This command requires you to have an item equipped for the specified field. Examples /unequip item: Equipped Pickaxe /unequip item: Equipped Axe</text>
@@ -576,7 +576,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#use</url>
+    <url>/mantaro-wiki/commands/currency-commands#-use</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /use [Commands]</fullTitle>
     <text>
       <text>Allows you to use certain items. For more in-depth information you can go to our currency/101 Currency 101 page. Subcommands Item Use a interactive item. List Shows all interactive items Options Item Click me! Options for the Item Subcommand item Required The item to use. amount Optional The amount of the item to use. Maximum of 15. Requirements This command requires you to have the item you specified to be used. This command requires commands/permissions#intro Emotes permissions. Examples /use item item: Energy Beverage /use item item: Haste Potion amount: 5 /use list</text>
@@ -584,7 +584,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/currency-commands#waifu</url>
+    <url>/mantaro-wiki/commands/currency-commands#-waifu</url>
     <fullTitle>Mantaro Wiki: 💸 Currency Commands, /waifu [Commands]</fullTitle>
     <text>
       <text>Manage your waifus. Using the command on its own (no subcommands) will show you a list of your own waifus. Subcommands Unclaim Unclaims a waifu. Claim Claim a waifu. Yeah, this is all fiction. List Show a list of all your waifu(s) and their value. Stats Shows your waifu stats or the stats or someone else. Claimlock Locks you from being claimed. Use remove to remove it. Optout Opt-out of the waifu stuff. This will disable the waifu system permanently. Avoid: THIS OPTION IS PERMANENT AND CANNOT BE REVERSED. USE ONLY IF ABSOLUTELY SURE. Buyslow Buys a new waifu slot. Maximum slots are 30, costs get increasingly higher. Options Unclaim Click me! Options for the Unclaim Subcommand user Required The user to unclaim. It can also be the ID of the user. Note: This command works globally, meaning that you can unclaim a waifu on any server by using their ID. This is useful if you want to unclaim a waifu on a server that you aren't in. Check the Options for the List Subcommand to know how to get their ID. Claim Click me! Options for the Claim Subcommand user Required The user to claim. Stats Click me! Options for the Stats Subcommand user Optional The user to check. Yourself, if nothing specified. Claimlock Click me! Options for the Claimlock Subcommand remove Optional Removes claimlock. List Click me! Options for the List Subcommand id Optional Whether to show the user ID or not. Note: The Buyslow Subcommands have no options. Requirements The Buyslot subcommand requires you to have enough credits to buy more slots. The Claim subcommand requires that the user you are trying to claim is not claim locked. The Unclaim subcommand requires you to have enough credits to unclaim the user. Examples /waifu stats /waifu stats user: @Kodehawa#3457 /waifu buyslot /waifu claim user: @Kodehawa#3457 /waifu unclaim user: @Kodehawa#3457 /waifu list /waifu claimlock /waifu claimlock remove: True</text>
@@ -608,7 +608,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands#danbooru</url>
+    <url>/mantaro-wiki/commands/image-commands#-danbooru</url>
     <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /danbooru [Commands]</fullTitle>
     <text>
       <text>Returns an image from danbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe for Work Image rating will be used. Warning: This is a NSFW command. It will not work outside NSFW channels. Options rating Optional The image rating. Safe for Work Image is the default. tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Ratings Safe for Work Image Questionable/Potentially Unsafe Image Not Safe for Work (NSFW/Explicit) Image Random (any of the above) Image Requiements This command can only be used in NSFW channels. Examples /danbooru /danbooru tags: yuri rating: Not Safe for Work (NSFW/Explicit) Image /danbooru rating: Random (any of the above) Image</text>
@@ -616,7 +616,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands#e621</url>
+    <url>/mantaro-wiki/commands/image-commands#-e621</url>
     <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /e621 [Commands]</fullTitle>
     <text>
       <text>Returns an image from e621. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag Warning: This is a NSFW command. It will not work outside NSFW channels. Options tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Requiements This command can only be used in NSFW channels. Examples /e621 /e621 tags: yuri</text>
@@ -624,7 +624,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands#e926</url>
+    <url>/mantaro-wiki/commands/image-commands#-e926</url>
     <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /e926 [Commands]</fullTitle>
     <text>
       <text>Returns an image from e926. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag Warning: This is a NSFW command. It will not work outside NSFW channels. Options tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Requiements This command can only be used in NSFW channels. Examples /e926 /e926 tags: yuri</text>
@@ -632,7 +632,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands#gelbooru</url>
+    <url>/mantaro-wiki/commands/image-commands#-gelbooru</url>
     <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /gelbooru [Commands]</fullTitle>
     <text>
       <text>Returns an image from gelbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe for Work Image rating will be used. Warning: This is a NSFW command. It will not work outside NSFW channels. Options rating Optional The image rating. Safe for Work Image is the default. tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Ratings Safe for Work Image Questionable/Potentially Unsafe Image Not Safe for Work (NSFW/Explicit) Image Random (any of the above) Image Requiements This command can only be used in NSFW channels. Examples /gelbooru /gelbooru tags: yuri rating: Not Safe for Work (NSFW/Explicit) Image /gelbooru rating: Random (any of the above) Image</text>
@@ -640,7 +640,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands#image</url>
+    <url>/mantaro-wiki/commands/image-commands#-image</url>
     <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /image [Commands]</fullTitle>
     <text>
       <text>Contains various imageboard commands. Subcommands Catgirl Sends images of catgirl(s). Maybe. Cat Sends a random cat image. Really cute stuff. Dog Sends a random dog image. Woof woof. Options Catgirl Click me! Options for the Catgirl Subcommand nsfw Optional Whether to send a NSFW image. Warning: This is a NSFW command. It will not work outside NSFW channels. Note: The Cat and Dog subcommands have no options. Examples /image catgirl /image catgirl nsfw: true /image cat /image dog</text>
@@ -648,7 +648,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands#konachan</url>
+    <url>/mantaro-wiki/commands/image-commands#-konachan</url>
     <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /konachan [Commands]</fullTitle>
     <text>
       <text>Returns an image from konachan. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe for Work Image rating will be used. Warning: This is a NSFW command. It will not work outside NSFW channels. Options rating Optional The image rating. Safe for Work Image is the default. tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Ratings Safe for Work Image Questionable/Potentially Unsafe Image Not Safe for Work (NSFW/Explicit) Image Random (any of the above) Image Requiements This command can only be used in NSFW channels. Examples /konachan /konachan tags: yuri rating: Not Safe for Work (NSFW/Explicit) Image /konachan rating: Random (any of the above) Image</text>
@@ -656,7 +656,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands#rule34</url>
+    <url>/mantaro-wiki/commands/image-commands#-rule34</url>
     <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /rule34 [Commands]</fullTitle>
     <text>
       <text>Returns an image from rule34. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag Warning: This is a NSFW command. It will not work outside NSFW channels. Options tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Requiements This command can only be used in NSFW channels. Examples /rule34 /rule34 tags: yuri</text>
@@ -664,7 +664,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands#safebooru</url>
+    <url>/mantaro-wiki/commands/image-commands#-safebooru</url>
     <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /safebooru [Commands]</fullTitle>
     <text>
       <text>Returns an image from safebooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag Warning: This is a NSFW command. It will not work outside NSFW channels. Options tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Requiements This command can only be used in NSFW channels. Examples /safebooru /safebooru tags: yuri</text>
@@ -672,7 +672,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/image-commands#yandere</url>
+    <url>/mantaro-wiki/commands/image-commands#-yandere</url>
     <fullTitle>Mantaro Wiki: 🖼️ Image Commands, /yandere [Commands]</fullTitle>
     <text>
       <text>Returns an image from yandere. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the Safe for Work Image rating will be used. Warning: This is a NSFW command. It will not work outside NSFW channels. Options rating Optional The image rating. Safe for Work Image is the default. tags Optional The image tag you're looking for. You can see a list of valid tags on the imageboard website. Ratings Safe for Work Image Questionable/Potentially Unsafe Image Not Safe for Work (NSFW/Explicit) Image Random (any of the above) Image Requiements This command can only be used in NSFW channels. Examples /yandere /yandere tags: yuri rating: Not Safe for Work (NSFW/Explicit) Image /yandere rating: Random (any of the above) Image</text>
@@ -680,7 +680,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/fun-commands#8ball</url>
+    <url>/mantaro-wiki/commands/fun-commands#-8ball</url>
     <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /8ball [Commands]</fullTitle>
     <text>
       <text>Ask the magic 8ball a question. Options question Required The question to ask. Examples /8ball question: Will Mantaro ever be consistent?</text>
@@ -688,7 +688,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/fun-commands#anime</url>
+    <url>/mantaro-wiki/commands/fun-commands#-anime</url>
     <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /anime [Commands]</fullTitle>
     <text>
       <text>Searches for the anime specified using https://kitsu.io/ Kitsu.io. You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the anime/manga to look for. Examples /anime name: One Piece /anime name: Hunter x Hunter</text>
@@ -696,7 +696,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/fun-commands#character</url>
+    <url>/mantaro-wiki/commands/fun-commands#-character</url>
     <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /character [Commands]</fullTitle>
     <text>
       <text>Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the character to look for. Examples /character name: Luffy /character name: Gon Freecss</text>
@@ -704,7 +704,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/fun-commands#coinflip</url>
+    <url>/mantaro-wiki/commands/fun-commands#-coinflip</url>
     <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /coinflip [Commands]</fullTitle>
     <text>
       <text>Flip the coin once or multiple times. Options times Optional The amount of times to flip the coin. Examples /coinflip /coinflip times: 50</text>
@@ -712,15 +712,15 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/fun-commands#love</url>
+    <url>/mantaro-wiki/commands/fun-commands#-love</url>
     <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /love [Commands]</fullTitle>
     <text>
-      <text>Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261</text>
+      <text>Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. otheruser Optional The other user to compare with. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261 otheruser: @Kodehawa#3457</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/fun-commands#ratewaifu</url>
+    <url>/mantaro-wiki/commands/fun-commands#-ratewaifu</url>
     <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /ratewaifu [Commands]</fullTitle>
     <text>
       <text>Rate your waifu from 0-100. Results may vary. Options user Required The user to rate. Examples /ratewaifu user: @Kodehawa#3457 /ratewaifu user: @Adam#9261</text>
@@ -728,7 +728,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/fun-commands#roll</url>
+    <url>/mantaro-wiki/commands/fun-commands#-roll</url>
     <fullTitle>Mantaro Wiki: 🎲 Fun Commands, /roll [Commands]</fullTitle>
     <text>
       <text>Roll an any-sided dice a 1 or more times. By default, this command will roll a 6-sized dice 1 time. Options times Optional The amount of times to roll, in d20 format. Examples /roll /roll times: 5d1000 /roll times: 1d20</text>
@@ -736,7 +736,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/moderation-commands#mute</url>
+    <url>/mantaro-wiki/commands/moderation-commands#-mute</url>
     <fullTitle>Mantaro Wiki: 🔨 Moderation Commands, /mute [Commands]</fullTitle>
     <text>
       <text>Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted. Options user Required The user to mute. time Optional The amount of time to mute the user for. For example 1m20s. The format is, for example, 1h20m10s for 1 hour, 20 minutes and 10 seconds. If not specified, this uses the default mute timeout set for this server, if set. reason Optional The reason of the mute. This will show in the logs, if enabled. Requirements This command requires either commands/permissions#intro Ban or Kick permissions. Examples /mute user: @Adam#9261 /mute user: @Adam#9261 time: 1h20m10s /mute user: @Adam#9261 reason: good meme</text>
@@ -752,7 +752,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/moderation-commands#prune</url>
+    <url>/mantaro-wiki/commands/moderation-commands#-prune</url>
     <fullTitle>Mantaro Wiki: 🔨 Moderation Commands, /prune [Commands]</fullTitle>
     <text>
       <text>Delete messages (excluding messages that are older than 14 days). Minimum of messages to delete is 5 and maximum is 100. Options amount Required The amount of messages to prune, from 5 to 100. user Optional Only prune from this specific user. botonly Optional Only prune messages from bots. skippinned Optional Don't prune pinned messages. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Messages permissions. Examples /prune amount: 10 /prune amount: 10 user: @Adam#9261 /prune amount: 10 botonly: true /prune amount: 10 skippinned: true</text>
@@ -760,7 +760,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/moderation-commands#unmute</url>
+    <url>/mantaro-wiki/commands/moderation-commands#-unmute</url>
     <fullTitle>Mantaro Wiki: 🔨 Moderation Commands, /unmute [Commands]</fullTitle>
     <text>
       <text>Unmute the mentioned user if muted. Options user Required The user to unmute. reason Optional The reason of the unmute. This will show in the logs, if enabled. Requirements This command requires either commands/permissions#intro Ban or Kick permissions. Examples /unmute user: @Adam#9261 /unmute user: @Adam#9261 reason: good meme</text>
@@ -768,7 +768,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/info-commands#avatar</url>
+    <url>/mantaro-wiki/commands/info-commands#-avatar</url>
     <fullTitle>Mantaro Wiki: 💭 Info Commands, /avatar [Commands]</fullTitle>
     <text>
       <text>Grab your own avatar or the given person's avatar. Options user Optional The user to get the avatar of. Examples /avatar /avatar user: @Kodehawa#3457</text>
@@ -776,7 +776,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/info-commands#help</url>
+    <url>/mantaro-wiki/commands/info-commands#-help</url>
     <fullTitle>Mantaro Wiki: 💭 Info Commands, /help [Commands]</fullTitle>
     <text>
       <text>Get all commands or, if you specify a command, get more information on the command specified. Options command Optional The command to check help for. You can use sub-commands too. Examples /help /help command: profile /help command: cast item</text>
@@ -784,7 +784,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/info-commands#info</url>
+    <url>/mantaro-wiki/commands/info-commands#-info</url>
     <fullTitle>Mantaro Wiki: 💭 Info Commands, /info [Commands]</fullTitle>
     <text>
       <text>The hub for (user/role/server) info related commands. Sub-commands Role See information about a role. Server See your server's current stats. User See information about specific users. Options Role Click me! Options for the Role Subcommand role Required The role you want to see the information of. User Click me! Options for the Role Subcommand user Optional The user you want to look. Note: The Server Subcommand has no options. Examples /info user /info user user: @Kodehawa#3457 /info server /info role role: Member</text>
@@ -792,7 +792,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/info-commands#ping</url>
+    <url>/mantaro-wiki/commands/info-commands#-ping</url>
     <fullTitle>Mantaro Wiki: 💭 Info Commands, /ping [Commands]</fullTitle>
     <text>
       <text>Check how fast Mantaro is responding. Examples /ping</text>
@@ -800,7 +800,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/info-commands#mantaro</url>
+    <url>/mantaro-wiki/commands/info-commands#-mantaro</url>
     <fullTitle>Mantaro Wiki: 💭 Info Commands, /mantaro [Commands]</fullTitle>
     <text>
       <text>Shows useful bot information. Subcommands Shard Returns in what shard I am. Shardlist Returns information about shards. Support Shows a link to the support server. Welcome Shows the message the bot sends when it's added to a server. Donate Shows the donation methods in case you want to support Mantaro. Invite Gives you a bot OAuth invite link and some other important links. Language Shows how to change the server and user languages, along with a language list. Examples /mantaro shard /mantaro shardlist /mantaro support /mantaro welcome /mantaro donate /mantaro invite /mantaro language</text>
@@ -808,7 +808,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/info-commands#stats</url>
+    <url>/mantaro-wiki/commands/info-commands#-stats</url>
     <fullTitle>Mantaro Wiki: 💭 Info Commands, /stats [Commands]</fullTitle>
     <text>
       <text>Gets the bot technical information. Nothing all that interesting, but shows cute stats. Examples /stats</text>
@@ -816,7 +816,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/utility-commands#birthday</url>
+    <url>/mantaro-wiki/commands/utility-commands#-birthday</url>
     <fullTitle>Mantaro Wiki: ✏️Utility Commands, /birthday [Commands]</fullTitle>
     <text>
       <text>Set/Remove your own birthday or show everyone with a birthday this month. The date format is dd-mm. This means day first and month second. Subcommands Remove Removes your set birthday date. List Gives all of the birthdays for this server. Month Checks the current birthday date for the specified month. Allowserver Allows the server where you send this command to announce your birthday. Denyserver Denies the server where you send this command from announcing your birthday. Set Sets your birthday date. Only useful if the server has enabled this functionality. Options Month Click me! Options for the Month Subcommand month Optional The month, in number format (January is 1, etc). Set Click me! Options for the Set Subcommand date Required A date in dd-MM format (13-02 for February 13th for example). Note: The Remove , List , Allowserver and Denyserver Subcommands have no options. Requirements The Remove subcommand requires you to have already set a birthday. The List and Month subcommand require users to use the allowserver subcommand to show them. The Denyserver subcommand requires you to have already allowed yourself in a server. Examples /birthday remove /birthday list /birthday month month: 3 /birthday allowserver /birthday denyserver /birthday set date: 13-02</text>
@@ -824,7 +824,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/utility-commands#custom</url>
+    <url>/mantaro-wiki/commands/utility-commands#-custom</url>
     <fullTitle>Mantaro Wiki: ✏️Utility Commands, /custom [Commands]</fullTitle>
     <text>
       <text>Creates a custom command. For further info check our guides/custom-commands Custom Commands Guide. Subcommands Lockcommand Lock a custom command. Remove Remove a custom command. Unlockcommand Unlock a custom command. Rename Rename a custom command. List List all custom commands. Raw View a custom command in raw form. Eval Eval the result of a custom command. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. View Views the response of a custom command. Deleteresponse Deletes a response from a custom command. Info Shows information about a custom command. Add Add a custom command. This will open a pop-up. Edit Edits a custom command. This will open a pop-up for content. Options Lockcommand Click me! Options for the Lockcommand Subcommand name Required The custom command to lock. Remove Click me! Options for the Remove Subcommand name Required The custom command to remove. Unlockcommand Click me! Options for the Unlockcommand Subcommand name Required The custom command to unlock. Rename Click me! Options for the Rename Subcommand name Required The name of the custom command to rename. new Required The new name to use. Raw Click me! Options for the Raw Subcommand name Required The name of the custom command to view. View Click me! Options for the View Subcommand name Required The name of the custom command to view. response Required The response number of the response to view (shown on /custom raw ). Deleteresponse Click me! Options for the Deleteresponse Subcommand name Required The name of the custom command to delete a response of. response Required The response number of the response to delete (shown on /custom raw ). Info Click me! Options for the Info Subcommand name Required The name of the custom command to view info of. Add Click me! Options for the Add Subcommand nsfw Required Whether the command is NSFW or not. Edit Click me! Options for the Edit Subcommand name Required The name of the custom command to edit. response Required The response number of the response to edit. nsfw Required Whether the entire command should be marked as nsfw. Note: The List and Eval Subcommands have no options. Requirements If normal users aren't allowed to make custom commands with one of our basics/server-configuration opts options then this command requires commands/permissions#intro Admin permissions. Examples /custom lockcommand name: test /custom remove name: test /custom unlockcommand name: test /custom rename name: test new: test2 /custom raw name: test /custom add nsfw: false /custom edit name: test response: 1 nsfw: true</text>
@@ -832,7 +832,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/utility-commands#iam</url>
+    <url>/mantaro-wiki/commands/utility-commands#-iam</url>
     <fullTitle>Mantaro Wiki: ✏️Utility Commands, /iam [Commands]</fullTitle>
     <text>
       <text>Applies a self-assignable role to you or lists all self-assignable roles. Roles have to be added by an Admin one of the opts commands. Subcommands List List all autoroles. Not Remove an autorole from you. Add Get an autorole assigned to you. Options Not Click me! Options for the Not Subcommand role Required The role to remove. Add Click me! Options for the Add Subcommand role Required The role to assign. Note: The List Subcommand has no options. Requirements This command requires a self-assignable role to have been set up on the server. Examples /iam list /iam not role: Red /iam add role: Blue</text>
@@ -840,7 +840,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/utility-commands#poll</url>
+    <url>/mantaro-wiki/commands/utility-commands#-poll</url>
     <fullTitle>Mantaro Wiki: ✏️Utility Commands, /poll [Commands]</fullTitle>
     <text>
       <text>Create a poll with options. The person that created the poll can cancel it by typing &amp;cancelpoll . If an url is used then it must be a direct link to the image. The maximum poll runtime is 45 minutes. Options name Required The name of the poll. time Required The time the poll is gonna run for. The format is as follows 1m30s for 1 minute and 30 seconds. Maximum poll runtime is 45 minutes. options Required The options to add. Minimum is 2 and maximum is 9. For instance: Pizza,Spaghetti,Pasta (Enclose options with multiple words in double quotes, there has to be no spaces between the commas) image Optional The image to embed to the poll. Examples /poll name: test poll time: 10m30s options: hi,wew,owo</text>
@@ -848,7 +848,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/utility-commands#premium</url>
+    <url>/mantaro-wiki/commands/utility-commands#-premium</url>
     <fullTitle>Mantaro Wiki: ✏️Utility Commands, /premium [Commands]</fullTitle>
     <text>
       <text>Check or activate premium status for a user or server. Subcommands Activate Activates a premium key. User Checks the premium status of a user. Server Checks the premium status of this server. Options Activate Click me! Options for the Activate Subcommand key Required The key to activate. If it's a server key, make sure to run this command in the server where you want to enable premium on. User Click me! Options for the User Subcommand user Optional The user to check for. Yourself if empty. Note: The Server Subcommand has no options. Examples /premium activate key: a4e98f07-1a32-4dcc-b53f-c540214d54ec /premium user /premium server</text>
@@ -856,7 +856,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/utility-commands#remindme</url>
+    <url>/mantaro-wiki/commands/utility-commands#-remindme</url>
     <fullTitle>Mantaro Wiki: ✏️Utility Commands, /remindme [Commands]</fullTitle>
     <text>
       <text>Reminds you of something after the given time ran out. Mantaro will DM you when the time runs out with the message you specified. Subcommands Add Adds a reminder. Cancel Cancels a reminder. List Lists your reminders. Options Add Click me! Options for the Add Subcommand time Required How much time until I remind you of it. Time is in this format: 1h20m (1 hour and 20m). reminder Required The thing to remind you of. Note: The Cancel and List Subcommands have no options. Requirements The Cancel subcommand requires you to have a reminder set. Examples /remindme add time: 1h20m reminder: do homework /remindme cancel /remindme list</text>
@@ -864,7 +864,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/commands/utility-commands#time</url>
+    <url>/mantaro-wiki/commands/utility-commands#-time</url>
     <fullTitle>Mantaro Wiki: ✏️Utility Commands, /time [Commands]</fullTitle>
     <text>
       <text>Shows the current time in the timezone set on your profile or the time in the timezone that was specified. If a user is specified it will show the timezone of that user (if they have one set). Options timezone Optional The timezone in GMT or UTC offset (Example: GMT-3) or a ZoneId (such as Europe/London). If empty it will show the timezone of the user. user Optional The user to see the timezone of. Examples /time /time timezone: Europe/London /time user: @Kodehawa#3457</text>
@@ -888,7 +888,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/welcome-and-leave-messages#importantmain-commands</url>
+    <url>/mantaro-wiki/guides/welcome-and-leave-messages#important-main-commands</url>
     <fullTitle>Mantaro Wiki: Welcome And Leave Messages, Important/Main commands [Guides]</fullTitle>
     <text>
       <text>1) What is it for? ~>opts usermessage join channel &lt;channel name> Used for: Setting the channel for the welcome message. 2) What is it for? ~>opts usermessage leave channel &lt;channel name> Used for: Setting the channel for the leave message. 3) What is it for? ~>opts usermessage joinmessage &lt;your text here> Used for: Setting your welcome message. 4) What is it for? ~>opts usermessage leavemessage &lt;your text here> Used for: Setting your leave message.</text>
@@ -915,7 +915,7 @@
     <url>/mantaro-wiki/guides/welcome-and-leave-messages#using-modifiers</url>
     <fullTitle>Mantaro Wiki: Welcome And Leave Messages, Using Modifiers [Guides]</fullTitle>
     <text>
-      <text>So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view all modifiers guides/modifiers#modifiers-for-welcomeleave-messages here. For the sake of this tutorial we will only cover $(event.user.mention) , $(event.user.username) , $(event.guild.name) and $(event.guild.totalusers) .So, let's say you want to mention the user that joined. Tell them how many users your server has with them joining and also include the server name for simple aesthetics. For this you would do something like the following: md ~>opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member! null https://i.imgur.com/7nGWxjr.png image To break this down. $(event.guild.name) is replaced with the name of the server. $(event.user.mention) is replaced with the mention of the user that just joined. $(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.Now let's say you want to do something similar for the leave message. We will use: md ~>opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers). null https://i.imgur.com/fuyNDjq.png image Now that you understand modifiers let's move to the final level.</text>
+      <text>So first of all. What are modifiers? Basically modifiers are what you can use to tell the message to for instance mention the user that joined. You can view all modifiers guides/modifiers#modifiers-for-welcome-and-leave-messages here. For the sake of this tutorial we will only cover $(event.user.mention) , $(event.user.username) , $(event.guild.name) and $(event.guild.totalusers) .So, let's say you want to mention the user that joined. Tell them how many users your server has with them joining and also include the server name for simple aesthetics. For this you would do something like the following: md ~>opts usermessage joinmessage Welcome to $(event.guild.name), $(event.user.mention). You are our $(event.guild.totalusers)th member! null https://i.imgur.com/7nGWxjr.png image To break this down. $(event.guild.name) is replaced with the name of the server. $(event.user.mention) is replaced with the mention of the user that just joined. $(event.guild.totalusers) is replaced with the total member count of the server including the person that just joined.Now let's say you want to do something similar for the leave message. We will use: md ~>opts usermessage leavemessage $(event.user.username) just left $(event.guild.name). Current Members $(event.guild.totalusers). null https://i.imgur.com/fuyNDjq.png image Now that you understand modifiers let's move to the final level.</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -936,7 +936,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/welcome-and-leave-messages#otherextra-commands</url>
+    <url>/mantaro-wiki/guides/welcome-and-leave-messages#other-extra-commands</url>
     <fullTitle>Mantaro Wiki: Welcome And Leave Messages, Other/Extra commands [Guides]</fullTitle>
     <text>
       <text>[1] What is it for? ~>opts usermessage resetjoinmessage Used for: Resetting the welcome message. [2] What is it for? ~>opts usermessage resetleavemessage Used for: Resetting the leave message. [3] What is it for? ~>opts server ignorebots joinleave toggle Used for: Ignoring bots when they join or leave the server. [4] What is it for? ~>opts usermessage joinmessages add &lt;your text here> Used for: Adding aditional welcome messages. [5] What is it for? ~>opts usermessage leavemessages add &lt;your text here> Used for: Adding aditional leave messages. [6] What is it for? ~>opts usermessage joinmessages list Used for: Listing all your welcome messages. [7] What is it for? ~>opts usermessage leavemessages list Used for: Listing all your leave messages. [8] What is it for? ~>opts usermessage joinmessages remove &lt;index> Used for: Removing the specified welcome messages. [9] What is it for? ~>opts usermessage joinmessages remove &lt;index> Used for: Removing the specified leave messages. Congrats! Now you are a master of welcome and leave messages within Mantaro!</text>
@@ -952,7 +952,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/birthday-announcer#importantmain-commands</url>
+    <url>/mantaro-wiki/guides/birthday-announcer#important-main-commands</url>
     <fullTitle>Mantaro Wiki: Birthday Announcer, Important/Main commands [Guides]</fullTitle>
     <text>
       <text>1) What is it for? /birthday set date: dd-MM Used for: Specifying your birthday (dd-MM format) 2) What is it for? ~>opts birthday enable &lt;channel name> &lt;role name> Used for: Setting up the Birthday Announcer. 3) What is it for? ~>opts birthday message set &lt;message> Used for: Setting a Custom Birthday Message. 4) What is it for? /birthday allowserver Used for: Allowing your birthday to be announced in the server you use this command on.</text>
@@ -992,7 +992,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/birthday-announcer#otherextra-commands</url>
+    <url>/mantaro-wiki/guides/birthday-announcer#other-extra-commands</url>
     <fullTitle>Mantaro Wiki: Birthday Announcer, Other/Extra commands [Guides]</fullTitle>
     <text>
       <text>[1] What is it for? ~>opts birthday disable Used for: Removes the Birthday Announcer. [2] What is it for? ~>opts birthday test &lt;@mention> Used for: Allows you to test the Birthday Announcer. Doesn't process embeds. [3] What is it for? ~>opts birthday message clear Used for: Removes the custom message you had and restores the default message for the Birthday Announcer. [4] What is it for? ~>opts commands birthdayblacklist add/remove &lt;@mention> Used for: Allows you to blacklist a user from having their birthday announced on the server.</text>
@@ -1000,42 +1000,42 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/custom-commands#what-is-v3</url>
-    <fullTitle>Mantaro Wiki: Custom Commands, What is v3? [Guides]</fullTitle>
+    <url>/mantaro-wiki/guides/custom-commands#what-are-custom-commands</url>
+    <fullTitle>Mantaro Wiki: Custom Commands, What are Custom Commands? [Guides]</fullTitle>
     <text>
-      <text>Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience The custom command creation in Mantaro can be as complex or simple as you want. She's pretty flexible about it.v3 is the future of custom commands. It features a far more customizable and cleaner experience compared to the original custom commands. The name v3 originates from the fact that it is the third instance of custom command handling.</text>
+      <text>Custom commands are a feature in Mantaro that allows you to create your own commands, and use them in your server. The custom command creation in Mantaro can be as complex or as simple as you want it to be. She can be really flexible about it.</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/custom-commands#how-do-you-use-v3</url>
-    <fullTitle>Mantaro Wiki: Custom Commands, How do you use v3? [Guides]</fullTitle>
+    <url>/mantaro-wiki/guides/custom-commands#important-main-commands</url>
+    <fullTitle>Mantaro Wiki: Custom Commands, Important/Main Commands [Guides]</fullTitle>
     <text>
-      <text>First of all for normal non-embed, non-operative commands there is no actual difference. A general thing to understand is that in order to use v3 you will have to prepend v3: to your custom command contents. However you cannot use v3: with iam:, iamnot: and embed:. For the sake of future migration and ease of reading we will however go over all aspects of custom commands here.Some documentation is done on the Premium bot due to not being a feature in Mantaro at the time of documenting</text>
+      <text>1) What is this for? /custom add nsfw: [True/False] Used for: This will open a pop up that will allow you to insert the content of your Custom Command. 2) What is this for? /custom remove name: [name of custom command] Used for: This will delete the Custom Command you specify. 3) What is this for? /custom edit name: [name of custom command] response: [response # of the custom command] nsfw: [True/False] Used for: This will open a pop up that will allow you to edit the specific response you set, for the command you chose. 4) What is this for? /custom remove name: [name of custom command] Used for: This will delete the Custom Command you specify. 5) What is this for? /custom list Used for: This will show you a list of all the Custom Commands in your server. Tip: Use the /help command to see all the commands for Custom Commands.</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/custom-commands#basics</url>
-    <fullTitle>Mantaro Wiki: Custom Commands, Basics [Guides]</fullTitle>
+    <url>/mantaro-wiki/guides/custom-commands#basic-information</url>
+    <fullTitle>Mantaro Wiki: Custom Commands, Basic Information [Guides]</fullTitle>
     <text>
-      <text>~>custom add/new &lt;name> &lt;response> Will create an additional response if a command with that name already exists, otherwise it will make a new one. ~>custom rm &lt;name> Removes a custom command entirely. ~>custom raw &lt;name> Will show you all responses (including response numbers) of a custom command. ~>custom info &lt;name> Will print detailed information about a custom command. Creator, nsfw flag etc. ~>custom view &lt;name> &lt;response number> Will show you the exact content of a specific response. ~>custom rename &lt;name> Allows you to rename a command. ~>custom edit &lt;name> &lt;response number> &lt;new content> Allows you to edit a specific response of a custom command. ~>custom eval &lt;content> Allows you to evaluate (run without creating it) a custom command. ~>custom import &lt;name> Allows you to import a custom command from another server you are in.</text>
+      <text>Custom commands, be them simple or complex, use pop up forms in some places. Specifically on /custom add and /custom edit . This form will allow you to insert the name and content of your custom command.The pop-up form will look like this:Tip: Remember this, as this will always be where you add the content of your command.</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/custom-commands#simple-commands</url>
-    <fullTitle>Mantaro Wiki: Custom Commands, Simple Commands [Guides]</fullTitle>
+    <url>/mantaro-wiki/guides/custom-commands#types-of-custom-commands</url>
+    <fullTitle>Mantaro Wiki: Custom Commands, Types of Custom Commands [Guides]</fullTitle>
     <text>
-      <text>Okay so let's start off super simple by just creating a very easy custom command. null https://i.imgur.com/7drG29o.png image Seems easy enough right? Well it is. Please note that even if you do use v3 here ( v3:Hi! ) there will be no actual difference (From here on every documentation point that has no difference will say "no noticeable difference"). Obviously you want to know how to go a bit more complex though.</text>
+      <text>There are two types of Custom Commands: Simple and Complex. Simple Commands Simple commands are text only commands. They can be as simple as a single word, or as complex as a paragraph.These do not have any special features, and are just text. How to use them Okay so let's start off super simple by just creating a very easy custom command. First, use the following command:/custom add nsfw: [True/False] After this, fill out the form with the name and content of your command. Here we will call our command hello and the content will be Hello there! Then, simply hit the Submit button, and you're done! Complex Commands (v3) Complex Commands are also known as v3 commands. This is because they are the third version of the custom commands.These can also be simple, but they are usually used for more complex messages, such as embeds, images, and more.While you can recreate simple commands with complex commands, it is not recommended. Simple commands are much easier to use. How to use them Okay so let's start off with the main difference between simple and complex commands. All complex commands start with v3: . This is how Mantaro knows that you want to use a complex command.Note: Almost all of the components used in complex commands follow the syntax @{&lt;component data here>} . You will be able to see this later down in further examples.Now, let's create a simple complex command. We will make a small embed. We will expand on them later. For now, we will also use the help of our https://www.mantaro.site/mantaro-embed-builder/ Embed Builder. Warning: The Embed Builder WILL NOT work on Safari. Please use a different browser. Then, simply hit the Submit button, and you're done!</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/custom-commands#marking-a-command-as-nsfw</url>
-    <fullTitle>Mantaro Wiki: Custom Commands, Marking a command as nsfw [Guides]</fullTitle>
+    <url>/mantaro-wiki/guides/custom-commands#when-to-use-simple-or-complex-commands</url>
+    <fullTitle>Mantaro Wiki: Custom Commands, When to use Simple or Complex Commands [Guides]</fullTitle>
     <text>
-      <text>This is as simple as adding -nsfw to the very end of the command while either using ~>custom new or ~>custom add , example being ~>custom new nsfwtest This is a test -nsfw . Please do note that when you add a new response with custom add and append -nsfw to mark it you will mark all responses as nsfw as it is intended to mark the whole command. Additionally using custom edit to mark a command already made as such does not work it will be treated as if it was raw text.</text>
+      <text>Each type of commands has their own uses. Some can do things that the other can't, and vice versa. Use Case Simple Complex Simple text commands `:icon: check {stroke: "green"}` `:icon: alert-triangle {stroke: "yellow"}` NSFW commands `:icon: check {stroke: "green"}` `:icon: check {stroke: "green"}` Using modifiers `:icon: check {stroke: "green"}` `:icon: check {stroke: "green"}` Iam/Iamnot commands `:icon: check {stroke: "green"}` `:icon: check {stroke: "green"}` Playlist commands `:icon: check {stroke: "green"}` `:icon: slash {stroke: "red"}` Embeds `:icon: slash {stroke: "red"}` `:icon: check {stroke: "green"}` Operative commands `:icon: slash {stroke: "red"}` `:icon: check {stroke: "green"}` Warning: While you can use Complex commands to make Simple commands (Text only commands), it is not recommended. Simple commands are much easier to use and there's no real reason to use Complex in these cases.</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -1043,15 +1043,23 @@
     <url>/mantaro-wiki/guides/custom-commands#modifiers</url>
     <fullTitle>Mantaro Wiki: Custom Commands, Modifiers [Guides]</fullTitle>
     <text>
-      <text>Custom commands support what's called modifiers, which are a set of predetermined custom command actions which might make your commands spicier and better. A list of those can be found guides/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands here, so here we will see examples on how they work. The most useful ones are:$(event.author.mention) Mentions the person who executed the command. $(event.me.mention) Mentions mantaro. $(event.message.raw) Basically you can use this to make a ~>say command. Repeats what's after the command. $(event.channel.mention) Mentions the channel the command was executed on. $(event.channel.topic) Says the channel topic. $(event.guild.name) The name of your server. $(event.guild.owner.name) The server owner's name. $(event.guild.region) The server region. Basically, you can use those in any form of command.To create a command with those modifiers just create a command and use those. ( https://i.imgur.com/HBbUZzt.png Example). Works with multiple responses too. There is only one noticeable difference in v3. The difference is that you can basically set up your own modifiers per command. What that means is that you can define a value that you can then call using its modifier. And example of this would be: null https://i.imgur.com/GdmaZYk.png image</text>
+      <text>Custom commands support what's called modifiers, which are a set of predetermined custom command actions which might make your commands spicier and better. A list of those can be found guides/modifiers#modifiers-for-custom-commands here, so here we will see examples on how they work.The most useful ones are: $(event.author) : Mentions the person who executed the command. $(event.me) : Mentions mantaro. $(event.message) : Basically you can use this to make a ~>say command. Repeats what's after the command. $(event.channel) : Mentions the channel the command was executed on. $(event.channel.topic) : Says the channel topic. $(event.guild.name) : The name of your server. $(event.guild.owner.name) : The server owner's name. $(event.guild.region) : The server region. You can use modifiers in both Simple and Complex commands.To create a command with modifiers, simply create a command like normal and insert the modifier in the place you want the appropriate value to show up. It works with multiple responses too. Custom modifiers With complex commands you can also achieve your own custom modifiers per command. An example of this would be as follows:</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/custom-commands#automating-play-and-iam-roles</url>
-    <fullTitle>Mantaro Wiki: Custom Commands, Automating Play and Iam roles [Guides]</fullTitle>
+    <url>/mantaro-wiki/guides/custom-commands#iam-and-iamnot-role-commands</url>
+    <fullTitle>Mantaro Wiki: Custom Commands, Iam and Iamnot role commands [Guides]</fullTitle>
     <text>
-      <text>You can also automate playing music and claiming/unclaiming self-assignable roles.If you want to create a music shortcut your content will have to be play:&lt;url to song> . Mantaro will then act as if you were using the play command with this url when you run the command.If you want to make the command assign an existing iam role your content will have to be iam:&lt;name of the iam role> If you want to do the opposite and you want the command unassigned an existing iam role you will have to put iamnot:&lt;name of the iam role> . In both cases Mantaro will act as if that person did ~>iam &lt;name of the iam role> and ~>iamnot &lt;name of the iam role> respectively if they run the command. You can also specify your own custom message if you would like to, this works in both v3 and v2. The v2 syntax for this would be iamcustom:&lt;name of the iam role> "&lt;message>" (same for iamnotcustom:). The v3 syntax for this is @{iam/iamnot;name of iam role;message} where the message is optional, meaning you can use iam roles in v3 now, and that combined with embeds, texts, ifs and so on. For more info on iam roles please check basics/server-configuration#autorole-on-join-self-assignable-roles here.</text>
+      <text>You can make a command that will give a role to a user, or remove a role from a user. This can only be done with both Simple and Complex commands.The first requirement you have is having an existing self assignable role set-up. If you don't know how to do that, you can find the commands for it basics/server-configuration#autorole-on-join-self-assignable-roles here.Once you have a self assignable role set-up, you can add one of the following to your Simple command:iam: &lt;name of the role> iamnot: &lt;name of the role> As for Complex commands, you can use the following syntax:@{iam; &lt;name of the role> ; &lt;your message here> } @{iamnot; &lt;name of the role> ; &lt;your message here> } Note: The message here is optional. And the message can be a complex command too. i.e. an embed.Of course, iam will give the role to the user, and iamnot will remove it.</text>
+      <score>STANDARD</score>
+    </text>
+  </entry>
+  <entry>
+    <url>/mantaro-wiki/guides/custom-commands#playing-music-with-custom-commands</url>
+    <fullTitle>Mantaro Wiki: Custom Commands, Playing music with custom commands [Guides]</fullTitle>
+    <text>
+      <text>Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both Simple commands only.To make such a command, you need to add the following to your Simple command:play: &lt;song or playlist link> After this, Mantaro will act as if you had used the /play command, and will play the song or playlist for you.</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -1059,7 +1067,7 @@
     <url>/mantaro-wiki/guides/custom-commands#embeds</url>
     <fullTitle>Mantaro Wiki: Custom Commands, Embeds [Guides]</fullTitle>
     <text>
-      <text>What is new with this in v3? The syntax has changed from embed:&lt;json> to @{embed;&lt;json>} .Additionally, you can now use embeds and normal text at once. For instance This is text @{embed;title:"Hi"} would both display the text "This is a text" and the embed with the title Hi. You will need to add v3: before any of the command's contents for this to work as in this example: null https://i.imgur.com/VGwGhwl.png image What is an Embed? Okay let's start by making a simple embed. First let's look at what an embed even is: null https://i.imgur.com/PqSsAMG.png image title:"your text here" - Will set what you see as "Title Text" in the image above. description:"your text here" - Will set what you see as "Description". thumbnail:"valid image url here" - Will set the top-right image. image:"valid image url here" - Will set the big bottom image. author:"your text here" - Will set what you see as "Author Name". authorImg:"valid image url here" - Will set the image you see next to "Author Name". footer:"your text here" - Will set what you see as "Footer text" footerImg:"valid image url here" - Will set the image you see next to "Footer text". color:"hex code/color name here" - Will set the color of the purple strip you see on the left. fields:&lt;field sytanx (check slightly below)> - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as "Field name" and value what you see as "Field value", inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely. Field Syntax: [ {name:"name of the first field", value:"value of the first field", inline:true}, {name:"name of the second field", value:"value of the second field", inline:false} ] How to use an embed in custom commands? Please pay close attention to the character limits in the image above as-well as the maximum amount of fields. Exceeding those will make your custom command fail! You do not have to use all of the things above you can create your own combinations of them as you like. Additionally please note that title , author , field names and footer do not support any form of mentions due to discord limitations.Our syntax for the custom command will have to be @{embed;&lt;json>} . With "json" being any assortment of the things you learned above. For instance: title:"text",description:"text" . (Note the comma between 2 variables)As an example we will build the embed above using Mantaro. We will be using this as content: v3:@{embed;title:"Title text (256 chars)", description:"Description (2048 chars, Character limit for the **entire** embed is 6000)", fields:[ {name:"Field name (256 chars)", value:"Field value (1024 chars, Max 25 fields)"}, {name:"Inline", value:"Field", inline:true}, {name:"Inline", value:"Field", inline:true} ], author:"Author Name (256 chars)", authorImg:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png", thumbnail:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png", footer:"Footer text (2048 chars)", footerImg:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png", image:"https://cdn.discordapp.com/avatars/302810118335102976/88bc9d0aa3e196aba1fa4403956027ae.png", color:"c91191"} In action: null https://i.imgur.com/oPs5t44.png image</text>
+      <text>For this section you will need to also check out our guides/embeds Embeds Guide. It will teach you how you can make your desired embeds to make your fancy messages.Once you have your embed ready, you can use it in your custom commands. You can use it in Complex commands only. The embed syntax is as follows:@{embed; &lt;embed json> } Example md @{embed; "title": "My name is Mantaro!", "color": "ff69b4", "author": "Hi there!", "thumbnail": "https://cdn.discordapp.com/emojis/654322747094073365.png", "image": "https://cdn.discordapp.com/splashes/213468583252983809/e363455219eea72dd569a6d5d20db313.jpg?size=2048", "footer": "Have a nice day!", "footerImg": "https://cdn.discordapp.com/avatars/213466096718708737/84b83a87f8e7a1475f989cbbd76c48d8.png", "description": "I hope we have a good time together!" }</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -1067,7 +1075,7 @@
     <url>/mantaro-wiki/guides/custom-commands#operative-custom-commands</url>
     <fullTitle>Mantaro Wiki: Custom Commands, Operative Custom Commands [Guides]</fullTitle>
     <text>
-      <text>Comparing Comparing is the act of taking one value and comparing it to another, for instance with this you can check if the content of a message is equal to something you set, or in our example check if someone's user ID is equal to the correct one: null https://i.imgur.com/UwEaIDA.png image The syntax for a comparing with if-else is always @{if;thing to compare;comparator;thing compare with;if met;if not met (else)} . Additionally you can also use the compare operation to assert a boolean (true or false), uses for that are in the Asserting section down below. Syntax for this is @{compare;thing to compare;comparator;thing to compare with} . Available comparators equals : As seen in the example above will check if the thing to compare equals the thing to compare with. not-equals : Same as equals but reversed*. ignorecase-equals : Same as equals but ignores casing (i.e A == a). ignorecase-not-equals : Same as ignorecase-equals but reversed*. greater-than : Whether or not the thing to compare is greater than what the thing to compare with is (i.e 2 > 1). less-than :Whether or not the thing to compare is less than what the thing to compare with is (i.e 1 &lt; 2). not-greater-than : Same as greater-than but reversed*. not-less-than : Same as less-than but reversed*. ignorecase-greater-than : Same as greater-than but ignores casing. ignorecase-less-than : Same as less-than but ignores casing. ignorecase-not-greater-than : Same as not-greater-than but ignores casing. ignorecase-not-less-than : Same as not-less-than but ignores casing. contains : Whether or not the thing to compare includes the thing to compare with. not-contains : Same as contains but reversed*. starts-with : Checks if the thing to compare starts with the thing to compare with. ignorecase-starts-with : Same as starts-with but ignores casing. ends-with : Checks if the thing to compare ends with the thing to compare with. ignorecase-ends-with : Same as ends-with but ignores casing. * Note: Reversed means logically reversed i.E contains checks if it is in the thing and not-contains checks if it is not in the thing. Predicting Predicting is the act of checking whether or not something meets a predicate. In simpler terms this can be anything like checking if a value is empty or checking if it's equal to a preset value.The syntax for if-else for this one is @{if;thing to predict;predicate;if met;if not met (else)} . You can additionally use the test operation to assert a boolean, uses for that are in the Asserting section down below. Syntax for this is @{test;predicate;value to predict} Available Predicates usermention : Check if the thing you check is a user mention. is-empty : Checks whether the thing to check is empty (aka has no characters). is-not-empty : Same as is-empty but reversed*. * Note: Reversed means logically reversed i.E contains checks if it is in the thing and not-contains checks if it is not in the thing. Asserting (True and False) Asserting a boolean means anything that returns a true or a false. We have mentioned the compare and test operations up above, both of these will when used outside of an if give you a "true" or a "false" as a message. However these truth values can be used in if commands to make more complex structures.The structure for if-else changes drastically for this one. It is as follows: @{if;if met;assertive;if not met} This all comes with very handy logical operators: @{and;operation;operation;....} : This can be used to only return true when all operations passed assert to true. @{or;operation;operation;....} : This can be used to return true when any of the operations passed assert to true. @{not;assertive} : This can be used to negate an assertive, meaning a true will become a false and vice versa. Operations You have a handful of operations to choose from, while we already talked about most of them, here is a list of all: @{if;syntax} : Used to make conditional responses, it's syntax is dependent on how it is used and all syntax are explained in the respective sections for predicting, comparing and asserting. @{not-empty;argument1;argument2;....} : Returns the first value that is not empty (You can feed this unlimited arguments). https://i.imgur.com/KRLgId2.png Example (Note: this does not ignore values that are only a space) @{not-empty-strict;argument1;argument2;....} : Same as not-empty but also considers values that are only a space to be empty. @{set;key;value} : Explained in detail in the Modifiers section up above @{embed;embed syntax} : Explained in detail in the embeds section up above @{compare;syntax} : Explained in detail in the comparing section up above @{test;syntax} : Explained in detail in the predicting section up above @{and;syntax} : Explained in detail in the asserting section up above @{or;syntax} : Explained in detail in the asserting section up above @{not;syntax} : Explained in detail in the asserting section up above @{timestamp;format;zone} : Used to print a time/date in any format you like from any timezone you like. Format is a bit more complex an example would be: d MMM uuuu , for the current date (more info for format on https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html Java Docs, the time zone can be any of https://en.wikipedia.org/wiki/List_of_tz_database_time_zones these TZ database names (include every character even underlines). @{upper;text} : Used to convert a text to fully uppercase @{lower;text} : Same as upper but with lowercase @{replace;character(s) to replace;replace with;replace in} : Used for replacing occurrences of characters in a text. Example would be @{replace;r;test;$(event.message)} to replace all r's with test in event.message What do we get in v3 vs old v2 You can now nest ifs (i.E use a new if as else of another to create chains)! You can now use embed fields in ifs You can now use newlines in ifs You can now check whether or not something contains a discord mention You can now chain if's (use multiple ifs in the same command) and have their else actually work. In general you can use all conditions/special syntaxes anywhere in your command. Meaning you can have text with an embed etc Generally a far more in depth and detailed interaction with if-else due to the high amount of operations available</text>
+      <text>Warning: These types of commands can become really complicated. If you're not sure how to use them, you can always ask for help in our https://support.mantaro.site/ support server. However, bear in mind that even the support team might not be able to help you with these due to their complexity. Comparing Comparing is the act of taking one value and comparing it to another, for instance with this you can check if the content of a message is equal to something you set, or in our example check if someone's user ID is equal to the correct one: Example md v3:@{if; $(event.author.id);equals;276458692914839552; Yes this is you; No this is not you } The syntax for a comparing with if-else is: md @{if;&lt;thing to compare>;&lt;comparator>;&lt;thing compare with>;&lt;if met>;&lt;if not met (else)>} Additionally, you can also use the compare operation to assert a boolean (true or false), uses for that are in the Asserting section down below. The syntax for this is: md @{compare;&lt;thing to compare>;&lt;comparator>;&lt;thing compare with>} Available comparators equals It will check if the thing to compare is equal to the thing to compare with. not-equals It will check if the thing to compare is not equal to the thing to compare with. ignorecase-equals It will check if the thing to compare is equal to the thing to compare with, ignoring case. ignorecase-not-equals It will check if the thing to compare is not equal to the thing to compare with, ignoring case. greater-than It will check if the thing to compare is greater than the thing to compare with. (i.e 5 > 3) less-than It will check if the thing to compare is less than the thing to compare with. (i.e 5 &lt; 3) not-greater-than It will check if the thing to compare is not greater than the thing to compare with. (i.e 5 !> 3) not-less-than It will check if the thing to compare is not less than the thing to compare with. (i.e 5 !&lt; 3) ignorecase-greater-than It will check if the thing to compare is greater than the thing to compare with, ignoring case. (i.e 5 > 3) ignorecase-less-than It will check if the thing to compare is less than the thing to compare with, ignoring case. (i.e 5 &lt; 3) ignorecase-not-greater-than It will check if the thing to compare is not greater than the thing to compare with, ignoring case. (i.e 5 !> 3) ignorecase-not-less-than It will check if the thing to compare is not less than the thing to compare with, ignoring case. (i.e 5 !&lt; 3) contains It will check if the thing to compare contains the thing to compare with. not-contains It will check if the thing to compare does not contain the thing to compare with. starts-with It will check if the thing to compare starts with the thing to compare with. ignorecase-starts-with It will check if the thing to compare starts with the thing to compare with, ignoring case. ends-with It will check if the thing to compare ends with the thing to compare with. ignorecase-ends-with It will check if the thing to compare ends with the thing to compare with, ignoring case. Predicting Predicting is the act of checking whether something meets a predicate. In simpler terms this can be anything like checking if a value is empty or checking if it's equal to a preset value. Example md v3:@{if; $(event.message);usermention; You mentioned someone!; You didn't mention anybody :( } The syntax for if-else for this one is: md @{if;&lt;thing to predict>;&lt;predicate>;&lt;if met>;&lt;if not met (else)>} You can additionally use the test operation to assert a boolean, uses for that are in the Asserting section down below.The syntax for this is: md @{test;&lt;predicate>;&lt;value to predict>} Available Predicates usermention It will check if the thing to predict is a user mention. is-empty It will check if the thing to predict is empty. is-not-empty It will check if the thing to predict is not empty. Asserting (True and False) Asserting a boolean means anything that returns a true or a false. We have mentioned the compare and test operations up above, both of these will when used outside an if give you a "true" or a "false" as a message. However, these truth values can be used in if commands to make more complex structures. Example md v3:@{if; You did it!; @{and; @{test;usermention;$(event.message)}; @{compare;$(event.message);contains;hi} }; You didn't do it :( } The structure for if-else changes drastically for this one. It is as follows: md @{if;&lt;if met>;&lt;assertive>;&lt;if not met>} Available Logical Operators @{and;&lt;operation>;...} It will check if all the operations are true. @{or;&lt;operation>;...} It will check if any of the operations are true. @{not;&lt;operation>} It will check if the operation is false. Other Operations You have a handful of operations to choose from, while we already talked about most of them, here is a list of a few we didn't mention: 1) What is it used for? @{not-empty; &lt;argument1> ; &lt;argument2> ...} use This will return the first non-empty argument. 2) What is it used for? @{not-empty-strict; &lt;argument1> ; &lt;argument2> ...} use This will return the first non-empty argument, but will consider space only values as empty. 3) What is it used for? @{timestamp; &lt;format> ; &lt;zone> } use This will return the current timestamp in the specified format and timezone. Format is a bit more complex. An example would be: d MMM uuuu for the current date (more info for format on https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html Java Docs. The time zone can be any of https://en.wikipedia.org/wiki/List_of_tz_database_time_zones these TZ database names (include every character even underlines). 4) What is it used for? @{upper; &lt;text> } use This will return the text in uppercase. 5) What is it used for? @{lower; &lt;text> } use This will return the text in lowercase. 6) What is it used for? @{replace; &lt;character(s) to replace> ; &lt;replace with> ; &lt;replace in> } use This will replace the occurrences of characters in a text. An example would be @{replace;r;test;$(event.message)} to replace all r's with test in event.message</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -1091,7 +1099,7 @@
     <url>/mantaro-wiki/guides/embeds#creating-your-own-embed</url>
     <fullTitle>Mantaro Wiki: Embeds, Creating your own embed [Guides]</fullTitle>
     <text>
-      <text>Let's start by working on designing your own embed. We offer you two ways to create your own embed. We highly recommend you go with the easy way.Note: Due to Discord limitations, mentions will not work in the author , title , field names and footer fields. So bear that in mind when creating your embed. The easy way We have good news! There is a really easy way to create your own embed. We worked on a tool that can help you create embeds for you with the appropriate format used by Mantaro.You can find this page https://www.mantaro.site/mantaro-embed-builder here! How to use it Once you open the page, you will see its made up of two parts. An editing area, and a preview area. As you edit around you will see the changes live in the preview area. Now simply edit away until you get your embed ready. Tips Tip: You can click on this button to clear out the current data in the embed. This is useful if you want to start of fresh.Tip: You can click on this button to copy the embed to your clipboard. This will copy the embed content you need to your clipboard, ready for you to copy it into a command that allows embeds.Tip: You can find a few miscellaneous options if you click this button. The hard way The hard way is to create your own embed manually. For this you have to first understand once again the different parts of an embed, as well as the format that Mantaro uses.title:"your text here" - Will set what you see as "Title Text" in the image above. description:"your text here" - Will set what you see as "Description". thumbnail:"valid image url here" - Will set the top-right image. image:"valid image url here" - Will set the big bottom image. author:"your text here" - Will set what you see as "Author Name". authorImg:"valid image url here" - Will set the image you see next to "Author Name". footer:"your text here" - Will set what you see as "Footer text" footerImg:"valid image url here" - Will set the image you see next to "Footer text". color:"hex code/color name here" - Will set the color of the purple strip you see on the left. fields:&lt;field sytanx (check slightly below)> - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as "Field name" and value what you see as "Field value", inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely. Field Syntax: [ {name:"name of the first field", value:"value of the first field", inline:true}, {name:"name of the second field", value:"value of the second field", inline:false} ]</text>
+      <text>Let's start by working on designing your own embed. We offer you two ways to create your own embed. We highly recommend you go with the easy way.Note: Due to Discord limitations, mentions will not work in the author , title , field names and footer fields. So bear that in mind when creating your embed. The easy way We have good news! There is a really easy way to create your own embed. We worked on a tool that can help you create embeds for you with the appropriate format used by Mantaro.You can find this page https://www.mantaro.site/mantaro-embed-builder here! Warning: The Embed Builder WILL NOT work on Safari. Please use a different browser. How to use it Once you open the page, you will see its made up of two parts. An editing area, and a preview area. As you edit around you will see the changes live in the preview area. Now simply edit away until you get your embed ready. Tips Tip: You can click on this button to clear out the current data in the embed. This is useful if you want to start of fresh.Tip: You can click on this button to copy the embed to your clipboard. This will copy the embed content you need to your clipboard, ready for you to copy it into a command that allows embeds.Tip: You can find a few miscellaneous options if you click this button. The hard way The hard way is to create your own embed manually. For this you have to first understand once again the different parts of an embed, as well as the format that Mantaro uses.title:"your text here" - Will set what you see as "Title Text" in the image above. description:"your text here" - Will set what you see as "Description". thumbnail:"valid image url here" - Will set the top-right image. image:"valid image url here" - Will set the big bottom image. author:"your text here" - Will set what you see as "Author Name". authorImg:"valid image url here" - Will set the image you see next to "Author Name". footer:"your text here" - Will set what you see as "Footer text" footerImg:"valid image url here" - Will set the image you see next to "Footer text". color:"hex code/color name here" - Will set the color of the purple strip you see on the left. fields:&lt;field sytanx (check slightly below)> - For this one the syntax with [] and {} is important. As-well as you need at least a value and a name in each {}. Name will set what you see as "Field name" and value what you see as "Field value", inline will determine whether the field will be in a separate line (like the first one in the image) or next to an existing one. Inline can be either true or false or be omitted entirely. Field Syntax: [ {name:"name of the first field", value:"value of the first field", inline:true}, {name:"name of the second field", value:"value of the second field", inline:false} ]</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -1112,16 +1120,16 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/modifiers#modifiers-for-welcomeleave-messages</url>
-    <fullTitle>Mantaro Wiki: Modifiers, Modifiers for welcome/leave messages: [Guides]</fullTitle>
+    <url>/mantaro-wiki/guides/modifiers#modifiers-for-welcome-and-leave-messages</url>
+    <fullTitle>Mantaro Wiki: Modifiers, Modifiers for welcome and leave messages: [Guides]</fullTitle>
     <text>
-      <text>#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers All the guild modifiers below #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers All the me (Mantaro) modifiers below 1) What is it for? $(event.user) Used for: This will return a mention of the user that joined/left. 2) What is it for? $(event.user.username) Used for: This will return the username of the user that joined/left. 3) What is it for? $(event.user.name) Used for: This will return the nickname of the user that joined/left. 4) What is it for? $(event.user.discriminator) Used for: This will return the discriminator (#XXXX) of the user that joined/left. 5) What is it for? $(event.user.tag) Used for: Shorthand for username#discriminator. 6) What is it for? $(event.user.game) Used for: This will return the current playing game of the user that joined/left (None if no game). 7) What is it for? $(event.user.id) Used for: This will return the id (unique identifier) of the user that joined/left. 8) What is it for? $(event.user.avatar) Used for: This will return the avatar URL of the user that joined/left.</text>
+      <text>#modifiers-for-custom-commands All the guild modifiers bellow #modifiers-for-custom-commands All the me (Mantaro) modifiers bellow 1) What is it for? $(event.user) Used for: This will return a mention of the user that joined/left. 2) What is it for? $(event.user.username) Used for: This will return the username of the user that joined/left. 3) What is it for? $(event.user.name) Used for: This will return the nickname of the user that joined/left. 4) What is it for? $(event.user.discriminator) Used for: This will return the discriminator (#XXXX) of the user that joined/left. 5) What is it for? $(event.user.tag) Used for: Shorthand for username#discriminator. 6) What is it for? $(event.user.game) Used for: This will return the current playing game of the user that joined/left (None if no game). 7) What is it for? $(event.user.id) Used for: This will return the id (unique identifier) of the user that joined/left. 8) What is it for? $(event.user.avatar) Used for: This will return the avatar URL of the user that joined/left.</text>
       <score>STANDARD</score>
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/guides/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands</url>
-    <fullTitle>Mantaro Wiki: Modifiers, A list of all Modifiers that can be used in custom commands. [Guides]</fullTitle>
+    <url>/mantaro-wiki/guides/modifiers#modifiers-for-custom-commands</url>
+    <fullTitle>Mantaro Wiki: Modifiers, Modifiers for Custom Commands [Guides]</fullTitle>
     <text>
       <text>Base modifier: 9) What is it for? $(event) Used for: This will return a mention of the one who executed the command together with a mention of the channel the command was used in. Guild modifiers: 10) What is it for? $(event.guild) Used for: This will return the name of the guild the command was used in. 11) What is it for? $(event.guild.name) Used for: This will return the name of the guild the command was used in. 12) What is it for? $(event.guild.owner) Used for: This will return a mention of the guild owner of the guild command was used in. 13) What is it for? $(event.guild.owner.username) Used for: This will return the username of the guild owner of the guild the command was used in. 14) What is it for? $(event.guild.owner.discriminator) Used for: This will return the discriminator (#XXXX) of the guild owner of the guild the command was used in. 15) What is it for? $(event.guild.owner.game) Used for: This will return the current playing status of the guild owner of the guild the command was used in. (None if no game) 16) What is it for? $(event.guild.owner.status) Used for: This will return the current online status of the guild owner of the guild the command was used in. 17) What is it for? $(event.guild.owner.id) Used for: This will return the id (unique identifier) of the guild owner of the guild the command was used in. 18) What is it for? $(event.guild.owner.name) Used for: This will return the current nickname of the guild owner of the guild the command was used in. (Username if none) 19) What is it for? $(event.guild.owner.avatar) Used for: This will return the avatar url of the guild owner of the guild the command was used in. 20) What is it for? $(event.guild.region) Used for: This will return the Voice Region of the guild the command was used in. 21) What is it for? $(event.guild.totalusers) Used for: This will return the ammount of users inside the guild the command was used in. 22) What is it for? $(event.guild.icon) Used for: This will return the url of the guild icon. Me (Mantaro) modifiers: 23) What is it for? $(event.me) Used for: This will return a mention of Mantaro. 24) What is it for? $(event.me.username) Used for: This will return the username of Mantaro. 25) What is it for? $(event.me.name) Used for: This will return the current nickname of Mantaro. (Username if none) 26) What is it for? $(event.me.game) Used for: This will return the current playing game of Mantaro. 27) What is it for? $(event.me.status) Used for: This will return the current online status of Mantaro. 28) What is it for? $(event.me.id) Used for: This will return the id (unique identifier) of Mantaro. 29) What is it for? $(event.me.avatar) Used for: This will return the avatar URL of Mantaro. Author (Command execute) modifiers: 30) What is it for? $(event.author) Used for: This will return a mention of the command user. 31) What is it for? $(event.author.username) Used for: This will return the username of the command user. 32) What is it for? $(event.author.name) Used for: This will return the username of the command user. 33) What is it for? $(event.author.discriminator) Used for: This will return the discriminator (#XXXX) of the command user. 34) What is it for? $(event.author.tag) Used for: Short hand for $(event.author.username)#$(event.author.discriminator). 35) What is it for? $(event.author.game) Used for: This will return the current playing game of the command user. (None if no game) 36) What is it for? $(event.author.status) Used for: This will return the current status of the command user. 37) What is it for? $(event.author.id) Used for: This will return the id (unique identifier) of the command user. 38) What is it for? $(event.author.avatar) Used for: This will return the avatar URL of the command user. 39) What is it for? $(event.author.nickname) Used for: This will return the nickname of the user that is using the command (If the user has no nickname it returns their username). Message modifiers: 40) What is it for? $(event.message) Used for: This will return the raw content of the message. (Does not include prefix and command name) 41) What is it for? $(event.message.mentionnames) Used for: This will return the names of everyone mentioned on the command. 42) What is it for? $(event.message.firstmentionid) Used for: This will return the ID of the first mention on custom commands. Channel modifiers: 43) What is it for? $(event.channel) Used for: This will return the mention of the channel the command was used in. 44) What is it for? $(event.channel.topic) Used for: This will return the topic of the channel the command was used in. 45) What is it for? $(event.channel.name) Used for: This will return the name of the channel the command was used in. 46) What is it for? $(event.channel.id) Used for: This will return the id (unique identifier) of the channel the command was used in.</text>
       <score>STANDARD</score>
@@ -1131,7 +1139,7 @@
     <url>/mantaro-wiki/guides/modifiers#modifiers-for-log-messages</url>
     <fullTitle>Mantaro Wiki: Modifiers, Modifiers for Log Messages [Guides]</fullTitle>
     <text>
-      <text>Shared between edited/deleted messages and user banned/unbanned #modifiers-for-welcomeleave-messages All the modifiers from welcome messages (event.user in the case of bans is the person banned, in case of messages the author of the message) 47) What is it for? $(hour) Used for: Prints the time at which the log message occurred (Based on the location of the bot) Message Edited and Message Deleted #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers All the channel modifiers above Message Edited only 48) What is it for? $(old) Used for: Replaced with the old content of the message. 49) What is it for? $(new) Used for: Replaced with the new content of the message. Message Deleted only 50) What is it for? $(content) Used for: Replaced with the content of the deleted message. 51) What is it for? $(event.message.id) Used for: Replaced with the unique identifier of the deleted message.</text>
+      <text>Shared between edited/deleted messages and user banned/unbanned #modifiers-for-welcome-and-leave-messages All the modifiers from welcome messages (event.user in the case of bans is the person banned, in case of messages the author of the message) 47) What is it for? $(hour) Used for: Prints the time at which the log message occurred (Based on the location of the bot) Message Edited and Message Deleted #modifiers-for-custom-commands All the channel modifiers above Message Edited only 48) What is it for? $(old) Used for: Replaced with the old content of the message. 49) What is it for? $(new) Used for: Replaced with the new content of the message. Message Deleted only 50) What is it for? $(content) Used for: Replaced with the content of the deleted message. 51) What is it for? $(event.message.id) Used for: Replaced with the unique identifier of the deleted message.</text>
       <score>STANDARD</score>
     </text>
   </entry>
@@ -1288,7 +1296,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/currency/badges#removedlegacy-badges</url>
+    <url>/mantaro-wiki/currency/badges#removed-legacy-badges</url>
     <fullTitle>Mantaro Wiki: Badges, Removed/Legacy Badges [Currency]</fullTitle>
     <text>
       <text>Badge Name Badge Icon Description [{text=Upvoter, type=SimpleText}] [{text=Broke from 3rd Party changes and will not come back, type=SimpleText}] [{text=DJ, type=SimpleText}] [{text=Legacy Badge (Unused and unobtainable)., type=SimpleText}] [{text=Bugged, type=SimpleText}] [{text=Bugged Helper. (Old Broken Helper Badge)., type=SimpleText}] [{text=Bugged 2, type=SimpleText}] [{text=Bugged Donor. (Old Broken Donator Badge)., type=SimpleText}] [{text=Isekai, type=SimpleText}] [{text=Have more than 7526527671 credits at any given time., type=SimpleText}]</text>
@@ -1312,7 +1320,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/currency/items#usableconsumable-items</url>
+    <url>/mantaro-wiki/currency/items#usable-consumable-items</url>
     <fullTitle>Mantaro Wiki: Items, Usable/Consumable Items [Currency]</fullTitle>
     <text>
       <text>These items have a use attached to them. Some items have a single-time use, meaning that after you use them any other of the same item you get becomes a collectible. Icon Name Use/Description How to use? / Where is it used? Obtained from [{text=Marriage Ring, type=SimpleText}] [{text=Basically what makes your marriage official., type=SimpleText}] [{text=Requires two rings to marry with , type=SimpleText}, {code=/marry user user:&lt;mention>, type=InlinedCode}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Love Letter, type=SimpleText}] [{text=A letter from your loved one. Can be used to write a marry letter, more info in profile section., type=SimpleText}] [{code=/marry createletter content:&lt;content>, type=InlinedCode}] [{text=Obtained after marrying someone., type=SimpleText}] [{text=Slot ticket, type=SimpleText}] [{text=Gives you extra chance in slots, also works as bulk storage., type=SimpleText}] [{code=/slots useticket:true ticketamount:&lt;amount>, type=InlinedCode}] [{text=Market, Loot Crate, type=SimpleText}] [{text=House, type=SimpleText}] [{text=Cozy place to live in., type=SimpleText}] [{text=Required to set your Marriage House with , type=SimpleText}, {code=/marry house name:&lt;name>, type=InlinedCode}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Car, type=SimpleText}] [{text=To move around., type=SimpleText}] [{text=Required to set your Marriage Car with , type=SimpleText}, {code=/marry car name:&lt;name>, type=InlinedCode}] [{text=Market, Loot Crate, type=SimpleText}] [{text=Haste Potion, type=SimpleText}] [{text=Allows you to collect more stuff from currency commands for 3 sessions., type=SimpleText}] [{code=/use item item:Haste Potion, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Milky Potion, type=SimpleText}] [{text=Clears all potion effects., type=SimpleText}] [{code=/use item item:Milky Potion, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Energy Beverage, type=SimpleText}] [{text=Makes a tool lose less durability per swing. Lasts 3 sessions., type=SimpleText}] [{code=/use item item:Energy Beverage, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Mop, type=SimpleText}] [{text=A delightful way to clean all the dust you have around. I bet there's a lot of it., type=SimpleText}] [{code=/use item item:Mop, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Claim Key, type=SimpleText}] [{text=This item makes you un-claimeable (as a waifu)., type=SimpleText}] [{code=/waifu claimlock, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Waifu Pill, type=SimpleText}] [{text=Gives you a significant advantage on mine and fish if one of your waifus is valued at over 20,000. Lasts 3 sessions., type=SimpleText}] [{code=/use item item:Waifu Pill, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Fishing Bait, type=SimpleText}] [{text=Gives you a higher chance of catching fish., type=SimpleText}] [{code=/use item item:Fishing Bait, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Incubator Egg, type=SimpleText}] [{text=The one catalyst you need to call your personal pet home., type=SimpleText}] [{text=Used when getting a Personal pet., type=SimpleText}] [{text=Cast, type=SimpleText}] [{text=Magical Watch, type=SimpleText}] [{text=A magic watch that slows time when you need it., type=SimpleText}] [{text=This will automatically be consumed to save your daily streak for 24 hours!, type=SimpleText}] [{text=Obtain one every 50 consecutive dailies., type=SimpleText}] [{text=Water Bottle, type=SimpleText}] [{text=An item that magically heals your pet's thirst., type=SimpleText}] [{code=/pet hydrate, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Pet House, type=SimpleText}] [{text=A house where your pet lives. Maybe. Sometimes they just like to flop outside., type=SimpleText}] [{text=Required to buy a pet with , type=SimpleText}, {code=/pet buy type:&lt;type> name:&lt;name>, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Steak, type=SimpleText}] [{text=Very yummy if you're not vegetarian., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Steak, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Chicken, type=SimpleText}] [{text=Very yummy if you're not vegetarian, but it comes from a chicken instead., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Chicken, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Milk Bottle, type=SimpleText}] [{text=Very good food for cats, I've heard., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Milk Bottle, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Dog Food, type=SimpleText}] [{text=Food your dog might like a lot. Or they might like bread more, like mines., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Dog Food, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Cat Food, type=SimpleText}] [{text=Food your cat might like a lot., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Cat Food, type=InlinedCode}] [{text=Market, type=SimpleText}] [{text=Hamster Food, type=SimpleText}] [{text=Food your hamster might enjoy., type=SimpleText}] [{text=Used to feed your pet with , type=SimpleText}, {code=/pet feed item:Hamster Food, type=InlinedCode}] [{text=Market, type=SimpleText}]</text>
@@ -1344,7 +1352,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/currency/items#removedlegacyunobtainable-items</url>
+    <url>/mantaro-wiki/currency/items#removed-legacy-unobtainable-items</url>
     <fullTitle>Mantaro Wiki: Items, Removed/Legacy/Unobtainable Items [Currency]</fullTitle>
     <text>
       <text>These items are no longer obtainable in Mantaro. Icon Name Description [{text=Ping Racket, type=SimpleText}] [{text=I won the game of ping-pong with Discord by a few milliseconds. Maybe., type=SimpleText}] [{text=Forgotten Music, type=SimpleText}] [{text=Never downloaded. Probably has been copyrighted., type=SimpleText}] [{text=Special Loaded Die, type=SimpleText}] [{text=Even more loaded. Leftover from Currency version 1., type=SimpleText}] [{text=Booster, type=SimpleText}] [{text=Used to give you some kind of boost, now it's broken. Leftover from Currency version 1., type=SimpleText}] [{text=Berserk, type=SimpleText}] [{text=Currency Berserk? Anyone? Leftover from Currency version 1., type=SimpleText}] [{text=Companion, type=SimpleText}] [{text=Aw, such a cute dog. Leftover from Currency version 1., type=SimpleText}] [{text=Special Ring, type=SimpleText}] [{text=It's so special, it's not even a ring. Leftover from Currency version 1., type=SimpleText}] [{text=Enchancer, type=SimpleText}] [{text=A broken enchanter, I wonder if it could be fixed? Leftover from Currency version 1., type=SimpleText}] [{text=Prize, type=SimpleText}] [{text=Pretty much, huh? Leftover from Currency version 1., type=SimpleText}] [{text=Old Sparkle Fragment, type=SimpleText}] [{text=No longer used., type=SimpleText}] [{text=Old Sparkly Pickaxe, type=SimpleText}] [{text=No longer used., type=SimpleText}] [{text=Old Sparkly Rod, type=SimpleText}] [{text=No longer used., type=SimpleText}] [{text=Ban Hammer, type=SimpleText}] [{text=Left by an admin. (Appears randomly after someone was banned using , type=SimpleText}, {code=~>ban, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>tempban, type=InlinedCode}, {text=), type=SimpleText}] [{text=Kick Boot, type=SimpleText}] [{text=Left by an admin. (Appears randomly after someone was kicked using , type=SimpleText}, {code=~>kick, type=InlinedCode}, {text= or , type=SimpleText}, {code=~>softban, type=InlinedCode}, {text=), type=SimpleText}] [{text=My Maths, type=SimpleText}] [{text=Oh, I forgot my maths. (Appears randomly after using , type=SimpleText}, {code=~>stats usage, type=InlinedCode}, {text=), type=SimpleText}]</text>
@@ -1368,7 +1376,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/legal/terms-of-service#2-music-and-transmission</url>
+    <url>/mantaro-wiki/legal/terms-of-service#2-music-and-transmission-</url>
     <fullTitle>Mantaro Wiki: Terms Of Service, 2. Music and Transmission. [Legal]</fullTitle>
     <text>
       <text>2.1. Responsibility: The end user assumes all responsibility for the streaming of any copyrighted material. 2.2. Services: The music streaming services provided by the bot are subject to change, without prior notice and in any case. 2.3. Quality: We strive to provide the highest quality possible, but this might be subject to the usage of the bot and the quantity of concurrent users making use of it.</text>
@@ -1392,7 +1400,7 @@
     </text>
   </entry>
   <entry>
-    <url>/mantaro-wiki/legal/terms-of-service#5-warranty-and-liability</url>
+    <url>/mantaro-wiki/legal/terms-of-service#5-warranty-and-liability-</url>
     <fullTitle>Mantaro Wiki: Terms Of Service, 5. Warranty and Liability. [Legal]</fullTitle>
     <text>
       <text>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</text>

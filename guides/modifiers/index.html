@@ -88,18 +88,18 @@
 </article>
 
 <article>
-<header><h1>Modifiers for welcome/leave messages:</h1></header>
-<p>#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers All the guild modifiers below #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers All the me (Mantaro) modifiers below 1) What is it for? $(event.user) Used for: This will return a mention of the user that joined/left. 2) What is it for? $(event.user.username) Used for: This will return the username of the user that joined/left. 3) What is it for? $(event.user.name) Used for: This will return the nickname of the user that joined/left. 4) What is it for? $(event.user.discriminator) Used for: This will return the discriminator (#XXXX) of the user that joined/left. 5) What is it for? $(event.user.tag) Used for: Shorthand for username#discriminator. 6) What is it for? $(event.user.game) Used for: This will return the current playing game of the user that joined/left (None if no game). 7) What is it for? $(event.user.id) Used for: This will return the id (unique identifier) of the user that joined/left. 8) What is it for? $(event.user.avatar) Used for: This will return the avatar URL of the user that joined/left.</p>
+<header><h1>Modifiers for welcome and leave messages:</h1></header>
+<p>#modifiers-for-custom-commands All the guild modifiers bellow #modifiers-for-custom-commands All the me (Mantaro) modifiers bellow 1) What is it for? $(event.user) Used for: This will return a mention of the user that joined/left. 2) What is it for? $(event.user.username) Used for: This will return the username of the user that joined/left. 3) What is it for? $(event.user.name) Used for: This will return the nickname of the user that joined/left. 4) What is it for? $(event.user.discriminator) Used for: This will return the discriminator (#XXXX) of the user that joined/left. 5) What is it for? $(event.user.tag) Used for: Shorthand for username#discriminator. 6) What is it for? $(event.user.game) Used for: This will return the current playing game of the user that joined/left (None if no game). 7) What is it for? $(event.user.id) Used for: This will return the id (unique identifier) of the user that joined/left. 8) What is it for? $(event.user.avatar) Used for: This will return the avatar URL of the user that joined/left.</p>
 </article>
 
 <article>
-<header><h1>A list of all Modifiers that can be used in custom commands.</h1></header>
+<header><h1>Modifiers for Custom Commands</h1></header>
 <p>Base modifier: 9) What is it for? $(event) Used for: This will return a mention of the one who executed the command together with a mention of the channel the command was used in. Guild modifiers: 10) What is it for? $(event.guild) Used for: This will return the name of the guild the command was used in. 11) What is it for? $(event.guild.name) Used for: This will return the name of the guild the command was used in. 12) What is it for? $(event.guild.owner) Used for: This will return a mention of the guild owner of the guild command was used in. 13) What is it for? $(event.guild.owner.username) Used for: This will return the username of the guild owner of the guild the command was used in. 14) What is it for? $(event.guild.owner.discriminator) Used for: This will return the discriminator (#XXXX) of the guild owner of the guild the command was used in. 15) What is it for? $(event.guild.owner.game) Used for: This will return the current playing status of the guild owner of the guild the command was used in. (None if no game) 16) What is it for? $(event.guild.owner.status) Used for: This will return the current online status of the guild owner of the guild the command was used in. 17) What is it for? $(event.guild.owner.id) Used for: This will return the id (unique identifier) of the guild owner of the guild the command was used in. 18) What is it for? $(event.guild.owner.name) Used for: This will return the current nickname of the guild owner of the guild the command was used in. (Username if none) 19) What is it for? $(event.guild.owner.avatar) Used for: This will return the avatar url of the guild owner of the guild the command was used in. 20) What is it for? $(event.guild.region) Used for: This will return the Voice Region of the guild the command was used in. 21) What is it for? $(event.guild.totalusers) Used for: This will return the ammount of users inside the guild the command was used in. 22) What is it for? $(event.guild.icon) Used for: This will return the url of the guild icon. Me (Mantaro) modifiers: 23) What is it for? $(event.me) Used for: This will return a mention of Mantaro. 24) What is it for? $(event.me.username) Used for: This will return the username of Mantaro. 25) What is it for? $(event.me.name) Used for: This will return the current nickname of Mantaro. (Username if none) 26) What is it for? $(event.me.game) Used for: This will return the current playing game of Mantaro. 27) What is it for? $(event.me.status) Used for: This will return the current online status of Mantaro. 28) What is it for? $(event.me.id) Used for: This will return the id (unique identifier) of Mantaro. 29) What is it for? $(event.me.avatar) Used for: This will return the avatar URL of Mantaro. Author (Command execute) modifiers: 30) What is it for? $(event.author) Used for: This will return a mention of the command user. 31) What is it for? $(event.author.username) Used for: This will return the username of the command user. 32) What is it for? $(event.author.name) Used for: This will return the username of the command user. 33) What is it for? $(event.author.discriminator) Used for: This will return the discriminator (#XXXX) of the command user. 34) What is it for? $(event.author.tag) Used for: Short hand for $(event.author.username)#$(event.author.discriminator). 35) What is it for? $(event.author.game) Used for: This will return the current playing game of the command user. (None if no game) 36) What is it for? $(event.author.status) Used for: This will return the current status of the command user. 37) What is it for? $(event.author.id) Used for: This will return the id (unique identifier) of the command user. 38) What is it for? $(event.author.avatar) Used for: This will return the avatar URL of the command user. 39) What is it for? $(event.author.nickname) Used for: This will return the nickname of the user that is using the command (If the user has no nickname it returns their username). Message modifiers: 40) What is it for? $(event.message) Used for: This will return the raw content of the message. (Does not include prefix and command name) 41) What is it for? $(event.message.mentionnames) Used for: This will return the names of everyone mentioned on the command. 42) What is it for? $(event.message.firstmentionid) Used for: This will return the ID of the first mention on custom commands. Channel modifiers: 43) What is it for? $(event.channel) Used for: This will return the mention of the channel the command was used in. 44) What is it for? $(event.channel.topic) Used for: This will return the topic of the channel the command was used in. 45) What is it for? $(event.channel.name) Used for: This will return the name of the channel the command was used in. 46) What is it for? $(event.channel.id) Used for: This will return the id (unique identifier) of the channel the command was used in.</p>
 </article>
 
 <article>
 <header><h1>Modifiers for Log Messages</h1></header>
-<p>Shared between edited/deleted messages and user banned/unbanned #modifiers-for-welcomeleave-messages All the modifiers from welcome messages (event.user in the case of bans is the person banned, in case of messages the author of the message) 47) What is it for? $(hour) Used for: Prints the time at which the log message occurred (Based on the location of the bot) Message Edited and Message Deleted #a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers All the channel modifiers above Message Edited only 48) What is it for? $(old) Used for: Replaced with the old content of the message. 49) What is it for? $(new) Used for: Replaced with the new content of the message. Message Deleted only 50) What is it for? $(content) Used for: Replaced with the content of the deleted message. 51) What is it for? $(event.message.id) Used for: Replaced with the unique identifier of the deleted message.</p>
+<p>Shared between edited/deleted messages and user banned/unbanned #modifiers-for-welcome-and-leave-messages All the modifiers from welcome messages (event.user in the case of bans is the person banned, in case of messages the author of the message) 47) What is it for? $(hour) Used for: Prints the time at which the log message occurred (Based on the location of the bot) Message Edited and Message Deleted #modifiers-for-custom-commands All the channel modifiers above Message Edited only 48) What is it for? $(old) Used for: Replaced with the old content of the message. 49) What is it for? $(new) Used for: Replaced with the new content of the message. Message Deleted only 50) What is it for? $(content) Used for: Replaced with the content of the deleted message. 51) What is it for? $(event.message.id) Used for: Replaced with the unique identifier of the deleted message.</p>
 </article>
 </section>
 </div>
@@ -162,8 +162,8 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     }, {
-      "id" : "modifiers-for-welcomeleave-messages",
-      "title" : "Modifiers for welcome/leave messages:",
+      "id" : "modifiers-for-welcome-and-leave-messages",
+      "title" : "Modifiers for welcome and leave messages:",
       "type" : "Section",
       "content" : [ {
         "bulletMarker" : "*",
@@ -174,21 +174,18 @@ ReactDOM.render(React.createElement(Documentation, {
           "content" : [ {
             "type" : "Paragraph",
             "content" : [ {
-              "type" : "StrongEmphasis",
+              "url" : "/mantaro-wiki/guides/modifiers#modifiers-for-custom-commands",
+              "isFile" : false,
+              "type" : "Link",
               "content" : [ {
-                "url" : "/mantaro-wiki/guides/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers",
-                "isFile" : false,
-                "type" : "Link",
-                "content" : [ {
-                  "text" : "All the ",
-                  "type" : "SimpleText"
-                }, {
-                  "code" : "guild",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : " modifiers below",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "All the ",
+                "type" : "SimpleText"
+              }, {
+                "code" : "guild",
+                "type" : "InlinedCode"
+              }, {
+                "text" : " modifiers bellow",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
@@ -197,21 +194,18 @@ ReactDOM.render(React.createElement(Documentation, {
           "content" : [ {
             "type" : "Paragraph",
             "content" : [ {
-              "type" : "StrongEmphasis",
+              "url" : "/mantaro-wiki/guides/modifiers#modifiers-for-custom-commands",
+              "isFile" : false,
+              "type" : "Link",
               "content" : [ {
-                "url" : "/mantaro-wiki/guides/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers",
-                "isFile" : false,
-                "type" : "Link",
-                "content" : [ {
-                  "text" : "All the ",
-                  "type" : "SimpleText"
-                }, {
-                  "code" : "me",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : " (Mantaro) modifiers below",
-                  "type" : "SimpleText"
-                } ]
+                "text" : "All the ",
+                "type" : "SimpleText"
+              }, {
+                "code" : "me",
+                "type" : "InlinedCode"
+              }, {
+                "text" : " (Mantaro) modifiers bellow",
+                "type" : "SimpleText"
               } ]
             } ]
           } ]
@@ -455,11 +449,11 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     }, {
-      "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands",
-      "title" : "A list of all Modifiers that can be used in custom commands.",
+      "id" : "modifiers-for-custom-commands",
+      "title" : "Modifiers for Custom Commands",
       "type" : "Section",
       "content" : [ {
-        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-base-modifier",
+        "id" : "modifiers-for-custom-commands-base-modifier",
         "level" : 2,
         "title" : "Base modifier:",
         "type" : "SubHeading"
@@ -496,7 +490,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ],
         "type" : "ApiParameters"
       }, {
-        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-guild-modifiers",
+        "id" : "modifiers-for-custom-commands-guild-modifiers",
         "level" : 2,
         "title" : "Guild modifiers:",
         "type" : "SubHeading"
@@ -881,7 +875,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ],
         "type" : "ApiParameters"
       }, {
-        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-me-mantaro-modifiers",
+        "id" : "modifiers-for-custom-commands-me-mantaro-modifiers",
         "level" : 2,
         "title" : "Me (Mantaro) modifiers:",
         "type" : "SubHeading"
@@ -1092,7 +1086,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ],
         "type" : "ApiParameters"
       }, {
-        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-author-command-execute-modifiers",
+        "id" : "modifiers-for-custom-commands-author-command-execute-modifiers",
         "level" : 2,
         "title" : "Author (Command execute) modifiers:",
         "type" : "SubHeading"
@@ -1390,7 +1384,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ],
         "type" : "ApiParameters"
       }, {
-        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-message-modifiers",
+        "id" : "modifiers-for-custom-commands-message-modifiers",
         "level" : 2,
         "title" : "Message modifiers:",
         "type" : "SubHeading"
@@ -1485,7 +1479,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ],
         "type" : "ApiParameters"
       }, {
-        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers",
+        "id" : "modifiers-for-custom-commands-channel-modifiers",
         "level" : 2,
         "title" : "Channel modifiers:",
         "type" : "SubHeading"
@@ -1616,7 +1610,7 @@ ReactDOM.render(React.createElement(Documentation, {
       "title" : "Modifiers for Log Messages",
       "type" : "Section",
       "content" : [ {
-        "id" : "modifiers-for-log-messages-shared-between-editeddeleted-messages-and-user-bannedunbanned",
+        "id" : "modifiers-for-log-messages-shared-between-edited-deleted-messages-and-user-banned-unbanned",
         "level" : 2,
         "title" : "Shared between edited/deleted messages and user banned/unbanned",
         "type" : "SubHeading"
@@ -1631,7 +1625,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "content" : [ {
               "type" : "StrongEmphasis",
               "content" : [ {
-                "url" : "/mantaro-wiki/guides/modifiers#modifiers-for-welcomeleave-messages",
+                "url" : "/mantaro-wiki/guides/modifiers#modifiers-for-welcome-and-leave-messages",
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
@@ -1693,7 +1687,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "content" : [ {
               "type" : "StrongEmphasis",
               "content" : [ {
-                "url" : "/mantaro-wiki/guides/modifiers#a-list-of-all-modifiers-that-can-be-used-in-custom-commands-channel-modifiers",
+                "url" : "/mantaro-wiki/guides/modifiers#modifiers-for-custom-commands",
                 "isFile" : false,
                 "type" : "Link",
                 "content" : [ {
@@ -1840,7 +1834,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1662072679548,
+    "lastModifiedTime" : 1663094204033,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Modifiers",
@@ -1852,11 +1846,11 @@ ReactDOM.render(React.createElement(Documentation, {
         "title" : "Intro",
         "id" : "intro"
       }, {
-        "title" : "Modifiers for welcome/leave messages:",
-        "id" : "modifiers-for-welcomeleave-messages"
+        "title" : "Modifiers for welcome and leave messages:",
+        "id" : "modifiers-for-welcome-and-leave-messages"
       }, {
-        "title" : "A list of all Modifiers that can be used in custom commands.",
-        "id" : "a-list-of-all-modifiers-that-can-be-used-in-custom-commands"
+        "title" : "Modifiers for Custom Commands",
+        "id" : "modifiers-for-custom-commands"
       }, {
         "title" : "Modifiers for Log Messages",
         "id" : "modifiers-for-log-messages"
