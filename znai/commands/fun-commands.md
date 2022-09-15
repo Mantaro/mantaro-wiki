@@ -83,12 +83,13 @@ Calculate the love between two people. Results may vary. This is random, for rea
 Options:
 ```api-parameters
 user, Required, "The user to compare with."
+otheruser, Optional, "The other user to compare with."
 ```
 
 Examples:
 ```api-parameters
 "", "", "/love `user:`@Kodehawa#3457"
-"", "", "/love `user:`@Adam#9261"
+"", "", "/love `user:`@Adam#9261 `otheruser:`@Kodehawa#3457"
 ```
 ````
 
