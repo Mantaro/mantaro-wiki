@@ -140,13 +140,23 @@ If you don't know how to do that, you can find the commands for it [here](basics
 
 Once you have a self assignable role set-up, you can add one of the following to your Simple command:
 
-* iam:`<name of the role>`
-* iamnot:`<name of the role>`
+```md {wrap: true}
+iam:<name of the role>
+```
+
+```md {wrap: true}
+iamnot:<name of the role>
+```
 
 As for Complex commands, you can use the following syntax:
 
-* @{iam;`<name of the role>`;`<your message here>`}
-* @{iamnot;`<name of the role>`;`<your message here>`}
+```md {wrap: true}
+@{iam;<name of the role>;<your message here>}
+```
+
+```md {wrap: true}
+@{iamnot;<name of the role>;<your message here>}
+```
 
 Note: The message here is optional. And the message can be a complex command too. i.e. an embed.
 
@@ -159,7 +169,10 @@ Warning: Due to the move to Slash Commands, this feature has been temporarily di
 You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both **Simple** commands only.
 
 To make such a command, you need to add the following to your Simple command:
-* play:`<song or playlist link>`
+
+```md {wrap: true}
+play:<song or playlist link>
+```
 
 After this, Mantaro will act as if you had used the `/play` command, and will play the song or playlist for you.
 
@@ -171,7 +184,9 @@ It will teach you how you can make your desired embeds to make your fancy messag
 Once you have your embed ready, you can use it in your custom commands. You can use it in **Complex** commands only.
 The embed syntax is as follows:
 
-* @{embed;`<embed json>`}
+```md {wrap: true}
+@{embed;<embed json>}
+```
 
 #### Example
 ```md {wrap: true}
