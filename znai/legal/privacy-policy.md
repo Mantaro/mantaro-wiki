@@ -30,7 +30,9 @@ We do not collect any personal information, except for your date of birth, which
 
 
 # Website
-The website is literally a static page with no code except markdown [(I'm not kidding, source here)](https://github.com/Mantaro/mantaro.github.io), so you can be sure we do not put Google's analytics or whatever analytics method people use now.
+The main website is literally a static page with no code except markdown [(I'm not kidding, source here)](https://github.com/Mantaro/mantaro.github.io), so you can be sure we do not put Google's analytics or whatever analytics method people use now.
+
+Both our Wiki [(Source)](https://github.com/Mantaro/mantaro-wiki) and Embed Builder [(Source)](https://github.com/Mantaro/mantaro-embed-builder) also do not contain any type of tracking.
 
 We *do* have Cloudflare analytics, but that's because the page is routed through Cloudflare to prevent DDOS attacks.
 
