@@ -133,10 +133,6 @@ certain ways for instance queuing a specific Music track.
 | Numeric Pathway                 | A lucky and sad destiny with six equal people meeting, who slowly fade away as you spend.                                   |
 | Destiny Reaches                 | Good and bad luck meeting together, with a little gem as a mediator.                                                        |
 | Hacking Addiction               | Playing and slashing away your time, with a thousand addictions and thirty-something deeds, meeting together.               |
-| Pathway to Sky                  | With a heavenly beat we shall approach destiny, drums slowly fading between a piano melody, peaceful and chaotic in nature. |
-| Happiness Found Between         | The sour line between happiness and sadness approaches between beats, with a single one we shall decide which prevails.     |
-| A Cold Summer                   | With a drum beat we approach a cold summertime, a place where nobody can catch you, feeling a bit safer with you.           |
-| Slow                            | Alexa, how did we get here again?                                                                                           |
 | Small Scientist                 | A child scientist, a robot and a cat, what could go wrong?                                                                  |
 | Slowly Approaching Destiny      | One in 90, or more. Luck shall decide, you have no choice but go with it                                                    |
 | Revelation                      | A gun as a weapon, a chessboard as a world, passing through universes and flying through emotions.                          |
@@ -152,12 +148,16 @@ certain ways for instance queuing a specific Music track.
 ---
 # Removed/Legacy Badges
 
-| Badge Name | Badge Icon                                              | Description                                          |
-|------------|---------------------------------------------------------|------------------------------------------------------|
-| Upvoter    | <img src="https://imgur.com/sResj3y.png" width="44"/>   | Broke from 3rd Party changes and will not come back  |
-| DJ         | <img src="https://i.imgur.com/x99OhpN.png" width="44"/> | Legacy Badge (Unused and unobtainable).              |
-| Bugged     | <img src="http://i.imgur.com/FlaResW.png" width="44"/>  | Bugged Helper. (Old Broken Helper Badge).            | 
-| Bugged 2   | <img src="http://i.imgur.com/FlaResW.png" width="44"/>  | Bugged Donor. (Old Broken Donator Badge).            |
-| Isekai     | <img src="http://i.imgur.com/XcV891Z.png" width="44"/>  | Have more than 7526527671 credits at any given time. |
+| Badge Name              | Badge Icon                                              | Description                                                                                                                 |
+|-------------------------|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| Upvoter                 | <img src="https://imgur.com/sResj3y.png" width="44"/>   | Broke from 3rd Party changes and will not come back                                                                         |
+| DJ                      | <img src="https://i.imgur.com/x99OhpN.png" width="44"/> | Legacy Badge (Unused and unobtainable).                                                                                     |
+| Bugged                  | <img src="http://i.imgur.com/FlaResW.png" width="44"/>  | Bugged Helper. (Old Broken Helper Badge).                                                                                   | 
+| Bugged 2                | <img src="http://i.imgur.com/FlaResW.png" width="44"/>  | Bugged Donor. (Old Broken Donator Badge).                                                                                   |
+| Isekai                  | <img src="http://i.imgur.com/XcV891Z.png" width="44"/>  | Have more than 7526527671 credits at any given time.                                                                        |
+| Pathway to Sky          | N/A                                                     | With a heavenly beat we shall approach destiny, drums slowly fading between a piano melody, peaceful and chaotic in nature. |
+| Happiness Found Between | N/A                                                     | The sour line between happiness and sadness approaches between beats, with a single one we shall decide which prevails.     |
+| A Cold Summer           | N/A                                                     | With a drum beat we approach a cold summertime, a place where nobody can catch you, feeling a bit safer with you.           |
+| Slow                    | N/A                                                     | Alexa, how did we get here again?                                                                                           |
 
 ---

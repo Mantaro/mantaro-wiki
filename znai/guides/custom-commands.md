@@ -164,6 +164,8 @@ Of course, iam will give the role to the user, and iamnot will remove it.
 
 ---
 # Playing music with custom commands
+:include-markdown: assets/md/commands/sellout-note-mp.md
+
 Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.
 
 You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both **Simple** commands only.

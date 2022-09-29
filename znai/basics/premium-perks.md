@@ -7,8 +7,7 @@
 * Up to two times money from `/loot`.
 * Up to twice the money from `/chop`, `/mine` and `/fish` (Can be anywhere from 1.1x to 2x per run).
 * The ability to use `/dailycrate`.
-* Double money on `/daily`.
-* No Music length limit.
+* Double money on `/daily`. .
 * Volume command.
 * The ability to queue YouTube & Twitch streams (lo-fi radio anyone?).
 * No queue limit, queue as many songs as you may like.
@@ -17,7 +16,6 @@
 * A Donator badge for your Profile.
 
 ## Guild (Server) Perks
-* No Music length limit for everyone.
 * No queue limit for everyone, queue as many songs as you may like.
 * The ability to queue YouTube & Twitch streams for everyone.
 * Volume command for everyone.
@@ -46,36 +44,36 @@ The key(s) will last for as long as the pledge is active.
 ## 4$. - Patreon Bot
 * 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.
 * 2 premium keys that you can either apply to a server, yourself or another user.
-* Access to the Patreon Bot which has lag free music and beta features.
+* Access to the Patreon Bot which has music and beta features.
 
 ## 8$ - Milestoner
 * 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.
 * 4 premium keys that you can either apply to a server, yourself or another user.
-* Access to the Patreon Bot which has lag free music and beta features.
+* Access to the Patreon Bot which has music and beta features.
 * A custom role that display separately from all other users in the [support server](https://discordapp.com/invite/vCccEcy).
 
 ## 14$. - Server Supporter
 * 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.
 * 7 premium keys that you can either apply to a server, yourself or another user.
-* Access to the Patreon Bot which has lag free music and beta features.
+* Access to the Patreon Bot which has music and beta features.
 * A custom role that display separately from all other users in the [support server](https://discordapp.com/invite/vCccEcy).
 
 ## 50$. - Awooosome
 * 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.
 * 24 premium keys that you can either apply to a server, yourself or another user.
-* Access to the Patreon Bot which has lag free music and beta features.
+* Access to the Patreon Bot which has music and beta features.
 * A custom role that display separately from all other users in the [support server](https://discordapp.com/invite/vCccEcy).
 
 ## 70$. - Funder
 * 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.
 * 34 premium keys that you can either apply to a server, yourself or another user.
-* Access to the Patreon Bot which has lag free music and beta features.
+* Access to the Patreon Bot which has music and beta features.
 * A custom role that display separately from all other users in the [support server](https://discordapp.com/invite/vCccEcy).
 
 ## 100$. - B-But why?!
 * 1 premium key that you apply to yourself, which will be automatically delivered to you if you link Discord to Patreon.
 * 50 premium keys that you can either apply to a server, yourself or another user.
-* Access to the Patreon Bot which has lag free music and beta features.
+* Access to the Patreon Bot which has music and beta features.
 * A custom role that display separately from all other users in the [support server](https://discordapp.com/invite/vCccEcy).
 * We will add any feature you request as long as it's possible and not unethical.
 

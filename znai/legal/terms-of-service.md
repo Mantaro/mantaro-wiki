@@ -39,7 +39,7 @@ Mantaro is a service provided for free, without ANY GUARANTEES, and it's a beta 
 The end user assumes all responsibility for the streaming of any copyrighted material.
 
 ## 2.2. Services:
-The music streaming services provided by the bot are subject to change, without prior notice and in any case.
+The music streaming services provided by the premium bot are subject to change, without prior notice and in any case.
 
 ## 2.3. Quality:
 We strive to provide the highest quality possible, but this might be subject to the usage of the bot and the quantity of concurrent users making use of it.
