@@ -90,9 +90,7 @@ Requirements:
 
 Examples:
 ```api-parameters
-"", "", "/play `song:`https://youtu.be/dQw4w9WgXcQ"
 "", "", "/play `song:`Rick Astley - Never Gonna Give You Up"
-"", "", "/play `song:`Rick Astley - Never Gonna Give You Up `soundcloud:`True"
 ```
 ````
 
