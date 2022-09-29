@@ -7,7 +7,7 @@
 * Up to two times money from `/loot`.
 * Up to twice the money from `/chop`, `/mine` and `/fish` (Can be anywhere from 1.1x to 2x per run).
 * The ability to use `/dailycrate`.
-* Double money on `/daily`. .
+* Double money on `/daily`.
 * Volume command.
 * The ability to queue YouTube & Twitch streams (lo-fi radio anyone?).
 * No queue limit, queue as many songs as you may like.

@@ -119,7 +119,7 @@
 
 <article>
 <header><h1>Playing music with custom commands</h1></header>
-<p>Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both Simple commands only.To make such a command, you need to add the following to your Simple command: md play:&lt;song or playlist link&gt; After this, Mantaro will act as if you had used the /play command, and will play the song or playlist for you.</p>
+<p>Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both Simple commands only.To make such a command, you need to add the following to your Simple command: md play:&lt;song or playlist link&gt; After this, Mantaro will act as if you had used the /play command, and will play the song or playlist for you.</p>
 </article>
 
 <article>
@@ -1163,6 +1163,30 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
+          "text" : "Note: ",
+          "type" : "SimpleText"
+        }, {
+          "stroke" : "yellow",
+          "id" : "dollar-sign",
+          "type" : "Icon"
+        }, {
+          "text" : " This feature is only available in ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/mantaro-wiki/basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mantaro Patreon",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
           "text" : "Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.",
           "type" : "SimpleText"
         } ]
@@ -2123,7 +2147,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ApiParameters"
       } ]
     } ],
-    "lastModifiedTime" : 1664456213121,
+    "lastModifiedTime" : 1664472236427,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Custom Commands",
