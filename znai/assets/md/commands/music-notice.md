@@ -1,0 +1,1 @@
+Warning: Due to circumstances outside our control, we're unable to provide music playback on Mantaro. The following commands are only available on Mantaro Patreon with the only available music source being Soundcloud going forward.
