@@ -119,7 +119,7 @@
 
 <article>
 <header><h1>Playing music with custom commands</h1></header>
-<p>Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both Simple commands only.To make such a command, you need to add the following to your Simple command: md play:&lt;song or playlist link&gt; After this, Mantaro will act as if you had used the /play command, and will play the song or playlist for you.</p>
+<p>Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.You can also make a command that will act as a shortcut to play a song or a playlist for you. This can only be done with both Simple commands only.To make such a command, you need to add the following to your Simple command: md play:&lt;song or playlist link&gt; After this, Mantaro will act as if you had used the /play command, and will play the song or playlist for you.</p>
 </article>
 
 <article>
@@ -129,7 +129,7 @@
 
 <article>
 <header><h1>Operative Custom Commands</h1></header>
-<p>Warning: These types of commands can become really complicated. If you're not sure how to use them, you can always ask for help in our https://support.mantaro.site/ support server. However, bear in mind that even the support team might not be able to help you with these due to their complexity. Comparing Comparing is the act of taking one value and comparing it to another, for instance with this you can check if the content of a message is equal to something you set, or in our example check if someone's user ID is equal to the correct one: Example md v3:@{if; $(event.author.id);equals;276458692914839552; Yes this is you; No this is not you } The syntax for a comparing with if-else is: md @{if;&lt;thing to compare&gt;;&lt;comparator&gt;;&lt;thing compare with&gt;;&lt;if met&gt;;&lt;if not met (else)&gt;} Additionally, you can also use the compare operation to assert a boolean (true or false), uses for that are in the Asserting section down below. The syntax for this is: md @{compare;&lt;thing to compare&gt;;&lt;comparator&gt;;&lt;thing compare with&gt;} Available comparators equals It will check if the thing to compare is equal to the thing to compare with. not-equals It will check if the thing to compare is not equal to the thing to compare with. ignorecase-equals It will check if the thing to compare is equal to the thing to compare with, ignoring case. ignorecase-not-equals It will check if the thing to compare is not equal to the thing to compare with, ignoring case. greater-than It will check if the thing to compare is greater than the thing to compare with. (i.e 5 &gt; 3) less-than It will check if the thing to compare is less than the thing to compare with. (i.e 5 &lt; 3) not-greater-than It will check if the thing to compare is not greater than the thing to compare with. (i.e 5 !&gt; 3) not-less-than It will check if the thing to compare is not less than the thing to compare with. (i.e 5 !&lt; 3) ignorecase-greater-than It will check if the thing to compare is greater than the thing to compare with, ignoring case. (i.e 5 &gt; 3) ignorecase-less-than It will check if the thing to compare is less than the thing to compare with, ignoring case. (i.e 5 &lt; 3) ignorecase-not-greater-than It will check if the thing to compare is not greater than the thing to compare with, ignoring case. (i.e 5 !&gt; 3) ignorecase-not-less-than It will check if the thing to compare is not less than the thing to compare with, ignoring case. (i.e 5 !&lt; 3) contains It will check if the thing to compare contains the thing to compare with. not-contains It will check if the thing to compare does not contain the thing to compare with. starts-with It will check if the thing to compare starts with the thing to compare with. ignorecase-starts-with It will check if the thing to compare starts with the thing to compare with, ignoring case. ends-with It will check if the thing to compare ends with the thing to compare with. ignorecase-ends-with It will check if the thing to compare ends with the thing to compare with, ignoring case. Predicting Predicting is the act of checking whether something meets a predicate. In simpler terms this can be anything like checking if a value is empty or checking if it's equal to a preset value. Example md v3:@{if; $(event.message);usermention; You mentioned someone!; You didn't mention anybody :( } The syntax for if-else for this one is: md @{if;&lt;thing to predict&gt;;&lt;predicate&gt;;&lt;if met&gt;;&lt;if not met (else)&gt;} You can additionally use the test operation to assert a boolean, uses for that are in the Asserting section down below.The syntax for this is: md @{test;&lt;predicate&gt;;&lt;value to predict&gt;} Available Predicates usermention It will check if the thing to predict is a user mention. is-empty It will check if the thing to predict is empty. is-not-empty It will check if the thing to predict is not empty. Asserting (True and False) Asserting a boolean means anything that returns a true or a false. We have mentioned the compare and test operations up above, both of these will when used outside an if give you a &quot;true&quot; or a &quot;false&quot; as a message. However, these truth values can be used in if commands to make more complex structures. Example md v3:@{if; You did it!; @{and; @{test;usermention;$(event.message)}; @{compare;$(event.message);contains;hi} }; You didn't do it :( } The structure for if-else changes drastically for this one. It is as follows: md @{if;&lt;if met&gt;;&lt;assertive&gt;;&lt;if not met&gt;} Available Logical Operators @{and;&lt;operation&gt;;...} It will check if all the operations are true. @{or;&lt;operation&gt;;...} It will check if any of the operations are true. @{not;&lt;operation&gt;} It will check if the operation is false. Other Operations You have a handful of operations to choose from, while we already talked about most of them, here is a list of a few we didn't mention: 1) What is it used for? @{not-empty; &lt;argument1&gt; ; &lt;argument2&gt; ...} use This will return the first non-empty argument. 2) What is it used for? @{not-empty-strict; &lt;argument1&gt; ; &lt;argument2&gt; ...} use This will return the first non-empty argument, but will consider space only values as empty. 3) What is it used for? @{timestamp; &lt;format&gt; ; &lt;zone&gt; } use This will return the current timestamp in the specified format and timezone. Format is a bit more complex. An example would be: d MMM uuuu for the current date (more info for format on https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html Java Docs. The time zone can be any of https://en.wikipedia.org/wiki/List_of_tz_database_time_zones these TZ database names (include every character even underlines). 4) What is it used for? @{upper; &lt;text&gt; } use This will return the text in uppercase. 5) What is it used for? @{lower; &lt;text&gt; } use This will return the text in lowercase. 6) What is it used for? @{replace; &lt;character(s) to replace&gt; ; &lt;replace with&gt; ; &lt;replace in&gt; } use This will replace the occurrences of characters in a text. An example would be @{replace;r;test;$(event.message)} to replace all r's with test in event.message</p>
+<p>Warning: These types of commands can become really complicated. If you're not sure how to use them, you can always ask for help in our https://support.mantaro.site/ support server. However, bear in mind that even the support team might not be able to help you with these due to their complexity. Comparing Comparing is the act of taking one value and comparing it to another, for instance with this you can check if the content of a message is equal to something you set, or in our example check if someone's user ID is equal to the correct one: Example md v3:@{if; $(event.author.id);equals;276458692914839552; Yes this is you; No this is not you } The syntax for a comparing with if-else is: md @{if;&lt;thing to compare&gt;;&lt;comparator&gt;;&lt;thing compare with&gt;;&lt;if met&gt;;&lt;if not met (else)&gt;} Additionally, you can also use the compare operation to assert a boolean (true or false), uses for that are in the Asserting section down below. The syntax for this is: md @{compare;&lt;thing to compare&gt;;&lt;comparator&gt;;&lt;thing compare with&gt;} Available comparators equals It will check if the thing to compare is equal to the thing to compare with. not-equals It will check if the thing to compare is not equal to the thing to compare with. ignorecase-equals It will check if the thing to compare is equal to the thing to compare with, ignoring case. ignorecase-not-equals It will check if the thing to compare is not equal to the thing to compare with, ignoring case. greater-than It will check if the thing to compare is greater than the thing to compare with. (i.e 5 &gt; 3) less-than It will check if the thing to compare is less than the thing to compare with. (i.e 5 &lt; 3) not-greater-than It will check if the thing to compare is not greater than the thing to compare with. (i.e 5 !&gt; 3) not-less-than It will check if the thing to compare is not less than the thing to compare with. (i.e 5 !&lt; 3) ignorecase-greater-than It will check if the thing to compare is greater than the thing to compare with, ignoring case. (i.e 5 &gt; 3) ignorecase-less-than It will check if the thing to compare is less than the thing to compare with, ignoring case. (i.e 5 &lt; 3) ignorecase-not-greater-than It will check if the thing to compare is not greater than the thing to compare with, ignoring case. (i.e 5 !&gt; 3) ignorecase-not-less-than It will check if the thing to compare is not less than the thing to compare with, ignoring case. (i.e 5 !&lt; 3) contains It will check if the thing to compare contains the thing to compare with. not-contains It will check if the thing to compare does not contain the thing to compare with. starts-with It will check if the thing to compare starts with the thing to compare with. ignorecase-starts-with It will check if the thing to compare starts with the thing to compare with, ignoring case. ends-with It will check if the thing to compare ends with the thing to compare with. ignorecase-ends-with It will check if the thing to compare ends with the thing to compare with, ignoring case. Predicting Predicting is the act of checking whether something meets a predicate. In simpler terms this can be anything like checking if a value is empty or checking if it's equal to a preset value. Example md v3:@{if; $(event.message);usermention; You mentioned someone!; You didn't mention anybody :( } The syntax for if-else for this one is: md @{if;&lt;thing to predict&gt;;&lt;predicate&gt;;&lt;if met&gt;;&lt;if not met (else)&gt;} You can additionally use the test operation to assert a boolean, uses for that are in the Asserting section down below.The syntax for this is: md @{test;&lt;predicate&gt;;&lt;value to predict&gt;} Available Predicates usermention It will check if the thing to predict is a user mention. is-empty It will check if the thing to predict is empty. is-not-empty It will check if the thing to predict is not empty. Asserting (True and False) Asserting a boolean means anything that returns a true or a false. We have mentioned the compare and test operations up above, both of these will when used outside an if give you a &quot;true&quot; or a &quot;false&quot; as a message. However, these truth values can be used in if commands to make more complex structures. Example md v3:@{if; You did it!; @{and; @{test;usermention;$(event.message)}; @{compare;$(event.message);contains;hi} }; You didn't do it :( } The structure for if-else changes drastically for this one. It is as follows: md @{if;&lt;if met&gt;;&lt;assertive&gt;;&lt;if not met&gt;} Available Logical Operators @{and;&lt;operation&gt;;...} It will check if all the operations are true. @{or;&lt;operation&gt;;...} It will check if any of the operations are true. @{not;&lt;operation&gt;} It will flip the result of the operation. Other Operations You have a handful of operations to choose from, while we already talked about most of them, here is a list of a few we didn't mention: 1) What is it used for? @{not-empty; &lt;argument1&gt; ; &lt;argument2&gt; ...} use This will return the first non-empty argument. 2) What is it used for? @{not-empty-strict; &lt;argument1&gt; ; &lt;argument2&gt; ...} use This will return the first non-empty argument, but will consider space only values as empty. 3) What is it used for? @{timestamp; &lt;format&gt; ; &lt;zone&gt; } use This will return the current timestamp in the specified format and timezone. Format is a bit more complex. An example would be: d MMM uuuu for the current date (more info for format on https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html Java Docs. The time zone can be any of https://en.wikipedia.org/wiki/List_of_tz_database_time_zones these TZ database names (include every character even underlines). 4) What is it used for? @{upper; &lt;text&gt; } use This will return the text in uppercase. 5) What is it used for? @{lower; &lt;text&gt; } use This will return the text in lowercase. 6) What is it used for? @{replace; &lt;character(s) to replace&gt; ; &lt;replace with&gt; ; &lt;replace in&gt; } use This will replace the occurrences of characters in a text. An example would be @{replace;r;test;$(event.message)} to replace all r's with test in event.message</p>
 </article>
 </section>
 </div>
@@ -146,7 +146,7 @@ ReactDOM.render(React.createElement(Documentation, {
     "description" : "The official wiki for the Mantaro Discord Bot.",
     "id" : "mantaro-wiki",
     "title" : "Mantaro Wiki",
-    "type" : "Docs",
+    "type" : "",
     "previewEnabled" : false,
     "support" : {
       "link" : "https://support.mantaro.site",
@@ -184,7 +184,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is this for?",
             "url" : ""
           } ],
-          "anchorId" : "1)",
+          "anchorId" : "commands_1)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -201,7 +201,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "Used for:",
             "type" : [ ],
-            "anchorId" : "1)_Usedfor:",
+            "anchorId" : "commands_1)_Usedfor:",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -216,7 +216,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is this for?",
             "url" : ""
           } ],
-          "anchorId" : "2)",
+          "anchorId" : "commands_2)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -233,7 +233,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "Used for:",
             "type" : [ ],
-            "anchorId" : "2)_Usedfor:",
+            "anchorId" : "commands_2)_Usedfor:",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -248,7 +248,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is this for?",
             "url" : ""
           } ],
-          "anchorId" : "3)",
+          "anchorId" : "commands_3)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -277,7 +277,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "Used for:",
             "type" : [ ],
-            "anchorId" : "3)_Usedfor:",
+            "anchorId" : "commands_3)_Usedfor:",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -292,7 +292,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is this for?",
             "url" : ""
           } ],
-          "anchorId" : "4)",
+          "anchorId" : "commands_4)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -309,7 +309,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "Used for:",
             "type" : [ ],
-            "anchorId" : "4)_Usedfor:",
+            "anchorId" : "commands_4)_Usedfor:",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -324,7 +324,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is this for?",
             "url" : ""
           } ],
-          "anchorId" : "5)",
+          "anchorId" : "commands_5)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -335,7 +335,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "Used for:",
             "type" : [ ],
-            "anchorId" : "5)_Usedfor:",
+            "anchorId" : "commands_5)_Usedfor:",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -345,6 +345,7 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ],
+        "anchorPrefix" : "commands",
         "type" : "ApiParameters"
       }, {
         "type" : "Paragraph",
@@ -391,7 +392,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ]
       }, {
         "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\custom-form.png",
-        "timestamp" : 1663016683062,
+        "timestamp" : 1664456213087,
         "shapes" : [ ],
         "width" : 438.0,
         "height" : 399.0,
@@ -483,7 +484,7 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           }, {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\simple\\custom-add.png",
-            "timestamp" : 1663017092467,
+            "timestamp" : 1664456213106,
             "shapes" : [ ],
             "width" : 437.0,
             "height" : 400.0,
@@ -496,7 +497,7 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           }, {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\simple\\custom-run.png",
-            "timestamp" : 1663017343557,
+            "timestamp" : 1664456213107,
             "shapes" : [ ],
             "width" : 311.0,
             "height" : 262.0,
@@ -596,7 +597,7 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           }, {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\complex\\custom-add.png",
-            "timestamp" : 1663176759441,
+            "timestamp" : 1664456213085,
             "shapes" : [ ],
             "width" : 438.0,
             "height" : 400.0,
@@ -609,7 +610,7 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           }, {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\complex\\custom-run.png",
-            "timestamp" : 1663183305197,
+            "timestamp" : 1664456213086,
             "shapes" : [ ],
             "width" : 304.0,
             "height" : 331.0,
@@ -991,7 +992,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "columns" : [ {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\modifiers\\example.png",
-            "timestamp" : 1663188220076,
+            "timestamp" : 1664456213094,
             "shapes" : [ ],
             "width" : 438.0,
             "height" : 400.0,
@@ -1000,7 +1001,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\modifiers\\run.png",
-            "timestamp" : 1663188389853,
+            "timestamp" : 1664456213096,
             "shapes" : [ ],
             "width" : 453.0,
             "height" : 283.0,
@@ -1033,7 +1034,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "columns" : [ {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\modifiers\\custom-example.png",
-            "timestamp" : 1663188722660,
+            "timestamp" : 1664456213092,
             "shapes" : [ ],
             "width" : 438.0,
             "height" : 400.0,
@@ -1042,7 +1043,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\modifiers\\custom-run.png",
-            "timestamp" : 1663188798703,
+            "timestamp" : 1664456213093,
             "shapes" : [ ],
             "width" : 380.0,
             "height" : 283.0,
@@ -1162,6 +1163,30 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
+          "text" : "Note: ",
+          "type" : "SimpleText"
+        }, {
+          "stroke" : "yellow",
+          "id" : "dollar-sign",
+          "type" : "Icon"
+        }, {
+          "text" : " This feature is only available in ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/mantaro-wiki/basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mantaro Patreon",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
           "text" : "Warning: Due to the move to Slash Commands, this feature has been temporarily disabled due to its limitations.",
           "type" : "SimpleText"
         } ]
@@ -1274,7 +1299,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "columns" : [ {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\embeds\\add.png",
-            "timestamp" : 1663215818107,
+            "timestamp" : 1664456213089,
             "shapes" : [ ],
             "width" : 438.0,
             "height" : 400.0,
@@ -1283,7 +1308,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\embeds\\run.png",
-            "timestamp" : 1663215908671,
+            "timestamp" : 1664456213091,
             "shapes" : [ ],
             "width" : 456.0,
             "height" : 591.0,
@@ -1351,7 +1376,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "columns" : [ {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\operative\\comparing-add.png",
-            "timestamp" : 1663258420460,
+            "timestamp" : 1664456213100,
             "shapes" : [ ],
             "width" : 438.0,
             "height" : 400.0,
@@ -1360,7 +1385,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\operative\\comparing-run.png",
-            "timestamp" : 1663258506234,
+            "timestamp" : 1664456213101,
             "shapes" : [ ],
             "width" : 321.0,
             "height" : 438.0,
@@ -1407,7 +1432,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "parameters" : [ {
           "name" : "equals",
           "type" : [ ],
-          "anchorId" : "equals",
+          "anchorId" : "comparators_equals",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1418,7 +1443,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "not-equals",
           "type" : [ ],
-          "anchorId" : "not-equals",
+          "anchorId" : "comparators_not-equals",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1429,7 +1454,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "ignorecase-equals",
           "type" : [ ],
-          "anchorId" : "ignorecase-equals",
+          "anchorId" : "comparators_ignorecase-equals",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1440,7 +1465,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "ignorecase-not-equals",
           "type" : [ ],
-          "anchorId" : "ignorecase-not-equals",
+          "anchorId" : "comparators_ignorecase-not-equals",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1451,7 +1476,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "greater-than",
           "type" : [ ],
-          "anchorId" : "greater-than",
+          "anchorId" : "comparators_greater-than",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1462,7 +1487,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "less-than",
           "type" : [ ],
-          "anchorId" : "less-than",
+          "anchorId" : "comparators_less-than",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1473,7 +1498,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "not-greater-than",
           "type" : [ ],
-          "anchorId" : "not-greater-than",
+          "anchorId" : "comparators_not-greater-than",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1484,7 +1509,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "not-less-than",
           "type" : [ ],
-          "anchorId" : "not-less-than",
+          "anchorId" : "comparators_not-less-than",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1495,7 +1520,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "ignorecase-greater-than",
           "type" : [ ],
-          "anchorId" : "ignorecase-greater-than",
+          "anchorId" : "comparators_ignorecase-greater-than",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1506,7 +1531,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "ignorecase-less-than",
           "type" : [ ],
-          "anchorId" : "ignorecase-less-than",
+          "anchorId" : "comparators_ignorecase-less-than",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1517,7 +1542,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "ignorecase-not-greater-than",
           "type" : [ ],
-          "anchorId" : "ignorecase-not-greater-than",
+          "anchorId" : "comparators_ignorecase-not-greater-than",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1528,7 +1553,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "ignorecase-not-less-than",
           "type" : [ ],
-          "anchorId" : "ignorecase-not-less-than",
+          "anchorId" : "comparators_ignorecase-not-less-than",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1539,7 +1564,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "contains",
           "type" : [ ],
-          "anchorId" : "contains",
+          "anchorId" : "comparators_contains",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1550,7 +1575,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "not-contains",
           "type" : [ ],
-          "anchorId" : "not-contains",
+          "anchorId" : "comparators_not-contains",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1561,7 +1586,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "starts-with",
           "type" : [ ],
-          "anchorId" : "starts-with",
+          "anchorId" : "comparators_starts-with",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1572,7 +1597,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "ignorecase-starts-with",
           "type" : [ ],
-          "anchorId" : "ignorecase-starts-with",
+          "anchorId" : "comparators_ignorecase-starts-with",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1583,7 +1608,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "ends-with",
           "type" : [ ],
-          "anchorId" : "ends-with",
+          "anchorId" : "comparators_ends-with",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1594,7 +1619,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "ignorecase-ends-with",
           "type" : [ ],
-          "anchorId" : "ignorecase-ends-with",
+          "anchorId" : "comparators_ignorecase-ends-with",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1603,6 +1628,7 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ],
+        "anchorPrefix" : "comparators",
         "type" : "ApiParameters"
       }, {
         "id" : "operative-custom-commands-predicting",
@@ -1630,7 +1656,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "columns" : [ {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\operative\\predicting-add.png",
-            "timestamp" : 1663259658529,
+            "timestamp" : 1664456213103,
             "shapes" : [ ],
             "width" : 438.0,
             "height" : 400.0,
@@ -1639,7 +1665,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\operative\\predicting-run.png",
-            "timestamp" : 1663259714041,
+            "timestamp" : 1664456213104,
             "shapes" : [ ],
             "width" : 342.0,
             "height" : 440.0,
@@ -1687,7 +1713,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "parameters" : [ {
           "name" : "usermention",
           "type" : [ ],
-          "anchorId" : "usermention",
+          "anchorId" : "predicates_usermention",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1698,7 +1724,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "is-empty",
           "type" : [ ],
-          "anchorId" : "is-empty",
+          "anchorId" : "predicates_is-empty",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1709,7 +1735,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "is-not-empty",
           "type" : [ ],
-          "anchorId" : "is-not-empty",
+          "anchorId" : "predicates_is-not-empty",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1718,6 +1744,7 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ],
+        "anchorPrefix" : "predicates",
         "type" : "ApiParameters"
       }, {
         "id" : "operative-custom-commands-asserting-true-and-false",
@@ -1755,7 +1782,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "columns" : [ {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\operative\\asserting-add.png",
-            "timestamp" : 1663260828815,
+            "timestamp" : 1664456213097,
             "shapes" : [ ],
             "width" : 438.0,
             "height" : 400.0,
@@ -1764,7 +1791,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "content" : [ {
             "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\custom\\operative\\asserting-run.png",
-            "timestamp" : 1663260940478,
+            "timestamp" : 1664456213099,
             "shapes" : [ ],
             "width" : 317.0,
             "height" : 440.0,
@@ -1794,7 +1821,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "parameters" : [ {
           "name" : "@{and;<operation>;...}",
           "type" : [ ],
-          "anchorId" : "@{and;operation;___}",
+          "anchorId" : "logical_@{and;operation;___}",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1805,7 +1832,7 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "@{or;<operation>;...}",
           "type" : [ ],
-          "anchorId" : "@{or;operation;___}",
+          "anchorId" : "logical_@{or;operation;___}",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1816,15 +1843,16 @@ ReactDOM.render(React.createElement(Documentation, {
         }, {
           "name" : "@{not;<operation>}",
           "type" : [ ],
-          "anchorId" : "@{not;operation}",
+          "anchorId" : "logical_@{not;operation}",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "It will check if the operation is false.",
+              "text" : "It will flip the result of the operation.",
               "type" : "SimpleText"
             } ]
           } ]
         } ],
+        "anchorPrefix" : "logical",
         "type" : "ApiParameters"
       }, {
         "id" : "operative-custom-commands-other-operations",
@@ -1844,7 +1872,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is it used for?",
             "url" : ""
           } ],
-          "anchorId" : "1)",
+          "anchorId" : "other_1)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1867,7 +1895,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "use",
             "type" : [ ],
-            "anchorId" : "1)_use",
+            "anchorId" : "other_1)_use",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -1882,7 +1910,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is it used for?",
             "url" : ""
           } ],
-          "anchorId" : "2)",
+          "anchorId" : "other_2)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1905,7 +1933,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "use",
             "type" : [ ],
-            "anchorId" : "2)_use",
+            "anchorId" : "other_2)_use",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -1920,7 +1948,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is it used for?",
             "url" : ""
           } ],
-          "anchorId" : "3)",
+          "anchorId" : "other_3)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -1943,7 +1971,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "use",
             "type" : [ ],
-            "anchorId" : "3)_use",
+            "anchorId" : "other_3)_use",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -2001,7 +2029,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is it used for?",
             "url" : ""
           } ],
-          "anchorId" : "4)",
+          "anchorId" : "other_4)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -2018,7 +2046,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "use",
             "type" : [ ],
-            "anchorId" : "4)_use",
+            "anchorId" : "other_4)_use",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -2033,7 +2061,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is it used for?",
             "url" : ""
           } ],
-          "anchorId" : "5)",
+          "anchorId" : "other_5)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -2050,7 +2078,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "use",
             "type" : [ ],
-            "anchorId" : "5)_use",
+            "anchorId" : "other_5)_use",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -2065,7 +2093,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "text" : "What is it used for?",
             "url" : ""
           } ],
-          "anchorId" : "6)",
+          "anchorId" : "other_6)",
           "description" : [ {
             "type" : "Paragraph",
             "content" : [ {
@@ -2094,7 +2122,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "children" : [ {
             "name" : "use",
             "type" : [ ],
-            "anchorId" : "6)_use",
+            "anchorId" : "other_6)_use",
             "description" : [ {
               "type" : "Paragraph",
               "content" : [ {
@@ -2115,10 +2143,11 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           } ]
         } ],
+        "anchorPrefix" : "other",
         "type" : "ApiParameters"
       } ]
     } ],
-    "lastModifiedTime" : 1663264512200,
+    "lastModifiedTime" : 1664472236427,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Custom Commands",

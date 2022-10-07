@@ -1,0 +1,1 @@
+Warning: Due to circumstances outside our control, we're unable to provide music playback on Mantaro. The following are now only available on Mantaro Patreon with the default search engine being Soundcloud, and YouTube fully removed going forward.

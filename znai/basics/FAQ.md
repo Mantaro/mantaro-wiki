@@ -13,9 +13,17 @@ Note: Some commands have not been ported to Slash Commands yet and still use tex
 For more information, check out Discord's [Slash Commands FAQ](https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ) or their [Blog Post](https://discord.com/blog/slash-commands-are-here).
 
 ---
+
+## 0.1. What happened to music?
+Due to circumstances outside our control, we're unable to provide music playback on Mantaro.
+All music commands are now only available on Mantaro Patreon
+with the default search engine being Soundcloud, and YouTube fully removed going forward.
+
+---
 ## 1. What is premium and what is the Patreon bot?
-Premium is a status that can be applied to both servers and users and provide perks like no music length limit and more. You can obtain premium keys by becoming a Patreon.
-The Patreon bot is however essentially a second Mantaro that runs on a different server, causing better Music quality. 
+Premium is a status that can be applied to both servers and users and provide perks like minor currency buffs and more. 
+You can obtain premium keys by becoming a Patreon. 
+The Patreon bot is however essentially a second Mantaro that runs on a different server, it also has a small music feature. 
 It is also the bot to receive new features first providing you with an insight of what is to come.
 You can read more info about premium, the Patreon bot and PayPal and Patreon donations in [this page](basics/premium-perks).
 

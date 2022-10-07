@@ -119,7 +119,7 @@
 
 <article>
 <header><h1>Music Configuration</h1></header>
-<p>Some small configuration options for the Music feature. Type Command Preview [{text=Lock Mantaro to a Voice Channel, type=SimpleText}] [{code=~&gt;opts music channel &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/5nYLq13.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Clear the Music Channel, type=SimpleText}] [{code=~&gt;opts music clearchannel, type=InlinedCode}] [{url=https://i.imgur.com/YOEen6a.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable/Enable the Music announcer, type=SimpleText}] [{code=~&gt;opts musicannounce toggle, type=InlinedCode}] [{url=https://i.imgur.com/oomQoxO.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Fairqueue (Duplicate Song limit), type=SimpleText}] [{code=~&gt;opts fairqueue max &lt;number&gt;, type=InlinedCode}] [{url=https://i.imgur.com/iXIyOvX.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Toggle vote skipping/stopping, type=SimpleText}] [{code=~&gt;opts music vote toggle, type=InlinedCode}] [{url=https://i.imgur.com/rtSZAIK.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom DJ role, type=SimpleText}] [{code=~&gt;opts djrole set &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/oxEWodP.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the custom DJ role, type=SimpleText}] [{code=~&gt;opts djrole reset, type=InlinedCode}] [{url=https://i.imgur.com/Knf7kkb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}]</p>
+<p>Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Some small configuration options for the Music feature. Type Command Preview [{text=Lock Mantaro to a Voice Channel, type=SimpleText}] [{code=~&gt;opts music channel &lt;channel name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/5nYLq13.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Clear the Music Channel, type=SimpleText}] [{code=~&gt;opts music clearchannel, type=InlinedCode}] [{url=https://i.imgur.com/YOEen6a.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Disable/Enable the Music announcer, type=SimpleText}] [{code=~&gt;opts musicannounce toggle, type=InlinedCode}] [{url=https://i.imgur.com/oomQoxO.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Fairqueue (Duplicate Song limit), type=SimpleText}] [{code=~&gt;opts fairqueue max &lt;number&gt;, type=InlinedCode}] [{url=https://i.imgur.com/iXIyOvX.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Toggle vote skipping/stopping, type=SimpleText}] [{code=~&gt;opts music vote toggle, type=InlinedCode}] [{url=https://i.imgur.com/rtSZAIK.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Set a custom DJ role, type=SimpleText}] [{code=~&gt;opts djrole set &lt;role name&gt;, type=InlinedCode}] [{url=https://i.imgur.com/oxEWodP.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}] [{text=Reset the custom DJ role, type=SimpleText}] [{code=~&gt;opts djrole reset, type=InlinedCode}] [{url=https://i.imgur.com/Knf7kkb.png, isFile=false, type=Link, content=[{text=Like This, type=SimpleText}]}]</p>
 </article>
 
 <article>
@@ -141,7 +141,7 @@ ReactDOM.render(React.createElement(Documentation, {
     "description" : "The official wiki for the Mantaro Discord Bot.",
     "id" : "mantaro-wiki",
     "title" : "Mantaro Wiki",
-    "type" : "Docs",
+    "type" : "",
     "previewEnabled" : false,
     "support" : {
       "link" : "https://support.mantaro.site",
@@ -1694,6 +1694,30 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
+          "text" : "Note: ",
+          "type" : "SimpleText"
+        }, {
+          "stroke" : "yellow",
+          "id" : "dollar-sign",
+          "type" : "Icon"
+        }, {
+          "text" : " This feature is only available in ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/mantaro-wiki/basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mantaro Patreon",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
           "text" : "Some small configuration options for the Music feature.",
           "type" : "SimpleText"
         } ]
@@ -1939,7 +1963,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1663092990594,
+    "lastModifiedTime" : 1664472236326,
     "tocItem" : {
       "chapterTitle" : "Basics",
       "pageTitle" : "Server Configuration",

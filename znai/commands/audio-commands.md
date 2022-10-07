@@ -2,9 +2,12 @@
 title: 🎵 Audio Commands
 ---
 
+:include-markdown: assets/md/commands/music-notice.md
 
 # /forward {style: "api"}
 This command will skip the song forward by the time given.
+
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Options:
@@ -26,6 +29,7 @@ Examples:
 
 # /move {style: "api"}
 This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Options:
@@ -44,6 +48,7 @@ Examples:
 
 # /nowplaying {style: "api"}
 This command will display the song that is currently playing with timestamps.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Examples:
@@ -56,6 +61,7 @@ Examples:
 
 # /pause {style: "api"}
 This command will pause the music Player or unpause the Player if already paused.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Examples:
@@ -68,12 +74,13 @@ Examples:
 
 # /play {style: "api"}
 This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play.
+:include-markdown: assets/md/commands/sellout-note-mp.md
+:include-markdown: assets/md/commands/music-notice-sc.md
 
 ````tabs
 Options:
 ```api-parameters
 song, Required, "The song to play. Can be a URL or a search term."
-soundcloud, Optional, "Whether to search in Soundcloud. Only use to search."
 top, Optional, "Puts song at the start of the queue. Requires [**DJ** or **Admin** permissions](commands/permissions#intro)."
 first, Optional, "Plays the first search result. Only applies if a search is used."
 ```
@@ -83,9 +90,7 @@ Requirements:
 
 Examples:
 ```api-parameters
-"", "", "/play `song:`https://youtu.be/dQw4w9WgXcQ"
 "", "", "/play `song:`Rick Astley - Never Gonna Give You Up"
-"", "", "/play `song:`Rick Astley - Never Gonna Give You Up `soundcloud:`True"
 ```
 ````
 
@@ -93,6 +98,7 @@ Examples:
 
 # /queue {style: "api"}
 This command displays the current queue or the selected page of the queue.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Subcommands:
@@ -112,6 +118,7 @@ Examples:
 
 # /removetrack {style: "api"}
 This command removes the given track(s) from the queue.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Options:
@@ -137,6 +144,7 @@ Examples:
 
 # /repeat {style: "api"}
 This command repeats the current song or the queue, or disables it.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Options:
@@ -158,6 +166,7 @@ Examples:
 
 # /restartsong {style: "api"}
 This command will rewind the current song back to the start.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Requirements:
@@ -173,6 +182,7 @@ Examples:
 
 # /rewind {style: "api"}
 This command will rewind the song back by the time given.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Options:
@@ -193,6 +203,7 @@ Examples:
 
 # /shuffle {style: "api"}
 This command will shuffle the current queue.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Requirements:
@@ -208,6 +219,7 @@ Examples:
 
 # /skip {style: "api"}
 This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. *People with DJ permissions can skip immediately*.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Options:
@@ -229,6 +241,7 @@ Examples:
 
 # /stop {style: "api"}
 This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. *People with DJ permissions can stop immediately*.
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Requirements:
@@ -245,13 +258,13 @@ Examples:
 
 # /volume {style: "api"}
 This command lets you check the current volume, as well as set the volume to the percentage specified (4-100).
+:include-markdown: assets/md/commands/sellout-note-mp.md
 
 ````tabs
 Options:
 ```api-parameters
 volume, Optional, "
 The volume to use (4-100).
-:include-markdown: assets/md/commands/sellout-note-guild.md
 "
 ```
 

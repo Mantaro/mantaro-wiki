@@ -116,6 +116,8 @@ Custom log messages (editmessage, deletemessage and banmessage) support all of [
 
 ---
 # Music Configuration
+:include-markdown: assets/md/commands/sellout-note-mp.md
+
 Some small configuration options for the Music feature.
 
 |                Type                |                Command                |                   Preview                    |
