@@ -1,21 +1,76 @@
-Warning: This page is still a work in progress! The current content on it will work for you, but things like the layout and the content may change in the future. Thank you for your patience `:icon: heart { fill: 'red' }`
-
 # Intro
+
 Mantaro has had many items across the years, some currently obtainable, some that have been removed.
 This page looks to document all the items that have been part of Mantaro and give a brief description of them.
 
 ---
+
 # Collectible Items
-Most of these items are just meant to be collected. A few of the items here are used as crafting materials, others have no inherent use other than maybe selling them for credits, or keeping them to make your collection of items bigger.
+
+Most of these items are just meant to be collected. A few of the items here are used as crafting materials, others have
+no inherent use other than maybe selling them for credits, or keeping them to make your collection of items bigger.
+
+:include-template: assets/templates/template-3-column-card.ftl {
+items: [
+{
+name: "Headphones",
+icon: "assets/images/emotes/headphones.svg",
+description: "That's what happens when you listen to too much music. Should be worth something, tho. (Appears randomly after using any of the music commands)",
+rarity: "Common",
+api: {
+    obtain: "Loot"
+}},
+{
+name: "Moneybag",
+icon: "assets/images/emotes/moneybag.svg",
+description: "What else?",
+rarity: "Common",
+api: {
+    obtain: "Market"
+}},
+{
+name: "Milk",
+icon: "assets/images/emotes/milk.svg",
+description: "Maybe it's okay to have some.",
+rarity: "Common",
+api: {
+obtain: "Market, Fish, Loot Crate"
+}},
+{
+name: "Old Beverage",
+icon: "assets/images/emotes/champagne.svg",
+description: "Does really weird stuff in big quantities. Well, depends on what kind ;)",
+rarity: "Common",
+api: {
+obtain: "Market, Fish, Loot Crate"
+}},
+{
+name: "Lewd Magazine",
+icon: "assets/images/emotes/newspaper.svg",
+description: "Too many lewd commands. Way too many. Had fun?",
+rarity: "Common",
+api: {
+obtain: "Market, Fish, Loot Crate"
+}},
+{
+name: "Clothes",
+icon: "assets/images/emotes/shirt.svg",
+description: "Basically what you wear. Hopefully...",
+rarity: "Common",
+api: {
+obtain: "Market, Fish, Loot Crate"
+}},
+]
+}
+
+
+
+
+
+
 
 |                                              Icon                                               |       Name        |                                                                    Description                                                                    |              Obtained from              |
 |:-----------------------------------------------------------------------------------------------:|:-----------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------:|
-|   <img src="https://discordapp.com/assets/b5a892d37d598e0e73dce83212ad8512.svg" width="64"/>    |    Headphones     |  That's what happens when you listen to too much music. Should be worth something, tho. (Appears randomly after using any of the music commands)  |                  Loot                   |
-|   <img src="https://discordapp.com/assets/6c42ea9f3e233d9110e04dcd87db55da.svg" width="64"/>    |     Moneybag      |                                                                    What else?                                                                     |                 Market                  |
-|   <img src="https://discordapp.com/assets/c7b9a045336a335d4b87fae6b75b73ce.svg" width="64"/>    |       Milk        |                                                           Maybe it's okay to have some.                                                           |        Market, Fish, Loot Crate         |
-|   <img src="https://discordapp.com/assets/ae5e2a35c59da2f4e12c406f5efa86b9.svg" width="64"/>    |   Old Beverage    |                                     Does really weird stuff in big quantities. Well, depends on what kind ;)                                      |        Market, Fish, Loot Crate         |
-|   <img src="https://discordapp.com/assets/51cd8436fb99a6f12257db34780fb7a7.svg" width="64"/>    |   Lewd Magazine   |                                                  Too many lewd commands. Way too many. Had fun?                                                   |     Market, Loot, Fish, Loot Crate      |
-|   <img src="https://discordapp.com/assets/63acb187ec615e6e39e1fdd6e4352751.svg" width="64"/>    |      Clothes      |                                                       Basically what you wear. Hopefully...                                                       |        Market, Fish, Loot Crate         |
 |   <img src="https://discordapp.com/assets/5a8d9af8b5b3922097b2cccfce844630.svg" width="64"/>    |      Diamond      |                      Basically a better way of saving your money. It's shiny too. And let's you cast shiny stuff. How nice.                       |        Market, Mine, Loot Crate         |
 |   <img src="https://discordapp.com/assets/293579110f2137926e045941a942e8d4.svg" width="64"/>    |   Wedding Dress   |                                                                  Isn't it cute?                                                                   |           Market, Loot Crate            |
 |   <img src="https://discordapp.com/assets/9f6ac7129f1751c174534f1ac2f119ae.svg" width="64"/>    |     Necklace      |                                                                    Looks nice.                                                                    |        Market, Fish, Loot Crate         |
@@ -56,8 +111,11 @@ Most of these items are just meant to be collected. A few of the items here are 
 |   <img src="https://discordapp.com/assets/141d49436743034a59dec6bd5618675d.svg" width="64"/>    | Consolation Prize |                                                In the first place, how did you get so much money?                                                 |         Somehow overflow a long         |
 
 ---
+
 # Usable/Consumable Items
-These items have a use attached to them. Some items have a single-time use, meaning that after you use them any other of the same item you get becomes a collectible.
+
+These items have a use attached to them. Some items have a single-time use, meaning that after you use them any other of
+the same item you get becomes a collectible.
 
 |                                            Icon                                            |      Name       |                                                   Use/Description                                                    |                       How to use? / Where is it used?                       |              Obtained from               |
 |:------------------------------------------------------------------------------------------:|:---------------:|:--------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:----------------------------------------:|
@@ -85,10 +143,14 @@ These items have a use attached to them. Some items have a single-time use, mean
 | <img src="https://discordapp.com/assets/38002403475def186f4b7ac64cc9d04f.svg" width="64"/> |  Hamster Food   |                                            Food your hamster might enjoy.                                            |          Used to feed your pet with `/pet feed item:Hamster Food`           |                  Market                  |
 
 ---
+
 # Tool Items
-These items are ofter required to use another command. The commands they are attached to won't ofter work unless you have equipped/stated the required tool.
+
+These items are ofter required to use another command. The commands they are attached to won't ofter work unless you
+have equipped/stated the required tool.
 
 ## Wrench
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -114,6 +176,7 @@ A run of the mill wrench you can buy from the market. Useful for repairing items
 </details>
 
 ## Comet Wrench
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -141,6 +204,7 @@ A Wrench infused with pieces of Comet Gems. Somehow it feels way sturdier.
 </details>
 
 ## Sparkle Wrench
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -170,6 +234,7 @@ A Wrench infused with pieces of Sparkle Fragments. Somehow it feels a lot sturdi
 </details>
 
 ## Brom's Pickaxe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -201,6 +266,7 @@ A normal pickaxe you bought on the local market. Seems sturdy enough to mine som
 </details>
 
 ## Diamond Pickaxe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -234,6 +300,7 @@ A diamond pick is definitely stronger than the market-bought iron picks I could 
 </details>
 
 ## Comet Pickaxe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -258,7 +325,8 @@ A diamond pick is definitely stronger than the market-bought iron picks I could 
 **Description:**\
 You found some Comet Fragments and realized you could make a Comet Gem out of them.\
 What did they do? Were they special?\
-You seemed eager to try it out after being impressed by its glow, so here we are, in your first step towards getting stronger picks.
+You seemed eager to try it out after being impressed by its glow, so here we are, in your first step towards getting
+stronger picks.
 
 **Used in:** Mine
 
@@ -274,6 +342,7 @@ You seemed eager to try it out after being impressed by its glow, so here we are
 </details>
 
 ## Star Pickaxe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -297,7 +366,8 @@ You seemed eager to try it out after being impressed by its glow, so here we are
 **Gem drop rate:** 20.0%
 
 **Description:**\
-Maybe it was the glow, maybe it was the fact they came from a star far away in the galaxy, but it seemed to make for quite a sturdy pick with special properties.\
+Maybe it was the glow, maybe it was the fact they came from a star far away in the galaxy, but it seemed to make for
+quite a sturdy pick with special properties.\
 Weird... it seems to attract more gems. Is it the effect of the material, or is it my skill getting better?
 
 **Used in:** Mine
@@ -314,6 +384,7 @@ Weird... it seems to attract more gems. Is it the effect of the material, or is 
 </details>
 
 ## Moon Pickaxe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -359,6 +430,7 @@ Is this really a fragment from a far away moon?
 </details>
 
 ## Sparkle Pickaxe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -386,7 +458,8 @@ Is this really a fragment from a far away moon?
 **Gem drop rate:** 22.5%
 
 **Description:**\
-Something made you look up into the caverns, and you found a sparkly gem on top. Looking up, some fell onto your pick, and it made the pick shine enough to light up the entire cavern.\
+Something made you look up into the caverns, and you found a sparkly gem on top. Looking up, some fell onto your pick,
+and it made the pick shine enough to light up the entire cavern.\
 Quickly, you grab some of the sparkly fragments and get a casting station.\
 The pick glows bright like the sun... and it seems pretty tough too... how did it fuse so well with iron?
 
@@ -404,6 +477,7 @@ The pick glows bright like the sun... and it seems pretty tough too... how did i
 </details>
 
 ## Hellfire Pickaxe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -433,8 +507,10 @@ The pick glows bright like the sun... and it seems pretty tough too... how did i
 
 **Description:**\
 Reactions between all the elements can be a weird and dangerous process.\
-Regardless of what your friends told you, you decided to research this topic, and came up with an object brighter than anything you've ever seen...\
-It seems to be a mix of all the other elements, but it seems quite reactive... it's also quite tough, not much seems to be able to break it...\
+Regardless of what your friends told you, you decided to research this topic, and came up with an object brighter than
+anything you've ever seen...\
+It seems to be a mix of all the other elements, but it seems quite reactive... it's also quite tough, not much seems to
+be able to break it...\
 Have I done good for this world, or have I brought the unknown to life?
 
 **Used in:** Mine
@@ -451,6 +527,7 @@ Have I done good for this world, or have I brought the unknown to life?
 </details>
 
 ## Fishing Rod
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -476,6 +553,7 @@ A rod you bought at your local fishing market. Looks sturdy.
 </details>
 
 ## Comet Gem Rod
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -492,7 +570,8 @@ A rod you bought at your local fishing market. Looks sturdy.
 **Item buff:** 1 - 12
 
 **Description:**\
-After testing the Comet Fragments on your axe, you also realized you could use them on your rod. It made the thread stronger, and it seemed to attract more fish to it. All you could wish for.
+After testing the Comet Fragments on your axe, you also realized you could use them on your rod. It made the thread
+stronger, and it seemed to attract more fish to it. All you could wish for.
 
 **Used in:** Fish
 
@@ -508,6 +587,7 @@ After testing the Comet Fragments on your axe, you also realized you could use t
 </details>
 
 ## Star Gem Rod
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -525,7 +605,8 @@ After testing the Comet Fragments on your axe, you also realized you could use t
 **Item buff:** 1 - 15
 
 **Description:**\
-The mesmerizing and shiny glow of this fragment could not be overlooked. You fused it together with the thread of your rod, and the fish came flowing through it! Seems like a bait isn't necessary all the time, but it's still useful.
+The mesmerizing and shiny glow of this fragment could not be overlooked. You fused it together with the thread of your
+rod, and the fish came flowing through it! Seems like a bait isn't necessary all the time, but it's still useful.
 
 **Used in:** Fish
 
@@ -541,6 +622,7 @@ The mesmerizing and shiny glow of this fragment could not be overlooked. You fus
 </details>
 
 ## Moon Rod
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -560,7 +642,8 @@ The mesmerizing and shiny glow of this fragment could not be overlooked. You fus
 **Item buff:** 1 - 18
 
 **Description:**\
-You're still impressed by the way this gem floats on it's own. Regardless, you fuse it with the thread of your rod as best as you can. It seems to be a little stronger than a Star Fragment infused rod, but not by much.\
+You're still impressed by the way this gem floats on it's own. Regardless, you fuse it with the thread of your rod as
+best as you can. It seems to be a little stronger than a Star Fragment infused rod, but not by much.\
 Eitherway, you enjoy the glow of it like it's the first day you've ever seen it.
 
 **Used in:** Fish
@@ -577,6 +660,7 @@ Eitherway, you enjoy the glow of it like it's the first day you've ever seen it.
 </details>
 
 ## Sparkle Rod
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -601,8 +685,10 @@ Eitherway, you enjoy the glow of it like it's the first day you've ever seen it.
 A touch of sparkle here, a touch of sparkle there!\
 You pulverized the Sparkle Fragments and coated the thread of your fishing rod with it.\
 You seem confused. How can this attract fish?\
-The world has many mysteries, and this is one of them. Maybe it can help you get more coins. Maybe it can bring you satisfaction.\
-The glow it leaves on the sea is amazing, and you stare at it for hours on end. Maybe you did do the right thing after all.
+The world has many mysteries, and this is one of them. Maybe it can help you get more coins. Maybe it can bring you
+satisfaction.\
+The glow it leaves on the sea is amazing, and you stare at it for hours on end. Maybe you did do the right thing after
+all.
 
 **Used in:** Fish
 
@@ -618,6 +704,7 @@ The glow it leaves on the sea is amazing, and you stare at it for hours on end. 
 </details>
 
 ## Hellfire Rod
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -641,8 +728,10 @@ The glow it leaves on the sea is amazing, and you stare at it for hours on end. 
 
 **Description:**\
 Reactions between all the elements can be a weird and dangerous process.\
-You mastered the elements already, and fusing it with your fishing rod thread now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it.\
-It works wonders. Fish come in shoals to you. Nothing can compare. But you're still left wondering whether you really did the right thing.
+You mastered the elements already, and fusing it with your fishing rod thread now seemed trivial. Maybe it was the glow,
+maybe it was the fire, but you had to do it.\
+It works wonders. Fish come in shoals to you. Nothing can compare. But you're still left wondering whether you really
+did the right thing.
 
 **Used in:** Fish
 
@@ -658,6 +747,7 @@ It works wonders. Fish come in shoals to you. Nothing can compare. But you're st
 </details>
 
 ## Axe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -682,7 +772,8 @@ A normal axe you bought on the local market. Good enough to chop some trees down
 </p>
 </details>
 
-##  Comet Axe
+## Comet Axe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -699,7 +790,8 @@ A normal axe you bought on the local market. Good enough to chop some trees down
 **Money Increase:** 25 - 100 credits
 
 **Description:**\
-After testing the Comet Fragments on your pick, you also realized you could use them on your axe. It made it stronger, and shinier. All you could wish for.
+After testing the Comet Fragments on your pick, you also realized you could use them on your axe. It made it stronger,
+and shinier. All you could wish for.
 
 **Used in:** Chop
 
@@ -715,6 +807,7 @@ After testing the Comet Fragments on your pick, you also realized you could use 
 </details>
 
 ## Star Axe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -733,7 +826,8 @@ After testing the Comet Fragments on your pick, you also realized you could use 
 
 **Description:**\
 A bright glow from a star far away, but in your hands.\
-Looks like the tree-chopping can continue with this new, shiny axe. You seemed weirded out at first: how can this help me mine more wood?\
+Looks like the tree-chopping can continue with this new, shiny axe. You seemed weirded out at first: how can this help
+me mine more wood?\
 Well, you soon realized why...
 
 **Used in:** Chop
@@ -750,6 +844,7 @@ Well, you soon realized why...
 </details>
 
 ## Moon Axe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -772,7 +867,8 @@ Well, you soon realized why...
 Looking at this axe, you look mesmerized by moon-like glow it emits.\
 Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own?\
 Mesmerized, you cast this substance into your axe and... boom!\
-The results look good. It seems to chop trees faster, too. Why is it so sharp? Is this really a fragment from a far away moon?
+The results look good. It seems to chop trees faster, too. Why is it so sharp? Is this really a fragment from a far away
+moon?
 
 **Used in:** Chop
 
@@ -788,6 +884,7 @@ The results look good. It seems to chop trees faster, too. Why is it so sharp? I
 </details>
 
 ## Sparkle Axe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -826,6 +923,7 @@ The axe glows bright like the sun... and it seems pretty tough too... how did it
 </details>
 
 ## Hellfire Axe
+
 <details><summary>Click here for more details</summary>
 <p>
 
@@ -849,7 +947,8 @@ The axe glows bright like the sun... and it seems pretty tough too... how did it
 
 **Description:**\
 Reactions between all the elements can be a weird and dangerous process.\
-You mastered the elements already, and fusing it with your axe now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it.\
+You mastered the elements already, and fusing it with your axe now seemed trivial. Maybe it was the glow, maybe it was
+the fire, but you had to do it.\
 It works wonders. Nothing can compare. But you're still left wondering whether you really did the right thing.
 
 **Used in:** Chop
@@ -866,8 +965,11 @@ It works wonders. Nothing can compare. But you're still left wondering whether y
 </details>
 
 ---
+
 # Crate Items
-These items (minus the Crate Key) are dropped randomly from using other Currency Commands. To open any of the crates you need to have a Crate Key on your inventory.
+
+These items (minus the Crate Key) are dropped randomly from using other Currency Commands. To open any of the crates you
+need to have a Crate Key on your inventory.
 
 |                                            Icon                                            |          Name          |                              Description                               |              Opened with              | Drop Rate |   Obtained from    |
 |:------------------------------------------------------------------------------------------:|:----------------------:|:----------------------------------------------------------------------:|:-------------------------------------:|:---------:|:------------------:|
@@ -880,10 +982,13 @@ These items (minus the Crate Key) are dropped randomly from using other Currency
 |      <img src="https://cdn.discordapp.com/emojis/811059224921767936.png" width="64"/>      |       Chop Crate       | A treasure you find while chopping. Might have some nice stuff inside. |     `/opencrate crate:chop crate`     |    ~5%    |        Chop        |
 |      <img src="https://cdn.discordapp.com/emojis/811272089632768030.png" width="64"/>      |  Chop Premium Crate*   | A treasure you find while chopping. Might have some nice stuff inside. | `/opencrate crate:chop premium crate` |    ~5%    | Chop, Dailycrate** |
 
-** Dailycrate and Premium Crates are [Premium only](https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks). As well, Premium Users will find only Premium Crates and never their normal version.
+** Dailycrate and Premium Crates are [Premium only](https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks). As well,
+Premium Users will find only Premium Crates and never their normal version.
 
 ---
+
 # Timed Items
+
 These items can only be obtained during certain times or events.
 
 |                                               Icon                                               |            Name             |                                   Description                                    |   Obtained during    |    Obtained from    |
@@ -892,7 +997,9 @@ These items can only be obtained during certain times or events.
 |    <img src="https://discordapp.com/assets/2f5331445a4647af2bb317862b38502a.svg" width="64"/>    |       Christmas tree        |                       Who doesn't like a christmas tree?.                        |   Christmas Event    |        Loot         |
 
 ---
+
 # Removed/Legacy/Unobtainable Items
+
 These items are no longer obtainable in Mantaro.
 
 |                                            Icon                                            |         Name         |                                         Description                                         |
@@ -914,3 +1021,197 @@ These items are no longer obtainable in Mantaro.
 | <img src="https://discordapp.com/assets/e1ec53c5d89c0291001989a36716aa9a.svg" width="64"/> |       My Maths       |            Oh, I forgot my maths. (Appears randomly after using `~>stats usage`)            |
 
 ---
+
+# Normal Items
+
+```````columns
+left:
+````card assets/images/emotes/headphones.svg {title: "Headphones", imageHeight: 120}
+```api-parameters {anchorPrefix: "headphones"}
+"Obtained from:", "", "Loot"
+```
+
+That's what happens when you listen to too much music. Should be worth something, tho. (Appears randomly after using any of the music commands)
+````
+middle:
+````card assets/images/emotes/moneybag.svg {title: "Moneybag", imageHeight: 120}
+```api-parameters {anchorPrefix: "moneybag"}
+"Obtained from:", "", "Market"
+```
+What else?
+````
+right:
+````card assets/images/emotes/milk.svg {title: "Milk", imageHeight: 120}
+```api-parameters {anchorPrefix: "milk"}
+"Obtained from:", "", "Market, Fish and Loot Crate"
+```
+
+Maybe it's okay to have some.
+````
+```````
+
+# Usable Items
+
+```````columns
+left:
+````card assets/images/emotes/ring.svg {title: "Marriage Ring", imageHeight: 120}
+```api-parameters {anchorPrefix: "marriage-ring"}
+"Obtained from:", "", "Market, Loot Crate"
+"Used in:", "", "/marry user"
+```
+Basically what makes your marriage official.
+````
+
+middle:
+````card assets/images/emotes/love-letter.svg {title: "Love Letter", imageHeight: 120}
+```api-parameters {anchorPrefix: "love-letter"}
+"Obtained from:", "", "After marriage"
+"Used in:", "", "/marry createletter"
+```
+A letter from your loved one. Can be used to write a marry letter, more info in profile section.
+````
+
+right:
+````card assets/images/emotes/tickets.svg {title: "Slot ticket", imageHeight: 120}
+```api-parameters {anchorPrefix: "tickets"}
+"Obtained from:", "", "Market, Loot Crate"
+"Used in:", "", "/slots"
+```
+Gives you extra chance in slots, also works as bulk storage.
+````
+```````
+
+# Tools
+
+```````columns 
+left:
+````card assets/images/emotes/wrench.svg {title: "Wrench", imageHeight: 120}
+```api-parameters {anchorPrefix: "wrench"}
+"Tier:", "", "`:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}`"
+"Durability:", "", "35"
+"Wrench level:", "", "1"
+"Multiplier reduction:", "", "1.0x"
+"Multicast?", "", "No"
+"Obtained from:", "", "Market"
+"Used in:", "", "/cast"
+```
+A run of the mill wrench you can buy from the market. Useful for repairing items.
+````
+
+right:
+````card assets/images/emotes/pick.svg {title: "Brom's Pickaxe", imageHeight: 120}
+```api-parameters {anchorPrefix: "pick"}
+"Tier:", "", "`:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}`"
+"Wrench tier to craft:", "", "`:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}`"
+"Durability:", "", "40"
+"Credit increase:", "", "0 - 0 credits"
+"Diamond increase:", "", "0 - 2"
+"Sparkle increase:", "", "0%"
+"Gem drop rate:", "", "12.5%"
+"Obtained from:", "", "Market, Mine Crates"
+"Used in:", "", "/mine"
+```
+A normal pickaxe you bought on the local market. Seems sturdy enough to mine some stuff.
+````
+```````
+
+```````columns 
+left:
+````card assets/images/emotes/comet-rod.png {title: "Comet Gem Rod", imageHeight: 120}
+```api-parameters {anchorPrefix: "pick"}
+"Tier:", "", "`:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}`"
+"Wrench tier to craft:", "", "`:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}`"
+"Durability:", "", "40"
+"Item buff:", "", "1 - 12"
+"Obtained from:", "", "Market, Mine Crates"
+"Used in:", "", "/mine"
+```
+After testing the Comet Fragments on your axe, you also realized you could use them on your rod. It made the thread stronger, and it seemed to attract more fish to it. All you could wish for.
+````
+
+right:
+````card assets/images/emotes/moon-axe.png {title: "Moon Axe", imageHeight: 120}
+```api-parameters {anchorPrefix: "moon-axe"}
+"Tier:", "", "`:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}`"
+"Wrench tier to craft:", "", "`:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}` `:icon: star {stroke: 'yellow'}`"
+"Durability:", "", "40"
+"Credit increase:", "", "0 - 0 credits"
+"Obtained from:", "", "Market, Mine Crates"
+"Used in:", "", "/mine"
+```
+Looking at this axe, you look mesmerized by moon-like glow it emits.
+Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own?
+Mesmerized, you cast this substance into your axe and... boom!
+The results look good. It seems to chop trees faster, too. Why is it so sharp? Is this really a fragment from a far away moon?
+````
+```````
+
+# Crates
+
+```````columns
+left:
+````card assets/images/emotes/lootbox.png {title: "Loot crate", imageHeight: 120}
+```api-parameters {anchorPrefix: "lootcrate"}
+"Opened with:", "", "/opencrate"
+"Drop rate:", "", "~1%"
+"Obtained from:", "", "Loot"
+```
+You can use this along with a loot key to open a loot crate!
+````
+middle:
+````card assets/images/emotes/lootbox.png {title: "Loot crate", imageHeight: 120}
+```api-parameters {anchorPrefix: "lootcrate"}
+"Opened with:", "", "/opencrate"
+"Drop rate:", "", "~1%"
+"Obtained from:", "", "Loot"
+```
+You can use this along with a loot key to open a loot crate!
+````
+
+
+right:
+````card assets/images/emotes/lootbox.png {title: "Loot crate", imageHeight: 120}
+```api-parameters {anchorPrefix: "lootcrate"}
+"Opened with:", "", "/opencrate"
+"Drop rate:", "", "~1%"
+"Obtained from:", "", "Loot"
+```
+You can use this along with a loot key to open a loot crate!
+````
+```````
+
+# Timed
+
+```````columns
+left:
+````card assets/images/emotes/bell.svg {title: "Christmas bell", imageHeight: 120}
+```api-parameters {anchorPrefix: "lootcrate"}
+"Obtained during:", "", "Christmas event"
+"Obtained from:", "", "Loot"
+```
+Gives you a cozy christmas feeling on your tree. 
+````
+
+right:
+````card assets/images/emotes/bell.svg {title: "Christmas bell", imageHeight: 120}
+```api-parameters {anchorPrefix: "lootcrate"}
+"Obtained during:", "", "Christmas event"
+"Obtained from:", "", "Loot"
+```
+Gives you a cozy christmas feeling on your tree. 
+````
+```````
+
+# Removed
+
+```````columns
+left:
+````card assets/images/emotes/star.svg {title: "Ping Racket", imageHeight: 120}
+Gives you a cozy christmas feeling on your tree. 
+````
+right:
+````card assets/images/emotes/star.svg {title: "Ping Racket", imageHeight: 120}
+Gives you a cozy christmas feeling on your tree. 
+````
+
+```````
