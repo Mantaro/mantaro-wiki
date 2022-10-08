@@ -87,9 +87,6 @@ Card Element
     <#if api.durability??>
 "Durability:", "", "${api.durability}"
     </#if>
-    <#if api.wrenchTier??>
-"Wrench tier:", "", "${stars(api.wrenchTier)}"
-    </#if>
     <#if api.wrenchMultiplier??>
 "Multiplier reduction:", "", "${api.wrenchMultiplier}"
     </#if>
