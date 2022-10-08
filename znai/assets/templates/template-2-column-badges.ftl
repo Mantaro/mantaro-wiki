@@ -14,6 +14,7 @@ left:
         name: "${first.name}",
         icon: "${first.icon}",
         description: "${first.description}",
+        type: "${first.type}",
         <#if first.how??>
         how: "${first.how}",
         </#if>
@@ -32,6 +33,7 @@ right:
         name: "${second.name}",
         icon: "${second.icon}",
         description: "${second.description}",
+        type: "${second.type}",
         <#if second.how??>
             how: "${second.how}",
         </#if>
