@@ -1,6 +1,6 @@
 <#--
 This template looks to simplify the creation of card components for items.
-To use it simply include this file with :include-template: and the parameters for your command.
+To use it simply include this file with :include-template: and the parameters for your item.
 
 Command parameters:
 `name`: String. The name of the item.
