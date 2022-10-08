@@ -1,9 +1,9 @@
 <#--
-This template looks to simplify the creation of card components for items.
-To use it simply include this file with :include-template: and the parameters for your command.
+This template looks to simplify the creation of card components for badges.
+To use it simply include this file with :include-template: and the parameters for your badge.
 
 Command parameters:
-`name`: String. The name of the item.
+`name`: String. The name of the badge.
 `icon`: String. The location of the icon.
 `description`: String. The description of the item.
 `how?`: String. Explanation of how to obtain the badge
