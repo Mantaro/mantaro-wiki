@@ -92,7 +92,7 @@ title: 👋 Action Commands
 {
 "complex": true,
 "descriptor": "Type 2",
-"subcommands": "Options for the `Nom`, `Meow` and `Lewd` Subcommands",
+"subcommands": "`Nom`, `Meow` and `Lewd`",
 "options": [
 {
 "name": "user",
