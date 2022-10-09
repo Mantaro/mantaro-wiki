@@ -27,6 +27,9 @@ Optional subcommand parameters:
 `include`: String. A path to a md file with a note for the subcommand.
 
 **options**:
+Root (part of TabData):
+`note`: String. Included text for missing options.
+
 A list of options for your command. There are two types of options, `simple` and `complex`.
 `Simple options:`
 Required options parameters:
@@ -39,7 +42,8 @@ Optional options parameters:
 
 `complex options:`
 Required options parameters:
-`subcommand`: String. The name of the subcommand.
+`subcommands`: String. The names of the subcommands.
+`descriptor`: String. The descriptor for the expansion menu.
 `options`: List. A list of options for the subcommand. Each one of these options follow the previous `Simple options`
 parameters.
 
@@ -98,9 +102,9 @@ ${subcommand.description}
 ```api-parameters {anchorPrefix: "${cmd}-options" }
 <#list tab.data as option>
 <#if option.complex??>
-${option.subcommand}, "Click me!", "Options for the `${option.subcommand}` Subcommand."
+${option.descriptor}, "Click me!", "Options for the ${option.subcommands} Subcommand."
 <#list option.options as suboption>
-${option.subcommand}.${suboption.name}, ${suboption.required?string('Required', 'Optional')}, "
+${option.descriptor}.${suboption.name}, ${suboption.required?string('Required', 'Optional')}, "
 ${suboption.description}
 <#if suboption.premium??>${premiumNote(suboption.premium)}</#if>
 <#if suboption.include??>${includeMd(suboption.include)}</#if>
@@ -115,6 +119,13 @@ ${option.description}
 </#if>
 </#list>
 ```
+<#if tab.note??>
+<#if tab.note?starts_with(":include")>
+ ${tab.note}
+<#else>
+ Note: ${tab.note}
+</#if>
+</#if>
 <#break>
 <#case "ratings">
 * Safe for Work Image
