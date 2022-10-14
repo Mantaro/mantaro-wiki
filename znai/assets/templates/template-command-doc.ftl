@@ -81,7 +81,7 @@ ${description}
 ${tab.type[0]?upper_case}${tab.type[1..]}:
 <#switch tab.type>
 <#case "subcommands">
-```api-parameters {anchorPrefix: "${cmd}-subcommands" }
+```api-parameters { anchorPrefix: "${cmd}-subcommands", noWrap: true }
 <#list tab.data as subcommand>
 ${subcommand.name}, "", "
 ${subcommand.description}
@@ -99,7 +99,7 @@ ${subcommand.description}
 <#case "examples">
 ```api-parameters {anchorPrefix: "${cmd}-examples" }
 <#list tab.data as example>
-"", "", ${example}
+"", "", "${example}"
 </#list>
 ```
 <#break>
