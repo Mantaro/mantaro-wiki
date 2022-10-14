@@ -2,120 +2,195 @@
 title: 💭 Info Commands
 ---
 
-# /avatar {style: "api"}
-Grab your own avatar or the given person's avatar.
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "avatar",
+"description": "Grab your own avatar or the given person's avatar.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "user",
+"required": false,
+"description": "The user to get the avatar of."
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/avatar",
+"/avatar `user:`@Kodehawa#3457"
+]
+}
+]
+}
 
-````tabs
-Options:
-```api-parameters
-user, Optional, "The user to get the avatar of."
-```
-
-Examples:
-```api-parameters
-"", "", "/avatar"
-"", "", "/avatar `user:`@Kodehawa#3457"
-```
-````
-
-
-
-# /help {style: "api"}
-Get all commands or, if you specify a command, get more information on the command specified.
-
-````tabs
-Options:
-```api-parameters
-command, Optional, "The command to check help for. You can use sub-commands too."
-```
-
-Examples:
-```api-parameters
-"", "", "/help"
-"", "", "/help `command:`profile"
-"", "", "/help `command:`cast item"
-```
-````
-
-
-
-# /info {style: "api"}
-The hub for (user/role/server) info related commands.
-
-````tabs
-Sub-commands:
-```api-parameters
-Role, "", "See information about a role."
-Server, "", "See your server's current stats."
-User, "", "See information about specific users."
-```
-
-Options:
-```api-parameters
-Role, Click me!, "Options for the `Role` Subcommand"
-Role.role, "Required", "The role you want to see the information of."
-
-User, Click me!, "Options for the `Role` Subcommand"
-User.user, "Optional", "The user you want to look."
-```
- Note: The `Server` Subcommand has no options.
-
-Examples:
-```api-parameters
-"", "", "/info user"
-"", "", "/info user `user:`@Kodehawa#3457"
-"", "", "/info server"
-"", "", "/info role `role:`Member"
-```
-````
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "help",
+"description": "Get all commands or, if you specify a command, get more information on the command specified.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "command",
+"required": false,
+"description": "The command to check help for. You can use sub-commands too."
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/help",
+"/help `command:`profile",
+"/help `command:`cast item"
+]
+}
+]
+}
 
 
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "info",
+"description": "The hub for (user/role/server) info related commands.",
+"tabs": [
+{
+"type": "subcommands",
+"data": [
+{
+"name": "role",
+"description": "See information about a role."
+},
+{
+"name": "server",
+"description": "See information about the current server."
+},
+{
+"name": "user",
+"description": "See information about a specific user."
+}
+]
+},
+{
+"type": "options",
+"note": "The `Server` subcommand has no options.",
+"data": [
+{
+"complex": true,
+"descriptor": "Role",
+"subcommands": "`Role`",
+"options": [
+{
+"name": "role",
+"required": true,
+"description": "The role you want to see the information of."
+}
+]
+},
+{
+"complex": true,
+"descriptor": "User",
+"subcommands": "`User`",
+"options": [
+{
+"name": "user",
+"required": false,
+"description": "The user you want to look."
+}
+]
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/info user",
+"/info user `user:`@Kodehawa#3457",
+"/info server",
+"/info role `role:`Member"
+]
+}
+]
+}
 
-# /ping {style: "api"}
-Check how fast Mantaro is responding.
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "mantaro",
+"description": "Shows useful bot information.",
+"tabs": [
+{
+"type": "subcommands",
+"data": [
+{
+"name": "shard",
+"description": "Returns in what shard I am."
+},
+{
+"name": "shardlist",
+"description": "Returns information about shards."
+},
+{
+"name": "support",
+"description": "Shows a link to the support server."
+},
+{
+"name": "welcome",
+"description": "Shows the message the bot sends when it's added to a server."
+},
+{
+"name": "donate",
+"description": "Shows the donation methods in case you want to support Mantaro."
+},
+{
+"name": "invite",
+"description": "Gives you a bot OAuth invite link and some other important links."
+},
+{
+"name": "language",
+"description": "Shows how to change the server and user languages, along with a language list."
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/mantaro shard",
+"/mantaro shardlist",
+"/mantaro support",
+"/mantaro welcome",
+"/mantaro donate",
+"/mantaro invite",
+"/mantaro language"
+]
+}
+]
+}
 
-````tabs
-Examples:
-```api-parameters
-"", "", "/ping"
-```
-````
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "ping",
+"description": "Check how fast Mantaro is responding.",
+"tabs": [
+{
+"type": "examples",
+"data": [
+"/ping"
+]
+}
+]
+}
 
 
 
-# /mantaro {style: "api"}
-Shows useful bot information.
-
-````tabs
-Subcommands:
-```api-parameters
-Shard, "", "Returns in what shard I am."
-Shardlist, "", "Returns information about shards."
-Support, "", "Shows a link to the support server."
-Welcome, "", "Shows the message the bot sends when it's added to a server."
-Donate, "", "Shows the donation methods in case you want to support Mantaro."
-Invite, "", "Gives you a bot OAuth invite link and some other important links."
-Language, "", "Shows how to change the server and user languages, along with a language list."
-```
-
-Examples:
-```api-parameters
-"", "", "/mantaro shard"
-"", "", "/mantaro shardlist"
-"", "", "/mantaro support"
-"", "", "/mantaro welcome"
-"", "", "/mantaro donate"
-"", "", "/mantaro invite"
-"", "", "/mantaro language"
-```
-````
-
-# /stats {style: "api"}
-Gets the bot technical information. Nothing all that interesting, but shows cute stats.
-
-````tabs
-Examples:
-```api-parameters
-"", "", "/stats"
-```
-````
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "stats",
+"description": "Gets the bot technical information. Nothing all that interesting, but shows cute stats.",
+"tabs": [
+{
+"type": "examples",
+"data": [
+"/stats"
+]
+}
+]
+}
