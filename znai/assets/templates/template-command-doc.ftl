@@ -8,6 +8,7 @@ Required command parameters:
 Optional command parameters:
 `textCommand`: Boolean. Whether the command has been ported to slash commands.
 `premium`: String. Whether this command is premium. Two messages are available, `user` and `guild`.
+`note`: String. File name of a note to include below description.
 
 TabTypes:
 subcommands
@@ -70,6 +71,10 @@ ${description}
 </#if>
 
 <#if premium??>${premiumNote(premium)}</#if>
+
+<#if note??>
+:include-markdown: assets/md/commands/${note}
+</#if>
 
 ````tabs
 <#list tabs as tab>
