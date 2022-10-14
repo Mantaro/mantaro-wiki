@@ -97,7 +97,7 @@ title: 🎵 Audio Commands
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "play",
 "description": "This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play.",
-"note": "music-notice-sc.md",
+"note": "music-notice-sc",
 "premium": "mp",
 "tabs": [
 {

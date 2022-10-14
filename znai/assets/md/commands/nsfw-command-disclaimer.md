@@ -1,1 +1,0 @@
-Warning: **This is a NSFW command. It will not work outside NSFW channels.**

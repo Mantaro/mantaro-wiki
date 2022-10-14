@@ -9,6 +9,7 @@ Optional command parameters:
 `textCommand`: Boolean. Whether the command has been ported to slash commands.
 `premium`: String. Whether this command is premium. Two messages are available, `user` and `guild`.
 `note`: String. File name of a note to include below description.
+`nsfw`: Boolean. Whether the command can only be used in nsfw channels.
 
 TabTypes:
 subcommands
@@ -55,11 +56,11 @@ A list of string requirements for your command.
 A list of string examples for your command.
 -->
 
-<#function premiumNote type>
-<#return ":include-markdown: assets/md/commands/sellout-note-${type}.md">
-</#function>
 <#function includeMd include>
-<#return ":include-markdown: ${include}">
+ <#return ":include-markdown: ${include}">
+</#function>
+<#function premiumNote type>
+<#return includeMd("assets/md/commands/sellout-note-" + type + ".md")>
 </#function>
 
 # /${cmd} {style: "api"}
@@ -71,9 +72,11 @@ ${description}
 </#if>
 
 <#if premium??>${premiumNote(premium)}</#if>
-
+<#if nsfw??>
+${includeMd("assets/md/commands/nsfw-command-disclaimer-${nsfw}.md")}
+</#if>
 <#if note??>
-:include-markdown: assets/md/commands/${note}
+${includeMd("assets/md/commands/" + note + ".md")}
 </#if>
 
 ````tabs
