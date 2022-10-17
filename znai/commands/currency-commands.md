@@ -239,9 +239,7 @@ For more in-depth information you can go to our [Currency 101 page](currency/101
 
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "daily",
-"description": "Gives you $150 credits per day (or between 150 and 180 if you transfer it to another person).
-Maximum amount it can give is ~2000 credits (a bit more for shared dailies).
-This command gives a reward for claiming it every day (daily streak). You lose the streak if you miss two days in a row."
+"description": "Gives you $150 credits per day (or between 150 and 180 if you transfer it to another person). Maximum amount it can give is ~2000 credits (a bit more for shared dailies). This command gives a reward for claiming it every day (daily streak). You lose the streak if you miss two days in a row.",
 "tabs": [
 {
 "type": "options",
