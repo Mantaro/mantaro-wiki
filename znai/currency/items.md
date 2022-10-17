@@ -270,7 +270,7 @@ obtain: "Fish, Normal & Premium Fish Crates"
 }},
 {
 name: "Shrimp",
-icon: "assets/images/emotes/squid.svg",
+icon: "assets/images/emotes/shrimp.svg",
 description: "Pinkish stuff. I think. ",
 rarity: "Uncommon",
 api: {
