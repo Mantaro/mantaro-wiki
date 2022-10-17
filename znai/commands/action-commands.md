@@ -2,224 +2,368 @@
 title: 👋 Action Commands
 ---
 
-# /action {style: "api"}
-A bunch of action commands that didn't fit into a separate command.
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "action",
+"description": "A bunch of action commands that didn't fit into a separate command.",
+"tabs": [
+{
+"type": "subcommands",
+"data": [
+{
+"name": "Teehee",
+"description": "Tease someone on the server."
+},
+{
+"name": "Bite",
+"description": "Bite someone on the server."
+},
+{
+"name": "Lick",
+"description": "Lick someone on the server. ~~kinky~~"
+},
+{
+"name": "Nuzzle",
+"description": "Nuzzle someone on the server."
+},
+{
+"name": "Smile",
+"description": "Smile at someone on the server."
+},
+{
+"name": "Highfive",
+"description": "High-five someone on the server."
+},
+{
+"name": "Stare",
+"description": "Stare at someone on the server."
+},
+{
+"name": "Blush",
+"description": "Blushes at someone on the server."
+},
+{
+"name": "Nom",
+"description": "Nom someone or something."
+},
+{
+"name": "Holdhands",
+"description": "Hold someones hand."
+},
+{
+"name": "Bloodsuck",
+"description": "Suck someone's blood on the server."
+},
+{
+"name": "Meow",
+"description": "Meow at something or someone."
+},
+{
+"name": "Facedesk",
+"description": "Smash your head on a desk I guess?"
+},
+{
+"name": "Lewd",
+"description": "Call something or someone lewd."
+}
+]
+},
+{
+"type": "options",
+"note": "The `Facedesk` subcommand has no options.",
+"data": [
+{
+"complex": true,
+"descriptor": "Type 1",
+"subcommands": "`Teehee`, `Bite`, `Lick`, `Nuzzle`, `Smile`, `Highfive`, `Stare`, `Blush`, `Holdhands` and `Bloodsuck`",
+"options": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to perform an action."
+},
+{
+"name": "extra",
+"required": false,
+"description": "Extra users to which you want to perform an action.",
+"include": "assets/md/commands/action-commands-option-extra-note.md"
+}
+]
+},
+{
+"complex": true,
+"descriptor": "Type 2",
+"subcommands": "`Nom`, `Meow` and `Lewd`",
+"options": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to perform an action."
+}
+]
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/action teehee `user:`@Kodehawa#3457",
+"/action bite `user:`@Kodehawa#3457",
+"/action nuzzle `user:`@Kodehawa#3457",
+"/action holdhands `user:`@Kodehawa#3457",
+"/action nom `user:`@Kodehawa#3457",
+"/action stare `user:`@Kodehawa#3457",
+"/action smile `user:`@Kodehawa#3457",
+"/action facedesk"
+]
+}
+]
+}
 
-````tabs
-Subcommands:
-```api-parameters
-Teehee, "", "Tease someone on the server."
-Bite, "", "Bite someone on the server."
-Lick, "", "Lick someone on the server. ~~kinky~~"
-Nuzzle, "", "Nuzzle someone on the server."
-Smile, "", "Smile at someone on the server."
-Highfive, "", "High-five someone on the server."
-Stare, "", "Stare at someone on the server."
-Blush, "", "Blushes at someone on the server."
-Nom, "", "Nom someone or something."
-Holdhands, "", "Hold someones hand."
-Bloodsuck, "", "Suck someone's blood on the server."
-Meow, "", "Meow at something or someone."
-Facedesk, "", "Smash your head on a desk I guess?"
-Lewd, "", "Call something or someone lewd."
-```
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "cuddle",
+"description": "Cuddle someone on the server.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to cuddle."
+},
+{
+"name": "extra",
+"required": false,
+"description": "Extra users to which you want to cuddle.",
+"include": "assets/md/commands/action-commands-option-extra-note.md"
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/cuddle `user:`@Kodehawa#3457",
+"/cuddle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+]
+}
+]
+}
 
-Options:
-```api-parameters
-Type 1, Click me!, "Options for the `Teehee`, `Bite`, `Lick`, `Nuzzle`, `Smile`, `Highfive`, `Stare`, `Blush`, `Holdhands` and `Bloodsuck` Subcommands"
-Type 1.user, Required, "The user on which you want to perform an action."
-Type 1.extra, Optional, "Extra users to which you want to perform an action."
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "hug",
+"description": "Hug someone on the server.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to hug."
+},
+{
+"name": "extra",
+"required": false,
+"description": "Extra users to which you want to hug.",
+"include": "assets/md/commands/action-commands-option-extra-note.md"
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/hug `user:`@Kodehawa#3457",
+"/hug `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+]
+}
+]
+}
 
-Type 2, Click me!, "Options for the `Nom`, `Meow` and `Lewd` Subcommands"
-Type 2.user, Optional, "The user on which you want to perform an action."
-```
- Note: The `Facedesk` subcommand has no options.
-
-Examples:
-```api-parameters
-"", "", "/action teehee `user:`@Kodehawa#3457"
-"", "", "/action bite `user:`@Kodehawa#3457"
-"", "", "/action nuzzle `user:`@Kodehawa#3457"
-"", "", "/action holdhands `user:`@Kodehawa#3457"
-"", "", "/action nom `user:`@Kodehawa#3457"
-"", "", "/action stare `user:`@Kodehawa#3457"
-"", "", "/action smile `user:`@Kodehawa#3457"
-"", "", "/action facedesk"
-```
-````
-
-
-
-# /cuddle {style: "api"}
-Cuddle someone on the server.
-
-````tabs
-Options:
-```api-parameters
-user, Required, "The user you want to cuddle."
-extra, Optional, "
-Extra users you wish to cuddle.
-:include-markdown: assets/md/commands/action-commands-option-extra-note.md
-"
-```
-
-Examples:
-```api-parameters
-"", "", "/cuddle `user:`@Kodehawa#3457"
-"", "", "/cuddle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
-```
-````
-
-
-
-# /hug {style: "api"}
-Hug someone on the server.
-
-````tabs
-Options:
-```api-parameters
-user, Required, "The user you want to hug."
-extra, Optional, "
-Extra users you wish to hug.
-:include-markdown: assets/md/commands/action-commands-option-extra-note.md
-"
-```
-
-Examples:
-```api-parameters
-"", "", "/hug `user:`@Kodehawa#3457"
-"", "", "/hug `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
-```
-````
-
-
-
-# /kiss {style: "api"}
-Kiss someone on the server.
-
-````tabs
-Options:
-```api-parameters
-user, Required, "The user you want to kiss."
-extra, Optional, "
-Extra users you wish to kiss.
-:include-markdown: assets/md/commands/action-commands-option-extra-note.md
-"
-```
-
-Examples:
-```api-parameters
-"", "", "/kiss `user:`@Kodehawa#3457"
-"", "", "/kiss `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
-```
-````
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "kiss",
+"description": "Kiss someone on the server.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to kiss."
+},
+{
+"name": "extra",
+"required": false,
+"description": "Extra users to which you want to kiss.",
+"include": "assets/md/commands/action-commands-option-extra-note.md"
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/kiss `user:`@Kodehawa#3457",
+"/kiss `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+]
+}
+]
+}
 
 
-
-# /pat {style: "api"}
-Pat someone on the server.
-
-````tabs
-Options:
-```api-parameters
-user, Required, "The user you want to pat."
-extra, Optional, "
-Extra users you wish to pat.
-:include-markdown: assets/md/commands/action-commands-option-extra-note.md
-"
-```
-
-Examples:
-```api-parameters
-"", "", "/pat `user:`@Kodehawa#3457"
-"", "", "/pat `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
-```
-````
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "pat",
+"description": "Pat someone on the server.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to pat."
+},
+{
+"name": "extra",
+"required": false,
+"description": "Extra users to which you want to pat.",
+"include": "assets/md/commands/action-commands-option-extra-note.md"
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/pat `user:`@Kodehawa#3457",
+"/pat `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+]
+}
+]
+}
 
 
 
-# /poke {style: "api"}
-Poke someone on the server.
-
-````tabs
-Options:
-```api-parameters
-user, Required, "The user you want to poke."
-extra, Optional, "
-Extra users you wish to poke.
-:include-markdown: assets/md/commands/action-commands-option-extra-note.md
-"
-```
-
-Examples:
-```api-parameters
-"", "", "/poke `user:`@Kodehawa#3457"
-"", "", "/poke `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
-```
-````
-
-
-
-# /pout {style: "api"}
-Pout at someone on the server
-
-````tabs
-Options:
-```api-parameters
-user, Required, "The user you want to pout."
-extra, Optional, "
-Extra users you wish to pout.
-:include-markdown: assets/md/commands/action-commands-option-extra-note.md
-"
-```
-
-Examples:
-```api-parameters
-"", "", "/pout `user:`@Kodehawa#3457"
-"", "", "/pout `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
-```
-````
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "poke",
+"description": "Poke someone on the server.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to poke."
+},
+{
+"name": "extra",
+"required": false,
+"description": "Extra users to which you want to poke.",
+"include": "assets/md/commands/action-commands-option-extra-note.md"
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/poke `user:`@Kodehawa#3457",
+"/poke `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+]
+}
+]
+}
 
 
 
-# /slap {style: "api"}
-Slap someone on the server.
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "pout",
+"description": "Pout at someone on the server.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to pout at."
+},
+{
+"name": "extra",
+"required": false,
+"description": "Extra users to which you want to pout at.",
+"include": "assets/md/commands/action-commands-option-extra-note.md"
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/pout `user:`@Kodehawa#3457",
+"/pout `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+]
+}
+]
+}
 
-````tabs
-Options:
-```api-parameters
-user, Required, "The user you want to slap."
-extra, Optional, "
-Extra users you wish to slap.
-:include-markdown: assets/md/commands/action-commands-option-extra-note.md
-"
-```
-
-Examples:
-```api-parameters
-"", "", "/slap `user:`@Kodehawa#3457"
-"", "", "/slap `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
-```
-````
 
 
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "slap",
+"description": "Slap someone on the server.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to slap.",
+},
+{
+"name": "extra",
+"required": false,
+"description": "Extra users to which you want to slap.",
+"include": "assets/md/commands/action-commands-option-extra-note.md"
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/slap `user:`@Kodehawa#3457",
+"/slap `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+]
+}
+]
+}
 
-# /tickle {style: "api"}
-Tickle someone on the server.
 
-````tabs
-Options:
-```api-parameters
-user, Required, "The user you want to tickle."
-extra, Optional, "
-Extra users you wish to tickle.
-:include-markdown: assets/md/commands/action-commands-option-extra-note.md
-"
-```
 
-Examples:
-```api-parameters
-"", "", "/tickle `user:`@Kodehawa#3457"
-"", "", "/tickle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
-```
-````
+:include-template: assets/templates/template-command-doc.ftl {
+"cmd": "tickle",
+"description": "Tickle someone on the server.",
+"tabs": [
+{
+"type": "options",
+"data": [
+{
+"name": "user",
+"required": true,
+"description": "The user on which you want to tickle.",
+},
+{
+"name": "extra",
+"required": false,
+"description": "Extra users to which you want to tickle.",
+"include": "assets/md/commands/action-commands-option-extra-note.md"
+}
+]
+},
+{
+"type": "examples",
+"data": [
+"/tickle `user:`@Kodehawa#3457",
+"/tickle `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+]
+}
+]
+}

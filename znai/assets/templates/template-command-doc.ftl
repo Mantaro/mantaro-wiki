@@ -8,6 +8,8 @@ Required command parameters:
 Optional command parameters:
 `textCommand`: Boolean. Whether the command has been ported to slash commands.
 `premium`: String. Whether this command is premium. Two messages are available, `user` and `guild`.
+`note`: String. File name of a note to include below description.
+`nsfw`: Boolean. Whether the command can only be used in nsfw channels.
 
 TabTypes:
 subcommands
@@ -27,6 +29,9 @@ Optional subcommand parameters:
 `include`: String. A path to a md file with a note for the subcommand.
 
 **options**:
+Root (part of TabData):
+`note`: String. Included text for missing options.
+
 A list of options for your command. There are two types of options, `simple` and `complex`.
 `Simple options:`
 Required options parameters:
@@ -39,7 +44,8 @@ Optional options parameters:
 
 `complex options:`
 Required options parameters:
-`subcommand`: String. The name of the subcommand.
+`subcommands`: String. The names of the subcommands.
+`descriptor`: String. The descriptor for the expansion menu.
 `options`: List. A list of options for the subcommand. Each one of these options follow the previous `Simple options`
 parameters.
 
@@ -50,11 +56,11 @@ A list of string requirements for your command.
 A list of string examples for your command.
 -->
 
-<#function premiumNote type>
-<#return ":include-markdown: assets/md/commands/sellout-note-${type}.md">
-</#function>
 <#function includeMd include>
-<#return ":include-markdown: ${include}">
+ <#return ":include-markdown: ${include}">
+</#function>
+<#function premiumNote type>
+<#return includeMd("assets/md/commands/sellout-note-" + type + ".md")>
 </#function>
 
 # /${cmd} {style: "api"}
@@ -66,13 +72,19 @@ ${description}
 </#if>
 
 <#if premium??>${premiumNote(premium)}</#if>
+<#if nsfw??>
+${includeMd("assets/md/commands/nsfw-command-disclaimer-${nsfw}.md")}
+</#if>
+<#if note??>
+${includeMd("assets/md/commands/" + note + ".md")}
+</#if>
 
 ````tabs
 <#list tabs as tab>
 ${tab.type[0]?upper_case}${tab.type[1..]}:
 <#switch tab.type>
 <#case "subcommands">
-```api-parameters {anchorPrefix: "${cmd}-subcommands" }
+```api-parameters { anchorPrefix: "${cmd}-subcommands", noWrap: true }
 <#list tab.data as subcommand>
 ${subcommand.name}, "", "
 ${subcommand.description}
@@ -90,7 +102,7 @@ ${subcommand.description}
 <#case "examples">
 ```api-parameters {anchorPrefix: "${cmd}-examples" }
 <#list tab.data as example>
-"", "", ${example}
+"", "", "${example}"
 </#list>
 ```
 <#break>
@@ -98,9 +110,9 @@ ${subcommand.description}
 ```api-parameters {anchorPrefix: "${cmd}-options" }
 <#list tab.data as option>
 <#if option.complex??>
-${option.subcommand}, "Click me!", "Options for the `${option.subcommand}` Subcommand."
+${option.descriptor}, "Click me!", "Options for the ${option.subcommands} Subcommand."
 <#list option.options as suboption>
-${option.subcommand}.${suboption.name}, ${suboption.required?string('Required', 'Optional')}, "
+${option.descriptor}.${suboption.name}, ${suboption.required?string('Required', 'Optional')}, "
 ${suboption.description}
 <#if suboption.premium??>${premiumNote(suboption.premium)}</#if>
 <#if suboption.include??>${includeMd(suboption.include)}</#if>
@@ -115,6 +127,13 @@ ${option.description}
 </#if>
 </#list>
 ```
+<#if tab.note??>
+<#if tab.note?starts_with(":include")>
+ ${tab.note}
+<#else>
+ Note: ${tab.note}
+</#if>
+</#if>
 <#break>
 <#case "ratings">
 * Safe for Work Image
