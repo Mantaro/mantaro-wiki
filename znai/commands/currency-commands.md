@@ -160,8 +160,7 @@ title: 💸 Currency Commands
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "cast",
 "description": "Cast various items.
-Different wrenches have different amounts of items they can cast at the same time.
-For more in-depth information you can go to our [Currency 101 page](currency/101#concepts-dust).",
+Different wrenches have different amounts of items they can cast at the same time. For more in-depth information you can go to our [Currency 101 page](currency/101#concepts-dust).",
 "tabs": [
 {
 "type": "subcommands",

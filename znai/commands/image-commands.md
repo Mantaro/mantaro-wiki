@@ -4,9 +4,7 @@ title: 🖼️ Image Commands
 
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "danbooru",
-"description": "Returns an image from danbooru.
-You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag.
-You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe for Work Image` rating will be used.",
+"description": "Returns an image from danbooru. You may add as many tags as you like. Each new word (separated by space) is considered a new Tag. Any additional tag. You may also entirely drop the rating when using multiple tags. Unless a different rating is specified, the `Safe for Work Image` rating will be used.",
 "nsfw": "special",
 "tabs": [
 {

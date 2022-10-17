@@ -307,8 +307,8 @@ title: 👋 Action Commands
 
 
 :include-template: assets/templates/template-command-doc.ftl {
-"cmd": "slab",
-"description": "Slab someone on the server.",
+"cmd": "slap",
+"description": "Slap someone on the server.",
 "tabs": [
 {
 "type": "options",
@@ -316,12 +316,12 @@ title: 👋 Action Commands
 {
 "name": "user",
 "required": true,
-"description": "The user on which you want to slab.",
+"description": "The user on which you want to slap.",
 },
 {
 "name": "extra",
 "required": false,
-"description": "Extra users to which you want to slab.",
+"description": "Extra users to which you want to slap.",
 "include": "assets/md/commands/action-commands-option-extra-note.md"
 }
 ]
@@ -329,8 +329,8 @@ title: 👋 Action Commands
 {
 "type": "examples",
 "data": [
-"/slab `user:`@Kodehawa#3457",
-"/slab `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
+"/slap `user:`@Kodehawa#3457",
+"/slap `user:`@Kodehawa#3457 `extra:`@Mantaro Patreon#0569"
 ]
 }
 ]

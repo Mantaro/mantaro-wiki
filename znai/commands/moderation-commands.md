@@ -45,8 +45,7 @@ title: 🔨 Moderation Commands
 
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "opts",
-"description": "The opts command includes an extensive list of option commands.
-You can find our complete list of the opts commands and their examples in our [Configuration Page](basics/server-configuration).",
+"description": "The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our [Configuration Page](basics/server-configuration).",
 "textCommand": true,
 "tabs": [
 {

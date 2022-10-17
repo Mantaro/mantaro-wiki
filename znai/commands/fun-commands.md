@@ -28,8 +28,7 @@ title: 🎲 Fun Commands
 
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "anime",
-"description": "Searches for the anime specified using [Kitsu.io](https://kitsu.io/).
-You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for.",
+"description": "Searches for the anime specified using [Kitsu.io](https://kitsu.io/). You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for.",
 "tabs": [
 {
 "type": "options",
@@ -54,8 +53,7 @@ You will be given a list of search results using the indicated anime. After this
 
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "character",
-"description": "Searches for the anime character specified.
-You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for.",
+"description": "Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for.",
 "tabs": [
 {
 "type": "options",
@@ -156,9 +154,8 @@ You will be given a list of search results using the indicated character. After 
 }
 
 :include-template: assets/templates/template-command-doc.ftl {
-"cmd": "ratewaifu",
-"description": "Roll an any-sided dice a 1 or more times.
-By default, this command will roll a 6-sized dice 1 time.",
+"cmd": "roll",
+"description": "Roll an any-sided dice a 1 or more times. By default, this command will roll a 6-sized dice 1 time.",
 "tabs": [
 {
 "type": "options",
