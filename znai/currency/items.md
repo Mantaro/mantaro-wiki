@@ -363,30 +363,218 @@ obtain: "Practically impossible (overflow your money)."
 # Usable/Consumable Items
 These items have a use attached to them. Some items have a single-time use, meaning that after you use them any other of the same item you get becomes a collectible.
 
-|      Name       |                                                   Use/Description                                                    |                       How to use? / Where is it used?                       |              Obtained from               |
-|:---------------:|:--------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:----------------------------------------:|
-|  Marriage Ring  |                                     Basically what makes your marriage official.                                     |        Requires two rings to marry with `/marry user user:<mention>`        |            Market, Loot Crate            |
-|   Love Letter   |           A letter from your loved one. Can be used to write a marry letter, more info in profile section.           |                   `/marry createletter content:<content>`                   |     Obtained after marrying someone.     |
-|   Slot ticket   |                             Gives you extra chance in slots, also works as bulk storage.                             |                `/slots useticket:true ticketamount:<amount>`                |            Market, Loot Crate            |
-|      House      |                                                Cozy place to live in.                                                |     Required to set your Marriage House with `/marry house name:<name>`     |            Market, Loot Crate            |
-|       Car       |                                                   To move around.                                                    |       Required to set your Marriage Car with `/marry car name:<name>`       |            Market, Loot Crate            |
-|  Haste Potion   |                       Allows you to collect more stuff from currency commands for 3 sessions.                        |                        `/use item item:Haste Potion`                        |                  Market                  |
-|  Milky Potion   |                                              Clears all potion effects.                                              |                        `/use item item:Milky Potion`                        |                  Market                  |
-| Energy Beverage |                            Makes a tool lose less durability per swing. Lasts 3 sessions.                            |                      `/use item item:Energy Beverage`                       |                  Market                  |
-|       Mop       |                  A delightful way to clean all the dust you have around. I bet there's a lot of it.                  |                            `/use item item:Mop`                             |                  Market                  |
-|    Claim Key    |                                   This item makes you un-claimeable (as a waifu).                                    |                             `/waifu claimlock`                              |                  Market                  |
-|   Waifu Pill    | Gives you a significant advantage on mine and fish if one of your waifus is valued at over 20,000. Lasts 3 sessions. |                         `/use item item:Waifu Pill`                         |                  Market                  |
-|  Fishing Bait   |                                     Gives you a higher chance of catching fish.                                      |                        `/use item item:Fishing Bait`                        |                  Market                  |
-|  Incubator Egg  |                              The one catalyst you need to call your personal pet home.                               |                      Used when getting a Personal pet.                      |                   Cast                   |
-|  Magical Watch  |                                   A magic watch that slows time when you need it.                                    | This will automatically be consumed to save your daily streak for 24 hours! | Obtain one every 50 consecutive dailies. |
-|  Water Bottle   |                                   An item that magically heals your pet's thirst.                                    |                               `/pet hydrate`                                |                  Market                  |
-|    Pet House    |                    A house where your pet lives. Maybe. Sometimes they just like to flop outside.                    |        Required to buy a pet with `/pet buy type:<type> name:<name>`        |                  Market                  |
-|      Steak      |                                         Very yummy if you're not vegetarian.                                         |              Used to feed your pet with `/pet feed item:Steak`              |                  Market                  |
-|     Chicken     |                      Very yummy if you're not vegetarian, but it comes from a chicken instead.                       |             Used to feed your pet with `/pet feed item:Chicken`             |                  Market                  |
-|   Milk Bottle   |                                         Very good food for cats, I've heard.                                         |           Used to feed your pet with `/pet feed item:Milk Bottle`           |                  Market                  |
-|    Dog Food     |                      Food your dog might like a lot. Or they might like bread more, like mines.                      |            Used to feed your pet with `/pet feed item:Dog Food`             |                  Market                  |
-|    Cat Food     |                                           Food your cat might like a lot.                                            |            Used to feed your pet with `/pet feed item:Cat Food`             |                  Market                  |
-|  Hamster Food   |                                            Food your hamster might enjoy.                                            |          Used to feed your pet with `/pet feed item:Hamster Food`           |                  Market                  |
+:include-template: assets/templates/template-3-column-card.ftl {
+items: [
+{
+name: "Ring",
+icon: "assets/images/emotes/ring.svg",
+description: "Basically what makes your marriage official.",
+rarity: "Common",
+api: {
+obtain: "Market, Loot Crate",
+use: "Requires two rings to marry with /marry user `user:`&#60;mention>"
+}},
+{
+name: "Love Letter",
+icon: "assets/images/emotes/love-letter.svg",
+description: "A letter from your loved one. Can be used to write a marry letter, more info in profile section.",
+rarity: "Common",
+api: {
+obtain: "After marrying someone",
+use: "/marry createletter `content:`&#60;content>"
+}},
+{
+name: "Slot Ticket",
+icon: "assets/images/emotes/tickets.svg",
+description: "Gives you extra chance in slots, also works as bulk storage.",
+rarity: "Common",
+api: {
+obtain: "Market, Loot Crate",
+use: "/slots `useticket`:true `ticketamount`:&#60;amount>"
+}},
+{
+name: "House",
+icon: "assets/images/emotes/house.svg",
+description: "Cozy place to live in.",
+rarity: "Common",
+api: {
+obtain: "Market, Loot Crate ",
+use: "Required to set your Marriage House with /marry house `name`:&#60;name>"
+}},
+{
+name: "Car",
+icon: "assets/images/emotes/car.svg",
+description: "To move around.",
+rarity: "Common",
+api: {
+obtain: "Market, Loot Crate",
+use: "Required to set your Marriage Car with /marry car `name`:&#60;name>"
+}},
+{
+name: "Haste Potion",
+icon: "assets/images/emotes/sake.svg",
+description: "Allows you to collect more stuff from currency commands for 3 sessions.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "/use item `item`:Haste Potion"
+}},
+{
+name: "Milky Potion",
+icon: "assets/images/emotes/cup-with-straw.svg",
+description: "Clears all potion effects.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "/use item `item`:Milky Potion"
+}},
+{
+name: "Energy Beverage",
+icon: "assets/images/emotes/amphora.svg",
+description: "Makes a tool lose less durability per swing. Lasts 3 sessions.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "/use item `item`:Energy Beverage"
+}},
+{
+name: "Mop",
+icon: "assets/images/emotes/broom.svg",
+description: "A delightful way to clean all the dust you have around. I bet there's a lot of it.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "/use item `item`:Mop"
+}},
+{
+name: "Claim Key",
+icon: "assets/images/emotes/key2.svg",
+description: "This item makes you un-claimeable (as a waifu).",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "/waifu claimlock"
+}},
+{
+name: "Waifu Pill",
+icon: "assets/images/emotes/pill.svg",
+description: "Gives you a significant advantage on mine and fish if one of your waifus is valued at over 20,000. Lasts 3 sessions.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "/use item `item`:Waifu Pill"
+}},
+{
+name: "Fishing Bait",
+icon: "assets/images/emotes/bug.svg",
+description: "Gives you a higher chance of catching fish.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "/use item `item`:Fishing Bait"
+}},
+{
+name: "Incubator Egg",
+icon: "assets/images/emotes/egg.svg",
+description: "The one catalyst you need to call your personal pet home.",
+rarity: "Common",
+api: {
+obtain: "Casting",
+use: "Used when getting a Personal pet."
+}},
+{
+name: "Water Bottle",
+icon: "assets/images/emotes/potable-water.svg",
+description: "An item that magically heals your pet's thirst.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "/pet hydrate"
+}},
+{
+name: "Water Bottle",
+icon: "assets/images/emotes/potable-water.svg",
+description: "An item that magically heals your pet's thirst.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "/pet hydrate"
+}},
+{
+name: "Pet House",
+icon: "assets/images/emotes/dog-house.png",
+description: "A house where your pet lives. Maybe. Sometimes they just like to flop outside.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "Required to buy a pet with /pet buy `type:`&#60;type> `name:`&#60;name>"
+}},
+{
+name: "Steak",
+icon: "assets/images/emotes/cut-of-meat.svg",
+description: "Very yummy if you're not vegetarian.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "Used to feed your pet with /pet feed `item:`Steak"
+}},
+{
+name: "Chicken",
+icon: "assets/images/emotes/chicken.svg",
+description: "Very yummy if you're not vegetarian.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "Used to feed your pet with /pet feed `item:`Chicken"
+}},
+{
+name: "Chicken",
+icon: "assets/images/emotes/baby-bottle.svg",
+description: "Very good food for cats, I've heard.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "Used to feed your pet with /pet feed `item:`Milk Bottle"
+}},
+{
+name: "Dog Food",
+icon: "assets/images/emotes/meat-on-bone.svg",
+description: "Food your dog might like a lot. Or they might like bread more, like mines.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "Used to feed your pet with /pet feed `item:`Dog Food"
+}},
+{
+name: "Cat Food",
+icon: "assets/images/emotes/canned-food.svg",
+description: "Food your cat might like a lot.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "Used to feed your pet with /pet feed `item:`Cat Food"
+}},
+{
+name: "Cat Food",
+icon: "assets/images/emotes/seedling.svg",
+description: "Food your hamster might enjoy.",
+rarity: "Common",
+api: {
+obtain: "Market",
+use: "Used to feed your pet with /pet feed `item:`Hamster Food"
+}},
+{
+name: "Magical Watch",
+icon: "assets/images/emotes/watch.svg",
+description: "A magic watch that slows time when you need it.",
+rarity: "Rare",
+api: {
+obtain: "Every 50 consecutive dailies",
+use: "This will automatically be consumed to save your daily streak!"
+}}
+]
+}
+
 
 ---
 # Tool Items
