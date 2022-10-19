@@ -30,43 +30,50 @@ left:
                     use: "${first.api.use}",
                 </#if>
                 <#if first.api.tier??>
-                    tier: ${first.api.tier},
+                    tier: ${first.api.tier?c},
                 </#if>
                 <#if first.api.durability??>
-                    durability: ${first.api.durability},
+                    durability: ${first.api.durability?c},
                 </#if>
                 <#if first.api.wrenchTierToCraft??>
-                    wrenchTierToCraft: ${first.api.wrenchTierToCraft},
+                    wrenchTierToCraft: ${first.api.wrenchTierToCraft?c},
                 </#if>
                 <#if first.api.wrenchTier??>
-                    wrenchTier: ${first.api.wrenchTier},
+                    wrenchTier: ${first.api.wrenchTier?c},
                 </#if>
                 <#if first.api.wrenchMultiplier??>
                     wrenchMultiplier: "${first.api.wrenchMultiplier}",
                 </#if>
                 <#if first.api.wrenchMulticast??>
-                    wrenchMulticast: ${first.api.wrenchMulticast},
+                    wrenchMulticast: ${first.api.wrenchMulticast?c},
                 </#if>
                 <#if first.api.creditIncrease??>
-                    creditIncrease: ${first.api.creditIncrease},
+                    creditIncrease: [${first.api.creditIncrease[0]}, ${first.api.creditIncrease[1]}],
                 </#if>
-                <#if first.api.diamondIncrease??>
-                    diamondIncrease: ${first.api.diamondIncrease},
+                <#if first.api.diamondDropRange??>
+                    diamondDropRange: [${first.api.diamondDropRange[0]}, ${first.api.diamondDropRange[1]}],
                 </#if>
-                <#if first.api.sparkleIncrease??>
-                    sparkleIncrease: "${first.api.sparkleIncrease}",
+                <#if first.api.sparkleChance??>
+                    sparkleChance: "${first.api.sparkleChance?c}",
                 </#if>
-                <#if first.api.gemIncrease??>
-                    gemIncrease: "${first.api.gemIncrease}",
+                <#if first.api.gemChance??>
+                    gemChance: "${first.api.gemChance?c}",
                 </#if>
                 <#if first.api.itemBuff??>
-                    itemBuff: ${first.api.itemBuff},
+                    itemBuff: [${first.api.itemBuff[0]}, ${first.api.itemBuff[1]}],
                 </#if>
                 <#if first.api.dropRate??>
-                    dropRate: ${first.api.dropRate},
+                    dropRate: ${first.api.dropRate?c},
                 </#if>
                 <#if first.api.timedObtain??>
-                    timedObtain: "${first.api.timedObtain}"
+                    timedObtain: "${first.api.timedObtain}",
+                </#if>
+                <#if first.api.broken??>
+                    broken: {
+                    icon: "${first.api.broken.icon}",
+                    chance: "${first.api.broken.chance?c}",
+                    force: "${first.api.broken.force?c}"
+                    }
                 </#if>
             }
         </#if>
@@ -90,43 +97,50 @@ middle:
                     use: "${second.api.use}",
                 </#if>
                 <#if second.api.tier??>
-                    tier: ${second.api.tier},
+                    tier: ${second.api.tier?c},
                 </#if>
                 <#if second.api.durability??>
-                    durability: ${second.api.durability},
+                    durability: ${second.api.durability?c},
                 </#if>
                 <#if second.api.wrenchTierToCraft??>
-                    wrenchTierToCraft: ${second.api.wrenchTierToCraft},
+                    wrenchTierToCraft: ${second.api.wrenchTierToCraft?c},
                 </#if>
                 <#if second.api.wrenchTier??>
-                    wrenchTier: ${second.api.wrenchTier},
+                    wrenchTier: ${second.api.wrenchTier?c},
                 </#if>
                 <#if second.api.wrenchMultiplier??>
                     wrenchMultiplier: "${second.api.wrenchMultiplier}",
                 </#if>
                 <#if second.api.wrenchMulticast??>
-                    wrenchMulticast: ${second.api.wrenchMulticast},
+                    wrenchMulticast: ${second.api.wrenchMulticast?c},
                 </#if>
                 <#if second.api.creditIncrease??>
-                    creditIncrease: ${second.api.creditIncrease},
+                    creditIncrease: [${second.api.creditIncrease[0]}, ${second.api.creditIncrease[1]}],
                 </#if>
-                <#if second.api.diamondIncrease??>
-                    diamondIncrease: ${second.api.diamondIncrease},
+                <#if second.api.diamondDropRange??>
+                    diamondDropRange: [${second.api.diamondDropRange[0]}, ${second.api.diamondDropRange[1]}],
                 </#if>
-                <#if second.api.sparkleIncrease??>
-                    sparkleIncrease: "${second.api.sparkleIncrease}",
+                <#if second.api.sparkleChance??>
+                    sparkleChance: "${second.api.sparkleChance?c}",
                 </#if>
-                <#if second.api.gemIncrease??>
-                    gemIncrease: "${second.api.gemIncrease}",
+                <#if second.api.gemChance??>
+                    gemChance: "${second.api.gemChance?c}",
                 </#if>
                 <#if second.api.itemBuff??>
-                    itemBuff: ${second.api.itemBuff},
+                    itemBuff: [${second.api.itemBuff[0]}, ${second.api.itemBuff[1]}],
                 </#if>
                 <#if second.api.dropRate??>
-                    dropRate: ${second.api.dropRate},
+                    dropRate: ${second.api.dropRate?c},
                 </#if>
                 <#if second.api.timedObtain??>
-                    timedObtain: "${second.api.timedObtain}"
+                    timedObtain: "${second.api.timedObtain}",
+                </#if>
+                <#if second.api.broken??>
+                    broken: {
+                    icon: "${second.api.broken.icon}",
+                    chance: "${second.api.broken.chance?c}",
+                    force: "${second.api.broken.force?c}"
+                    }
                 </#if>
             }
         </#if>
@@ -151,43 +165,50 @@ right:
                     use: "${third.api.use}",
                 </#if>
                 <#if third.api.tier??>
-                    tier: ${third.api.tier},
+                    tier: ${third.api.tier?c},
                 </#if>
                 <#if third.api.durability??>
-                    durability: ${third.api.durability},
+                    durability: ${third.api.durability?c},
                 </#if>
                 <#if third.api.wrenchTierToCraft??>
-                    wrenchTierToCraft: ${third.api.wrenchTierToCraft},
+                    wrenchTierToCraft: ${third.api.wrenchTierToCraft?c},
                 </#if>
                 <#if third.api.wrenchTier??>
-                    wrenchTier: ${third.api.wrenchTier},
+                    wrenchTier: ${third.api.wrenchTier?c},
                 </#if>
                 <#if third.api.wrenchMultiplier??>
                     wrenchMultiplier: "${third.api.wrenchMultiplier}",
                 </#if>
                 <#if third.api.wrenchMulticast??>
-                    wrenchMulticast: ${third.api.wrenchMulticast},
+                    wrenchMulticast: ${third.api.wrenchMulticast?c},
                 </#if>
                 <#if third.api.creditIncrease??>
-                    creditIncrease: ${third.api.creditIncrease},
+                    creditIncrease: [${third.api.creditIncrease[0]}, ${third.api.creditIncrease[1]}],
                 </#if>
-                <#if third.api.diamondIncrease??>
-                    diamondIncrease: ${third.api.diamondIncrease},
+                <#if third.api.diamondDropRange??>
+                    diamondDropRange: [${third.api.diamondDropRange[0]}, ${third.api.diamondDropRange[1]}],
                 </#if>
-                <#if third.api.sparkleIncrease??>
-                    sparkleIncrease: "${third.api.sparkleIncrease}",
+                <#if third.api.sparkleChance??>
+                    sparkleChance: "${third.api.sparkleChance?c}",
                 </#if>
-                <#if third.api.gemIncrease??>
-                    gemIncrease: "${third.api.gemIncrease}",
+                <#if third.api.gemChance??>
+                    gemChance: "${third.api.gemChance?c}",
                 </#if>
                 <#if third.api.itemBuff??>
-                    itemBuff: ${third.api.itemBuff},
+                    itemBuff: [${third.api.itemBuff[0]}, ${third.api.itemBuff[1]}],
                 </#if>
                 <#if third.api.dropRate??>
-                    dropRate: ${third.api.dropRate},
+                    dropRate: ${third.api.dropRate?c},
                 </#if>
                 <#if third.api.timedObtain??>
-                    timedObtain: "${third.api.timedObtain}"
+                    timedObtain: "${third.api.timedObtain}",
+                </#if>
+                <#if third.api.broken??>
+                    broken: {
+                    icon: "${third.api.broken.icon}",
+                    chance: "${third.api.broken.chance?c}",
+                    force: "${third.api.broken.force?c}"
+                    }
                 </#if>
             }
         </#if>
