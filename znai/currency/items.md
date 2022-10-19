@@ -1,3 +1,6 @@
+Warning: This page contains **a lot** of images and may eat through metered connections.
+
+
 # Intro
 
 Mantaro has had many items across the years, some currently obtainable, some that have been removed.
