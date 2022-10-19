@@ -88,7 +88,7 @@ api: {
 obtain: "/buy, Loot Crate"
 }},
 {
-name: "Tuxedo",
+name: "Shoes",
 icon: "assets/images/emotes/athletic-shoe.svg",
 description: "'Cause walking barefoot is just nasty. Or painful.",
 rarity: "Common",
@@ -515,14 +515,14 @@ use: "Used to feed your pet with /pet feed `item:`Steak"
 {
 name: "Chicken",
 icon: "assets/images/emotes/chicken.svg",
-description: "Very yummy if you're not vegetarian.",
+description: "Very yummy if you're not vegetarian, but it comes from a chicken instead.",
 rarity: "Common",
 api: {
 obtain: "/buy",
 use: "Used to feed your pet with /pet feed `item:`Chicken"
 }},
 {
-name: "Chicken",
+name: "Milk Bottle",
 icon: "assets/images/emotes/baby-bottle.svg",
 description: "Very good food for cats, I've heard.",
 rarity: "Common",
@@ -549,7 +549,7 @@ obtain: "/buy",
 use: "Used to feed your pet with /pet feed `item:`Cat Food"
 }},
 {
-name: "Cat Food",
+name: "Hamster Food",
 icon: "assets/images/emotes/seedling.svg",
 description: "Food your hamster might enjoy.",
 rarity: "Common",
@@ -608,7 +608,7 @@ use: "Required to craft better items."
 {
 name: "Sparkle Wrench",
 icon: "assets/images/emotes/sparkle-wrench.png",
-description: "A Wrench infused with pieces of Comet Gems. Somehow it feels way sturdier.",
+description: "A Wrench infused with pieces of Sparkle Fragments. Somehow it feels a lot sturdier.",
 rarity: "Legendary",
 api: {
 tier: 5,
@@ -890,7 +890,7 @@ force: 100
 :include-template: assets/templates/template-2-column-card.ftl {
 items: [
 {
-name: "Fishing Rod",
+name: "Axe",
 icon: "assets/images/emotes/axe.svg",
 description: "A normal axe you bought on the local market. Good enough to chop some trees down.",
 rarity: "Common",
@@ -925,7 +925,7 @@ force: 100
 }
 }},
 {
-name: "Star Rod",
+name: "Star Axe",
 icon: "assets/images/emotes/star-axe.png",
 description: "A bright glow from a star far away, but in your hands. Looks like the tree-chopping can continue with this new, shiny axe. You seemed weirded out at first: how can this help me mine more wood? Well, you soon realized why...",
 rarity: "Rare",
@@ -979,8 +979,8 @@ force: 100
 }
 }},
 {
-name: "Hellfire Rod",
-icon: "assets/images/emotes/hellfire-rod.png",
+name: "Hellfire Axe",
+icon: "assets/images/emotes/hellfire-axe.png",
 description: "Reactions between all the elements can be a weird and dangerous process. You mastered the elements already, and fusing it with your axe now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it. It works wonders. Nothing can compare. But you're still left wondering whether you really did the right thing.",
 rarity: "Mythic",
 api: {
@@ -991,7 +991,7 @@ creditIncrease: [225, 900],
 obtain: "Casting",
 use: "Used to /chop",
 broken: {
-icon: "assets/images/emotes/hellfire-rod-broken.png",
+icon: "assets/images/emotes/hellfire-axe-broken.png",
 chance: 100,
 force: 100
 }
@@ -1046,7 +1046,7 @@ dropRate: 5
 {
 name: "Chop Premium Treasure",
 icon: "assets/images/emotes/lootbox-chop-premium.png",
-description: "A gem you found while mining. Might have some nice stuff inside.",
+description: "A gem you found while chopping. Might have some nice stuff inside.",
 rarity: "Uncommon",
 api: {
 use: "/opencrate `crate:`Chop Premium Crate",
@@ -1056,7 +1056,7 @@ dropRate: 5
 {
 name: "Gem Crate",
 icon: "assets/images/emotes/lootbox-mine.png",
-description: "A gem you found while mining. Might have some nice stuff inside.",
+description: "A gem you found while chopping. Might have some nice stuff inside.",
 rarity: "Epic",
 api: {
 use: "/opencrate `crate:`Gem Crate",
