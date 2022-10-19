@@ -18,7 +18,7 @@ icon: "assets/images/emotes/headphones.svg",
 description: "That's what happens when you listen to too much music. Should be worth something, tho. (Appears randomly after using any of the music commands)",
 rarity: "Common",
 api: {
-    obtain: "Loot"
+    obtain: "/loot"
 }},
 {
 name: "Moneybag",
@@ -26,7 +26,7 @@ icon: "assets/images/emotes/moneybag.svg",
 description: "What else?",
 rarity: "Common",
 api: {
-    obtain: "Market"
+    obtain: "/buy"
 }},
 {
 name: "Milk",
@@ -34,7 +34,7 @@ icon: "assets/images/emotes/milk.svg",
 description: "Maybe it's okay to have some.",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Old Beverage",
@@ -42,7 +42,7 @@ icon: "assets/images/emotes/champagne.svg",
 description: "Does really weird stuff in big quantities. Well, depends on what kind ;)",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Lewd Magazine",
@@ -50,7 +50,7 @@ icon: "assets/images/emotes/newspaper.svg",
 description: "Too many lewd commands. Way too many. Had fun?",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Clothes",
@@ -58,7 +58,7 @@ icon: "assets/images/emotes/shirt.svg",
 description: "Basically what you wear. Hopefully...",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Wedding Dress",
@@ -66,7 +66,7 @@ icon: "assets/images/emotes/dress.svg",
 description: "Isn't it cute?",
 rarity: "Common",
 api: {
-obtain: " Market, Loot Crate"
+obtain: " /buy, Loot Crate"
 }},
 {
 name: "Necklace",
@@ -74,7 +74,7 @@ icon: "assets/images/emotes/prayer-beads.svg",
 description: "Looks nice.",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Tuxedo",
@@ -82,7 +82,7 @@ icon: "assets/images/emotes/man-in-tuxedo.svg",
 description: "What you wear when you're going to get married with a girl, or going to a nice place, or maybe everywhere, who knows?",
 rarity: "Common",
 api: {
-obtain: "Market, Loot Crate"
+obtain: "/buy, Loot Crate"
 }},
 {
 name: "Tuxedo",
@@ -90,7 +90,7 @@ icon: "assets/images/emotes/athletic-shoe.svg",
 description: "'Cause walking barefoot is just nasty. Or painful.",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Rose",
@@ -98,7 +98,7 @@ icon: "assets/images/emotes/rose.svg",
 description: "The embodiment of your love. Also it's a nice decoration.",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Chocolate",
@@ -106,7 +106,7 @@ icon: "assets/images/emotes/chocolate.svg",
 description: "Yummy.",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Cookie",
@@ -114,7 +114,7 @@ icon: "assets/images/emotes/cookie.svg",
 description: "Delicious.",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Pants",
@@ -122,7 +122,7 @@ icon: "assets/images/emotes/jeans.svg",
 description: "Basically what you wear on your legs... hopefully.",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Coffee",
@@ -130,7 +130,7 @@ icon: "assets/images/emotes/coffee.svg",
 description: "A delightful way to start your day.",
 rarity: "Common",
 api: {
-obtain: "Market, Fish, Loot Crate"
+obtain: "/buy, /fish, Loot Crate"
 }},
 {
 name: "Television",
@@ -138,7 +138,7 @@ icon: "assets/images/emotes/tv.svg",
 description: "Must... watch... TV...",
 rarity: "Common",
 api: {
-obtain: "Market, Loot Crate"
+obtain: "/buy, Loot Crate"
 }},
 {
 name: "Motorcycle",
@@ -146,7 +146,7 @@ icon: "assets/images/emotes/motorcycle.svg",
 description: "Going around, the cool way.",
 rarity: "Common",
 api: {
-obtain: "Market, Loot Crate"
+obtain: "/buy, Loot Crate"
 }},
 {
 name: "Pizza",
@@ -154,7 +154,7 @@ icon: "assets/images/emotes/pizza.svg",
 description: "Yummy.",
 rarity: "Common",
 api: {
-obtain: "Fish, Loot Crate"
+obtain: "/fish, Loot Crate"
 }},
 {
 name: "Rock",
@@ -162,7 +162,7 @@ icon: "assets/images/emotes/rock.svg",
 description: "A rock. Yep. It's very hard, isn't it?",
 rarity: "Common",
 api: {
-obtain: "Mine, Normal & Premium Mine Crates"
+obtain: "/mine, Normal & Premium Mine Crates"
 }},
 {
 name: "Fish",
@@ -170,7 +170,7 @@ icon: "assets/images/emotes/fish.svg",
 description: "Fish. Caught in fishing.",
 rarity: "Common",
 api: {
-obtain: "Fish, Normal & Premium Fish Crates"
+obtain: "/fish, Normal & Premium Fish Treasures"
 }},
 {
 name: "Tropical Fish",
@@ -178,7 +178,7 @@ icon: "assets/images/emotes/tropical-fish.svg",
 description: "A very tropical fish. Caught in fishing.",
 rarity: "Common",
 api: {
-obtain: "Fish, Normal & Premium Fish Crates"
+obtain: "/fish, Normal & Premium Fish Treasures"
 }},
 {
 name: "Wood",
@@ -186,7 +186,7 @@ icon: "assets/images/emotes/wood.svg",
 description: "Common drop from trees. Useful for casting.",
 rarity: "Common",
 api: {
-obtain: "Chop, Normal & Premium Chop Crates"
+obtain: "/chop, Normal & Premium Chop Crates"
 }},
 {
 name: "Leaves",
@@ -194,7 +194,7 @@ icon: "assets/images/emotes/leaves.svg",
 description: "A slow drop from a tree you tried to chop.",
 rarity: "Common",
 api: {
-obtain: "Chop, Normal & Premium Chop Crates"
+obtain: "/chop, Normal & Premium Chop Crates"
 }},
 {
 name: "Apple",
@@ -202,7 +202,7 @@ icon: "assets/images/emotes/apple.svg",
 description: "You happened to chop an apple tree and the apple fell on your head. Ouch.",
 rarity: "Common",
 api: {
-obtain: "Chop, Normal & Premium Chop Crates"
+obtain: "/chop, Normal & Premium Chop Crates"
 }},
 {
 name: "Pear",
@@ -210,7 +210,7 @@ icon: "assets/images/emotes/pear.svg",
 description: "You happened to chop a pear tree and the pear fell on your head. Ouch.",
 rarity: "Common",
 api: {
-obtain: "Chop, Normal & Premium Chop Crates"
+obtain: "/chop, Normal & Premium Chop Crates"
 }},
 {
 name: "Cherry Blossom",
@@ -218,7 +218,7 @@ icon: "assets/images/emotes/cherry-blossom.svg",
 description: "A very slow drop from a cherry tree. Lovely, huh?",
 rarity: "Uncommon",
 api: {
-obtain: "Chop, Normal & Premium Chop Crates"
+obtain: "/chop, Normal & Premium Chop Crates"
 }},
 {
 name: "Floppy Disk",
@@ -226,15 +226,15 @@ icon: "assets/images/emotes/floppy-disk.svg",
 description: "Might have some games. Don't copy the floppy. (Appears randomly after winning a game)",
 rarity: "Uncommon",
 api: {
-obtain: "Loot"
+obtain: "/loot"
 }},
 {
 name: "Loaded Die",
-icon: "assets/images/emotes/game-die.svg",
+icon: "assets/images/emotes/die.svg",
 description: "Stolen from the `/roll` command. (Appears randomly after using `/roll`)",
 rarity: "Uncommon",
 api: {
-obtain: "Loot"
+obtain: "/loot"
 }},
 {
 name: "Pencil",
@@ -242,7 +242,7 @@ icon: "assets/images/emotes/pencil.svg",
 description: "We have plenty of those! (Appears randomly after creating or editing custom commands)",
 rarity: "Uncommon",
 api: {
-obtain: "Loot"
+obtain: "/loot"
 }},
 {
 name: "Blowfish",
@@ -250,7 +250,7 @@ icon: "assets/images/emotes/blowfish.svg",
 description: "I wonder... is this good? Caught in fishing.",
 rarity: "Uncommon",
 api: {
-obtain: "Fish, Normal & Premium Fish Crates"
+obtain: "/fish, Normal & Premium Fish Treasures"
 }},
 {
 name: "Crab",
@@ -258,7 +258,7 @@ icon: "assets/images/emotes/crab.svg",
 description: "A crab. It dances, maybe.",
 rarity: "Uncommon",
 api: {
-obtain: "Fish, Normal & Premium Fish Crates"
+obtain: "/fish, Normal & Premium Fish Treasures"
 }},
 {
 name: "Squid",
@@ -266,7 +266,7 @@ icon: "assets/images/emotes/squid.svg",
 description: "Not to confuse with Squidward.",
 rarity: "Uncommon",
 api: {
-obtain: "Fish, Normal & Premium Fish Crates"
+obtain: "/fish, Normal & Premium Fish Treasures"
 }},
 {
 name: "Shrimp",
@@ -274,7 +274,7 @@ icon: "assets/images/emotes/shrimp.svg",
 description: "Pinkish stuff. I think. ",
 rarity: "Uncommon",
 api: {
-obtain: "Fish, Normal & Premium Fish Crates"
+obtain: "/fish, Normal & Premium Fish Treasures"
 }},
 {
 name: "Diamond",
@@ -282,7 +282,7 @@ icon: "assets/images/emotes/gem.svg",
 description: "Basically a better way of saving your money. It's shiny too. And let's you cast shiny stuff. How nice.",
 rarity: "Uncommon",
 api: {
-obtain: "Market, Mine, Loot Crate"
+obtain: "/buy, /mine, Loot Crate"
 }},
 {
 name: "Shell",
@@ -290,7 +290,7 @@ icon: "assets/images/emotes/shell.svg",
 description: "Found at the bottom of the ocean. What could it be worth for? (Require **Comet tool or better** to drop).",
 rarity: "Rare",
 api: {
-obtain: "Fish, Normal & Premium Fish Crates"
+obtain: "/fish, Normal & Premium Fish Treasures"
 }},
 {
 name: "Comet Gem",
@@ -298,7 +298,7 @@ icon: "assets/images/emotes/comet.svg",
 description: "Fragments of a comet you found while mining. Useful for casting.",
 rarity: "Rare",
 api: {
-obtain: "Cast, Normal & Premium Mine Crates"
+obtain: "Casting, Normal & Premium Mine Crates"
 }},
 {
 name: "Star Gem",
@@ -306,7 +306,7 @@ icon: "assets/images/emotes/star.svg",
 description: "Fragments of a fallen star you found while mining.",
 rarity: "Rare",
 api: {
-obtain: "Cast, Normal & Premium Mine Crates"
+obtain: "Casting, Normal & Premium Mine Crates"
 }},
 {
 name: "Gem Fragment",
@@ -314,7 +314,7 @@ icon: "assets/images/emotes/dizzy.svg",
 description: "Fragment of an ancient gem. Useful for casting.",
 rarity: "Rare",
 api: {
-obtain: "Mine, Normal & Premium Mine Crates"
+obtain: "/mine, Normal & Premium Mine Crates"
 }},
 {
 name: "Shark",
@@ -322,7 +322,7 @@ icon: "assets/images/emotes/shark.svg",
 description: "Woah. How did you catch this? (Require **Sparkle tool or better** to drop).",
 rarity: "Epic",
 api: {
-obtain: "Fish, Premium Fish Treasure"
+obtain: "/fish, Premium Fish Treasure"
 }},
 {
 name: "Moon Runes",
@@ -330,7 +330,7 @@ icon: "assets/images/emotes/crescent-moon.svg",
 description: "Moon Rune. Needed to cast some stuff.",
 rarity: "Epic",
 api: {
-obtain: "Mine, Normal & Premium Mine Crates"
+obtain: "/mine, Normal & Premium Mine Crates"
 }},
 {
 name: "Snowflake",
@@ -338,7 +338,7 @@ icon: "assets/images/emotes/snowflake.svg",
 description: "Snowflake. Usually used as a cast ingredient.",
 rarity: "Epic",
 api: {
-obtain: "Mine, Normal & Premium Mine Crates"
+obtain: "/mine, Normal & Premium Mine Crates"
 }},
 {
 name: "Sparkle Fragment",
@@ -346,7 +346,7 @@ icon: "assets/images/emotes/sparkles.svg",
 description: "One of the rarest gems around. Make sure to keep it. It is used to cast sparkle pickaxe & sparkle rods. (Require **Star tool or better** to drop).",
 rarity: "Legendary",
 api: {
-obtain: "Mine, Normal & Premium Mine Crates"
+obtain: "/mine, Normal & Premium Mine Crates"
 }},
 {
 name: "Consolation Prize",
@@ -371,7 +371,7 @@ icon: "assets/images/emotes/ring.svg",
 description: "Basically what makes your marriage official.",
 rarity: "Common",
 api: {
-obtain: "Market, Loot Crate",
+obtain: "/buy, Loot Crate",
 use: "Requires two rings to marry with /marry user `user:`&#60;mention>"
 }},
 {
@@ -389,7 +389,7 @@ icon: "assets/images/emotes/tickets.svg",
 description: "Gives you extra chance in slots, also works as bulk storage.",
 rarity: "Common",
 api: {
-obtain: "Market, Loot Crate",
+obtain: "/buy, Loot Crate",
 use: "/slots `useticket`:true `ticketamount`:&#60;amount>"
 }},
 {
@@ -398,7 +398,7 @@ icon: "assets/images/emotes/house.svg",
 description: "Cozy place to live in.",
 rarity: "Common",
 api: {
-obtain: "Market, Loot Crate ",
+obtain: "/buy, Loot Crate ",
 use: "Required to set your Marriage House with /marry house `name`:&#60;name>"
 }},
 {
@@ -407,7 +407,7 @@ icon: "assets/images/emotes/car.svg",
 description: "To move around.",
 rarity: "Common",
 api: {
-obtain: "Market, Loot Crate",
+obtain: "/buy, Loot Crate",
 use: "Required to set your Marriage Car with /marry car `name`:&#60;name>"
 }},
 {
@@ -416,7 +416,7 @@ icon: "assets/images/emotes/sake.svg",
 description: "Allows you to collect more stuff from currency commands for 3 sessions.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "/use item `item`:Haste Potion"
 }},
 {
@@ -425,7 +425,7 @@ icon: "assets/images/emotes/cup-with-straw.svg",
 description: "Clears all potion effects.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "/use item `item`:Milky Potion"
 }},
 {
@@ -434,7 +434,7 @@ icon: "assets/images/emotes/amphora.svg",
 description: "Makes a tool lose less durability per swing. Lasts 3 sessions.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "/use item `item`:Energy Beverage"
 }},
 {
@@ -443,7 +443,7 @@ icon: "assets/images/emotes/broom.svg",
 description: "A delightful way to clean all the dust you have around. I bet there's a lot of it.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "/use item `item`:Mop"
 }},
 {
@@ -452,7 +452,7 @@ icon: "assets/images/emotes/key2.svg",
 description: "This item makes you un-claimeable (as a waifu).",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "/waifu claimlock"
 }},
 {
@@ -461,7 +461,7 @@ icon: "assets/images/emotes/pill.svg",
 description: "Gives you a significant advantage on mine and fish if one of your waifus is valued at over 20,000. Lasts 3 sessions.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "/use item `item`:Waifu Pill"
 }},
 {
@@ -470,7 +470,7 @@ icon: "assets/images/emotes/bug.svg",
 description: "Gives you a higher chance of catching fish.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "/use item `item`:Fishing Bait"
 }},
 {
@@ -488,7 +488,7 @@ icon: "assets/images/emotes/potable-water.svg",
 description: "An item that magically heals your pet's thirst.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "/pet hydrate"
 }},
 {
@@ -497,7 +497,7 @@ icon: "assets/images/emotes/dog-house.png",
 description: "A house where your pet lives. Maybe. Sometimes they just like to flop outside.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "Required to buy a pet with /pet buy `type:`&#60;type> `name:`&#60;name>"
 }},
 {
@@ -506,7 +506,7 @@ icon: "assets/images/emotes/cut-of-meat.svg",
 description: "Very yummy if you're not vegetarian.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "Used to feed your pet with /pet feed `item:`Steak"
 }},
 {
@@ -515,7 +515,7 @@ icon: "assets/images/emotes/chicken.svg",
 description: "Very yummy if you're not vegetarian.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "Used to feed your pet with /pet feed `item:`Chicken"
 }},
 {
@@ -524,7 +524,7 @@ icon: "assets/images/emotes/baby-bottle.svg",
 description: "Very good food for cats, I've heard.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "Used to feed your pet with /pet feed `item:`Milk Bottle"
 }},
 {
@@ -533,7 +533,7 @@ icon: "assets/images/emotes/meat-on-bone.svg",
 description: "Food your dog might like a lot. Or they might like bread more, like mines.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "Used to feed your pet with /pet feed `item:`Dog Food"
 }},
 {
@@ -542,7 +542,7 @@ icon: "assets/images/emotes/canned-food.svg",
 description: "Food your cat might like a lot.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "Used to feed your pet with /pet feed `item:`Cat Food"
 }},
 {
@@ -551,7 +551,7 @@ icon: "assets/images/emotes/seedling.svg",
 description: "Food your hamster might enjoy.",
 rarity: "Common",
 api: {
-obtain: "Market",
+obtain: "/buy",
 use: "Used to feed your pet with /pet feed `item:`Hamster Food"
 }},
 {
@@ -585,7 +585,7 @@ wrenchTier: 1,
 durability: 35,
 wrenchMultiplier: "1.0x",
 wrenchMulticast: false,
-obtain: "Market",
+obtain: "/buy",
 use: "Required to cast items."
 }},
 {
@@ -610,8 +610,8 @@ rarity: "Legendary",
 api: {
 tier: 5,
 wrenchTier: 4,
-durability: 80,
-wrenchMultiplier: "0.9x",
+durability: 160,
+wrenchMultiplier: "0.65x",
 wrenchMulticast: true,
 obtain: "Casting",
 use: "Required to cast the best items."
@@ -634,7 +634,7 @@ gemChance: 12.5,
 creditIncrease: [0, 0],
 diamondDropRange: [0, 2],
 sparkleChance: 0,
-obtain: "Market, Mine Crate",
+obtain: "/buy, Mine Crate",
 use: "Used to /mine"
 }},
 {
@@ -649,7 +649,7 @@ gemChance: 12.5,
 creditIncrease: [10, 40],
 diamondDropRange: [0, 2],
 sparkleChance: 0,
-obtain: "Cast, Mine Crate",
+obtain: "Casting, Mine Crate",
 use: "Used to /mine"
 }}
 ]
@@ -670,7 +670,7 @@ gemChance: 17.5,
 creditIncrease: [25, 100],
 diamondDropRange: [0, 2],
 sparkleChance: 0,
-obtain: "Cast, Mine Crate",
+obtain: "Casting, Mine Crate",
 use: "Used to /mine",
 broken: {
 icon: "assets/images/emotes/comet-pick-broken.png",
@@ -691,7 +691,7 @@ gemChance: 20,
 creditIncrease: [25, 100],
 diamondDropRange: [0, 3],
 sparkleChance: 2.5,
-obtain: "Cast, Mine Crate",
+obtain: "Casting, Mine Crate",
 use: "Used to /mine",
 broken: {
 icon: "assets/images/emotes/star-pick-broken.png",
@@ -712,7 +712,7 @@ gemChance: 22.5,
 creditIncrease: [35, 140],
 diamondDropRange: [0, 4],
 sparkleChance: 3,
-obtain: "Cast, Mine Crate",
+obtain: "Casting, Mine Crate",
 use: "Used to /mine",
 broken: {
 icon: "assets/images/emotes/moon-pick-broken.png",
@@ -733,7 +733,7 @@ gemChance: 22.5,
 creditIncrease: [75, 300],
 diamondDropRange: [0, 4],
 sparkleChance: 5.5,
-obtain: "Cast, Mine Crate",
+obtain: "Casting, Mine Crate",
 use: "Used to /mine",
 broken: {
 icon: "assets/images/emotes/sparkle-pick-broken.png",
@@ -754,7 +754,7 @@ gemChance: 30,
 creditIncrease: [375, 1500],
 diamondDropRange: [0, 10],
 sparkleChance: 8.8,
-obtain: "Cast",
+obtain: "Casting",
 use: "Used to /mine",
 broken: {
 icon: "assets/images/emotes/hellfire-pick-broken.png",
@@ -780,7 +780,7 @@ api: {
 tier: 1,
 durability: 40,
 itemBuff: [0, 9],
-obtain: "Market, Fish Treasure",
+obtain: "/buy, Fish Treasure",
 use: "Used to /fish"
 }}
 ]
@@ -895,7 +895,7 @@ api: {
 tier: 1,
 durability: 35,
 creditIncrease: [0, 0],
-obtain: "Market, Chop Crate",
+obtain: "/buy, Chop Crate",
 use: "Used to /chop"
 }}
 ]
@@ -999,48 +999,217 @@ force: 100
 # Crate Items
 These items (minus the Crate Key) are dropped randomly from using other Currency Commands. To open any of the crates you need to have a Crate Key on your inventory.
 
-|                                            Icon                                            |          Name          |                              Description                               |              Opened with              | Drop Rate |   Obtained from    |
-|:------------------------------------------------------------------------------------------:|:----------------------:|:----------------------------------------------------------------------:|:-------------------------------------:|:---------:|:------------------:|
-|       Crate Key        |                      Used to open various crates.                      |                  N/A                  |    N/A    | Market, Loot Crate |
-|      <img src="https://cdn.discordapp.com/emojis/556992254749966346.png" width="64"/>      |       Loot Crate       |      You can use this along with a loot key to open a loot crate!      |             `/opencrate`              |    ~1%    |        Loot        |
-|      <img src="https://cdn.discordapp.com/emojis/556992254623875073.png" width="64"/>      |       Gem Crate        |    A gem you find while mining. Might have some nice stuff inside.     |     `/opencrate crate:gem crate`      |    ~2%    |        Mine        |
-|      <img src="https://cdn.discordapp.com/emojis/556992254472880129.png" width="64"/>      |   Gem Premium Crate*   |    A gem you find while mining. Might have some nice stuff inside.     | `/opencrate crate:gem premium crate`  |    ~2%    | Mine, Dailycrate** |
-|      <img src="https://cdn.discordapp.com/emojis/556992254770937876.png" width="64"/>      |     Fish Treasure      | A treasure you find while fishing. Might have some nice stuff inside.  |      `/opencrate crate:treasure`      |    ~5%    |        Fish        |
-|      <img src="https://cdn.discordapp.com/emojis/556992254724538417.png" width="64"/>      | Fish Premium Treasure* | A treasure you find while fishing. Might have some nice stuff inside.  |  `/opencrate crate:premium treasure`  |    ~5%    | Fish, Dailycrate** |
-|      <img src="https://cdn.discordapp.com/emojis/811059224921767936.png" width="64"/>      |       Chop Crate       | A treasure you find while chopping. Might have some nice stuff inside. |     `/opencrate crate:chop crate`     |    ~5%    |        Chop        |
-|      <img src="https://cdn.discordapp.com/emojis/811272089632768030.png" width="64"/>      |  Chop Premium Crate*   | A treasure you find while chopping. Might have some nice stuff inside. | `/opencrate crate:chop premium crate` |    ~5%    | Chop, Dailycrate** |
+:include-template: assets/templates/template-3-column-card.ftl {
+items: [
+{
+name: "Crate Key",
+icon: "assets/images/emotes/key.svg",
+description: "Used to open various crates.",
+rarity: "Common",
+api: {
+use: "Used when opening crates with /opencrate",
+obtain: "/buy, Loot Crate"
+}},
+{
+name: "Fish Treasure",
+icon: "assets/images/emotes/lootbox-fish.png",
+description: "A treasure you found while fishing. Might have some nice stuff inside.",
+rarity: "Uncommon",
+api: {
+use: "/opencrate `crate:`Fish Treasure",
+obtain: "/fish",
+dropRate: 5
+}},
+{
+name: "Fish Premium Treasure",
+icon: "assets/images/emotes/lootbox-fish-premium.png",
+description: "A treasure you found while fishing. Might have some nice stuff inside.",
+rarity: "Uncommon",
+api: {
+use: "/opencrate `crate:`Fish Premium Treasure",
+obtain: "/fish, /dailycrate",
+dropRate: 5
+}},
+{
+name: "Chop Crate",
+icon: "assets/images/emotes/lootbox-chop.png",
+description: "A treasure you found while chopping. Might have some nice stuff inside.",
+rarity: "Uncommon",
+api: {
+use: "/opencrate `crate:`Chop Crate",
+obtain: "/chop",
+dropRate: 5
+}},
+{
+name: "Chop Premium Treasure",
+icon: "assets/images/emotes/lootbox-chop-premium.png",
+description: "A gem you found while mining. Might have some nice stuff inside.",
+rarity: "Uncommon",
+api: {
+use: "/opencrate `crate:`Chop Premium Crate",
+obtain: "/chop, /dailycrate",
+dropRate: 5
+}},
+{
+name: "Gem Crate",
+icon: "assets/images/emotes/lootbox-mine.png",
+description: "A gem you found while mining. Might have some nice stuff inside.",
+rarity: "Epic",
+api: {
+use: "/opencrate `crate:`Gem Crate",
+obtain: "/mine",
+dropRate: 2
+}},
+{
+name: "Gem Premium Crate",
+icon: "assets/images/emotes/lootbox-mine-premium.png",
+description: "A gem you found while mining. Might have some nice stuff inside.",
+rarity: "Epic",
+api: {
+use: "/opencrate `crate:`Gem Premium Crate",
+obtain: "/mine, /dailycrate",
+dropRate: 2
+}},
+{
+name: "Loot Crate",
+icon: "assets/images/emotes/lootbox.png",
+description: "You can use this along with a loot key to open a loot crate!",
+rarity: "Epic",
+api: {
+use: "/opencrate",
+obtain: "/loot",
+dropRate: 1
+}}
+]
+}
 
-** Dailycrate and Premium Crates are [Premium only](https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks). As well, Premium Users will find only Premium Crates and never their normal version.
-
+```attention-note {label: "Remember"}
+Dailycrate and Premium Crates are [Premium only](https://github.com/Mantaro/MantaroBot/wiki/Premium-Perks). As well, Premium Users will find only Premium Crates and never their normal version.
+```
 ---
 # Timed Items
 These items can only be obtained during certain times or events.
 
-|                                               Icon                                               |            Name             |                                   Description                                    |   Obtained during    |    Obtained from    |
-|:------------------------------------------------------------------------------------------------:|:---------------------------:|:--------------------------------------------------------------------------------:|:--------------------:|:-------------------:|
-|       Christmas bell        |                 Gives you a cozy christmas feeling on your tree.                 |   Christmas Event    |        Loot         |
-|       Christmas tree        |                       Who doesn't like a christmas tree?.                        |   Christmas Event    |        Loot         |
+:include-template: assets/templates/template-3-column-card.ftl {
+items: [
+{
+name: "Christmas Bell",
+icon: "assets/images/emotes/bell.svg",
+description: "Gives you a cozy christmas feeling on your tree.",
+rarity: "Uncommon",
+api: {
+timedObtain: "Christmas Event (23rd-25th Dec.)",
+obtain: "/loot"
+}},
+{
+name: "Christmas Tree",
+icon: "assets/images/emotes/christmas-tree.svg",
+description: "Who doesn't like a christmas tree?",
+rarity: "Uncommon",
+api: {
+timedObtain: "Christmas Event (23rd-25th Dec.)",
+obtain: "/loot"
+}}
+]
+}
 
 ---
 # Removed/Legacy/Unobtainable Items
 These items are no longer obtainable in Mantaro.
 
-|                                            Icon                                            |         Name         |                                         Description                                         |
-|:------------------------------------------------------------------------------------------:|:--------------------:|:-------------------------------------------------------------------------------------------:|
-|     Ping Racket      |           I won the game of ping-pong with Discord by a few milliseconds. Maybe.            |
-|   Forgotten Music    |                      Never downloaded. Probably has been copyrighted.                       |
-|  Special Loaded Die  |                     Even more loaded. Leftover from Currency version 1.                     |
-|       Booster        |   Used to give you some kind of boost, now it's broken. Leftover from Currency version 1.   |
-|       Berserk        |                 Currency Berserk? Anyone? Leftover from Currency version 1.                 |
-|      Companion       |                   Aw, such a cute dog. Leftover from Currency version 1.                    |
-|     Special Ring     |          It's so special, it's not even a ring. Leftover from Currency version 1.           |
-|      Enchancer       |    A broken enchanter, I wonder if it could be fixed? Leftover from Currency version 1.     |
-|        Prize         |                     Pretty much, huh? Leftover from Currency version 1.                     |
-| Old Sparkle Fragment |                                       No longer used.                                       |
-| Old Sparkly Pickaxe  |                                       No longer used.                                       |
-|   Old Sparkly Rod    |                                       No longer used.                                       |
-|      Ban Hammer      | Left by an admin. (Appears randomly after someone was banned using `~>ban` or `~>tempban`)  |
-|      Kick Boot       | Left by an admin. (Appears randomly after someone was kicked using `~>kick` or `~>softban`) |
-|       My Maths       |            Oh, I forgot my maths. (Appears randomly after using `~>stats usage`)            |
+:include-template: assets/templates/template-3-column-card.ftl {
+items: [
+{
+name: "Ping Racket",
+icon: "assets/images/emotes/ping-pong.svg",
+description: "I won the game of ping-pong with Discord by a few milliseconds. Maybe.",
+rarity: "Common"
+},
+{
+name: "Forgotten Music",
+icon: "assets/images/emotes/musical-note.svg",
+description: "Never downloaded. Probably has been copyrighted.",
+rarity: "Common"
+},
+{
+name: "Old Sparkle Fragment",
+icon: "assets/images/emotes/question.svg",
+description: "No longer used.",
+rarity: "Common"
+},
+{
+name: "Old Sparkly Pickaxe",
+icon: "assets/images/emotes/question.svg",
+description: "No longer used.",
+rarity: "Common"
+},
+{
+name: "Old Sparkly Rod",
+icon: "assets/images/emotes/question.svg",
+description: "No longer used.",
+rarity: "Common"
+},
+{
+name: "Ban Hammer",
+icon: "assets/images/emotes/hammer.svg",
+description: "Left by an admin. (Appeared randomly after someone was banned using `~>ban` or `~>tempban`)",
+rarity: "Common"
+},
+{
+name: "Kick Boot",
+icon: "assets/images/emotes/boot.svg",
+description: "Left by an admin. (Appeared randomly after someone was kicked using `~>kick` or `~>softban`)",
+rarity: "Common"
+},
+{
+name: "My Maths",
+icon: "assets/images/emotes/memo.svg",
+description: "Oh, I forgot my maths. (Appeared randomly after using `~>stats usage`)",
+rarity: "Common"
+},
+{
+name: "Special Loaded Die",
+icon: "assets/images/emotes/die.svg",
+description: "Even more loaded. Leftover from Currency version 1.",
+rarity: "Mythic"
+},
+{
+name: "Booster",
+icon: "assets/images/emotes/person-running.svg",
+description: "Used to give you some kind of boost, now it's broken. Leftover from Currency version 1.",
+rarity: "Mythic"
+},
+{
+name: "Berserk",
+icon: "assets/images/emotes/crossed-swords.svg",
+description: "Currency Berserk? Anyone? Leftover from Currency version 1.",
+rarity: "Mythic"
+},
+{
+name: "Companion",
+icon: "assets/images/emotes/dog.svg",
+description: "Aw, such a cute dog. Leftover from Currency version 1.",
+rarity: "Mythic"
+},
+{
+name: "Special Ring",
+icon: "assets/images/emotes/womans-clothes.svg",
+description: "It's so special, it's not even a ring. Leftover from Currency version 1.",
+rarity: "Mythic"
+},
+{
+name: "Enchancer",
+icon: "assets/images/emotes/mag-right.svg",
+description: "A broken enchanter, I wonder if it could be fixed? Leftover from Currency version 1.",
+rarity: "Mythic"
+},
+{
+name: "Prize",
+icon: "assets/images/emotes/question.svg",
+description: "Pretty much, huh? Leftover from Currency version 1.",
+rarity: "Mythic"
+}
+]
+}
 
 ---

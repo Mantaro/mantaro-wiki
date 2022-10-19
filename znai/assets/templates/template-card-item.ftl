@@ -109,16 +109,16 @@ Card Element
 "Diamond drops:", "", "${api.diamondDropRange[0]} - ${api.diamondDropRange[1]} diamonds"
     </#if>
     <#if api.sparkleChance??>
-"Sparkle drop rate:", "", "${api.sparkleChance}%"
+"Sparkle drop rate:", "", "~${api.sparkleChance}%"
     </#if>
     <#if api.gemChance??>
-"Gem drop rate:", "", "${api.gemChance}%"
+"Gem drop rate:", "", "~${api.gemChance}%"
     </#if>
     <#if api.itemBuff??>
 "Item buff:", "", "${api.itemBuff[0]} - ${api.itemBuff[1]} items"
     </#if>
     <#if api.dropRate??>
-"Drop rate:", "", "${api.dropRate}%"
+"Drop rate:", "", "~${api.dropRate}%"
     </#if>
     <#if api.timedObtain??>
 "Obtained during:", "", "${api.timedObtain}"
@@ -136,7 +136,7 @@ ${description?truncate(150)}
 <#else>
 ${description}
 </#if>
-<#if api.broken??>
+<#if api?? && api.broken??>
 ````card ${api.broken.icon} {title: "Broken ${name}", imageHeight: 120, imageBackground: "${rarity}"}
 ```api-parameters {anchorPrefix: "broken_${name?lower_case?replace(" ", "-")}"}
 "Obtained From:", "",  "Breaking a ${name} (${api.broken.chance}%), Unequipping a nearly broken ${name} (${api.broken.force}%)"

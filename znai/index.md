@@ -1,4 +1,4 @@
-# Mantaro Bot Wiki {badge: "v7.0.1.4"}
+# Mantaro Bot Wiki {badge: "v7.1.1"}
 
 :include-image: assets/images/banner.jpg {desktopOnly: true}
 :include-image: assets/images/emotes-m/m-genius.png {mobileOnly: true}
