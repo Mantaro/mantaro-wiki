@@ -21,12 +21,18 @@ All these fields are optional. This is because not all items have all the fields
 `wrenchMultiplier?`: String. The multiplier reduction of the tool.
 `wrenchMulticast?`: Boolean. If it can cast multiple items at once.
 `creditIncrease?`: Integer Array. A 2 lenght list with the range of the credit increase of the tool.
-`diamondIncrease?`: Integer Array. A 2 lenght list with the range of the diamond increase of the tool. (Mainly for picks)
-`sparkleIncrease?`: String. The sparkle increase of the tool. (Mainly for picks)
-`gemIncrease?`: String. The gem increase of the tool. (Mainly for picks)
+`diamondDropRange?`: Integer Array. An array of length 2 with the range of the diamond increase of the tool. (Mainly for picks)
+`sparkleChance?`: Float. The sparkle increase of the tool. (Mainly for picks)
+`gemIncrease?`: Float. The gem increase of the tool. (Mainly for picks)
 `itemBuff?`: Integer Array. A 2 lenght list with the range of the item buff of the tool.
 `dropRate?`: Integer. The drop chance % of the item. (Mainly for crates)
 `timedObtain?`: String. The timed event in which the item can be obtained.
+`broken?`: BrokenData
+
+BrokenData:
+`icon`: String. Path to the icon.
+`chance`: Float. Chance when breaking.
+`force`: Float. Chance when unequipping.
 -->
 
 <#--
@@ -75,7 +81,7 @@ Parameter assignment
 <#--
 Card Element
 -->
-````card ${icon} {title: "${name}", imageHeight: 120, imageBackground: "${rarity}"}
+`````card ${icon} {title: "${name}", imageHeight: 120, imageBackground: "${rarity}"}
 <#if api??>
 ```api-parameters {anchorPrefix: "${name?lower_case?replace(" ", "-")}"}
     <#if api.tier??>
@@ -83,6 +89,9 @@ Card Element
     </#if>
     <#if api.wrenchTierToCraft??>
 "Wrench tier to craft:", "", "${stars(api.wrenchTierToCraft)}"
+    </#if>
+    <#if api.wrenchTier??>
+"Wrench tier:", "", "${stars(api.wrenchTier)}"
     </#if>
     <#if api.durability??>
 "Durability:", "", "${api.durability}"
@@ -94,16 +103,16 @@ Card Element
 "Multicast?:", "", "${api.wrenchMulticast?string('Yes', 'No')}"
     </#if>
     <#if api.creditIncrease??>
-"Credit increase:", "", "${api.creditIncrease[0]} - ${api.creditIncrease[1]} credits"
+"Extra Credits:", "", "${api.creditIncrease[0]} - ${api.creditIncrease[1]} credits"
     </#if>
-    <#if api.diamondIncrease??>
-"Diamond increase:", "", "${api.diamondIncrease[0]} - ${api.diamondIncrease[1]} diamonds"
+    <#if api.diamondDropRange??>
+"Diamond drops:", "", "${api.diamondDropRange[0]} - ${api.diamondDropRange[1]} diamonds"
     </#if>
-    <#if api.sparkleIncrease??>
-"Sparkle increase:", "", "${api.sparkleIncrease}%"
+    <#if api.sparkleChance??>
+"Sparkle drop rate:", "", "${api.sparkleChance}%"
     </#if>
-    <#if api.gemIncrease??>
-"Gem drop rate:", "", "${api.gemIncrease}%"
+    <#if api.gemChance??>
+"Gem drop rate:", "", "${api.gemChance}%"
     </#if>
     <#if api.itemBuff??>
 "Item buff:", "", "${api.itemBuff[0]} - ${api.itemBuff[1]} items"
@@ -122,5 +131,17 @@ Card Element
     </#if>
 ```
 </#if>
+<#if description?length gt 150>
+${description?truncate(150)}
+<#else>
 ${description}
+</#if>
+<#if api.broken??>
+````card ${api.broken.icon} {title: "Broken ${name}", imageHeight: 120, imageBackground: "${rarity}"}
+```api-parameters {anchorPrefix: "broken_${name?lower_case?replace(" ", "-")}"}
+"Obtained From:", "",  "Breaking a ${name} (${api.broken.chance}%), Unequipping a nearly broken ${name} (${api.broken.force}%)"
+"Used in:", "",  "Used to /salvage or /repair"
+```
 ````
+</#if>
+`````

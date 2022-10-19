@@ -492,15 +492,6 @@ obtain: "Market",
 use: "/pet hydrate"
 }},
 {
-name: "Water Bottle",
-icon: "assets/images/emotes/potable-water.svg",
-description: "An item that magically heals your pet's thirst.",
-rarity: "Common",
-api: {
-obtain: "Market",
-use: "/pet hydrate"
-}},
-{
 name: "Pet House",
 icon: "assets/images/emotes/dog-house.png",
 description: "A house where your pet lives. Maybe. Sometimes they just like to flop outside.",
@@ -580,784 +571,431 @@ use: "This will automatically be consumed to save your daily streak!"
 # Tool Items
 These items are ofter required to use another command. The commands they are attached to won't ofter work unless you have equipped/stated the required tool.
 
-## Wrench
-<details><summary>Click here for more details</summary>
-<p>
+## Wrenches
+:include-template: assets/templates/template-3-column-card.ftl {
+items: [
+{
+name: "Wrench",
+icon: "assets/images/emotes/wrench.svg",
+description: "A run of the mill wrench you can buy from the market. Useful for repairing items.",
+rarity: "Common",
+api: {
+tier: 1,
+wrenchTier: 1,
+durability: 35,
+wrenchMultiplier: "1.0x",
+wrenchMulticast: false,
+obtain: "Market",
+use: "Required to cast items."
+}},
+{
+name: "Comet Wrench",
+icon: "assets/images/emotes/comet-wrench.png",
+description: "A Wrench infused with pieces of Comet Gems. Somehow it feels way sturdier.",
+rarity: "Rare",
+api: {
+tier: 3,
+wrenchTier: 3,
+durability: 80,
+wrenchMultiplier: "0.9x",
+wrenchMulticast: true,
+obtain: "Casting",
+use: "Required to craft better items."
+}},
+{
+name: "Sparkle Wrench",
+icon: "assets/images/emotes/sparkle-wrench.png",
+description: "A Wrench infused with pieces of Comet Gems. Somehow it feels way sturdier.",
+rarity: "Legendary",
+api: {
+tier: 5,
+wrenchTier: 4,
+durability: 80,
+wrenchMultiplier: "0.9x",
+wrenchMulticast: true,
+obtain: "Casting",
+use: "Required to cast the best items."
+}}
+]
+}
+
+## Pickaxes
+:include-template: assets/templates/template-2-column-card.ftl {
+items: [
+{
+name: "Brom's Pickaxe",
+icon: "assets/images/emotes/pick.svg",
+description: "A normal pickaxe you bought on the local market. Seems sturdy enough to mine some stuff.",
+rarity: "Common",
+api: {
+tier: 1,
+durability: 40,
+gemChance: 12.5,
+creditIncrease: [0, 0],
+diamondDropRange: [0, 2],
+sparkleChance: 0,
+obtain: "Market, Mine Crate",
+use: "Used to /mine"
+}},
+{
+name: "Diamond Pickaxe",
+icon: "assets/images/emotes/diamond-pick.png",
+description: "A diamond pick is definitely stronger than the market-bought iron picks I could get on the market, that's for sure!",
+rarity: "Uncommon",
+api: {
+tier: 2,
+durability: 150,
+gemChance: 12.5,
+creditIncrease: [10, 40],
+diamondDropRange: [0, 2],
+sparkleChance: 0,
+obtain: "Cast, Mine Crate",
+use: "Used to /mine"
+}}
+]
+}
+
+:include-template: assets/templates/template-2-column-card.ftl {
+items: [
+{
+name: "Comet Pickaxe",
+icon: "assets/images/emotes/comet-pick.png",
+description: "You found some Comet Fragments and realized you could make a Comet Gem out of them. What did they do? Were they special? You seemed eager to try it out after being impressed by its glow, so here we are, in your first step towards getting stronger picks.",
+rarity: "Rare",
+api: {
+tier: 3,
+wrenchTierToCraft: 1,
+durability: 180,
+gemChance: 17.5,
+creditIncrease: [25, 100],
+diamondDropRange: [0, 2],
+sparkleChance: 0,
+obtain: "Cast, Mine Crate",
+use: "Used to /mine",
+broken: {
+icon: "assets/images/emotes/comet-pick-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Star Pickaxe",
+icon: "assets/images/emotes/star-pick.png",
+description: "Maybe it was the glow, maybe it was the fact they came from a star far away in the galaxy, but it seemed to make for quite a sturdy pick with special properties. Weird... it seems to attract more gems. Is it the effect of the material, or is it my skill getting better?",
+rarity: "Rare",
+api: {
+tier: 4,
+wrenchTierToCraft: 1,
+durability: 220,
+gemChance: 20,
+creditIncrease: [25, 100],
+diamondDropRange: [0, 3],
+sparkleChance: 2.5,
+obtain: "Cast, Mine Crate",
+use: "Used to /mine",
+broken: {
+icon: "assets/images/emotes/star-pick-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Moon Pickaxe",
+icon: "assets/images/emotes/moon-pick.png",
+description: "The moon-like substance mesmerized you. Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own? Regardless, you tried to fuse this with your current pick, and the result was quite satisfactory. Seems to be a good balance between light and dark, and somehow I mine some gems with it. Is this really a fragment from a far away moon?",
+rarity: "Epic",
+api: {
+tier: 5,
+wrenchTierToCraft: 2,
+durability: 320,
+gemChance: 22.5,
+creditIncrease: [35, 140],
+diamondDropRange: [0, 4],
+sparkleChance: 3,
+obtain: "Cast, Mine Crate",
+use: "Used to /mine",
+broken: {
+icon: "assets/images/emotes/moon-pick-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Sparkle Pickaxe",
+icon: "assets/images/emotes/sparkle-pick.png",
+description: "Something made you look up into the caverns, and you found a sparkly gem on top. Looking up, some fell onto your pick, and it made the pick shine enough to light up the entire cavern. Quickly, you grab some of the sparkly fragments and get a casting station. The pick glows bright like the sun... and it seems pretty tough too... how did it fuse so well with iron?",
+rarity: "Legendary",
+api: {
+tier: 6,
+wrenchTierToCraft: 3,
+durability: 450,
+gemChance: 22.5,
+creditIncrease: [75, 300],
+diamondDropRange: [0, 4],
+sparkleChance: 5.5,
+obtain: "Cast, Mine Crate",
+use: "Used to /mine",
+broken: {
+icon: "assets/images/emotes/sparkle-pick-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Hellfire Pickaxe",
+icon: "assets/images/emotes/hellfire-pick.png",
+description: "Reactions between all the elements can be a weird and dangerous process. Regardless of what your friends told you, you decided to research this topic, and came up with an object brighter than anything you've ever seen... It seems to be a mix of all the other elements, but it seems quite reactive... it's also quite tough, not much seems to be able to break it... Have I done good for this world, or have I brought the unknown to life?",
+rarity: "Mythic",
+api: {
+tier: 7,
+wrenchTierToCraft: 3,
+durability: 3000,
+gemChance: 30,
+creditIncrease: [375, 1500],
+diamondDropRange: [0, 10],
+sparkleChance: 8.8,
+obtain: "Cast",
+use: "Used to /mine",
+broken: {
+icon: "assets/images/emotes/hellfire-pick-broken.png",
+chance: 100,
+force: 100
+}
+}}
+]
+}
 
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 35
-
-**Wrench level:** 1
-
-**Multiplier reduction:** 1.0x
-
-**Can cast multiple items?:** No
-
-**Description:**\
-A run of the mill wrench you can buy from the market. Useful for repairing items.
-
-**Used in:** Cast
-
-**Obtained from:** Market
-
-</p>
-</details>
-
-## Comet Wrench
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 80
-
-**Wrench level:** 3
-
-**Multiplier reduction:** 0.9x
-
-**Can cast multiple items?:** Yes
-
-**Description:**\
-A Wrench infused with pieces of Comet Gems. Somehow it feels way sturdier.
-
-**Used in:** Cast
-
-**Obtained from:** Cast
-
-</p>
-</details>
-
-## Sparkle Wrench
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 160
-
-**Wrench level:** 4
-
-**Multiplier reduction:** 0.65x
-
-**Can cast multiple items?:** Yes
-
-**Description:**\
-A Wrench infused with pieces of Sparkle Fragments. Somehow it feels a lot sturdier.
-
-**Used in:** Cast
-
-**Obtained from:** Cast
-
-</p>
-</details>
-
-## Brom's Pickaxe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:** None
-
-**Durability:** 40
-
-**Money increase:** 0 - 0 credits
-
-**Diamond increase:** 0 - 2
-
-**Sparkle gem drop rate:** 0.0%
-
-**Gem drop rate:** 12.5%
-
-**Description:**\
-A normal pickaxe you bought on the local market. Seems sturdy enough to mine some stuff.
-
-**Used in:** Mine
-
-**Obtained from:** Market, Mine Crates
-
-**Broken version:** None
-
-</p>
-</details>
-
-## Diamond Pickaxe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 150
-
-**Money increase:** 10 - 40 credits
-
-**Diamond increase:** 0 - 2
-
-**Sparkle gem drop rate:** 0.0%
-
-**Gem drop rate:** 12.5%
-
-**Description:**\
-A diamond pick is definitely stronger than the market-bought iron picks I could get on the market, that's for sure!
-
-**Used in:** Mine
-
-**Obtained from:** Cast, Mine Crates
-
-**Broken version:** None
-
-</p>
-</details>
-
-## Comet Pickaxe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 180
-
-**Money increase:** 25 - 100 credits
-
-**Diamond increase:** 0 - 2
-
-**Sparkle gem drop rate:** 0.0%
-
-**Gem drop rate:** 17.5%
-
-**Description:**\
-You found some Comet Fragments and realized you could make a Comet Gem out of them.\
-What did they do? Were they special?\
-You seemed eager to try it out after being impressed by its glow, so here we are, in your first step towards getting stronger picks.
-
-**Used in:** Mine
-
-**Obtained from:** Cast, Mine Crates
-
-**Broken version:**
-
-| Icon                                                                             | Name                 | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|----------------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/553769633266532389.png" width="48"/> | Broken Comet Pickaxe | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Star Pickaxe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 220
-
-**Money increase:** 25 - 100 credits
-
-**Diamond increase:** 0 - 3
-
-**Sparkle gem drop rate:** 2.5%
-
-**Gem drop rate:** 20.0%
-
-**Description:**\
-Maybe it was the glow, maybe it was the fact they came from a star far away in the galaxy, but it seemed to make for quite a sturdy pick with special properties.\
-Weird... it seems to attract more gems. Is it the effect of the material, or is it my skill getting better?
-
-**Used in:** Mine
-
-**Obtained from:** Cast, Mine Crates
-
-**Broken version:**
-
-| Icon                                                                             | Name                | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|---------------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/557349870726414347.png" width="48"/> | Broken Star Pickaxe | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Moon Pickaxe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 320
-
-**Money increase:** 35 - 140 credits
-
-**Diamond increase:** 0 - 4
-
-**Sparkle gem drop rate:** 3.0%
-
-**Gem drop rate:** 22.5%
-
-**Description:**\
-The moon-like substance mesmerized you.\
-Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own?\
-Regardless, you tried to fuse this with your current pick, and the result was quite satisfactory.\
-Seems to be a good balance between light and dark, and somehow I mine some gems with it.\
-Is this really a fragment from a far away moon?
-
-**Used in:** Mine
-
-**Obtained from:** Cast, Mine Crates
-
-**Broken version:**
-
-| Icon                                                                             | Name                | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|---------------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/762027644802957365.png" width="48"/> | Broken Moon Pickaxe | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Sparkle Pickaxe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 450
-
-**Money increase:** 75 - 300 credits
-
-**Diamond increase:** 0 - 4
-
-**Sparkle gem drop rate:** 5.5%
-
-**Gem drop rate:** 22.5%
-
-**Description:**\
-Something made you look up into the caverns, and you found a sparkly gem on top. Looking up, some fell onto your pick, and it made the pick shine enough to light up the entire cavern.\
-Quickly, you grab some of the sparkly fragments and get a casting station.\
-The pick glows bright like the sun... and it seems pretty tough too... how did it fuse so well with iron?
-
-**Used in:** Mine
-
-**Obtained from:** Cast, Mine Crates
-
-**Broken version:**
-
-| Icon                                                                             | Name                   | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|------------------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/553769632926924813.png" width="48"/> | Broken Sparkle Pickaxe | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Hellfire Pickaxe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 3000
-
-**Money increase:** 375 - 1500 credits
-
-**Diamond increase:** 0 - 10
-
-**Sparkle gem drop rate:** 8.8%
-
-**Gem drop rate:** 30.0%
-
-**Description:**\
-Reactions between all the elements can be a weird and dangerous process.\
-Regardless of what your friends told you, you decided to research this topic, and came up with an object brighter than anything you've ever seen...\
-It seems to be a mix of all the other elements, but it seems quite reactive... it's also quite tough, not much seems to be able to break it...\
-Have I done good for this world, or have I brought the unknown to life?
-
-**Used in:** Mine
-
-**Obtained from:** Cast
-
-**Broken version:**
-
-| Icon                                                                             | Name                    | Obtained from                                      | Used in           |
-|----------------------------------------------------------------------------------|-------------------------|----------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/787812272708780043.png" width="48"/> | Broken Hellfire Pickaxe | Breaking a tool (100%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Fishing Rod
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:** None
-
-**Durability:** 40
-
-**Item buff:** 1 - 9
-
-**Description:**\
-A rod you bought at your local fishing market. Looks sturdy.
-
-**Used in:** Fish
-
-**Obtained from:** Market, Fish Treasure
-
-**Broken version:** None
-
-</p>
-</details>
-
-## Comet Gem Rod
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 130
-
-**Item buff:** 1 - 12
-
-**Description:**\
-After testing the Comet Fragments on your axe, you also realized you could use them on your rod. It made the thread stronger, and it seemed to attract more fish to it. All you could wish for.
-
-**Used in:** Fish
-
-**Obtained from:** Cast, Fish Treasure
-
-**Broken version:**
-
-| Icon                                                                             | Name             | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|------------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/560885907004325889.png" width="48"/> | Broken Comet Rod | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Star Gem Rod
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 170
-
-**Item buff:** 1 - 15
-
-**Description:**\
-The mesmerizing and shiny glow of this fragment could not be overlooked. You fused it together with the thread of your rod, and the fish came flowing through it! Seems like a bait isn't necessary all the time, but it's still useful.
-
-**Used in:** Fish
-
-**Obtained from:** Cast, Fish Treasure
-
-**Broken version:**
-
-| Icon                                                                             | Name            | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|-----------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/560885906857263116.png" width="48"/> | Broken Star Rod | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Moon Rod
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 200
-
-**Item buff:** 1 - 18
-
-**Description:**\
-You're still impressed by the way this gem floats on it's own. Regardless, you fuse it with the thread of your rod as best as you can. It seems to be a little stronger than a Star Fragment infused rod, but not by much.\
-Eitherway, you enjoy the glow of it like it's the first day you've ever seen it.
-
-**Used in:** Fish
-
-**Obtained from:** Cast, Fish Treasure
-
-**Broken version:**
-
-| Icon                                                                             | Name            | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|-----------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/762027645054484510.png" width="48"/> | Broken Moon Rod | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Sparkle Rod
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 300
-
-**Item buff:** 1 - 20
-
-**Description:**\
-A touch of sparkle here, a touch of sparkle there!\
-You pulverized the Sparkle Fragments and coated the thread of your fishing rod with it.\
-You seem confused. How can this attract fish?\
-The world has many mysteries, and this is one of them. Maybe it can help you get more coins. Maybe it can bring you satisfaction.\
-The glow it leaves on the sea is amazing, and you stare at it for hours on end. Maybe you did do the right thing after all.
-
-**Used in:** Fish
-
-**Obtained from:** Cast, Fish Treasure
-
-**Broken version:**
-
-| Icon                                                                             | Name               | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|--------------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/560885907562037248.png" width="48"/> | Broken Sparkle Rod | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Hellfire Rod
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 2500
-
-**Item buff:** 1 - 30
-
-**Description:**\
-Reactions between all the elements can be a weird and dangerous process.\
-You mastered the elements already, and fusing it with your fishing rod thread now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it.\
-It works wonders. Fish come in shoals to you. Nothing can compare. But you're still left wondering whether you really did the right thing.
-
-**Used in:** Fish
-
-**Obtained from:** Cast
-
-**Broken version:**
-
-| Icon                                                                             | Name                | Obtained from                                      | Used in           |
-|----------------------------------------------------------------------------------|---------------------|----------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/787812374593536000.png" width="48"/> | Broken Hellfire Rod | Breaking a tool (100%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Axe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:** None
-
-**Durability:** 35
-
-**Money Increase:** 0 - 0 credits
-
-**Description:**\
-A normal axe you bought on the local market. Good enough to chop some trees down.
-
-**Used in:** Chop
-
-**Obtained from:** Market, Chop Crate
-
-**Broken version:** None
-
-</p>
-</details>
-
-##  Comet Axe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 170
-
-**Money Increase:** 25 - 100 credits
-
-**Description:**\
-After testing the Comet Fragments on your pick, you also realized you could use them on your axe. It made it stronger, and shinier. All you could wish for.
-
-**Used in:** Chop
-
-**Obtained from:** Cast, Chop Crate
-
-**Broken version:**
-
-| Icon                                                                             | Name             | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|------------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/762027644791291935.png" width="48"/> | Broken Comet Axe | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Star Axe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 220
-
-**Money Increase:** 25 - 100 credits
-
-**Description:**\
-A bright glow from a star far away, but in your hands.\
-Looks like the tree-chopping can continue with this new, shiny axe. You seemed weirded out at first: how can this help me mine more wood?\
-Well, you soon realized why...
-
-**Used in:** Chop
-
-**Obtained from:** Cast, Chop Crate
-
-**Broken version:**
-
-| Icon                                                                             | Name            | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|-----------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/762027644874915845.png" width="48"/> | Broken Star Axe | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Moon Axe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 350
-
-**Money Increase:** 32 - 130 credits
-
-**Description:**\
-Looking at this axe, you look mesmerized by moon-like glow it emits.\
-Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own?\
-Mesmerized, you cast this substance into your axe and... boom!\
-The results look good. It seems to chop trees faster, too. Why is it so sharp? Is this really a fragment from a far away moon?
-
-**Used in:** Chop
-
-**Obtained from:** Cast, Chop Crate
-
-**Broken version:**
-
-| Icon                                                                             | Name            | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|-----------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/762027645025386546.png" width="48"/> | Broken Moon Axe | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Sparkle Axe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 500
-
-**Money Increase:** 75 - 300 credits
-
-**Description:**\
-A touch of sparkle here, a touch of sparkle there!\
-The axe glows bright like the sun... and it seems pretty tough too... how did it fuse so well with iron?
-
-**Used in:** Chop
-
-**Obtained from:** Cast, Chop Crate
-
-**Broken version:**
-
-| Icon                                                                             | Name               | Obtained from                                     | Used in           |
-|----------------------------------------------------------------------------------|--------------------|---------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/762027645105864714.png" width="48"/> | Broken Sparkle Axe | Breaking a tool (80%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
-
-## Hellfire Axe
-<details><summary>Click here for more details</summary>
-<p>
-
-**Item Tier:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Wrench tier needed to craft:**
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-<img src="https://discord.com/assets/141d49436743034a59dec6bd5618675d.svg" width="24"/>
-
-**Durability:** 3100
-
-**Money Increase:** 225 - 900 credits
-
-**Description:**\
-Reactions between all the elements can be a weird and dangerous process.\
-You mastered the elements already, and fusing it with your axe now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it.\
-It works wonders. Nothing can compare. But you're still left wondering whether you really did the right thing.
-
-**Used in:** Chop
-
-**Obtained from:** Cast, Chop Crate
-
-**Broken version:**
-
-| Icon                                                                             | Name                | Obtained from                                      | Used in           |
-|----------------------------------------------------------------------------------|---------------------|----------------------------------------------------|-------------------|
-| <img src="https://cdn.discordapp.com/emojis/787812333690683393.png" width="48"/> | Broken Hellfire Axe | Breaking a tool (100%)<br>Unequiping a tool (100%) | Repair<br>Salvage |
-
-</p>
-</details>
 
 ---
+
+## Fishing Rods
+:include-template: assets/templates/template-2-column-card.ftl {
+items: [
+{
+name: "Fishing Rod",
+icon: "assets/images/emotes/fishing-pole-and-fish.svg",
+description: "A rod you bought at your local fishing market. Looks sturdy.",
+rarity: "Common",
+api: {
+tier: 1,
+durability: 40,
+itemBuff: [0, 9],
+obtain: "Market, Fish Treasure",
+use: "Used to /fish"
+}}
+]
+}
+
+:include-template: assets/templates/template-2-column-card.ftl {
+items: [
+{
+name: "Comet Gem Rod",
+icon: "assets/images/emotes/comet-rod.png",
+description: "After testing the Comet Fragments on your axe, you also realized you could use them on your rod. It made the thread stronger, and it seemed to attract more fish to it. All you could wish for.",
+rarity: "Rare",
+api: {
+tier: 3,
+wrenchTierToCraft: 1,
+durability: 130,
+itemBuff: [1, 12],
+obtain: "Casting, Fish Treasure",
+use: "Used to /fish",
+broken: {
+icon: "assets/images/emotes/comet-rod-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Star Gem Rod",
+icon: "assets/images/emotes/star-rod.png",
+description: "The mesmerizing and shiny glow of this fragment could not be overlooked. You fused it together with the thread of your rod, and the fish came flowing through it! Seems like a bait isn't necessary all the time, but it's still useful.",
+rarity: "Rare",
+api: {
+tier: 4,
+wrenchTierToCraft: 1,
+durability: 170,
+itemBuff: [1, 15],
+obtain: "Casting, Fish Treasure",
+use: "Used to /fish",
+broken: {
+icon: "assets/images/emotes/star-rod-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Moon Rod",
+icon: "assets/images/emotes/moon-rod.png",
+description: "You're still impressed by the way this gem floats on it's own. Regardless, you fuse it with the thread of your rod as best as you can. It seems to be a little stronger than a Star Fragment infused rod, but not by much. Eitherway, you enjoy the glow of it like it's the first day you've ever seen it.
+",
+rarity: "Epic",
+api: {
+tier: 5,
+wrenchTierToCraft: 2,
+durability: 200,
+itemBuff: [1, 18],
+obtain: "Casting, Fish Treasure",
+use: "Used to /fish",
+broken: {
+icon: "assets/images/emotes/moon-rod-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Sparkle Rod",
+icon: "assets/images/emotes/sparkle-rod.png",
+description: "A touch of sparkle here, a touch of sparkle there! You pulverized the Sparkle Fragments and coated the thread of your fishing rod with it. You seem confused. How can this attract fish? The world has many mysteries, and this is one of them. Maybe it can help you get more coins. Maybe it can bring you satisfaction. The glow it leaves on the sea is amazing, and you stare at it for hours on end. Maybe you did do the right thing after all.",
+rarity: "Legendary",
+api: {
+tier: 6,
+wrenchTierToCraft: 3,
+durability: 300,
+itemBuff: [1, 20],
+obtain: "Casting, Fish Treasure",
+use: "Used to /fish",
+broken: {
+icon: "assets/images/emotes/sparkle-rod-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Hellfire Rod",
+icon: "assets/images/emotes/hellfire-rod.png",
+description: "Reactions between all the elements can be a weird and dangerous process. You mastered the elements already, and fusing it with your fishing rod thread now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it. It works wonders. Fish come in shoals to you. Nothing can compare. But you're still left wondering whether you really did the right thing.",
+rarity: "Mythic",
+api: {
+tier: 7,
+wrenchTierToCraft: 3,
+durability: 2500,
+itemBuff: [1, 30],
+obtain: "Casting",
+use: "Used to /fish",
+broken: {
+icon: "assets/images/emotes/hellfire-rod-broken.png",
+chance: 100,
+force: 100
+}
+}}
+]
+}
+
+## Axes
+
+:include-template: assets/templates/template-2-column-card.ftl {
+items: [
+{
+name: "Fishing Rod",
+icon: "assets/images/emotes/axe.svg",
+description: "A normal axe you bought on the local market. Good enough to chop some trees down.",
+rarity: "Common",
+api: {
+tier: 1,
+durability: 35,
+creditIncrease: [0, 0],
+obtain: "Market, Chop Crate",
+use: "Used to /chop"
+}}
+]
+}
+
+:include-template: assets/templates/template-2-column-card.ftl {
+items: [
+{
+name: "Comet Axe",
+icon: "assets/images/emotes/comet-axe.png",
+description: "After testing the Comet Fragments on your pick, you also realized you could use them on your axe. It made it stronger, and shinier. All you could wish for.",
+rarity: "Rare",
+api: {
+tier: 3,
+wrenchTierToCraft: 1,
+durability: 170,
+creditIncrease: [25, 100],
+obtain: "Casting, Chop Crate",
+use: "Used to /chop",
+broken: {
+icon: "assets/images/emotes/comet-axe-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Star Rod",
+icon: "assets/images/emotes/star-axe.png",
+description: "A bright glow from a star far away, but in your hands. Looks like the tree-chopping can continue with this new, shiny axe. You seemed weirded out at first: how can this help me mine more wood? Well, you soon realized why...",
+rarity: "Rare",
+api: {
+tier: 4,
+wrenchTierToCraft: 1,
+durability: 220,
+creditIncrease: [25, 100],
+obtain: "Casting, Chop Crate",
+use: "Used to /chop",
+broken: {
+icon: "assets/images/emotes/star-axe-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Moon Axe",
+icon: "assets/images/emotes/moon-axe.png",
+description: "Looking at this axe, you look mesmerized by moon-like glow it emits. Was it the fact it glowed like a full moon, or was it the fact it seemed to float on its own? Mesmerized, you cast this substance into your axe and... boom! The results look good. It seems to chop trees faster, too. Why is it so sharp? Is this really a fragment from a far away moon?",
+rarity: "Epic",
+api: {
+tier: 5,
+wrenchTierToCraft: 2,
+durability: 350,
+creditIncrease: [32, 130],
+obtain: "Casting, Chop Crate",
+use: "Used to /chop",
+broken: {
+icon: "assets/images/emotes/moon-axe-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Sparkle Axe",
+icon: "assets/images/emotes/sparkle-axe.png",
+description: "A touch of sparkle here, a touch of sparkle there! The axe glows bright like the sun... and it seems pretty tough too... how did it fuse so well with iron?",
+rarity: "Legendary",
+api: {
+tier: 6,
+wrenchTierToCraft: 3,
+durability: 500,
+creditIncrease: [75, 300],
+obtain: "Casting, Chop Crate",
+use: "Used to /chop",
+broken: {
+icon: "assets/images/emotes/sparkle-axe-broken.png",
+chance: 80,
+force: 100
+}
+}},
+{
+name: "Hellfire Rod",
+icon: "assets/images/emotes/hellfire-rod.png",
+description: "Reactions between all the elements can be a weird and dangerous process. You mastered the elements already, and fusing it with your axe now seemed trivial. Maybe it was the glow, maybe it was the fire, but you had to do it. It works wonders. Nothing can compare. But you're still left wondering whether you really did the right thing.",
+rarity: "Mythic",
+api: {
+tier: 7,
+wrenchTierToCraft: 3,
+durability: 3100,
+creditIncrease: [225, 900],
+obtain: "Casting",
+use: "Used to /chop",
+broken: {
+icon: "assets/images/emotes/hellfire-rod-broken.png",
+chance: 100,
+force: 100
+}
+}}
+]
+}
+
 # Crate Items
 These items (minus the Crate Key) are dropped randomly from using other Currency Commands. To open any of the crates you need to have a Crate Key on your inventory.
 
