@@ -89,7 +89,7 @@
 
 <article>
 <header><h1>Concepts</h1></header>
-<p>Global Currency Mantaro's currency system is global. What this means is that your progress/items/credits/etc. are the same across all servers. This means that something like spawning credits or items with a command is not possible, as it would throw the currency system into complete chaos. Credits The currency used in Mantaro is called Credits. The main purpose of the currency system is to collect Credits. Credits are necessary for many of the purchases in the currency system. Items Mantaro counts with over 100 items for users to collect and use. Some items are only meant to be collected, other items can bring bonuses to the user and other items can enable certain commands.A full Item Documentation page can be found currency/items here. It is not necessary to know all items or to look into this page, but know that it can be a good resource in the future. Dust Sometimes a few of the currency commands will &quot;fail&quot; and won't give you credits or items. A lot of those times you will gather dust instead. A few commands gather dust when successfully used. When starting out, dust shouldn't be one of your main concerns until later on. If your dust levels are high enough then you will not be able to cast new items until you clean your dust, but more on that later. Help Command This one is very important. If you ever feel lost or don't remember how a command works, you can check that command's help to get the information without having to open this wiki. And if you do want to open the wiki, you can find our full command documentation commands/currency-commands here.To get a commands help you can use:/help command: [name of command]. Tip: The /help command will show you the full list of commands. Premium influence Premium status for users influences the currency in very specific ways, and we will probably mention it a few times in the next pages. However, there is more that premium can do. For the sake of not making this wiki any longer you may view what premium does basics/premium-perks here.</p>
+<p>Global Currency Mantaro's currency system is global. What this means is that your progress/items/credits/etc. are the same across all servers. This means that something like spawning credits or items with a command is not possible, as it would throw the currency system into complete chaos. Regarless of you having admin permissions on a server, you will never be able to give users credits/items/etc. that you do not own yourself. Credits The currency used in Mantaro is called Credits. The main purpose of the currency system is to collect Credits. Credits are necessary for many of the purchases in the currency system. These credits have no real world value whatsoever. Items Mantaro counts with over 100 items for users to collect and use. Some items are only meant to be collected, other items can bring bonuses to the user and other items can enable certain commands.A full Item Documentation page can be found currency/items here. It is not necessary to know all items or to look into this page, but know that it can be a good resource in the future. Dust Sometimes a few of the currency commands will &quot;fail&quot; and won't give you credits or items. A lot of those times you will gather dust instead. A few commands gather dust when successfully used. When starting out, dust shouldn't be one of your main concerns until later on. If your dust levels are high enough then you will not be able to cast new items until you clean your dust, but more on that later. Help Command This one is very important. If you ever feel lost or don't remember how a command works, you can check that command's help to get the information without having to open this wiki. And if you do want to open the wiki, you can find our full command documentation commands/currency-commands here.To get a commands help you can use:/help command: [name of command]. Tip: The /help command will show you the full list of commands. Premium influence Premium status for users influences the currency in very specific ways, and we will probably mention it a few times in the next pages. However, there is more that premium can do. For the sake of not making this wiki any longer you may view what premium does basics/premium-perks here.</p>
 </article>
 
 <article>
@@ -170,6 +170,21 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
+        "attentionType" : "warning",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "Regarless of you having admin permissions on a server, you will never be able to give users credits/items/etc. that you do",
+            "type" : "SimpleText"
+          }, {
+            "type" : "SoftLineBreak"
+          }, {
+            "text" : "not own yourself.",
+            "type" : "SimpleText"
+          } ]
+        } ],
+        "type" : "AttentionBlock"
+      }, {
         "id" : "concepts-credits",
         "level" : 2,
         "title" : "Credits",
@@ -180,6 +195,16 @@ ReactDOM.render(React.createElement(Documentation, {
           "text" : "The currency used in Mantaro is called Credits. The main purpose of the currency system is to collect Credits. Credits are necessary for many of the purchases in the currency system.",
           "type" : "SimpleText"
         } ]
+      }, {
+        "attentionType" : "warning",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "These credits have no real world value whatsoever.",
+            "type" : "SimpleText"
+          } ]
+        } ],
+        "type" : "AttentionBlock"
       }, {
         "id" : "concepts-items",
         "level" : 2,
@@ -544,7 +569,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1664456213117,
+    "lastModifiedTime" : 1665245060256,
     "tocItem" : {
       "chapterTitle" : "Currency",
       "pageTitle" : "Currency 101: Introduction",

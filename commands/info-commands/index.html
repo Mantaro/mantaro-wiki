@@ -83,33 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>/avatar</h1></header>
-<p>Grab your own avatar or the given person's avatar. Options user Optional The user to get the avatar of. Examples /avatar /avatar user: @Kodehawa#3457</p>
-</article>
-
-<article>
-<header><h1>/help</h1></header>
-<p>Get all commands or, if you specify a command, get more information on the command specified. Options command Optional The command to check help for. You can use sub-commands too. Examples /help /help command: profile /help command: cast item</p>
-</article>
-
-<article>
-<header><h1>/info</h1></header>
-<p>The hub for (user/role/server) info related commands. Sub-commands Role See information about a role. Server See your server's current stats. User See information about specific users. Options Role Click me! Options for the Role Subcommand role Required The role you want to see the information of. User Click me! Options for the Role Subcommand user Optional The user you want to look. Note: The Server Subcommand has no options. Examples /info user /info user user: @Kodehawa#3457 /info server /info role role: Member</p>
-</article>
-
-<article>
-<header><h1>/ping</h1></header>
-<p>Check how fast Mantaro is responding. Examples /ping</p>
-</article>
-
-<article>
-<header><h1>/mantaro</h1></header>
-<p>Shows useful bot information. Subcommands Shard Returns in what shard I am. Shardlist Returns information about shards. Support Shows a link to the support server. Welcome Shows the message the bot sends when it's added to a server. Donate Shows the donation methods in case you want to support Mantaro. Invite Gives you a bot OAuth invite link and some other important links. Language Shows how to change the server and user languages, along with a language list. Examples /mantaro shard /mantaro shardlist /mantaro support /mantaro welcome /mantaro donate /mantaro invite /mantaro language</p>
-</article>
-
-<article>
-<header><h1>/stats</h1></header>
-<p>Gets the bot technical information. Nothing all that interesting, but shows cute stats. Examples /stats</p>
+<p>Grab your own avatar or the given person's avatar. Options user Optional The user to get the avatar of. Examples /avatar /avatar user: @Kodehawa#3457 Get all commands or, if you specify a command, get more information on the command specified. Options command Optional The command to check help for. You can use sub-commands too. Examples /help /help command: profile /help command: cast item The hub for (user/role/server) info related commands. Subcommands role See information about a role. server See information about the current server. user See information about a specific user. Options Role Click me! Options for the Role Subcommand. role Required The role you want to see the information of. User Click me! Options for the User Subcommand. user Optional The user you want to look. Note: The Server subcommand has no options. Examples /info user /info user user: @Kodehawa#3457 /info server /info role role: Member Shows useful bot information. Subcommands shard Returns in what shard I am. shardlist Returns information about shards. support Shows a link to the support server. welcome Shows the message the bot sends when it's added to a server. donate Shows the donation methods in case you want to support Mantaro. invite Gives you a bot OAuth invite link and some other important links. language Shows how to change the server and user languages, along with a language list. Examples /mantaro shard /mantaro shardlist /mantaro support /mantaro welcome /mantaro donate /mantaro invite /mantaro language Check how fast Mantaro is responding. Examples /ping Gets the bot technical information. Nothing all that interesting, but shows cute stats. Examples /stats</p>
 </article>
 </section>
 </div>
@@ -156,7 +130,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "user",
+              "anchorId" : "avatar-options_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -165,6 +139,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "avatar-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -173,7 +148,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "avatar-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -184,7 +159,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "avatar-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -199,6 +174,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "avatar-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -225,7 +201,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "command",
+              "anchorId" : "help-options_command",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -234,6 +210,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "help-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -242,7 +219,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "help-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -253,7 +230,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "help-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -270,7 +247,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "help-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -285,6 +262,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "help-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -303,12 +281,12 @@ ReactDOM.render(React.createElement(Documentation, {
         } ]
       }, {
         "tabsContent" : [ {
-          "name" : "Sub-commands",
+          "name" : "Subcommands",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Role",
+              "name" : "role",
               "type" : [ ],
-              "anchorId" : "Role",
+              "anchorId" : "info-subcommands_role",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -317,28 +295,30 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Server",
+              "name" : "server",
               "type" : [ ],
-              "anchorId" : "Server",
+              "anchorId" : "info-subcommands_server",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "See your server's current stats.",
+                  "text" : "See information about the current server.",
                   "type" : "SimpleText"
                 } ]
               } ]
             }, {
-              "name" : "User",
+              "name" : "user",
               "type" : [ ],
-              "anchorId" : "User",
+              "anchorId" : "info-subcommands_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "See information about specific users.",
+                  "text" : "See information about a specific user.",
                   "type" : "SimpleText"
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "info-subcommands",
+            "noWrap" : true,
             "type" : "ApiParameters"
           } ]
         }, {
@@ -350,7 +330,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Role",
+              "anchorId" : "info-options_Role",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -360,7 +340,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Role",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -370,7 +350,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Role_role",
+                "anchorId" : "info-options_Role_role",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -385,17 +365,17 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "User",
+              "anchorId" : "info-options_User",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "Options for the ",
                   "type" : "SimpleText"
                 }, {
-                  "code" : "Role",
+                  "code" : "User",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -405,7 +385,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Optional",
                   "url" : ""
                 } ],
-                "anchorId" : "User_user",
+                "anchorId" : "info-options_User_user",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -415,6 +395,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "info-options",
             "type" : "ApiParameters"
           }, {
             "type" : "Paragraph",
@@ -425,7 +406,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "code" : "Server",
               "type" : "InlinedCode"
             }, {
-              "text" : " Subcommand has no options.",
+              "text" : " subcommand has no options.",
               "type" : "SimpleText"
             } ]
           } ]
@@ -435,7 +416,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "info-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -446,7 +427,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "info-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -463,7 +444,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "info-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -474,7 +455,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "info-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -489,6 +470,191 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "info-examples",
+            "type" : "ApiParameters"
+          } ]
+        } ],
+        "type" : "Tabs"
+      } ]
+    }, {
+      "style" : "api",
+      "id" : "-mantaro",
+      "title" : "/mantaro",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Shows useful bot information.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "tabsContent" : [ {
+          "name" : "Subcommands",
+          "content" : [ {
+            "parameters" : [ {
+              "name" : "shard",
+              "type" : [ ],
+              "anchorId" : "mantaro-subcommands_shard",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Returns in what shard I am.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "shardlist",
+              "type" : [ ],
+              "anchorId" : "mantaro-subcommands_shardlist",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Returns information about shards.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "support",
+              "type" : [ ],
+              "anchorId" : "mantaro-subcommands_support",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Shows a link to the support server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "welcome",
+              "type" : [ ],
+              "anchorId" : "mantaro-subcommands_welcome",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Shows the message the bot sends when it's added to a server.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "donate",
+              "type" : [ ],
+              "anchorId" : "mantaro-subcommands_donate",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Shows the donation methods in case you want to support Mantaro.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "invite",
+              "type" : [ ],
+              "anchorId" : "mantaro-subcommands_invite",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Gives you a bot OAuth invite link and some other important links.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "language",
+              "type" : [ ],
+              "anchorId" : "mantaro-subcommands_language",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Shows how to change the server and user languages, along with a language list.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "anchorPrefix" : "mantaro-subcommands",
+            "noWrap" : true,
+            "type" : "ApiParameters"
+          } ]
+        }, {
+          "name" : "Examples",
+          "content" : [ {
+            "parameters" : [ {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "mantaro-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mantaro shard",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "mantaro-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mantaro shardlist",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "mantaro-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mantaro support",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "mantaro-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mantaro welcome",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "mantaro-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mantaro donate",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "mantaro-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mantaro invite",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "mantaro-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/mantaro language",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ],
+            "anchorPrefix" : "mantaro-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -512,7 +678,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "ping-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -521,187 +687,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
-            "type" : "ApiParameters"
-          } ]
-        } ],
-        "type" : "Tabs"
-      } ]
-    }, {
-      "style" : "api",
-      "id" : "-mantaro",
-      "title" : "/mantaro",
-      "type" : "Section",
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "Shows useful bot information.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "tabsContent" : [ {
-          "name" : "Subcommands",
-          "content" : [ {
-            "parameters" : [ {
-              "name" : "Shard",
-              "type" : [ ],
-              "anchorId" : "Shard",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Returns in what shard I am.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "Shardlist",
-              "type" : [ ],
-              "anchorId" : "Shardlist",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Returns information about shards.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "Support",
-              "type" : [ ],
-              "anchorId" : "Support",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Shows a link to the support server.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "Welcome",
-              "type" : [ ],
-              "anchorId" : "Welcome",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Shows the message the bot sends when it's added to a server.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "Donate",
-              "type" : [ ],
-              "anchorId" : "Donate",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Shows the donation methods in case you want to support Mantaro.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "Invite",
-              "type" : [ ],
-              "anchorId" : "Invite",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Gives you a bot OAuth invite link and some other important links.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "Language",
-              "type" : [ ],
-              "anchorId" : "Language",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Shows how to change the server and user languages, along with a language list.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            } ],
-            "type" : "ApiParameters"
-          } ]
-        }, {
-          "name" : "Examples",
-          "content" : [ {
-            "parameters" : [ {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "/mantaro shard",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "/mantaro shardlist",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "/mantaro support",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "/mantaro welcome",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "/mantaro donate",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "/mantaro invite",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "/mantaro language",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            } ],
+            "anchorPrefix" : "ping-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -725,7 +711,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "stats-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -734,13 +720,14 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "stats-examples",
             "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661806815618,
+    "lastModifiedTime" : 1666420851731,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "💭 Info Commands",
@@ -763,12 +750,12 @@ ReactDOM.render(React.createElement(Documentation, {
         "id" : "-info",
         "style" : "api"
       }, {
-        "title" : "/ping",
-        "id" : "-ping",
-        "style" : "api"
-      }, {
         "title" : "/mantaro",
         "id" : "-mantaro",
+        "style" : "api"
+      }, {
+        "title" : "/ping",
+        "id" : "-ping",
         "style" : "api"
       }, {
         "title" : "/stats",

@@ -83,38 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>/8ball</h1></header>
-<p>Ask the magic 8ball a question. Options question Required The question to ask. Examples /8ball question: Will Mantaro ever be consistent?</p>
-</article>
-
-<article>
-<header><h1>/anime</h1></header>
-<p>Searches for the anime specified using https://kitsu.io/ Kitsu.io. You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the anime/manga to look for. Examples /anime name: One Piece /anime name: Hunter x Hunter</p>
-</article>
-
-<article>
-<header><h1>/character</h1></header>
-<p>Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the character to look for. Examples /character name: Luffy /character name: Gon Freecss</p>
-</article>
-
-<article>
-<header><h1>/coinflip</h1></header>
-<p>Flip the coin once or multiple times. Options times Optional The amount of times to flip the coin. Examples /coinflip /coinflip times: 50</p>
-</article>
-
-<article>
-<header><h1>/love</h1></header>
-<p>Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. otheruser Optional The other user to compare with. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261 otheruser: @Kodehawa#3457</p>
-</article>
-
-<article>
-<header><h1>/ratewaifu</h1></header>
-<p>Rate your waifu from 0-100. Results may vary. Options user Required The user to rate. Examples /ratewaifu user: @Kodehawa#3457 /ratewaifu user: @Adam#9261</p>
-</article>
-
-<article>
-<header><h1>/roll</h1></header>
-<p>Roll an any-sided dice a 1 or more times. By default, this command will roll a 6-sized dice 1 time. Options times Optional The amount of times to roll, in d20 format. Examples /roll /roll times: 5d1000 /roll times: 1d20</p>
+<p>Ask the magic 8ball a question. Options question Required The question to ask. Examples /8ball question: Will Mantaro ever be consistent? Searches for the anime specified using https://kitsu.io/ Kitsu.io. You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the anime/manga to look for. Examples /anime name: Hunter x Hunter /anime name: One Piece Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the character to look for. Examples /character name: Gon Freecss /character name: Luffy Flip a coin once or multiple times. Options times Optional The amount of times to flip the coin. Examples /coinflip /coinflip times: 50 Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. otheruser Optional The other user to compare with, yourself if omitted. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261 otheruser: @Kodehawa#3457 Rate your waifu from 0-100. Results may vary. Options user Required The user to rate. Examples /ratewaifu user: @Kodehawa#3457 /ratewaifu user: @Adam#9261 Roll an any-sided dice a 1 or more times. By default, this command will roll a 6-sized dice 1 time. Options times Optional The amount of times to roll, in d20 format. Examples /roll /roll times: 5d1000 /roll times: 1d20</p>
 </article>
 </section>
 </div>
@@ -161,7 +130,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "question",
+              "anchorId" : "8ball-options_question",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -170,6 +139,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "8ball-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -178,7 +148,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "8ball-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -193,6 +163,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "8ball-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -217,12 +188,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "type" : "SimpleText"
           } ]
         }, {
-          "text" : ".",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for.",
+          "text" : ". You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -235,7 +201,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "name",
+              "anchorId" : "anime-options_name",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -244,6 +210,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "anime-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -252,24 +219,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "/anime ",
-                  "type" : "SimpleText"
-                }, {
-                  "code" : "name:",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : "One Piece",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "anime-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -283,7 +233,25 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "anime-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/anime ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "name:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "One Piece",
+                  "type" : "SimpleText"
+                } ]
+              } ]
             } ],
+            "anchorPrefix" : "anime-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -297,12 +265,7 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Searches for the anime character specified.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for.",
+          "text" : "Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -315,7 +278,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "name",
+              "anchorId" : "character-options_name",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -324,6 +287,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "character-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -332,24 +296,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "/character ",
-                  "type" : "SimpleText"
-                }, {
-                  "code" : "name:",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : "Luffy",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "character-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -363,7 +310,25 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "character-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/character ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "name:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "Luffy",
+                  "type" : "SimpleText"
+                } ]
+              } ]
             } ],
+            "anchorPrefix" : "character-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -377,7 +342,7 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Flip the coin once or multiple times.",
+          "text" : "Flip a coin once or multiple times.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -390,7 +355,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "times",
+              "anchorId" : "coinflip-options_times",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -399,6 +364,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "coinflip-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -407,7 +373,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "coinflip-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -418,7 +384,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "coinflip-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -433,6 +399,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "coinflip-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -459,7 +426,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "user",
+              "anchorId" : "love-options_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -473,15 +440,16 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "otheruser",
+              "anchorId" : "love-options_otheruser",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "The other user to compare with.",
+                  "text" : "The other user to compare with, yourself if omitted.",
                   "type" : "SimpleText"
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "love-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -490,7 +458,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "love-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -507,7 +475,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "love-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -528,6 +496,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "love-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -554,7 +523,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "user",
+              "anchorId" : "ratewaifu-options_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -563,6 +532,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "ratewaifu-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -571,7 +541,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "ratewaifu-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -588,7 +558,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "ratewaifu-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -603,6 +573,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "ratewaifu-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -616,12 +587,7 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Roll an any-sided dice a 1 or more times.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "By default, this command will roll a 6-sized dice 1 time.",
+          "text" : "Roll an any-sided dice a 1 or more times. By default, this command will roll a 6-sized dice 1 time.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -634,7 +600,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "times",
+              "anchorId" : "roll-options_times",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -643,6 +609,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "roll-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -651,7 +618,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "roll-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -662,7 +629,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "roll-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -679,7 +646,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "roll-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -694,13 +661,14 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "roll-examples",
             "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1664456213115,
+    "lastModifiedTime" : 1666420851727,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🎲 Fun Commands",

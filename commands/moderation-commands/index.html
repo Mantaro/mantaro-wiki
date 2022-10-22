@@ -83,23 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>/mute</h1></header>
-<p>Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted. Options user Required The user to mute. time Optional The amount of time to mute the user for. For example 1m20s. The format is, for example, 1h20m10s for 1 hour, 20 minutes and 10 seconds. If not specified, this uses the default mute timeout set for this server, if set. reason Optional The reason of the mute. This will show in the logs, if enabled. Requirements This command requires either commands/permissions#intro Ban or Kick permissions. Examples /mute user: @Adam#9261 /mute user: @Adam#9261 time: 1h20m10s /mute user: @Adam#9261 reason: good meme</p>
-</article>
-
-<article>
-<header><h1>~>opts</h1></header>
-<p>The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our basics/server-configuration Configuration Page. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Requirements This command requires commands/permissions#intro Admin permissions.</p>
-</article>
-
-<article>
-<header><h1>/prune</h1></header>
-<p>Delete messages (excluding messages that are older than 14 days). Minimum of messages to delete is 5 and maximum is 100. Options amount Required The amount of messages to prune, from 5 to 100. user Optional Only prune from this specific user. botonly Optional Only prune messages from bots. skippinned Optional Don't prune pinned messages. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Messages permissions. Examples /prune amount: 10 /prune amount: 10 user: @Adam#9261 /prune amount: 10 botonly: true /prune amount: 10 skippinned: true</p>
-</article>
-
-<article>
-<header><h1>/unmute</h1></header>
-<p>Unmute the mentioned user if muted. Options user Required The user to unmute. reason Optional The reason of the unmute. This will show in the logs, if enabled. Requirements This command requires either commands/permissions#intro Ban or Kick permissions. Examples /unmute user: @Adam#9261 /unmute user: @Adam#9261 reason: good meme</p>
+<p>Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted. Options user Required The user to mute. time Optional The amount of time to mute the user for. For example 1m20s. The format is, for example, 1h20m10s for 1 hour, 20 minutes and 10 seconds. If not specified, this uses the default mute timeout set for this server, if set. reason Optional The reason of the mute. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Moderate permissions. Examples /mute user: @Adam#9261 /mute user: @Adam#9261 time: 1h20m10s /mute user: @Adam#9261 reason: good meme The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our basics/server-configuration Configuration Page. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Requirements This command requires commands/permissions#intro Admin permissions. Delete messages (excluding messages that are older than 14 days). Minimum of messages to delete is 5 and maximum is 100. Options amount Required The amount of messages to prune, between 5 and 100. user Optional Only prune from this specific user. botonly Optional Only prune messages from bots. skippinned Optional Don't prune pinned messages. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Messages permissions. Examples /prune amount: 10 /prune amount: 10 user: @Adam#9261 /prune amount: 10 botonly: true /prune amount: 10 skippinned: true Unmute the mentioned user if muted. Options user Required The user to unmute. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Moderate permissions. Examples /unmute user: @Adam#9261 /unmute user: @Adam#9261 reason: good meme</p>
 </article>
 </section>
 </div>
@@ -146,7 +130,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "user",
+              "anchorId" : "mute-options_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -160,7 +144,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "time",
+              "anchorId" : "mute-options_time",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -174,7 +158,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "reason",
+              "anchorId" : "mute-options_reason",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -183,6 +167,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "mute-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -196,7 +181,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "content" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "This command requires either ",
+                  "text" : "This command requires ",
                   "type" : "SimpleText"
                 }, {
                   "url" : "/mantaro-wiki/commands/permissions#intro",
@@ -205,16 +190,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "content" : [ {
                     "type" : "StrongEmphasis",
                     "content" : [ {
-                      "text" : "Ban",
-                      "type" : "SimpleText"
-                    } ]
-                  }, {
-                    "text" : " or ",
-                    "type" : "SimpleText"
-                  }, {
-                    "type" : "StrongEmphasis",
-                    "content" : [ {
-                      "text" : "Kick",
+                      "text" : "Moderate",
                       "type" : "SimpleText"
                     } ]
                   }, {
@@ -234,7 +210,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "mute-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -251,7 +227,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "mute-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -274,7 +250,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "mute-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -295,6 +271,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "mute-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -302,18 +279,13 @@ ReactDOM.render(React.createElement(Documentation, {
       } ]
     }, {
       "style" : "api",
-      "id" : "opts",
-      "title" : "~>opts",
+      "id" : "-opts",
+      "title" : "/opts",
       "type" : "Section",
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "The opts command includes an extensive list of option commands.",
-          "type" : "SimpleText"
-        }, {
-          "type" : "SoftLineBreak"
-        }, {
-          "text" : "You can find our complete list of the opts commands and their examples in our ",
+          "text" : "The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our ",
           "type" : "SimpleText"
         }, {
           "url" : "/mantaro-wiki/basics/server-configuration",
@@ -392,11 +364,11 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "amount",
+              "anchorId" : "prune-options_amount",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "The amount of messages to prune, from 5 to 100.",
+                  "text" : "The amount of messages to prune, between 5 and 100.",
                   "type" : "SimpleText"
                 } ]
               } ]
@@ -406,7 +378,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "user",
+              "anchorId" : "prune-options_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -420,7 +392,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "botonly",
+              "anchorId" : "prune-options_botonly",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -434,7 +406,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "skippinned",
+              "anchorId" : "prune-options_skippinned",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -448,7 +420,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "reason",
+              "anchorId" : "prune-options_reason",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -457,6 +429,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "prune-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -499,7 +472,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "prune-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -516,7 +489,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "prune-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -539,7 +512,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "prune-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -562,7 +535,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "prune-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -583,6 +556,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "prune-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -609,7 +583,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "user",
+              "anchorId" : "unmute-options_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -623,15 +597,16 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "reason",
+              "anchorId" : "unmute-options_reason",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "The reason of the unmute. This will show in the logs, if enabled.",
+                  "text" : "The reason of the prune. This will show in the logs, if enabled.",
                   "type" : "SimpleText"
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "unmute-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -645,7 +620,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "content" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "This command requires either ",
+                  "text" : "This command requires ",
                   "type" : "SimpleText"
                 }, {
                   "url" : "/mantaro-wiki/commands/permissions#intro",
@@ -654,16 +629,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "content" : [ {
                     "type" : "StrongEmphasis",
                     "content" : [ {
-                      "text" : "Ban",
-                      "type" : "SimpleText"
-                    } ]
-                  }, {
-                    "text" : " or ",
-                    "type" : "SimpleText"
-                  }, {
-                    "type" : "StrongEmphasis",
-                    "content" : [ {
-                      "text" : "Kick",
+                      "text" : "Moderate",
                       "type" : "SimpleText"
                     } ]
                   }, {
@@ -683,7 +649,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "unmute-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -700,7 +666,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "unmute-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -721,13 +687,14 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "unmute-examples",
             "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661812091510,
+    "lastModifiedTime" : 1666420851732,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🔨 Moderation Commands",
@@ -742,8 +709,8 @@ ReactDOM.render(React.createElement(Documentation, {
         "id" : "-mute",
         "style" : "api"
       }, {
-        "title" : "~>opts",
-        "id" : "opts",
+        "title" : "/opts",
+        "id" : "-opts",
         "style" : "api"
       }, {
         "title" : "/prune",
