@@ -3,7 +3,7 @@ toc = [ {
   "dirName" : "",
   "items" : [ {
     "chapterTitle" : "",
-    "pageTitle" : "Mantaro Wiki",
+    "pageTitle" : "",
     "pageMeta" : { },
     "dirName" : "",
     "fileName" : "index",
@@ -366,12 +366,12 @@ toc = [ {
     "fileName" : "game-commands",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
-      "title" : "~>game",
-      "id" : "game",
+      "title" : "/game",
+      "id" : "-game",
       "style" : "api"
     }, {
-      "title" : "~>trivia",
-      "id" : "trivia",
+      "title" : "/trivia",
+      "id" : "-trivia",
       "style" : "api"
     } ]
   }, {
@@ -400,16 +400,16 @@ toc = [ {
       "id" : "-gelbooru",
       "style" : "api"
     }, {
-      "title" : "/image",
-      "id" : "-image",
+      "title" : "/rule34",
+      "id" : "-rule34",
       "style" : "api"
     }, {
       "title" : "/konachan",
       "id" : "-konachan",
       "style" : "api"
     }, {
-      "title" : "/rule34",
-      "id" : "-rule34",
+      "title" : "/image",
+      "id" : "-image",
       "style" : "api"
     }, {
       "title" : "/safebooru",
@@ -472,8 +472,8 @@ toc = [ {
       "id" : "-mute",
       "style" : "api"
     }, {
-      "title" : "~>opts",
-      "id" : "opts",
+      "title" : "/opts",
+      "id" : "-opts",
       "style" : "api"
     }, {
       "title" : "/prune",
@@ -506,12 +506,12 @@ toc = [ {
       "id" : "-info",
       "style" : "api"
     }, {
-      "title" : "/ping",
-      "id" : "-ping",
-      "style" : "api"
-    }, {
       "title" : "/mantaro",
       "id" : "-mantaro",
+      "style" : "api"
+    }, {
+      "title" : "/ping",
+      "id" : "-ping",
       "style" : "api"
     }, {
       "title" : "/stats",
@@ -556,8 +556,9 @@ toc = [ {
       "id" : "-time",
       "style" : "api"
     }, {
-      "title" : "~>wiki",
-      "id" : "wiki"
+      "title" : "/wiki",
+      "id" : "-wiki",
+      "style" : "api"
     } ]
   } ]
 }, {
@@ -804,9 +805,6 @@ toc = [ {
     }, {
       "title" : "Regular Badges",
       "id" : "regular-badges"
-    }, {
-      "title" : "Seasonal Badges",
-      "id" : "seasonal-badges"
     }, {
       "title" : "Riddle Badges",
       "id" : "riddle-badges"

@@ -83,13 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>~>game</h1></header>
-<p>Starts a guessing game of either Pokemon, anime characters or guessing the number. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Parameters game Required The game you want to play, refer to subcommands. user Optional Whoever you want to play this game with. Subcommands wins This will show you the amount of games you have won. number This will start a game of Guess the Number. character This will start a game of Guess the Character. pokemon This will start a game of Guess the Pokemon. multiple &lt;game&gt; &lt;amount&gt; This will start multiple instances of the selected game. lobby &lt;list of games&gt; This will start a lobby with the indicated games. Examples ~&gt;game wins ~&gt;game pokemon ~&gt;game pokemon @Kodehawa#3457 ~&gt;game lobby pokemon, trivia, number ~&gt;game multiple pokemon 10</p>
-</article>
-
-<article>
-<header><h1>~>trivia</h1></header>
-<p>Asks for the answer to a random trivia question Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Parameters difficulty Optional The difficulty of the game, it can be easy, medium or hard. user Optional Whoever you want to play trivia with. Examples ~&gt;trivia ~&gt;trivia @Kodehawa#3457 ~&gt;trivia @Members</p>
+<p>Starts a guessing game of either Pokemon, anime characters or guessing the number. You can mention other users or roles to play co-op! Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Subcommands wins This will show you the amount of games you have won. number [@mention] This will start a game of Guess the Number. character [@mention] This will start a game of Guess the Character. pokemon [@mention] This will start a game of Guess the Pokemon. multiple &lt;game&gt; &lt;amount&gt; This will start multiple instances of the selected game. lobby &lt;list of games&gt; This will start a lobby with the indicated games. Examples ~&gt;game wins ~&gt;game pokemon ~&gt;game pokemon @Kodehawa#3457 ~&gt;game multiple pokemon 10 ~&gt;game lobby pokemon, trivia, number Asks for the answer to a random trivia question. You can mention other users or roles to play co-op! Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Options difficulty Optional The difficulty of the game, it can be easy, medium or hard. @mention Optional Whoever you want to play trivia with. Examples ~&gt;trivia ~&gt;trivia @Kodehawa#3457 ~&gt;trivia hard</p>
 </article>
 </section>
 </div>
@@ -117,13 +111,13 @@ ReactDOM.render(React.createElement(Documentation, {
     "type" : "Page",
     "content" : [ {
       "style" : "api",
-      "id" : "game",
-      "title" : "~>game",
+      "id" : "-game",
+      "title" : "/game",
       "type" : "Section",
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Starts a guessing game of either Pokemon, anime characters or guessing the number.",
+          "text" : "Starts a guessing game of either Pokemon, anime characters or guessing the number. You can mention other users or roles to play co-op!",
           "type" : "SimpleText"
         } ]
       }, {
@@ -134,46 +128,12 @@ ReactDOM.render(React.createElement(Documentation, {
         } ]
       }, {
         "tabsContent" : [ {
-          "name" : "Parameters",
-          "content" : [ {
-            "parameters" : [ {
-              "name" : "game",
-              "type" : [ {
-                "text" : "Required",
-                "url" : ""
-              } ],
-              "anchorId" : "game",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "The game you want to play, refer to subcommands.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "user",
-              "type" : [ {
-                "text" : "Optional",
-                "url" : ""
-              } ],
-              "anchorId" : "user",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Whoever you want to play this game with.",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            } ],
-            "type" : "ApiParameters"
-          } ]
-        }, {
           "name" : "Subcommands",
           "content" : [ {
             "parameters" : [ {
               "name" : "wins",
               "type" : [ ],
-              "anchorId" : "wins",
+              "anchorId" : "game-subcommands_wins",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -182,9 +142,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "number",
+              "name" : "number [@mention]",
               "type" : [ ],
-              "anchorId" : "number",
+              "anchorId" : "game-subcommands_number[@mention]",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -202,9 +162,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "character",
+              "name" : "character [@mention]",
               "type" : [ ],
-              "anchorId" : "character",
+              "anchorId" : "game-subcommands_character[@mention]",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -222,9 +182,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "pokemon",
+              "name" : "pokemon [@mention]",
               "type" : [ ],
-              "anchorId" : "pokemon",
+              "anchorId" : "game-subcommands_pokemon[@mention]",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -244,7 +204,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "multiple <game> <amount>",
               "type" : [ ],
-              "anchorId" : "multiplegameamount",
+              "anchorId" : "game-subcommands_multiplegameamount",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -255,7 +215,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "lobby <list of games>",
               "type" : [ ],
-              "anchorId" : "lobbylistofgames",
+              "anchorId" : "game-subcommands_lobbylistofgames",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -264,6 +224,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "game-subcommands",
             "noWrap" : true,
             "type" : "ApiParameters"
           } ]
@@ -273,7 +234,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "game-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -284,7 +245,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "game-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -295,7 +256,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "game-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -306,18 +267,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "~>game lobby pokemon, trivia, number",
-                  "type" : "SimpleText"
-                } ]
-              } ]
-            }, {
-              "name" : "",
-              "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "game-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -325,7 +275,19 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "game-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "~>game lobby pokemon, trivia, number",
+                  "type" : "SimpleText"
+                } ]
+              } ]
             } ],
+            "anchorPrefix" : "game-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -333,13 +295,13 @@ ReactDOM.render(React.createElement(Documentation, {
       } ]
     }, {
       "style" : "api",
-      "id" : "trivia",
-      "title" : "~>trivia",
+      "id" : "-trivia",
+      "title" : "/trivia",
       "type" : "Section",
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Asks for the answer to a random trivia question",
+          "text" : "Asks for the answer to a random trivia question. You can mention other users or roles to play co-op!",
           "type" : "SimpleText"
         } ]
       }, {
@@ -350,7 +312,7 @@ ReactDOM.render(React.createElement(Documentation, {
         } ]
       }, {
         "tabsContent" : [ {
-          "name" : "Parameters",
+          "name" : "Options",
           "content" : [ {
             "parameters" : [ {
               "name" : "difficulty",
@@ -358,7 +320,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "difficulty",
+              "anchorId" : "trivia-options_difficulty",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -367,12 +329,12 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "user",
+              "name" : "@mention",
               "type" : [ {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "user",
+              "anchorId" : "trivia-options_@mention",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -381,6 +343,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "trivia-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -389,7 +352,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "trivia-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -400,7 +363,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "trivia-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -411,22 +374,23 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "trivia-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "~>trivia @Members",
+                  "text" : "~>trivia hard",
                   "type" : "SimpleText"
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "trivia-examples",
             "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661806815616,
+    "lastModifiedTime" : 1666420851728,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🕹️ Game Commands",
@@ -437,12 +401,12 @@ ReactDOM.render(React.createElement(Documentation, {
       "fileName" : "game-commands",
       "viewOnRelativePath" : null,
       "pageSectionIdTitles" : [ {
-        "title" : "~>game",
-        "id" : "game",
+        "title" : "/game",
+        "id" : "-game",
         "style" : "api"
       }, {
-        "title" : "~>trivia",
-        "id" : "trivia",
+        "title" : "/trivia",
+        "id" : "-trivia",
         "style" : "api"
       } ]
     }

@@ -83,43 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>/birthday</h1></header>
-<p>Set/Remove your own birthday or show everyone with a birthday this month. The date format is dd-mm. This means day first and month second. Subcommands Remove Removes your set birthday date. List Gives all of the birthdays for this server. Month Checks the current birthday date for the specified month. Allowserver Allows the server where you send this command to announce your birthday. Denyserver Denies the server where you send this command from announcing your birthday. Set Sets your birthday date. Only useful if the server has enabled this functionality. Options Month Click me! Options for the Month Subcommand month Optional The month, in number format (January is 1, etc). Set Click me! Options for the Set Subcommand date Required A date in dd-MM format (13-02 for February 13th for example). Note: The Remove , List , Allowserver and Denyserver Subcommands have no options. Requirements The Remove subcommand requires you to have already set a birthday. The List and Month subcommand require users to use the allowserver subcommand to show them. The Denyserver subcommand requires you to have already allowed yourself in a server. Examples /birthday remove /birthday list /birthday month month: 3 /birthday allowserver /birthday denyserver /birthday set date: 13-02</p>
-</article>
-
-<article>
-<header><h1>/custom</h1></header>
-<p>Creates a custom command. For further info check our guides/custom-commands Custom Commands Guide. Subcommands Lockcommand Lock a custom command. Remove Remove a custom command. Unlockcommand Unlock a custom command. Rename Rename a custom command. List List all custom commands. Raw View a custom command in raw form. Eval Eval the result of a custom command. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. View Views the response of a custom command. Deleteresponse Deletes a response from a custom command. Info Shows information about a custom command. Add Add a custom command. This will open a pop-up. Edit Edits a custom command. This will open a pop-up for content. Options Lockcommand Click me! Options for the Lockcommand Subcommand name Required The custom command to lock. Remove Click me! Options for the Remove Subcommand name Required The custom command to remove. Unlockcommand Click me! Options for the Unlockcommand Subcommand name Required The custom command to unlock. Rename Click me! Options for the Rename Subcommand name Required The name of the custom command to rename. new Required The new name to use. Raw Click me! Options for the Raw Subcommand name Required The name of the custom command to view. View Click me! Options for the View Subcommand name Required The name of the custom command to view. response Required The response number of the response to view (shown on /custom raw ). Deleteresponse Click me! Options for the Deleteresponse Subcommand name Required The name of the custom command to delete a response of. response Required The response number of the response to delete (shown on /custom raw ). Info Click me! Options for the Info Subcommand name Required The name of the custom command to view info of. Add Click me! Options for the Add Subcommand nsfw Required Whether the command is NSFW or not. Edit Click me! Options for the Edit Subcommand name Required The name of the custom command to edit. response Required The response number of the response to edit. nsfw Required Whether the entire command should be marked as nsfw. Note: The List and Eval Subcommands have no options. Requirements If normal users aren't allowed to make custom commands with one of our basics/server-configuration opts options then this command requires commands/permissions#intro Admin permissions. Examples /custom lockcommand name: test /custom remove name: test /custom unlockcommand name: test /custom rename name: test new: test2 /custom raw name: test /custom add nsfw: false /custom edit name: test response: 1 nsfw: true</p>
-</article>
-
-<article>
-<header><h1>/iam</h1></header>
-<p>Applies a self-assignable role to you or lists all self-assignable roles. Roles have to be added by an Admin one of the opts commands. Subcommands List List all autoroles. Not Remove an autorole from you. Add Get an autorole assigned to you. Options Not Click me! Options for the Not Subcommand role Required The role to remove. Add Click me! Options for the Add Subcommand role Required The role to assign. Note: The List Subcommand has no options. Requirements This command requires a self-assignable role to have been set up on the server. Examples /iam list /iam not role: Red /iam add role: Blue</p>
-</article>
-
-<article>
-<header><h1>/poll</h1></header>
-<p>Create a poll with options. The person that created the poll can cancel it by typing &amp;cancelpoll . If an url is used then it must be a direct link to the image. The maximum poll runtime is 45 minutes. Options name Required The name of the poll. time Required The time the poll is gonna run for. The format is as follows 1m30s for 1 minute and 30 seconds. Maximum poll runtime is 45 minutes. options Required The options to add. Minimum is 2 and maximum is 9. For instance: Pizza,Spaghetti,Pasta (Enclose options with multiple words in double quotes, there has to be no spaces between the commas) image Optional The image to embed to the poll. Examples /poll name: test poll time: 10m30s options: hi,wew,owo</p>
-</article>
-
-<article>
-<header><h1>/premium</h1></header>
-<p>Check or activate premium status for a user or server. Subcommands Activate Activates a premium key. User Checks the premium status of a user. Server Checks the premium status of this server. Options Activate Click me! Options for the Activate Subcommand key Required The key to activate. If it's a server key, make sure to run this command in the server where you want to enable premium on. User Click me! Options for the User Subcommand user Optional The user to check for. Yourself if empty. Note: The Server Subcommand has no options. Examples /premium activate key: a4e98f07-1a32-4dcc-b53f-c540214d54ec /premium user /premium server</p>
-</article>
-
-<article>
-<header><h1>/remindme</h1></header>
-<p>Reminds you of something after the given time ran out. Mantaro will DM you when the time runs out with the message you specified. Subcommands Add Adds a reminder. Cancel Cancels a reminder. List Lists your reminders. Options Add Click me! Options for the Add Subcommand time Required How much time until I remind you of it. Time is in this format: 1h20m (1 hour and 20m). reminder Required The thing to remind you of. Note: The Cancel and List Subcommands have no options. Requirements The Cancel subcommand requires you to have a reminder set. Examples /remindme add time: 1h20m reminder: do homework /remindme cancel /remindme list</p>
-</article>
-
-<article>
-<header><h1>/time</h1></header>
-<p>Shows the current time in the timezone set on your profile or the time in the timezone that was specified. If a user is specified it will show the timezone of that user (if they have one set). Options timezone Optional The timezone in GMT or UTC offset (Example: GMT-3) or a ZoneId (such as Europe/London). If empty it will show the timezone of the user. user Optional The user to see the timezone of. Examples /time /time timezone: Europe/London /time user: @Kodehawa#3457</p>
-</article>
-
-<article>
-<header><h1>~>wiki</h1></header>
-<p>Will link you to the respective GitHub wiki pages. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Subcommands Badges This will link you to the Badges Documentation wiki page. Birthday This will link you to the Birthday 101 wiki page. Premium This will link you to the Premium Perks wiki page. Opts This will link you to the Configuration wiki page. Custom This will link you to the Custom Commands wiki page. Faq This will link you to the FAQ wiki page. Usermessage This will link you to the Welcome/Leave Messages wiki page. Tos This will link you to the TOS wiki page. Collectibles This will link you to the Collectable Items wiki page. Currency This will link you to the Currency 101 wiki page. Modifiers This will link you to the Modifiers wiki page. Commands This will link you to the Commands wiki page. Examples ~&gt;wiki ~&gt;wiki opts ~&gt;wiki usermessage</p>
+<p>Set/Remove your own birthday or show everyone with a birthday this month. The date format is dd-mm. This means day first and month second. Subcommands remove Removes your set birthday date. list Gives all of the birthdays for this server. month Checks the current birthday date for the specified month. allowserver Allows the server where you send this command to announce your birthday. denyserver Denies the server where you send this command from announcing your birthday. set Sets your birthday date. Only useful if the server has enabled this functionality. Options month Click me! Options for the Month Subcommand. month Optional The month, in number format (January is 1, etc). set Click me! Options for the Set Subcommand. date Required A date in dd-MM format (13-02 for February 13th for example). Note: The Remove , List , Allowserver and Denyserver subcommands have no options. Requirements The Remove subcommand requires you to have already set a birthday. The List and Month subcommand require users to use the allowserver subcommand to show them. The Denyserver subcommand requires you to have already allowed yourself in a server. Examples /birthday remove /birthday list /birthday month month: 3 /birthday allowserver /birthday denyserver /birthday set date: 13-02 Creates a custom command. For further info check our guides/custom-commands Custom Commands Guide. Subcommands lockcommand Lock a custom command. remove Remove a custom command. unlockcommand Unlock a custom command. rename Rename a custom command. list List all custom commands. raw View a custom command in raw form. eval Eval the result of a custom command. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. view Views the response of a custom command. deleteresponse Deletes a response from a custom command. info Shows information about a custom command. add Add a custom command. This will open a pop-up. edit Edits a custom command. This will open a pop-up for content. Options lockcommand Click me! Options for the Lockcommand Subcommand. name Required The custom command to lock. remove Click me! Options for the Remove Subcommand. name Required The custom command to remove. unlockcommand Click me! Options for the Unlockcommand Subcommand. name Required The custom command to unlock. rename Click me! Options for the Rename Subcommand. name Required The current name of the custom command to rename. new Required The new name to use. raw Click me! Options for the Raw Subcommand. name Required The name of the custom command to view. view Click me! Options for the View Subcommand. name Required The name of the custom command to view. response Required The response number of the response to view (shown on /custom raw ). info Click me! Options for the Info Subcommand. name Required The name of the custom command to view info of. add Click me! Options for the Add Subcommand. name Required Whether the command should be NSFW or not. deleteresponse Click me! Options for the Deleteresponse Subcommand. name Required The name of the custom command to delete a response of. response Required The response number of the response to delete (shown on /custom raw ). edit Click me! Options for the Edit Subcommand. name Required The name of the custom command to edit. response Required The response number of the response to edit (shown on /custom raw ). nsfw Required Whether the entire command should be marked as nsfw. Note: The List , and Eval subcommands have no options. Requirements If normal users aren't allowed to make custom commands with one of our basics/server-configuration opts options then this command requires commands/permissions#intro Admin permissions. Examples /custom lockcommand name: test /custom remove name: test /custom unlockcommand name: test /custom rename name: test new: test2 /custom raw name: test /custom add nsfw: false /custom edit name: test response: 1 nsfw: true Applies a self-assignable role to you or lists all self-assignable roles. Roles have to be added by an Admin one of the opts commands. Subcommands list List all autoroles. not Remove an autorole from you. add Get an autorole assigned to you. rename Rename a custom command. Options not Click me! Options for the Not Subcommand. role Required The role to remove from yourself. add Click me! Options for the Add Subcommand. role Required The role to assign to yourself Note: The List subcommand has no options. Requirements This command requires a self-assignable role to have been set up on the server.. Examples /iam list /iam not role: Red /iam add role: Blue Create a poll with options. The person that created the poll can cancel it by typing &amp;cancelpoll . If an url is used then it must be a direct link to the image. The maximum poll runtime is 45 minutes. Options name Required The name of the poll. time Required The time the poll is gonna run for. The format is as follows 1m30s for 1 minute and 30 seconds. Maximum poll runtime is 45 minutes. options Required The options to add. Minimum is 2 and maximum is 9. For instance: Pizza,Spaghetti,Pasta (Enclose options with multiple words in double quotes, there has to be no spaces between the commas) image Optional The image to embed to the poll. Examples /poll name: test poll time: 10m30s options: hi,wew,owo Check or activate premium status for a user or server. Subcommands activate Activates a premium key. user Checks the premium status of a user. server Checks the premium status of this server. Options activate Click me! Options for the Activate Subcommand. key Required The key to activate. If it's a server key, make sure to run this command in the server where you want to enable premium on. user Click me! Options for the User Subcommand. user Required The user to check for. Yourself if empty. Note: The Server subcommand has no options. Examples /premium activate key: a4e98f07-1a32-4dcc-b53f-c540214d54ec /premium user /premium server Reminds you of something after the given time ran out. Mantaro will DM you when the time runs out with the message you specified. Subcommands add Adds a reminder. cancel Cancels a reminder. list Lists your reminders. Options add Click me! Options for the Add Subcommand. time Required How much time until I remind you of it. Time is in this format: 1h20m (1 hour and 20m). reminder Required The thing to remind you of. Note: The Cancel and List subcommands have no options. Requirements The Cancel subcommand requires you to have a reminder set. Examples /remindme add time: 1h20m reminder: do homework /remindme cancel /remindme list Shows the current time in the timezone set on your profile or the time in the timezone that was specified. If a user is specified it will show the timezone of that user (if they have one set). Options timezone Required The timezone in GMT or UTC offset (Example: GMT-3) or a ZoneId (such as Europe/London). If empty it will show the timezone you have set if any. user Required The user to see the timezone of. Examples /time /time timezone: Europe/London /time user: @Kodehawa#3457 Will link you to the respective GitHub wiki pages. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Subcommands badges This will link you to the Badges Documentation wiki page. birthday This will link you to the Birthday 101 wiki page. premium This will link you to the Premium Perks wiki page. opts This will link you to the Configuration wiki page. custom This will link you to the Custom Commands wiki page. faq This will link you to the FAQ wiki page. usermessage This will link you to the Welcome/Leave Messages wiki page. tos This will link you to the TOS wiki page. collectibles This will link you to the Collectable Items wiki page. currency This will link you to the Currency 101 wiki page. modifiers This will link you to the Modifiers wiki page. commands This will link you to the Commands wiki page. Examples ~&gt;wiki ~&gt;wiki opts ~&gt;wiki usermessage</p>
 </article>
 </section>
 </div>
@@ -170,9 +134,9 @@ ReactDOM.render(React.createElement(Documentation, {
           "name" : "Subcommands",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Remove",
+              "name" : "remove",
               "type" : [ ],
-              "anchorId" : "Remove",
+              "anchorId" : "birthday-subcommands_remove",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -181,9 +145,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "List",
+              "name" : "list",
               "type" : [ ],
-              "anchorId" : "List",
+              "anchorId" : "birthday-subcommands_list",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -192,9 +156,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Month",
+              "name" : "month",
               "type" : [ ],
-              "anchorId" : "Month",
+              "anchorId" : "birthday-subcommands_month",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -203,9 +167,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Allowserver",
+              "name" : "allowserver",
               "type" : [ ],
-              "anchorId" : "Allowserver",
+              "anchorId" : "birthday-subcommands_allowserver",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -214,9 +178,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Denyserver",
+              "name" : "denyserver",
               "type" : [ ],
-              "anchorId" : "Denyserver",
+              "anchorId" : "birthday-subcommands_denyserver",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -225,9 +189,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Set",
+              "name" : "set",
               "type" : [ ],
-              "anchorId" : "Set",
+              "anchorId" : "birthday-subcommands_set",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -236,18 +200,20 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "birthday-subcommands",
+            "noWrap" : true,
             "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Options",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Month",
+              "name" : "month",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Month",
+              "anchorId" : "birthday-options_month",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -257,7 +223,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Month",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -267,7 +233,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Optional",
                   "url" : ""
                 } ],
-                "anchorId" : "Month_month",
+                "anchorId" : "birthday-options_month_month",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -277,12 +243,12 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Set",
+              "name" : "set",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Set",
+              "anchorId" : "birthday-options_set",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -292,7 +258,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Set",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -302,7 +268,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Set_date",
+                "anchorId" : "birthday-options_set_date",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -312,6 +278,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "birthday-options",
             "type" : "ApiParameters"
           }, {
             "type" : "Paragraph",
@@ -340,7 +307,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "code" : "Denyserver",
               "type" : "InlinedCode"
             }, {
-              "text" : " Subcommands have no options.",
+              "text" : " subcommands have no options.",
               "type" : "SimpleText"
             } ]
           } ]
@@ -415,7 +382,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "birthday-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -426,7 +393,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "birthday-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -437,7 +404,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "birthday-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -454,7 +421,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "birthday-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -465,7 +432,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "birthday-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -476,7 +443,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "birthday-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -491,6 +458,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "birthday-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -523,9 +491,9 @@ ReactDOM.render(React.createElement(Documentation, {
           "name" : "Subcommands",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Lockcommand",
+              "name" : "lockcommand",
               "type" : [ ],
-              "anchorId" : "Lockcommand",
+              "anchorId" : "custom-subcommands_lockcommand",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -534,9 +502,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Remove",
+              "name" : "remove",
               "type" : [ ],
-              "anchorId" : "Remove",
+              "anchorId" : "custom-subcommands_remove",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -545,9 +513,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Unlockcommand",
+              "name" : "unlockcommand",
               "type" : [ ],
-              "anchorId" : "Unlockcommand",
+              "anchorId" : "custom-subcommands_unlockcommand",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -556,9 +524,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Rename",
+              "name" : "rename",
               "type" : [ ],
-              "anchorId" : "Rename",
+              "anchorId" : "custom-subcommands_rename",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -567,9 +535,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "List",
+              "name" : "list",
               "type" : [ ],
-              "anchorId" : "List",
+              "anchorId" : "custom-subcommands_list",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -578,9 +546,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Raw",
+              "name" : "raw",
               "type" : [ ],
-              "anchorId" : "Raw",
+              "anchorId" : "custom-subcommands_raw",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -589,9 +557,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Eval",
+              "name" : "eval",
               "type" : [ ],
-              "anchorId" : "Eval",
+              "anchorId" : "custom-subcommands_eval",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -606,9 +574,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "View",
+              "name" : "view",
               "type" : [ ],
-              "anchorId" : "View",
+              "anchorId" : "custom-subcommands_view",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -617,9 +585,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Deleteresponse",
+              "name" : "deleteresponse",
               "type" : [ ],
-              "anchorId" : "Deleteresponse",
+              "anchorId" : "custom-subcommands_deleteresponse",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -628,9 +596,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Info",
+              "name" : "info",
               "type" : [ ],
-              "anchorId" : "Info",
+              "anchorId" : "custom-subcommands_info",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -639,9 +607,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Add",
+              "name" : "add",
               "type" : [ ],
-              "anchorId" : "Add",
+              "anchorId" : "custom-subcommands_add",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -650,9 +618,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Edit",
+              "name" : "edit",
               "type" : [ ],
-              "anchorId" : "Edit",
+              "anchorId" : "custom-subcommands_edit",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -661,18 +629,20 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "custom-subcommands",
+            "noWrap" : true,
             "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Options",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Lockcommand",
+              "name" : "lockcommand",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Lockcommand",
+              "anchorId" : "custom-options_lockcommand",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -682,7 +652,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Lockcommand",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -692,7 +662,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Lockcommand_name",
+                "anchorId" : "custom-options_lockcommand_name",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -702,12 +672,12 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Remove",
+              "name" : "remove",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Remove",
+              "anchorId" : "custom-options_remove",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -717,7 +687,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Remove",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -727,7 +697,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Remove_name",
+                "anchorId" : "custom-options_remove_name",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -737,12 +707,12 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Unlockcommand",
+              "name" : "unlockcommand",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Unlockcommand",
+              "anchorId" : "custom-options_unlockcommand",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -752,7 +722,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Unlockcommand",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -762,7 +732,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Unlockcommand_name",
+                "anchorId" : "custom-options_unlockcommand_name",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -772,12 +742,12 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Rename",
+              "name" : "rename",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Rename",
+              "anchorId" : "custom-options_rename",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -787,7 +757,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Rename",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -797,11 +767,11 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Rename_name",
+                "anchorId" : "custom-options_rename_name",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
-                    "text" : "The name of the custom command to rename.",
+                    "text" : "The current name of the custom command to rename.",
                     "type" : "SimpleText"
                   } ]
                 } ]
@@ -811,7 +781,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Rename_new",
+                "anchorId" : "custom-options_rename_new",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -821,12 +791,12 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Raw",
+              "name" : "raw",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Raw",
+              "anchorId" : "custom-options_raw",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -836,7 +806,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Raw",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -846,7 +816,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Raw_name",
+                "anchorId" : "custom-options_raw_name",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -856,12 +826,12 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "View",
+              "name" : "view",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "View",
+              "anchorId" : "custom-options_view",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -871,7 +841,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "View",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -881,7 +851,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "View_name",
+                "anchorId" : "custom-options_view_name",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -895,7 +865,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "View_response",
+                "anchorId" : "custom-options_view_response",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -911,22 +881,22 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Deleteresponse",
+              "name" : "info",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Deleteresponse",
+              "anchorId" : "custom-options_info",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
                   "text" : "Options for the ",
                   "type" : "SimpleText"
                 }, {
-                  "code" : "Deleteresponse",
+                  "code" : "Info",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -936,7 +906,77 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Deleteresponse_name",
+                "anchorId" : "custom-options_info_name",
+                "description" : [ {
+                  "type" : "Paragraph",
+                  "content" : [ {
+                    "text" : "The name of the custom command to view info of.",
+                    "type" : "SimpleText"
+                  } ]
+                } ]
+              } ]
+            }, {
+              "name" : "add",
+              "type" : [ {
+                "text" : "Click me!",
+                "url" : ""
+              } ],
+              "anchorId" : "custom-options_add",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Options for the ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "Add",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : " Subcommand.",
+                  "type" : "SimpleText"
+                } ]
+              } ],
+              "children" : [ {
+                "name" : "name",
+                "type" : [ {
+                  "text" : "Required",
+                  "url" : ""
+                } ],
+                "anchorId" : "custom-options_add_name",
+                "description" : [ {
+                  "type" : "Paragraph",
+                  "content" : [ {
+                    "text" : "Whether the command should be NSFW or not.",
+                    "type" : "SimpleText"
+                  } ]
+                } ]
+              } ]
+            }, {
+              "name" : "deleteresponse",
+              "type" : [ {
+                "text" : "Click me!",
+                "url" : ""
+              } ],
+              "anchorId" : "custom-options_deleteresponse",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Options for the ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "Deleteresponse",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : " Subcommand.",
+                  "type" : "SimpleText"
+                } ]
+              } ],
+              "children" : [ {
+                "name" : "name",
+                "type" : [ {
+                  "text" : "Required",
+                  "url" : ""
+                } ],
+                "anchorId" : "custom-options_deleteresponse_name",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -950,7 +990,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Deleteresponse_response",
+                "anchorId" : "custom-options_deleteresponse_response",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -966,82 +1006,12 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Info",
+              "name" : "edit",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Info",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Options for the ",
-                  "type" : "SimpleText"
-                }, {
-                  "code" : "Info",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : " Subcommand",
-                  "type" : "SimpleText"
-                } ]
-              } ],
-              "children" : [ {
-                "name" : "name",
-                "type" : [ {
-                  "text" : "Required",
-                  "url" : ""
-                } ],
-                "anchorId" : "Info_name",
-                "description" : [ {
-                  "type" : "Paragraph",
-                  "content" : [ {
-                    "text" : "The name of the custom command to view info of.",
-                    "type" : "SimpleText"
-                  } ]
-                } ]
-              } ]
-            }, {
-              "name" : "Add",
-              "type" : [ {
-                "text" : "Click me!",
-                "url" : ""
-              } ],
-              "anchorId" : "Add",
-              "description" : [ {
-                "type" : "Paragraph",
-                "content" : [ {
-                  "text" : "Options for the ",
-                  "type" : "SimpleText"
-                }, {
-                  "code" : "Add",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : " Subcommand",
-                  "type" : "SimpleText"
-                } ]
-              } ],
-              "children" : [ {
-                "name" : "nsfw",
-                "type" : [ {
-                  "text" : "Required",
-                  "url" : ""
-                } ],
-                "anchorId" : "Add_nsfw",
-                "description" : [ {
-                  "type" : "Paragraph",
-                  "content" : [ {
-                    "text" : "Whether the command is NSFW or not.",
-                    "type" : "SimpleText"
-                  } ]
-                } ]
-              } ]
-            }, {
-              "name" : "Edit",
-              "type" : [ {
-                "text" : "Click me!",
-                "url" : ""
-              } ],
-              "anchorId" : "Edit",
+              "anchorId" : "custom-options_edit",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1051,7 +1021,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Edit",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -1061,7 +1031,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Edit_name",
+                "anchorId" : "custom-options_edit_name",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -1075,11 +1045,17 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Edit_response",
+                "anchorId" : "custom-options_edit_response",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
-                    "text" : "The response number of the response to edit.",
+                    "text" : "The response number of the response to edit (shown on ",
+                    "type" : "SimpleText"
+                  }, {
+                    "code" : "/custom raw",
+                    "type" : "InlinedCode"
+                  }, {
+                    "text" : ").",
                     "type" : "SimpleText"
                   } ]
                 } ]
@@ -1089,7 +1065,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Edit_nsfw",
+                "anchorId" : "custom-options_edit_nsfw",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -1099,6 +1075,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "custom-options",
             "type" : "ApiParameters"
           }, {
             "type" : "Paragraph",
@@ -1109,13 +1086,13 @@ ReactDOM.render(React.createElement(Documentation, {
               "code" : "List",
               "type" : "InlinedCode"
             }, {
-              "text" : " and ",
+              "text" : ", and ",
               "type" : "SimpleText"
             }, {
               "code" : "Eval",
               "type" : "InlinedCode"
             }, {
-              "text" : " Subcommands have no options.",
+              "text" : " subcommands have no options.",
               "type" : "SimpleText"
             } ]
           } ]
@@ -1170,7 +1147,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "custom-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1187,7 +1164,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "custom-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1204,7 +1181,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "custom-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1221,7 +1198,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "custom-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1244,7 +1221,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "custom-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1261,7 +1238,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "custom-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1278,7 +1255,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "custom-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1305,6 +1282,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "custom-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1332,9 +1310,9 @@ ReactDOM.render(React.createElement(Documentation, {
           "name" : "Subcommands",
           "content" : [ {
             "parameters" : [ {
-              "name" : "List",
+              "name" : "list",
               "type" : [ ],
-              "anchorId" : "List",
+              "anchorId" : "iam-subcommands_list",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1343,9 +1321,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Not",
+              "name" : "not",
               "type" : [ ],
-              "anchorId" : "Not",
+              "anchorId" : "iam-subcommands_not",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1354,9 +1332,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Add",
+              "name" : "add",
               "type" : [ ],
-              "anchorId" : "Add",
+              "anchorId" : "iam-subcommands_add",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1364,19 +1342,32 @@ ReactDOM.render(React.createElement(Documentation, {
                   "type" : "SimpleText"
                 } ]
               } ]
+            }, {
+              "name" : "rename",
+              "type" : [ ],
+              "anchorId" : "iam-subcommands_rename",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Rename a custom command.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
             } ],
+            "anchorPrefix" : "iam-subcommands",
+            "noWrap" : true,
             "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Options",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Not",
+              "name" : "not",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Not",
+              "anchorId" : "iam-options_not",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1386,7 +1377,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Not",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -1396,22 +1387,22 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Not_role",
+                "anchorId" : "iam-options_not_role",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
-                    "text" : "The role to remove.",
+                    "text" : "The role to remove from yourself.",
                     "type" : "SimpleText"
                   } ]
                 } ]
               } ]
             }, {
-              "name" : "Add",
+              "name" : "add",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Add",
+              "anchorId" : "iam-options_add",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1421,7 +1412,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Add",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -1431,16 +1422,17 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Add_role",
+                "anchorId" : "iam-options_add_role",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
-                    "text" : "The role to assign.",
+                    "text" : "The role to assign to yourself",
                     "type" : "SimpleText"
                   } ]
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "iam-options",
             "type" : "ApiParameters"
           }, {
             "type" : "Paragraph",
@@ -1451,7 +1443,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "code" : "List",
               "type" : "InlinedCode"
             }, {
-              "text" : " Subcommand has no options.",
+              "text" : " subcommand has no options.",
               "type" : "SimpleText"
             } ]
           } ]
@@ -1466,7 +1458,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "content" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "This command requires a self-assignable role to have been set up on the server.",
+                  "text" : "This command requires a self-assignable role to have been set up on the server..",
                   "type" : "SimpleText"
                 } ]
               } ]
@@ -1478,7 +1470,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "iam-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1489,7 +1481,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "iam-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1506,7 +1498,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "iam-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1521,6 +1513,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "iam-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1553,7 +1546,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "name",
+              "anchorId" : "poll-options_name",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1567,7 +1560,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "time",
+              "anchorId" : "poll-options_time",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1581,7 +1574,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "options",
+              "anchorId" : "poll-options_options",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1595,7 +1588,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "image",
+              "anchorId" : "poll-options_image",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1604,6 +1597,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "poll-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -1612,7 +1606,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "poll-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1639,6 +1633,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "poll-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1660,9 +1655,9 @@ ReactDOM.render(React.createElement(Documentation, {
           "name" : "Subcommands",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Activate",
+              "name" : "activate",
               "type" : [ ],
-              "anchorId" : "Activate",
+              "anchorId" : "premium-subcommands_activate",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1671,9 +1666,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "User",
+              "name" : "user",
               "type" : [ ],
-              "anchorId" : "User",
+              "anchorId" : "premium-subcommands_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1682,9 +1677,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Server",
+              "name" : "server",
               "type" : [ ],
-              "anchorId" : "Server",
+              "anchorId" : "premium-subcommands_server",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1693,18 +1688,20 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "premium-subcommands",
+            "noWrap" : true,
             "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Options",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Activate",
+              "name" : "activate",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Activate",
+              "anchorId" : "premium-options_activate",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1714,7 +1711,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Activate",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -1724,7 +1721,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Activate_key",
+                "anchorId" : "premium-options_activate_key",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -1734,12 +1731,12 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "User",
+              "name" : "user",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "User",
+              "anchorId" : "premium-options_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1749,17 +1746,17 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "User",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
               "children" : [ {
                 "name" : "user",
                 "type" : [ {
-                  "text" : "Optional",
+                  "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "User_user",
+                "anchorId" : "premium-options_user_user",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -1769,6 +1766,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "premium-options",
             "type" : "ApiParameters"
           }, {
             "type" : "Paragraph",
@@ -1779,7 +1777,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "code" : "Server",
               "type" : "InlinedCode"
             }, {
-              "text" : " Subcommand has no options.",
+              "text" : " subcommand has no options.",
               "type" : "SimpleText"
             } ]
           } ]
@@ -1789,7 +1787,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "premium-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1806,7 +1804,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "premium-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1817,7 +1815,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "premium-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1826,6 +1824,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "premium-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1847,9 +1846,9 @@ ReactDOM.render(React.createElement(Documentation, {
           "name" : "Subcommands",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Add",
+              "name" : "add",
               "type" : [ ],
-              "anchorId" : "Add",
+              "anchorId" : "remindme-subcommands_add",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1858,9 +1857,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Cancel",
+              "name" : "cancel",
               "type" : [ ],
-              "anchorId" : "Cancel",
+              "anchorId" : "remindme-subcommands_cancel",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1869,9 +1868,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "List",
+              "name" : "list",
               "type" : [ ],
-              "anchorId" : "List",
+              "anchorId" : "remindme-subcommands_list",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1880,18 +1879,20 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "remindme-subcommands",
+            "noWrap" : true,
             "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Options",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Add",
+              "name" : "add",
               "type" : [ {
                 "text" : "Click me!",
                 "url" : ""
               } ],
-              "anchorId" : "Add",
+              "anchorId" : "remindme-options_add",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1901,7 +1902,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "code" : "Add",
                   "type" : "InlinedCode"
                 }, {
-                  "text" : " Subcommand",
+                  "text" : " Subcommand.",
                   "type" : "SimpleText"
                 } ]
               } ],
@@ -1911,7 +1912,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Add_time",
+                "anchorId" : "remindme-options_add_time",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -1925,7 +1926,7 @@ ReactDOM.render(React.createElement(Documentation, {
                   "text" : "Required",
                   "url" : ""
                 } ],
-                "anchorId" : "Add_reminder",
+                "anchorId" : "remindme-options_add_reminder",
                 "description" : [ {
                   "type" : "Paragraph",
                   "content" : [ {
@@ -1935,6 +1936,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "remindme-options",
             "type" : "ApiParameters"
           }, {
             "type" : "Paragraph",
@@ -1951,7 +1953,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "code" : "List",
               "type" : "InlinedCode"
             }, {
-              "text" : " Subcommands have no options.",
+              "text" : " subcommands have no options.",
               "type" : "SimpleText"
             } ]
           } ]
@@ -1984,7 +1986,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "remindme-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2007,7 +2009,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "remindme-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2018,7 +2020,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "remindme-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2027,6 +2029,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "remindme-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -2050,24 +2053,24 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "timezone",
               "type" : [ {
-                "text" : "Optional",
+                "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "timezone",
+              "anchorId" : "time-options_timezone",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "The timezone in GMT or UTC offset (Example: GMT-3) or a ZoneId (such as Europe/London). If empty it will show the timezone of the user.",
+                  "text" : "The timezone in GMT or UTC offset (Example: GMT-3) or a ZoneId (such as Europe/London). If empty it will show the timezone you have set if any.",
                   "type" : "SimpleText"
                 } ]
               } ]
             }, {
               "name" : "user",
               "type" : [ {
-                "text" : "Optional",
+                "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "user",
+              "anchorId" : "time-options_user",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2076,6 +2079,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "time-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -2084,7 +2088,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "time-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2095,7 +2099,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "time-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2112,7 +2116,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "time-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2127,14 +2131,16 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "time-examples",
             "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     }, {
-      "id" : "wiki",
-      "title" : "~>wiki",
+      "style" : "api",
+      "id" : "-wiki",
+      "title" : "/wiki",
       "type" : "Section",
       "content" : [ {
         "type" : "Paragraph",
@@ -2153,9 +2159,9 @@ ReactDOM.render(React.createElement(Documentation, {
           "name" : "Subcommands",
           "content" : [ {
             "parameters" : [ {
-              "name" : "Badges",
+              "name" : "badges",
               "type" : [ ],
-              "anchorId" : "Badges",
+              "anchorId" : "wiki-subcommands_badges",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2164,9 +2170,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Birthday",
+              "name" : "birthday",
               "type" : [ ],
-              "anchorId" : "Birthday",
+              "anchorId" : "wiki-subcommands_birthday",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2175,9 +2181,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Premium",
+              "name" : "premium",
               "type" : [ ],
-              "anchorId" : "Premium",
+              "anchorId" : "wiki-subcommands_premium",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2186,9 +2192,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Opts",
+              "name" : "opts",
               "type" : [ ],
-              "anchorId" : "Opts",
+              "anchorId" : "wiki-subcommands_opts",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2197,9 +2203,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Custom",
+              "name" : "custom",
               "type" : [ ],
-              "anchorId" : "Custom",
+              "anchorId" : "wiki-subcommands_custom",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2208,9 +2214,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Faq",
+              "name" : "faq",
               "type" : [ ],
-              "anchorId" : "Faq",
+              "anchorId" : "wiki-subcommands_faq",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2219,9 +2225,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Usermessage",
+              "name" : "usermessage",
               "type" : [ ],
-              "anchorId" : "Usermessage",
+              "anchorId" : "wiki-subcommands_usermessage",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2230,9 +2236,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Tos",
+              "name" : "tos",
               "type" : [ ],
-              "anchorId" : "Tos",
+              "anchorId" : "wiki-subcommands_tos",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2241,9 +2247,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Collectibles",
+              "name" : "collectibles",
               "type" : [ ],
-              "anchorId" : "Collectibles",
+              "anchorId" : "wiki-subcommands_collectibles",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2252,9 +2258,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Currency",
+              "name" : "currency",
               "type" : [ ],
-              "anchorId" : "Currency",
+              "anchorId" : "wiki-subcommands_currency",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2263,9 +2269,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Modifiers",
+              "name" : "modifiers",
               "type" : [ ],
-              "anchorId" : "Modifiers",
+              "anchorId" : "wiki-subcommands_modifiers",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2274,9 +2280,9 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             }, {
-              "name" : "Commands",
+              "name" : "commands",
               "type" : [ ],
-              "anchorId" : "Commands",
+              "anchorId" : "wiki-subcommands_commands",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2285,6 +2291,8 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "wiki-subcommands",
+            "noWrap" : true,
             "type" : "ApiParameters"
           } ]
         }, {
@@ -2293,7 +2301,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "wiki-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2304,7 +2312,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "wiki-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2315,7 +2323,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "wiki-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -2324,13 +2332,14 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "wiki-examples",
             "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1661812091511,
+    "lastModifiedTime" : 1666420851734,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "✏️Utility Commands",
@@ -2369,8 +2378,9 @@ ReactDOM.render(React.createElement(Documentation, {
         "id" : "-time",
         "style" : "api"
       }, {
-        "title" : "~>wiki",
-        "id" : "wiki"
+        "title" : "/wiki",
+        "id" : "-wiki",
+        "style" : "api"
       } ]
     }
   }

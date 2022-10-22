@@ -83,73 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<header><h1>/forward</h1></header>
-<p>Warning: Due to circumstances outside our control, we're unable to provide music playback on Mantaro. The following are now only available on Mantaro Patreon with the default search engine being Soundcloud, and YouTube fully removed going forward. This command will skip the song forward by the time given. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options time Required The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /forward time: 2m /forward time: 1m29s</p>
-</article>
-
-<article>
-<header><h1>/move</h1></header>
-<p>This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options channel Optional The voice channel to move to. If empty, it'll use the voice channel you're in. Examples /move /move channel: Music 1</p>
-</article>
-
-<article>
-<header><h1>/nowplaying</h1></header>
-<p>This command will display the song that is currently playing with timestamps. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Examples /nowplaying channel: Music 1</p>
-</article>
-
-<article>
-<header><h1>/pause</h1></header>
-<p>This command will pause the music Player or unpause the Player if already paused. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Examples /pause</p>
-</article>
-
-<article>
-<header><h1>/play</h1></header>
-<p>This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Warning: Due to circumstances outside our control YouTube is no longer available as a source to play from and soundcloud is now always used for searches. Options song Required The song to play. Can be a URL or a search term. top Optional Puts song at the start of the queue. Requires commands/permissions#intro DJ or Admin permissions. first Optional Plays the first search result. Only applies if a search is used. Requirements This command requires you to be connected to a Voice-Chat. Examples /play song: Rick Astley - Never Gonna Give You Up</p>
-</article>
-
-<article>
-<header><h1>/queue</h1></header>
-<p>This command displays the current queue or the selected page of the queue. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Subcommands show Shows the current music queue. clear Clears the current queue. Needs commands/permissions#intro DJ or Admin permissions. Examples /queue show /queue clear</p>
-</article>
-
-<article>
-<header><h1>/removetrack</h1></header>
-<p>This command removes the given track(s) from the queue. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options range Required The song to remove, or a range of them (1-10). Can also use first, next or last. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /removetrack range: first /removetrack range: next /removetrack range: last /removetrack range: 2 /removetrack range: 1-10</p>
-</article>
-
-<article>
-<header><h1>/repeat</h1></header>
-<p>This command repeats the current song or the queue, or disables it. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options queue Optional Repeat the entire queue instead of only the current song. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /repeat /repeat queue: True</p>
-</article>
-
-<article>
-<header><h1>/restartsong</h1></header>
-<p>This command will rewind the current song back to the start. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /restartsong</p>
-</article>
-
-<article>
-<header><h1>/rewind</h1></header>
-<p>This command will rewind the song back by the time given. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options time Required The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /rewind time: 1m29s</p>
-</article>
-
-<article>
-<header><h1>/shuffle</h1></header>
-<p>This command will shuffle the current queue. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /shuffle</p>
-</article>
-
-<article>
-<header><h1>/skip</h1></header>
-<p>This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can skip immediately. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options force Optional Whether to skip vote. Requires commands/permissions#intro DJ or Admin permissions. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /skip /skip force: True</p>
-</article>
-
-<article>
-<header><h1>/stop</h1></header>
-<p>This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can stop immediately. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Requirements This command requires either commands/permissions#intro Admin or DJ permissions to stop immediately. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /stop</p>
-</article>
-
-<article>
-<header><h1>/volume</h1></header>
-<p>This command lets you check the current volume, as well as set the volume to the percentage specified (4-100). Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options volume Optional The volume to use (4-100). Examples /volume /volume volume: 25</p>
+<p>Warning: Due to circumstances outside our control, we're unable to provide music playback on Mantaro. The following are now only available on Mantaro Patreon with the default search engine being Soundcloud, and YouTube fully removed going forward. This command will skip the song forward by the time given. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options time Required The amount of time to forward. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /forward time: 2m /forward time: 1m29s This command will move Mantaro to the Voice-Chat you specified. If a channel isn't specified it will move Mantaro to the channel you are currently connected to. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options channel Optional The voice channel to move to. If empty, it'll use the voice channel you're in. Examples /move /move channel: Music 1 This command will display the song that is currently playing with timestamps. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Examples /nowplaying This command will pause the music Player or unpause the Player if already paused. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Examples /pause This command automatically connects Mantaro to your current Voice-Chat and plays the song you specified. When using a search term Mantaro will give you a list of options, you will need to type the number corresponding to the song you wish to play. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Warning: Due to circumstances outside our control YouTube is no longer available as a source to play from and soundcloud is now always used for searches. Options song Required The song to play. Can be a URL or a search term. top Optional Puts song at the start of the queue. Requires commands/permissions#intro DJ or Admin permissions. first Optional Plays the first search result. Only applies if a search is used. Requirements This command requires you to be connected to a Voice-Chat. Examples /play song: https://soundcloud.com/rick-astley-official/never-gonna-give-you-up-4 /play song: Rick Astley - Never Gonna Give You Up This command displays the current queue or the selected page of the queue. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Subcommands show Shows the current music queue. clear Clears the current queue. Needs commands/permissions#intro DJ or Admin permissions. Examples /queue show /queue clear This command removes the given track(s) from the queue. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options range Required The song to remove, or a range of them (1-10). Can also use first, next or last. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /removetrack range: first /removetrack range: next /removetrack range: last /removetrack range: 2 /removetrack range: 1-10 This command repeats the current song or the queue, or disables repeating. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options queue Required Repeat the entire queue instead of only the current song. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /repeat /repeat queue: True This command will rewind the current song back to the start. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /restartsong This command will rewind the song back by the time given. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options time Required The amount of time to rewind. Time is in this format: 1m29s (1 minute and 29s), for example. Requirements This command requires either commands/permissions#intro Admin or DJ permissions. Examples /rewind time: 2m /rewind time: 1m29s This command will shuffle the current queue. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /shuffle This command skips the current song if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can skip immediately. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options force Optional Whether to skip vote. Requires commands/permissions#intro DJ or Admin permissions. Requirements This command requires you to be connected to the same Voice-Chat as Mantaro. Examples /skip /skip force: True This command makes Mantaro leave the Voice-Chat and empties the queue if 50% or more of the people in the Voice-Chat vote for it. People with DJ permissions can stop immediately. Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Requirements This command requires either commands/permissions#intro Admin or DJ permissions to stop immediately. This command requires you to be connected to the same Voice-Chat as Mantaro, if you lack the above mentioned permissions. Examples /stop This command lets you check the current volume, as well as set the volume to the percentage specified (4-100). Note: This feature is only available in basics/premium-perks#what-you-get-for-donating-via-patreon-4---patreon-bot Mantaro Patreon. Options volume Optional The volume to use (4-100). Examples /volume /volume volume: 25</p>
 </article>
 </section>
 </div>
@@ -226,7 +160,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "time",
+              "anchorId" : "forward-options_time",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -235,41 +169,50 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "forward-options",
             "type" : "ApiParameters"
           } ]
         }, {
           "name" : "Requirements",
           "content" : [ {
-            "type" : "Paragraph",
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
             "content" : [ {
-              "text" : "This command requires either ",
-              "type" : "SimpleText"
-            }, {
-              "url" : "/mantaro-wiki/commands/permissions#intro",
-              "isFile" : false,
-              "type" : "Link",
+              "type" : "ListItem",
               "content" : [ {
-                "type" : "StrongEmphasis",
+                "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "Admin",
+                  "text" : "This command requires either ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "/mantaro-wiki/commands/permissions#intro",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "Admin",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " or ",
+                    "type" : "SimpleText"
+                  }, {
+                    "type" : "StrongEmphasis",
+                    "content" : [ {
+                      "text" : "DJ",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " permissions",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
                   "type" : "SimpleText"
                 } ]
-              }, {
-                "text" : " or ",
-                "type" : "SimpleText"
-              }, {
-                "type" : "StrongEmphasis",
-                "content" : [ {
-                  "text" : "DJ",
-                  "type" : "SimpleText"
-                } ]
-              }, {
-                "text" : " permissions",
-                "type" : "SimpleText"
               } ]
-            }, {
-              "text" : ".",
-              "type" : "SimpleText"
             } ]
           } ]
         }, {
@@ -278,7 +221,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "forward-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -295,7 +238,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "forward-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -310,6 +253,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "forward-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -360,7 +304,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "channel",
+              "anchorId" : "move-options_channel",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -369,6 +313,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "move-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -377,7 +322,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "move-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -388,7 +333,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "move-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -403,6 +348,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "move-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -450,21 +396,16 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "nowplaying-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "/nowplaying ",
-                  "type" : "SimpleText"
-                }, {
-                  "code" : "channel:",
-                  "type" : "InlinedCode"
-                }, {
-                  "text" : "Music 1",
+                  "text" : "/nowplaying",
                   "type" : "SimpleText"
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "nowplaying-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -512,7 +453,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "pause-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -521,6 +462,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "pause-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -577,7 +519,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "song",
+              "anchorId" : "play-options_song",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -591,7 +533,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "top",
+              "anchorId" : "play-options_top",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -631,7 +573,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "first",
+              "anchorId" : "play-options_first",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -640,6 +582,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "play-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -665,7 +608,24 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "play-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/play ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "song:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "https://soundcloud.com/rick-astley-official/never-gonna-give-you-up-4",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "play-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -680,6 +640,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "play-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -727,7 +688,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "show",
               "type" : [ ],
-              "anchorId" : "show",
+              "anchorId" : "queue-subcommands_show",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -738,7 +699,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "clear",
               "type" : [ ],
-              "anchorId" : "clear",
+              "anchorId" : "queue-subcommands_clear",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -773,6 +734,8 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "queue-subcommands",
+            "noWrap" : true,
             "type" : "ApiParameters"
           } ]
         }, {
@@ -781,7 +744,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "queue-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -792,7 +755,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "queue-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -801,6 +764,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "queue-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -851,7 +815,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "range",
+              "anchorId" : "removetrack-options_range",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -860,6 +824,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "removetrack-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -920,7 +885,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "removetrack-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -937,7 +902,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "removetrack-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -954,7 +919,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "removetrack-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -971,7 +936,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "removetrack-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -988,7 +953,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "removetrack-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1003,6 +968,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "removetrack-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1016,7 +982,7 @@ ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "This command repeats the current song or the queue, or disables it.",
+          "text" : "This command repeats the current song or the queue, or disables repeating.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -1050,10 +1016,10 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "queue",
               "type" : [ {
-                "text" : "Optional",
+                "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "queue",
+              "anchorId" : "repeat-options_queue",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1062,6 +1028,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "repeat-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -1087,7 +1054,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "repeat-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1098,7 +1065,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "repeat-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1113,6 +1080,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "repeat-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1203,7 +1171,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "restartsong-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1212,6 +1180,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "restartsong-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1262,7 +1231,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Required",
                 "url" : ""
               } ],
-              "anchorId" : "time",
+              "anchorId" : "rewind-options_time",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1271,6 +1240,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "rewind-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -1322,7 +1292,24 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "rewind-examples",
+              "description" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "/rewind ",
+                  "type" : "SimpleText"
+                }, {
+                  "code" : "time:",
+                  "type" : "InlinedCode"
+                }, {
+                  "text" : "2m",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "name" : "",
+              "type" : [ ],
+              "anchorId" : "rewind-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1337,6 +1324,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "rewind-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1401,7 +1389,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "shuffle-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1410,6 +1398,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "shuffle-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1469,7 +1458,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "force",
+              "anchorId" : "skip-options_force",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1504,6 +1493,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "skip-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -1529,7 +1519,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "skip-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1540,7 +1530,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "skip-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1555,6 +1545,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "skip-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1651,7 +1642,7 @@ ReactDOM.render(React.createElement(Documentation, {
               "content" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
-                  "text" : "This command requires you to be connected to the same Voice-Chat as Mantaro.",
+                  "text" : "This command requires you to be connected to the same Voice-Chat as Mantaro, if you lack the above mentioned permissions.",
                   "type" : "SimpleText"
                 } ]
               } ]
@@ -1663,7 +1654,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "stop-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1672,6 +1663,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "stop-examples",
             "type" : "ApiParameters"
           } ]
         } ],
@@ -1722,7 +1714,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 "text" : "Optional",
                 "url" : ""
               } ],
-              "anchorId" : "volume",
+              "anchorId" : "volume-options_volume",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1731,6 +1723,7 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "volume-options",
             "type" : "ApiParameters"
           } ]
         }, {
@@ -1739,7 +1732,7 @@ ReactDOM.render(React.createElement(Documentation, {
             "parameters" : [ {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "volume-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1750,7 +1743,7 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "name" : "",
               "type" : [ ],
-              "anchorId" : "",
+              "anchorId" : "volume-examples",
               "description" : [ {
                 "type" : "Paragraph",
                 "content" : [ {
@@ -1765,13 +1758,14 @@ ReactDOM.render(React.createElement(Documentation, {
                 } ]
               } ]
             } ],
+            "anchorPrefix" : "volume-examples",
             "type" : "ApiParameters"
           } ]
         } ],
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1664457015414,
+    "lastModifiedTime" : 1666420851723,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🎵 Audio Commands",
