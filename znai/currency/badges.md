@@ -727,7 +727,7 @@ These badges are meant to be harder to obtain. In order to find out how to get t
 next to their name (Sometimes the name also helps to solve it).
 
 Please note that there is no `/answer` command or anything like that. These badges require you to use commands in
-certain ways for instance queuing a specific Music track.
+certain ways.
 
 :include-template: assets/templates/template-3-column-badges.ftl {
   badges: [
