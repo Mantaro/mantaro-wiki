@@ -97,7 +97,7 @@ Card Element
 "Durability:", "", "${api.durability}"
     </#if>
     <#if api.wrenchMultiplier??>
-"Multiplier reduction:", "", "${api.wrenchMultiplier}"
+"Cost multiplier:", "", "${api.wrenchMultiplier}"
     </#if>
     <#if api.wrenchMulticast??>
 "Multicast?:", "", "${api.wrenchMulticast?string('Yes', 'No')}"
