@@ -83,7 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<p>Starts a guessing game of either Pokemon, anime characters or guessing the number. You can mention other users or roles to play co-op! Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Subcommands wins This will show you the amount of games you have won. number [@mention] This will start a game of Guess the Number. character [@mention] This will start a game of Guess the Character. pokemon [@mention] This will start a game of Guess the Pokemon. multiple &lt;game&gt; &lt;amount&gt; This will start multiple instances of the selected game. lobby &lt;list of games&gt; This will start a lobby with the indicated games. Examples ~&gt;game wins ~&gt;game pokemon ~&gt;game pokemon @Kodehawa#3457 ~&gt;game multiple pokemon 10 ~&gt;game lobby pokemon, trivia, number Asks for the answer to a random trivia question. You can mention other users or roles to play co-op! Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Options difficulty Optional The difficulty of the game, it can be easy, medium or hard. @mention Optional Whoever you want to play trivia with. Examples ~&gt;trivia ~&gt;trivia @Kodehawa#3457 ~&gt;trivia hard</p>
+<p>Mantaro End of Service AnnouncementWe regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on https://mantaro.site https://mantaro.site. The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support! Starts a guessing game of either Pokemon, anime characters or guessing the number. You can mention other users or roles to play co-op! Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Subcommands wins This will show you the amount of games you have won. number [@mention] This will start a game of Guess the Number. character [@mention] This will start a game of Guess the Character. pokemon [@mention] This will start a game of Guess the Pokemon. multiple &lt;game&gt; &lt;amount&gt; This will start multiple instances of the selected game. lobby &lt;list of games&gt; This will start a lobby with the indicated games. Examples ~&gt;game wins ~&gt;game pokemon ~&gt;game pokemon @Kodehawa#3457 ~&gt;game multiple pokemon 10 ~&gt;game lobby pokemon, trivia, number Asks for the answer to a random trivia question. You can mention other users or roles to play co-op! Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Options difficulty Optional The difficulty of the game, it can be easy, medium or hard. @mention Optional Whoever you want to play trivia with. Examples ~&gt;trivia ~&gt;trivia @Kodehawa#3457 ~&gt;trivia hard</p>
 </article>
 </section>
 </div>
@@ -110,6 +110,36 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
+      "attentionType" : "avoid",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Mantaro End of Service Announcement",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "https://mantaro.site",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support!",
+          "type" : "SimpleText"
+        } ]
+      } ],
+      "type" : "AttentionBlock"
+    }, {
       "style" : "api",
       "id" : "-game",
       "title" : "/game",
@@ -390,7 +420,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1666420851728,
+    "lastModifiedTime" : 1707593387503,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🕹️ Game Commands",

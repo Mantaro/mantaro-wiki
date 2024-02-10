@@ -84,7 +84,7 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Intro</h1></header>
-<p>Some commands require special permissions in order for them to work. Below is a list of said permissions, who needs them, and their shorthands that we will mention through-out this wiki:Note: The bot requires the Send Messages and View Channel permissions to function properly in most, if not all, commands. Permission Name Description Mantaro User DJ Having a role called `DJ` or the [established DJ role for the server](basics/server-configuration#music-configuration), or being the one who requested the song. As well, having the bellow `Admin` permissions also grants this. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Admin Having a role called `Bot Commander`, or the role Permission `Manage Server`. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Emotes Having the role Permission `Use External Emoji`. `:icon: check {stroke: &quot;green&quot;}` `:icon: slash {stroke: &quot;red&quot;}` Messages Having the role Permission `Manage Messages`. `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` Moderate Having the role Permission `Moderate Member` (also called `Timeout Members`). `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` The bot itself can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.Tip: For Threads, you will need to give the bot the Send Messages in Threads permission on the channel the thread belongs to.</p>
+<p>Mantaro End of Service AnnouncementWe regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on https://mantaro.site https://mantaro.site. The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support! Some commands require special permissions in order for them to work. Below is a list of said permissions, who needs them, and their shorthands that we will mention through-out this wiki:Note: The bot requires the Send Messages and View Channel permissions to function properly in most, if not all, commands. Permission Name Description Mantaro User DJ Having a role called `DJ` or the [established DJ role for the server](basics/server-configuration#music-configuration), or being the one who requested the song. As well, having the bellow `Admin` permissions also grants this. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Admin Having a role called `Bot Commander`, or the role Permission `Manage Server`. `:icon: slash {stroke: &quot;red&quot;}` `:icon: check {stroke: &quot;green&quot;}` Emotes Having the role Permission `Use External Emoji`. `:icon: check {stroke: &quot;green&quot;}` `:icon: slash {stroke: &quot;red&quot;}` Messages Having the role Permission `Manage Messages`. `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` Moderate Having the role Permission `Moderate Member` (also called `Timeout Members`). `:icon: check {stroke: &quot;green&quot;}` `:icon: check {stroke: &quot;green&quot;}` The bot itself can function perfectly without these permissions. However, a few commands may not work if the corresponding permission is missing.Tip: For Threads, you will need to give the bot the Send Messages in Threads permission on the channel the thread belongs to.</p>
 </article>
 
 <article>
@@ -121,6 +121,36 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
+      "attentionType" : "avoid",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Mantaro End of Service Announcement",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "https://mantaro.site",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support!",
+          "type" : "SimpleText"
+        } ]
+      } ],
+      "type" : "AttentionBlock"
+    }, {
       "id" : "intro",
       "title" : "Intro",
       "type" : "Section",
@@ -480,8 +510,8 @@ ReactDOM.render(React.createElement(Documentation, {
           }, {
             "columns" : [ {
               "content" : [ {
-                "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\server-settings.png",
-                "timestamp" : 1661057698165,
+                "imageSrc" : "/mantaro-wiki/assets/images/examples/perms/server-settings.png",
+                "timestamp" : 1676728912438,
                 "shapes" : [ ],
                 "width" : 244.0,
                 "height" : 190.0,
@@ -490,8 +520,8 @@ ReactDOM.render(React.createElement(Documentation, {
             }, {
               "content" : [ {
                 "scale" : 0.8,
-                "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integrations.png",
-                "timestamp" : 1661059504432,
+                "imageSrc" : "/mantaro-wiki/assets/images/examples/perms/integrations.png",
+                "timestamp" : 1676728912437,
                 "shapes" : [ ],
                 "width" : 487.0,
                 "height" : 122.0,
@@ -508,8 +538,8 @@ ReactDOM.render(React.createElement(Documentation, {
             } ]
           }, {
             "scale" : 0.8,
-            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\integration-perms.png",
-            "timestamp" : 1661069701935,
+            "imageSrc" : "/mantaro-wiki/assets/images/examples/perms/integration-perms.png",
+            "timestamp" : 1676728912437,
             "shapes" : [ ],
             "width" : 664.0,
             "height" : 297.0,
@@ -610,16 +640,16 @@ ReactDOM.render(React.createElement(Documentation, {
               "type" : "SimpleText"
             } ]
           }, {
-            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\edit-channel.png",
-            "timestamp" : 1661054979046,
+            "imageSrc" : "/mantaro-wiki/assets/images/examples/perms/edit-channel.png",
+            "timestamp" : 1676728912436,
             "shapes" : [ ],
             "width" : 264.0,
             "height" : 74.0,
             "type" : "AnnotatedImage"
           }, {
             "scale" : 0.5,
-            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\advanced-perms.png",
-            "timestamp" : 1661099420018,
+            "imageSrc" : "/mantaro-wiki/assets/images/examples/perms/advanced-perms.png",
+            "timestamp" : 1676728912436,
             "shapes" : [ ],
             "width" : 787.0,
             "height" : 269.0,
@@ -628,8 +658,8 @@ ReactDOM.render(React.createElement(Documentation, {
             "columns" : [ {
               "content" : [ {
                 "scale" : 0.5,
-                "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\channel-perm-add.png",
-                "timestamp" : 1661099420019,
+                "imageSrc" : "/mantaro-wiki/assets/images/examples/perms/channel-perm-add.png",
+                "timestamp" : 1676728912436,
                 "shapes" : [ ],
                 "width" : 343.0,
                 "height" : 486.0,
@@ -637,8 +667,8 @@ ReactDOM.render(React.createElement(Documentation, {
               } ]
             }, {
               "content" : [ {
-                "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\perm-navigate.png",
-                "timestamp" : 1661099420019,
+                "imageSrc" : "/mantaro-wiki/assets/images/examples/perms/perm-navigate.png",
+                "timestamp" : 1676728912437,
                 "shapes" : [ ],
                 "width" : 294.0,
                 "height" : 173.0,
@@ -648,8 +678,8 @@ ReactDOM.render(React.createElement(Documentation, {
             "config" : { },
             "type" : "Columns"
           }, {
-            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\perms\\view-channel-perm.png",
-            "timestamp" : 1661055483473,
+            "imageSrc" : "/mantaro-wiki/assets/images/examples/perms/view-channel-perm.png",
+            "timestamp" : 1676728912438,
             "shapes" : [ ],
             "width" : 435.0,
             "height" : 102.0,
@@ -1067,7 +1097,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "ThematicBreak"
       } ]
     } ],
-    "lastModifiedTime" : 1662003686817,
+    "lastModifiedTime" : 1707593400928,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "Permissions & Managing",
