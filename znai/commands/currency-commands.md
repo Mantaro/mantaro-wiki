@@ -2,6 +2,8 @@
 title: 💸 Currency Commands
 ---
 
+:include-markdown: assets/md/eol-notice.md
+
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "badges",
 "description": "Shows a list of your own badges or a list of the badges from the given user. A full list of the badges can be found [here](currency/badges).",

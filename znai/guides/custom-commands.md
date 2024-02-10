@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 # What are Custom Commands?
 Custom commands are a feature in Mantaro that allows you to create your own commands, and use them in your server.
 The custom command creation in Mantaro can be as complex or as simple as you want it to be. She can be really flexible about it.

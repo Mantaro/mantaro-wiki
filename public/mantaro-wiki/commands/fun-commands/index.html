@@ -83,7 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<p>Ask the magic 8ball a question. Options question Required The question to ask. Examples /8ball question: Will Mantaro ever be consistent? Searches for the anime specified using https://kitsu.io/ Kitsu.io. You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the anime/manga to look for. Examples /anime name: Hunter x Hunter /anime name: One Piece Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the character to look for. Examples /character name: Gon Freecss /character name: Luffy Flip a coin once or multiple times. Options times Optional The amount of times to flip the coin. Examples /coinflip /coinflip times: 50 Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. otheruser Optional The other user to compare with, yourself if omitted. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261 otheruser: @Kodehawa#3457 Rate your waifu from 0-100. Results may vary. Options user Required The user to rate. Examples /ratewaifu user: @Kodehawa#3457 /ratewaifu user: @Adam#9261 Roll an any-sided dice a 1 or more times. By default, this command will roll a 6-sized dice 1 time. Options times Optional The amount of times to roll, in d20 format. Examples /roll /roll times: 5d1000 /roll times: 1d20</p>
+<p>Mantaro End of Service AnnouncementWe regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on https://mantaro.site https://mantaro.site. The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support! Ask the magic 8ball a question. Options question Required The question to ask. Examples /8ball question: Will Mantaro ever be consistent? Searches for the anime specified using https://kitsu.io/ Kitsu.io. You will be given a list of search results using the indicated anime. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the anime/manga to look for. Examples /anime name: Hunter x Hunter /anime name: One Piece Searches for the anime character specified. You will be given a list of search results using the indicated character. After this you will have to click on the button related to the option you wish to see more information for. Options name Required The name of the character to look for. Examples /character name: Gon Freecss /character name: Luffy Flip a coin once or multiple times. Options times Optional The amount of times to flip the coin. Examples /coinflip /coinflip times: 50 Calculate the love between two people. Results may vary. This is random, for real. Options user Required The user to compare with. otheruser Optional The other user to compare with, yourself if omitted. Examples /love user: @Kodehawa#3457 /love user: @Adam#9261 otheruser: @Kodehawa#3457 Rate your waifu from 0-100. Results may vary. Options user Required The user to rate. Examples /ratewaifu user: @Kodehawa#3457 /ratewaifu user: @Adam#9261 Roll an any-sided dice a 1 or more times. By default, this command will roll a 6-sized dice 1 time. Options times Optional The amount of times to roll, in d20 format. Examples /roll /roll times: 5d1000 /roll times: 1d20</p>
 </article>
 </section>
 </div>
@@ -110,6 +110,36 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
+      "attentionType" : "avoid",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Mantaro End of Service Announcement",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "https://mantaro.site",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support!",
+          "type" : "SimpleText"
+        } ]
+      } ],
+      "type" : "AttentionBlock"
+    }, {
       "style" : "api",
       "id" : "-8ball",
       "title" : "/8ball",
@@ -668,7 +698,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1666420851727,
+    "lastModifiedTime" : 1707593384279,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🎲 Fun Commands",

@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 This page is used to inform users of Mantaro regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use Mantaro.
 
 Note: TL;DR: We don't collect much. We support your freedom and don't use Google Analytics. Feel free to read down.

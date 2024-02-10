@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 # Mantaro Bot Terms of Service
 
 _This is a short, and *hopefully* comprehensive version of the ToS, directed to the public_

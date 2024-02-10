@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 # Intro
 _**You can get a list of all options without going to this wiki by doing:**_ `~>opts ls` or `~>opts list`.
 

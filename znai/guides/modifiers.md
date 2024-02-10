@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 # Intro
 In order to use any of these you will have to type *exactly* what you see under the first bulletin every time, whether it is custom commands, birthday messages or welcome messages.
 So if you for instance want the author username in a custom command you would type *exactly* $(event.author.username).

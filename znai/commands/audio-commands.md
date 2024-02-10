@@ -1,6 +1,7 @@
 ---
 title: 🎵 Audio Commands
 ---
+:include-markdown: assets/md/eol-notice.md
 
 :include-markdown: assets/md/commands/music-notice.md
 

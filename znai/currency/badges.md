@@ -1,6 +1,8 @@
 Warning: This page contains **a lot** of images and may eat through metered connections.
 
 
+:include-markdown: assets/md/eol-notice.md
+
 # What are badges?
 
 Badges are basically achievements that you can gain. Badges will show on your profile in the order shown below.

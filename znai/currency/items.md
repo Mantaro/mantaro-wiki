@@ -1,5 +1,7 @@
 Warning: This page contains **a lot** of images and may eat through metered connections.
 
+:include-markdown: assets/md/eol-notice.md
+
 
 # Intro
 

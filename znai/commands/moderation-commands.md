@@ -1,6 +1,7 @@
 ---
 title: 🔨 Moderation Commands
 ---
+:include-markdown: assets/md/eol-notice.md
 
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "mute",

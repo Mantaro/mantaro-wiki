@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 # What are welcome and leave messages? 
 The welcome and leave messages are messages that are sent to a user when they join or leave the server.
 Mantaro will send a message in the specified channel.

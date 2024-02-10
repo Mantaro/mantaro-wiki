@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 ## 0. Why move to Slash Commands?/Can I stay with text commands?
 The move to Slash Commands is something being enforced by Discord on verified bots. They seek to make it easier for users to find and use commands.
 

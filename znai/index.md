@@ -3,6 +3,8 @@
 :include-image: assets/images/banner.jpg {desktopOnly: true}
 :include-image: assets/images/emotes-m/m-genius.png {mobileOnly: true}
 
+:include-markdown: assets/md/eol-notice.md
+
 Hello there!
 
 This is the official Wiki for the Mantaro Discord Bot. 

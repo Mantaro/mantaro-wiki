@@ -83,7 +83,7 @@
     <div></div>
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<p>Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted. Options user Required The user to mute. time Optional The amount of time to mute the user for. For example 1m20s. The format is, for example, 1h20m10s for 1 hour, 20 minutes and 10 seconds. If not specified, this uses the default mute timeout set for this server, if set. reason Optional The reason of the mute. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Moderate permissions. Examples /mute user: @Adam#9261 /mute user: @Adam#9261 time: 1h20m10s /mute user: @Adam#9261 reason: good meme The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our basics/server-configuration Configuration Page. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Requirements This command requires commands/permissions#intro Admin permissions. Delete messages (excluding messages that are older than 14 days). Minimum of messages to delete is 5 and maximum is 100. Options amount Required The amount of messages to prune, between 5 and 100. user Optional Only prune from this specific user. botonly Optional Only prune messages from bots. skippinned Optional Don't prune pinned messages. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Messages permissions. Examples /prune amount: 10 /prune amount: 10 user: @Adam#9261 /prune amount: 10 botonly: true /prune amount: 10 skippinned: true Unmute the mentioned user if muted. Options user Required The user to unmute. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Moderate permissions. Examples /unmute user: @Adam#9261 /unmute user: @Adam#9261 reason: good meme</p>
+<p>Mantaro End of Service AnnouncementWe regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on https://mantaro.site https://mantaro.site. The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support! Mutes the given Member. You can also specify a time, after that time the mentioned user will be automatically unmuted. Options user Required The user to mute. time Optional The amount of time to mute the user for. For example 1m20s. The format is, for example, 1h20m10s for 1 hour, 20 minutes and 10 seconds. If not specified, this uses the default mute timeout set for this server, if set. reason Optional The reason of the mute. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Moderate permissions. Examples /mute user: @Adam#9261 /mute user: @Adam#9261 time: 1h20m10s /mute user: @Adam#9261 reason: good meme The opts command includes an extensive list of option commands. You can find our complete list of the opts commands and their examples in our basics/server-configuration Configuration Page. Warning: This command has not yet been ported to Slash Commands and uses the previous syntax. It will be ported eventually and updated accordingly. Requirements This command requires commands/permissions#intro Admin permissions. Delete messages (excluding messages that are older than 14 days). Minimum of messages to delete is 5 and maximum is 100. Options amount Required The amount of messages to prune, between 5 and 100. user Optional Only prune from this specific user. botonly Optional Only prune messages from bots. skippinned Optional Don't prune pinned messages. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Messages permissions. Examples /prune amount: 10 /prune amount: 10 user: @Adam#9261 /prune amount: 10 botonly: true /prune amount: 10 skippinned: true Unmute the mentioned user if muted. Options user Required The user to unmute. reason Optional The reason of the prune. This will show in the logs, if enabled. Requirements This command requires commands/permissions#intro Moderate permissions. Examples /unmute user: @Adam#9261 /unmute user: @Adam#9261 reason: good meme</p>
 </article>
 </section>
 </div>
@@ -110,6 +110,36 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
+      "attentionType" : "avoid",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Mantaro End of Service Announcement",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "https://mantaro.site",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support!",
+          "type" : "SimpleText"
+        } ]
+      } ],
+      "type" : "AttentionBlock"
+    }, {
       "style" : "api",
       "id" : "-mute",
       "title" : "/mute",
@@ -694,7 +724,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Tabs"
       } ]
     } ],
-    "lastModifiedTime" : 1666420851732,
+    "lastModifiedTime" : 1707593398192,
     "tocItem" : {
       "chapterTitle" : "Commands",
       "pageTitle" : "🔨 Moderation Commands",

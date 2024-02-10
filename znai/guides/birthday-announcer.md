@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 # What is the Birthday Announcer?
 The Birthday Announcer is a function in Mantaro that allows her to send a birthday message to celebrate someone's birthday.
 Mantaro will send a message in the specified channel for each user and will provide them with the specified birthday role for that day.

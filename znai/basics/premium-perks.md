@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 **We appreciate everyone who pledges and/or donates to Mantaro, love you all `:icon: heart { fill: 'red' }`**
 
 # Perks

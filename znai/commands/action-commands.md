@@ -1,6 +1,8 @@
 ---
 title: 👋 Action Commands
 ---
+:include-markdown: assets/md/eol-notice.md
+
 
 :include-template: assets/templates/template-command-doc.ftl {
 "cmd": "action",
@@ -51,19 +53,11 @@ title: 👋 Action Commands
 },
 {
 "name": "Bloodsuck",
-"description": "Suck someone's blood on the server."
+"description": "Suck someone\'s blood on the server."
 },
 {
 "name": "Meow",
 "description": "Meow at something or someone."
-},
-{
-"name": "Facedesk",
-"description": "Smash your head on a desk I guess?"
-},
-{
-"name": "Lewd",
-"description": "Call something or someone lewd."
 }
 ]
 },

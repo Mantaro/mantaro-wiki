@@ -84,7 +84,7 @@
 </div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Introduction</h1></header>
-<p>Embeds are used to display rich content in messages. They are very powerful and can be used to display information in a variety of ways. In Mantaro, they are used to display information in the following ways:Welcome and leave messages Custom commands Birthday announcer In this page we will cover how to create embeds for use in Mantaro.Note: This page will teach you how to create embeds only. Visit the Guide page corresponding for the command you are interested in to learn how to use the embed you create.</p>
+<p>Mantaro End of Service AnnouncementWe regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on https://mantaro.site https://mantaro.site. The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support! Embeds are used to display rich content in messages. They are very powerful and can be used to display information in a variety of ways. In Mantaro, they are used to display information in the following ways:Welcome and leave messages Custom commands Birthday announcer In this page we will cover how to create embeds for use in Mantaro.Note: This page will teach you how to create embeds only. Visit the Guide page corresponding for the command you are interested in to learn how to use the embed you create.</p>
 </article>
 
 <article>
@@ -126,6 +126,36 @@ ReactDOM.render(React.createElement(Documentation, {
   "page" : {
     "type" : "Page",
     "content" : [ {
+      "attentionType" : "avoid",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Mantaro End of Service Announcement",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We regret to announce that Mantaro is ending service on March 1st, 2024 due to financial issues. You can read more about it on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://mantaro.site",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "https://mantaro.site",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". The service will no longer be available after March 1st, 2024. Thanks you so much for your continued support!",
+          "type" : "SimpleText"
+        } ]
+      } ],
+      "type" : "AttentionBlock"
+    }, {
       "id" : "introduction",
       "title" : "Introduction",
       "type" : "Section",
@@ -214,8 +244,8 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
-        "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\embeds\\embed-example.png",
-        "timestamp" : 1661881280285,
+        "imageSrc" : "/mantaro-wiki/assets/images/examples/embeds/embed-example.png",
+        "timestamp" : 1676728912434,
         "shapes" : [ ],
         "width" : 527.0,
         "height" : 581.0,
@@ -347,8 +377,8 @@ ReactDOM.render(React.createElement(Documentation, {
               "type" : "SimpleText"
             } ]
           }, {
-            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\embeds\\maker-clean-embed.png",
-            "timestamp" : 1661833026441,
+            "imageSrc" : "/mantaro-wiki/assets/images/examples/embeds/maker-clean-embed.png",
+            "timestamp" : 1676728912434,
             "shapes" : [ ],
             "width" : 256.0,
             "height" : 80.0,
@@ -360,8 +390,8 @@ ReactDOM.render(React.createElement(Documentation, {
               "type" : "SimpleText"
             } ]
           }, {
-            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\embeds\\maker-copy-embed.png",
-            "timestamp" : 1661880269444,
+            "imageSrc" : "/mantaro-wiki/assets/images/examples/embeds/maker-copy-embed.png",
+            "timestamp" : 1676728912435,
             "shapes" : [ ],
             "width" : 239.0,
             "height" : 76.0,
@@ -373,8 +403,8 @@ ReactDOM.render(React.createElement(Documentation, {
               "type" : "SimpleText"
             } ]
           }, {
-            "imageSrc" : "/mantaro-wiki/assets\\images\\examples\\embeds\\maker-misc-options.png",
-            "timestamp" : 1661880409606,
+            "imageSrc" : "/mantaro-wiki/assets/images/examples/embeds/maker-misc-options.png",
+            "timestamp" : 1676728912435,
             "shapes" : [ ],
             "width" : 272.0,
             "height" : 377.0,
@@ -595,7 +625,7 @@ ReactDOM.render(React.createElement(Documentation, {
         "type" : "Snippet"
       } ]
     } ],
-    "lastModifiedTime" : 1663183571635,
+    "lastModifiedTime" : 1707593444021,
     "tocItem" : {
       "chapterTitle" : "Guides",
       "pageTitle" : "Embeds",

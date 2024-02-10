@@ -1,6 +1,7 @@
 ---
 title: Permissions & Managing
 ---
+:include-markdown: assets/md/eol-notice.md
 
 # Intro
 Some commands require special permissions in order for them to work. Below is a list of said permissions, who needs them, and

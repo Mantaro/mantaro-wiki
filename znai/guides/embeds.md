@@ -1,3 +1,5 @@
+:include-markdown: assets/md/eol-notice.md
+
 # Introduction
 Embeds are used to display rich content in messages. They are very powerful and can be used to display information in a variety of ways.
 In Mantaro, they are used to display information in the following ways:
